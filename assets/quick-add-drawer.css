@@ -1,0 +1,84 @@
+.quick-add-drawer__title {
+  margin: .25rem 0 0;
+  font-size: 22px;
+  line-height: normal;
+}
+.quick-add__submit {
+  border-radius: 9px;
+  border-color: black;
+  background: white;
+  color: black;
+  margin-bottom: 20px;
+  margin-top: 1.7rem
+}
+quick-add-drawer .drawer__inner {
+  padding: 0;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--warm-white);
+}
+quick-add-drawer .drawer__header {
+  padding-bottom: 0;
+}
+quick-add-drawer .drawer__close {
+  min-width: 2rem;
+  min-height: 2rem;
+}
+.quick-add__inner {
+  padding: 0 20px 20px;
+}
+
+.quick-add-drawer__image {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+quick-add-drawer .rc-radio + .rc-radio {
+  margin-top: 2rem;
+}
+
+quick-add-drawer .rc_popup {
+  display: none;
+}
+
+quick-add-drawer .link {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+
+@media screen and (max-width: 749px) {
+  quick-add-drawer .drawer__inner {
+    padding: 0px 20px;
+  }
+}
+
+.quick-add-drawer__title {
+  text-transform: uppercase;
+}
+
+quick-add-drawer .buy-buttons__wrapper,
+quick-add-drawer .widget__radio + .widget__radio {
+  margin-top: 2rem;
+}
+
+quick-add-drawer .quantity__label {
+  display: none;
+}
+
+
+
+quick-add-drawer .quantity-and-buttons {
+  flex-direction: column;
+}
+
+quick-add-drawer .product-form__quantity {
+  max-width: 100%;
+}
+
+quick-add-drawer .buy-buttons__wrapper {
+  margin-left: 0;
+}

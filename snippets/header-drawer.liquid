@@ -1,0 +1,99 @@
+{% comment %}
+  Renders a header drawer menu for mobile and desktop.
+
+  Usage:
+  {% render 'header-drawer' %}
+{% endcomment %}
+
+<header-drawer class="drawer" data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
+  <div id="menu-drawer" class="gradient menu-drawer motion-reduce color-{{ section.settings.menu_color_scheme }}">
+    <div id="MenuDrawer-Overlay" class="menu-drawer__overlay"></div>
+    <div class="drawer__inner" role="dialog" aria-modal="true" aria-label="Menu" tabindex="-1">
+      <div class="drawer__header">
+        <button class="drawer__close" type="button" onclick="this.closest('header-drawer').close()" aria-label="Close">
+          {% render 'icon-close' %}
+        </button>
+        {% render 'icon-logo' %}
+        <button class="drawer__close" type="button" onclick="this.closest('header-drawer').close()" aria-label="Close" style="opacity: 0;">
+          {% render 'icon-close' %}
+        </button>
+      </div>
+      <div class="menu-drawer__navigation-container">
+        <nav class="menu-drawer__navigation">
+          <ul class="menu-drawer__menu has-submenu list-menu" role="list">
+            {%- for link in linklists['mobile-menu-2023'].links -%}
+              <li>
+                <button
+                  id="HeaderDrawer-{{ link.handle }}"
+                  aria-controls="HeaderDrawerPanel--{{ link.handle }}"
+                  class="menu-drawer__main-item {% if forloop.first %}active{% endif %}"
+                  {% if link.current %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  {{ link.title | escape }}
+                </button>
+              </li>
+            {%- endfor -%}
+          </ul>
+          <div id="menu-drawer__panels">
+            {% for link in linklists['mobile-menu-2023'].links %}
+              <div
+                class="menu-drawer__panel"
+                id="HeaderDrawerPanel--{{ link.handle }}"
+                {% unless forloop.first %}
+                  style="display: none;"
+                {% endunless %}
+              >
+                {% for highlights in shop.metaobjects.dropdown_highlights.values %}
+                  {% if highlights.title.value == link.title %}
+                    {% for highlight in highlights.list.value %}
+                      <div class="mega-menu__highlight">
+                        <div class="mega-menu__highlight-image">
+                          {{
+                            highlight.image
+                            | image_url: width: 140, height: 140, crop: 'center'
+                            | image_tag: alt: highlight.title.value
+                          }}
+                        </div>
+                        <div class="mega-menu__highlight-text">
+                          <h3>{{ highlight.title.value }}</h3>
+                        </div>
+                        <a class="link--fill-parent" href="{{ highlight.link.value }}">
+                          <span class="visually-hidden">{{ highlight.title.value }}</span>
+                        </a>
+                      </div>
+                    {% endfor %}
+                  {% endif %}
+                {% endfor %}
+                {% for child_link in link.links %}
+                  {% if child_link.links != blank %}
+                    <div class="menu-drawer__panel-subheading">{{ child_link.title }}</div>
+                    <ul class="list-menu">
+                      {% for child_child_link in child_link.links %}
+                        <li>
+                          <a class="menu-drawer__panel-link link" href="{{ child_child_link.url }}">
+                            {{ child_child_link.title }}
+                          </a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% else %}
+                    <a class="menu-drawer__panel-link menu-drawer__panel-learn-link link" href="{{ child_link.url }}">
+                      {{ child_link.title }}
+                    </a>
+                  {% endif %}
+                {% endfor %}
+                
+                  {% if link.title == "Learn" %}
+                  {%- render 'menu-drawer-blog-posts' -%}
+                  {% endif %}
+                
+              </div>
+            {% endfor %}
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header-drawer>

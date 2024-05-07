@@ -1,0 +1,22 @@
+{{ 'section-scrolling-marquee.css' | asset_url | stylesheet_tag }}
+<li class="grid__item grid__item--full-width animate--slide-in" data-cascade>
+  <div class="marquee__wrapper">
+    <div class="marquee">
+      <div class="marquee__track">
+        {% if shop.metaobjects.text_marquee[metaobject_handle] != null %}
+          {%- capture items %}
+        {% for txt in shop.metaobjects.text_marquee[metaobject_handle].text.value %}
+        <div class="marquee__item marquee__item--text h3">
+          {{ txt }}
+        </div>
+        {% endfor %}
+        {% endcapture %}
+          {{ items | strip_newlines }}
+          {{ items | strip_newlines }}
+          {{ items | strip_newlines }}
+          {{ items | strip_newlines }}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</li>

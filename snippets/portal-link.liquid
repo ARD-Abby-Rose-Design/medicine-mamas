@@ -1,0 +1,40 @@
+<portal-link></portal-link>
+
+<script>
+  class PortalLink extends HTMLElement {
+    constructor() {
+      super();
+      {% comment %} this.attachShadow({ mode: 'open' }); {% endcomment %}
+      this.renderLink();
+      this.accountLink = document.getElementById('account-menu--manage-subscriptions');
+      
+    }
+
+    async login() {
+      this.session = await recharge.auth.loginShopifyAppProxy();
+    }
+
+    async fetchPortalAccess() {
+      this.portalAccess = await recharge.customer.getCustomerPortalAccess(this.session);
+    }
+
+    async renderLink() {
+      await this.login();
+      await this.fetchPortalAccess();
+
+      this.innerHTML = `
+        <a class="button button--arrow" href="${this.portalAccess.portal_url}">MANAGE SUBSCRIPTIONS</a>
+      `;
+
+
+      if(this.accountLink) {
+        this.accountLink.setAttribute('href', this.portalAccess.portal_url);
+      } else {
+        this.accountLink.setAttribute('disabled');
+      }
+
+    }
+  }
+
+  customElements.define('portal-link', PortalLink);
+</script>

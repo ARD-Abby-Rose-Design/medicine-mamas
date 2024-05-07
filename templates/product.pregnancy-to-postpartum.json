@@ -1,0 +1,622 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "00f29d9e-75b2-40e9-9b23-4dab4df71a26": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "486e96e5-7913-4672-8ce6-6f8671d1ad76": {
+          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "6b38dc5b-1d2c-4b1e-8bad-3c2cbc663748": {
+          "type": "checkmarks",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "2d5053f6-2c89-42a7-ba48-b38eb639ce46": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"custom-recharge\"><\/div>"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "afbb9305-0fee-485b-84f6-73e64fa05f10": {
+          "type": "text",
+          "settings": {
+            "text": "<a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days<\/a>",
+            "text_style": "body"
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What's Inside?",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.trial_results | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "73fe7cb4-7013-4579-9538-144e05e14376": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How To Use",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredients",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.key_ingredients | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "00f29d9e-75b2-40e9-9b23-4dab4df71a26",
+        "486e96e5-7913-4672-8ce6-6f8671d1ad76",
+        "title",
+        "caption",
+        "description",
+        "6b38dc5b-1d2c-4b1e-8bad-3c2cbc663748",
+        "price",
+        "variant_picker",
+        "2d5053f6-2c89-42a7-ba48-b38eb639ce46",
+        "quantity_selector",
+        "buy_buttons",
+        "afbb9305-0fee-485b-84f6-73e64fa05f10",
+        "collapsible-row-2",
+        "73fe7cb4-7013-4579-9538-144e05e14376",
+        "collapsible-row-1"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "small",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "cac67cc4-85e1-4f5d-9af0-5bfbe86ec590": {
+      "type": "scrolling-marquee",
+      "blocks": {
+        "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-0": {
+          "type": "text",
+          "settings": {
+            "text": "Hormone Free"
+          }
+        },
+        "17c4f4e2-2426-4cc7-9e58-854f72506cb6": {
+          "type": "checkmark",
+          "settings": {
+          }
+        },
+        "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-1": {
+          "type": "text",
+          "settings": {
+            "text": "11,000 5-Star Reviews"
+          }
+        },
+        "f7007b7d-6de6-4992-9083-c4d78dcd276b": {
+          "type": "checkmark",
+          "settings": {
+          }
+        },
+        "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-2": {
+          "type": "text",
+          "settings": {
+            "text": "Hormone Free"
+          }
+        },
+        "f28c2160-2d2f-494b-bd57-2ab0af1b823d": {
+          "type": "checkmark",
+          "settings": {
+          }
+        },
+        "372c1169-1da6-4229-b1aa-4a13a1c9d479": {
+          "type": "text",
+          "settings": {
+            "text": "11,000 5-Star Reviews"
+          }
+        },
+        "efdcde4a-f101-4e27-9314-e41c0f0a2bb5": {
+          "type": "checkmark",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-0",
+        "17c4f4e2-2426-4cc7-9e58-854f72506cb6",
+        "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-1",
+        "f7007b7d-6de6-4992-9083-c4d78dcd276b",
+        "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-2",
+        "f28c2160-2d2f-494b-bd57-2ab0af1b823d",
+        "372c1169-1da6-4229-b1aa-4a13a1c9d479",
+        "efdcde4a-f101-4e27-9314-e41c0f0a2bb5"
+      ],
+      "settings": {
+        "color_scheme": "inverse",
+        "type": "text",
+        "padding_top": 100,
+        "padding_bottom": 52
+      }
+    },
+    "6cdfb8e6-a773-44fa-ae13-b790f3d71579": {
+      "type": "featured-reviews",
+      "settings": {
+        "color_scheme": "",
+        "show_line_separator": true,
+        "title": "<b>11,000+ 5-Star Reviews<\/b>",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "61b83918-3465-4607-bf85-62c487efba89": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16826222084325__61b83918-3465-4607-bf85-62c487efba89-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE RITUAL",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--16826222084325__61b83918-3465-4607-bf85-62c487efba89-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "50b033ae-f7f1-4b0a-b956-da9b75aee309": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16838106120421__50b033ae-f7f1-4b0a-b956-da9b75aee309-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Before Pregnancy",
+            "heading_size": "h3"
+          }
+        },
+        "template--16838106120421__50b033ae-f7f1-4b0a-b956-da9b75aee309-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Apply VMAGIC® Vulva Balm before pregnancy to moisturize and prep the skin for stretching on stomach, chest, and vulva.<\/p>",
+            "text_size": "text-body",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16838106120421__50b033ae-f7f1-4b0a-b956-da9b75aee309-heading-1",
+        "template--16838106120421__50b033ae-f7f1-4b0a-b956-da9b75aee309-text-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/medicine-mama-vulva-balm-1.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "90d878aa-6cfc-4f37-af51-fdca7ab9475b": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16838106120421__90d878aa-6cfc-4f37-af51-fdca7ab9475b-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "During Pregnancy",
+            "heading_size": "h3"
+          }
+        },
+        "template--16838106120421__90d878aa-6cfc-4f37-af51-fdca7ab9475b-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>During pregnancy we know how important it is to reevaluate the products you are putting on and inside your body. That’s why our organic, VMAGIC® Vulva Balm is perfect for soothing belly skin as it stretches and becomes itchy.  Leading up to birth use the Vulva Balm for perineal skin massage to help prevent tearing during vaginal birth. During pregnancy, when discharge can increase, switch out your traditional body wash for our fragrance free, VMAGIC® Vulva Wash. It gently cleanses without disrupting your natural pH. <\/p>",
+            "text_size": "text-body",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16838106120421__90d878aa-6cfc-4f37-af51-fdca7ab9475b-heading-1",
+        "template--16838106120421__90d878aa-6cfc-4f37-af51-fdca7ab9475b-text-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/pregnancy-safe-skincare.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "9d0f63ce-5d04-4d58-8622-efb9fda8f05c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16838106120421__9d0f63ce-5d04-4d58-8622-efb9fda8f05c-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Postpartum",
+            "heading_size": "h3"
+          }
+        },
+        "template--16838106120421__9d0f63ce-5d04-4d58-8622-efb9fda8f05c-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>After childbirth, our VMAGIC<strong>®<\/strong> Vulva Balm is a multi-tasking wonder. As your body experiences hormonal shifts from delivery or breastfeeding, you may experience postpartum dryness and discomfort. Use our vulva balm to restore hydration, reduce friction from clothing and enhance comfort during postpartum intimacy. Added Bonus: Our portable Lips Stick version easily fits in your hospital bag, diaper bag, or purse, ensuring you're always prepared.<\/p><p>Postpartum care doesn’t have to be a mystery. That's why we’ve also included a portable pink peri bottle, equipped with an upside down nozzle for easy access cleansing and our gentle, fragrance free wash to support you in your postpartum recovery.<\/p>",
+            "text_size": "text-body",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16838106120421__9d0f63ce-5d04-4d58-8622-efb9fda8f05c-heading-1",
+        "template--16838106120421__9d0f63ce-5d04-4d58-8622-efb9fda8f05c-text-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/pregnancy-safe-skincare-2.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa": {
+      "type": "you-speak",
+      "settings": {
+        "color_scheme": "inverse",
+        "title": "See The Magic",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "c3a50a1b-b9e4-4730-8667-125f047ed335": {
+      "type": "collapsible-content",
+      "blocks": {
+        "651e6c5b-3658-41aa-a451-1389f4d0af1c": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use this product if I’m pregnant?",
+            "row_content": "<p>There are no ingredients that should restrict use during pregnancy. However, we always recommend consulting with your physician before starting any personal care regimen while pregnant or trying to conceive.<\/p>",
+            "page": ""
+          }
+        },
+        "eb2f3da0-456d-4475-b291-e4dd41821b0e": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are Medicine Mama products estrogen free?",
+            "row_content": "<p>All of our products are hormone and soy free.<\/p>",
+            "page": ""
+          }
+        },
+        "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How much should I apply?",
+            "row_content": "<p>Vmagic vulva balm can be applied as liberally and as often as you like. We recommend starting with a small amount and working your way up as desired.<\/p>",
+            "page": ""
+          }
+        },
+        "3d098281-82e0-4464-8c45-51558b939387": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How fast can I expect to see results?",
+            "row_content": "<p>Results vary, but in a clinical study 79% of users found immediate relief and 92% saw a reduction in dryness with continued use in as little as two weeks.<\/p>",
+            "page": ""
+          }
+        },
+        "511ac219-04b5-4c02-b972-02994a16ebb8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I only need this kit during postpartum?",
+            "row_content": "<p>While dryness peaks during postpartum due to the drop in hormones. Our pregnancy to postpartum kit was designed to support mama's through all stages of pregnancy - from conception to postpartum. <\/p><p>While trying to conceive our kit can help relieve irritation from intimate activity. <\/p><p>During pregnancy use the Vulva Balm as a pregnancy safe rich moisturizer to soothe skin as it stretches and becomes itchy. We also recommend  our natural Vulva Wash to cleanse without disrupting your natural pH.  <\/p>",
+            "page": ""
+          }
+        },
+        "acedb7de-fe32-4b9b-81d1-56a49b9758d1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When should I use the Vulva Balm?",
+            "row_content": "<p>The delicate skin of the vulva can become irritated by many factors including aging, friction, and\/or use of products not specifically designed for this beautiful and delicate area. Vmagic vulva balm provides soothing hydration to relieve discomfort from most vulvar irritants. Many of our customers find relief from (peri)menopause dryness, vulvar dryness from breastfeeding, sensitivity to shaving or waxing, tight clothing or even friction from sex. Our product can be used any time of day and is safe and recommended for daily use as part of a well rounded skin care ritual.<\/p>",
+            "page": ""
+          }
+        },
+        "03c90831-d75d-41e8-93e1-4cb4b4665480": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can this product be used as a lubricant?",
+            "row_content": "<p>This product is intended to be used on the Vulva which comprises the Mons Pubis, the Labia Minora and Majora, the Clitoris and Vaginal  opening (In other words, the external skin only.). It is not intended to be used in the vaginal canal. However, many of our satisfied clients use the Vmagic Vulva Balm to help with pain near the vaginal opening. Because it is olive oil based, it is not latex compatible.<\/p>",
+            "page": ""
+          }
+        },
+        "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use the Vulva Balm on others parts of my body like my face?",
+            "row_content": "<p>Vmagic vulva balm is specially formulated to support the sensitive biome of the vulva, but the beauty of its all-natural, organic ingredient list is that it can really be used anywhere on the body! It works wonders for stretching bellies during pregnancy, as a lip balm in a pinch, and as a slugging (moisture barrier) balm at night. These are only a few of the many uses we are constantly hearing about from our satisfied customers!<\/p>",
+            "page": ""
+          }
+        },
+        "2de04093-b1cf-4f86-a867-b767be22a165": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is this product safe to ingest?",
+            "row_content": "<p>While the product is not intended to be eaten, Vmagic Vulva Balm is USDA organic and made from all natural ingredients.<\/p>",
+            "page": ""
+          }
+        },
+        "18167207-7656-4550-9504-b7594fd62b5c": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is a burning sensation normal when applying this product?",
+            "row_content": "<p>With any product, we recommend starting with a patch test and always reviewing ingredients for any allergies you may have. When applying product to severely dehydrated or cracked skin, you may experience a stinging or burning sensation.This can be due to excessive skin dryness and should dissipate quickly, especially with regular use as the tissues regain elasticity and hydration. If irritation continues, discontinue use and consult your healthcare provider.<\/p>",
+            "page": ""
+          }
+        },
+        "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if the product transfers to my clothing?",
+            "row_content": "<p>Vmagic vulva balm is made up of rich, hydrating oils. It may leave oil stains on some fabrics. We recommend starting with a small amount to determine how it interacts with fabric. A dish soap used for cutting through grease, left on for 30 min before laundering can be helpful.<\/p>",
+            "page": ""
+          }
+        },
+        "5f9fbbab-7e18-451a-971e-0f97bcc1260a": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I’m allergic to bees. Can I still use this product?",
+            "row_content": "<p>Please consult with your physician as our products contain beeswax, honey, royal jelly and propolis.<\/p>",
+            "page": ""
+          }
+        },
+        "4875dd1c-6dab-4702-964e-419b892bde11": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is there a scent?",
+            "row_content": "<p>Vmagic vulva balm does not have any added fragrance and some will not notice a scent at all. We have heard from several customers that you may pick up notes of beeswax.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "651e6c5b-3658-41aa-a451-1389f4d0af1c",
+        "eb2f3da0-456d-4475-b291-e4dd41821b0e",
+        "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-2",
+        "3d098281-82e0-4464-8c45-51558b939387",
+        "511ac219-04b5-4c02-b972-02994a16ebb8",
+        "acedb7de-fe32-4b9b-81d1-56a49b9758d1",
+        "03c90831-d75d-41e8-93e1-4cb4b4665480",
+        "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-0",
+        "2de04093-b1cf-4f86-a867-b767be22a165",
+        "18167207-7656-4550-9504-b7594fd62b5c",
+        "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-1",
+        "5f9fbbab-7e18-451a-971e-0f97bcc1260a",
+        "4875dd1c-6dab-4702-964e-419b892bde11"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Questions? Here to help!",
+        "heading_size": "h3",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "inverse",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "17a80875-d3ad-4af8-9b12-88f5dbe0162b": {
+      "type": "product-ingredients",
+      "disabled": true,
+      "settings": {
+        "heading": "Key Ingredients",
+        "heading_size": "h2",
+        "color_scheme": "inverse",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "1443dbb0-ea85-4289-811e-0188944eac12": {
+      "type": "product-clinical-trial",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "inverse",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "44e52141-129c-4172-8099-dc699805e02c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dr. Clare",
+            "heading_size": "h0"
+          }
+        },
+        "8446f5a8-d48e-4d4e-9378-c20aa3d35a57": {
+          "type": "heading",
+          "settings": {
+            "heading": "#ASKMEDMAMA",
+            "heading_size": "h3"
+          }
+        },
+        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Meet Dr. Clare Bertucio; mother, wife, physician of 20+ years, fierce women’s health advocate and now CEO. With Dr. Clare, no question is too bold or too taboo. She’s working to build a more informed, confident, and liberated female community. Join in the conversation, embrace your Vulva, and be a part of this revolutionary journey that Medicine Mama is leading. Go ahead #askmedmama.<\/p>",
+            "text_size": "text-body",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "https:\/\/medicinemama.com\/pages\/about",
+            "button_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-0",
+        "8446f5a8-d48e-4d4e-9378-c20aa3d35a57",
+        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-1",
+        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/vulvavsvagina.jpg",
+        "video": "shopify:\/\/files\/videos\/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
+        "media_type": "video",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 64
+      }
+    },
+    "339a2a23-2076-4857-bb07-eaed9749925f": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% render 'okendo-reviews-widget', product: product %}",
+        "color_scheme": "inverse",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cac67cc4-85e1-4f5d-9af0-5bfbe86ec590",
+    "6cdfb8e6-a773-44fa-ae13-b790f3d71579",
+    "61b83918-3465-4607-bf85-62c487efba89",
+    "50b033ae-f7f1-4b0a-b956-da9b75aee309",
+    "90d878aa-6cfc-4f37-af51-fdca7ab9475b",
+    "9d0f63ce-5d04-4d58-8622-efb9fda8f05c",
+    "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa",
+    "c3a50a1b-b9e4-4730-8667-125f047ed335",
+    "related-products",
+    "17a80875-d3ad-4af8-9b12-88f5dbe0162b",
+    "1443dbb0-ea85-4289-811e-0188944eac12",
+    "44e52141-129c-4172-8099-dc699805e02c",
+    "339a2a23-2076-4857-bb07-eaed9749925f"
+  ]
+}

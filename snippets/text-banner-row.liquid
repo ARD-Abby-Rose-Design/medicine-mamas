@@ -1,0 +1,17 @@
+{{ 'text-banner-row.css' | asset_url | stylesheet_tag }}
+
+<div class="text-banner__row">
+  {% if shop.metaobjects.text_banner_row[metaobject_handle] != null %}
+    <h3 class="h3">{{ shop.metaobjects.text_banner_row[metaobject_handle].title }}</h3>
+    {% for item in shop.metaobjects.text_banner_row[metaobject_handle].banner_items.value %}
+      <div class="text-banner__item">
+        <div class="text-banner__item--image">
+          {{ item.image | image_url: width: 100, height: 100, crop: 'center' | image_tag }}
+        </div>
+        <div class="text-banner__item--text">
+          {{ item.title }}
+        </div>
+      </div>
+    {% endfor %}
+  {% endif %}
+</div>

@@ -1,0 +1,52 @@
+{% comment %}
+  Renders quick add drawer
+
+  Usage:
+  {% render 'quick-add-drawer' %}
+{% endcomment %}
+
+<style>
+  .drawer {
+    visibility: hidden;
+  }
+</style>
+
+{{ 'quick-add-drawer.css' | asset_url | stylesheet_tag }}
+
+<quick-add-drawer class="drawer">
+  <div id="QuickAddDrawer" class="cart-drawer">
+    <div id="QuickAddDrawer-Overlay" class="cart-drawer__overlay"></div>
+    <div
+      class="drawer__inner"
+      role="dialog"
+      aria-modal="true"
+      aria-label="{{ 'sections.cart.title' | t }}"
+      tabindex="-1"
+    >
+      <div class="drawer__header">
+        <h2 class="drawer__heading">&nbsp;</h2>
+        <button
+          class="drawer__close"
+          type="button"
+          onclick="this.closest('quick-add-drawer').close()"
+          aria-label="{{ 'accessibility.close' | t }}"
+        >
+          {% render 'icon-close' %}
+        </button>
+      </div>
+      <div class="quick-add__inner">
+      </div>
+      <div class="loading-overlay__spinner hidden">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          class="spinner"
+          viewBox="0 0 66 66"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+        </svg>
+      </div>
+    </div>
+  </div>
+</quick-add-drawer>

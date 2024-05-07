@@ -1,0 +1,33 @@
+@media screen and (min-width: 750px) {
+  .boldly-pure {
+    display: flex;
+  }
+  .boldly-pure__left {
+    width: 40%;
+    padding-right: 150px;
+  }
+  .boldly-pure__right {
+    width: 60%;
+  }
+}
+
+.callout__inner {
+  display: flex;
+}
+.callout__inner img {
+  margin-right: 2rem;
+}
+
+.boldly-pure__left .h1 {
+  margin: 0;
+}
+
+.boldly-pure__callout .h4 {
+  margin-top: 0;
+}
+
+.boldly-pure__callout + .boldly-pure__callout {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #c7c7c7;
+}

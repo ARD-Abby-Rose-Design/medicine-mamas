@@ -1,0 +1,46 @@
+.recharge-te {
+  background: var(--warm-white);
+}
+
+.rct_card {
+  border-radius: 1rem;
+  box-shadow: initial;
+}
+
+.recharge-te {
+  --rc-prima-font-family: var(--font-body-family);
+  --theme-prima-text-size: 15px;
+  font-weight: normal;
+}
+
+.rct_navigation {
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .rct_navigation__desktop {
+    max-width: var(--page-width);
+    width: calc(var(--page-width) - 10rem);
+    justify-content: flex-start;
+    text-transform: uppercase;
+  }
+}
+
+a.rct_navigation__item__link {
+  color: black;
+  padding: 13px 20px;
+  font-size: 14px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.rct_navigation__item {
+  margin: 0;
+}
+
+.rct_navigation__item + .rct_navigation__item {
+  margin-left: 20px;
+}

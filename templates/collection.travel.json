@@ -1,0 +1,118 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_scheme": "inverse"
+      }
+    },
+    "26b4b984-bb08-4d9b-9b59-e148d9d574d1": {
+      "type": "collection-secondary-menu",
+      "disabled": true,
+      "settings": {
+        "menu": "collection-secondary-menu",
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "db77dd5b-d1e2-4d40-878c-046c31ccf05c": {
+          "type": "marketing_tile",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Portrait3.jpg",
+            "heading": "Vulva care is radical self love",
+            "heading_size": "h0",
+            "subheading": "Be In-Touch with Your Self, Body, and Womankind",
+            "url": "",
+            "width": "1x",
+            "position": 6
+          }
+        },
+        "81f860ad-eaa4-4f0b-bd07-84126e5b24b1": {
+          "type": "text_marquee",
+          "settings": {
+            "metaobject_handle": "standard-text-marquee",
+            "position": 7
+          }
+        },
+        "f83c6b2b-54f9-40fb-a044-8549bb35a96d": {
+          "type": "text_banner_row",
+          "settings": {
+            "metaobject_handle": "why-subscribe",
+            "position": 17
+          }
+        },
+        "be9bfcd6-b9d0-4c07-a70b-084a54f3a893": {
+          "type": "marketing_tile",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2X-tile.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "url": "",
+            "width": "2x",
+            "position": 14
+          }
+        }
+      },
+      "block_order": [
+        "db77dd5b-d1e2-4d40-878c-046c31ccf05c",
+        "81f860ad-eaa4-4f0b-bd07-84126e5b24b1",
+        "f83c6b2b-54f9-40fb-a044-8549bb35a96d",
+        "be9bfcd6-b9d0-4c07-a70b-084a54f3a893"
+      ],
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 3,
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "enable_filtering": false,
+        "filter_type": "drawer",
+        "enable_sorting": false,
+        "columns_mobile": "1",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "9f346ce6-3a9f-4442-815e-3182b549e605": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16789920710885__9f346ce6-3a9f-4442-815e-3182b549e605-1689287166ff140992-1": {
+          "type": "text",
+          "settings": {
+            "text": "{{ collection.metafields.seo.text | metafield_tag }}",
+            "text_style": "text-body"
+          }
+        }
+      },
+      "block_order": [
+        "template--16789920710885__9f346ce6-3a9f-4442-815e-3182b549e605-1689287166ff140992-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "26b4b984-bb08-4d9b-9b59-e148d9d574d1",
+    "product-grid",
+    "9f346ce6-3a9f-4442-815e-3182b549e605"
+  ]
+}

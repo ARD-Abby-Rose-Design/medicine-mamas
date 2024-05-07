@@ -1,0 +1,63 @@
+{
+  "sections": {
+    "aedee16e-1159-4d8e-864b-d18adfaec643": {
+      "type": "contact-page",
+      "blocks": {
+        "5f9d61d3-1d28-4eaa-b82d-76ecfe868c66": {
+          "type": "bubble",
+          "disabled": true,
+          "settings": {
+            "heading": "<strong>Call Us<\/strong>",
+            "text": "<p>Phone: 805.646.2425<br\/>Toll Free: 800.343.1867<\/p>"
+          }
+        },
+        "b38ee7a8-3743-4946-9dc7-db56231cc033": {
+          "type": "bubble",
+          "settings": {
+            "heading": "<strong>Email Us<\/strong>",
+            "text": "<p>info@medicinemama.com<\/p>"
+          }
+        },
+        "6825eb34-dc8c-409a-ad5e-92fe56dadad0": {
+          "type": "bubble",
+          "settings": {
+            "heading": "<strong>Press Inquiries<\/strong>",
+            "text": "<p>Have a press inquiry? Contact us at info@medicinemama.com<\/p>"
+          }
+        },
+        "610a78a1-2543-4d5b-92ad-4bf6f94ef49b": {
+          "type": "bubble",
+          "settings": {
+            "heading": "<strong>Affiliates<\/strong>",
+            "text": "<p><a href=\"https:\/\/forms.monday.com\/forms\/5813d48f7a0c19df22c8af12e4433efe?r=use1\" title=\"https:\/\/forms.monday.com\/forms\/5813d48f7a0c19df22c8af12e4433efe?r=use1\">Click here to apply to become an affiliate<\/a><\/p>"
+          }
+        },
+        "4dfdd89e-9417-46c7-bb39-6e75dd4c45ea": {
+          "type": "bubble",
+          "settings": {
+            "heading": "Wholesale",
+            "text": "<p>orders@mdmama.com<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "5f9d61d3-1d28-4eaa-b82d-76ecfe868c66",
+        "b38ee7a8-3743-4946-9dc7-db56231cc033",
+        "6825eb34-dc8c-409a-ad5e-92fe56dadad0",
+        "610a78a1-2543-4d5b-92ad-4bf6f94ef49b",
+        "4dfdd89e-9417-46c7-bb39-6e75dd4c45ea"
+      ],
+      "settings": {
+        "heading": "GET IN TOUCH",
+        "heading_size": "h0",
+        "color_scheme": "inverse",
+        "paragraph": "<p>For order, product, or website-related questions, please contact us and one of our team members will be in touch with you.<\/p>",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "aedee16e-1159-4d8e-864b-d18adfaec643"
+  ]
+}

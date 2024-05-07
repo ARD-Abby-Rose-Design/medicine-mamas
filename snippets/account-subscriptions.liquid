@@ -1,0 +1,200 @@
+<script>
+  recharge.init({
+    storeIdentifier: '{{ shop.permanent_domain }}',
+    storefrontAccessToken: 'strfnt_2e5c340ec66ff790ec09ab7141158456cb142e4dce223f4fc56451b11aae5ab0',
+    loginRetryFn: (fn) => {
+      console.log(fn);
+      return recharge.auth.loginShopifyAppProxy().then((session) => {
+        console.log('recharge session', session);
+        return session;
+      });
+    },
+  });
+</script>
+<style>
+  .visually-hidden {
+    border: 0px;
+    clip: rect(0px, 0px, 0px, 0px);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+  }
+
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .subscriptions-table td.id {
+    vertical-align: middle !important;
+  }
+
+  .subscriptions-loader {
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+  }
+
+  .subscriptions-loader__spinner {
+    display: inline-block;
+    border-top: 2px solid currentcolor;
+    border-right: 2px solid currentcolor;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-radius: 99999px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    animation: 0.45s linear 0s infinite normal none running spinner;
+    width: var(--spinner-size);
+    height: var(--spinner-size);
+    --spinner-size: 5rem;
+  }
+
+  .subscriptions {
+    width: 100%;
+    margin-top: 48px;
+  }
+</style>
+
+<section class="subscriptions">
+  <div>
+    <h2 class="h3">My Subscriptions</h2>
+    <account-subscriptions>
+      <div class="customer__subscriptions-list grid grid--1-col-tablet-down grid--4-col-desktop">
+      </div>
+      <div class="subscriptions-loader">
+        <div class="subscriptions-loader__spinner"><span class="visually-hidden">Loading...</span></div>
+      </div>
+    </account-subscriptions>
+  </div>
+</section>
+
+<script>
+  class AccountSubscriptions extends HTMLElement {
+    selectors = {
+      loader: '.subscriptions-loader',
+      list: '.customer__subscriptions-list',
+    };
+
+    constructor() {
+      super();
+      this.loadSubscriptions();
+    }
+
+    async login() {
+      this.session = await recharge.auth.loginShopifyAppProxy();
+    }
+
+    async loadSubscriptions() {
+      this.setLoading(true);
+      await this.login();
+      const { subscriptions } = await recharge.subscription.listSubscriptions(this.session);
+      subscriptions.forEach((subscription) => {
+        const list = this.querySelector(`${this.selectors.list}`);
+        if (!list) return;
+        list.append(this.createRow(subscription));
+      });
+      this.setLoading(false);
+    }
+
+    async setLoading(value) {
+      const loader = this.querySelector(this.selectors.loader);
+      if (!value && loader) {
+        loader.remove();
+      } else if (value) {
+        const loadingEl = document.createElement('div');
+        loadingEl.classList.add(this.selectors.loader.split('.')[1]);
+        this.append(loadingEl);
+      }
+    }
+
+    getProductImage(query, element) {
+      const url = window.Shopify.routes.root + `search/suggest.json?q=${query}&resources[type]=product&resources[options][fields]=title`;
+      console.log(url)
+      fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        {% comment %} console.log(data.resources.results.products); {% endcomment %}
+        if(data.resources.results.products.length) {
+          const product = data.resources.results.products[0];
+          if(product.title !== query) return;
+          console.log(product);
+          const productImage = document.createElement('img');
+          productImage.src = product.image;
+          productImage.alt = product.title;
+          productImage.classList.add('product-image');
+          const productImageWrapper = document.createElement('div');
+          productImageWrapper.classList.add('media');
+          productImageWrapper.style.paddingTop = '120%';
+          productImageWrapper.append(productImage);
+          
+          element.append(productImageWrapper);
+
+          const titleLink = element.closest('.subscription-item').querySelector('.product-title');
+          if(!titleLink) return;
+          titleLink.setAttribute('href', product.url);
+          titleLink.classList.add('link');
+        }
+      });
+    }
+
+    createRow(subscription) {
+      const row = document.createElement('div');
+      row.classList.add('grid__item');
+      row.classList.add('subscription-item');
+
+      console.log(subscription);
+
+      {% comment %} const idCol = document.createElement('div');
+      idCol.classList.add('id');
+      idCol.innerHTML = subscription.id;
+      row.append(idCol); {% endcomment %}
+
+      const productImageEl = document.createElement('div');
+      productImageEl.classList.add('product-image');
+      row.append(productImageEl);
+
+      this.getProductImage(subscription.product_title, productImageEl);
+
+
+      const titleLink = document.createElement('a');
+      titleLink.classList.add('product-title');
+      titleLink.innerHTML = subscription.product_title;
+      row.append(titleLink);
+
+      {% comment %} const quantityCol = document.createElement('div');
+      quantityCol.classList.add('subscription-quantity');
+      quantityCol.innerHTML = subscription.quantity;
+      row.append(quantityCol); {% endcomment %}
+
+      {% comment %} const priceCol = document.createElement('div');
+      priceCol.classList.add('price');
+      priceCol.innerHTML = `$${subscription.price}`;
+      row.append(priceCol); {% endcomment %}
+
+      const frequencyEl = document.createElement('div');
+      frequencyEl.classList.add('frequency');
+      const qtyText = subscription.quantity > 1 ? 'units' : 'unit';
+      const frequency = subscription.order_interval_frequency > 1 ? 'months' : 'month';
+      frequencyEl.innerHTML = `${subscription.quantity} ${qtyText} every ${frequency}`;
+
+      row.append(frequencyEl);
+
+      
+
+      return row;
+    }
+  }
+
+  customElements.define('account-subscriptions', AccountSubscriptions);
+</script>

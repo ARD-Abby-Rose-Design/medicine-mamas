@@ -1,0 +1,351 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "fb419e30-388a-4653-8e90-e340c2fb7cec": {
+      "type": "image-with-text",
+      "blocks": {
+        "a91c37fb-ca9a-4db4-b969-e6cc00784d91": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>HURRY! SALE ENDS SOON<\/strong>",
+            "heading_size": "h5"
+          }
+        },
+        "68b80969-63dc-4ddf-97b4-f3f521541b20": {
+          "type": "heading",
+          "settings": {
+            "heading": "FLASH SALE",
+            "heading_size": "h1"
+          }
+        },
+        "template--16800821838053__fb419e30-388a-4653-8e90-e340c2fb7cec-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "30% Off Subscriptions for Life!",
+            "heading_size": "h2"
+          }
+        },
+        "template--16800821838053__fb419e30-388a-4653-8e90-e340c2fb7cec-text-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "",
+            "text_size": "text-body-large",
+            "bullets_to_checkmarks": true
+          }
+        },
+        "template--16800821838053__fb419e30-388a-4653-8e90-e340c2fb7cec-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Shop Bestsellers",
+            "button_link": "shopify:\/\/collections\/best-sellers",
+            "button_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "a91c37fb-ca9a-4db4-b969-e6cc00784d91",
+        "68b80969-63dc-4ddf-97b4-f3f521541b20",
+        "template--16800821838053__fb419e30-388a-4653-8e90-e340c2fb7cec-heading-1",
+        "template--16800821838053__fb419e30-388a-4653-8e90-e340c2fb7cec-text-1",
+        "template--16800821838053__fb419e30-388a-4653-8e90-e340c2fb7cec-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/medicine-mama-products_023f4027-7e3e-4351-ab01-70c91954c14d.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ef1af7e3-eeb9-44b8-8470-8d4200599297": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16926808539365__ef1af7e3-eeb9-44b8-8470-8d4200599297-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "\"I started this subscription 2 months ago - I like that I do not have to worry about going to the store and buying these products, as many times they are out of stock at the store. So this makes it very convenient to get them in the mail every month.\"",
+            "heading_size": "h3"
+          }
+        },
+        "template--16926808539365__ef1af7e3-eeb9-44b8-8470-8d4200599297-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>- Barbara G.<\/p>",
+            "text_style": "text-body-large"
+          }
+        },
+        "template--16926808539365__ef1af7e3-eeb9-44b8-8470-8d4200599297-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16926808539365__ef1af7e3-eeb9-44b8-8470-8d4200599297-heading-1",
+        "template--16926808539365__ef1af7e3-eeb9-44b8-8470-8d4200599297-text-1",
+        "template--16926808539365__ef1af7e3-eeb9-44b8-8470-8d4200599297-button-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "190c2e63-1eb9-4a87-ad65-790c98b1ed5a": {
+      "type": "featured-collections",
+      "blocks": {
+        "4c254b17-b652-4cb7-95f5-198b5137330b": {
+          "type": "collection",
+          "settings": {
+            "collection": "gift-set-collections",
+            "title": "Bundles + Gift Sets"
+          }
+        },
+        "b10969c3-9793-4654-ac3f-c327c6c44803": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products",
+            "title": "VMAGIC®"
+          }
+        }
+      },
+      "block_order": [
+        "4c254b17-b652-4cb7-95f5-198b5137330b",
+        "b10969c3-9793-4654-ac3f-c327c6c44803"
+      ],
+      "settings": {
+        "title": "Subscription Favorites",
+        "heading_size": "h3",
+        "products_to_show": 9,
+        "full_width": false,
+        "color_scheme": "inverse",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "4e0d6500-9099-4ad6-b1d6-da16502a5f37": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--16814962606309__4e0d6500-9099-4ad6-b1d6-da16502a5f37-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do subscriptions work?",
+            "row_content": "<p>Sign up for subscriptions to receive your favorite VMAGIC® products every month, with no hassle or worry about your favorites selling out. Plus subscription customers get a discount on every order and early access to new products. Manage your subscription easily by simply logging into your account. You can easily choose to skip a monthly shipment, change the frequency of your shipments, swap your subscription products, gift one of your shipments if you are out of town, or cancel your subscription.<\/p>",
+            "page": ""
+          }
+        },
+        "template--16814962606309__4e0d6500-9099-4ad6-b1d6-da16502a5f37-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is Subscribe & Save?",
+            "row_content": "<p>Subscribe & Save product subscriptions are the most convenient way to keep up your feminine care routine, with your favorite VMAGIC® products delivered to your door on a regular schedule. We will automatically ship your subscribed products based upon your chosen frequency (every month, 2 months, or 3 months). The service is easy to use and customizable, so you can make changes online whenever you need whether you need to pause, modify, or cancel. We send an email reminder 3 days before each order ships.<\/p>",
+            "page": ""
+          }
+        },
+        "bb143716-1b65-41e3-a42d-88e3e978d97c": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I'm in! How do I sign up for a subscription?",
+            "row_content": "<p>Simply visit the product page for the item you'd like to subscribe to, select the Subscribe + Save option, then click add to cart. Repeat the steps above for any other products you'd like to add to your subscription and then head to checkout. <\/p><p>If you need any help with your subscription order, email us at info@mdmama.com.<\/p>",
+            "page": ""
+          }
+        },
+        "ffdbcf9d-604e-4c89-8a11-9517989f319a": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I make changes to my subscription order?",
+            "row_content": "<p>You can access your customer portal through your store <a href=\"https:\/\/medicinemamasapothecary.com\/account\/login?return_url=%2Faccount\" target=\"_blank\">account login<\/a>. If you have not registered an account, you will need to create an account using the same email address used at checkout for your subscription order.<\/p><p>Once your account is registered, you can log in and access your customer portal by clicking on the <strong>Manage Subscriptions<\/strong> link.<\/p><p>You can also access your account using a customer portal magic link. This magic link is typically sent in the Subscription Confirmation email when you begin a subscription and the Upcoming Order email.<\/p>",
+            "page": ""
+          }
+        },
+        "76d24f62-90e4-4588-a65b-6f1879404867": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I pause or cancel my subscription?",
+            "row_content": "<p>To <strong>pause <\/strong>your subscription:<\/p><ol><li><a href=\"https:\/\/medicinemamasapothecary.com\/account\/login?return_url=%2Faccount\" target=\"_blank\">Login <\/a>to your customer portal.<\/li><li>Click Subscriptions and select the subscription you would like to pause.<\/li><li>Scroll to the bottom of the page and click Cancel Subscription.<\/li><li>On the \"Would you like to pause instead?\" pop-up, select the amount of time you would like to pause your subscription if you want to pause instead of cancel.<\/li><li>Take note of the next shipment date, which will reflect the pause duration.<\/li><li>Click Pause Subscription.<\/li><\/ol><p>There is no unpause button in the customer portal. If you would like to reactivate your subscription before the next shipment date, locate the paused subscription on the Subscriptions page of the customer portal and click Order now.<\/p><p><\/p><p>To <strong>cancel <\/strong>your subscription:<br\/><\/p><ol><li><a href=\"https:\/\/medicinemamasapothecary.com\/account\/login?return_url=%2Faccount\" target=\"_blank\">Login <\/a>to your customer portal.<\/li><li>Click Subscriptions and Edit.<\/li><li>Scroll down to the bottom of the page and click Cancel Subscription. If required, provide a cancellation reason and confirm the cancellation by clicking Proceed.<\/li><\/ol>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16814962606309__4e0d6500-9099-4ad6-b1d6-da16502a5f37-collapsible_row-1",
+        "template--16814962606309__4e0d6500-9099-4ad6-b1d6-da16502a5f37-collapsible_row-3",
+        "bb143716-1b65-41e3-a42d-88e3e978d97c",
+        "ffdbcf9d-604e-4c89-8a11-9517989f319a",
+        "76d24f62-90e4-4588-a65b-6f1879404867"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Subscription FAQs",
+        "heading_size": "h3",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "inverse",
+        "container_color_scheme": "inverse",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "86a7bc28-7b00-4499-9824-fcae8b63934e": {
+      "type": "text-banner-row",
+      "disabled": true,
+      "settings": {
+        "metaobject_handle": "why-subscribe",
+        "color_scheme": "inverse",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "dd3b96b7-4a91-4f16-a512-1bc716c4a435": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16926808539365__dd3b96b7-4a91-4f16-a512-1bc716c4a435-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "\"I now have a subscription to automatically receive this combo pack every two months and it is worth every cent.\"",
+            "heading_size": "h3"
+          }
+        },
+        "template--16926808539365__dd3b96b7-4a91-4f16-a512-1bc716c4a435-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>- Barbara G.<\/p>",
+            "text_size": "text-body-large",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "template--16926808539365__dd3b96b7-4a91-4f16-a512-1bc716c4a435-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Subscribe & Save",
+            "button_link": "shopify:\/\/products\/vmagic-skincare-jar-feminine-wash",
+            "button_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "template--16926808539365__dd3b96b7-4a91-4f16-a512-1bc716c4a435-heading-1",
+        "template--16926808539365__dd3b96b7-4a91-4f16-a512-1bc716c4a435-text-1",
+        "template--16926808539365__dd3b96b7-4a91-4f16-a512-1bc716c4a435-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/feminine-wash-vulva-wash-vulva-balm.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "3daaa728-213a-4f9e-b819-00891ecbc5d1": {
+      "type": "scrolling-marquee",
+      "blocks": {
+        "template--16800821838053__3daaa728-213a-4f9e-b819-00891ecbc5d1-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "Neat."
+          }
+        },
+        "template--16800821838053__3daaa728-213a-4f9e-b819-00891ecbc5d1-text-2": {
+          "type": "text",
+          "settings": {
+            "text": "Neat."
+          }
+        },
+        "template--16800821838053__3daaa728-213a-4f9e-b819-00891ecbc5d1-text-3": {
+          "type": "text",
+          "settings": {
+            "text": "Neat."
+          }
+        }
+      },
+      "block_order": [
+        "template--16800821838053__3daaa728-213a-4f9e-b819-00891ecbc5d1-text-1",
+        "template--16800821838053__3daaa728-213a-4f9e-b819-00891ecbc5d1-text-2",
+        "template--16800821838053__3daaa728-213a-4f9e-b819-00891ecbc5d1-text-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "inverse",
+        "type": "text",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "8c30a292-22e8-4055-b148-ec5dd7ee85e5": {
+      "type": "featured-reviews",
+      "settings": {
+        "color_scheme": "inverse",
+        "show_line_separator": true,
+        "title": "<b>Over 11,000 5-Star Reviews<\/b>",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "a8371e5d-d4bf-4a1b-bb65-2767c7af8bd3": {
+      "type": "featured-products-slider",
+      "settings": {
+        "color_scheme": "",
+        "title": "",
+        "heading_size": "h1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "fb419e30-388a-4653-8e90-e340c2fb7cec",
+    "ef1af7e3-eeb9-44b8-8470-8d4200599297",
+    "190c2e63-1eb9-4a87-ad65-790c98b1ed5a",
+    "4e0d6500-9099-4ad6-b1d6-da16502a5f37",
+    "86a7bc28-7b00-4499-9824-fcae8b63934e",
+    "dd3b96b7-4a91-4f16-a512-1bc716c4a435",
+    "3daaa728-213a-4f9e-b819-00891ecbc5d1",
+    "8c30a292-22e8-4055-b148-ec5dd7ee85e5",
+    "a8371e5d-d4bf-4a1b-bb65-2767c7af8bd3"
+  ]
+}

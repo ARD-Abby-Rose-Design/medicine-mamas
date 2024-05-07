@@ -1,0 +1,53 @@
+@media screen and (min-width: 990px) {
+  .clinical-trial {
+    align-items: center;
+    display: flex;
+  }
+  .clinical-trial h2 {
+    width: 50%;
+    margin: 0;
+    padding-right: 150px;
+  }
+  
+  .clinical-trial__sliders {
+    width: 50%;
+  }
+}
+
+.clinical-trial .text-body-small {
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.clinical-trial h3 small {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.clinical-trial .h3 {
+  margin-right: 10px;
+}
+
+.clinical-trial__slider .slider {
+  display: block !important;
+  width: 100%;
+  height: 22px;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  position: relative;
+}
+
+.clinical-trial__slider .slider-bar {
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  background: #640F14;
+  border-radius: 50px;
+  max-width: calc(100% - 4px);
+}
+
+.clinical-trial__slider + .clinical-trial__slider {
+  margin-top: 2rem;
+}

@@ -1,0 +1,568 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "e0c95a69-7eef-4a50-a7e1-347555871471": {
+      "type": "featured-product",
+      "blocks": {
+        "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-rating-1": {
+          "type": "rating",
+          "settings": {
+          }
+        },
+        "f2fc4427-c024-4e9d-a2e2-0a7fbb0675fe": {
+          "type": "text",
+          "settings": {
+            "text": "LOTION FOR VAGINAL DRYNESS",
+            "text_style": "body"
+          }
+        },
+        "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-title-1": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "511f2ce9-6344-487a-aaf5-f1b383b09e93": {
+          "type": "text",
+          "settings": {
+            "text": "An organic, hormone-free lotion for vaginal dryness that relieves irritation brought on by (peri)menopause, postpartum, sexual activity, and grooming.",
+            "text_style": "body"
+          }
+        },
+        "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-checkmarks-1": {
+          "type": "checkmarks",
+          "settings": {
+          }
+        },
+        "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-custom_liquid-1": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"custom-recharge\"><\/div>"
+          }
+        },
+        "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-buy_buttons-1": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days<\/a>",
+            "text_style": "body"
+          }
+        },
+        "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-collapsible_tab-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How to Use",
+            "icon": "none",
+            "content": "<p>Scoop out a small amount of the vulva moisturizer with clean, dry fingers and massage into vulvar skin (includes inner and\/or outer labia, the clitoris, vaginal opening or mons pubis) to moisturize intimate skin.<br\/><br\/>Use daily for hydration or anytime you need relief from vulvar dryness or discomfort due to:<br\/><br\/>Menopause, Perimenopause or Postpartum<br\/>Sexual activity<br\/>Post shaving or waxing<br\/>Chafing from exercise or clothing<\/p>",
+            "page": ""
+          }
+        },
+        "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-collapsible_tab-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredients",
+            "icon": "none",
+            "content": "<p>{{ section.settings.product.metafields.custom.key_ingredients | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-collapsible_tab-3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Product Benefits & Trial Results",
+            "icon": "none",
+            "content": "<p>The VMAGIC Intimate Skin Moisturizer instantly soothes skin providing immediate relief from dryness and ongoing improvements upon consistent 2-week use.<\/p><p><strong>In a clinical trial<\/strong><br\/>100% reported zero irritation*<br\/>92% saw a reduction in dryness after consistent 2-week use**<br\/>79% reported immediate soothing relief from intimate skin dryness*<br\/>7,000+ 5 Star Reviews on Amazon<br\/><br\/>*Based on a clinical study of 33 people aged 25-55<br\/>** Based on 13 people who presented with feminine dryness at the beginning of the study<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-rating-1",
+        "f2fc4427-c024-4e9d-a2e2-0a7fbb0675fe",
+        "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-title-1",
+        "511f2ce9-6344-487a-aaf5-f1b383b09e93",
+        "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-checkmarks-1",
+        "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-custom_liquid-1",
+        "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-buy_buttons-1",
+        "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-text-1",
+        "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-collapsible_tab-1",
+        "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-collapsible_tab-2",
+        "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-collapsible_tab-3"
+      ],
+      "settings": {
+        "product": "vmagic-vulvar-balm-skincare-jar",
+        "color_scheme": "inverse",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "3daaa728-213a-4f9e-b819-00891ecbc5d1": {
+      "type": "scrolling-marquee",
+      "blocks": {
+        "template--16800821838053__3daaa728-213a-4f9e-b819-00891ecbc5d1-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "Neat."
+          }
+        },
+        "template--16800821838053__3daaa728-213a-4f9e-b819-00891ecbc5d1-text-2": {
+          "type": "text",
+          "settings": {
+            "text": "Neat."
+          }
+        },
+        "template--16800821838053__3daaa728-213a-4f9e-b819-00891ecbc5d1-text-3": {
+          "type": "text",
+          "settings": {
+            "text": "Neat."
+          }
+        }
+      },
+      "block_order": [
+        "template--16800821838053__3daaa728-213a-4f9e-b819-00891ecbc5d1-text-1",
+        "template--16800821838053__3daaa728-213a-4f9e-b819-00891ecbc5d1-text-2",
+        "template--16800821838053__3daaa728-213a-4f9e-b819-00891ecbc5d1-text-3"
+      ],
+      "settings": {
+        "color_scheme": "inverse",
+        "type": "text",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "fb419e30-388a-4653-8e90-e340c2fb7cec": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16800821838053__fb419e30-388a-4653-8e90-e340c2fb7cec-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Organic & Hormone Free",
+            "heading_size": "h2"
+          }
+        },
+        "ce4fd0f6-bffe-48cf-86be-25d89812acd6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our vulva lotion is made from  clinically studied natural ingredients including Honey + Propolis, Organic Extra Virgin Olive & Avocado Oils, Cera Alba Beeswax, and Organic Sea Buckthorn to instantly soothe and protect private areas without any hormones.<\/p>",
+            "text_size": "text-body",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16800821838053__fb419e30-388a-4653-8e90-e340c2fb7cec-heading-1",
+        "ce4fd0f6-bffe-48cf-86be-25d89812acd6"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Honey.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "c39fba0e-bc59-46d2-86a2-af4c09e981c0": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16890557890789__c39fba0e-bc59-46d2-86a2-af4c09e981c0-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Doctor Backed, OBGYN Approved",
+            "heading_size": "h2"
+          }
+        },
+        "template--16890557890789__c39fba0e-bc59-46d2-86a2-af4c09e981c0-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our products are formulated in partnership with our Cheif Medical Officer Dr. Clare Bertucio and organically loved and recommended by OBGYNs, Pelvic Floor Therapists and Dermatologists. Our formulations leverage experts, research and testing and only include science backed ingredients that are supportive of vulvar wellness.<\/p>",
+            "text_size": "text-body",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16890557890789__c39fba0e-bc59-46d2-86a2-af4c09e981c0-heading-1",
+        "template--16890557890789__c39fba0e-bc59-46d2-86a2-af4c09e981c0-text-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/medicine-mama-dr-clare-bertucio_1bad01cf-8e09-4574-830b-88378039beee.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "f702b71c-4d12-4d04-b95a-6ef8b49beb83": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16890557890789__f702b71c-4d12-4d04-b95a-6ef8b49beb83-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Less Pain, More Intimacy",
+            "heading_size": "h2"
+          }
+        },
+        "template--16890557890789__f702b71c-4d12-4d04-b95a-6ef8b49beb83-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As you enter into (peri)menopause  the vulva can lose elasticity and moisture resulting in discomfort, dryness and even pain with sex. This is often due to the decrease in estrogen that characterizes this normal phase of female life.<\/p><p>VMAGIC® Vulva Lotion can help to soften and hydrate delicate vulvar tissues making intimacy more enjoyable.<\/p>",
+            "text_size": "text-body",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "template--16890557890789__f702b71c-4d12-4d04-b95a-6ef8b49beb83-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "template--16890557890789__f702b71c-4d12-4d04-b95a-6ef8b49beb83-heading-1",
+        "template--16890557890789__f702b71c-4d12-4d04-b95a-6ef8b49beb83-text-1",
+        "template--16890557890789__f702b71c-4d12-4d04-b95a-6ef8b49beb83-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/vulvamoisturizer2.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "95f67c8c-c2ae-4f5f-80e9-447d8a751fcc": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16890557890789__95f67c8c-c2ae-4f5f-80e9-447d8a751fcc-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Clinically Proven",
+            "heading_size": "h2"
+          }
+        },
+        "template--16890557890789__95f67c8c-c2ae-4f5f-80e9-447d8a751fcc-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In a clinical trial:<\/p><ul><li>100% reported zero irritation<\/li><li>92% saw a reduction in dryness after consistent 2-week use<\/li><li>79% reported immediate soothing relief from intimate skin dryness. <\/li><\/ul>",
+            "text_size": "text-body",
+            "bullets_to_checkmarks": true
+          }
+        }
+      },
+      "block_order": [
+        "template--16890557890789__95f67c8c-c2ae-4f5f-80e9-447d8a751fcc-heading-1",
+        "template--16890557890789__95f67c8c-c2ae-4f5f-80e9-447d8a751fcc-text-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/vulvamoisturizer1.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "5d1d2135-c18e-4a41-a3ee-623ea0cfb34d": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--16890557890789__5d1d2135-c18e-4a41-a3ee-623ea0cfb34d-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Honey + Propolis",
+            "row_content": "<p>A proprietary blend of raw, sustainably sourced honey and propolis that delivers prebiotic, antioxidant, and soothing benefits to the skin<\/p>",
+            "page": ""
+          }
+        },
+        "template--16890557890789__5d1d2135-c18e-4a41-a3ee-623ea0cfb34d-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Organic Extra Virgin Olive & Avocado Oils",
+            "row_content": "<p>Contain essential fatty acids to restore and replenish dry skin<\/p>",
+            "page": ""
+          }
+        },
+        "template--16890557890789__5d1d2135-c18e-4a41-a3ee-623ea0cfb34d-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Organic Cera Alba Beeswax",
+            "row_content": "<p>Strengthens stressed skin by supporting the skins moisture barrier and locking in hydration<\/p>",
+            "page": ""
+          }
+        },
+        "template--16890557890789__5d1d2135-c18e-4a41-a3ee-623ea0cfb34d-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Organic Sea Buckthorn",
+            "row_content": "<p>Rich in linoleic acid to help support hydration and skin elasticity<\/p>",
+            "page": ""
+          }
+        },
+        "0bcf631f-203c-476d-9b4d-61ce89093c00": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Full Ingredient List",
+            "row_content": "<p>Organic Extra Virgin Olea Europaea (Olive) Oil, Organic Extra Virgin Persea Gratissima (Avocado) Oil, Organic Hippophae Rhamnoides (Sea Buckthorn) Oil, Organic Cera Alba (Beeswax), Medicine Mama's Proprietary Honey & Propolis Blend<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16890557890789__5d1d2135-c18e-4a41-a3ee-623ea0cfb34d-collapsible_row-1",
+        "template--16890557890789__5d1d2135-c18e-4a41-a3ee-623ea0cfb34d-collapsible_row-2",
+        "template--16890557890789__5d1d2135-c18e-4a41-a3ee-623ea0cfb34d-collapsible_row-3",
+        "template--16890557890789__5d1d2135-c18e-4a41-a3ee-623ea0cfb34d-collapsible_row-4",
+        "0bcf631f-203c-476d-9b4d-61ce89093c00"
+      ],
+      "disabled": true,
+      "settings": {
+        "caption": "",
+        "heading": "Clinically Studied Ingredients",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "inverse",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image": "shopify:\/\/shop_images\/Honey.jpg",
+        "image_ratio": "small",
+        "desktop_layout": "image_first",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "86a7bc28-7b00-4499-9824-fcae8b63934e": {
+      "type": "text-banner-row",
+      "disabled": true,
+      "settings": {
+        "metaobject_handle": "why-subscribe",
+        "color_scheme": "inverse",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "190c2e63-1eb9-4a87-ad65-790c98b1ed5a": {
+      "type": "featured-collections",
+      "blocks": {
+        "b10969c3-9793-4654-ac3f-c327c6c44803": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products",
+            "title": "VMAGIC®"
+          }
+        },
+        "4c254b17-b652-4cb7-95f5-198b5137330b": {
+          "type": "collection",
+          "settings": {
+            "collection": "gift-set-collections",
+            "title": "Bundles + Gift Sets"
+          }
+        }
+      },
+      "block_order": [
+        "b10969c3-9793-4654-ac3f-c327c6c44803",
+        "4c254b17-b652-4cb7-95f5-198b5137330b"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Subscription Favorites",
+        "heading_size": "h3",
+        "products_to_show": 9,
+        "full_width": false,
+        "color_scheme": "inverse",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "8c30a292-22e8-4055-b148-ec5dd7ee85e5": {
+      "type": "featured-reviews",
+      "settings": {
+        "color_scheme": "inverse",
+        "show_line_separator": true,
+        "title": "Over 11,000 5-Star Reviews",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "4e0d6500-9099-4ad6-b1d6-da16502a5f37": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--16814962606309__4e0d6500-9099-4ad6-b1d6-da16502a5f37-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are Medicine Mama products estrogen free?",
+            "row_content": "<p>All of our products are hormone and soy free.<\/p>",
+            "page": ""
+          }
+        },
+        "template--16814962606309__4e0d6500-9099-4ad6-b1d6-da16502a5f37-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How much should I apply?",
+            "row_content": "<p>VMAGIC Vulva Lotion for vaginal dryness can be applied as liberally and as often as you like. We recommend starting with a small amount and working your way up as desired.<\/p>",
+            "page": ""
+          }
+        },
+        "bb143716-1b65-41e3-a42d-88e3e978d97c": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How fast can I expect to see results?",
+            "row_content": "<p>Results vary, but in a clinical study 79% of users found immediate relief and 92% saw a reduction in dryness with continued use of the vulva lotion in as little as two weeks.<\/p>",
+            "page": ""
+          }
+        },
+        "ffdbcf9d-604e-4c89-8a11-9517989f319a": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When should I use the Vulva Balm?",
+            "row_content": "<p>The delicate skin of the vulva can become irritated by many factors including aging, friction, and\/or use of products not specifically designed for this beautiful and delicate area. Vmagic vulva lotion provides soothing hydration to relieve discomfort from most vulvar irritants. Many of our customers find relief from (peri)menopause dryness, vulvar dryness from breastfeeding, sensitivity to shaving or waxing, tight clothing or even friction from sex. Our intimate skin moistruizer can be used any time of day and is safe and recommended for daily use as part of a well rounded skin care ritual.<\/p>",
+            "page": ""
+          }
+        },
+        "76d24f62-90e4-4588-a65b-6f1879404867": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can this product be used as a lubricant?",
+            "row_content": "<p>This intimate skin moisturizer is intended to be used on the Vulva which comprises the Mons Pubis, the Labia Minora and Majora, the Clitoris and Vaginal opening (In other words, the external skin only.). It is not intended to be used in the vaginal canal. However, many of our satisfied clients use the VMAGIC Vulva Balm to help with pain near the vaginal opening. Because it is olive oil based, it is not latex compatible.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16814962606309__4e0d6500-9099-4ad6-b1d6-da16502a5f37-collapsible_row-1",
+        "template--16814962606309__4e0d6500-9099-4ad6-b1d6-da16502a5f37-collapsible_row-3",
+        "bb143716-1b65-41e3-a42d-88e3e978d97c",
+        "ffdbcf9d-604e-4c89-8a11-9517989f319a",
+        "76d24f62-90e4-4588-a65b-6f1879404867"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Questions? Here to help!",
+        "heading_size": "h3",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "inverse",
+        "container_color_scheme": "inverse",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "98d77988-58b3-4b30-aefa-2c4192b4af88": {
+      "type": "you-speak",
+      "blocks": {
+        "1b0057ba-a08e-4cc7-9a95-44b20117b2b7": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/Medicine Mama 1.mov"
+          }
+        },
+        "8c4e8016-2d26-4c80-8f38-c2ae2389b92a": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/Untitled design (6).mp4"
+          }
+        },
+        "35e4b0cd-1283-4b47-bf05-ac7d53e9959d": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/Stargirl New Brand.mov"
+          }
+        },
+        "95a39215-e25e-418a-ae5f-d0d75a4ec6de": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/Video 2.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "1b0057ba-a08e-4cc7-9a95-44b20117b2b7",
+        "8c4e8016-2d26-4c80-8f38-c2ae2389b92a",
+        "35e4b0cd-1283-4b47-bf05-ac7d53e9959d",
+        "95a39215-e25e-418a-ae5f-d0d75a4ec6de"
+      ],
+      "settings": {
+        "color_scheme": "inverse",
+        "title": "COMMUNITY",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "e0c95a69-7eef-4a50-a7e1-347555871471",
+    "3daaa728-213a-4f9e-b819-00891ecbc5d1",
+    "fb419e30-388a-4653-8e90-e340c2fb7cec",
+    "c39fba0e-bc59-46d2-86a2-af4c09e981c0",
+    "f702b71c-4d12-4d04-b95a-6ef8b49beb83",
+    "95f67c8c-c2ae-4f5f-80e9-447d8a751fcc",
+    "5d1d2135-c18e-4a41-a3ee-623ea0cfb34d",
+    "86a7bc28-7b00-4499-9824-fcae8b63934e",
+    "190c2e63-1eb9-4a87-ad65-790c98b1ed5a",
+    "8c30a292-22e8-4055-b148-ec5dd7ee85e5",
+    "4e0d6500-9099-4ad6-b1d6-da16502a5f37",
+    "98d77988-58b3-4b30-aefa-2c4192b4af88"
+  ]
+}

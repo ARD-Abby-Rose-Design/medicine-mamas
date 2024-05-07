@@ -1,0 +1,33 @@
+.faq__filters {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.faq__filter:first-child {
+  margin-left: auto;
+}
+.faq__filter:last-child {
+  margin-right: auto;
+}
+.faq__filter + .faq__filter {
+  margin-left: 12px;
+}
+.faq__filter {
+  transition: all .3s ease;
+}
+
+.faq__panel {
+  margin-top: 48px;
+}
+
+.faq__panel .accordion__title {
+  font-size: 22px;
+}
+
+.faq__panel .accordion summary {
+  padding: 24px 0;
+}
+
+.faq__filter[aria-expanded="true"] {
+  background: var(--pink);
+  border-color: var(--pink);
+}

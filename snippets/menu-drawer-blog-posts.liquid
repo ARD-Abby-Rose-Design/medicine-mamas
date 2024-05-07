@@ -1,0 +1,18 @@
+{{ 'menu-drawer-blog-posts.css' | asset_url | stylesheet_tag }}
+<div class="menu-drawer__blog-posts">
+  <a href="/blogs/vmagic" class="button button--secondary button--full-width">Explore All</a>
+  <div class="grid grid--2-col">
+    {% for article in blogs.vmagic.articles limit: 4 %}
+      <div class="grid__item">
+        {%- render 'article-card',
+          article: article,
+          media_aspect_ratio: 1,
+          show_image: true,
+          show_date: false,
+          show_author: false,
+          show_excerpt: false
+        -%}
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,326 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "BOLDLY PURE VULVA CARE",
+            "heading_size": "h1"
+          }
+        },
+        "b68c30fa-30ad-4092-a2bf-83e0c585762a": {
+          "type": "heading",
+          "settings": {
+            "heading": "Be In-Touch with Your Self, Body, and Womankind",
+            "heading_size": "h2"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify:\/\/collections\/all-products",
+            "button_style_secondary_1": true
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "b68c30fa-30ad-4092-a2bf-83e0c585762a",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/medicine-mama-hero-1.jpg",
+        "image_2": "shopify:\/\/shop_images\/medicine-mama-mobile-hero_d41884ed-a3d4-4b8f-850f-df385e0de6ce.jpg",
+        "image_overlay_opacity": 10,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "accent-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "a2d5e26e-f3f3-4c9e-8b14-12dd5ae4c903": {
+      "type": "featured-collections",
+      "blocks": {
+        "b10969c3-9793-4654-ac3f-c327c6c44803": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products",
+            "title": "VMAGIC®"
+          }
+        },
+        "4c254b17-b652-4cb7-95f5-198b5137330b": {
+          "type": "collection",
+          "settings": {
+            "collection": "gift-set-collections",
+            "title": "Bundles + Gift Sets"
+          }
+        },
+        "bf0eeb7c-5460-4320-b17e-a8ce7a477ed0": {
+          "type": "collection",
+          "settings": {
+            "collection": "menopause",
+            "title": "Menopause"
+          }
+        },
+        "10c7a365-f1f6-42ac-b282-11715d0be638": {
+          "type": "collection",
+          "settings": {
+            "collection": "pregnancy-postpartum",
+            "title": "Pregnancy + Postpartum"
+          }
+        }
+      },
+      "block_order": [
+        "b10969c3-9793-4654-ac3f-c327c6c44803",
+        "4c254b17-b652-4cb7-95f5-198b5137330b",
+        "bf0eeb7c-5460-4320-b17e-a8ce7a477ed0",
+        "10c7a365-f1f6-42ac-b282-11715d0be638"
+      ],
+      "settings": {
+        "title": "I'd like to browse...",
+        "heading_size": "h3",
+        "products_to_show": 9,
+        "full_width": false,
+        "color_scheme": "inverse",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "2937f2ae-818d-42ef-bd1c-b6062b256ff8": {
+      "type": "scrolling-marquee",
+      "settings": {
+        "color_scheme": "inverse",
+        "type": "text",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "20928595-c282-4160-b247-5be419a2bd14": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14549612691574__20928595-c282-4160-b247-5be419a2bd14-1689018220314ca269-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "WHAT IS VULVA CARE?",
+            "heading_size": "h0"
+          }
+        },
+        "36e8eaff-e03e-42da-8a9c-7d3c1a3a7133": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Vulvas are an integral part of women’s health that have been ignored for far too long. Vulva Care creates the space and time for women of all ages to get in-touch with every part of their bodies. It’s time to care for our vulvas!<\/p>",
+            "text_style": "text-body-large"
+          }
+        }
+      },
+      "block_order": [
+        "template--14549612691574__20928595-c282-4160-b247-5be419a2bd14-1689018220314ca269-0",
+        "36e8eaff-e03e-42da-8a9c-7d3c1a3a7133"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "7e3e8f0f-78b9-4967-8189-816964b57237": {
+      "type": "featured-products-slider",
+      "blocks": {
+        "41138ccc-8d35-4ca8-b6b1-d1458aaf7f7b": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Complete-vulva-care-routine.jpg",
+            "product": "vmagic-menopause-must-haves"
+          }
+        },
+        "dd925d7f-2e54-4e5e-b41a-74d1f0c37dfa": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hydration-Duo-Intimate-Skincare-Bundle.jpg",
+            "product": "2oz-vmagic-jar-2-single-serves-feminine-lips-stick"
+          }
+        },
+        "baa02936-ee7c-4eb4-9e1c-2bd364787e0f": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IngrownHair-Grooming-Scrub-Bundle.jpg",
+            "product": "vmagic-complete-vulva-care-routine"
+          }
+        }
+      },
+      "block_order": [
+        "41138ccc-8d35-4ca8-b6b1-d1458aaf7f7b",
+        "dd925d7f-2e54-4e5e-b41a-74d1f0c37dfa",
+        "baa02936-ee7c-4eb4-9e1c-2bd364787e0f"
+      ],
+      "settings": {
+        "color_scheme": "inverse",
+        "title": "Self Care",
+        "heading_size": "h3",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "07b0dcd3-2d39-41fa-a66c-bca3707ece06": {
+      "type": "scrolling-marquee",
+      "settings": {
+        "color_scheme": "inverse",
+        "type": "icon",
+        "padding_top": 60,
+        "padding_bottom": 52
+      }
+    },
+    "32485870-4e02-47aa-ba3d-518e55f37a55": {
+      "type": "featured-reviews",
+      "settings": {
+        "color_scheme": "",
+        "show_line_separator": true,
+        "title": "<b>Over 11,000 5-Star Reviews<\/b>",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ea0d86af-0a0e-440a-a594-00eda7033712": {
+      "type": "you-speak",
+      "blocks": {
+        "6aa1f85b-0b4c-4554-81a7-273a61ae43a5": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/Untitled design (6).mp4"
+          }
+        },
+        "4eb1c0cc-0ce8-4e53-9181-d9b93ea2bbf0": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/Stargirl New Brand.mov"
+          }
+        },
+        "video_rReP3d": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/Kiernan_Medicine Mama - Video 1080x1920.mp4"
+          }
+        },
+        "video_8GUUFK": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/Ig story set 1 ( split into 2 frames) (1).mov"
+          }
+        }
+      },
+      "block_order": [
+        "6aa1f85b-0b4c-4554-81a7-273a61ae43a5",
+        "4eb1c0cc-0ce8-4e53-9181-d9b93ea2bbf0",
+        "video_rReP3d",
+        "video_8GUUFK"
+      ],
+      "settings": {
+        "color_scheme": "inverse",
+        "title": "Community",
+        "padding_top": 40,
+        "padding_bottom": 72
+      }
+    },
+    "b106844b-aae6-4315-b74d-3f7f56837b56": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14549612691574__b106844b-aae6-4315-b74d-3f7f56837b56-168902814592bcf959-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "VULVA CARE IS",
+            "heading_size": "h0"
+          }
+        },
+        "4db3357b-b642-43b6-b6d6-2c31f7dd6855": {
+          "type": "heading",
+          "settings": {
+            "heading": "Self Knowledge",
+            "heading_size": "h2"
+          }
+        },
+        "a3bcd40a-dc8e-4a35-bfbe-75ce9402f853": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Medicine Mama we aren’t afraid to say VULVA and create products that go beyond supporting skin function alone. Vulva care is bigger; it’s self love, a way to get in-touch with our bodies, and empowers women to make informed decisions. So go ahead - Get In-Touch!<\/p>",
+            "text_size": "text-body",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "template--14549612691574__b106844b-aae6-4315-b74d-3f7f56837b56-168902814592bcf959-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "shopify:\/\/blogs\/vmagic\/vulva-vs-vagina-vulvar-anatomy-and-how-it-differs-from-the-vagina",
+            "button_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "template--14549612691574__b106844b-aae6-4315-b74d-3f7f56837b56-168902814592bcf959-0",
+        "4db3357b-b642-43b6-b6d6-2c31f7dd6855",
+        "a3bcd40a-dc8e-4a35-bfbe-75ce9402f853",
+        "template--14549612691574__b106844b-aae6-4315-b74d-3f7f56837b56-168902814592bcf959-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/what-is-vulva-care.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 68
+      }
+    },
+    "0c5b4b6a-623b-41fb-9efc-4a000ed08f05": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Let's talk about vulvas",
+        "heading_size": "h0",
+        "blog": "vmagic",
+        "post_limit": 4,
+        "columns_desktop": 4,
+        "color_scheme": "inverse",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "a2d5e26e-f3f3-4c9e-8b14-12dd5ae4c903",
+    "2937f2ae-818d-42ef-bd1c-b6062b256ff8",
+    "20928595-c282-4160-b247-5be419a2bd14",
+    "7e3e8f0f-78b9-4967-8189-816964b57237",
+    "07b0dcd3-2d39-41fa-a66c-bca3707ece06",
+    "32485870-4e02-47aa-ba3d-518e55f37a55",
+    "ea0d86af-0a0e-440a-a594-00eda7033712",
+    "b106844b-aae6-4315-b74d-3f7f56837b56",
+    "0c5b4b6a-623b-41fb-9efc-4a000ed08f05"
+  ]
+}

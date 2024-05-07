@@ -1,0 +1,25 @@
+<div class="card featured-review">
+  <div class="featured-review__header">
+    {% comment %}
+    <div class="featured-review__image">
+      {{ review.product.value.featured_image | image_url: width: 300 | image_tag }}
+    </div>
+    {% endcomment %}
+    <div class="featured-review__header-content">
+      <div class="rating" role="img" aria-label="{{ review.rating.value }} out of 5.0 stars">
+        <span aria-hidden="true" class="rating-star" style="--rating: {{ review.rating.value }}; --rating-max: {{ review.rating.value }}.0; --rating-decimal: 1;"></span>
+      </div>
+      <h3 class="h4">{{ review.product.value.title | link_to: review.product.url }}</h3>
+      <span class="featured-review__verified h5">
+        ✓ verified review
+      </span>
+    </div>
+  </div>
+  <div class="featured-review__review rte">
+    <div><strong>{{ review.reviewer.value }}</strong></div>
+    {{ review.review | metafield_tag }}
+    {% comment %}
+    <a href="{{ review.collection_link.value.url }}" class="link featured-review__link">Shop {{ review.collection_link.value.title }}</a>
+    {% endcomment %}
+  </div>
+</div>

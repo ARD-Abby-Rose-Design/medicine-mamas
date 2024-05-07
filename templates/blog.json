@@ -1,0 +1,70 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "blocks": {
+        "d6fad6b0-4408-47cc-99b8-e0872490843b": {
+          "type": "filter",
+          "settings": {
+            "title": "With Dr. Claire",
+            "tag": "dr-claire"
+          }
+        },
+        "b0c66961-c7f6-4084-a12d-385712ddc2ad": {
+          "type": "filter",
+          "settings": {
+            "title": "How To",
+            "tag": "how-to"
+          }
+        },
+        "024da7dc-c750-4765-aade-f50781298e73": {
+          "type": "filter",
+          "settings": {
+            "title": "Community Q's",
+            "tag": "community-q"
+          }
+        },
+        "c183808e-c5f1-44e7-ab43-392acbe06291": {
+          "type": "filter",
+          "settings": {
+            "title": "Formulations",
+            "tag": "formulations"
+          }
+        },
+        "b4ed32ee-ee02-4d77-a522-7ee69e00988e": {
+          "type": "filter",
+          "settings": {
+            "title": "About Us",
+            "tag": "about-us"
+          }
+        },
+        "c9ef361a-5fa9-4981-9369-d5a22fe12203": {
+          "type": "filter",
+          "settings": {
+            "title": "Product Pipeline",
+            "tag": "product-pipeline"
+          }
+        }
+      },
+      "block_order": [
+        "d6fad6b0-4408-47cc-99b8-e0872490843b",
+        "b0c66961-c7f6-4084-a12d-385712ddc2ad",
+        "024da7dc-c750-4765-aade-f50781298e73",
+        "c183808e-c5f1-44e7-ab43-392acbe06291",
+        "b4ed32ee-ee02-4d77-a522-7ee69e00988e",
+        "c9ef361a-5fa9-4981-9369-d5a22fe12203"
+      ],
+      "settings": {
+        "layout": "grid",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

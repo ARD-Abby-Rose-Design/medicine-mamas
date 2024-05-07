@@ -1,0 +1,40 @@
+{% assign product = upsell %}
+{% if product and product.available %}
+  <div class="cart-upsell__wrapper">
+    <horizontal-scroller class="cart-upsell">
+      <div class="cart-upsell__heading">
+        <h3 class="cart-upsell__title h5">{{ 'sections.cart.headings.bundles' | t }}</h3>
+        <div class="cart-upsell__arrows">
+          <button class="cart-upsell--arrow cart-upsell--prev" data-scroller-prev type="button">
+            {% render 'icon-chevron' %}
+          </button>
+          <button class="cart-upsell--arrow cart-upsell--next" data-scroller-next type="button">
+            {% render 'icon-chevron' %}
+          </button>
+        </div>
+      </div>
+      <div class="cart-upsell__content" data-scroller-content>
+        <div class="cart-upsell__item">
+          <div class="cart-upsell__image">
+            <div class="media" style="padding-top: var(--card-padding);">
+              {{ product.featured_image | image_url: width: 300 | image_tag }}
+            </div>
+          </div>
+          <div class="cart-upsell__details">
+            <div class="cart-upsell__product-title">{{ product.title }}</div>
+            {% render 'price', product: product, show_percentage_saved: true %}
+          </div>
+          <cart-upsell
+            data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+            data-item-to-remove="{{ item_to_remove }}"
+          >
+            <button class="button cart-upsell__submit" type="button">
+              <span class="visually-hidden">{{ 'products.product.add_to_cart' | t }}</span>
+              {% render 'icon-plus' %}
+            </button>
+          </cart-upsell>
+        </div>
+      </div>
+    </horizontal-scroller>
+  </div>
+{% endif %}

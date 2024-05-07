@@ -1,0 +1,169 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{{ 'section-scrolling-marquee.css' | asset_url | stylesheet_tag }}
+
+<div
+  class="scrolling-marquee color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding"
+>
+  <div class="marquee">
+    <div class="marquee__track">
+      {% if section.settings.type == 'text' %}
+        {% if product and product.metafields.custom.marquee != nil %}
+          {% capture items %}
+          {% for txt in product.metafields.custom.marquee.value.text.value %}
+          <div class="marquee__item marquee__item--text h3">
+            {{ txt }}
+          </div>
+          {% endfor %}
+          {% endcapture %}
+        {% elsif shop.metaobjects.text_marquee.standard-text-marquee != nil %}
+          {%- capture items %}
+          {% for txt in shop.metaobjects.text_marquee.standard-text-marquee.text.value %}
+          <div class="marquee__item marquee__item--text h3">
+            {{ txt }}
+          </div>
+          {% endfor %}
+          {% endcapture %}
+        {% endif %}
+      {% else %}
+        {% if shop.metaobjects.logo_marquee.standard-logo-marquee != nil %}
+          {%- capture items %}
+          {% for logo in shop.metaobjects.logo_marquee.standard-logo-marquee.image.value %}
+          <div class="marquee__item marquee__item--text">
+            {{ logo | image_url: height: 33 | image_tag }}
+          </div>
+          {% endfor %}
+          {% endcapture %}
+        {% endif %}
+      {% endif %}
+      {{ items | strip_newlines }}
+      {{ items | strip_newlines }}
+      {{ items | strip_newlines }}
+      {{ items | strip_newlines }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Scrolling marquee",
+  "tag": "section",
+  "class": "section section--scrolling-marquee",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "select",
+      "id": "type",
+      "label": "Marquee type",
+      "default": "text",
+      "options": [
+        {
+          "value": "text",
+          "label": "Text"
+        },
+        {
+          "value": "icon",
+          "label": "Icon"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "t:sections.rich-text.blocks.text.name",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "default": "Neat.",
+          "label": "t:sections.rich-text.blocks.text.settings.text.label"
+        }
+      ]
+    },
+    {
+      "type": "icon",
+      "name": "Icon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "textarea",
+          "id": "icon_svg",
+          "label": "Icon (SVG)"
+        }
+      ]
+    },
+    {
+      "type": "checkmark",
+      "name": "Checkmark"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scrolling marquee",
+      "blocks": [
+        {
+          "type": "text"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

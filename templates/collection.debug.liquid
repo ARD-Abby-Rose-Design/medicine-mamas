@@ -1,0 +1,9 @@
+{%- layout none -%}
+
+{%- paginate collection.products by 1000 -%}
+  {%- for product in collection.products -%}
+    <p>{{ product.title }}</p>
+    <p>selling plan groups: {{ product.selling_plan_groups | join: ", " }} ({{ product.selling_plan_groups.size }})</p>
+    <hr />
+  {%- endfor -%}
+{%- endpaginate -%}

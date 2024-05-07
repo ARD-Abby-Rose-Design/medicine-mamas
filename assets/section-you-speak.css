@@ -1,0 +1,57 @@
+.you-speak__header-row {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: -10px;
+}
+
+.you-speak__header-row h2 {
+  margin: 0;
+}
+
+.you-speak__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.you-speak__social-link svg {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 5px;
+}
+
+.you-speak__videos .media {
+  border-radius: 2rem;
+}
+
+.you-speak__videos {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 749px) {
+  .you-speak__header-row {
+    flex-wrap: wrap;
+  }
+  .you-speak__header-row h2 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .you-speak__social-link {
+    margin-left: 0;
+    font-size: 13px;
+    padding: 6px 10px;
+    width: calc(50% - 5px);
+
+  }
+  .you-speak__social-link + .you-speak__social-link {
+    margin-left: 10px;
+  }
+  .you-speak__videos {
+    margin-top: 1.2rem;
+  }
+
+}

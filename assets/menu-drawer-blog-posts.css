@@ -1,0 +1,11 @@
+.menu-drawer__blog-posts {
+  margin-top: 3rem;
+}
+
+.menu-drawer__blog-posts .grid {
+  margin-top: 1.5rem;
+}
+
+.menu-drawer__blog-posts h3 {
+  font-size: 1.5rem;
+}

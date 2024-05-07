@@ -1,0 +1,21 @@
+{% if products != nil %}
+{{ 'product-bundle-products.css' | asset_url | stylesheet_tag }}
+<div class="bundle-products">
+  <h2 class="h5">{{ heading }}</h2>
+  {% for bundle_product in products %}
+    <div class="bundle-product">
+      <div class="bundle-product__image">
+        {{ bundle_product.featured_image | image_url: width: 300 | image_tag }}
+      </div>
+      <div class="bundle-product__content">
+        <div class="bundle-product__title">{{ bundle_product.title }}</div>
+        <div class="bundle-product__price">{% render 'price', product: bundle_product %}</div>
+      </div>
+      <button class="quick-add__open button button--primary" data-url="{{ bundle_product.url }}?view=quick-add" data-product-id="{{ bundle_product.id }}">
+        <span class="visually-hidden">{{ 'products.product.add_to_cart' | t }}</span>
+        {% render 'icon-plus' %}
+      </button>
+    </div>
+  {% endfor %}
+</div>
+{% endif %}

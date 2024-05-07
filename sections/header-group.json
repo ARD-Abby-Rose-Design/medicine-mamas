@@ -1,0 +1,68 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free Shipping on all U.S. orders over $40",
+            "link": ""
+          }
+        },
+        "a10e6e15-b6bd-4170-bf00-23f197219773": {
+          "type": "announcement",
+          "settings": {
+            "text": "Subscribe + Save 20% Off for life!",
+            "link": "shopify:\/\/pages\/subscribe-save"
+          }
+        },
+        "880d524b-a3fd-40be-b7e5-563657f1fb3c": {
+          "type": "announcement",
+          "settings": {
+            "text": "Same Formula, New Look",
+            "link": "shopify:\/\/blogs\/vmagic\/an-exciting-rebrand-is-coming-soon-for-vmagic"
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0",
+        "a10e6e15-b6bd-4170-bf00-23f197219773",
+        "880d524b-a3fd-40be-b7e5-563657f1fb3c"
+      ],
+      "settings": {
+        "color_scheme": "accent-2",
+        "show_line_separator": true,
+        "show_social": false,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "middle-center",
+        "menu": "main-menu-2023",
+        "menu_type_desktop": "mega",
+        "sticky_header_type": "always",
+        "show_line_separator": false,
+        "color_scheme": "background-1",
+        "menu_color_scheme": "",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

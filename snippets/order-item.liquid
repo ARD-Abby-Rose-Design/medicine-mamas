@@ -1,0 +1,64 @@
+<div class="main-orders__order">
+  <div class="main-orders__order-details">
+    <div class="">
+      <a
+        class="h3"
+        href="{{ order.customer_url }}"
+        aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}"
+      >
+        Order {{ order.name }}
+      </a>
+    </div>
+    <div class="order-item__detail">
+      <strong>Status</strong>
+      <span>
+        Ordered {{ order.created_at | date: '%d/%m/%Y' }}
+      </span>
+    </div>
+    <div class="order-item__detail">
+      <strong>Total Items</strong>
+      <span>{{ order.item_count }}</span>
+    </div>
+    <div class="order-item__detail">
+      <strong>Total Price</strong>
+      <span>{{ order.total_price | money }}</span>
+    </div>
+    <div class="order-item__detail order-address">
+      <strong>Shipped To</strong>
+      <br>
+      <span>{{ order.shipping_address.name }}</span>
+      <br>
+      <span>{{ order.shipping_address.address1 }}</span>
+      <br>
+      {% if order.shipping_address.address2 != nil %}
+      <span>{{ order.shipping_address.address2 }}</span>
+      <br>
+      {% endif %}
+      <span>{{ order.shipping_address.city }}</span>,
+      <span>{{ order.shipping_address.province }}</span>
+      <span>{{ order.shipping_address.zip }}</span>
+    </div>
+    <a class="button button--full-width button--arrow">Get help with this order</a>
+  </div>
+  <horizontal-scroller class="main-order__order-products">
+    <div class="main-order__order-products__inner" data-scroller-content>
+    {% assign do_it_for_fun = true %}
+    {% for item in order.line_items %}
+      {% render 'order-item-card', item: item %}
+      {% render 'order-item-card', item: item %}
+      {% render 'order-item-card', item: item %}
+      {% render 'order-item-card', item: item %}
+      {% render 'order-item-card', item: item %}
+    {% endfor %}
+    </div>
+    {% if order.line_items > 3 or do_it_for_fun == true %}
+      <button type="button" class="order-item--prev order-item--arrow" data-scroller-prev>
+        {% render 'icon-chevron' %}
+        <span class="visually-hidden">Previous items</span>
+      </button>
+      <button type="button" class="order-item--next order-item--arrow" data-scroller-next>
+        {% render 'icon-chevron' %}
+        <span class="visually-hidden">Next items</span>
+    {% endif %}
+  </horizontal-scroller>
+</div>

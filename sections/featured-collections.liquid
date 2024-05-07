@@ -1,0 +1,272 @@
+{{ 'section-featured-collections.css' | asset_url | stylesheet_tag }}
+
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- capture swiper_options -%}
+{
+  "slidesPerView": 1.5,
+  "spaceBetween": 20,
+  "slidesOffsetBefore": 20,
+  "slidesOffsetAfter": 20,
+  "navigation": {
+    "prevEl": ".swiper-button-prev--{{ section.id }}",
+    "nextEl": ".swiper-button-next-{{ section.id }}"
+  },
+  "breakpoints": {
+    "990": {
+      "slidesPerView": 3,
+      "slidesOffsetBefore": 0,
+      "slidesOffsetAfter": 0
+    }
+  }
+}
+{%- endcapture -%}
+
+<div class="color-{{ section.settings.color_scheme }} isolate gradient">
+  <div class="collection section-{{ section.id }}-padding page-width small-full-width">
+    <div class="featured-collections">
+      <div class="featured-collections__buttons small-page-width">
+        {%- if section.settings.title != blank -%}
+          <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            {{ section.settings.title }}
+          </h2>
+        {%- endif -%}
+        {% for block in section.blocks %}
+          <div class="featured-collections__button-wrapper">
+          <button
+            class="featured-collections__button{% if forloop.first %} is-active{% endif %} button button--arrow button--full-width"
+            data-target="#collection-{{ block.settings.collection.title | handle }}"
+          >
+            {% if block.settings.title != blank %}
+              {{ block.settings.title }}
+            {% else %}
+              {{ block.settings.collection.title }}
+            {% endif %}
+          </button>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="featured-collections__sliders">
+        {% for block in section.blocks %}
+          <div
+            class="featured-collections__slider"
+            id="collection-{{ block.settings.collection.title | handle }}"
+            {% unless forloop.first %}
+              style="display: none;"
+            {% endunless %}
+          >
+            <div class="featured-collections__slider-inner">
+              <div class="featured-collections__swiper-buttons">
+                <div class="swiper-button-prev swiper-button-prev--{{ section.id }} small-hide swiper-button-disabled">
+                  <span class="visually-hidden">Previous slide</span>
+                </div>
+                <div class="swiper-button-next swiper-button-next-{{ section.id }} small-hide">
+                  <span class="visually-hidden">Next slide</span>
+                </div>
+              </div>
+              <div class="swiper" data-swiper='{{- swiper_options -}}'>
+                <div class="swiper-wrapper">
+                  {% for product in block.settings.collection.products limit: section.settings.products_to_show %}
+                    <div class="swiper-slide">
+                      {% render 'card-product',
+                        card_product: product,
+                        media_aspect_ratio: section.settings.image_ratio,
+                        image_shape: section.settings.image_shape,
+                        show_secondary_image: section.settings.show_secondary_image,
+                        show_vendor: section.settings.show_vendor,
+                        show_rating: section.settings.show_rating,
+                        show_quick_add: section.settings.enable_quick_add,
+                        section_id: section.id,
+                        short_description: true
+                      %}
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ 'featured-collections.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "Featured collections",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "I'd like to browse...",
+      "label": "t:sections.featured-collection.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 25,
+      "step": 1,
+      "default": 4,
+      "label": "t:sections.featured-collection.settings.products_to_show.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "t:sections.featured-collection.settings.full_width.label",
+      "default": false
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.all.colors.has_cards_info",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.featured-collection.settings.header.content"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.featured-collection.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.featured-collection.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.featured-collection.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.featured-collection.settings.image_ratio.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "t:sections.featured-collection.settings.show_secondary_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "default": false,
+      "label": "t:sections.featured-collection.settings.show_vendor.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "default": false,
+      "label": "t:sections.featured-collection.settings.show_rating.label",
+      "info": "t:sections.featured-collection.settings.show_rating.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_quick_add",
+      "default": false,
+      "label": "t:sections.featured-collection.settings.enable_quick_buy.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Featured collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Colllection"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured collections"
+    }
+  ]
+}
+{% endschema %}

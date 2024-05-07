@@ -1,0 +1,12 @@
+.quick-add__open {
+  width: 100%;
+  display: block;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 3;
+  margin-top: 1rem;
+  background: white;
+  color: black;
+}

@@ -1,0 +1,82 @@
+.oke-w-header,
+.oke-w-controls,
+.oke-w-reviews-controls,
+.oke-reviewContent-date,
+.oke-reviewsTab {
+  display: none !important;
+}
+
+.okeReviews[data-oke-container] .oke-w-reviews-main--nav-divider, div.okeReviews .oke-w-reviews-main--nav-divider {
+  border-top: 0 !important;
+}
+
+.okeReviews[data-oke-container] .oke-w-review-side, div.okeReviews .oke-w-review-side {
+  border: 0 !important;
+  border-right: 1px solid #c7c7c7 !important;
+  margin-right: 0 !important; 
+}
+
+.oke-w-filter-title {
+  text-transform: uppercase;
+}
+
+.oke-w-review {
+  background: #fff;
+  border: 0 !important;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+
+.oke-w-review-side {
+  background: white !important;
+}
+
+.oke-w-review-side,
+.oke-w-review-main {
+ padding: 4rem !important; 
+}
+
+.okeReviews[data-oke-container] .oke-w-reviews-list-item, div.okeReviews .oke-w-reviews-list-item {
+  border-bottom: 0;
+  padding: 1rem 0 !important;
+}
+
+.okeReviews[data-oke-container] .oke-showMore, div.okeReviews .oke-showMore {
+  text-align: left;
+}
+
+.okeReviews[data-oke-container] .oke-w-filterOption-label, div.okeReviews .oke-w-filterOption-label {
+  border-color: black;
+}
+
+.okeReviews[data-oke-container] .oke-w-filterOption-checkbox:checked ~ .oke-w-filterOption-label, div.okeReviews .oke-w-filterOption-checkbox:checked ~ .oke-w-filterOption-label {
+  background: var(--pink) !important;
+  color: black !important;
+  border-color: var(--pink) !important;
+}
+
+.okeReviews[data-oke-container] .oke-w-filterOption-checkbox:checked ~ .oke-w-filterOption-label .oke-w-filterOption-label-star::before, div.okeReviews .oke-w-filterOption-checkbox:checked ~ .oke-w-filterOption-label .oke-w-filterOption-label-star::before {
+  color: black !important;
+}
+
+.okeReviews[data-oke-container].oke-w, div.okeReviews.oke-w {
+  max-width: var(--page-width);
+}
+
+@media screen and (max-width: 749px) {
+  .okeReviews[data-oke-container] .oke-w-reviews-head, div.okeReviews .oke-w-reviews-head {
+    flex-direction: column;
+  }
+  .oke-w-reviews-writeReview {
+    width: 100%;
+  }
+  .okeReviews[data-oke-container] .oke-button, div.okeReviews .oke-button {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+
+.oke-w-review-product {
+  display: none !important;
+}

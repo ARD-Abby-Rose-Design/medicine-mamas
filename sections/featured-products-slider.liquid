@@ -1,0 +1,213 @@
+{{ 'featured-products-slider.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- capture swiper_options -%}
+{
+  "slidesPerView": 1,
+  "spaceBetween": 0,
+  "navigation": {
+    "prevEl": ".swiper-button-prev--{{ section.id }}",
+    "nextEl": ".swiper-button-next-{{ section.id }}"
+  }
+}
+{%- endcapture -%}
+
+<section class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %} page-width small-full-width">
+    {% if section.settings.title != null %}
+      <div class=" featured-products__heading-row small-page-width">
+        <h3 class="{{ section.settings.heading_size }}">{{ section.settings.title }}</h3>
+        <div class="swpr-prev swiper-button-prev--{{ section.id }} swiper-button-prev">
+          <span class="visually-hidden">Previous slide</span>
+        </div>
+        <div class="swpr-next swiper-button-next-{{ section.id }} swiper-button-next">
+          <span class="visually-hidden">Next slide</span>
+        </div>
+      </div>
+    {% endif %}
+    <div class="featured-products-slider__wrapper">
+      <div class="featured-products-slider swiper" data-swiper='{{- swiper_options -}}'>
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            {% assign product = block.settings.product %}
+            <div class="swiper-slide">
+              <div class="featured-products__slide">
+                <div class="featured-products__slide-content">
+                  <div style="--ratio-percent: var(--card-padding);">
+                    <div class="media" style="padding-top: var(--card-padding);">
+                      {{ product.featured_image | image_url: width: 800 | image_tag }}
+                      <a class="link--fill-parent" href="{{ product.url }}">
+                        <span class="visually-hidden">{{ product.title }}</span>
+                      </a>
+                    </div>
+                  </div>
+                  <h3 class="h4">{{ product.title | link_to: product.url }}</h3>
+                  {%- render 'star-rating', product: product -%}
+                  {%- render 'price', product: product -%}
+                  <button
+                    class="quick-add__open button button--primary"
+                    data-url="{{ product.url }}?view=quick-add"
+                    data-product-id="{{ product.id }}"
+                  >
+                    {{ 'products.product.add_to_cart' | t }}
+                  </button>
+                </div>
+                <div class="featured-products__slide-image">
+                  <div class="media">
+                    {% if block.settings.image != blank %}
+                      {{ block.settings.image | image_url: width: 800 | image_tag }}
+                    {% else %}
+                      {{ product.images[1] | image_url: width: 800 | image_tag }}
+                    {% endif %}
+                    <a class="link--fill-parent" href="{{ product.url }}">
+                      <span class="visually-hidden">{{ product.title }}</span>
+                    </a>
+                  </div>
+                  <div class="card__badge {{ settings.badge_position }}">
+                    {% for tag in product.tags %}
+                      {% if tag contains 'badge:' %}
+                        {% assign badge = tag | split: ':' %}
+                        <span
+                          id="Badge-featured-products-slider-{{ product.id }}"
+                          class="badge badge--bottom-left"
+                        >
+                          {{ badge[1] }}
+                        </span>
+                      {% endif %}
+                    {% endfor %}
+                    {% for badge in shop.metaobjects.product_badge.values %}
+                      {% if product.tags contains badge.tag.value %}
+                        <span
+                          id="Badge-featured-products-slider-{{ product.id }}"
+                          class="badge badge--bottom-left color-{{ badge.color_scheme.value }}"
+                        >
+                          {{ badge.text.value }}
+                        </span>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured products slider",
+  "tag": "section",
+  "class": "section section-featured-products-slider",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "name": "t:sections.featured-product.blocks.text.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "h4",
+          "label": "t:sections.all.heading_size.options__5.label"
+        },
+        {
+          "value": "h5",
+          "label": "t:sections.all.heading_size.options__6.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured products slider"
+    }
+  ]
+}
+{% endschema %}

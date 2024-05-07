@@ -1,0 +1,9 @@
+<div class="main-order__order-item">
+  <div class="media" style="padding-top: var(--card-padding);">
+    {{ item.image | image_url: width: 600 | image_tag }}
+  </div>
+  <div class="order-item__content">
+    <a href="{{ item.url }}" class="link">{{ item.title | upcase }}</a>
+    {% render 'price', price: item.price %}
+  </div>
+</div>

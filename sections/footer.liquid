@@ -1,0 +1,158 @@
+{% comment %}theme-check-disable UndefinedObject{% endcomment %}
+{{ 'section-footer.css' | asset_url | stylesheet_tag }}
+{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
+{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}
+{{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
+{{ 'component-list-social.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .footer {
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .footer {
+      margin-top: {{ section.settings.margin_top }}px;
+    }
+
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="page-width footer-blocks">
+    <div class="footer-block__links">
+      <div class="footer-block__links-1">
+        {% for link in section.settings.footer_menu.links limit: 3 %}
+          <a href="{{ link.url }}" class="footer-block__link link">{{ link.title }}</a>
+        {% endfor %}
+      </div>
+      {% if section.settings.footer_menu.links.size > 3 %}
+        <div class="footer-block__links-1">
+          {% for link in section.settings.footer_menu.links limit: 3 offset: 3 %}
+            <a href="{{ link.url }}" class="footer-block__link link">{{ link.title }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% if section.settings.footer_menu.links.size > 6 %}
+        <div class="footer-block__links-1">
+          {% for link in section.settings.footer_menu.links limit: 3 offset: 6 %}
+            <a href="{{ link.url }}" class="footer-block__link link">{{ link.title }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% if section.settings.footer_menu.links.size > 9 %}
+        <div class="footer-block__links-1">
+          {% for link in section.settings.footer_menu.links limit: 3 offset: 9 %}
+            <a href="{{ link.url }}" class="footer-block__link link">{{ link.title }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+    <div
+      class="footer-block--newsletter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+      {% if settings.animations_reveal_on_scroll %}
+        data-cascade
+      {% endif %}
+    >
+      <script async src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=RdGsUL" type="text/javascript"></script>
+      <div class="klaviyo-form-W5hTsE"></div>
+    </div>
+    <div class="footer-block--boldy-pure">
+      {%- render 'icon-boldly-pure' -%}
+    </div>
+  </div>
+
+  <div
+    class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    {% if settings.animations_reveal_on_scroll %}
+      data-cascade
+    {% endif %}
+  >
+    <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
+      <div class="footer__copyright caption">
+        <small class="copyright__content"
+          >
+            {%- render 'icon-favicon' -%}
+            &copy; {{ 'now' | date: '%Y' }} {{ shop.name | link_to: routes.root_url -}}. All Rights Reserved.
+        </small>
+        <ul class="policies list-unstyled">
+          {%- for policy in shop.policies -%}
+            {%- if policy != blank -%}
+              <li>
+                <small class="copyright__content"
+                  ><a href="{{ policy.url }}">{{ policy.title }}</a></small
+                >
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "t:sections.footer.name",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu",
+      "label": "Footer menu"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.spacing"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.footer.settings.margin_top.label",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}

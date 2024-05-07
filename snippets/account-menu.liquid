@@ -1,0 +1,9 @@
+<div class="account-menu">
+  {% for link in linklists.account-menu.links %}
+    <a href="{{ link.url }}" id="account-menu--{{ link.title | handle }}" class="account-menu__link button {% if link.active %}active{% endif %}">{{ link.title }}</a>
+  {% endfor %}
+
+  <a href="{{ routes.account_logout_url }}" class="customer__logout">
+    {{ 'customer.log_out' | t }}
+  </a>
+</div>

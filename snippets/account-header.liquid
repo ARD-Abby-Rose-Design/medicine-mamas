@@ -1,0 +1,11 @@
+<div class="customer__header">
+  <h1 class="customer__title">
+    {% if customer.first_name != null %}
+      {{ 'customer.account.welcome' | t: first_name: customer.first_name }}
+    {% else %}
+      {{ 'customer.account.title' | t }}
+    {% endif %}
+  </h1>
+
+  {%- render 'account-menu' -%}
+</div>

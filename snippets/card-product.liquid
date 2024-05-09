@@ -202,7 +202,7 @@
 
               {%- if card_product.selling_plan_groups.size > 0 -%}
                 {%- liquid
-                  assign twenty_off = card_product.price | times: 25.0 | divided_by: 100.0
+                  assign twenty_off = card_product.price | times: 20.0 | divided_by: 100.0
                   assign twenty_off = card_product.price | minus: twenty_off | money | remove: '.00' | replace: ' ', ''
                 -%}
 

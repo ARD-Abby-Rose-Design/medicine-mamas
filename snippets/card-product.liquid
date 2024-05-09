@@ -196,17 +196,24 @@
                   endcomment
                 endif
               -%}
-              {% comment %}
+              {% comment %} 
                 {% if product.compare_at_price_max > product.price %}You save {{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%{% endif %}
               {% endcomment %}
-
               {%- if card_product.selling_plan_groups.size > 0 -%}
                 {%- liquid
-                  assign twenty_off = card_product.price | times: 20.0 | divided_by: 100.0
-                  assign twenty_off = card_product.price | minus: twenty_off | money | remove: '.00' | replace: ' ', ''
+                  assign first_selling_plan_group = card_product.selling_plan_groups[0]
+                  assign first_selling_plan = first_selling_plan_group.selling_plans[0]
+                  assign price_adjustment = first_selling_plan.price_adjustments[0]
+                  assign value_type = price_adjustment.value_type
+                  assign adjustment_value = price_adjustment.value | default: 0
                 -%}
-
-                Starting at <span class="">{{ twenty_off }}</span>
+                {%- if value_type == 'percentage' -%}
+                  {%- assign discount_amount = card_product.price | times: adjustment_value | divided_by: 100.0 -%}
+                {%- elsif value_type == 'fixed_amount' -%}
+                  {%- assign discount_amount = adjustment_value -%}
+                {%- endif -%}
+                {%- assign discounted_price = card_product.price | minus: discount_amount | money_without_trailing_zeros -%}
+                Starting at <span class="">{{ discounted_price }}</span>
               {%- else -%}
                 {% render 'price', product: card_product, price_class: '' %}
               {%- endif -%}

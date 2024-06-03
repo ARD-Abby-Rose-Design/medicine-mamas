@@ -2,7 +2,9 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
-      "disabled": true,
+      "custom_css": [
+        "h1 {text-align: center;}"
+      ],
       "settings": {
         "show_collection_description": false,
         "show_collection_image": false,

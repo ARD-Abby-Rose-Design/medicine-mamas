@@ -119,6 +119,54 @@
         "padding_bottom": 36
       }
     },
+    "dd3b96b7-4a91-4f16-a512-1bc716c4a435": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16926808539365__dd3b96b7-4a91-4f16-a512-1bc716c4a435-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "\"I now have a subscription to automatically receive this combo pack every two months and it is worth every cent.\"",
+            "heading_size": "h3"
+          }
+        },
+        "template--16926808539365__dd3b96b7-4a91-4f16-a512-1bc716c4a435-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>- Barbara G.<\/p>",
+            "text_size": "text-body-large",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "template--16926808539365__dd3b96b7-4a91-4f16-a512-1bc716c4a435-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Subscribe & Save",
+            "button_link": "shopify:\/\/products\/vmagic-skincare-jar-feminine-wash",
+            "button_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "template--16926808539365__dd3b96b7-4a91-4f16-a512-1bc716c4a435-heading-1",
+        "template--16926808539365__dd3b96b7-4a91-4f16-a512-1bc716c4a435-text-1",
+        "template--16926808539365__dd3b96b7-4a91-4f16-a512-1bc716c4a435-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/medicine-mama-vmagic-grooming-polish-5_7b3f9cbc-5c81-4c1a-bd75-b4a095980b26.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "ef1af7e3-eeb9-44b8-8470-8d4200599297": {
       "type": "rich-text",
       "blocks": {
@@ -154,6 +202,7 @@
         "template--16926808539365__ef1af7e3-eeb9-44b8-8470-8d4200599297-text-1",
         "template--16926808539365__ef1af7e3-eeb9-44b8-8470-8d4200599297-button-1"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -239,54 +288,6 @@
         "padding_bottom": 36
       }
     },
-    "dd3b96b7-4a91-4f16-a512-1bc716c4a435": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--16926808539365__dd3b96b7-4a91-4f16-a512-1bc716c4a435-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "\"I now have a subscription to automatically receive this combo pack every two months and it is worth every cent.\"",
-            "heading_size": "h3"
-          }
-        },
-        "template--16926808539365__dd3b96b7-4a91-4f16-a512-1bc716c4a435-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>- Barbara G.<\/p>",
-            "text_size": "text-body-large",
-            "bullets_to_checkmarks": false
-          }
-        },
-        "template--16926808539365__dd3b96b7-4a91-4f16-a512-1bc716c4a435-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Subscribe & Save",
-            "button_link": "shopify:\/\/products\/vmagic-skincare-jar-feminine-wash",
-            "button_arrow": true
-          }
-        }
-      },
-      "block_order": [
-        "template--16926808539365__dd3b96b7-4a91-4f16-a512-1bc716c4a435-heading-1",
-        "template--16926808539365__dd3b96b7-4a91-4f16-a512-1bc716c4a435-text-1",
-        "template--16926808539365__dd3b96b7-4a91-4f16-a512-1bc716c4a435-button-1"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/feminine-wash-vulva-wash-vulva-balm.jpg",
-        "media_type": "image",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "3daaa728-213a-4f9e-b819-00891ecbc5d1": {
       "type": "scrolling-marquee",
       "blocks": {
@@ -347,10 +348,10 @@
     "main",
     "fb419e30-388a-4653-8e90-e340c2fb7cec",
     "190c2e63-1eb9-4a87-ad65-790c98b1ed5a",
+    "dd3b96b7-4a91-4f16-a512-1bc716c4a435",
     "ef1af7e3-eeb9-44b8-8470-8d4200599297",
     "4e0d6500-9099-4ad6-b1d6-da16502a5f37",
     "86a7bc28-7b00-4499-9824-fcae8b63934e",
-    "dd3b96b7-4a91-4f16-a512-1bc716c4a435",
     "3daaa728-213a-4f9e-b819-00891ecbc5d1",
     "8c30a292-22e8-4055-b148-ec5dd7ee85e5",
     "a8371e5d-d4bf-4a1b-bb65-2767c7af8bd3"

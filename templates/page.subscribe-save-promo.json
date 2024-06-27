@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -28,15 +37,14 @@
         "template--16800821838053__fb419e30-388a-4653-8e90-e340c2fb7cec-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "30% Off Subscriptions for Life!",
+            "heading": "25% Off Subscriptions for Life!",
             "heading_size": "h2"
           }
         },
         "template--16800821838053__fb419e30-388a-4653-8e90-e340c2fb7cec-text-1": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "",
+            "text": "<p>6\/30-7\/9<\/p>",
             "text_size": "text-body-large",
             "bullets_to_checkmarks": true
           }
@@ -70,6 +78,43 @@
         "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "190c2e63-1eb9-4a87-ad65-790c98b1ed5a": {
+      "type": "featured-collections",
+      "blocks": {
+        "4c254b17-b652-4cb7-95f5-198b5137330b": {
+          "type": "collection",
+          "settings": {
+            "collection": "gift-set-collections",
+            "title": "Bundles + Gift Sets"
+          }
+        },
+        "b10969c3-9793-4654-ac3f-c327c6c44803": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products",
+            "title": "VMAGIC®"
+          }
+        }
+      },
+      "block_order": [
+        "4c254b17-b652-4cb7-95f5-198b5137330b",
+        "b10969c3-9793-4654-ac3f-c327c6c44803"
+      ],
+      "settings": {
+        "title": "Subscription Favorites",
+        "heading_size": "h3",
+        "products_to_show": 9,
+        "full_width": false,
+        "color_scheme": "inverse",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -109,7 +154,6 @@
         "template--16926808539365__ef1af7e3-eeb9-44b8-8470-8d4200599297-text-1",
         "template--16926808539365__ef1af7e3-eeb9-44b8-8470-8d4200599297-button-1"
       ],
-      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -117,43 +161,6 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
-      }
-    },
-    "190c2e63-1eb9-4a87-ad65-790c98b1ed5a": {
-      "type": "featured-collections",
-      "blocks": {
-        "4c254b17-b652-4cb7-95f5-198b5137330b": {
-          "type": "collection",
-          "settings": {
-            "collection": "gift-set-collections",
-            "title": "Bundles + Gift Sets"
-          }
-        },
-        "b10969c3-9793-4654-ac3f-c327c6c44803": {
-          "type": "collection",
-          "settings": {
-            "collection": "all-products",
-            "title": "VMAGIC®"
-          }
-        }
-      },
-      "block_order": [
-        "4c254b17-b652-4cb7-95f5-198b5137330b",
-        "b10969c3-9793-4654-ac3f-c327c6c44803"
-      ],
-      "settings": {
-        "title": "Subscription Favorites",
-        "heading_size": "h3",
-        "products_to_show": 9,
-        "full_width": false,
-        "color_scheme": "inverse",
-        "image_ratio": "square",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": true,
-        "enable_quick_add": true,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "4e0d6500-9099-4ad6-b1d6-da16502a5f37": {
@@ -339,8 +346,8 @@
   "order": [
     "main",
     "fb419e30-388a-4653-8e90-e340c2fb7cec",
-    "ef1af7e3-eeb9-44b8-8470-8d4200599297",
     "190c2e63-1eb9-4a87-ad65-790c98b1ed5a",
+    "ef1af7e3-eeb9-44b8-8470-8d4200599297",
     "4e0d6500-9099-4ad6-b1d6-da16502a5f37",
     "86a7bc28-7b00-4499-9824-fcae8b63934e",
     "dd3b96b7-4a91-4f16-a512-1bc716c4a435",

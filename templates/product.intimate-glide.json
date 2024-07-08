@@ -350,62 +350,6 @@
             "row_content": "<p>Yes, This product is compatible with natural rubber latex and polyisoprene condoms. This product is not compatible with polyurethane condoms.<\/p>",
             "page": ""
           }
-        },
-        "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-0": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Can I use the Vulva Balm on others parts of my body like my face?",
-            "row_content": "<p>VMAGIC Vulva Balm is specially formulated to support the sensitive biome of the vulva, but the beauty of its all-natural, organic ingredient list is that it can really be used anywhere on the body! It works wonders for stretching bellies during pregnancy, as a lip balm in a pinch, and as a slugging (moisture barrier) balm at night. These are only a few of the many uses we are constantly hearing about from our satisfied customers!<\/p>",
-            "page": ""
-          }
-        },
-        "2de04093-b1cf-4f86-a867-b767be22a165": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Is this product safe to ingest?",
-            "row_content": "<p>While the product is not intended to be eaten, VMAGIC Vulva Balm is USDA organic and made from all natural ingredients.<\/p>",
-            "page": ""
-          }
-        },
-        "18167207-7656-4550-9504-b7594fd62b5c": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Is a burning sensation normal when applying this product?",
-            "row_content": "<p>With any product, we recommend starting with a patch test and always reviewing ingredients for any allergies you may have. When applying product to severely dehydrated or cracked skin, you may experience a stinging or burning sensation upon the first applications of a vulva moisturizer like the VMAGIC Vulva Balm. This can be due to excessive skin dryness and should dissipate quickly, especially with regular use as the tissues regain elasticity and hydration. If irritation continues, discontinue use and consult your healthcare provider.<\/p>",
-            "page": ""
-          }
-        },
-        "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-1": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What if the product transfers to my clothing?",
-            "row_content": "<p>VMAGIC Vulva Balm is made up of rich, hydrating oils. It may leave oil stains on some fabrics. We recommend starting with a small amount to determine how it interacts with fabric. A dish soap used for cutting through grease, left on for 30 min before laundering can be helpful.<\/p>",
-            "page": ""
-          }
-        },
-        "651e6c5b-3658-41aa-a451-1389f4d0af1c": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Can I use this product if I’m pregnant?",
-            "row_content": "<p>There are no ingredients in the VMAGIC Vulva Balm intimate skin moisturizer that should restrict use during pregnancy. However, we always recommend consulting with your physician before starting any personal care regimen while pregnant or trying to conceive.<\/p>",
-            "page": ""
-          }
-        },
-        "5f9fbbab-7e18-451a-971e-0f97bcc1260a": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "I’m allergic to bees. Can I still use this product?",
-            "row_content": "<p>Please consult with your physician as our products contain beeswax, honey, royal jelly and propolis.<\/p>",
-            "page": ""
-          }
-        },
-        "4875dd1c-6dab-4702-964e-419b892bde11": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Is there a scent?",
-            "row_content": "<p>Vmagic vulva balm does not have any added fragrance and some will not notice a scent at all. We have heard from several customers that you may pick up notes of beeswax.<\/p>",
-            "page": ""
-          }
         }
       },
       "block_order": [
@@ -413,14 +357,7 @@
         "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-2",
         "3d098281-82e0-4464-8c45-51558b939387",
         "acedb7de-fe32-4b9b-81d1-56a49b9758d1",
-        "03c90831-d75d-41e8-93e1-4cb4b4665480",
-        "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-0",
-        "2de04093-b1cf-4f86-a867-b767be22a165",
-        "18167207-7656-4550-9504-b7594fd62b5c",
-        "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-1",
-        "651e6c5b-3658-41aa-a451-1389f4d0af1c",
-        "5f9fbbab-7e18-451a-971e-0f97bcc1260a",
-        "4875dd1c-6dab-4702-964e-419b892bde11"
+        "03c90831-d75d-41e8-93e1-4cb4b4665480"
       ],
       "settings": {
         "caption": "",

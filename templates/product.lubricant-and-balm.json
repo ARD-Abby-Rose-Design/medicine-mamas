@@ -219,12 +219,130 @@
     },
     "17a80875-d3ad-4af8-9b12-88f5dbe0162b": {
       "type": "product-ingredients",
+      "disabled": true,
       "settings": {
         "heading": "Clinically Studied Ingredients",
         "heading_size": "h2",
         "color_scheme": "inverse",
         "padding_top": 100,
         "padding_bottom": 100
+      }
+    },
+    "rich_text_7YxBUQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_hMyykH": {
+          "type": "heading",
+          "settings": {
+            "heading": "The ritual",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hMyykH"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_TqUhwB": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_h4MQR4": {
+          "type": "heading",
+          "settings": {
+            "heading": "For Vaginal Dryness + Lubrication",
+            "heading_size": "h2"
+          }
+        },
+        "text_zMkYwG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>VMAGIC® Intimate Glide adds hydration and reduces skin irritation and dryness that can cause painful intercourse. Moisturizing and protecting tissues to provide long-lasting moisture, so you can say goodbye to intimate dryness.<\/p>",
+            "text_size": "text-body",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "button_cctLQt": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_h4MQR4",
+        "text_zMkYwG",
+        "button_cctLQt"
+      ],
+      "settings": {
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_jNe4cC": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LGKr9k": {
+          "type": "heading",
+          "settings": {
+            "heading": "For Vulva Dryness",
+            "heading_size": "h2"
+          }
+        },
+        "text_fTAKNt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>VMAGIC® Vulva Balm can help to soften and hydrate delicate vulvar tissues making intimacy a more enjoyable time.<\/p>",
+            "text_size": "text-body",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "button_AgfjKL": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_LGKr9k",
+        "text_fTAKNt",
+        "button_AgfjKL"
+      ],
+      "settings": {
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "multicolumn": {
@@ -454,6 +572,9 @@
     "main",
     "cac67cc4-85e1-4f5d-9af0-5bfbe86ec590",
     "17a80875-d3ad-4af8-9b12-88f5dbe0162b",
+    "rich_text_7YxBUQ",
+    "image_with_text_TqUhwB",
+    "image_with_text_jNe4cC",
     "multicolumn",
     "related-products",
     "1443dbb0-ea85-4289-811e-0188944eac12",

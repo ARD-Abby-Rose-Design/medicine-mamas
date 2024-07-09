@@ -268,20 +268,11 @@
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
-        },
-        "button_cctLQt": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_arrow": true
-          }
         }
       },
       "block_order": [
         "heading_h4MQR4",
-        "text_zMkYwG",
-        "button_cctLQt"
+        "text_zMkYwG"
       ],
       "settings": {
         "media_type": "image",
@@ -315,25 +306,17 @@
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
-        },
-        "button_AgfjKL": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_arrow": true
-          }
         }
       },
       "block_order": [
         "heading_LGKr9k",
-        "text_fTAKNt",
-        "button_AgfjKL"
+        "text_fTAKNt"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/medicine-mama-vulva-balm-1_28e24218-564c-4a38-a454-7e2506d35376.jpg",
         "media_type": "image",
         "height": "adapt",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "small",
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
@@ -362,25 +345,17 @@
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
-        },
-        "button_amcgfi": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_arrow": true
-          }
         }
       },
       "block_order": [
         "heading_9Ut8zx",
-        "text_h3FdWA",
-        "button_amcgfi"
+        "text_h3FdWA"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/medicine-mama-vmagic-vulva-wash_26347b8e-36af-4dbf-ba21-d6f4cfd55ce0.jpg",
         "media_type": "image",
         "height": "adapt",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "small",
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",

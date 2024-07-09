@@ -345,6 +345,53 @@
         "padding_bottom": 36
       }
     },
+    "image_with_text_KpMUFb": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_9Ut8zx": {
+          "type": "heading",
+          "settings": {
+            "heading": "For Gentle Cleansing",
+            "heading_size": "h2"
+          }
+        },
+        "text_h3FdWA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_size": "text-body",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "button_amcgfi": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_9Ut8zx",
+        "text_h3FdWA",
+        "button_amcgfi"
+      ],
+      "settings": {
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -575,6 +622,7 @@
     "rich_text_7YxBUQ",
     "image_with_text_TqUhwB",
     "image_with_text_jNe4cC",
+    "image_with_text_KpMUFb",
     "multicolumn",
     "related-products",
     "1443dbb0-ea85-4289-811e-0188944eac12",

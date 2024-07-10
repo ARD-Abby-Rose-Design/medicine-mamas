@@ -85,6 +85,15 @@
             "text_style": "body"
           }
         },
+        "collapsible_tab_LAHjDx": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What's Inside?",
+            "icon": "none",
+            "content": "<p>Vulva Balm 2oz<\/p><p>Intimate Glide 4oz <\/p>",
+            "page": ""
+          }
+        },
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
@@ -132,6 +141,7 @@
         "quantity_selector",
         "buy_buttons",
         "afbb9305-0fee-485b-84f6-73e64fa05f10",
+        "collapsible_tab_LAHjDx",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",

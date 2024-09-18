@@ -3,7 +3,7 @@
 <div class="bundle-products">
   <h2 class="h5">{{ heading }}</h2>
   {% for bundle_product in products %}
-    <div class="bundle-product">
+    <a href="{{ bundle_product.url }}" class="bundle-product">
       <div class="bundle-product__image">
         {{ bundle_product.featured_image | image_url: width: 300 | image_tag }}
       </div>
@@ -15,7 +15,7 @@
         <span class="visually-hidden">{{ 'products.product.add_to_cart' | t }}</span>
         {% render 'icon-plus' %}
       </button>
-    </div>
+    </a>
   {% endfor %}
 </div>
 {% endif %}

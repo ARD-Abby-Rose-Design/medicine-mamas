@@ -1,3 +1,22 @@
+function initializeUpsellToggle() {
+  const toggleLinks = document.querySelectorAll('.cart-upsell__toggle');
+
+  toggleLinks.forEach((toggleLink) => {
+    toggleLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      const description = e.currentTarget.previousElementSibling;
+      const isExpanded = description.classList.contains('expanded');
+      
+      description.classList.toggle('expanded');
+      e.currentTarget.textContent = isExpanded ? 'More' : 'Less';
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  initializeUpsellToggle();
+});
+
 class CartRemoveButton extends HTMLElement {
   constructor() {
     super();
@@ -53,6 +72,7 @@ class CartItems extends HTMLElement {
         const html = new DOMParser().parseFromString(responseText, 'text/html');
         const sourceQty = html.querySelector('cart-items');
         this.innerHTML = sourceQty.innerHTML;
+        initializeUpsellToggle();
       })
       .catch((e) => {
         console.error(e);
@@ -125,6 +145,10 @@ class CartItems extends HTMLElement {
             section.selector
           );
         });
+
+        initializeUpsellToggle();
+
+
         const updatedValue = parsedState.items[line - 1] ? parsedState.items[line - 1].quantity : undefined;
         let message = '';
         if (items.length === parsedState.items.length && updatedValue !== parseInt(quantityElement.value)) {

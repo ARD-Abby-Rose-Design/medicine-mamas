@@ -21,7 +21,13 @@
             </div>
           </div>
           <div class="cart-upsell__details">
-            <div class="cart-upsell__product-title">{{ product.title }}</div>
+            <div class="cart-upsell__product-title">
+              {{ product.title }}
+            </div>
+            <p class="cart-upsell__product-description">
+              <span class="cart-upsell__description-content">{{ product.description }}</span>
+              <a href="#" class="cart-upsell__toggle">More</a>
+            </p>
             {% render 'price', product: product, show_percentage_saved: true %}
           </div>
           <cart-upsell

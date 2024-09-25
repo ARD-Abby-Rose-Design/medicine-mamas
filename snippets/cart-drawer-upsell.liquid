@@ -24,10 +24,10 @@
             <div class="cart-upsell__product-title">
               {{ product.title }}
             </div>
-            <p class="cart-upsell__product-description">
-              <span class="cart-upsell__description-content">{{ product.description }}</span>
-              <a href="#" class="cart-upsell__toggle">More</a>
-            </p>
+            <div class="cart-upsell__product-description">
+              {{ product.description }}
+            </div>
+            <a href="#" class="cart-upsell__toggle">More</a>
             {% render 'price', product: product, show_percentage_saved: true %}
           </div>
           <cart-upsell

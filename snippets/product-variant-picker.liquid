@@ -10,7 +10,7 @@
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
 {%- unless product.has_only_default_variant -%}
-  {%- if block.settings.picker_type == 'button' -%}
+  {%- if picker_type == 'button' or picker_type == 'packs' -%}
     <variant-radios
       id="variant-radios-{{ section.id }}"
       class="no-js-hidden"
@@ -23,8 +23,10 @@
     >
       {%- for option in product.options_with_values -%}
         <fieldset class="js product-form__input">
-          <legend class="form__label">{{ option.name }}</legend>
-          {% render 'product-variant-options', product: product, option: option, block: block %}
+          {% unless picker_type == 'packs' %}
+            <legend class="form__label">{{ option.name }}</legend>
+          {% endunless %}
+          {% render 'product-variant-options', product: product, option: option, block: block, picker_type: picker_type %}
         </fieldset>
       {%- endfor -%}
       <script type="application/json">

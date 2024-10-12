@@ -1,0 +1,30 @@
+{% liquid
+
+assign variant_to_compare = variant.title | downcase | replace: ' ', '' | replace: '_', '' | replace: '-', ''
+
+for image in product.metafields.custom.picker_images.value
+  assign image_filename = image | split: '/' | last | downcase | replace: ' ', '' | replace: '_', '' | replace: '-', ''
+  
+  if image_filename contains variant_to_compare
+    assign matched_image = image
+  endif
+endfor
+%}
+<quick-add-variant-picker data-product-handle="{{ product.handle }}">
+    <input type="radio" id="quick-add-variant-{{variant.id}}" name="Packs" value="{{variant.id}}">
+    <label for="quick-add-variant-{{variant.id}}">
+    <div class="quick-add-variant-picker__label-inner">
+        {% if matched_image %}
+            <img src="{{ matched_image | img_url: 'x25' }}" alt="{{ value }} option image">
+        {% endif %}
+        <span class="quick-add-variant-picker__title">{{ variant.title }}</span>
+        {% if variant.price < variant.compare_at_price %}
+          {% assign savings = variant.compare_at_price | minus: variant.price %}
+          {% assign savings_percentage = savings | times: 100 | divided_by: variant.compare_at_price %}
+          <span class="quick-add-variant-picker__savings">
+             {{ savings_percentage }}% off
+          </span>
+        {% endif %}
+    </div>
+    </label>
+</quick-add-variant-picker>

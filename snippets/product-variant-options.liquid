@@ -14,6 +14,24 @@
     block: block
   %}
 {% endcomment %}
+
+{% style %}
+  {% if picker_type == 'packs' %}
+        
+      .product-form__input input[type='radio'] + label {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      .product-form__input input[type='radio']:checked + label {
+        background-color: #FFE5E0;
+        color: black;
+        border: 1.2px solid black
+      }
+  {% endif %}
+{% endstyle %}
+
+
 {%- liquid
   assign variants_available_arr = product.variants | map: 'available'
   assign variants_option1_arr = product.variants | map: 'option1'
@@ -23,29 +41,44 @@
   assign product_form_id = 'product-form-' | append: section.id
 -%}
 
+<div class="variant-picker-container"{% if picker_type == 'packs' %}style="width:100%; display: flex;"{% endif %}>
 {%- for value in option.values -%}
   {%- liquid
     assign option_disabled = true
+    assign selected_variant = null
 
     for option1_name in variants_option1_arr
       case option.position
         when 1
           if variants_option1_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
             assign option_disabled = false
+            assign selected_variant = product.variants[forloop.index0] 
           endif
         when 2
           if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
             assign option_disabled = false
+            assign selected_variant = product.variants[forloop.index0] 
           endif
         when 3
           if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == product.selected_or_first_available_variant.option2 and variants_option3_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
             assign option_disabled = false
+            assign selected_variant = product.variants[forloop.index0]
           endif
       endcase
     endfor
+
+    assign sanitized_value = value | downcase | replace: ' ', '' | replace: '_', '' | replace: '-', ''
+
+    for image in product.metafields.custom.picker_images.value
+      assign image_filename = image | split: '/' | last | downcase | replace: ' ', '' | replace: '_', '' | replace: '-', ''
+      
+      if image_filename contains sanitized_value
+        assign matched_image = image
+      endif
+    endfor
   -%}
 
-  {%- if block.settings.picker_type == 'button' -%}
+  {%- if picker_type == 'button' or picker_type == 'packs' -%}
     <input
       type="radio"
       id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
@@ -60,10 +93,37 @@
       {% endif %}
     >
     <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-      {{ value -}}
+      {% if picker_type == 'packs' %}
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          {% if matched_image %}
+            <img src="{{ matched_image | img_url: 'x25' }}" alt="{{ value }} option image" style="margin-bottom: 5px;">
+          {% endif %}
+          <span>{{ value }}</span>
+        </div>
+      {% else %}
+        {{ value -}}
+      {% endif %}
       <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+      {% if picker_type == 'packs' %}
+        {% if selected_variant and selected_variant.price < selected_variant.compare_at_price %}
+          {% assign savings = selected_variant.compare_at_price | minus: selected_variant.price %}
+          {% assign savings_percentage = savings | times: 100 | divided_by: selected_variant.compare_at_price %} 
+          <span class="variant-picker__savings">
+            {{ savings_percentage | round }}% off
+          </span>
+        {% endif %}      
+      {% endif %}
     </label>
-  {%- elsif block.settings.picker_type == 'dropdown' -%}
+    {% if picker_type == 'packs' %}
+      <style>
+        label[for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"] {
+          display: block;
+          width: 100%;
+          margin: 10px 0;
+        }
+      </style>
+    {% endif %}
+  {%- elsif picker_type == 'dropdown' -%}
     <option
       value="{{ value | escape }}"
       {% if option.selected_value == value %}
@@ -77,4 +137,6 @@
       {%- endif %}
     </option>
   {%- endif -%}
-{%- endfor -%}
+  {%- endfor -%}
+</div>
+

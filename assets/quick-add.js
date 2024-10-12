@@ -1,28 +1,49 @@
 class QuickAddDrawer extends HTMLElement {
   constructor() {
     super();
-    this.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close());
-    this.querySelector('#QuickAddDrawer-Overlay').addEventListener('click', this.close.bind(this));
-    this.querySelector('.drawer__close').addEventListener('click', this.close.bind(this));
+    this.selectedVariantId = null;
+    console.log("QuickAddDrawer constructor called.");
+    this.addEventListener('keyup', (evt) => {
+      if (evt.code === 'Escape') {
+        console.log('Escape key pressed, closing QuickAddDrawer.');
+        this.close();
+      }
+    });
+    this.querySelector('#QuickAddDrawer-Overlay').addEventListener('click', () => {
+      console.log('Overlay clicked, closing QuickAddDrawer.');
+      this.close();
+    });
+    this.querySelector('.drawer__close').addEventListener('click', () => {
+      console.log('Close button clicked, closing QuickAddDrawer.');
+      this.close();
+    });
     this.openButtons = document.querySelectorAll('.quick-add__open');
     this.contentEl = this.querySelector('.quick-add__inner');
+
     this.openButtons.forEach((button) => {
       button.addEventListener('click', (event) => {
         event.preventDefault();
-        this.renderContents(button.getAttribute('data-url'), parseFloat(button.getAttribute('data-product-id')));
-        // this.open(button);
+        const dataUrl = button.getAttribute('data-url');
+        const productId = parseFloat(button.getAttribute('data-product-id'));
+        console.log(`Opening QuickAddDrawer for product ID: ${productId}, URL: ${dataUrl}`);
+        this.renderContents(dataUrl, productId);
       });
     });
+
     document.addEventListener('product:::addedToCart', (event) => {
-      console.log(event);
+      console.log('Product added to cart event triggered:', event);
       this.close();
     });
   }
 
   open(triggeredBy) {
-    if (triggeredBy) this.setActiveElement(triggeredBy);
-    // here the animation doesn't seem to always get triggered. A timeout seem to help
+    if (triggeredBy) {
+      console.log('Triggered by:', triggeredBy);
+      this.setActiveElement(triggeredBy);
+    }
+
     setTimeout(() => {
+      console.log('Opening QuickAddDrawer with animation.');
       this.classList.add('animate', 'active');
     });
 
@@ -33,6 +54,7 @@ class QuickAddDrawer extends HTMLElement {
           ? this.querySelector('.drawer__inner-empty')
           : document.getElementById('QuickAddDrawer');
         const focusElement = this.querySelector('.drawer__inner') || this.querySelector('.drawer__close');
+        console.log('Transition ended, trapping focus.');
         trapFocus(containerToTrapFocusOn, focusElement);
       },
       { once: true }
@@ -42,48 +64,104 @@ class QuickAddDrawer extends HTMLElement {
   }
 
   close() {
+    console.log('Closing QuickAddDrawer.');
     this.classList.remove('active');
     removeTrapFocus(this.activeElement);
     document.body.classList.remove('overflow-hidden');
   }
 
-  renderContents(url,id) {
+  renderContents(url, id) {
+    console.log(`Fetching content for URL: ${url}, Product ID: ${id}`);
+    
+    const selectedRadio = this.querySelector('input[type="radio"]:checked');
+    if (selectedRadio) {
+      this.selectedVariantId = selectedRadio.value;
+      console.log(`Storing selected variant ID: ${this.selectedVariantId}`);
+    }
+
     fetch(url)
       .then((response) => response.text())
       .then((html) => {
+        console.log('Fetched HTML content:', html);
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
         this.contentEl.innerHTML = html;
-        
-        // const rechargeConfig = {
-        //   productId: id, // Required
-        //   injectionParent: 'form[action*="cart/add"]', // The node that will have the widget injected in
-        //   injectionMethod: 'prepend', // How will the widget be injected 
-        //   injectFn: (node, target) => {}, // Runs a custom injection function 
-        //   selectors: {
-        //     price: ['.my-price-selector'], // the selectors that will be updated based on subscription
-        //     variant: ['.variant-selector'] // The variants to watch for to update the subscription prices
-        //   }
-        // };
-        // window.ReChargeWidget.createWidget(rechargeConfig);
-        // this.querySelector('recharge-widget').initializeWidget();
-        
 
         setTimeout(() => {
+          console.log('Setting up drawer content and opening it.');
           this.open();
+
+          if (this.selectedVariantId) {
+            const radioToCheck = this.contentEl.querySelector(`input[type="radio"][value="${this.selectedVariantId}"]`);
+            if (radioToCheck) {
+              radioToCheck.checked = true;
+              console.log(`Re-checked variant ID: ${this.selectedVariantId}`);
+            }
+          }
         }, 50);
       })
       .catch((error) => {
-        console.warn(error);
+        console.warn('Error fetching content:', error);
       });
-
-
-    
-  } 
+  }
 
   setActiveElement(element) {
+    console.log('Setting active element:', element);
     this.activeElement = element;
   }
 }
 
 customElements.define('quick-add-drawer', QuickAddDrawer);
+
+class QuickAddVariantPicker extends HTMLElement {
+  constructor() {
+    super();
+    console.log('QuickAddVariantPicker initialized');
+  }
+
+  connectedCallback() {
+    console.log('QuickAddVariantPicker added to the DOM');
+    
+    const radios = this.querySelectorAll('input[type="radio"]');
+    radios.forEach((radio) => {
+      radio.addEventListener('change', (event) => {
+        this.onVariantChange(event);
+      });
+    });
+  }
+
+  onVariantChange(event) {
+    const selectedVariantId = event.target.value;
+    console.log(`Selected variant ID: ${selectedVariantId}`);
+  
+    const productHandle = this.getAttribute('data-product-handle');
+    if (!productHandle) {
+      console.warn('Product handle not found.');
+      return;
+    }
+  
+    const productVariantInput = document.querySelector('.product-variant-id');
+    if (productVariantInput) {
+      productVariantInput.value = selectedVariantId;
+      console.log(`Updated product-variant-id input value to: ${selectedVariantId}`);
+      
+      const quickAddDrawer = document.querySelector('quick-add-drawer');
+      if (quickAddDrawer) {
+        const newUrl = `/products/${productHandle}?variant=${selectedVariantId}&view=quick-add`;
+        console.log(`Fetching new content for variant ${selectedVariantId} with URL: ${newUrl}`);
+        
+        quickAddDrawer.renderContents(newUrl, selectedVariantId);
+      } else {
+        console.warn('QuickAddDrawer not found.');
+      }
+    } else {
+      console.warn('product-variant-id input not found.');
+    }
+  }
+
+  disconnectedCallback() {
+    console.log('QuickAddVariantPicker removed from the DOM');
+  }
+}
+
+customElements.define('quick-add-variant-picker', QuickAddVariantPicker);

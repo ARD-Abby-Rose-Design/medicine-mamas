@@ -1,13 +1,32 @@
 {% layout none %}
 
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  .product-form__input input[type='radio'] + label {
+    padding: 1rem 0rem;
+  }
+{% endstyle %}
+
 <h2 class="quick-add-drawer__title">{{ product.title }}</h2>
 {% render 'okendo-reviews-product-rating-summary', product: product %}
 <div class="quick-add-drawer__image media" style="padding-top: {{ 1 | times: 100 }}%;">
   {{ product.featured_image | image_url: width: 800 | image_tag }}
 </div>
+
+{%- if product.variants.size > 1 -%}
+  <div class="variant-picker-container">
+  {% for variant in product.variants %}
+    {%- render 'quick-add-variant-picker', product: product, variant: variant -%}
+  {% endfor %}
+  </div>
+{%- endif -%}
+
 {% render 'rc-widget', product: product %}
+
 <div class="quantity-and-buttons">
   {%- render 'product-quantity-input', product: product -%}
   {%- render 'buy-buttons', block: block, product: product, product_form_id: 'product-form-quick-add', section_id: section.id, show_pickup_availability: true -%}
 </div>
+
 <a class="quick-add__details link" href="{{ product.url }}">Details</a>

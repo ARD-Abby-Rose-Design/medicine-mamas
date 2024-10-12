@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -10,7 +19,7 @@
           }
         },
         "486e96e5-7913-4672-8ce6-6f8671d1ad76": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}"
           }
@@ -46,13 +55,13 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
+            "picker_type": "packs"
           }
         },
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"custom-recharge\"><\/div>"
+            "custom_liquid": "<div class=\"custom-recharge\"></div>"
           }
         },
         "quantity_selector": {
@@ -71,7 +80,7 @@
         "afbb9305-0fee-485b-84f6-73e64fa05f10": {
           "type": "text",
           "settings": {
-            "text": "<a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days<\/a>",
+            "text": "<a href=\"/policies/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days</a>",
             "text_style": "body"
           }
         },
@@ -80,7 +89,7 @@
           "settings": {
             "heading": "How to Use",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -89,7 +98,7 @@
           "settings": {
             "heading": "Ingredients",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.key_ingredients | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.key_ingredients | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -98,7 +107,7 @@
           "settings": {
             "heading": "Product Benefits & Trial Results",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.trial_results | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.trial_results | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -224,7 +233,7 @@
           "type": "column",
           "settings": {
             "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -233,7 +242,7 @@
           "type": "column",
           "settings": {
             "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -306,7 +315,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "I thought you weren't supposed to wash your vagina?",
-            "row_content": "<p>You are right, the Vagina is like a  \"self cleaning oven\" and you do not need to wash or cleanse it. However, the Vulva is a different story. If you choose to wash your Vulva (Mons Pubis, Labia Minora, Labia Majora, Clitoris and Vaginal Opening-the external skin) it is best to use a mild, gentle cleanser or warm water alone. <\/p>",
+            "row_content": "<p>You are right, the Vagina is like a  \"self cleaning oven\" and you do not need to wash or cleanse it. However, the Vulva is a different story. If you choose to wash your Vulva (Mons Pubis, Labia Minora, Labia Majora, Clitoris and Vaginal Opening-the external skin) it is best to use a mild, gentle cleanser or warm water alone. </p>",
             "page": ""
           }
         },
@@ -314,7 +323,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Why can't I use a traditional body wash on my vulva?",
-            "row_content": "<p>Traditional body washes can be full of harsh surfactants and more often than not have added fragrance. Fragrances, even essential oils, can be irritating to delicate vulvar skin and can even disrupt the natural protective biome of this delicate area.<\/p>",
+            "row_content": "<p>Traditional body washes can be full of harsh surfactants and more often than not have added fragrance. Fragrances, even essential oils, can be irritating to delicate vulvar skin and can even disrupt the natural protective biome of this delicate area.</p>",
             "page": ""
           }
         },
@@ -322,7 +331,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Can the wash be used other places than the vulva?",
-            "row_content": "<p>Yes, you can use our wash all over the body. Our gentle, fragrance free cleanser can easily replace your daily body wash. With our new 2X size, our wash lasts even longer.<\/p>",
+            "row_content": "<p>Yes, you can use our wash all over the body. Our gentle, fragrance free cleanser can easily replace your daily body wash. With our new 2X size, our wash lasts even longer.</p>",
             "page": ""
           }
         },
@@ -330,7 +339,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Did the feminine wash change?",
-            "row_content": "<p>There has been no change to the wash formula, however we are now providing you twice the amount of product for the same price!<\/p>",
+            "row_content": "<p>There has been no change to the wash formula, however we are now providing you twice the amount of product for the same price!</p>",
             "page": ""
           }
         },
@@ -338,7 +347,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Why should I use a non-foaming intimate cleanser?",
-            "row_content": "<p>Oftentimes foam is created by using harsh surfactants (think SLS) and while those may be ok for some other types of skin it is not recommended to use on your delicate vulva skin. <\/p>",
+            "row_content": "<p>Oftentimes foam is created by using harsh surfactants (think SLS) and while those may be ok for some other types of skin it is not recommended to use on your delicate vulva skin. </p>",
             "page": ""
           }
         },
@@ -346,7 +355,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How does this support my bodies pH?",
-            "row_content": "<p>Our vulva wash is developed specifically to support the pH of your vulva (slightly more acidic than the vagina) and not disrupt it with fragrance or harsh ingredients.<\/p>",
+            "row_content": "<p>Our vulva wash is developed specifically to support the pH of your vulva (slightly more acidic than the vagina) and not disrupt it with fragrance or harsh ingredients.</p>",
             "page": ""
           }
         },
@@ -354,7 +363,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Will this prevent odor? Will this make my vulva smell good?",
-            "row_content": "<p>We have intentionally left out fragrance as it can be disruptive to your natural microbiome. More often than not if you have an odor there is a bigger underlying problem that you should check in with your physician about. A fragranced cleanser can mask a bigger issue. <\/p>",
+            "row_content": "<p>We have intentionally left out fragrance as it can be disruptive to your natural microbiome. More often than not if you have an odor there is a bigger underlying problem that you should check in with your physician about. A fragranced cleanser can mask a bigger issue. </p>",
             "page": ""
           }
         },
@@ -363,7 +372,7 @@
           "disabled": true,
           "settings": {
             "heading": "Did the formula change?",
-            "row_content": "<p>While we did change our packaging, all of the Vmagic organic formulations you know and love remain the same.<\/p>",
+            "row_content": "<p>While we did change our packaging, all of the Vmagic organic formulations you know and love remain the same.</p>",
             "page": ""
           }
         },
@@ -371,7 +380,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Are Medicine Mama products estrogen free?",
-            "row_content": "<p>All of our products are hormone and soy free.<\/p>",
+            "row_content": "<p>All of our products are hormone and soy free.</p>",
             "page": ""
           }
         },
@@ -379,7 +388,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "What makes the VMAGIC® vulva wash the best feminine wash?",
-            "row_content": "<p>Unlike other feminine washes that contain harsh surfactants and more often than not have added fragrance, VMAGIC's Vulva Wash uses only natural ingredients, is fragrance free, and pH balanced. <\/p><p>Fragrance and essential oils can be irritating to delicate vulvar skin and can even disrupt the natural protective biome of this delicate area.<\/p>",
+            "row_content": "<p>Unlike other feminine washes that contain harsh surfactants and more often than not have added fragrance, VMAGIC's Vulva Wash uses only natural ingredients, is fragrance free, and pH balanced. </p><p>Fragrance and essential oils can be irritating to delicate vulvar skin and can even disrupt the natural protective biome of this delicate area.</p>",
             "page": ""
           }
         },
@@ -387,7 +396,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Is this intimate cleanser also a vaginal wash?",
-            "row_content": "<p>Your vagina, or the internal canal separate from the external vulva, is essentially a \"self cleaning oven\"  and does not need to be washed which is why you do not see any vaginal washes within our product line. <\/p><p>However, the Vulva, or external area of the genitalia, is skin that is very delicate and requires the most gentle cleansing.<\/p><p>There is no need for expensive scented soaps (in fact, they could be detrimental!). Un scented, gentle, or natural feminine washes especially formulated for this area are key.<\/p>",
+            "row_content": "<p>Your vagina, or the internal canal separate from the external vulva, is essentially a \"self cleaning oven\"  and does not need to be washed which is why you do not see any vaginal washes within our product line. </p><p>However, the Vulva, or external area of the genitalia, is skin that is very delicate and requires the most gentle cleansing.</p><p>There is no need for expensive scented soaps (in fact, they could be detrimental!). Un scented, gentle, or natural feminine washes especially formulated for this area are key.</p>",
             "page": ""
           }
         }
@@ -440,7 +449,7 @@
         "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Meet Dr. Clare Bertucio; mother, wife, physician of 20+ years, fierce women’s health advocate and now CEO. With Dr. Clare, no question is too bold or too taboo. She’s working to build a more informed, confident, and liberated female community. Join in the conversation, embrace your Vulva, and be a part of this revolutionary journey that Medicine Mama is leading. Go ahead #askmedmama.<\/p>",
+            "text": "<p>Meet Dr. Clare Bertucio; mother, wife, physician of 20+ years, fierce women’s health advocate and now CEO. With Dr. Clare, no question is too bold or too taboo. She’s working to build a more informed, confident, and liberated female community. Join in the conversation, embrace your Vulva, and be a part of this revolutionary journey that Medicine Mama is leading. Go ahead #askmedmama.</p>",
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
@@ -449,7 +458,7 @@
           "type": "button",
           "settings": {
             "button_label": "Learn More",
-            "button_link": "https:\/\/medicinemama.com\/pages\/about",
+            "button_link": "https://medicinemama.com/pages/about",
             "button_arrow": true
           }
         }
@@ -461,8 +470,8 @@
         "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/vulvavsvagina.jpg",
-        "video": "shopify:\/\/files\/videos\/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
+        "image": "shopify://shop_images/vulvavsvagina.jpg",
+        "video": "shopify://files/videos/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
         "media_type": "video",
         "height": "small",
         "desktop_image_width": "medium",

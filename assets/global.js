@@ -994,6 +994,7 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
+      this.toggleAddButton(false, '', true);
     }
   }
 
@@ -1009,6 +1010,8 @@ class VariantSelects extends HTMLElement {
         })
         .includes(false);
     });
+    console.log('Current Variant:', this.currentVariant);
+    console.log('Current Variant Available:', this.currentVariant.available);
   }
 
   updateMedia() {
@@ -1121,12 +1124,13 @@ class VariantSelects extends HTMLElement {
   }
 
   toggleAddButton(disable = true, text, modifyClass = true) {
+    console.log('Toggling Add Button. Disable:', disable);
     const productForm = document.getElementById(`product-form-${this.dataset.section}`);
     if (!productForm) return;
     const addButton = productForm.querySelector('[name="add"]');
     const addButtonText = productForm.querySelector('[name="add"] > span');
     if (!addButton) return;
-
+  
     if (disable) {
       addButton.setAttribute('disabled', 'disabled');
       if (text) addButtonText.textContent = text;

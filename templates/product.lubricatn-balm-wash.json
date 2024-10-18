@@ -275,7 +275,7 @@
         "text_zMkYwG"
       ],
       "settings": {
-        "image": "{{ product.featured_image }}",
+        "image": "shopify://shop_images/Hero_Resized.png",
         "media_type": "image",
         "height": "adapt",
         "desktop_image_width": "medium",

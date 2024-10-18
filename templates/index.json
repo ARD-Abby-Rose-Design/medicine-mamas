@@ -79,6 +79,13 @@
             "title": "Menopause"
           }
         },
+        "collection_mbXHJp": {
+          "type": "collection",
+          "settings": {
+            "collection": "intimacy",
+            "title": "Intimacy"
+          }
+        },
         "10c7a365-f1f6-42ac-b282-11715d0be638": {
           "type": "collection",
           "settings": {
@@ -92,22 +99,15 @@
             "collection": "shaving-waxing",
             "title": "Grooming"
           }
-        },
-        "collection_mbXHJp": {
-          "type": "collection",
-          "settings": {
-            "collection": "intimacy",
-            "title": "Intimacy"
-          }
         }
       },
       "block_order": [
         "b10969c3-9793-4654-ac3f-c327c6c44803",
         "4c254b17-b652-4cb7-95f5-198b5137330b",
         "bf0eeb7c-5460-4320-b17e-a8ce7a477ed0",
+        "collection_mbXHJp",
         "10c7a365-f1f6-42ac-b282-11715d0be638",
-        "collection_yfLdzU",
-        "collection_mbXHJp"
+        "collection_yfLdzU"
       ],
       "settings": {
         "title": "I'd like to browse...",

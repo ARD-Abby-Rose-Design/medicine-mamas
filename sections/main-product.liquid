@@ -53,6 +53,7 @@
   {%- endif -%}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
+ 
 
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
@@ -167,7 +168,9 @@
                   {{ product.description }}
                 </div>
               {%- endif -%}
-            {% render 'frontrow' %}          
+            {% if block.settings.show_frontrow == true %}
+              {% render 'frontrow' %}          
+            {% endif %}
             {%- when 'sku' -%}
               <p
                 class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -674,7 +677,15 @@
     {
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_frontrow",
+          "default": true,
+          "label": "Show Frontrow widget"
+        }
+      ]
     },
     {
       "type": "share",
@@ -2005,6 +2016,7 @@
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
     }
+    
   ]
 }
 {% endschema %}

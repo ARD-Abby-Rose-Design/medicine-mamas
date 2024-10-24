@@ -1010,7 +1010,6 @@ class VariantSelects extends HTMLElement {
       oneTimeRadio.style.marginTop = '4rem';
       subscriptionRadio.classList.remove('hidden');
     } else {
-      subscriptionRadio.style.display = 'none';
       subscriptionRadio.classList.remove('widget-option--active');
       subscriptionRadio.classList.add = 'hidden';
       oneTimeRadio.classList.add('widget-option--active');

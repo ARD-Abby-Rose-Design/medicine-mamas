@@ -6,62 +6,62 @@
   >
     <div class="widget__template-radio hidden">
       <div class="widget__radio-wrapper">
-        <div class="widget__radio subscription-radio">
-          <div class="widget__radio-option-selector">
-            <input id="selling_plan_subsave__{{ product.id }}" class="widget__radio-input" type="radio" name="selling_plan">
-            <label for="selling_plan_subsave__{{ product.id }}" class="widget__radio-label">
-              
-              <span class="widget__radio-option-text">
-                <span class="option-text"></span>
-                <span class="option-discount"></span>
-                <span class="option-dash">-</span>
-                <span class="option-compare-price"></span>
-                <span class="option-price"></span>
-              </span>
-            </label>
-          </div>
+        
+          <div class="widget__radio subscription-radio {% if product.selected_or_first_available_variant.selling_plan_allocations.size == 0 %}hidden{% endif %}">
+            <div class="widget__radio-option-selector">
+              <input id="selling_plan_subsave__{{ product.id }}" class="widget__radio-input" type="radio" name="selling_plan">
+              <label for="selling_plan_subsave__{{ product.id }}" class="widget__radio-label">
+                
+                <span class="widget__radio-option-text">
+                  <span class="option-text"></span>
+                  <span class="option-discount"></span>
+                  <span class="option-dash">-</span>
+                  <span class="option-compare-price"></span>
+                  <span class="option-price"></span>
+                </span>
+              </label>
+            </div>
 
-          <div class="widget__selling-plans">
-            <dropdown-select class="dropdown-select" data-product-selling-plans-dropdown="">
-              <div
-                aria-haspopup="listbox"
-                aria-label="Deliver every 8 Weeks"
-                aria-controls="listbox__{{ product.id }}"
-                id="listbox-dropdown__{{ product.id }}"
-                aria-expanded="true"
-                role="button"
-                tabindex="0"
-              >
-                <select
-                  class="selling-plan-group__select text-bold ui-copy"
-                  name="selling-plan-group"
-                  data-custom-dropdown=""
-                  data-product-selling-plans-select=""
-                  data-product-selling-plan-group-name=""
-                  aria-label="Delivery options"
-                  tabindex="-1"
+            <div class="widget__selling-plans">
+              <dropdown-select class="dropdown-select" data-product-selling-plans-dropdown="">
+                <div
+                  aria-haspopup="listbox"
+                  aria-label="Deliver every 8 Weeks"
+                  aria-controls="listbox__{{ product.id }}"
+                  id="listbox-dropdown__{{ product.id }}"
+                  aria-expanded="true"
+                  role="button"
+                  tabindex="0"
                 >
-                </select>
-              </div>
-              <ul
-                role="listbox"
-                id="listbox__{{ product.id }}"
-                aria-labelledby="tab-1"
-                aria-activedescendant="4132864214"
-                tabindex="-1"
-                aria-hidden="false"
-              >
-              </ul>
-            </dropdown-select>
+                  <select
+                    class="selling-plan-group__select text-bold ui-copy"
+                    name="selling-plan-group"
+                    data-custom-dropdown=""
+                    data-product-selling-plans-select=""
+                    data-product-selling-plan-group-name=""
+                    aria-label="Delivery options"
+                    tabindex="-1"
+                  >
+                  </select>
+                </div>
+                <ul
+                  role="listbox"
+                  id="listbox__{{ product.id }}"
+                  aria-labelledby="tab-1"
+                  aria-activedescendant="4132864214"
+                  tabindex="-1"
+                  aria-hidden="false"
+                >
+                </ul>
+              </dropdown-select>
+            </div>
+            {% assign checkmarks = 'recharge.checkmarks' | t | split: '|' %}
+            <ul class="rc-checkmarks">
+              {% for checkmark in checkmarks %}
+                <li class="rc-checkmark">{{ checkmark }}</li>
+              {% endfor %}
+            </ul>
           </div>
-          {% assign checkmarks = 'recharge.checkmarks' | t | split: '|' %}
-          <ul class="rc-checkmarks">
-            {% for checkmark in checkmarks %}
-              <li class="rc-checkmark">{{ checkmark }}</li>
-            {% endfor %}
-          </ul>
-        </div>
-
         <div class="widget__radio one-time-radio">
           <div class="widget__radio-option-selector">
             <input id="selling_plan_one-time__{{ product.id }}" class="widget__radio-input" type="radio" name="selling_plan">

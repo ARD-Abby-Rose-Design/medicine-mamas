@@ -22,6 +22,11 @@ class RechargeWidget extends HTMLElement {
       this.product = await recharge.cdn.getCDNProduct(this.productID);
       this.setVariables(document.querySelector(':root'))
 
+      console.log('Product ID:', this.productID);
+      console.log('Initial Variant ID:', this.variantID);
+      console.log('Widget Settings:', this.widget);
+      console.log('Product Data:', this.product);
+
 
       // if (this.widget.published)  {
           this.widgetTemplate = document.querySelector('.widget__template-radio');
@@ -127,6 +132,9 @@ class RechargeWidget extends HTMLElement {
           price = sellingVariant.prices.unit_price,
           compareAtPrice = sellingVariant.prices.compare_at_price,
           subscribePrice = sellingVariant.prices.discounted_price;
+
+    console.log('Selling Variant Allocations:', sellingVariant.selling_plan_allocations);
+
 
       // Check if the widget is set to select subscription as the default choice and update the price accordingly
       if (this.widget.select_subscription_first) {
@@ -403,6 +411,10 @@ class RechargeWidget extends HTMLElement {
           sellingPlanSelect = this.querySelector('.selling-plan-group__select');
 
 
+          console.log('Updated Variant ID:', variantID);
+          console.log('Selling Variant after Change:', sellingVariant);
+          console.log('Selling Plan Allocations after Change:', sellingVariant.selling_plan_allocations || []);
+          
       // add recharge-price-modifier class to the price element so that the theme does not update it on variant change.
       // the related js change was added within the renderProductInfo function of global.js
       priceContainer.classList.add('recharge-price-modifier');

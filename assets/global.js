@@ -994,8 +994,32 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
+      this.handleSubscriptionDisplay();
       this.toggleAddButton(false, '', true);
     }
+  }
+
+  handleSubscriptionDisplay() {
+    const subscriptionRadio = document.querySelector('.subscription-radio');
+    const oneTimeRadio = document.querySelector('.one-time-radio');
+    const rechargeWidget = document.querySelector('.widget');
+
+    const hasSellingPlans = this.currentVariant.selling_plan_allocations.length > 0;
+
+    if (hasSellingPlans) {
+      subscriptionRadio.classList.add = 'hidden';
+      oneTimeRadio.style.marginTop = '4rem';
+    } else {
+      subscriptionRadio.style.display = 'none';
+      subscriptionRadio.classList.remove('widget-option--active');
+      subscriptionRadio.classList.remove('hidden');
+      oneTimeRadio.classList.add('widget-option--active');
+      oneTimeRadio.querySelector('.widget__radio-input').checked = true;
+      oneTimeRadio.style.marginTop = '0';
+      rechargeWidget.setAttribute('data-selected', 'one-time');
+
+    }
+    rechargeWidget.setAttribute('data-variant-id', this.currentVariant.id);
   }
 
   updateOptions() {

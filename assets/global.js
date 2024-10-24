@@ -1007,12 +1007,12 @@ class VariantSelects extends HTMLElement {
     const hasSellingPlans = this.currentVariant.selling_plan_allocations.length > 0;
 
     if (hasSellingPlans) {
-      subscriptionRadio.classList.add = 'hidden';
       oneTimeRadio.style.marginTop = '4rem';
+      subscriptionRadio.classList.remove('hidden');
     } else {
       subscriptionRadio.style.display = 'none';
       subscriptionRadio.classList.remove('widget-option--active');
-      subscriptionRadio.classList.remove('hidden');
+      subscriptionRadio.classList.add = 'hidden';
       oneTimeRadio.classList.add('widget-option--active');
       oneTimeRadio.querySelector('.widget__radio-input').checked = true;
       oneTimeRadio.style.marginTop = '0';

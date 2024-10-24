@@ -69,8 +69,10 @@
               <span class="widget__radio-option-text">
                 <span class="option-text"></span>-
                 <span class="option-discount"></span>
-                <div class="option-price"></div>
-                
+                <div class="option-compare-price{% if product.selected_or_first_available_variant.selling_plan_allocations.size != 0 %} hidden{% endif %}">
+                  {{ product.selected_or_first_available_variant.compare_at_price |  money_without_trailing_zeros }}
+                </div>                
+                <div class="option-price {% if product.selected_or_first_available_variant.selling_plan_allocations.size == 0 %}bulk-discount{% endif %}"></div>
               </span>
             </label>
           </div>

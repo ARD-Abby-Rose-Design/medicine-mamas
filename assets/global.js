@@ -1002,13 +1002,16 @@ class VariantSelects extends HTMLElement {
   handleSubscriptionDisplay() {
     const subscriptionRadio = document.querySelector('.subscription-radio');
     const oneTimeRadio = document.querySelector('.one-time-radio');
+    const optionComparePrice = oneTimeRadio.querySelector('.option-compare-price');
+    const optionPrice = oneTimeRadio.querySelector('.option-price');
     const rechargeWidget = document.querySelector('.widget');
-
     const hasSellingPlans = this.currentVariant.selling_plan_allocations.length > 0;
 
     if (hasSellingPlans) {
       oneTimeRadio.style.marginTop = '4rem';
       subscriptionRadio.classList.remove('hidden');
+      optionComparePrice.classList.add('hidden');
+      optionPrice.classList.remove('bulk-discount');
     } else {
       subscriptionRadio.classList.remove('widget-option--active');
       subscriptionRadio.classList.add('hidden');
@@ -1016,7 +1019,14 @@ class VariantSelects extends HTMLElement {
       oneTimeRadio.querySelector('.widget__radio-input').checked = true;
       oneTimeRadio.style.marginTop = '0';
       rechargeWidget.setAttribute('data-selected', 'one-time');
+      optionComparePrice.classList.remove('hidden');
+      optionPrice.classList.add('bulk-discount');
 
+      if (this.currentVariant.compare_at_price) {
+        optionComparePrice.innerHTML = '$' + (this.currentVariant.compare_at_price / 100).toFixed(2);
+      } else {
+        optionComparePrice.innerHTML = '';
+      }
     }
     rechargeWidget.setAttribute('data-variant-id', this.currentVariant.id);
   }

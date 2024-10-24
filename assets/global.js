@@ -1011,7 +1011,7 @@ class VariantSelects extends HTMLElement {
       subscriptionRadio.classList.remove('hidden');
     } else {
       subscriptionRadio.classList.remove('widget-option--active');
-      subscriptionRadio.classList.add = 'hidden';
+      subscriptionRadio.classList.add('hidden');
       oneTimeRadio.classList.add('widget-option--active');
       oneTimeRadio.querySelector('.widget__radio-input').checked = true;
       oneTimeRadio.style.marginTop = '0';

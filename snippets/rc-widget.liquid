@@ -62,7 +62,7 @@
               {% endfor %}
             </ul>
           </div>
-        <div class="widget__radio one-time-radio">
+            <div class="widget__radio one-time-radio" {% if product.selected_or_first_available_variant.selling_plan_allocations.size == 0 %}style="margin-top: 0px;"{% endif %}>
           <div class="widget__radio-option-selector">
             <input id="selling_plan_one-time__{{ product.id }}" class="widget__radio-input" type="radio" name="selling_plan">
             <label for="selling_plan_one-time__{{ product.id }}" class="widget__radio-label">

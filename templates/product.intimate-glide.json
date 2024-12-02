@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -15,19 +15,17 @@
         "00f29d9e-75b2-40e9-9b23-4dab4df71a26": {
           "type": "rating",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "486e96e5-7913-4672-8ce6-6f8671d1ad76": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}"
           }
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "caption": {
           "type": "text",
@@ -39,18 +37,17 @@
         "description": {
           "type": "description",
           "settings": {
+            "show_frontrow": true
           }
         },
         "6b38dc5b-1d2c-4b1e-8bad-3c2cbc663748": {
           "type": "checkmarks",
-          "settings": {
-          }
+          "settings": {}
         },
         "price": {
           "type": "price",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -62,14 +59,13 @@
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"custom-recharge\"><\/div>"
+            "custom_liquid": "<div class=\"custom-recharge\"></div>"
           }
         },
         "quantity_selector": {
           "type": "quantity_selector",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -81,7 +77,7 @@
         "afbb9305-0fee-485b-84f6-73e64fa05f10": {
           "type": "text",
           "settings": {
-            "text": "<a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days<\/a>",
+            "text": "<a href=\"/policies/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days</a>",
             "text_style": "body"
           }
         },
@@ -90,7 +86,7 @@
           "settings": {
             "heading": "How to Use",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -99,7 +95,7 @@
           "settings": {
             "heading": "Ingredients",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.key_ingredients | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.key_ingredients | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -108,7 +104,7 @@
           "settings": {
             "heading": "Product Benefits & Trial Results",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.trial_results | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.trial_results | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -163,8 +159,7 @@
         },
         "17c4f4e2-2426-4cc7-9e58-854f72506cb6": {
           "type": "checkmark",
-          "settings": {
-          }
+          "settings": {}
         },
         "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-1": {
           "type": "text",
@@ -174,8 +169,7 @@
         },
         "f7007b7d-6de6-4992-9083-c4d78dcd276b": {
           "type": "checkmark",
-          "settings": {
-          }
+          "settings": {}
         },
         "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-2": {
           "type": "text",
@@ -185,8 +179,7 @@
         },
         "f28c2160-2d2f-494b-bd57-2ab0af1b823d": {
           "type": "checkmark",
-          "settings": {
-          }
+          "settings": {}
         },
         "372c1169-1da6-4229-b1aa-4a13a1c9d479": {
           "type": "text",
@@ -196,8 +189,7 @@
         },
         "efdcde4a-f101-4e27-9314-e41c0f0a2bb5": {
           "type": "checkmark",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -234,7 +226,7 @@
           "type": "column",
           "settings": {
             "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -243,7 +235,7 @@
           "type": "column",
           "settings": {
             "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -315,7 +307,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Can I use Intimate Glide if I have sensitive skin?",
-            "row_content": "<p>Intimate Glide has been clinically tested and is hypoallergenic. However if you have sensitive skin, we recommend doing a patch test to confirm the product is compatible with your skin. If no reaction occurs after applying to a small patch of skin, start with a very small amount of product externally, prior to using larger quantities and\/or using internally. <\/p>",
+            "row_content": "<p>Intimate Glide has been clinically tested and is hypoallergenic. However if you have sensitive skin, we recommend doing a patch test to confirm the product is compatible with your skin. If no reaction occurs after applying to a small patch of skin, start with a very small amount of product externally, prior to using larger quantities and/or using internally. </p>",
             "page": ""
           }
         },
@@ -323,7 +315,15 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "What is the pH value of Intimate Glide?",
-            "row_content": "<p>The pH of Intimate Glide is 4.0-5.0, the typical pH of the vagina ranges from 3.5-4.5.<\/p>",
+            "row_content": "<p>The pH of Intimate Glide is 4.0-5.0, the typical pH of the vagina ranges from 3.5-4.5.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_AhyyX3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the osmolality of the Intimate Glide lubricant?",
+            "row_content": "<p>The World Health Organization (WHO) recommends osmolalities of less than 380 mOsm/kg. Ours is between 50-180 mosm/kg.</p>",
             "page": ""
           }
         },
@@ -331,7 +331,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Is this a vegan lubricant?",
-            "row_content": "<p>Yes, VMAGIC Intimate Glide is vegan. As well as cruelty-free, gluten-free, sugar-free, hormone-free, glycerin-free, paraben-free, and does not contain GMOs, Dyles or Soy. <\/p>",
+            "row_content": "<p>Yes, VMAGIC Intimate Glide is vegan. As well as cruelty-free, gluten-free, sugar-free, hormone-free, glycerin-free, paraben-free, and does not contain GMOs, Dyles or Soy. </p>",
             "page": ""
           }
         },
@@ -339,7 +339,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Is Intimate Glide personal lubricant safe to use during oral sex?",
-            "row_content": "<p>Intimate Glide is not food grade, but it is safe for ingestion in small quantities.<\/p>",
+            "row_content": "<p>Intimate Glide is not food grade, but it is safe for ingestion in small quantities.</p>",
             "page": ""
           }
         },
@@ -347,7 +347,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Is this lubricant condom compatible?",
-            "row_content": "<p>Yes, This product is compatible with natural rubber latex and polyisoprene condoms. This product is not compatible with polyurethane condoms.<\/p>",
+            "row_content": "<p>Yes, This product is compatible with natural rubber latex and polyisoprene condoms. This product is not compatible with polyurethane condoms.</p>",
             "page": ""
           }
         }
@@ -355,6 +355,7 @@
       "block_order": [
         "eb2f3da0-456d-4475-b291-e4dd41821b0e",
         "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-2",
+        "collapsible_row_AhyyX3",
         "3d098281-82e0-4464-8c45-51558b939387",
         "acedb7de-fe32-4b9b-81d1-56a49b9758d1",
         "03c90831-d75d-41e8-93e1-4cb4b4665480"
@@ -394,7 +395,7 @@
         "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Meet Dr. Clare Bertucio; mother, wife, physician of 20+ years, fierce women’s health advocate and now CEO. With Dr. Clare, no question is too bold or too taboo. She’s working to build a more informed, confident, and liberated female community. Join in the conversation, embrace your Vulva, and be a part of this revolutionary journey that Medicine Mama is leading. Go ahead #askmedmama.<\/p>",
+            "text": "<p>Meet Dr. Clare Bertucio; mother, wife, physician of 20+ years, fierce women’s health advocate and now CEO. With Dr. Clare, no question is too bold or too taboo. She’s working to build a more informed, confident, and liberated female community. Join in the conversation, embrace your Vulva, and be a part of this revolutionary journey that Medicine Mama is leading. Go ahead #askmedmama.</p>",
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
@@ -403,7 +404,7 @@
           "type": "button",
           "settings": {
             "button_label": "Learn More",
-            "button_link": "https:\/\/medicinemama.com\/pages\/about",
+            "button_link": "https://medicinemama.com/pages/about",
             "button_arrow": true
           }
         }
@@ -415,8 +416,8 @@
         "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/vulvavsvagina.jpg",
-        "video": "shopify:\/\/files\/videos\/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
+        "image": "shopify://shop_images/vulvavsvagina.jpg",
+        "video": "shopify://files/videos/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
         "media_type": "video",
         "height": "small",
         "desktop_image_width": "medium",
@@ -443,7 +444,7 @@
     "83437bf3-3644-46eb-abaf-c2b104a9887f": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}\/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price\/100,\n      $value: data.total_price\/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price\/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}\/cart\/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='\/cart\/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n<\/script>",
+        "custom_liquid": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0

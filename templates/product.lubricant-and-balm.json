@@ -15,8 +15,7 @@
         "00f29d9e-75b2-40e9-9b23-4dab4df71a26": {
           "type": "rating",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "486e96e5-7913-4672-8ce6-6f8671d1ad76": {
           "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
@@ -26,8 +25,7 @@
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "caption": {
           "type": "text",
@@ -39,18 +37,17 @@
         "description": {
           "type": "description",
           "settings": {
+            "show_frontrow": true
           }
         },
         "6b38dc5b-1d2c-4b1e-8bad-3c2cbc663748": {
           "type": "checkmarks",
-          "settings": {
-          }
+          "settings": {}
         },
         "price": {
           "type": "price",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -68,8 +65,7 @@
         "quantity_selector": {
           "type": "quantity_selector",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -173,8 +169,7 @@
         },
         "17c4f4e2-2426-4cc7-9e58-854f72506cb6": {
           "type": "checkmark",
-          "settings": {
-          }
+          "settings": {}
         },
         "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-1": {
           "type": "text",
@@ -184,8 +179,7 @@
         },
         "f7007b7d-6de6-4992-9083-c4d78dcd276b": {
           "type": "checkmark",
-          "settings": {
-          }
+          "settings": {}
         },
         "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-2": {
           "type": "text",
@@ -195,8 +189,7 @@
         },
         "f28c2160-2d2f-494b-bd57-2ab0af1b823d": {
           "type": "checkmark",
-          "settings": {
-          }
+          "settings": {}
         },
         "372c1169-1da6-4229-b1aa-4a13a1c9d479": {
           "type": "text",
@@ -206,8 +199,7 @@
         },
         "efdcde4a-f101-4e27-9314-e41c0f0a2bb5": {
           "type": "checkmark",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -462,6 +454,14 @@
             "row_content": "<p>Yes, This product is compatible with natural rubber latex and polyisoprene condoms. This product is not compatible with polyurethane condoms.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_ULgG6q": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the osmolality of Intimate Glide lubricant?",
+            "row_content": "<p>The World Health Organization (WHO) recommends osmolalities of less than 380 mOsm/kg. Ours is between 50-180 mosm/kg.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -469,7 +469,8 @@
         "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-2",
         "3d098281-82e0-4464-8c45-51558b939387",
         "acedb7de-fe32-4b9b-81d1-56a49b9758d1",
-        "03c90831-d75d-41e8-93e1-4cb4b4665480"
+        "03c90831-d75d-41e8-93e1-4cb4b4665480",
+        "collapsible_row_ULgG6q"
       ],
       "settings": {
         "caption": "",

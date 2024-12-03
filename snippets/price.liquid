@@ -72,7 +72,7 @@
       </span>
       {% if show_percentage_saved %}
         {% assign percentage = 0 %}
-        {% assign saving = product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100 | divided_by: product.selected_or_first_available_variant.compare_at_price | round %}
+        {% assign saving = product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100.0 | divided_by: product.selected_or_first_available_variant.compare_at_price | round %}
         {% assign percentage = saving | at_least: percentage %}
         – Save {{ percentage }}%
       {% endif %}

@@ -107,9 +107,9 @@
       {% if picker_type == 'packs' %}
         {% if selected_variant and selected_variant.price < selected_variant.compare_at_price %}
           {% assign savings = selected_variant.compare_at_price | minus: selected_variant.price %}
-          {% assign savings_percentage = savings | times: 100 | divided_by: selected_variant.compare_at_price %} 
+          {% assign savings_percentage = savings | times: 100.0 | divided_by: selected_variant.compare_at_price %} 
           <span class="variant-picker__savings">
-            {{ savings_percentage | round }}% off
+            {{ savings_percentage |  round }}% off
           </span>
         {% endif %}      
       {% endif %}

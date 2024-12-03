@@ -14,7 +14,7 @@
   }
 </style>
 {%- liquid
-  assign shipping_value = 50 | times: 100
+  assign shipping_value = 50 | times: 100.0
   assign cart_total = cart.total_price
   assign shipping_value_left = shipping_value | minus: cart_total
   assign slider_value = 100 | times: cart_total | divided_by: shipping_value

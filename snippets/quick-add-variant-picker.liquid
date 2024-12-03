@@ -20,7 +20,7 @@ endfor
         <span class="quick-add-variant-picker__title">{{ variant.title }}</span>
         {% if variant.price < variant.compare_at_price %}
           {% assign savings = variant.compare_at_price | minus: variant.price %}
-          {% assign savings_percentage = savings | times: 100 | divided_by: variant.compare_at_price %}
+          {% assign savings_percentage = savings | times: 100.0 | divided_by: variant.compare_at_price %}
           <span class="quick-add-variant-picker__savings">
              {{ savings_percentage }}% off
           </span>

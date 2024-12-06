@@ -147,6 +147,15 @@
         "padding_bottom": 0
       }
     },
+    "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa": {
+      "type": "you-speak",
+      "settings": {
+        "color_scheme": "inverse",
+        "title": "See The Magic",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "cac67cc4-85e1-4f5d-9af0-5bfbe86ec590": {
       "type": "scrolling-marquee",
       "blocks": {
@@ -205,15 +214,6 @@
         "color_scheme": "inverse",
         "type": "text",
         "padding_top": 100,
-        "padding_bottom": 52
-      }
-    },
-    "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa": {
-      "type": "you-speak",
-      "settings": {
-        "color_scheme": "inverse",
-        "title": "See The Magic",
-        "padding_top": 40,
         "padding_bottom": 52
       }
     },
@@ -506,8 +506,8 @@
   },
   "order": [
     "main",
-    "cac67cc4-85e1-4f5d-9af0-5bfbe86ec590",
     "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa",
+    "cac67cc4-85e1-4f5d-9af0-5bfbe86ec590",
     "17a80875-d3ad-4af8-9b12-88f5dbe0162b",
     "multicolumn",
     "related-products",

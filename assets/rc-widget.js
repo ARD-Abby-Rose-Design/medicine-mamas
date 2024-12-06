@@ -303,7 +303,6 @@ class RechargeWidget extends HTMLElement {
       }
 
 
-      // when selling plan dropdown is changed, update the selling plan input value
 
       _this.dropdownSelect.querySelector('select').addEventListener('change', function () {
         console.log('change', this.value);
@@ -312,7 +311,6 @@ class RechargeWidget extends HTMLElement {
 
       widgetTemplate.querySelector('.subscription-radio .widget__radio-input').addEventListener('change', this.handleSubscriptionChange.bind(this))
 
-      // if there is more than one selling plan, show the dropdown
       if (this.product.selling_plan_groups[0].selling_plans.length > 1) {
           widgetTemplate.querySelector('.widget__selling-plans').classList.remove('hidden');
       }
@@ -320,7 +318,6 @@ class RechargeWidget extends HTMLElement {
       widgetTemplate.classList.remove('hidden');
   }
 
-  // handle subscription radio change
   handleSubscriptionChange(ev) {
       if (ev.target.checked) {
           let widgetTemplate = this.widgetTemplate,
@@ -331,7 +328,6 @@ class RechargeWidget extends HTMLElement {
               sellingPlan,
               sellingPlanInput = document.querySelector('.product-form form .selling-plan-input');
 
-          //if the widget is set to select the subscription as the default choice, set the selling_plan value to the first selling plan
           if (this.widget.select_subscription_first) {
               sellingPlan = sellingVariant.selling_plan_allocations[0].selling_plan_id;
               price = sellingVariant.prices.discounted_price
@@ -351,28 +347,23 @@ class RechargeWidget extends HTMLElement {
       }
   }
 
-  // render the one-time radio button
   renderOneTimeRadio(sellingVariant, widgetTemplate) {
       let widget = this.widget,
           price = sellingVariant.prices.unit_price,
           oneTimeText = widget.onetime_message;
 
-      // set the text and price of the one time radio button
       widgetTemplate.querySelector('.one-time-radio .option-text').innerHTML = oneTimeText;
       widgetTemplate.querySelector('.one-time-radio .option-price').innerText = '$' + price;
 
-      // if the widget is set to not select the subscription radio by default, add the active class and check the radio button
       if (!widget.select_subscription_first) {
           widgetTemplate.querySelector('.one-time-radio').classList.add('widget-option--active');
           widgetTemplate.querySelector('.one-time-radio .widget__radio-input').checked = true;
           document.querySelector('.widget').setAttribute('data-selected', 'one-time');
       }
 
-      // when the one time radio button is clicked, remove the active class from the subscription radio button, update the price, and hide the selling plan dropdown
       widgetTemplate.querySelector('.one-time-radio .widget__radio-input').addEventListener('change', this.handleOneTimeChange.bind(this))
   }
 
-  // handle one-time radio change
   handleOneTimeChange(ev) {
       if (ev.target.checked) {
           let widget = this.widget,
@@ -415,38 +406,29 @@ class RechargeWidget extends HTMLElement {
           console.log('Selling Variant after Change:', sellingVariant);
           console.log('Selling Plan Allocations after Change:', sellingVariant.selling_plan_allocations || []);
           
-      // add recharge-price-modifier class to the price element so that the theme does not update it on variant change.
-      // the related js change was added within the renderProductInfo function of global.js
       priceContainer.classList.add('recharge-price-modifier');
 
-      // clear the subscription options from the plan dropdown
       sellingPlanSelect.innerHTML = ''
 
-      // loop through the selling_plan_allocations of the variant and add them to the dropdown
       sellingVariant.selling_plan_allocations.forEach(function (item, i) {
           let option = document.createElement('option'),
               planGroup =  prod.selling_plan_groups.find((obj) => obj.selling_plan_group_id == item.selling_plan_group_id),
               plan = planGroup.selling_plans.find((obj) => obj.selling_plan_id == item.selling_plan_id),
               discount = plan.price_adjustments_value + '%';
 
-          // set subscription radio price and subscribePrice variable to the first plan price
           if (i === 0) {
-              // set the subscribePrice variable to the price of the first plan
               subscribePrice = item.discounted_price;
               widgetTemplate.querySelector('.subscription-radio .option-price').innerHTML = '$' + subscribePrice;
           }
 
-          // attach necessary data to the option
           option.value = plan.selling_plan_id;
           option.innerText = plan.selling_plan_name;
           option.setAttribute('data-discount', discount);
           option.setAttribute('data-price', subscribePrice);
 
-          // append the option to the dropdown
           sellingPlanSelect.appendChild(option);
       })
 
-      // update the one-time radio price with the default variant price if the product is not subscription only
       if (!prod.is_subscription_only) {
           widgetTemplate.querySelector('.one-time-radio .option-price').innerHTML = '$' + sellingVariant.prices.unit_price;
           switch (document.querySelector('.widget').getAttribute('data-selected')) {
@@ -461,11 +443,9 @@ class RechargeWidget extends HTMLElement {
           sellingPlanInput.value = sellingPlanSelect.value;
       }
 
-      // update the radio event listeners
       subscriptionRadio.removeEventListener('change', this.handleSubscriptionChange.bind(this))
       subscriptionRadio.addEventListener('change', this.handleSubscriptionChange.bind(this))
 
-      // update the radio event listeners
       if (!prod.is_subscription_only) {
           oneTimeRadio.removeEventListener('change', this.handleOneTimeChange.bind(this))
           oneTimeRadio.addEventListener('change', this.handleOneTimeChange.bind(this))
@@ -474,7 +454,6 @@ class RechargeWidget extends HTMLElement {
       this.updatePrice(price, subscribePrice, compareAtPrice);
   }
 
-  // updates the price when the variant or selling plan is changed
   updatePrice(price, subscribePrice, compareAtPrice) {
     const selected = document.querySelector('.widget').getAttribute('data-selected');
     const addButtonPriceEl = document.querySelector('.product-form__submit--price');
@@ -490,7 +469,6 @@ class RechargeWidget extends HTMLElement {
     addButtonPriceEl.innerText = '$' + newPrice;
   }
 
-  // renders the subscription details section
   renderDetails() {
       if (this.widget.show_subscription_details) {
           let learnMore = document.querySelector('.widget .learn-more');

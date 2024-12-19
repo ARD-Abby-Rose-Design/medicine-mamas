@@ -14,13 +14,6 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "880d524b-a3fd-40be-b7e5-563657f1fb3c": {
-          "type": "announcement",
-          "settings": {
-            "text": "FREE full size Intimate Glide with orders $75+",
-            "link": ""
-          }
-        },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
@@ -37,7 +30,6 @@
         }
       },
       "block_order": [
-        "880d524b-a3fd-40be-b7e5-563657f1fb3c",
         "announcement-bar-0",
         "a10e6e15-b6bd-4170-bf00-23f197219773"
       ],

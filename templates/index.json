@@ -15,14 +15,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "NEW",
+            "heading": "BOLDLY PURE VULVA CARE",
             "heading_size": "h1"
           }
         },
         "b68c30fa-30ad-4092-a2bf-83e0c585762a": {
           "type": "heading",
           "settings": {
-            "heading": "Introducing Intimate Glide. The newest member of the VMAGIC family",
+            "heading": "Be In-Touch with Your Self, Body, and Womankind",
             "heading_size": "h2"
           }
         },
@@ -41,8 +41,8 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/Untitled_design_a1ddace8-ab88-46f2-8955-6407b9ae97a7.png",
-        "image_2": "shopify://shop_images/NeutralBlueGreyMinimalistVideoAnimatedCoachingInstagramStory_1000x1200px_1.png",
+        "image": "shopify://shop_images/medicine-mama-desktop-hero_f8197687-e76e-4bfd-bf8b-1eb8ad3ba6fc.jpg",
+        "image_2": "shopify://shop_images/medicine-mama-mobile-hero_9f3fa689-d83c-4c36-ae0e-b0cf1a4562b2.jpg",
         "image_overlay_opacity": 10,
         "image_height": "adapt",
         "desktop_content_position": "middle-left",

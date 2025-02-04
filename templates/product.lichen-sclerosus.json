@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -6,19 +15,17 @@
         "00f29d9e-75b2-40e9-9b23-4dab4df71a26": {
           "type": "rating",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "486e96e5-7913-4672-8ce6-6f8671d1ad76": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}"
           }
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "caption": {
           "type": "text",
@@ -30,18 +37,17 @@
         "description": {
           "type": "description",
           "settings": {
+            "show_frontrow": false
           }
         },
         "6b38dc5b-1d2c-4b1e-8bad-3c2cbc663748": {
           "type": "checkmarks",
-          "settings": {
-          }
+          "settings": {}
         },
         "price": {
           "type": "price",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -52,14 +58,13 @@
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"custom-recharge\"><\/div>"
+            "custom_liquid": "<div class=\"custom-recharge\"></div>"
           }
         },
         "quantity_selector": {
           "type": "quantity_selector",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -71,7 +76,7 @@
         "afbb9305-0fee-485b-84f6-73e64fa05f10": {
           "type": "text",
           "settings": {
-            "text": "<a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days<\/a>",
+            "text": "<a href=\"/policies/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days</a>",
             "text_style": "body"
           }
         },
@@ -80,7 +85,7 @@
           "settings": {
             "heading": "What's Inside?",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.trial_results | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.trial_results | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -89,7 +94,7 @@
           "settings": {
             "heading": "How To Use",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -98,7 +103,7 @@
           "settings": {
             "heading": "Ingredients",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.key_ingredients | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.key_ingredients | metafield_tag }}</p>",
             "page": ""
           }
         }
@@ -146,8 +151,7 @@
         },
         "17c4f4e2-2426-4cc7-9e58-854f72506cb6": {
           "type": "checkmark",
-          "settings": {
-          }
+          "settings": {}
         },
         "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-1": {
           "type": "text",
@@ -157,8 +161,7 @@
         },
         "f7007b7d-6de6-4992-9083-c4d78dcd276b": {
           "type": "checkmark",
-          "settings": {
-          }
+          "settings": {}
         },
         "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-2": {
           "type": "text",
@@ -168,8 +171,7 @@
         },
         "f28c2160-2d2f-494b-bd57-2ab0af1b823d": {
           "type": "checkmark",
-          "settings": {
-          }
+          "settings": {}
         },
         "372c1169-1da6-4229-b1aa-4a13a1c9d479": {
           "type": "text",
@@ -179,8 +181,7 @@
         },
         "efdcde4a-f101-4e27-9314-e41c0f0a2bb5": {
           "type": "checkmark",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -205,7 +206,7 @@
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,
-        "title": "<b>11,000+ 5-Star Reviews<\/b>",
+        "title": "<b>11,000+ 5-Star Reviews</b>",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -246,7 +247,7 @@
         "template--16851299696869__e3615d2d-81bb-4c06-8ad9-89c124c976f1-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>In a clinical study of vulva dryness, 79% of women reported immediate, soothing relief and many of our satisfied customers have reported that VMAGIC® products are extremely useful in improving symptoms associated with lichen sclerosus. <\/p><p>In this kit you receive both our 2 oz jar and our innovative travel version, the Lips Stick. <\/p>",
+            "text": "<p>In a clinical study of vulva dryness, 79% of women reported immediate, soothing relief and many of our satisfied customers have reported that VMAGIC® products are extremely useful in improving symptoms associated with lichen sclerosus. </p><p>In this kit you receive both our 2 oz jar and our innovative travel version, the Lips Stick. </p>",
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
@@ -257,7 +258,7 @@
         "template--16851299696869__e3615d2d-81bb-4c06-8ad9-89c124c976f1-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/medicine-mama-vulva-balm-1_2c96b39d-b534-4219-bd6e-3ba6ef346255.jpg",
+        "image": "shopify://shop_images/medicine-mama-vulva-balm-1_2c96b39d-b534-4219-bd6e-3ba6ef346255.jpg",
         "media_type": "image",
         "height": "adapt",
         "desktop_image_width": "small",
@@ -285,7 +286,7 @@
         "template--16851299696869__a3b62780-5050-4523-82f3-a29d7dfb9e81-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>At Medicine Mama we leverage experts, research and testing and only include science backed ingredients that are supportive of Vulvar wellness. <\/p><p>Our safe, easy to use products contain naturally derived, organic ingredients perfect for helping to soothe itching, pain, and discomfort often associated with lichen sclerosus. <\/p>",
+            "text": "<p>At Medicine Mama we leverage experts, research and testing and only include science backed ingredients that are supportive of Vulvar wellness. </p><p>Our safe, easy to use products contain naturally derived, organic ingredients perfect for helping to soothe itching, pain, and discomfort often associated with lichen sclerosus. </p>",
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
@@ -296,7 +297,7 @@
         "template--16851299696869__a3b62780-5050-4523-82f3-a29d7dfb9e81-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/medicine-mama-vulva-balm-2.jpg",
+        "image": "shopify://shop_images/medicine-mama-vulva-balm-2.jpg",
         "media_type": "image",
         "height": "adapt",
         "desktop_image_width": "small",
@@ -324,7 +325,7 @@
         "template--16851299696869__1009626c-2544-4d38-bee0-ff532002ea22-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Our award winning Vulva balm instantly soothes and reduces itching, burning, and discomfort by delivering calming natural ingredients to restore skin. <\/p><p>In a clinical trial of vulvar dryness, 92% of participants saw a reduction in dryness after consistent 2-week use, and 100% reported zero irritation. <\/p>",
+            "text": "<p>Our award winning Vulva balm instantly soothes and reduces itching, burning, and discomfort by delivering calming natural ingredients to restore skin. </p><p>In a clinical trial of vulvar dryness, 92% of participants saw a reduction in dryness after consistent 2-week use, and 100% reported zero irritation. </p>",
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
@@ -335,7 +336,7 @@
         "template--16851299696869__1009626c-2544-4d38-bee0-ff532002ea22-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/medicine-mama-vmagic-vulva-wash-4.jpg",
+        "image": "shopify://shop_images/medicine-mama-vmagic-vulva-wash-4.jpg",
         "media_type": "image",
         "height": "adapt",
         "desktop_image_width": "small",
@@ -366,7 +367,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Are Medicine Mama products estrogen free?",
-            "row_content": "<p>All of our products are hormone and soy free.<\/p>",
+            "row_content": "<p>All of our products are hormone and soy free.</p>",
             "page": ""
           }
         },
@@ -374,7 +375,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How much should I apply?",
-            "row_content": "<p>Vmagic vulva balm can be applied as liberally and as often as you like. We recommend starting with a small amount and working your way up as desired.<\/p>",
+            "row_content": "<p>Vmagic vulva balm can be applied as liberally and as often as you like. We recommend starting with a small amount and working your way up as desired.</p>",
             "page": ""
           }
         },
@@ -382,7 +383,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How fast can I expect to see results?",
-            "row_content": "<p>Results vary, but in a clinical study 79% of users found immediate relief and 92% saw a reduction in dryness with continued use in as little as two weeks.<\/p>",
+            "row_content": "<p>Results vary, but in a clinical study 79% of users found immediate relief and 92% saw a reduction in dryness with continued use in as little as two weeks.</p>",
             "page": ""
           }
         },
@@ -390,7 +391,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "When should I use the Vulva Balm?",
-            "row_content": "<p>The delicate skin of the vulva can become irritated by many factors including aging, friction, and\/or use of products not specifically designed for this beautiful and delicate area. Vmagic vulva balm provides soothing hydration to relieve discomfort from most vulvar irritants. Many of our customers find relief from (peri)menopause dryness, vulvar dryness from breastfeeding, sensitivity to shaving or waxing, tight clothing or even friction from sex. Our product can be used any time of day and is safe and recommended for daily use as part of a well rounded skin care ritual.<\/p>",
+            "row_content": "<p>The delicate skin of the vulva can become irritated by many factors including aging, friction, and/or use of products not specifically designed for this beautiful and delicate area. Vmagic vulva balm provides soothing hydration to relieve discomfort from most vulvar irritants. Many of our customers find relief from (peri)menopause dryness, vulvar dryness from breastfeeding, sensitivity to shaving or waxing, tight clothing or even friction from sex. Our product can be used any time of day and is safe and recommended for daily use as part of a well rounded skin care ritual.</p>",
             "page": ""
           }
         },
@@ -398,7 +399,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Is this product safe to ingest?",
-            "row_content": "<p>While the product is not intended to be eaten, Vmagic Vulva Balm is USDA organic and made from all natural ingredients.<\/p>",
+            "row_content": "<p>While the product is not intended to be eaten, Vmagic Vulva Balm is USDA organic and made from all natural ingredients.</p>",
             "page": ""
           }
         },
@@ -406,7 +407,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Is a burning sensation normal when applying this product?",
-            "row_content": "<p>With any product, we recommend starting with a patch test and always reviewing ingredients for any allergies you may have. When applying product to severely dehydrated or cracked skin, you may experience a stinging or burning sensation.This can be due to excessive skin dryness and should dissipate quickly, especially with regular use as the tissues regain elasticity and hydration. If irritation continues, discontinue use and consult your healthcare provider.<\/p>",
+            "row_content": "<p>With any product, we recommend starting with a patch test and always reviewing ingredients for any allergies you may have. When applying product to severely dehydrated or cracked skin, you may experience a stinging or burning sensation.This can be due to excessive skin dryness and should dissipate quickly, especially with regular use as the tissues regain elasticity and hydration. If irritation continues, discontinue use and consult your healthcare provider.</p>",
             "page": ""
           }
         },
@@ -414,7 +415,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "What if the product transfers to my clothing?",
-            "row_content": "<p>Vmagic vulva balm is made up of rich, hydrating oils. It may leave oil stains on some fabrics. We recommend starting with a small amount to determine how it interacts with fabric. A dish soap used for cutting through grease, left on for 30 min before laundering can be helpful.<\/p>",
+            "row_content": "<p>Vmagic vulva balm is made up of rich, hydrating oils. It may leave oil stains on some fabrics. We recommend starting with a small amount to determine how it interacts with fabric. A dish soap used for cutting through grease, left on for 30 min before laundering can be helpful.</p>",
             "page": ""
           }
         },
@@ -422,7 +423,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Can I use this product if I’m pregnant?",
-            "row_content": "<p>There are no ingredients that should restrict use during pregnancy. However, we always recommend consulting with your physician before starting any personal care regimen while pregnant or trying to conceive.<\/p>",
+            "row_content": "<p>There are no ingredients that should restrict use during pregnancy. However, we always recommend consulting with your physician before starting any personal care regimen while pregnant or trying to conceive.</p>",
             "page": ""
           }
         },
@@ -430,7 +431,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "I’m allergic to bees. Can I still use this product?",
-            "row_content": "<p>Please consult with your physician as our products contain beeswax, honey, royal jelly and propolis.<\/p>",
+            "row_content": "<p>Please consult with your physician as our products contain beeswax, honey, royal jelly and propolis.</p>",
             "page": ""
           }
         },
@@ -438,7 +439,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Is there a scent?",
-            "row_content": "<p>Vmagic vulva balm does not have any added fragrance and some will not notice a scent at all. We have heard from several customers that you may pick up notes of beeswax.<\/p>",
+            "row_content": "<p>Vmagic vulva balm does not have any added fragrance and some will not notice a scent at all. We have heard from several customers that you may pick up notes of beeswax.</p>",
             "page": ""
           }
         }
@@ -529,7 +530,7 @@
         "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Meet Dr. Clare Bertucio; mother, wife, physician of 20+ years, fierce women’s health advocate and now CEO. With Dr. Clare, no question is too bold or too taboo. She’s working to build a more informed, confident, and liberated female community. Join in the conversation, embrace your Vulva, and be a part of this revolutionary journey that Medicine Mama is leading. Go ahead #askmedmama.<\/p>",
+            "text": "<p>Meet Dr. Clare Bertucio; mother, wife, physician of 20+ years, fierce women’s health advocate and now CEO. With Dr. Clare, no question is too bold or too taboo. She’s working to build a more informed, confident, and liberated female community. Join in the conversation, embrace your Vulva, and be a part of this revolutionary journey that Medicine Mama is leading. Go ahead #askmedmama.</p>",
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
@@ -538,7 +539,7 @@
           "type": "button",
           "settings": {
             "button_label": "Learn More",
-            "button_link": "https:\/\/medicinemama.com\/pages\/about",
+            "button_link": "https://medicinemama.com/pages/about",
             "button_arrow": true
           }
         }
@@ -550,8 +551,8 @@
         "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/vulvavsvagina.jpg",
-        "video": "shopify:\/\/files\/videos\/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
+        "image": "shopify://shop_images/vulvavsvagina.jpg",
+        "video": "shopify://files/videos/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
         "media_type": "video",
         "height": "small",
         "desktop_image_width": "medium",

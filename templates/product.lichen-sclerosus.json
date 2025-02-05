@@ -217,6 +217,7 @@
       "blocks": {
         "template--16826222084325__61b83918-3465-4607-bf85-62c487efba89-heading-1": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "THE ROUTINE",
             "heading_size": "h1"
@@ -226,6 +227,7 @@
       "block_order": [
         "template--16826222084325__61b83918-3465-4607-bf85-62c487efba89-heading-1"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -258,6 +260,7 @@
         "template--16851299696869__e3615d2d-81bb-4c06-8ad9-89c124c976f1-heading-1",
         "template--16851299696869__e3615d2d-81bb-4c06-8ad9-89c124c976f1-text-1"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/medicine-mama-vulva-balm-1_2c96b39d-b534-4219-bd6e-3ba6ef346255.jpg",
         "media_type": "image",
@@ -297,6 +300,7 @@
         "template--16851299696869__a3b62780-5050-4523-82f3-a29d7dfb9e81-heading-1",
         "template--16851299696869__a3b62780-5050-4523-82f3-a29d7dfb9e81-text-1"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/medicine-mama-vulva-balm-2.jpg",
         "media_type": "image",
@@ -336,6 +340,7 @@
         "template--16851299696869__1009626c-2544-4d38-bee0-ff532002ea22-heading-1",
         "template--16851299696869__1009626c-2544-4d38-bee0-ff532002ea22-text-1"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/medicine-mama-vmagic-vulva-wash-4.jpg",
         "media_type": "image",

@@ -189,6 +189,7 @@
     },
     "32485870-4e02-47aa-ba3d-518e55f37a55": {
       "type": "featured-reviews",
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,

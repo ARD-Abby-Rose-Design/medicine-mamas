@@ -203,10 +203,11 @@
     },
     "6cdfb8e6-a773-44fa-ae13-b790f3d71579": {
       "type": "featured-reviews",
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,
-        "title": "<b>11,000+ 5-Star Reviews</b>",
+        "title": "11,000+ 5-Star Reviews",
         "padding_top": 36,
         "padding_bottom": 36
       }

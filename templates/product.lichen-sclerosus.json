@@ -575,6 +575,7 @@
     },
     "339a2a23-2076-4857-bb07-eaed9749925f": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "{% render 'okendo-reviews-widget', product: product %}",
         "color_scheme": "inverse",

@@ -14,6 +14,13 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_eKGHya": {
+          "type": "announcement",
+          "settings": {
+            "text": "20% Off Sitewide - Use Code: VDAY20",
+            "link": ""
+          }
+        },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
@@ -30,6 +37,7 @@
         }
       },
       "block_order": [
+        "announcement_eKGHya",
         "announcement-bar-0",
         "a10e6e15-b6bd-4170-bf00-23f197219773"
       ],

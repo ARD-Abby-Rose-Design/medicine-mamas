@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -13,8 +22,7 @@
       "blocks": {
         "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-rating-1": {
           "type": "rating",
-          "settings": {
-          }
+          "settings": {}
         },
         "f2fc4427-c024-4e9d-a2e2-0a7fbb0675fe": {
           "type": "text",
@@ -31,18 +39,16 @@
         },
         "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-description-1": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         },
         "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-checkmarks-1": {
           "type": "checkmarks",
-          "settings": {
-          }
+          "settings": {}
         },
         "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-custom_liquid-1": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"custom-recharge\"><\/div>"
+            "custom_liquid": "<div class=\"custom-recharge\"></div>"
           }
         },
         "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-buy_buttons-1": {
@@ -55,7 +61,7 @@
         "template--16890557890789__e0c95a69-7eef-4a50-a7e1-347555871471-text-1": {
           "type": "text",
           "settings": {
-            "text": "<a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days<\/a>",
+            "text": "<a href=\"/policies/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days</a>",
             "text_style": "body"
           }
         },
@@ -64,7 +70,7 @@
           "settings": {
             "heading": "How to Use",
             "icon": "none",
-            "content": "<p>Scoop out a small amount of the vulva moisturizer with clean, dry fingers and massage into vulvar skin (includes inner and\/or outer labia, the clitoris, vaginal opening or mons pubis) to moisturize intimate skin.<br\/><br\/>Use daily for hydration or anytime you need relief from vulvar dryness or discomfort due to:<br\/><br\/>Menopause, Perimenopause or Postpartum<br\/>Sexual activity<br\/>Post shaving or waxing<br\/>Chafing from exercise or clothing<\/p>",
+            "content": "<p>Scoop out a small amount of the vulva moisturizer with clean, dry fingers and massage into vulvar skin (includes inner and/or outer labia, the clitoris, vaginal opening or mons pubis) to moisturize intimate skin.<br/><br/>Use daily for hydration or anytime you need relief from vulvar dryness or discomfort due to:<br/><br/>Menopause, Perimenopause or Postpartum<br/>Sexual activity<br/>Post shaving or waxing<br/>Chafing from exercise or clothing</p>",
             "page": ""
           }
         },
@@ -73,7 +79,7 @@
           "settings": {
             "heading": "Ingredients",
             "icon": "none",
-            "content": "<p>{{ section.settings.product.metafields.custom.key_ingredients | metafield_tag }}<\/p>",
+            "content": "<p>{{ section.settings.product.metafields.custom.key_ingredients | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -82,7 +88,7 @@
           "settings": {
             "heading": "Product Benefits & Trial Results",
             "icon": "none",
-            "content": "<p>The VMAGIC Intimate Skin Moisturizer instantly soothes skin providing immediate relief from dryness and ongoing improvements upon consistent 2-week use.<\/p><p><strong>In a clinical trial<\/strong><br\/>100% reported zero irritation*<br\/>92% saw a reduction in dryness after consistent 2-week use**<br\/>79% reported immediate soothing relief from intimate skin dryness*<br\/>7,000+ 5 Star Reviews on Amazon<br\/><br\/>*Based on a clinical study of 33 people aged 25-55<br\/>** Based on 13 people who presented with feminine dryness at the beginning of the study<\/p>",
+            "content": "<p>The VMAGIC Intimate Skin Moisturizer instantly soothes skin providing immediate relief from dryness and ongoing improvements upon consistent 2-week use.</p><p><strong>In a clinical trial</strong><br/>100% reported zero irritation*<br/>92% saw a reduction in dryness after consistent 2-week use**<br/>79% reported immediate soothing relief from intimate skin dryness*<br/>7,000+ 5 Star Reviews on Amazon<br/><br/>*Based on a clinical study of 33 people aged 25-55<br/>** Based on 13 people who presented with feminine dryness at the beginning of the study</p>",
             "page": ""
           }
         }
@@ -162,7 +168,7 @@
         "ce4fd0f6-bffe-48cf-86be-25d89812acd6": {
           "type": "text",
           "settings": {
-            "text": "<p>Our vulva moisturizer is made from  clinically studied natural ingredients including Honey + Propolis, Organic Extra Virgin Olive & Avocado Oils, Cera Alba Beeswax, and Organic Sea Buckthorn to instantly soothe and protect intimate skin without any hormones.<\/p>",
+            "text": "<p>Our vulva moisturizer is made from  clinically studied natural ingredients including Honey + Propolis, Organic Extra Virgin Olive & Avocado Oils, Cera Alba Beeswax, and Organic Sea Buckthorn to instantly soothe and protect intimate skin without any hormones.</p>",
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
@@ -173,7 +179,7 @@
         "ce4fd0f6-bffe-48cf-86be-25d89812acd6"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Honey.jpg",
+        "image": "shopify://shop_images/Honey.jpg",
         "media_type": "image",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -201,7 +207,7 @@
         "template--16890557890789__c39fba0e-bc59-46d2-86a2-af4c09e981c0-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Our products are formulated in partnership with our Cheif Medical Officer Dr. Clare Bertucio and organically loved and recommended by OBGYNs, Pelvic Floor Therapists and Dermatologists. Our formulations leverage experts, research and testing and only include science backed ingredients that are supportive of vulvar wellness.<\/p>",
+            "text": "<p>Our products are formulated in partnership with our Cheif Medical Officer Dr. Clare Bertucio and organically loved and recommended by OBGYNs, Pelvic Floor Therapists and Dermatologists. Our formulations leverage experts, research and testing and only include science backed ingredients that are supportive of vulvar wellness.</p>",
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
@@ -212,7 +218,7 @@
         "template--16890557890789__c39fba0e-bc59-46d2-86a2-af4c09e981c0-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/medicine-mama-dr-clare-bertucio_1bad01cf-8e09-4574-830b-88378039beee.jpg",
+        "image": "shopify://shop_images/medicine-mama-dr-clare-bertucio_1bad01cf-8e09-4574-830b-88378039beee.jpg",
         "media_type": "image",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -240,7 +246,7 @@
         "template--16890557890789__f702b71c-4d12-4d04-b95a-6ef8b49beb83-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>As you enter into (peri)menopause  the vulva can lose elasticity and moisture resulting in discomfort, dryness and even pain with sex. This is often due to the decrease in estrogen that characterizes this normal phase of female life.<\/p><p>VMAGIC® Vulva Moisturizer can help to soften and hydrate delicate vulvar tissues making intimacy more enjoyable.<\/p>",
+            "text": "<p>As you enter into (peri)menopause  the vulva can lose elasticity and moisture resulting in discomfort, dryness and even pain with sex. This is often due to the decrease in estrogen that characterizes this normal phase of female life.</p><p>VMAGIC® Vulva Moisturizer can help to soften and hydrate delicate vulvar tissues making intimacy more enjoyable.</p>",
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
@@ -260,7 +266,7 @@
         "template--16890557890789__f702b71c-4d12-4d04-b95a-6ef8b49beb83-button-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/vulvamoisturizer2.jpg",
+        "image": "shopify://shop_images/vulvamoisturizer2.jpg",
         "media_type": "image",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -288,7 +294,7 @@
         "template--16890557890789__95f67c8c-c2ae-4f5f-80e9-447d8a751fcc-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>In a clinical trial:<\/p><ul><li>100% reported zero irritation<\/li><li>92% saw a reduction in dryness after consistent 2-week use<\/li><li>79% reported immediate soothing relief from intimate skin dryness. <\/li><\/ul>",
+            "text": "<p>In a clinical trial:</p><ul><li>100% reported zero irritation</li><li>92% saw a reduction in dryness after consistent 2-week use</li><li>79% reported immediate soothing relief from intimate skin dryness. </li></ul>",
             "text_size": "text-body",
             "bullets_to_checkmarks": true
           }
@@ -299,7 +305,7 @@
         "template--16890557890789__95f67c8c-c2ae-4f5f-80e9-447d8a751fcc-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/vulvamoisturizer1.jpg",
+        "image": "shopify://shop_images/vulvamoisturizer1.jpg",
         "media_type": "image",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -321,7 +327,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Honey + Propolis",
-            "row_content": "<p>A proprietary blend of raw, sustainably sourced honey and propolis that delivers prebiotic, antioxidant, and soothing benefits to the skin<\/p>",
+            "row_content": "<p>A proprietary blend of raw, sustainably sourced honey and propolis that delivers prebiotic, antioxidant, and soothing benefits to the skin</p>",
             "page": ""
           }
         },
@@ -329,7 +335,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Organic Extra Virgin Olive & Avocado Oils",
-            "row_content": "<p>Contain essential fatty acids to restore and replenish dry skin<\/p>",
+            "row_content": "<p>Contain essential fatty acids to restore and replenish dry skin</p>",
             "page": ""
           }
         },
@@ -337,7 +343,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Organic Cera Alba Beeswax",
-            "row_content": "<p>Strengthens stressed skin by supporting the skins moisture barrier and locking in hydration<\/p>",
+            "row_content": "<p>Strengthens stressed skin by supporting the skins moisture barrier and locking in hydration</p>",
             "page": ""
           }
         },
@@ -345,7 +351,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Organic Sea Buckthorn",
-            "row_content": "<p>Rich in linoleic acid to help support hydration and skin elasticity<\/p>",
+            "row_content": "<p>Rich in linoleic acid to help support hydration and skin elasticity</p>",
             "page": ""
           }
         },
@@ -353,7 +359,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Full Ingredient List",
-            "row_content": "<p>Organic Extra Virgin Olea Europaea (Olive) Oil, Organic Extra Virgin Persea Gratissima (Avocado) Oil, Organic Hippophae Rhamnoides (Sea Buckthorn) Oil, Organic Cera Alba (Beeswax), Medicine Mama's Proprietary Honey & Propolis Blend<\/p>",
+            "row_content": "<p>Organic Extra Virgin Olea Europaea (Olive) Oil, Organic Extra Virgin Persea Gratissima (Avocado) Oil, Organic Hippophae Rhamnoides (Sea Buckthorn) Oil, Organic Cera Alba (Beeswax), Medicine Mama's Proprietary Honey & Propolis Blend</p>",
             "page": ""
           }
         }
@@ -375,7 +381,7 @@
         "color_scheme": "inverse",
         "container_color_scheme": "",
         "open_first_collapsible_row": false,
-        "image": "shopify:\/\/shop_images\/Honey.jpg",
+        "image": "shopify://shop_images/Honey.jpg",
         "image_ratio": "small",
         "desktop_layout": "image_first",
         "padding_top": 36,
@@ -447,7 +453,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Are Medicine Mama products estrogen free?",
-            "row_content": "<p>All of our products are hormone and soy free.<\/p>",
+            "row_content": "<p>All of our products are hormone and soy free.</p>",
             "page": ""
           }
         },
@@ -455,7 +461,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How much should I apply?",
-            "row_content": "<p>VMAGIC Vulva Balm can be applied as liberally and as often as you like. We recommend starting with a small amount and working your way up as desired.<\/p>",
+            "row_content": "<p>VMAGIC Vulva Balm can be applied as liberally and as often as you like. We recommend starting with a small amount and working your way up as desired.</p>",
             "page": ""
           }
         },
@@ -463,7 +469,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How fast can I expect to see results?",
-            "row_content": "<p>Results vary, but in a clinical study 79% of users found immediate relief and 92% saw a reduction in dryness with continued use of the vulva moisturizer in as little as two weeks.<\/p>",
+            "row_content": "<p>Results vary, but in a clinical study 79% of users found immediate relief and 92% saw a reduction in dryness with continued use of the vulva moisturizer in as little as two weeks.</p>",
             "page": ""
           }
         },
@@ -471,7 +477,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "When should I use the Vulva Balm?",
-            "row_content": "<p>The delicate skin of the vulva can become irritated by many factors including aging, friction, and\/or use of products not specifically designed for this beautiful and delicate area. Vmagic vulva moisturizer provides soothing hydration to relieve discomfort from most vulvar irritants. Many of our customers find relief from (peri)menopause dryness, vulvar dryness from breastfeeding, sensitivity to shaving or waxing, tight clothing or even friction from sex. Our intimate skin moistruizer can be used any time of day and is safe and recommended for daily use as part of a well rounded skin care ritual.<\/p>",
+            "row_content": "<p>The delicate skin of the vulva can become irritated by many factors including aging, friction, and/or use of products not specifically designed for this beautiful and delicate area. Vmagic vulva moisturizer provides soothing hydration to relieve discomfort from most vulvar irritants. Many of our customers find relief from (peri)menopause dryness, vulvar dryness from breastfeeding, sensitivity to shaving or waxing, tight clothing or even friction from sex. Our intimate skin moistruizer can be used any time of day and is safe and recommended for daily use as part of a well rounded skin care ritual.</p>",
             "page": ""
           }
         },
@@ -479,7 +485,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Can this product be used as a lubricant?",
-            "row_content": "<p>This intimate skin moisturizer is intended to be used on the Vulva which comprises the Mons Pubis, the Labia Minora and Majora, the Clitoris and Vaginal opening (In other words, the external skin only.). It is not intended to be used in the vaginal canal. However, many of our satisfied clients use the VMAGIC Vulva Balm to help with pain near the vaginal opening. Because it is olive oil based, it is not latex compatible.<\/p>",
+            "row_content": "<p>This intimate skin moisturizer is intended to be used on the Vulva which comprises the Mons Pubis, the Labia Minora and Majora, the Clitoris and Vaginal opening (In other words, the external skin only.). It is not intended to be used in the vaginal canal. However, many of our satisfied clients use the VMAGIC Vulva Balm to help with pain near the vaginal opening. Because it is olive oil based, it is not latex compatible.</p>",
             "page": ""
           }
         }
@@ -512,25 +518,25 @@
         "1b0057ba-a08e-4cc7-9a95-44b20117b2b7": {
           "type": "video",
           "settings": {
-            "video": "shopify:\/\/files\/videos\/Medicine Mama 1.mov"
+            "video": "shopify://files/videos/Medicine Mama 1.mov"
           }
         },
         "8c4e8016-2d26-4c80-8f38-c2ae2389b92a": {
           "type": "video",
           "settings": {
-            "video": "shopify:\/\/files\/videos\/Untitled design (6).mp4"
+            "video": "shopify://files/videos/Untitled design (6).mp4"
           }
         },
         "35e4b0cd-1283-4b47-bf05-ac7d53e9959d": {
           "type": "video",
           "settings": {
-            "video": "shopify:\/\/files\/videos\/Stargirl New Brand.mov"
+            "video": "shopify://files/videos/Stargirl New Brand.mov"
           }
         },
         "95a39215-e25e-418a-ae5f-d0d75a4ec6de": {
           "type": "video",
           "settings": {
-            "video": "shopify:\/\/files\/videos\/Video 2.mp4"
+            "video": "shopify://files/videos/Video 2.mp4"
           }
         }
       },

@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -21,7 +30,7 @@
         "template--16800821838053__fb419e30-388a-4653-8e90-e340c2fb7cec-text-1": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Subscribe and save 25% off for life<\/li><li>Easily modify, pause, or cancel at any time<\/li><li>Never run out of your favorite products<\/li><\/ul>",
+            "text": "<ul><li>Subscribe and save 25% off for life</li><li>Easily modify, pause, or cancel at any time</li><li>Never run out of your favorite products</li></ul>",
             "text_size": "text-body-large",
             "bullets_to_checkmarks": true
           }
@@ -31,7 +40,7 @@
           "disabled": true,
           "settings": {
             "button_label": "Shop Bestsellers",
-            "button_link": "shopify:\/\/collections\/best-sellers",
+            "button_link": "shopify://collections/best-sellers",
             "button_arrow": true
           }
         }
@@ -42,7 +51,7 @@
         "template--16800821838053__fb419e30-388a-4653-8e90-e340c2fb7cec-button-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/medicine-mama-products_023f4027-7e3e-4351-ab01-70c91954c14d.jpg",
+        "image": "shopify://shop_images/medicine-mama-products_023f4027-7e3e-4351-ab01-70c91954c14d.jpg",
         "media_type": "image",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -146,7 +155,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How do subscriptions work?",
-            "row_content": "<p>Sign up for subscriptions to receive your favorite VMAGIC® products every month, with no hassle or worry about your favorites selling out. Plus subscription customers get a discount on every order and early access to new products. Manage your subscription easily by simply logging into your account. You can easily choose to skip a monthly shipment, change the frequency of your shipments, swap your subscription products, gift one of your shipments if you are out of town, or cancel your subscription.<\/p>",
+            "row_content": "<p>Sign up for subscriptions to receive your favorite VMAGIC® products every month, with no hassle or worry about your favorites selling out. Plus subscription customers get a discount on every order and early access to new products. Manage your subscription easily by simply logging into your account. You can easily choose to skip a monthly shipment, change the frequency of your shipments, swap your subscription products, gift one of your shipments if you are out of town, or cancel your subscription.</p>",
             "page": ""
           }
         },
@@ -154,7 +163,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "What is Subscribe & Save?",
-            "row_content": "<p>Subscribe & Save product subscriptions are the most convenient way to keep up your feminine care routine, with your favorite VMAGIC® products delivered to your door on a regular schedule. We will automatically ship your subscribed products based upon your chosen frequency (every month, 2 months, or 3 months). The service is easy to use and customizable, so you can make changes online whenever you need whether you need to pause, modify, or cancel. We send an email reminder 3 days before each order ships.<\/p>",
+            "row_content": "<p>Subscribe & Save product subscriptions are the most convenient way to keep up your feminine care routine, with your favorite VMAGIC® products delivered to your door on a regular schedule. We will automatically ship your subscribed products based upon your chosen frequency (every month, 2 months, or 3 months). The service is easy to use and customizable, so you can make changes online whenever you need whether you need to pause, modify, or cancel. We send an email reminder 3 days before each order ships.</p>",
             "page": ""
           }
         },
@@ -162,7 +171,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "I'm in! How do I sign up for a subscription?",
-            "row_content": "<p>Simply visit the product page for the item you'd like to subscribe to, select the Subscribe + Save option, then click add to cart. Repeat the steps above for any other products you'd like to add to your subscription and then head to checkout. <\/p><p>If you need any help with your subscription order, email us at info@mdmama.com.<\/p>",
+            "row_content": "<p>Simply visit the product page for the item you'd like to subscribe to, select the Subscribe + Save option, then click add to cart. Repeat the steps above for any other products you'd like to add to your subscription and then head to checkout. </p><p>If you need any help with your subscription order, email us at info@mdmama.com.</p>",
             "page": ""
           }
         },
@@ -170,7 +179,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How do I make changes to my subscription order?",
-            "row_content": "<p>You can access your customer portal through your store <a href=\"https:\/\/medicinemamasapothecary.com\/account\/login?return_url=%2Faccount\" target=\"_blank\">account login<\/a>. If you have not registered an account, you will need to create an account using the same email address used at checkout for your subscription order.<\/p><p>Once your account is registered, you can log in and access your customer portal by clicking on the <strong>Manage Subscriptions<\/strong> link.<\/p><p>You can also access your account using a customer portal magic link. This magic link is typically sent in the Subscription Confirmation email when you begin a subscription and the Upcoming Order email.<\/p>",
+            "row_content": "<p>You can access your customer portal through your store <a href=\"https://medicinemamasapothecary.com/account/login?return_url=%2Faccount\" target=\"_blank\">account login</a>. If you have not registered an account, you will need to create an account using the same email address used at checkout for your subscription order.</p><p>Once your account is registered, you can log in and access your customer portal by clicking on the <strong>Manage Subscriptions</strong> link.</p><p>You can also access your account using a customer portal magic link. This magic link is typically sent in the Subscription Confirmation email when you begin a subscription and the Upcoming Order email.</p>",
             "page": ""
           }
         },
@@ -178,7 +187,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How do I pause or cancel my subscription?",
-            "row_content": "<p>To <strong>pause <\/strong>your subscription:<\/p><ol><li><a href=\"https:\/\/medicinemamasapothecary.com\/account\/login?return_url=%2Faccount\" target=\"_blank\">Login <\/a>to your customer portal.<\/li><li>Click Subscriptions and select the subscription you would like to pause.<\/li><li>Scroll to the bottom of the page and click Cancel Subscription.<\/li><li>On the \"Would you like to pause instead?\" pop-up, select the amount of time you would like to pause your subscription if you want to pause instead of cancel.<\/li><li>Take note of the next shipment date, which will reflect the pause duration.<\/li><li>Click Pause Subscription.<\/li><\/ol><p>There is no unpause button in the customer portal. If you would like to reactivate your subscription before the next shipment date, locate the paused subscription on the Subscriptions page of the customer portal and click Order now.<\/p><p><\/p><p>To <strong>cancel <\/strong>your subscription:<br\/><\/p><ol><li><a href=\"https:\/\/medicinemamasapothecary.com\/account\/login?return_url=%2Faccount\" target=\"_blank\">Login <\/a>to your customer portal.<\/li><li>Click Subscriptions and Edit.<\/li><li>Scroll down to the bottom of the page and click Cancel Subscription. If required, provide a cancellation reason and confirm the cancellation by clicking Proceed.<\/li><\/ol>",
+            "row_content": "<p>To <strong>pause </strong>your subscription:</p><ol><li><a href=\"https://medicinemamasapothecary.com/account/login?return_url=%2Faccount\" target=\"_blank\">Login </a>to your customer portal.</li><li>Click Subscriptions and select the subscription you would like to pause.</li><li>Scroll to the bottom of the page and click Cancel Subscription.</li><li>On the \"Would you like to pause instead?\" pop-up, select the amount of time you would like to pause your subscription if you want to pause instead of cancel.</li><li>Take note of the next shipment date, which will reflect the pause duration.</li><li>Click Pause Subscription.</li></ol><p>There is no unpause button in the customer portal. If you would like to reactivate your subscription before the next shipment date, locate the paused subscription on the Subscriptions page of the customer portal and click Order now.</p><p></p><p>To <strong>cancel </strong>your subscription:<br/></p><ol><li><a href=\"https://medicinemamasapothecary.com/account/login?return_url=%2Faccount\" target=\"_blank\">Login </a>to your customer portal.</li><li>Click Subscriptions and Edit.</li><li>Scroll down to the bottom of the page and click Cancel Subscription. If required, provide a cancellation reason and confirm the cancellation by clicking Proceed.</li></ol>",
             "page": ""
           }
         }
@@ -210,7 +219,7 @@
       "settings": {
         "color_scheme": "inverse",
         "show_line_separator": true,
-        "title": "<b>Over 11,000 5-Star Reviews<\/b>",
+        "title": "<b>Over 11,000 5-Star Reviews</b>",
         "padding_top": 36,
         "padding_bottom": 36
       }

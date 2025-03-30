@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -24,7 +33,7 @@
         "db77dd5b-d1e2-4d40-878c-046c31ccf05c": {
           "type": "marketing_tile",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Portrait2_f6e0ebeb-89cf-4417-9566-15a102336467.jpg",
+            "image": "shopify://shop_images/Portrait2_f6e0ebeb-89cf-4417-9566-15a102336467.jpg",
             "heading": "Vulva care is self love",
             "heading_size": "h1",
             "subheading": "Be In-Touch with Your Self, Body, and Womankind",

@@ -36,9 +36,7 @@
         },
         "description": {
           "type": "description",
-          "settings": {
-            "show_frontrow": false
-          }
+          "settings": {}
         },
         "6b38dc5b-1d2c-4b1e-8bad-3c2cbc663748": {
           "type": "checkmarks",
@@ -203,11 +201,10 @@
     },
     "6cdfb8e6-a773-44fa-ae13-b790f3d71579": {
       "type": "featured-reviews",
-      "disabled": true,
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,
-        "title": "11,000+ 5-Star Reviews",
+        "title": "<b>11,000+ 5-Star Reviews</b>",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -226,7 +223,6 @@
       "block_order": [
         "template--16826222084325__61b83918-3465-4607-bf85-62c487efba89-heading-1"
       ],
-      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -259,7 +255,6 @@
         "template--16828532130021__e3b1b0df-7dc1-4f05-bf7b-f4ac1ccebe4c-heading-1",
         "template--16828532130021__e3b1b0df-7dc1-4f05-bf7b-f4ac1ccebe4c-text-1"
       ],
-      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/medicine-mama-vulva-balm-2.jpg",
         "media_type": "image",
@@ -299,7 +294,6 @@
         "template--16828532130021__7a282d84-be86-43ac-8525-e1c417f22687-heading-1",
         "template--16828532130021__7a282d84-be86-43ac-8525-e1c417f22687-text-1"
       ],
-      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/medicine-mama-vmagic-lipsstick-5.jpg",
         "media_type": "image",
@@ -339,7 +333,6 @@
         "template--16828532130021__933ea05a-ce8d-4b99-b4b4-d796fd882c41-heading-1",
         "template--16828532130021__933ea05a-ce8d-4b99-b4b4-d796fd882c41-text-1"
       ],
-      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/medicine-mama-vmagic-vulva-wash-5_dec35d6d-a6e2-4c72-bcb5-5ecdc9a4217e.jpg",
         "media_type": "image",
@@ -370,7 +363,6 @@
       "blocks": {
         "eb2f3da0-456d-4475-b291-e4dd41821b0e": {
           "type": "collapsible_row",
-          "disabled": true,
           "settings": {
             "heading": "Why do I need a vulva moisturizer during menopause?",
             "row_content": "<p>Sometimes the vulva can lose elasticity and moisture during menopause due to the decrease in estrogen that characterizes this normal phase of female life. </p><p>A moisturizer specifically designed for the vulva (minus harmful additives, dyes, or scents) may be helpful in decreasing discomfort associated with these normal changes, especially for sexual intimacy. </p><p>Always check with your healthcare provider before starting a new treatment.</p>",

@@ -189,11 +189,10 @@
     },
     "32485870-4e02-47aa-ba3d-518e55f37a55": {
       "type": "featured-reviews",
-      "disabled": true,
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,
-        "title": "Over 11,000 5-Star Reviews",
+        "title": "<b>Over 11,000 5-Star Reviews</b>",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -297,7 +296,6 @@
     },
     "0c5b4b6a-623b-41fb-9efc-4a000ed08f05": {
       "type": "featured-blog",
-      "disabled": true,
       "settings": {
         "heading": "Let's talk about vulvas",
         "heading_size": "h0",

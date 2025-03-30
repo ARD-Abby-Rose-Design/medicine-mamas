@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -21,7 +30,7 @@
         "template--16826884096229__81972639-995a-4a8b-9530-28b6a84c4618-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Over my 30+ years of practice I saw firsthand the lack of understanding women have when it comes to their bodies. When I started to dig deeper, I found that while feminine care was beginning to receive the “clean beauty treatment”, many of the bestselling products on the market were still using Vagina and Vulva interchangeably or vaguely referencing “care down there”. Not to mention they were using known skin irritants under the guise of “natural”. As a physician, I knew the importance of correctly identifying, labeling, and caring for our most intimate, unique, and empowering zones and the harm that could be done in not doing so. I knew I could do better for women and set out to conquer the next frontier of skincare - VULVA CARE!<\/p><p>[signature]<\/p>",
+            "text": "<p>Over my 30+ years of practice I saw firsthand the lack of understanding women have when it comes to their bodies. When I started to dig deeper, I found that while feminine care was beginning to receive the “clean beauty treatment”, many of the bestselling products on the market were still using Vagina and Vulva interchangeably or vaguely referencing “care down there”. Not to mention they were using known skin irritants under the guise of “natural”. As a physician, I knew the importance of correctly identifying, labeling, and caring for our most intimate, unique, and empowering zones and the harm that could be done in not doing so. I knew I could do better for women and set out to conquer the next frontier of skincare - VULVA CARE!</p><p>[signature]</p>",
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
@@ -29,7 +38,7 @@
         "76aa32e7-c0a8-4d8c-916d-fda6edf42187": {
           "type": "text",
           "settings": {
-            "text": "<p>Dr. Clare Bertucio<br\/>CEO + Chief Medical Officer<\/p>",
+            "text": "<p>Dr. Clare Bertucio<br/>CEO + Chief Medical Officer</p>",
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
@@ -41,7 +50,7 @@
         "76aa32e7-c0a8-4d8c-916d-fda6edf42187"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/medicine-mama-dr-clare-bertucio.jpg",
+        "image": "shopify://shop_images/medicine-mama-dr-clare-bertucio.jpg",
         "media_type": "image",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -62,9 +71,9 @@
         "template--16826884096229__bb6fa93c-580c-4f56-ac2b-c29a63b74e12-column-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/viva-la-vulva.jpg",
+            "image": "shopify://shop_images/viva-la-vulva.jpg",
             "title": "Viva La Vulva™ ",
-            "text": "<p>We proudly say Vulva! You won't see us hiding behind fruit, flowers or cartoons - this is done with purpose and designed to celebrate instead of stigmatizing female anatomy.<\/p>",
+            "text": "<p>We proudly say Vulva! You won't see us hiding behind fruit, flowers or cartoons - this is done with purpose and designed to celebrate instead of stigmatizing female anatomy.</p>",
             "link_label": "",
             "link": ""
           }
@@ -72,9 +81,9 @@
         "template--16826884096229__bb6fa93c-580c-4f56-ac2b-c29a63b74e12-column-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Olive-Oil.jpg",
+            "image": "shopify://shop_images/Olive-Oil.jpg",
             "title": "Intentional Formulations",
-            "text": "<p>We create safe, easy to use products for the Vulva. Our formulations leverage experts, research and testing and only include science backed ingredients that are supportive of vulvar wellness. <\/p>",
+            "text": "<p>We create safe, easy to use products for the Vulva. Our formulations leverage experts, research and testing and only include science backed ingredients that are supportive of vulvar wellness. </p>",
             "link_label": "",
             "link": ""
           }
@@ -82,9 +91,9 @@
         "template--16826884096229__bb6fa93c-580c-4f56-ac2b-c29a63b74e12-column-3": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Self-Love.jpg",
+            "image": "shopify://shop_images/Self-Love.jpg",
             "title": "Self Love is Empowering",
-            "text": "<p>We believe knowledge is power and a catalyst for change. Necessary change begins with women knowing and feeling comfortable with every part of their bodies.<\/p>",
+            "text": "<p>We believe knowledge is power and a catalyst for change. Necessary change begins with women knowing and feeling comfortable with every part of their bodies.</p>",
             "link_label": "",
             "link": ""
           }
@@ -92,9 +101,9 @@
         "c3fc4fbc-7110-4025-b5cf-a35c02bdc389": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/female-founded_cab89800-89fb-4a31-8db3-c11150c1fe4b.jpg",
+            "image": "shopify://shop_images/female-founded_cab89800-89fb-4a31-8db3-c11150c1fe4b.jpg",
             "title": "Proud to be Women",
-            "text": "<p>We are by women and for all women. Being in this space comes with responsibility and we will always reflect and celebrate all types of womanhood.<\/p>",
+            "text": "<p>We are by women and for all women. Being in this space comes with responsibility and we will always reflect and celebrate all types of womanhood.</p>",
             "link_label": "",
             "link": ""
           }
@@ -137,7 +146,7 @@
         "template--16826884096229__8d2c3f5e-a399-44d4-81bc-bb20bf312e7d-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>At Medicine Mama we create boldly pure vulva care that puts women of all ages and stages in touch with themselves, their bodies and womankind. We proudly say Vulva, because as women we have a responsibility to advance the dialogue that has been ignored and stigmatized for far too long. If it were up to us, every woman would know the difference between the vulva and vagina and would be empowered to talk about caring for them as freely as they talk about their 10-step skincare routine. Until then, we encourage you to join us as we create a supportive space for education, empowerment, and most importantly care for our bodies.<\/p>",
+            "text": "<p>At Medicine Mama we create boldly pure vulva care that puts women of all ages and stages in touch with themselves, their bodies and womankind. We proudly say Vulva, because as women we have a responsibility to advance the dialogue that has been ignored and stigmatized for far too long. If it were up to us, every woman would know the difference between the vulva and vagina and would be empowered to talk about caring for them as freely as they talk about their 10-step skincare routine. Until then, we encourage you to join us as we create a supportive space for education, empowerment, and most importantly care for our bodies.</p>",
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
@@ -146,7 +155,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/all-products",
+            "button_link": "shopify://collections/all-products",
             "button_arrow": true
           }
         }
@@ -157,7 +166,7 @@
         "template--16826884096229__8d2c3f5e-a399-44d4-81bc-bb20bf312e7d-button-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Our-Mission_563cca81-c643-4544-bea4-22edb429f3c6.jpg",
+        "image": "shopify://shop_images/Our-Mission_563cca81-c643-4544-bea4-22edb429f3c6.jpg",
         "media_type": "image",
         "height": "adapt",
         "desktop_image_width": "small",
@@ -179,24 +188,24 @@
           "type": "callout",
           "settings": {
             "heading": "Intentional Ingredients",
-            "text": "<p>Wherever possible we leverage organic ingredients in our products and comply with CCOF standards. When we cannot source organic, we rigorously vet ingredients for known irritants to the sensitive vulva and vaginal areas and formulate accordingly. You won’t see dyes, fragrance, hormones, harsh surfactants, parabens, or phthalates.<\/p>",
-            "image": "shopify:\/\/shop_images\/organic-plant-grow-1.svg"
+            "text": "<p>Wherever possible we leverage organic ingredients in our products and comply with CCOF standards. When we cannot source organic, we rigorously vet ingredients for known irritants to the sensitive vulva and vaginal areas and formulate accordingly. You won’t see dyes, fragrance, hormones, harsh surfactants, parabens, or phthalates.</p>",
+            "image": "shopify://shop_images/organic-plant-grow-1.svg"
           }
         },
         "7b25d288-bb05-4c84-9ff4-37c39c551888": {
           "type": "callout",
           "settings": {
             "heading": "Clinically Tested",
-            "text": "<p>We test all our products to ensure that they are safe to use and non-irritating. We leverage clinical testing to support any claims we make about our products so that you can feel safe when choosing Medicine Mama. <\/p>",
-            "image": "shopify:\/\/shop_images\/lab-tube-experiment.svg"
+            "text": "<p>We test all our products to ensure that they are safe to use and non-irritating. We leverage clinical testing to support any claims we make about our products so that you can feel safe when choosing Medicine Mama. </p>",
+            "image": "shopify://shop_images/lab-tube-experiment.svg"
           }
         },
         "430c992e-12d1-4618-bb80-e68265a77545": {
           "type": "callout",
           "settings": {
             "heading": "Endorsed by Physicians",
-            "text": "<p>Our products are organically loved and recommended by OBGYNs, Pelvic Floor Therapists and Dermatologists. We often leverage these experts as we are developing new products or creating content for you to enjoy.<\/p>",
-            "image": "shopify:\/\/shop_images\/medical-instrument-stethoscope.svg"
+            "text": "<p>Our products are organically loved and recommended by OBGYNs, Pelvic Floor Therapists and Dermatologists. We often leverage these experts as we are developing new products or creating content for you to enjoy.</p>",
+            "image": "shopify://shop_images/medical-instrument-stethoscope.svg"
           }
         }
       },
@@ -207,7 +216,7 @@
       ],
       "settings": {
         "heading": "Boldly pure",
-        "text": "<p><\/p><p>“Clean” can be confusing and that’s why we describe ourselves as Boldy Pure instead. We are committed to transparency and do our best to keep our products simple, safe, and effective by leveraging the best science and nature have to offer.<\/p>",
+        "text": "<p></p><p>“Clean” can be confusing and that’s why we describe ourselves as Boldy Pure instead. We are committed to transparency and do our best to keep our products simple, safe, and effective by leveraging the best science and nature have to offer.</p>",
         "color_scheme": "inverse",
         "padding_top": 36,
         "padding_bottom": 36
@@ -219,21 +228,21 @@
         "template--16826884096229__579092b5-efcc-49ca-8c87-cde3d68f8c9a-column-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Dr-Carloyn-Moyers.jpg",
+            "image": "shopify://shop_images/Dr-Carloyn-Moyers.jpg",
             "title": "Dr. Carolyn Moyers",
-            "text": "<p>Board Certified OBGYN, NAMS (North American Menopause Society) Certified Menopause Practitioner, and the founder and CEO of Sky Women’s Health.<\/p>",
+            "text": "<p>Board Certified OBGYN, NAMS (North American Menopause Society) Certified Menopause Practitioner, and the founder and CEO of Sky Women’s Health.</p>",
             "link_label": "Learn More",
-            "link": "https:\/\/www.instagram.com\/drcarolynmoyers\/"
+            "link": "https://www.instagram.com/drcarolynmoyers/"
           }
         },
         "template--16826884096229__579092b5-efcc-49ca-8c87-cde3d68f8c9a-column-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Dr-Sara-Reardon.jpg",
+            "image": "shopify://shop_images/Dr-Sara-Reardon.jpg",
             "title": "Dr. Sara Reardon",
-            "text": "<p>Board Certified women's health and pelvic floor therapist specializing in the treatment of pelvic floor muscle dysfunction, Mom of 2, and Author of Floored.<\/p>",
+            "text": "<p>Board Certified women's health and pelvic floor therapist specializing in the treatment of pelvic floor muscle dysfunction, Mom of 2, and Author of Floored.</p>",
             "link_label": "Learn More",
-            "link": "https:\/\/www.instagram.com\/the.vagina.whisperer\/"
+            "link": "https://www.instagram.com/the.vagina.whisperer/"
           }
         }
       },
@@ -244,7 +253,7 @@
       "settings": {
         "title": "Our Female Health Advisors",
         "heading_size": "h2",
-        "text": "<p>To better serve our Medicine Mama family, we have engaged subject matter experts that can help us better serve you at every age and stage of womanhood.<\/p>",
+        "text": "<p>To better serve our Medicine Mama family, we have engaged subject matter experts that can help us better serve you at every age and stage of womanhood.</p>",
         "image_width": "full",
         "image_ratio": "square",
         "columns_desktop": 2,

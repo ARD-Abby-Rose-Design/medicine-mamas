@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -6,19 +15,17 @@
         "00f29d9e-75b2-40e9-9b23-4dab4df71a26": {
           "type": "rating",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "486e96e5-7913-4672-8ce6-6f8671d1ad76": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}"
           }
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "caption": {
           "type": "text",
@@ -29,19 +36,16 @@
         },
         "description": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         },
         "6b38dc5b-1d2c-4b1e-8bad-3c2cbc663748": {
           "type": "checkmarks",
-          "settings": {
-          }
+          "settings": {}
         },
         "price": {
           "type": "price",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -52,14 +56,13 @@
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"custom-recharge\"><\/div>"
+            "custom_liquid": "<div class=\"custom-recharge\"></div>"
           }
         },
         "quantity_selector": {
           "type": "quantity_selector",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -71,7 +74,7 @@
         "afbb9305-0fee-485b-84f6-73e64fa05f10": {
           "type": "text",
           "settings": {
-            "text": "<a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days<\/a>",
+            "text": "<a href=\"/policies/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days</a>",
             "text_style": "body"
           }
         },
@@ -80,7 +83,7 @@
           "settings": {
             "heading": "What's Inside?",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.trial_results | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.trial_results | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -89,7 +92,7 @@
           "settings": {
             "heading": "How To Use",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -98,7 +101,7 @@
           "settings": {
             "heading": "Ingredients",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.key_ingredients | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.key_ingredients | metafield_tag }}</p>",
             "page": ""
           }
         }
@@ -146,8 +149,7 @@
         },
         "17c4f4e2-2426-4cc7-9e58-854f72506cb6": {
           "type": "checkmark",
-          "settings": {
-          }
+          "settings": {}
         },
         "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-1": {
           "type": "text",
@@ -157,8 +159,7 @@
         },
         "f7007b7d-6de6-4992-9083-c4d78dcd276b": {
           "type": "checkmark",
-          "settings": {
-          }
+          "settings": {}
         },
         "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-2": {
           "type": "text",
@@ -168,8 +169,7 @@
         },
         "f28c2160-2d2f-494b-bd57-2ab0af1b823d": {
           "type": "checkmark",
-          "settings": {
-          }
+          "settings": {}
         },
         "372c1169-1da6-4229-b1aa-4a13a1c9d479": {
           "type": "text",
@@ -179,8 +179,7 @@
         },
         "efdcde4a-f101-4e27-9314-e41c0f0a2bb5": {
           "type": "checkmark",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -205,7 +204,7 @@
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,
-        "title": "<b>11,000+ 5-Star Reviews<\/b>",
+        "title": "<b>11,000+ 5-Star Reviews</b>",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -246,7 +245,7 @@
         "template--16851500859621__c6cb51fe-0fd4-469f-a49f-7c6330fda440-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Did you know that grooming is part of vulva care? Whether you shave, wax or keep it natural our grooming polish can be an easy first step to starting your vulva care routine. <\/p><p>Finely milled and super gentle, this polish helps to prevent ingrown hairs and irritation while softening and hydrating anywhere you shave or wax.<\/p>",
+            "text": "<p>Did you know that grooming is part of vulva care? Whether you shave, wax or keep it natural our grooming polish can be an easy first step to starting your vulva care routine. </p><p>Finely milled and super gentle, this polish helps to prevent ingrown hairs and irritation while softening and hydrating anywhere you shave or wax.</p>",
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
@@ -257,7 +256,7 @@
         "template--16851500859621__c6cb51fe-0fd4-469f-a49f-7c6330fda440-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/medicine-mama-vmagic-grooming-polish-1_b9d2d40c-70e4-405f-8430-a1ab383e1bda.jpg",
+        "image": "shopify://shop_images/medicine-mama-vmagic-grooming-polish-1_b9d2d40c-70e4-405f-8430-a1ab383e1bda.jpg",
         "media_type": "image",
         "height": "adapt",
         "desktop_image_width": "small",
@@ -285,7 +284,7 @@
         "template--16851500859621__a3450f32-e6bb-4bdd-9a85-c170749660c5-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Our vulva wash is not only great for gentle cleansing, it doubles as a perfect shaving gel for intimate skin. <\/p><p>With our new and improved larger size you can ditch your body wash & shaving cream and replace it with our multi-tasking cleanser.<\/p>",
+            "text": "<p>Our vulva wash is not only great for gentle cleansing, it doubles as a perfect shaving gel for intimate skin. </p><p>With our new and improved larger size you can ditch your body wash & shaving cream and replace it with our multi-tasking cleanser.</p>",
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
@@ -296,7 +295,7 @@
         "template--16851500859621__a3450f32-e6bb-4bdd-9a85-c170749660c5-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/medicine-mama-vmagic-vulva-wash_4bf2052d-18ed-4585-a438-ede10fed5e49.jpg",
+        "image": "shopify://shop_images/medicine-mama-vmagic-vulva-wash_4bf2052d-18ed-4585-a438-ede10fed5e49.jpg",
         "media_type": "image",
         "height": "adapt",
         "desktop_image_width": "small",
@@ -324,7 +323,7 @@
         "template--16851500859621__758ef6f7-b384-4db1-b37a-6c4b40a78164-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Grooming routines so often forget the last and most important step; protecting the skin. VMAGIC® lips stick is the perfect hydrating top coat to lock in moisture and soothe any irritation. <\/p><p>Our easy swipe, chubby stick makes application post grooming a breeze and our discreet but beautiful packaging is perfect to pop in your bag for a post wax soothing session.<\/p>",
+            "text": "<p>Grooming routines so often forget the last and most important step; protecting the skin. VMAGIC® lips stick is the perfect hydrating top coat to lock in moisture and soothe any irritation. </p><p>Our easy swipe, chubby stick makes application post grooming a breeze and our discreet but beautiful packaging is perfect to pop in your bag for a post wax soothing session.</p>",
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
@@ -335,7 +334,7 @@
         "template--16851500859621__758ef6f7-b384-4db1-b37a-6c4b40a78164-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/medicine-mama-vmagic-lipsstick-1_778759c2-32ba-4c5a-aaab-b4586abc5d63.jpg",
+        "image": "shopify://shop_images/medicine-mama-vmagic-lipsstick-1_778759c2-32ba-4c5a-aaab-b4586abc5d63.jpg",
         "media_type": "image",
         "height": "adapt",
         "desktop_image_width": "small",
@@ -366,7 +365,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Are you supposed to exfoliate your vulva?",
-            "row_content": "<p>While our grooming polish is gentle enough to use all over the vulva, it is designed specifically to use  where you shave or wax to prevent ingrown hairs and irritation (Mon Pubis, Bikini Line, Labia Majora).<\/p>",
+            "row_content": "<p>While our grooming polish is gentle enough to use all over the vulva, it is designed specifically to use  where you shave or wax to prevent ingrown hairs and irritation (Mon Pubis, Bikini Line, Labia Majora).</p>",
             "page": ""
           }
         },
@@ -374,7 +373,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Can this replace my shaving cream?",
-            "row_content": "<p>This product is intended to exfoliate and not replace a shaving cream or soap. We recommend using the ®Vmagic Grooming Polish as a step 1 prior to shaving followed by our specially formulated ®Vmagic Vulva Wash as a shaving gel. And finally apply ®Vmagic Lips Stick as step 3 to moisturize and protect the skin post shaving or waxing. <\/p>",
+            "row_content": "<p>This product is intended to exfoliate and not replace a shaving cream or soap. We recommend using the ®Vmagic Grooming Polish as a step 1 prior to shaving followed by our specially formulated ®Vmagic Vulva Wash as a shaving gel. And finally apply ®Vmagic Lips Stick as step 3 to moisturize and protect the skin post shaving or waxing. </p>",
             "page": ""
           }
         },
@@ -382,7 +381,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How fast can I expect to see results?",
-            "row_content": "<p>Results vary, but in a clinical study 79% of users found immediate relief and 92% saw a reduction in dryness with continued use in as little as two weeks.<\/p>",
+            "row_content": "<p>Results vary, but in a clinical study 79% of users found immediate relief and 92% saw a reduction in dryness with continued use in as little as two weeks.</p>",
             "page": ""
           }
         },
@@ -390,7 +389,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How much should I apply?",
-            "row_content": "<p>VMAGIC® Lips Stick can be applied as liberally and as often as you like. We recommend starting with a small amount and working your way up as desired. Use immediately after grooming to soothe and protect skin and re-apply as needed for instant moisture.<\/p>",
+            "row_content": "<p>VMAGIC® Lips Stick can be applied as liberally and as often as you like. We recommend starting with a small amount and working your way up as desired. Use immediately after grooming to soothe and protect skin and re-apply as needed for instant moisture.</p>",
             "page": ""
           }
         },
@@ -398,7 +397,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Are Medicine Mama products estrogen free?",
-            "row_content": "<p>All of our products are hormone and soy free.<\/p>",
+            "row_content": "<p>All of our products are hormone and soy free.</p>",
             "page": ""
           }
         },
@@ -406,7 +405,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "When should I use the Vulva Balm?",
-            "row_content": "<p>The delicate skin of the vulva can become irritated by many factors including aging, friction, and\/or use of products not specifically designed for this beautiful and delicate area. Vmagic vulva balm provides soothing hydration to relieve discomfort from most vulvar irritants. Many of our customers find relief from (peri)menopause dryness, vulvar dryness from breastfeeding, sensitivity to shaving or waxing, tight clothing or even friction from sex. Our product can be used any time of day and is safe and recommended for daily use as part of a well rounded skin care ritual.<\/p>",
+            "row_content": "<p>The delicate skin of the vulva can become irritated by many factors including aging, friction, and/or use of products not specifically designed for this beautiful and delicate area. Vmagic vulva balm provides soothing hydration to relieve discomfort from most vulvar irritants. Many of our customers find relief from (peri)menopause dryness, vulvar dryness from breastfeeding, sensitivity to shaving or waxing, tight clothing or even friction from sex. Our product can be used any time of day and is safe and recommended for daily use as part of a well rounded skin care ritual.</p>",
             "page": ""
           }
         },
@@ -414,7 +413,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Can I use the Lips Stick as a moisturizer on others parts of my body like my face?",
-            "row_content": "<p>VMAGIC® Lips Stick is specially formulated to support the sensitive biome of the vulva, but the beauty of its all-natural, organic ingredient list is that it can really be used anywhere on the body! It works wonders for stretching bellies during pregnancy, as a lip balm in a pinch, and as a slugging (moisture barrier) balm at night. These are only a few of the many uses we are constantly hearing about from our satisfied customers!<\/p>",
+            "row_content": "<p>VMAGIC® Lips Stick is specially formulated to support the sensitive biome of the vulva, but the beauty of its all-natural, organic ingredient list is that it can really be used anywhere on the body! It works wonders for stretching bellies during pregnancy, as a lip balm in a pinch, and as a slugging (moisture barrier) balm at night. These are only a few of the many uses we are constantly hearing about from our satisfied customers!</p>",
             "page": ""
           }
         },
@@ -422,7 +421,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Is a burning sensation normal when applying this product?",
-            "row_content": "<p>With any product, we recommend starting with a patch test and always reviewing ingredients for any allergies you may have. When applying the VMAGIC® Lips Stick  to severely dehydrated or cracked skin, you may experience a stinging or burning sensation.This can be due to excessive skin dryness and should dissipate quickly, especially with regular use as the tissues regain elasticity and hydration. If irritation continues, discontinue use and consult your healthcare provider.<\/p>",
+            "row_content": "<p>With any product, we recommend starting with a patch test and always reviewing ingredients for any allergies you may have. When applying the VMAGIC® Lips Stick  to severely dehydrated or cracked skin, you may experience a stinging or burning sensation.This can be due to excessive skin dryness and should dissipate quickly, especially with regular use as the tissues regain elasticity and hydration. If irritation continues, discontinue use and consult your healthcare provider.</p>",
             "page": ""
           }
         },
@@ -430,7 +429,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Is this product safe to ingest?",
-            "row_content": "<p>While the product is not intended to be eaten, VMAGIC® Lips Stick is USDA organic and made from all natural ingredients.<\/p>",
+            "row_content": "<p>While the product is not intended to be eaten, VMAGIC® Lips Stick is USDA organic and made from all natural ingredients.</p>",
             "page": ""
           }
         },
@@ -438,7 +437,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "What if the product transfers to my clothing?",
-            "row_content": "<p>Vmagic vulva balm is made up of rich, hydrating oils. It may leave oil stains on some fabrics. We recommend starting with a small amount to determine how it interacts with fabric. A dish soap used for cutting through grease, left on for 30 min before laundering can be helpful.<\/p>",
+            "row_content": "<p>Vmagic vulva balm is made up of rich, hydrating oils. It may leave oil stains on some fabrics. We recommend starting with a small amount to determine how it interacts with fabric. A dish soap used for cutting through grease, left on for 30 min before laundering can be helpful.</p>",
             "page": ""
           }
         },
@@ -446,7 +445,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Can I use this product if I’m pregnant?",
-            "row_content": "<p>There are no ingredients that should restrict use during pregnancy. However, we always recommend consulting with your physician before starting any personal care regimen while pregnant or trying to conceive.<\/p>",
+            "row_content": "<p>There are no ingredients that should restrict use during pregnancy. However, we always recommend consulting with your physician before starting any personal care regimen while pregnant or trying to conceive.</p>",
             "page": ""
           }
         },
@@ -454,7 +453,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "I’m allergic to bees. Can I still use this product?",
-            "row_content": "<p>Please consult with your physician as our products contain beeswax, honey, royal jelly and propolis.<\/p>",
+            "row_content": "<p>Please consult with your physician as our products contain beeswax, honey, royal jelly and propolis.</p>",
             "page": ""
           }
         },
@@ -462,7 +461,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Is there a scent?",
-            "row_content": "<p>Vmagic vulva balm does not have any added fragrance and some will not notice a scent at all. We have heard from several customers that you may pick up notes of beeswax.<\/p>",
+            "row_content": "<p>Vmagic vulva balm does not have any added fragrance and some will not notice a scent at all. We have heard from several customers that you may pick up notes of beeswax.</p>",
             "page": ""
           }
         }
@@ -556,7 +555,7 @@
         "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Meet Dr. Clare Bertucio; mother, wife, physician of 20+ years, fierce women’s health advocate and now CEO. With Dr. Clare, no question is too bold or too taboo. She’s working to build a more informed, confident, and liberated female community. Join in the conversation, embrace your Vulva, and be a part of this revolutionary journey that Medicine Mama is leading. Go ahead #askmedmama.<\/p>",
+            "text": "<p>Meet Dr. Clare Bertucio; mother, wife, physician of 20+ years, fierce women’s health advocate and now CEO. With Dr. Clare, no question is too bold or too taboo. She’s working to build a more informed, confident, and liberated female community. Join in the conversation, embrace your Vulva, and be a part of this revolutionary journey that Medicine Mama is leading. Go ahead #askmedmama.</p>",
             "text_size": "text-body",
             "bullets_to_checkmarks": false
           }
@@ -565,7 +564,7 @@
           "type": "button",
           "settings": {
             "button_label": "Learn More",
-            "button_link": "https:\/\/medicinemama.com\/pages\/about",
+            "button_link": "https://medicinemama.com/pages/about",
             "button_arrow": true
           }
         }
@@ -577,8 +576,8 @@
         "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/vulvavsvagina.jpg",
-        "video": "shopify:\/\/files\/videos\/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
+        "image": "shopify://shop_images/vulvavsvagina.jpg",
+        "video": "shopify://files/videos/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
         "media_type": "video",
         "height": "small",
         "desktop_image_width": "medium",

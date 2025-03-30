@@ -1,8 +1,30 @@
 {
-  "article": [],
+  "article": [
+    {
+      "key": "category",
+      "namespace": "custom",
+      "name": "Category",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
   "blog": [],
   "brand": [],
-  "collection": [],
+  "collection": [
+    {
+      "key": "text",
+      "namespace": "seo",
+      "name": "SEO Text",
+      "description": "",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
   "company": [],
   "company_location": [],
   "location": [],
@@ -10,6 +32,176 @@
   "order": [],
   "page": [],
   "product": [
+    {
+      "key": "rating",
+      "namespace": "reviews",
+      "name": "Product rating",
+      "description": "Average rating from customers",
+      "type": {
+        "name": "rating",
+        "category": "RATING"
+      }
+    },
+    {
+      "key": "rating_count",
+      "namespace": "reviews",
+      "name": "Product rating count",
+      "description": "Total number of ratings from customers",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "details",
+      "namespace": "custom",
+      "name": "Details",
+      "description": "",
+      "type": {
+        "name": "multi_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "how_to_use",
+      "namespace": "custom",
+      "name": "How To Use",
+      "description": "",
+      "type": {
+        "name": "multi_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "trial_results",
+      "namespace": "custom",
+      "name": "Trial Results",
+      "description": "",
+      "type": {
+        "name": "multi_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "key_ingredients",
+      "namespace": "custom",
+      "name": "Key Ingredients",
+      "description": "",
+      "type": {
+        "name": "multi_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "trustbadges",
+      "namespace": "custom",
+      "name": "TrustBadges",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "short_description",
+      "namespace": "custom",
+      "name": "Short Description",
+      "description": "",
+      "type": {
+        "name": "multi_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "checkmarks",
+      "namespace": "custom",
+      "name": "Checkmarks",
+      "description": "",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "ingredients",
+      "namespace": "custom",
+      "name": "Ingredients",
+      "description": "",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "products",
+      "namespace": "bundle",
+      "name": "Bundle & Save Products",
+      "description": "",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "videos",
+      "namespace": "see",
+      "name": "See it in action",
+      "description": "",
+      "type": {
+        "name": "list.file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "trial",
+      "namespace": "clinical",
+      "name": "Clinical Trial Information",
+      "description": "",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "marquee",
+      "namespace": "custom",
+      "name": "Marquee",
+      "description": "",
+      "type": {
+        "name": "metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "upsell",
+      "namespace": "cart",
+      "name": "Cart upsell",
+      "description": "",
+      "type": {
+        "name": "product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "information",
+      "namespace": "size",
+      "name": "Size information",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "reviews",
+      "namespace": "featured",
+      "name": "Featured reviews",
+      "description": "",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
     {
       "key": "custom_product",
       "namespace": "mm-google-shopping",
@@ -21,33 +213,23 @@
       }
     },
     {
-      "key": "color-pattern",
-      "namespace": "shopify",
-      "name": "Color",
-      "description": "Defines the primary color or pattern, such as blue or striped",
+      "key": "picker_images",
+      "namespace": "custom",
+      "name": "Picker Images",
+      "description": "Set the small images in the picker for the different pack options",
       "type": {
-        "name": "list.metaobject_reference",
+        "name": "list.file_reference",
         "category": "REFERENCE"
       }
     },
     {
-      "key": "shape",
-      "namespace": "shopify",
-      "name": "Shape",
-      "description": "Describes the geometric form or shape of a product, such as round or heart",
+      "key": "picker_type",
+      "namespace": "custom",
+      "name": "Picker Type",
+      "description": "Set the picker type for the quick-add drawer. NOTE: For PDP refer to customizer.",
       "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "tableware-material",
-      "namespace": "shopify",
-      "name": "Tableware material",
-      "description": "Specifies the composition of tableware, such as bone china or earthenware",
-      "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
+        "name": "single_line_text_field",
+        "category": "TEXT"
       }
     }
   ],
@@ -56,7 +238,7 @@
       "key": "custom_label_4",
       "namespace": "mm-google-shopping",
       "name": "Google: Custom Label 4",
-      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
@@ -66,7 +248,7 @@
       "key": "custom_label_3",
       "namespace": "mm-google-shopping",
       "name": "Google: Custom Label 3",
-      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
@@ -76,7 +258,7 @@
       "key": "custom_label_2",
       "namespace": "mm-google-shopping",
       "name": "Google: Custom Label 2",
-      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
@@ -86,7 +268,7 @@
       "key": "custom_label_1",
       "namespace": "mm-google-shopping",
       "name": "Google: Custom Label 1",
-      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
@@ -96,7 +278,7 @@
       "key": "custom_label_0",
       "namespace": "mm-google-shopping",
       "name": "Google: Custom Label 0",
-      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"

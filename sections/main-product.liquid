@@ -168,9 +168,7 @@
                   {{ product.description }}
                 </div>
               {%- endif -%}
-            {% if block.settings.show_frontrow == true %}
-              {% render 'frontrow' %}          
-            {% endif %}
+            
             {%- when 'sku' -%}
               <p
                 class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -677,15 +675,7 @@
     {
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "checkbox",
-          "id": "show_frontrow",
-          "default": true,
-          "label": "Show Frontrow widget"
-        }
-      ]
+      "limit": 1
     },
     {
       "type": "share",

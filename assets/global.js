@@ -994,41 +994,8 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
-      this.handleSubscriptionDisplay();
       this.toggleAddButton(false, '', true);
     }
-  }
-
-  handleSubscriptionDisplay() {
-    const subscriptionRadio = document.querySelector('.subscription-radio');
-    const oneTimeRadio = document.querySelector('.one-time-radio');
-    const optionComparePrice = oneTimeRadio.querySelector('.option-compare-price');
-    const optionPrice = oneTimeRadio.querySelector('.option-price');
-    const rechargeWidget = document.querySelector('.widget');
-    const hasSellingPlans = this.currentVariant.selling_plan_allocations.length > 0;
-
-    if (hasSellingPlans) {
-      oneTimeRadio.style.marginTop = '4rem';
-      subscriptionRadio.classList.remove('hidden');
-      optionComparePrice.classList.add('hidden');
-      optionPrice.classList.remove('bulk-discount');
-    } else {
-      subscriptionRadio.classList.remove('widget-option--active');
-      subscriptionRadio.classList.add('hidden');
-      oneTimeRadio.classList.add('widget-option--active');
-      oneTimeRadio.querySelector('.widget__radio-input').checked = true;
-      oneTimeRadio.style.marginTop = '0';
-      rechargeWidget.setAttribute('data-selected', 'one-time');
-      optionComparePrice.classList.remove('hidden');
-      optionPrice.classList.add('bulk-discount');
-
-      if (this.currentVariant.compare_at_price) {
-        optionComparePrice.innerHTML = '$' + (this.currentVariant.compare_at_price / 100).toFixed(2);
-      } else {
-        optionComparePrice.innerHTML = '';
-      }
-    }
-    rechargeWidget.setAttribute('data-variant-id', this.currentVariant.id);
   }
 
   updateOptions() {
@@ -1043,8 +1010,7 @@ class VariantSelects extends HTMLElement {
         })
         .includes(false);
     });
-    console.log('Current Variant:', this.currentVariant);
-    console.log('Current Variant Available:', this.currentVariant.available);
+   
   }
 
   updateMedia() {
@@ -1138,7 +1104,6 @@ class VariantSelects extends HTMLElement {
       this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section
     }`;
 
-    console.log(`Fetching product info from URL: ${fetchUrl}`);
 
     fetch(fetchUrl)
       .then((response) => response.text())
@@ -1157,7 +1122,6 @@ class VariantSelects extends HTMLElement {
   }
 
   toggleAddButton(disable = true, text, modifyClass = true) {
-    console.log('Toggling Add Button. Disable:', disable);
     const productForm = document.getElementById(`product-form-${this.dataset.section}`);
     if (!productForm) return;
     const addButton = productForm.querySelector('[name="add"]');

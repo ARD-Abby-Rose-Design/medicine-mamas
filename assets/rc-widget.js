@@ -22,10 +22,6 @@ class RechargeWidget extends HTMLElement {
       this.product = await recharge.cdn.getCDNProduct(this.productID);
       this.setVariables(document.querySelector(':root'))
 
-      console.log('Product ID:', this.productID);
-      console.log('Initial Variant ID:', this.variantID);
-      console.log('Widget Settings:', this.widget);
-      console.log('Product Data:', this.product);
 
 
       // if (this.widget.published)  {
@@ -133,8 +129,6 @@ class RechargeWidget extends HTMLElement {
           compareAtPrice = sellingVariant.prices.compare_at_price,
           subscribePrice = sellingVariant.prices.discounted_price;
 
-    console.log('Selling Variant Allocations:', sellingVariant.selling_plan_allocations);
-
 
       // Check if the widget is set to select subscription as the default choice and update the price accordingly
       if (this.widget.select_subscription_first) {
@@ -240,7 +234,13 @@ class RechargeWidget extends HTMLElement {
       widgetTemplate.querySelector('.subscription-radio .option-text').innerHTML = subscribeText;
       widgetTemplate.querySelector('.subscription-radio .option-price').innerText = '$' + subscribePrice;
 
-      widgetTemplate.querySelector('.subscription-radio .option-compare-price').innerText = '$' + compareAtPrice;
+      const compareAtEl = widgetTemplate.querySelector('.subscription-radio .option-compare-price');
+      if (compareAtPrice && compareAtPrice > subscribePrice) {
+          compareAtEl.innerText = '$' + compareAtPrice;
+          compareAtEl.classList.remove('hidden');
+      } else {
+          compareAtEl.classList.add('hidden');
+      }
 
       // if the widget is set to select the subscription radio by default, add the active class and check the radio button
       if (widget.widget_template_type === 'radio_group' || widget.widget_template_type === 'button_group') {
@@ -305,8 +305,10 @@ class RechargeWidget extends HTMLElement {
 
 
       _this.dropdownSelect.querySelector('select').addEventListener('change', function () {
-        console.log('change', this.value);
-        document.querySelector('.product-form form .selling-plan-input').value = this.value;
+        const isSubscriptionSelected = document.querySelector('.widget').getAttribute('data-selected') === 'subscription';
+        if (isSubscriptionSelected) {
+          document.querySelector('.product-form form .selling-plan-input').value = this.value;
+        }
       })
 
       widgetTemplate.querySelector('.subscription-radio .widget__radio-input').addEventListener('change', this.handleSubscriptionChange.bind(this))
@@ -353,6 +355,13 @@ class RechargeWidget extends HTMLElement {
           oneTimeText = widget.onetime_message;
 
       widgetTemplate.querySelector('.one-time-radio .option-text').innerHTML = oneTimeText;
+      const compareAtEl = widgetTemplate.querySelector('.one-time-radio .option-compare-price');
+      if (sellingVariant.prices.compare_at_price && sellingVariant.prices.compare_at_price > price) {
+          compareAtEl.innerText = '$' + sellingVariant.prices.compare_at_price;
+          compareAtEl.classList.remove('hidden');
+      } else {
+          compareAtEl.classList.add('hidden');
+      }
       widgetTemplate.querySelector('.one-time-radio .option-price').innerText = '$' + price;
 
       if (!widget.select_subscription_first) {
@@ -396,15 +405,11 @@ class RechargeWidget extends HTMLElement {
           subscribePrice = sellingVariant.prices.discounted_price,
           compareAtPrice = sellingVariant.prices.compare_at_price,
           widgetTemplate = this.widgetTemplate,
+          subCompareAtEl = widgetTemplate.querySelector('.subscription-radio .option-compare-price'),
           subscriptionRadio = widgetTemplate.querySelector('.subscription-radio .widget__radio-input'),
           oneTimeRadio = widgetTemplate.querySelector('.one-time-radio .widget__radio-input'),
           sellingPlanInput = document.querySelector('.product-form form .selling-plan-input'),
           sellingPlanSelect = this.querySelector('.selling-plan-group__select');
-
-
-          console.log('Updated Variant ID:', variantID);
-          console.log('Selling Variant after Change:', sellingVariant);
-          console.log('Selling Plan Allocations after Change:', sellingVariant.selling_plan_allocations || []);
           
       priceContainer.classList.add('recharge-price-modifier');
 
@@ -452,6 +457,14 @@ class RechargeWidget extends HTMLElement {
       }
 
       this.updatePrice(price, subscribePrice, compareAtPrice);
+
+        if (sellingVariant.prices.compare_at_price && sellingVariant.prices.compare_at_price > sellingVariant.prices.discounted_price) {
+        subCompareAtEl.innerText = '$' + sellingVariant.prices.compare_at_price;
+        subCompareAtEl.classList.remove('hidden');
+        } else {
+        subCompareAtEl.classList.add('hidden');
+        }
+
   }
 
   updatePrice(price, subscribePrice, compareAtPrice) {

@@ -451,7 +451,7 @@ blockquote {
 .field__input,
 .form__label,
 .select__select {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   letter-spacing: 0.04rem;
 }
@@ -1647,7 +1647,6 @@ details[open]>.share-button__fallback {
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
-  font-size: 1.2rem;
   color: rgba(var(--color-foreground), 0.75);
 }
 
@@ -1700,7 +1699,8 @@ details[open]>.share-button__fallback {
 .customer select+svg {
   pointer-events: none;
   position: absolute;
-  top: calc(50% - 0.2rem);
+  top: 50%;
+  transform: translateY(-50%);
   right: calc(var(--inputs-border-width) + 1.5rem);
 }
 

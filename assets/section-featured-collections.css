@@ -24,13 +24,12 @@
   }
 }
 
-
 .featured-collections__slider-inner {
   display: block;
   width: 100%;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 750px) {
   .featured-collections__buttons {
     width: 25%;
   }

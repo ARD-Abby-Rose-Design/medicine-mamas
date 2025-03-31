@@ -11,13 +11,322 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_with_text_E8ERLA": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_f3Eind": {
+          "type": "heading",
+          "settings": {
+            "heading": "MENOPAUSE RELIEF STARTS HERE",
+            "heading_size": "h1"
+          }
+        },
+        "text_6GVxmp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Relieve vulva dryness and irritation throughout (peri)menopause with our all natural, hormone-free must-haves.</p>",
+            "text_size": "text-body",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "button_FyryCF": {
+          "type": "button",
+          "settings": {
+            "button_label": "Find Relief & Save Up to 20%",
+            "button_link": "shopify://collections/menopause",
+            "button_arrow": false
+          }
+        },
+        "text_ADHWJG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>30-DAY RISK FREE GUARANTEE</p>",
+            "text_size": "text-body-small",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_f3Eind",
+        "text_6GVxmp",
+        "button_FyryCF",
+        "text_ADHWJG"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/medicine_mama-stylized-239_copy_1.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_ezx9pM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NXwNzr": {
+          "type": "heading",
+          "settings": {
+            "heading": "SOOTHING RELIEF HAS ARRIVED",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NXwNzr"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_NTgFRg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_qrnMnL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop menopause relief",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qrnMnL"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "featured_product_cjmznm": {
+      "type": "featured-product",
+      "blocks": {
+        "rating_dCwj4B": {
+          "type": "rating",
+          "settings": {}
+        },
+        "title_qCmgHd": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "description_8F38JT": {
+          "type": "description",
+          "settings": {}
+        },
+        "checkmarks_9yp7qt": {
+          "type": "checkmarks",
+          "settings": {}
+        },
+        "custom_liquid_aR7g7T": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"custom-recharge\"></div>"
+          }
+        },
+        "buy_buttons_BQTnpP": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "text_HrY9EM": {
+          "type": "text",
+          "settings": {
+            "text": "<a href=\"/policies/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days</a>",
+            "text_style": "body"
+          }
+        },
+        "collapsible_tab_dk4Qa8": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredients",
+            "icon": "none",
+            "content": "<p>{{ section.settings.product.metafields.custom.key_ingredients | metafield_tag }}</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "rating_dCwj4B",
+        "title_qCmgHd",
+        "description_8F38JT",
+        "checkmarks_9yp7qt",
+        "custom_liquid_aR7g7T",
+        "buy_buttons_BQTnpP",
+        "text_HrY9EM",
+        "collapsible_tab_dk4Qa8"
+      ],
+      "settings": {
+        "product": "vmagic-pause-must-haves",
+        "color_scheme": "inverse",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_kfkAnt": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_fYef7m": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_85.jpg",
+            "title": "Dr. Caroyln Moyers",
+            "text": "<p>“Say goodbye to vaginal irritation. This is the lipstick you never knew you needed. I use it for so many of my patients in post partum or menopause!”</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yAUCjq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_85_3325ca91-5575-40cf-9d29-23bc85fb5d68.jpg",
+            "title": "Beingmarcellahill",
+            "text": "<p>“The Vulva Balm restores moisture and alleviates painful sex. Since using the vulva balm, I’m much more comfortable.” </p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_93PCwi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_85_fafcfdfd-fd7b-4bd2-a93d-6cb0639ffe90.jpg",
+            "title": "Indiabatson",
+            "text": "<p>“The Vulva Wash is a gentle, fragrance free cleanser that rejuvenates and nourishes skin, rinses residue-free and helps support the pH of your vulva.”</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_fYef7m",
+        "column_yAUCjq",
+        "column_93PCwi"
+      ],
+      "settings": {
+        "title": "Loved by women everywhere",
+        "heading_size": "h1",
+        "text": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_DfiKwB": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_nXnWMB": {
+          "type": "heading",
+          "settings": {
+            "heading": "MEET THE MEDICINE MAMA HERSELF",
+            "heading_size": "h1"
+          }
+        },
+        "text_EWmYAj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>“We want to provide women with solutions for the changes they experience in their vulvar skin throughout their lifetime. No one should ever feel embarrassed to talk about common vulvar symptoms, such as itching, stinging, or irritation, or feel they need to suffer in silence, when solutions are readily available.”</p>",
+            "text_size": "text-body",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "heading_f9MpcM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dr. Clare Bertucio",
+            "heading_size": "h2"
+          }
+        },
+        "text_Qm6Tqd": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Medicine Mama CEO + Chief Medical Officer</strong></p>",
+            "text_size": "text-body-small",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_nXnWMB",
+        "text_EWmYAj",
+        "heading_f9MpcM",
+        "text_Qm6Tqd"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Frame_1000004439.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "faq_gWwerX": {
+      "type": "faq",
+      "settings": {
+        "heading": "Pausing for any Questions",
+        "color_scheme": "inverse",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_with_text_E8ERLA",
+    "rich_text_ezx9pM",
+    "rich_text_NTgFRg",
+    "featured_product_cjmznm",
+    "multicolumn_kfkAnt",
+    "image_with_text_DfiKwB",
+    "faq_gWwerX"
   ]
 }

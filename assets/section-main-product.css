@@ -1825,14 +1825,40 @@ a[title="Refund Policy"] {
   display: flex;
   margin-top: 4rem;
 }
+
 .buy-buttons__wrapper {
   flex: 1;
   margin-left: 2rem;
 }
 
+
 .product-form__quantity {
   max-width: 170px;
 }
+
+
+@media screen and (min-width: 749px) and (max-width: 990px) {
+  .quantity-and-buttons {
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .product-form__quantity {
+    width: 100%;
+    max-width: none;
+  }
+
+  .buy-buttons__wrapper {
+    margin-left: 0 ;
+    width: 100%;
+  }
+}
+
+
+
 
 .product__media-wrapper .slider-button[disabled] {
   opacity: 0;

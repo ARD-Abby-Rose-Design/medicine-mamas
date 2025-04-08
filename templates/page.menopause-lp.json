@@ -25,6 +25,8 @@
           "settings": {
             "text": "<p><strong>OVER 15,000 5-STAR REVIEWS</strong></p>",
             "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
         },
@@ -40,6 +42,8 @@
           "settings": {
             "text": "<p>Relieve vulva dryness and irritation throughout (peri)menopause with our all natural, hormone-free must-haves.</p>",
             "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
         },
@@ -56,6 +60,8 @@
           "settings": {
             "text": "<p>30-DAY RISK FREE GUARANTEE</p>",
             "text_size": "text-body-small",
+            "background_style": "none",
+            "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
         }
@@ -156,6 +162,8 @@
           "settings": {
             "text": "<p><strong>Helps alleviate dryness</strong> and <strong>pain with sex</strong> in the vulva, especially  during (peri)menopause, by restoring moisture and elasticity.</p>",
             "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
         },
@@ -245,6 +253,8 @@
           "settings": {
             "text": "<p>An all natural, fragrance-free cleanser that <strong>helps support pH balance  while neutralizing odor</strong>. Hydration at its finest, without ever stripping the skin.</p>",
             "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
         },
@@ -329,9 +339,12 @@
             "heading_size": "h1"
           }
         },
-        "description_8F38JT": {
-          "type": "description",
-          "settings": {}
+        "rich_text_FnFW4L": {
+          "type": "rich_text",
+          "settings": {
+            "text": "<p><strong>Includes:</strong></p><ul><li>1x VMAGIC®  Vulva Balm 2 oz</li><li>1x VMAGIC®  Lips Stick .65 oz, </li><li>1x VMAGIC®  Vulva Wash 8 oz</li></ul>",
+            "text_alignment": "left"
+          }
         },
         "checkmarks_9yp7qt": {
           "type": "checkmarks",
@@ -348,14 +361,34 @@
           "settings": {
             "show_quantity_selector": false,
             "show_dynamic_checkout": false,
-            "show_gift_card_recipient": false
+            "show_gift_card_recipient": false,
+            "button_style": "red",
+            "show_return_policy_note": true,
+            "return_policy_note": "<a href=\"/policies/refund-policy\" title=\"Refund Policy\">Try 30-day risk free, love it or your money back!</a>"
           }
         },
-        "text_HrY9EM": {
-          "type": "text",
+        "icon_with_text_mbQKz6": {
+          "type": "icon-with-text",
           "settings": {
-            "text": "<a href=\"/policies/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days</a>",
-            "text_style": "body"
+            "layout": "horizontal",
+            "icon_1": "organic",
+            "heading_1": "Organic, hormone-free ingredients",
+            "heading_1_style": "body",
+            "icon_2": "lab_tested",
+            "heading_2": "Clinically tested",
+            "heading_2_style": "body",
+            "icon_3": "physician",
+            "heading_3": "Endorsed by physicians",
+            "heading_3_style": "body"
+          }
+        },
+        "collapsible_tab_nBHnDY": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What's Included?",
+            "icon": "none",
+            "content": "",
+            "page": ""
           }
         },
         "collapsible_tab_dk4Qa8": {
@@ -371,11 +404,12 @@
       "block_order": [
         "rating_dCwj4B",
         "title_qCmgHd",
-        "description_8F38JT",
+        "rich_text_FnFW4L",
         "checkmarks_9yp7qt",
         "custom_liquid_aR7g7T",
         "buy_buttons_BQTnpP",
-        "text_HrY9EM",
+        "icon_with_text_mbQKz6",
+        "collapsible_tab_nBHnDY",
         "collapsible_tab_dk4Qa8"
       ],
       "settings": {
@@ -383,12 +417,13 @@
         "color_scheme": "inverse",
         "secondary_background": false,
         "media_size": "medium",
-        "constrain_to_viewport": true,
+        "constrain_to_viewport": false,
         "media_fit": "contain",
         "media_position": "left",
         "image_zoom": "hover",
         "hide_variants": false,
         "enable_video_looping": false,
+        "show_full_details": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -403,7 +438,10 @@
             "title": "Dr. Caroyln Moyers",
             "text": "<p>“Say goodbye to vaginal irritation. This is the lipstick you never knew you needed. I use it for so many of my patients in post partum or menopause!”</p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "product": "vmagic-feminine-lips-stick",
+            "product_badge_color": "#FCF7F0",
+            "product_benefits": "<strong>Helped with:</strong> Menopause Relief, Dryness"
           }
         },
         "column_yAUCjq": {
@@ -413,7 +451,10 @@
             "title": "Beingmarcellahill",
             "text": "<p>“The Vulva Balm restores moisture and alleviates painful sex. Since using the vulva balm, I’m much more comfortable.” </p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "product": "vmagic-vulvar-balm-skincare-jar",
+            "product_badge_color": "#FCF7F0",
+            "product_benefits": "<strong>Helped with:</strong> Pain with Sex, Dryness"
           }
         },
         "column_93PCwi": {
@@ -423,7 +464,10 @@
             "title": "Indiabatson",
             "text": "<p>“The Vulva Wash is a gentle, fragrance free cleanser that rejuvenates and nourishes skin, rinses residue-free and helps support the pH of your vulva.”</p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "product": "vmagic-feminine-wash",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": "<strong>Helped with:</strong> pH Balance, Irritation"
           }
         }
       },
@@ -440,10 +484,11 @@
         "image_ratio": "adapt",
         "columns_desktop": 3,
         "column_alignment": "left",
+        "border_style": "solid",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "color_scheme": "",
+        "color_scheme": "background-1",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
@@ -465,6 +510,8 @@
           "settings": {
             "text": "<p>“We want to provide women with solutions for the changes they experience in their vulvar skin throughout their lifetime. No one should ever feel embarrassed to talk about common vulvar symptoms, such as itching, stinging, or irritation, or feel they need to suffer in silence, when solutions are readily available.”</p>",
             "text_size": "text-body",
+            "background_style": "solid",
+            "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
         },
@@ -480,6 +527,8 @@
           "settings": {
             "text": "<p><strong>Medicine Mama CEO + Chief Medical Officer</strong></p>",
             "text_size": "text-body-small",
+            "background_style": "none",
+            "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
         }
@@ -494,10 +543,10 @@
         "image": "shopify://shop_images/Frame_1000004439.jpg",
         "media_type": "image",
         "height": "adapt",
-        "desktop_image_width": "small",
+        "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
+        "desktop_content_alignment": "center",
         "content_layout": "no-overlap",
         "color_scheme": "",
         "image_behavior": "none",
@@ -505,6 +554,29 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "rich_text_RBzfbc": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8YUMGX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Menopause relief, 3 ways",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8YUMGX"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "rich_text_GrmbV9": {
@@ -571,6 +643,7 @@
     "featured_product_cjmznm",
     "multicolumn_kfkAnt",
     "image_with_text_DfiKwB",
+    "rich_text_RBzfbc",
     "rich_text_GrmbV9",
     "174339093112f677f8",
     "faq_gWwerX"

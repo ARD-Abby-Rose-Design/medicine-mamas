@@ -7,6 +7,13 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  .section-{{ section.id }}-padding li {
+    {% if section.settings.border_style == 'solid' %}
+      border: 1px solid #E9E4DE;
+    {% endif %}
+  }
+
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -24,7 +31,7 @@
 -%}
 
 <div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
-  <div
+<div
     class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
@@ -60,6 +67,13 @@
           endfor
         -%}
         {%- for block in section.blocks -%}
+          {%- if block.settings.product != blank -%}
+            <style>
+                #multicolumn-card__product-card--{{ block.id }} {
+                  background-color: {{ block.settings.product_badge_color }};
+                }
+            </style>
+          {%- endif -%}
           {%- assign empty_column = '' -%}
           {%- if block.settings.image == blank
             and block.settings.title == blank
@@ -123,25 +137,43 @@
                 </div>
               {%- endif -%}
               <div class="multicolumn-card__info">
-                {%- if block.settings.title != blank -%}
-                  <h3 class="inline-richtext h4">{{ block.settings.title }}</h3>
-                {%- endif -%}
-                {%- if block.settings.text != blank -%}
-                  <div class="rte">{{ block.settings.text }}</div>
-                {%- endif -%}
-                {%- if block.settings.link_label != blank -%}
-                  <a
-                    class="link"
-                    {% if block.settings.link == blank %}
-                      role="link" aria-disabled="true"
-                    {% else %}
-                      href="{{ block.settings.link }}"
-                    {% endif %}
-                  >
-                    {{- block.settings.link_label | escape -}}
+                <div class="multicolumn-card__content">
+                  {%- if block.settings.title != blank -%}
+                    <h3 class="inline-richtext h4">{{ block.settings.title }}</h3>
+                  {%- endif -%}
+                  {%- if block.settings.text != blank -%}
+                    <div class="rte">{{ block.settings.text }}</div>
+                  {%- endif -%}
+                  {%- if block.settings.link_label != blank -%}
+                    <a
+                      class="link"
+                      {% if block.settings.link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.link }}"
+                      {% endif %}
+                    >
+                      {{- block.settings.link_label | escape -}}
+                      </a>
+                  {%- endif -%}
+                </div>
+                {%- if block.settings.product != blank -%}
+                  <div class="multicolumn-card__product" >
+                    <div id="multicolumn-card__product-card--{{ block.id }}" class="multicolumn-card__product-card">
+                    {{ block.settings.product.featured_image | image_url: width: 50 | image_tag }}
+                    <a
+                      href="{{ block.settings.product.url }}"
+                    >
+                      {{- block.settings.product.title | escape -}}
                     </a>
+                    </div>
+                    {%- if block.settings.product_benefits != blank -%}
+                      <div class="rte">{{ block.settings.product_benefits }}</div>
+                    {%- endif -%}
+                  </div>
                 {%- endif -%}
               </div>
+              
             </div>
           </li>
         {%- endfor -%}
@@ -314,6 +346,23 @@
     },
     {
       "type": "select",
+      "id": "border_style",
+      "label": "Border style",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "solid",
+          "label": "Solid"
+        }
+  
+      ]
+    },
+    {
+      "type": "select",
       "id": "background_style",
       "options": [
         {
@@ -427,6 +476,26 @@
           "type": "url",
           "id": "link",
           "label": "t:sections.multicolumn.blocks.column.settings.link.label"
+        },
+        {
+          "type": "header",
+          "content": "Product"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "color",
+          "id": "product_badge_color",
+          "label": "Product badge color",
+          "default": "#FCF7F0"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "product_benefits",
+          "label": "Product benefits"
         }
       ]
     }

@@ -80,7 +80,16 @@
                 {{ block.settings.caption | escape }}
               </p>
             {%- when 'text' -%}
-              <div class="image-with-text__text rte {{ block.settings.text_style }} {{ block.settings.text_size }}" {{ block.shopify_attributes }}>
+              <style>
+                #image-with-text__text--{{ block.id }} {
+                  {% if block.settings.background_style == 'solid' %}
+                    background-color: {{ block.settings.background_color }};
+                    padding: 1rem;
+                    border-radius: 0.8rem;
+                  {% endif %}
+                }
+              </style>
+              <div id="image-with-text__text--{{ block.id }}" class="image-with-text__text rte {{ block.settings.text_style }} {{ block.settings.text_size }}" {{ block.shopify_attributes }}>
                 {% capture signature %}
                 <img src="{{ 'Signature.png' | file_url }}" width="260" height="51" />
                 {% endcapture %}
@@ -513,6 +522,28 @@
           ],
           "default": "text-body",
           "label": "t:sections.image-with-text.blocks.caption.settings.caption_size.label"
+        },
+        {
+          "type": "select",
+          "id": "background_style",
+          "default": "none",
+          "label": "Background style",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "solid",
+              "label": "Solid"
+            }
+          ]
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color",
+          "default": "#ffffff"
         },
         {
           "type": "checkbox",

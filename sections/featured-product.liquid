@@ -152,11 +152,18 @@
                 {% render block %}
               {%- when 'text' -%}
                 <p
-                  class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                  class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if block.settings.text_alignment == 'center' %} center{% endif %} "
                   {{ block.shopify_attributes }}
                 >
                   {{- block.settings.text -}}
                 </p>
+              {%- when 'rich_text' -%}
+                <div
+                  class="product__rich-text rte{% if block.settings.text_alignment == 'center' %} center{% endif %}"
+                  {{ block.shopify_attributes }}
+                >
+                  {{- block.settings.text -}}
+                </div>
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
                   <h1 class="h3">{{ product.title | escape }}</h1>
@@ -412,17 +419,19 @@
 
             {%- endcase -%}
           {%- endfor -%}
-          <a
-            {% if product == blank %}
-              role="link" aria-disabled="true"
-            {% else %}
-              href="{{ product.url }}"
-            {% endif %}
-            class="link product__view-details animate-arrow"
-          >
-            {{ 'products.product.view_full_details' | t }}
-            {% render 'icon-arrow' %}
-          </a>
+          {%-  if section.settings.show_full_details -%}
+            <a
+              {% if product == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ product.url }}"
+              {% endif %}
+              class="link product__view-details animate-arrow"
+            >
+              {{ 'products.product.view_full_details' | t }}
+              {% render 'icon-arrow' %}
+            </a>
+          {%- endif -%}
         </product-info>
       </div>
       {%- if section.settings.media_position == 'right' -%}
@@ -652,6 +661,50 @@
             ],
             "default": "body",
             "label": "t:sections.featured-product.blocks.text.settings.text_style.label"
+          },
+          {
+            "type": "select",
+            "id": "text_alignment",
+            "label": "Text alignment",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "center",
+                "label": "Center"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "rich_text",
+        "name": "Rich text",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>",
+            "label": "Text"
+          },
+          {
+            "type": "select",
+            "id": "text_alignment",
+            "label": "Text alignment",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "center",
+                "label": "Center"
+              }
+            ]
           }
         ]
       },
@@ -779,6 +832,34 @@
             "default": true,
             "label": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.label",
             "info": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.info"
+          },
+          {
+            "type": "select",
+            "id": "button_style",
+            "default": "default",
+            "label": "Button style",
+            "options": [
+              {
+                "value": "default",
+                "label": "Default"
+              },
+              {
+                "value": "red",
+                "label": "Red"
+              }
+            ]
+          },
+          {
+            "type": "checkbox",
+            "id": "show_return_policy_note",
+            "default": false,
+            "label": "Show return policy note"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "return_policy_note",
+            "label": "Return policy note",
+            "default": "Try 30-day risk free, love it or your money back!"
           }
         ]
       },
@@ -1141,6 +1222,10 @@
                 "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
               },
               {
+                "value": "lab_tested",
+                "label": "Lab tested"
+              },
+              {
                 "value": "leaf",
                 "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
               },
@@ -1169,6 +1254,10 @@
                 "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
               },
               {
+                "value": "organic",
+                "label": "Organic"
+              },
+              {
                 "value": "pants",
                 "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__25.label"
               },
@@ -1183,6 +1272,10 @@
               {
                 "value": "perfume",
                 "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__28.label"
+              },
+              {
+                "value": "physician",
+                "label": "Physician tested"
               },
               {
                 "value": "plane",
@@ -1266,6 +1359,22 @@
           },
           {
             "type": "select",
+            "id": "heading_1_style",
+            "label": "First heading style",
+            "default": "subtitle",
+            "options": [
+              {
+                "value": "body",
+                "label": "Body"
+              },
+              {
+                "value": "subtitle",
+                "label": "Subtitle"
+              }
+            ]
+          },
+          {
+            "type": "select",
             "id": "icon_2",
             "options": [
               {
@@ -1337,6 +1446,10 @@
                 "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
               },
               {
+                "value": "lab_tested",
+                "label": "Lab tested"
+              },
+              {
                 "value": "leaf",
                 "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
               },
@@ -1365,6 +1478,10 @@
                 "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
               },
               {
+                "value": "organic",
+                "label": "Organic"
+              },
+              {
                 "value": "pants",
                 "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__25.label"
               },
@@ -1379,6 +1496,10 @@
               {
                 "value": "perfume",
                 "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__28.label"
+              },
+              {
+                "value": "physician",
+                "label": "Physician tested"
               },
               {
                 "value": "plane",
@@ -1462,6 +1583,22 @@
           },
           {
             "type": "select",
+            "id": "heading_2_style",
+            "label": "Second heading style",
+            "default": "subtitle",
+            "options": [
+              {
+                "value": "body",
+                "label": "Body"
+              },
+              {
+                "value": "subtitle",
+                "label": "Subtitle"
+              }
+            ]
+          },
+          {
+            "type": "select",
             "id": "icon_3",
             "options": [
               {
@@ -1533,6 +1670,10 @@
                 "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
               },
               {
+                "value": "lab_tested",
+                "label": "Lab tested"
+              },
+              {
                 "value": "leaf",
                 "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
               },
@@ -1561,6 +1702,10 @@
                 "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
               },
               {
+                "value": "organic",
+                "label": "Organic"
+              },
+              {
                 "value": "pants",
                 "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__25.label"
               },
@@ -1575,6 +1720,10 @@
               {
                 "value": "perfume",
                 "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__28.label"
+              },
+              {
+                "value": "physician",
+                "label": "Physician tested"
               },
               {
                 "value": "plane",
@@ -1655,7 +1804,23 @@
             "default": "Heading",
             "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.label",
             "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
-          }
+          },
+          {
+            "type": "select",
+            "id": "heading_3_style",
+            "label": "Third heading style",
+            "default": "subtitle",
+            "options": [
+              {
+                "value": "body",
+                "label": "Body"
+              },
+              {
+                "value": "subtitle",
+                "label": "Subtitle"
+              }
+            ]
+          },
         ]
       }
     ],
@@ -1774,6 +1939,12 @@
         "id": "enable_video_looping",
         "default": false,
         "label": "t:sections.featured-product.settings.enable_video_looping.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_full_details",
+        "default": true,
+        "label": "Show link to full PDP"
       },
       {
         "type": "header",

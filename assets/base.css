@@ -1251,6 +1251,12 @@ deferred-media {
   --alpha-button-border: 0.2;
 }
 
+.button--red {
+  background-color: #B41214 !important;
+  border-color: #B41214 !important;
+  color: white !important;
+}
+
 .button,
 .shopify-challenge__button,
 .customer button,

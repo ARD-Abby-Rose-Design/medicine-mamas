@@ -36,9 +36,7 @@
         },
         "description": {
           "type": "description",
-          "settings": {
-            "show_frontrow": true
-          }
+          "settings": {}
         },
         "6b38dc5b-1d2c-4b1e-8bad-3c2cbc663748": {
           "type": "checkmarks",

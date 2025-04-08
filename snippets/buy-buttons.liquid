@@ -39,7 +39,6 @@
         </svg>
         <span class="product-form__error-message"></span>
       </div>
-
       {%- form 'product',
         product,
         id: product_form_id,
@@ -73,7 +72,7 @@
             id = "ProductSubmitButton-{{ section_id }}"
             type="submit"
             name="add"
-            class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+            class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}{% if block.settings.button_style == 'red' %} button--red{% endif %}"
             {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
               disabled
             {% endif %}
@@ -89,6 +88,7 @@
             </span>
             <span class="product-form__submit--dash">-</span>
             <span id="price-{{ section_id }}" class="product-form__submit--price">
+              
             {{ product.selected_or_first_available_variant.price | money }}
             </span>
             <div class="loading-overlay__spinner hidden">
@@ -107,6 +107,12 @@
             {{ form | payment_button }}
           {%- endif -%}
         </div>
+        {% if block.settings.show_return_policy_note and block.settings.return_policy_note != blank %}
+          <div class="product-form__return-policy-note center">
+              {{ block.settings.return_policy_note }}
+          </div>
+        {% endif %}
+
       {%- endform -%}
     </product-form>
   {%- else -%}

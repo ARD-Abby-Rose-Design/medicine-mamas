@@ -563,6 +563,14 @@
   }
   .footer-block__links {
     order: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-block__links > * {
+    width: calc(50% - 4rem);
+    text-align: center;
   }
   .footer-block--boldy-pure {
     order: 3;

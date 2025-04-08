@@ -6,6 +6,8 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -17,7 +19,7 @@
 {% assign scheme1 = settings.color_schemes | first %}
 
 <div class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-  <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
+  <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %} {% if section.settings.layout_mobile == 'text_first' %} image-with-text__grid--reverse-mobile{% endif %} ">
     <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
       <div
         class="image-with-text__media image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
@@ -116,6 +118,68 @@
                   {{ block.settings.button_label | escape }}
                 </a>
               {%- endif -%}
+            {%- when 'results' -%}
+              <style>
+                #image-with-text__results--{{ block.id }} {
+                  {% if block.settings.show_mobile %}
+                    display: flex;
+                  {% else %}
+                    display: none;
+                  {% endif %}
+                }
+                @media screen and (min-width: 750px) {
+                  #image-with-text__results--{{ block.id }} {
+                    {% if block.settings.show_desktop %}
+                      display: flex;
+                    {% else %}
+                      display: none;
+                    {% endif %}
+                  }
+                }
+              </style>
+              {% if block.settings.result_number1 != blank %}
+                <div id="image-with-text__results--{{ block.id }}" class="image-with-text__results">
+                    <div class="image-with-text__result">
+                      <h2 class="image-with-text__result-number h1">{{ block.settings.result_number1 }}</h2>
+                      <p>{{ block.settings.result_text1 }}</p>
+                    </div>
+                    <div class="image-with-text__result">
+                      <h2 class="image-with-text__result-number h1">{{ block.settings.result_number2 }}</h2>
+                      <p>{{ block.settings.result_text2 }}</p>
+                    </div>
+                    <div class="image-with-text__result">
+                      <h2 class="image-with-text__result-number h1">{{ block.settings.result_number3 }}</h2>
+                      <p>{{ block.settings.result_text3 }}</p>
+                    </div>
+                </div>
+              {% endif %}
+             {%- when 'review' -%}
+              <div id="image-with-text__review--{{ block.id }}" class="image-with-text__review">
+                <style>
+                  #image-with-text__review--{{ block.id }} {
+                    {% if block.settings.show_mobile %}
+                      display: flex;
+                    {% else %}
+                      display: none;
+                    {% endif %}
+                  }
+                  @media screen and (min-width: 750px) {
+                    #image-with-text__review--{{ block.id }} {
+                      {% if block.settings.show_desktop %}
+                        display: flex;
+                      {% else %}
+                        display: none;
+                      {% endif %}
+                    }
+                  }
+                </style>
+                <div class="image-with-text__review-stars">★★★★★</div>
+                <h4>{{ block.settings.review_product }}</h4>
+                <div>✓ VERIFIED REVIEW</div>
+                <h5>{{ block.settings.review_name }}</h5>
+                <h5>{{ block.settings.review_title }}</h5>
+                <p>{{ block.settings.review_text }}</p>
+              </div>
           {%- endcase -%}
         {%- endfor -%}
       </div>
@@ -316,6 +380,22 @@
     },
     {
       "type": "select",
+      "id": "layout_mobile",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "Image first"
+        },
+        {
+          "value": "text_first",
+          "label": "Text first"
+        }
+      ],
+      "default": "image_first",
+      "label": "Mobile image placement"
+    },
+    {
+      "type": "select",
       "id": "mobile_content_alignment",
       "options": [
         {
@@ -463,6 +543,103 @@
           "id": "button_arrow",
           "default": true,
           "label": "Arrow button style"
+        }
+      ]
+    },
+    {
+      "type": "results",
+      "name": "Results",
+      "settings": [
+        {
+          "type": "text",
+          "id": "result_number1",
+          "default": "99%",
+          "label": "Result Number 1"
+        },
+        {
+          "type": "text",
+          "id": "result_text1",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "label": "Result Text 1"
+        },
+     
+        {
+          "type": "text",
+          "id": "result_number2",
+          "default": "99%",
+          "label": "Result Number 2"
+        },
+        {
+          "type": "text",
+          "id": "result_text2",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "label": "Result Text 2"
+        },
+        {
+          "type": "text",
+          "id": "result_number3",
+          "default": "99%",
+          "label": "Result Number 3"
+        },
+        {
+          "type": "text",
+          "id": "result_text3",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "label": "Result Text 3"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_desktop",
+          "label": "Show on Desktop",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_mobile",
+          "label": "Show on Mobile",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "text",
+          "id": "review_product",
+          "default": "Product Name",
+          "label": "Product Name"
+        },
+        {
+          "type": "text",
+          "id": "review_name",
+          "default": "Sandy",
+          "label": "Reviewer Name"
+        },
+        {
+          "type": "text",
+          "id": "review_title",
+          "default": "SO HELPFUL",
+          "label": "Review Title"
+        },
+        {
+          "type": "text",
+          "id": "review_text",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "label": "Review Text"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_desktop",
+          "label": "Show on Desktop",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_mobile",
+          "label": "Show on Mobile",
+          "default": false
         }
       ]
     }

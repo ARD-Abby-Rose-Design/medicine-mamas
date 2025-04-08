@@ -1,6 +1,7 @@
 .faq__filters {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .faq__filter:first-child {
   margin-left: auto;
@@ -30,4 +31,17 @@
 .faq__filter[aria-expanded="true"] {
   background: var(--pink);
   border-color: var(--pink);
+}
+
+@media screen and (max-width: 749px) {
+  .faq__filter {
+    flex-wrap: wrap;
+  }
+  .faq__filter:first-child {
+    margin: 0;
+  }
+  .faq__filter:last-child {
+    margin: 0
+  }
+  
 }

@@ -1,0 +1,76 @@
+{% style %}
+    #image-with-text__review-{{ section.id }} {
+        {% if section.settings.show_desktop %}
+            display: flex;
+        {% else %}
+            display: none;
+        {% endif %}
+    }
+    @media screen and (max-width: 749px) {
+        #image-with-text__review-{{ section.id }} {
+            {% if section.settings.show_mobile %}
+                display: flex;
+            {% else %}
+                display: none;
+            {% endif %}
+        }
+    }
+{% endstyle %}
+
+<div class="featured-review page-width">
+    <div id="image-with-text__review-{{ section.id }}" class="image-with-text__review">
+        <div class="image-with-text__review-stars">★★★★★</div>
+        <h4>{{ section.settings.review_product }}</h4>
+        <div>✓ VERIFIED REVIEW</div>
+        <h5>{{ section.settings.review_name }}</h5>
+        <h5>{{ section.settings.review_title }}</h5>
+        <p>{{ section.settings.review_text }}</p>
+    </div>
+</div>
+
+
+{% schema %}
+    {
+        "name": "Featured Review",
+        "settings": [
+            {
+            "type": "text",
+            "id": "review_product",
+            "label": "Product Name"
+            },
+            {
+            "type": "text",
+            "id": "review_name",
+            "label": "Reviewer Name"
+            },
+            {
+            "type": "text",
+            "id": "review_title",
+            "label": "Reviewer Title"
+            },
+            {
+            "type": "textarea",
+            "id": "review_text",
+            "label": "Review Text"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_desktop",
+                "label": "Show on Desktop",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "show_mobile",
+                "label": "Show on Mobile",
+                "default": true
+            }
+        ],
+        "presets": [
+            {
+            "name": "Featured Review",
+            "category": "Custom"
+            }
+        ]
+    }
+{% endschema %}

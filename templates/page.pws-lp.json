@@ -11,13 +11,140 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_with_text_WTwPgc": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_cdEMaH": {
+          "type": "heading",
+          "settings": {
+            "heading": "5 ways  medicine mama can support  pain-free intimacy",
+            "heading_size": "h1"
+          }
+        },
+        "text_nwnVHY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Relieve vulvar and vaginal dryness throughout (peri)menopause with our clinically-tested,  all-natural, hormone-free must-haves.</p>",
+            "text_size": "text-body",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "button_9gR3Xi": {
+          "type": "button",
+          "settings": {
+            "button_label": "Find Relief & Save Up to 20%",
+            "button_link": "shopify://collections/intimacy",
+            "button_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_cdEMaH",
+        "text_nwnVHY",
+        "button_9gR3Xi"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/medicine_mama-stylized-240_copy_1.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_7Dexwj": {
+      "type": "featured-product",
+      "blocks": {
+        "rating_DnnC3J": {
+          "type": "rating",
+          "settings": {}
+        },
+        "title_TNYAey": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "description_QqEmzq": {
+          "type": "description",
+          "settings": {}
+        },
+        "checkmarks_Wed9dM": {
+          "type": "checkmarks",
+          "settings": {}
+        },
+        "custom_liquid_WaMLkG": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"custom-recharge\"></div>"
+          }
+        },
+        "buy_buttons_dgAxVq": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "text_azGm8Y": {
+          "type": "text",
+          "settings": {
+            "text": "<a href=\"/policies/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days</a>",
+            "text_style": "body"
+          }
+        },
+        "collapsible_tab_aVjPzY": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredients",
+            "icon": "none",
+            "content": "<p>{{ section.settings.product.metafields.custom.key_ingredients | metafield_tag }}</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "rating_DnnC3J",
+        "title_TNYAey",
+        "description_QqEmzq",
+        "checkmarks_Wed9dM",
+        "custom_liquid_WaMLkG",
+        "buy_buttons_dgAxVq",
+        "text_azGm8Y",
+        "collapsible_tab_aVjPzY"
+      ],
+      "settings": {
+        "product": "intimate-moisturizer-duo-vaginal-moisturizer",
+        "color_scheme": "inverse",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_with_text_WTwPgc",
+    "featured_product_7Dexwj"
   ]
 }

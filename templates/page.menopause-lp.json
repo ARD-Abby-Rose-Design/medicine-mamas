@@ -20,6 +20,14 @@
     "image_with_text_E8ERLA": {
       "type": "image-with-text",
       "blocks": {
+        "text_Wy6T9H": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>OVER 15,000 5-STAR REVIEWS</strong></p>",
+            "text_size": "text-body",
+            "bullets_to_checkmarks": false
+          }
+        },
         "heading_f3Eind": {
           "type": "heading",
           "settings": {
@@ -53,6 +61,7 @@
         }
       },
       "block_order": [
+        "text_Wy6T9H",
         "heading_f3Eind",
         "text_6GVxmp",
         "button_FyryCF",
@@ -69,7 +78,8 @@
         "content_layout": "no-overlap",
         "color_scheme": "",
         "image_behavior": "none",
-        "mobile_content_alignment": "left",
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -131,6 +141,158 @@
         "padding_bottom": 52
       }
     },
+    "image_with_text_w9pkAa": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_cHFgXb": {
+          "type": "heading",
+          "settings": {
+            "heading": "VMAGIC® Vulva Balm + Lips Stick",
+            "heading_size": "h3"
+          }
+        },
+        "text_UDXNPF": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Helps alleviate dryness</strong> and <strong>pain with sex</strong> in the vulva, especially  during (peri)menopause, by restoring moisture and elasticity.</p>",
+            "text_size": "text-body",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "results_MVDRTA": {
+          "type": "results",
+          "settings": {
+            "result_number1": "100%",
+            "result_text1": "reported zero irritation*",
+            "result_number2": "92%",
+            "result_text2": "noticed less dryness after consistent 2-week use**",
+            "result_number3": "79%",
+            "result_text3": "reported immediate soothing relief from  intimate skin dryness*",
+            "show_desktop": true,
+            "show_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_cHFgXb",
+        "text_UDXNPF",
+        "results_MVDRTA"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Frame_1000004405.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "layout_mobile": "text_first",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "results_HLPkzY": {
+      "type": "results",
+      "blocks": {
+        "result_bUFfzX": {
+          "type": "result",
+          "settings": {
+            "result_number": "100%",
+            "result_text": "reported zero irritation*"
+          }
+        },
+        "result_FdALfa": {
+          "type": "result",
+          "settings": {
+            "result_number": "92%",
+            "result_text": "noticed less dryness after consistent 2-week use**"
+          }
+        },
+        "result_QEM7xa": {
+          "type": "result",
+          "settings": {
+            "result_number": "79%",
+            "result_text": "reported immediate soothing relief from  intimate skin dryness*"
+          }
+        }
+      },
+      "block_order": [
+        "result_bUFfzX",
+        "result_FdALfa",
+        "result_QEM7xa"
+      ],
+      "settings": {
+        "show_desktop": false,
+        "show_mobile": true
+      }
+    },
+    "image_with_text_Q49KMU": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_F6BPhf": {
+          "type": "heading",
+          "settings": {
+            "heading": "VMAGIC® Vulva Wash",
+            "heading_size": "h3"
+          }
+        },
+        "text_m8cUbC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>An all natural, fragrance-free cleanser that <strong>helps support pH balance  while neutralizing odor</strong>. Hydration at its finest, without ever stripping the skin.</p>",
+            "text_size": "text-body",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "review_eTjVTK": {
+          "type": "review",
+          "settings": {
+            "review_product": "VMAGIC® VULVA WASH",
+            "review_name": "Sandy",
+            "review_title": "SO HELPFUL",
+            "review_text": "“The vulva wash is great and gentle. It soothes and provides immediate relief to dry and itchy intimate areas.”",
+            "show_desktop": true,
+            "show_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_F6BPhf",
+        "text_m8cUbC",
+        "review_eTjVTK"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Frame_1000004406.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "layout_mobile": "text_first",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_review_y8Y3FK": {
+      "type": "featured-review",
+      "settings": {
+        "review_product": "VMAGIC® VULVA WASH",
+        "review_name": "Sandy",
+        "review_title": "SO HELPFUL",
+        "review_text": "“The vulva wash is great and gentle. It soothes and provides immediate relief to dry and itchy intimate areas.”",
+        "show_desktop": false,
+        "show_mobile": true
+      }
+    },
     "rich_text_NTgFRg": {
       "type": "rich-text",
       "blocks": {
@@ -184,6 +346,7 @@
         "buy_buttons_BQTnpP": {
           "type": "buy_buttons",
           "settings": {
+            "show_quantity_selector": false,
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
           }
@@ -277,7 +440,7 @@
         "image_ratio": "adapt",
         "columns_desktop": 3,
         "column_alignment": "left",
-        "background_style": "primary",
+        "background_style": "none",
         "button_label": "",
         "button_link": "",
         "color_scheme": "",
@@ -338,6 +501,7 @@
         "content_layout": "no-overlap",
         "color_scheme": "",
         "image_behavior": "none",
+        "layout_mobile": "image_first",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
@@ -399,6 +563,10 @@
     "image_with_text_E8ERLA",
     "scrolling_marquee_h7KxJ4",
     "rich_text_ezx9pM",
+    "image_with_text_w9pkAa",
+    "results_HLPkzY",
+    "image_with_text_Q49KMU",
+    "featured_review_y8Y3FK",
     "rich_text_NTgFRg",
     "featured_product_cjmznm",
     "multicolumn_kfkAnt",

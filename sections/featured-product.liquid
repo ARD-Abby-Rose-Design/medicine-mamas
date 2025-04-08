@@ -314,7 +314,9 @@
               {%- when 'buy_buttons' -%}
                 {% render 'rc-widget', product: product %}
                 <div class="quantity-and-buttons">
-                  {%- render 'product-quantity-input', product: product, product_form_id: product_form_id -%}
+                  {%- if block.settings.show_quantity_selector -%}
+                    {%- render 'product-quantity-input', product: product, product_form_id: product_form_id -%}
+                  {%- endif -%}
                   {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
                 </div>
               {%- when 'rating' -%}
@@ -758,6 +760,12 @@
         "name": "t:sections.featured-product.blocks.buy_buttons.name",
         "limit": 1,
         "settings": [
+          {
+            "type": "checkbox",
+            "id": "show_quantity_selector",
+            "default": true,
+            "label": "Show quantity selector"
+          },
           {
             "type": "checkbox",
             "id": "show_dynamic_checkout",

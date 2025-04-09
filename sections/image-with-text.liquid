@@ -17,8 +17,8 @@
     }
 
     #ImageWithText--{{ section.id }} {
-    padding-left: {{ section.settings.desktop_content_padding_sides |  divided_by: 2 }}px !important;
-    padding-right: {{ section.settings.desktop_content_padding_sides |  divided_by: 2 }}px !important;
+    padding-left: {{ section.settings.desktop_content_padding_left }}px !important;
+    padding-right: {{ section.settings.desktop_content_padding_right }}px !important;
     }
 
     #ImageWithText--{{ section.id }} .image-with-text__heading.h1 {
@@ -205,6 +205,42 @@
                 <h5>{{ block.settings.review_title }}</h5>
                 <p>{{ block.settings.review_text }}</p>
               </div>
+            {%- when 'number' -%}
+              <div id="image-with-text__number--{{ block.id }}" class="image-with-text__number">
+                <style>
+                  #image-with-text__number--{{ block.id }} {
+                    {% if block.settings.show_mobile %}
+                      display: flex;
+                    {% else %}
+                      display: none;
+                    {% endif %}
+                  }
+
+                  #image-with-text__number--{{ block.id }} {
+                  color: white;
+                  background-color: {{ block.settings.number_bg_color }};
+                  font-size: 2.6rem;
+                  font-weight: 700;
+                  width: 3.2rem;
+                  height: 3.2rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 50% !important;
+                }
+
+                  @media screen and (min-width: 750px) {
+                    #image-with-text__number--{{ block.id }} {
+                      {% if block.settings.show_desktop %}
+                        display: flex;
+                      {% else %}
+                        display: none;
+                      {% endif %}
+                    }
+                  }
+                </style>
+                <div>{{ block.settings.number }}</div>
+              </div>
           {%- endcase -%}
         {%- endfor -%}
       </div>
@@ -355,14 +391,24 @@
     },
     {
       "type": "range",
-      "id": "desktop_content_padding_sides",
+      "id": "desktop_content_padding_left",
       "min": 0,
-      "max": 100,
+      "max": 200,
       "step": 2,
       "unit": "px",
-      "label": "Desktop content padding (sides)",
-      "default": 70
+      "label": "Desktop content padding left",
+      "default": 36
     },
+    {
+      "type": "range",
+      "id": "desktop_content_padding_right",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Desktop content padding right",
+      "default": 36
+    },    
     {
       "type": "select",
       "id": "content_layout",
@@ -702,6 +748,37 @@
           "id": "show_mobile",
           "label": "Show on Mobile",
           "default": false
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "name": "Number",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "default": "1",
+          "label": "Number"
+        },
+        {
+          "type": "color",
+          "id": "number_bg_color",
+          "label": "Background color",
+          "default": "#121212",
+          "info": "Background color for the number"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_desktop",
+          "label": "Show on Desktop",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_mobile",
+          "label": "Show on Mobile",
+          "default": true
         }
       ]
     }

@@ -20,18 +20,30 @@
     "image_with_text_WTwPgc": {
       "type": "image-with-text",
       "blocks": {
+        "text_GQBJXQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>OVER 15,000 5-STAR REVIEWS</strong></p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
         "heading_cdEMaH": {
           "type": "heading",
           "settings": {
-            "heading": "5 ways  medicine mama can support  pain-free intimacy",
+            "heading": "5 ways medicine mama can support pain-free intimacy",
             "heading_size": "h1"
           }
         },
         "text_nwnVHY": {
           "type": "text",
           "settings": {
-            "text": "<p>Relieve vulvar and vaginal dryness throughout (peri)menopause with our clinically-tested,  all-natural, hormone-free must-haves.</p>",
+            "text": "<p>Relieve vulvar and vaginal dryness throughout (peri)menopause with our clinically-tested, <br/>all-natural, hormone-free must-haves.</p>",
             "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
         },
@@ -40,14 +52,27 @@
           "settings": {
             "button_label": "Find Relief & Save Up to 20%",
             "button_link": "shopify://collections/intimacy",
-            "button_arrow": true
+            "button_arrow": true,
+            "button_subtitle": ""
+          }
+        },
+        "text_MkaVME": {
+          "type": "text",
+          "settings": {
+            "text": "<p><span style=\"text-decoration:underline\">READ ON</span></p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
           }
         }
       },
       "block_order": [
+        "text_GQBJXQ",
         "heading_cdEMaH",
         "text_nwnVHY",
-        "button_9gR3Xi"
+        "button_9gR3Xi",
+        "text_MkaVME"
       ],
       "settings": {
         "image": "shopify://shop_images/medicine_mama-stylized-240_copy_1.jpg",
@@ -57,12 +82,311 @@
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 172,
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
         "image_behavior": "none",
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_gtPjF3": {
+      "type": "image-with-text",
+      "blocks": {
+        "number_W8TkHX": {
+          "type": "number",
+          "settings": {
+            "number": "1",
+            "number_bg_color": "#121212",
+            "show_desktop": true,
+            "show_mobile": true
+          }
+        },
+        "text_V6U7FY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In a clinical trial for VMAGIC® Vulva Balm,  <strong>92% saw a reduction in intimate dryness</strong> after consistent 2 week use*, and <strong>79% reported immediate soothing relief*</strong>.</p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "text_QqTxwU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pain during intercourse can happen at any point (postpartum, (peri)menopause and more) often due to our vulvar tissues becoming dry and irritated. <strong>VMAGIC® Vulva Balm can help to soften and hydrate delicate vulvar tissues making intimacy a more enjoyable time.</strong></p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "number_W8TkHX",
+        "text_V6U7FY",
+        "text_QqTxwU"
+      ],
+      "settings": {
+        "video": "shopify://files/videos/Vulva Balm - PDP UGC.mp4",
+        "media_type": "video",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "layout_mobile": "image_first",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "image_with_text_pikH8p": {
+      "type": "image-with-text",
+      "blocks": {
+        "number_dddb46": {
+          "type": "number",
+          "settings": {
+            "number": "2",
+            "number_bg_color": "#121212",
+            "show_desktop": true,
+            "show_mobile": true
+          }
+        },
+        "text_F6W3Ff": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our Intimate Glide lubricant and moisturizer can help you say <strong>goodbye to dryness and discomfort</strong> during intimacy.</p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "text_X4wzQb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "number_dddb46",
+        "text_F6W3Ff",
+        "text_X4wzQb"
+      ],
+      "settings": {
+        "video": "shopify://files/videos/3cc8a5c804a7f2ce1533f8fd46c2d47aaff8d1b1.mp4",
+        "media_type": "video",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_R3nh6Y": {
+      "type": "image-with-text",
+      "blocks": {
+        "number_NCaCUg": {
+          "type": "number",
+          "settings": {
+            "number": "3",
+            "number_bg_color": "#121212",
+            "show_desktop": true,
+            "show_mobile": true
+          }
+        },
+        "text_Q7bnWr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our products are packed with organic, non-synthetic ingredients to soothe delicate skin and support skin elasticity.</p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "text_bMwBCe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We know that the tissue surrounding the vulva is very sensitive, and <strong>our feminine care products are gentle</strong> <strong>help protect against irritation.</strong></p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "number_NCaCUg",
+        "text_Q7bnWr",
+        "text_bMwBCe"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Frame_1000004913.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_zQnWfR": {
+      "type": "image-with-text",
+      "blocks": {
+        "number_aD7mP6": {
+          "type": "number",
+          "settings": {
+            "number": "4",
+            "number_bg_color": "#121212",
+            "show_desktop": true,
+            "show_mobile": true
+          }
+        },
+        "text_HjBaWm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With our <strong>clinically-tested, organic formulas</strong>, our products beat out the competition (easily).</p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "number_aD7mP6",
+        "text_HjBaWm"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Frame_1000004886.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "layout_mobile": "text_first",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_K74Aig": {
+      "type": "image-with-text",
+      "blocks": {
+        "number_pEij48": {
+          "type": "number",
+          "settings": {
+            "number": "5",
+            "number_bg_color": "#121212",
+            "show_desktop": true,
+            "show_mobile": true
+          }
+        },
+        "text_84AgDH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our customers swear by this duo for relief <strong>before, during,</strong> and <strong>after intimacy. </strong></p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "number_pEij48",
+        "text_84AgDH"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/dff6ff974d6838b90314eaf2ff15ca52.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_reviews_4kdDmD": {
+      "type": "featured-reviews",
+      "settings": {
+        "color_scheme": "",
+        "show_line_separator": true,
+        "title": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_yieUGc": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_3NQYNM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop Hydration and Relief",
+            "heading_size": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3NQYNM"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
       }
     },
     "featured_product_7Dexwj": {
@@ -78,9 +402,20 @@
             "heading_size": "h1"
           }
         },
-        "description_QqEmzq": {
-          "type": "description",
-          "settings": {}
+        "text_KJTaJE": {
+          "type": "text",
+          "settings": {
+            "text": "Helps bring soothing, immediate relief on your (peri)menopausal journey.",
+            "text_style": "body",
+            "text_alignment": "left"
+          }
+        },
+        "rich_text_pWd6ac": {
+          "type": "rich_text",
+          "settings": {
+            "text": "<p><strong>Includes:</strong></p><ul><li>1x VMAGIC®  Vulva Balm 2 oz</li><li>1x Intimate Clide 4 oz</li></ul>",
+            "text_alignment": "left"
+          }
         },
         "checkmarks_Wed9dM": {
           "type": "checkmarks",
@@ -95,15 +430,27 @@
         "buy_buttons_dgAxVq": {
           "type": "buy_buttons",
           "settings": {
+            "show_quantity_selector": false,
             "show_dynamic_checkout": false,
-            "show_gift_card_recipient": false
+            "show_gift_card_recipient": false,
+            "button_style": "red",
+            "show_return_policy_note": true,
+            "return_policy_note": "Try 30-day risk free, love it or your money back!"
           }
         },
-        "text_azGm8Y": {
-          "type": "text",
+        "icon_with_text_RTM9Vn": {
+          "type": "icon-with-text",
           "settings": {
-            "text": "<a href=\"/policies/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days</a>",
-            "text_style": "body"
+            "layout": "horizontal",
+            "icon_1": "organic",
+            "heading_1": "Organic, hormone-free ingredients",
+            "heading_1_style": "body",
+            "icon_2": "lab_tested",
+            "heading_2": "Clinically tested",
+            "heading_2_style": "body",
+            "icon_3": "lab_tested",
+            "heading_3": "Endorsed by physicians",
+            "heading_3_style": "body"
           }
         },
         "collapsible_tab_aVjPzY": {
@@ -119,11 +466,12 @@
       "block_order": [
         "rating_DnnC3J",
         "title_TNYAey",
-        "description_QqEmzq",
+        "text_KJTaJE",
+        "rich_text_pWd6ac",
         "checkmarks_Wed9dM",
         "custom_liquid_WaMLkG",
         "buy_buttons_dgAxVq",
-        "text_azGm8Y",
+        "icon_with_text_RTM9Vn",
         "collapsible_tab_aVjPzY"
       ],
       "settings": {
@@ -137,14 +485,32 @@
         "image_zoom": "hover",
         "hide_variants": false,
         "enable_video_looping": false,
+        "show_full_details": true,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "faq_kdwVd8": {
+      "type": "faq",
+      "settings": {
+        "heading": "PAUSING FOR ANY QUESTIONS!",
+        "color_scheme": "inverse",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "main",
     "image_with_text_WTwPgc",
-    "featured_product_7Dexwj"
+    "image_with_text_gtPjF3",
+    "image_with_text_pikH8p",
+    "image_with_text_R3nh6Y",
+    "image_with_text_zQnWfR",
+    "image_with_text_K74Aig",
+    "featured_reviews_4kdDmD",
+    "rich_text_yieUGc",
+    "featured_product_7Dexwj",
+    "faq_kdwVd8"
   ]
 }

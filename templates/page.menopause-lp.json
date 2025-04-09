@@ -30,7 +30,7 @@
             "bullets_to_checkmarks": false
           }
         },
-        "heading_f3Eind": {
+        "heading_FiAFXw": {
           "type": "heading",
           "settings": {
             "heading": "MENOPAUSE RELIEF STARTS HERE",
@@ -40,7 +40,7 @@
         "text_6GVxmp": {
           "type": "text",
           "settings": {
-            "text": "<p>Relieve vulva dryness and irritation throughout (peri)menopause with our all natural, hormone-free must-haves.</p>",
+            "text": "<p>Relieve vulva dryness and irritation throughout (peri)menopause with our all<br/>natural, hormone-free must-haves.</p>",
             "text_size": "text-body",
             "background_style": "none",
             "background_color": "#ffffff",
@@ -52,42 +52,33 @@
           "settings": {
             "button_label": "Find Relief & Save Up to 20%",
             "button_link": "shopify://collections/menopause",
-            "button_arrow": false
-          }
-        },
-        "text_ADHWJG": {
-          "type": "text",
-          "settings": {
-            "text": "<p>30-DAY RISK FREE GUARANTEE</p>",
-            "text_size": "text-body-small",
-            "background_style": "none",
-            "background_color": "#ffffff",
-            "bullets_to_checkmarks": false
+            "button_arrow": false,
+            "button_subtitle": "30-DAY RISK FREE GUARANTEE"
           }
         }
       },
       "block_order": [
         "text_Wy6T9H",
-        "heading_f3Eind",
+        "heading_FiAFXw",
         "text_6GVxmp",
-        "button_FyryCF",
-        "text_ADHWJG"
+        "button_FyryCF"
       ],
       "settings": {
-        "image": "shopify://shop_images/medicine_mama-stylized-239_copy_1.jpg",
+        "image": "shopify://shop_images/mm-meno_hero.jpg",
         "media_type": "image",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
+        "desktop_content_padding_sides": 30,
         "content_layout": "no-overlap",
         "color_scheme": "",
         "image_behavior": "none",
         "layout_mobile": "image_first",
         "mobile_content_alignment": "center",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 24
       }
     },
     "scrolling_marquee_h7KxJ4": {
@@ -143,8 +134,8 @@
         "content_alignment": "center",
         "color_scheme": "inverse",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 64,
+        "padding_bottom": 0
       }
     },
     "image_with_text_w9pkAa": {
@@ -160,7 +151,7 @@
         "text_UDXNPF": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Helps alleviate dryness</strong> and <strong>pain with sex</strong> in the vulva, especially  during (peri)menopause, by restoring moisture and elasticity.</p>",
+            "text": "<p><strong>Helps alleviate dryness</strong> and <strong>pain with sex</strong> in the vulva, especially during (peri)menopause, by restoring moisture and elasticity.</p>",
             "text_size": "text-body",
             "background_style": "none",
             "background_color": "#ffffff",
@@ -194,13 +185,14 @@
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
+        "desktop_content_padding_sides": 70,
         "content_layout": "no-overlap",
         "color_scheme": "",
         "image_behavior": "none",
         "layout_mobile": "text_first",
         "mobile_content_alignment": "center",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 40,
+        "padding_bottom": 24
       }
     },
     "results_HLPkzY": {
@@ -283,13 +275,14 @@
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
+        "desktop_content_padding_sides": 70,
         "content_layout": "no-overlap",
         "color_scheme": "",
         "image_behavior": "none",
         "layout_mobile": "text_first",
         "mobile_content_alignment": "center",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 24
       }
     },
     "featured_review_y8Y3FK": {
@@ -310,7 +303,7 @@
           "type": "heading",
           "settings": {
             "heading": "Shop menopause relief",
-            "heading_size": "h2"
+            "heading_size": "h3"
           }
         }
       },
@@ -381,24 +374,6 @@
             "heading_3": "Endorsed by physicians",
             "heading_3_style": "body"
           }
-        },
-        "collapsible_tab_nBHnDY": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "What's Included?",
-            "icon": "none",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible_tab_dk4Qa8": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Ingredients",
-            "icon": "none",
-            "content": "<p>{{ section.settings.product.metafields.custom.key_ingredients | metafield_tag }}</p>",
-            "page": ""
-          }
         }
       },
       "block_order": [
@@ -408,9 +383,7 @@
         "checkmarks_9yp7qt",
         "custom_liquid_aR7g7T",
         "buy_buttons_BQTnpP",
-        "icon_with_text_mbQKz6",
-        "collapsible_tab_nBHnDY",
-        "collapsible_tab_dk4Qa8"
+        "icon_with_text_mbQKz6"
       ],
       "settings": {
         "product": "vmagic-menopause-must-haves",
@@ -440,27 +413,27 @@
             "link_label": "",
             "link": "",
             "product": "vmagic-feminine-lips-stick",
-            "product_badge_color": "#FCF7F0",
+            "product_badge_color": "#fcf7f0",
             "product_benefits": "<strong>Helped with:</strong> Menopause Relief, Dryness"
           }
         },
         "column_yAUCjq": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_85_3325ca91-5575-40cf-9d29-23bc85fb5d68.jpg",
+            "video": "shopify://files/videos/Medicine Mama 1.mov",
             "title": "Beingmarcellahill",
             "text": "<p>“The Vulva Balm restores moisture and alleviates painful sex. Since using the vulva balm, I’m much more comfortable.” </p>",
             "link_label": "",
             "link": "",
             "product": "vmagic-vulvar-balm-skincare-jar",
-            "product_badge_color": "#FCF7F0",
+            "product_badge_color": "#fcf7f0",
             "product_benefits": "<strong>Helped with:</strong> Pain with Sex, Dryness"
           }
         },
         "column_93PCwi": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_85_fafcfdfd-fd7b-4bd2-a93d-6cb0639ffe90.jpg",
+            "video": "shopify://files/videos/mm-review2.mp4",
             "title": "Indiabatson",
             "text": "<p>“The Vulva Wash is a gentle, fragrance free cleanser that rejuvenates and nourishes skin, rinses residue-free and helps support the pH of your vulva.”</p>",
             "link_label": "",
@@ -479,9 +452,10 @@
       "settings": {
         "title": "Loved by women everywhere",
         "heading_size": "h1",
+        "heading_alignment": "center",
         "text": "",
         "image_width": "full",
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "columns_desktop": 3,
         "column_alignment": "left",
         "border_style": "solid",
@@ -491,8 +465,8 @@
         "color_scheme": "background-1",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
     "image_with_text_DfiKwB": {
@@ -542,41 +516,85 @@
       "settings": {
         "image": "shopify://shop_images/Frame_1000004439.jpg",
         "media_type": "image",
-        "height": "adapt",
+        "height": "large",
         "desktop_image_width": "medium",
         "layout": "text_first",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "center",
+        "desktop_content_padding_sides": 70,
         "content_layout": "no-overlap",
         "color_scheme": "",
         "image_behavior": "none",
-        "layout_mobile": "image_first",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "layout_mobile": "text_first",
+        "mobile_content_alignment": "center",
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
     "rich_text_RBzfbc": {
       "type": "rich-text",
       "blocks": {
-        "heading_8YUMGX": {
-          "type": "heading",
+        "text_ck8JXm": {
+          "type": "text",
           "settings": {
-            "heading": "Menopause relief, 3 ways",
-            "heading_size": "h1"
+            "text": "<h1>MENOPAUSE<br/>RELIEF,  3 WAYS</h1>",
+            "text_style": "text-body"
           }
         }
       },
       "block_order": [
-        "heading_8YUMGX"
+        "text_ck8JXm"
       ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "inverse",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 76,
+        "padding_bottom": 24
+      }
+    },
+    "included_products_nhnnhb": {
+      "type": "included-products",
+      "blocks": {
+        "product_pXCTmh": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-vulvar-balm-skincare-jar",
+            "product_video": "shopify://files/videos/Vulva Balm - PDP UGC.mp4",
+            "product_benefits": "<p>Massage a small amount into vulvar skin to moisturize, apply daily as needed.</p>",
+            "product_location": "AT HOME"
+          }
+        },
+        "product_TRY3UV": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-feminine-lips-stick",
+            "product_image": "shopify://shop_images/mm-lips_stick-included-products.jpg",
+            "product_benefits": "<p>Throw in your purse or suitcase to reapply  and stay hydrated on the go.</p>",
+            "product_location": "ON THE GO"
+          }
+        },
+        "product_rtg3Bn": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-feminine-wash",
+            "product_image": "shopify://shop_images/mm-vulva_wash-included_products.jpg",
+            "product_benefits": "<p>Use a quarter size amount into hands or soft sponge and apply directly to skin. Rinse clean with warm water.</p>",
+            "product_location": "IN THE SHOWER"
+          }
+        }
+      },
+      "block_order": [
+        "product_pXCTmh",
+        "product_TRY3UV",
+        "product_rtg3Bn"
+      ],
+      "settings": {
+        "color_scheme": "inverse",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "background_color": "#ffffff"
       }
     },
     "rich_text_GrmbV9": {
@@ -598,8 +616,8 @@
         "content_alignment": "left",
         "color_scheme": "inverse",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 76,
+        "padding_bottom": 40
       }
     },
     "174339093112f677f8": {
@@ -644,6 +662,7 @@
     "multicolumn_kfkAnt",
     "image_with_text_DfiKwB",
     "rich_text_RBzfbc",
+    "included_products_nhnnhb",
     "rich_text_GrmbV9",
     "174339093112f677f8",
     "faq_gWwerX"

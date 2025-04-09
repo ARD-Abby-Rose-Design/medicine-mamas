@@ -1,6 +1,8 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+
+
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -13,7 +15,16 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+
+    #ImageWithText--{{ section.id }} {
+    padding-left: {{ section.settings.desktop_content_padding_sides |  divided_by: 2 }}px !important;
+    padding-right: {{ section.settings.desktop_content_padding_sides |  divided_by: 2 }}px !important;
+    }
+
+    #ImageWithText--{{ section.id }} .image-with-text__heading.h1 {
+    font-size: calc(var(--font-heading-scale) * 7rem) !important;
   }
+}
 {%- endstyle -%}
 
 {% assign scheme1 = settings.color_schemes | first %}
@@ -114,18 +125,23 @@
                 </style>
               {% endif %}
             {%- when 'button' -%}
-              {%- if block.settings.button_label != blank -%}
-                <a
-                  {% if block.settings.button_link == blank %}
-                    role="link" aria-disabled="true"
-                  {% else %}
-                    href="{{ block.settings.button_link }}"
+              <div class="image-with-text__button">
+                {%- if block.settings.button_label != blank -%}
+                  <a
+                    {% if block.settings.button_link == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ block.settings.button_link }}"
+                    {% endif %}
+                    class="button{% if block.settings.button_arrow %} button--arrow{% endif %}"
+                    {{ block.shopify_attributes }}
+                  >
+                    {{ block.settings.button_label | escape }}
+                  </a>
+                  {% if block.settings.button_subtitle != blank %}
+                    <div class="center" style="font-size: 1.2rem; margin-top: 0.6rem;">{{ block.settings.button_subtitle }}</div>
                   {% endif %}
-                  class="button{% if block.settings.button_arrow %} button--arrow{% endif %}"
-                  {{ block.shopify_attributes }}
-                >
-                  {{ block.settings.button_label | escape }}
-                </a>
+              </div>
               {%- endif -%}
             {%- when 'results' -%}
               <style>
@@ -336,6 +352,16 @@
       ],
       "default": "left",
       "label": "t:sections.image-with-text.settings.desktop_content_alignment.label"
+    },
+    {
+      "type": "range",
+      "id": "desktop_content_padding_sides",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Desktop content padding (sides)",
+      "default": 70
     },
     {
       "type": "select",
@@ -574,6 +600,11 @@
           "id": "button_arrow",
           "default": true,
           "label": "Arrow button style"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "button_subtitle",
+          "label": "Button subtitle"
         }
       ]
     },

@@ -19,6 +19,26 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+
+    {% if section.blocks.size < 4 %}
+      .multicolumn .page-width {
+        max-width: 1100px;
+      }
+
+      .multicolumn .title {
+        font-size: 6rem;
+      }
+    {% endif %}
+
+    {% if section.settings.heading_alignment == 'center' %}
+
+      .title-wrapper-with-link {
+        justify-content: center;
+      }
+      .title-wrapper-with-link .title {
+        text-align: center;
+      }
+      {% endif %}
   }
 {%- endstyle -%}
 
@@ -39,7 +59,7 @@
   >
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
-        <h2 class="title inline-richtext {{ section.settings.heading_size }}">
+        <h2 class="title inline-richtext {{ section.settings.heading_size }} {{ section.settings.heading_alignment }}">
           {{ section.settings.title }}
         </h2>
         {% if section.settings.text != blank %}
@@ -133,6 +153,17 @@
                         sizes: sizes,
                         class: 'multicolumn-card__image'
                     }}
+                  </div>
+                </div>
+              {%- elsif block.settings.video != blank -%}
+                <div class="multicolumn-card__video-wrapper">
+                  <div
+                    class="media media--transparent media--{{ section.settings.image_ratio }}"
+                    {% if section.settings.image_ratio == 'adapt' %}
+                      style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
+                    {% endif %}
+                  >
+                    {{ block.settings.video | video_tag: autoplay: true, muted: true, loop: true }}
                   </div>
                 </div>
               {%- endif -%}
@@ -269,6 +300,22 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "default": "",
+      "label": "Heading alignment",
+      "options": [
+        {
+          "value": "",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ]
     },
     {
       "type": "richtext",
@@ -454,6 +501,11 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.multicolumn.blocks.column.settings.image.label"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
         },
         {
           "type": "inline_richtext",

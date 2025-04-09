@@ -1,0 +1,204 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+
+
+.included-products > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.included-products__card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 3rem;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+#included-products--{{ section.id }} .included-products__card {
+    background-color: {{ section.settings.background_color }};
+}
+
+.included-products__content {
+    grid-column: span 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.included-products__content-lower {
+    padding-top: 1rem;
+    border-top: 1px solid #B41214;
+}
+
+.included-products__media {
+    grid-column: span 6;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.included-products__image img,
+.included-products__video video {
+    aspect-ratio: 2 / 3;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    .included-products__card {
+    flex: 1 1 calc(100% / 3 - 2rem);
+}
+}
+
+{% endstyle %}
+
+
+<div id="included-products--{{ section.id }}" class="included-products color-{{ section.settings.color_scheme }} gradient">
+<div
+    class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    {% if settings.animations_reveal_on_scroll %}
+      data-cascade
+    {% endif %}
+  >
+  {% for block in section.blocks %}
+    {% if block.settings.product != blank %}
+        {% assign product = block.settings.product %}
+        {% assign product_title = product.title %}
+        {% if product.title contains 'VMAGIC' %}
+            {% assign product_brand = 'VMAGIC®' %}
+            {% assign product_title = product.title | split: 'VMAGIC®' | last | strip %}
+        {% endif %}
+        <div id="included-products__card--{{ block.id }}" class="included-products__card">            
+                <div class="included-products__content">
+                    <div class="included-products__content-upper">
+                        {% if product.title contains 'VMAGIC' %}
+                            <div>{{ product_brand }}</div>
+                        {% endif %}
+                        <div class="h3">{{ product_title }}</div>
+                        <div>{{ block.settings.product_benefits }}</div>
+                    </div>
+                    <div class="included-products__content-lower">
+                        {{ block.settings.product_location }}
+                    </div>
+                </div>
+                {% if block.settings.product_image != blank or block.settings.product_video != blank %}
+                    <div class="included-products__media">
+                        {% if block.settings.product_image != blank %}
+                            <div class="included-products__image">
+                                <a href="{{ product.url }}">
+                                    {{ block.settings.product_image | image_url: width: 200 | image_tag }}
+                                </a>
+                            </div>
+                        {% elsif block.settings.product_video %}
+                            <div class="included-products__video">
+                                <a href="{{ product.url }}">
+                                    {{ block.settings.product_video | video_tag: autoplay: true, loop: true, muted: true, playsinline: true }}
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+        </div>
+    {% endif %}
+  {% endfor %}
+
+
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "Included Products",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+        {
+            "type": "color_scheme",
+            "id": "color_scheme",
+            "label": "t:sections.all.colors.label",
+            "default": "background-1"
+          },
+          {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color",
+        "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+        "type": "image_picker",
+        "id": "product_image",
+        "label": "Product image"
+        },
+        {
+        "type": "video",
+        "id": "product_video",
+        "label": "Product video"
+        },
+        {
+        "type": "richtext",
+        "id": "product_benefits",
+        "label": "Product benefits",
+        "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>"
+        },
+        {
+        "type": "text",
+        "id": "product_location",
+        "label": "Product location",
+        "default": "Location"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Included Products"
+    }
+  ]
+}
+{% endschema %}

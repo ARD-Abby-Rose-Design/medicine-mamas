@@ -1682,7 +1682,8 @@ a.product__text {
 }
 
 .product__checkmarks {
-  margin: 3rem 0;
+  margin: 2rem 0;
+
 }
 
 @media screen and (min-width: 1200px) {

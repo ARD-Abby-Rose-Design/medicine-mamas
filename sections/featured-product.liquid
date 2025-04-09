@@ -7,12 +7,32 @@
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+
+
+  .featured-product .product__checkmarks { 
+  padding: 2rem 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.featured-product .rating-star::before {
+  -webkit-text-fill-color: #B41214 !important;
+}
+
+.featured-product .product__title h1 {
+  text-transform: none;
+}
+
+.featured-product .widget__radio, .featured-product .dropdown-select select, .featured-product .dropdown-select ul {
+  background-color: white;
+}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
+
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;

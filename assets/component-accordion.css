@@ -58,9 +58,7 @@
 .product__info-container  .product__accordion:first-child {
   border-top: 0 !important;
 }
-.product__info-container  .product__accordion:last-child {
-  border-bottom: 0 !important;
-}
+
 
 .accordion--read-more {
   margin-top: 4rem;

@@ -374,6 +374,15 @@
             "heading_3": "Endorsed by physicians",
             "heading_3_style": "body"
           }
+        },
+        "collapsible_tab_JC6Ja8": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredients",
+            "icon": "none",
+            "content": "<p>{{ section.settings.product.metafields.custom.key_ingredients | metafield_tag }}</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -383,7 +392,8 @@
         "checkmarks_9yp7qt",
         "custom_liquid_aR7g7T",
         "buy_buttons_BQTnpP",
-        "icon_with_text_mbQKz6"
+        "icon_with_text_mbQKz6",
+        "collapsible_tab_JC6Ja8"
       ],
       "settings": {
         "product": "vmagic-menopause-must-haves",

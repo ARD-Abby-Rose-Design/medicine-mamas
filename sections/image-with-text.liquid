@@ -8,8 +8,6 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  
-
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -29,7 +27,7 @@
 
 {% assign scheme1 = settings.color_schemes | first %}
 
-<div class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+<div class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.show_mobile == false %} medium-hide small-hide{% endif %}{% if section.settings.show_desktop == false %} medium-up-hide large-up-hide{% endif %}{% if section.settings.show_desktop == false %} hide-desktop{% endif %}">
   <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %} {% if section.settings.layout_mobile == 'text_first' %} image-with-text__grid--reverse-mobile{% endif %} ">
     <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
       <div
@@ -62,7 +60,7 @@
             | image_tag: loading: 'lazy', sizes: sizes, widths: widths
           }}
           {% elsif section.settings.media_type == 'video' %}
-            {{ section.settings.video | video_tag: image_size: '1100x', loop: true, controls: true, muted: true, autoplay: true, playsinline: true, class: 'media-with-text__video js-player' }}
+            {{ section.settings.video | video_tag: image_size: '1100x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true, class: 'media-with-text__video js-player' }}
           {% endif %}
         {%- else -%}
           {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -312,6 +310,12 @@
       "label": "t:sections.image-with-text.settings.height.label"
     },
     {
+      "type": "checkbox",
+      "id": "show_desktop",
+      "label": "Show on Desktop",
+      "default": true  
+    },
+    {
       "type": "select",
       "id": "desktop_image_width",
       "options": [
@@ -393,8 +397,8 @@
       "type": "range",
       "id": "desktop_content_padding_left",
       "min": 0,
-      "max": 200,
-      "step": 2,
+      "max": 400,
+      "step": 4,
       "unit": "px",
       "label": "Desktop content padding left",
       "default": 36
@@ -403,8 +407,8 @@
       "type": "range",
       "id": "desktop_content_padding_right",
       "min": 0,
-      "max": 200,
-      "step": 2,
+      "max": 400,
+      "step": 4,
       "unit": "px",
       "label": "Desktop content padding right",
       "default": 36
@@ -458,6 +462,12 @@
     {
       "type": "header",
       "content": "Mobile layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_mobile",
+      "label": "Show on Mobile",
+      "default": true  
     },
     {
       "type": "select",

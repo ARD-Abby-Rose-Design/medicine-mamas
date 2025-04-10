@@ -75,18 +75,20 @@
         "text_MkaVME"
       ],
       "settings": {
-        "image": "shopify://shop_images/medicine_mama-stylized-240_copy_1.jpg",
+        "image": "shopify://shop_images/mm-intimate-glide.jpg",
         "media_type": "image",
-        "height": "adapt",
+        "height": "medium",
+        "show_desktop": true,
         "desktop_image_width": "small",
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
-        "desktop_content_padding_left": 36,
-        "desktop_content_padding_right": 172,
+        "desktop_content_padding_left": 0,
+        "desktop_content_padding_right": 232,
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
         "image_behavior": "none",
+        "show_mobile": true,
         "layout_mobile": "image_first",
         "mobile_content_alignment": "center",
         "padding_top": 36,
@@ -134,7 +136,8 @@
       "settings": {
         "video": "shopify://files/videos/Vulva Balm - PDP UGC.mp4",
         "media_type": "video",
-        "height": "medium",
+        "height": "large",
+        "show_desktop": true,
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
@@ -144,6 +147,7 @@
         "content_layout": "no-overlap",
         "color_scheme": "",
         "image_behavior": "none",
+        "show_mobile": true,
         "layout_mobile": "image_first",
         "mobile_content_alignment": "left",
         "padding_top": 36,
@@ -191,7 +195,8 @@
       "settings": {
         "video": "shopify://files/videos/3cc8a5c804a7f2ce1533f8fd46c2d47aaff8d1b1.mp4",
         "media_type": "video",
-        "height": "medium",
+        "height": "adapt",
+        "show_desktop": true,
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
@@ -201,6 +206,7 @@
         "content_layout": "no-overlap",
         "color_scheme": "",
         "image_behavior": "none",
+        "show_mobile": true,
         "layout_mobile": "image_first",
         "mobile_content_alignment": "left",
         "padding_top": 36,
@@ -249,6 +255,7 @@
         "image": "shopify://shop_images/Frame_1000004913.jpg",
         "media_type": "image",
         "height": "adapt",
+        "show_desktop": true,
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
@@ -258,10 +265,29 @@
         "content_layout": "no-overlap",
         "color_scheme": "",
         "image_behavior": "none",
+        "show_mobile": true,
         "layout_mobile": "image_first",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "image_banner_jJXDdB": {
+      "type": "image-banner",
+      "settings": {
+        "image_2": "shopify://shop_images/medicine-mama-vulva-balm-1_28e24218-564c-4a38-a454-7e2506d35376.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "show_desktop": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
       }
     },
     "image_with_text_zQnWfR": {
@@ -295,6 +321,7 @@
         "image": "shopify://shop_images/Frame_1000004886.jpg",
         "media_type": "image",
         "height": "adapt",
+        "show_desktop": true,
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
@@ -304,6 +331,7 @@
         "content_layout": "no-overlap",
         "color_scheme": "",
         "image_behavior": "none",
+        "show_mobile": true,
         "layout_mobile": "text_first",
         "mobile_content_alignment": "left",
         "padding_top": 36,
@@ -341,6 +369,7 @@
         "image": "shopify://shop_images/dff6ff974d6838b90314eaf2ff15ca52.jpg",
         "media_type": "image",
         "height": "adapt",
+        "show_desktop": false,
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
@@ -350,20 +379,76 @@
         "content_layout": "no-overlap",
         "color_scheme": "",
         "image_behavior": "none",
+        "show_mobile": true,
         "layout_mobile": "image_first",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "featured_reviews_4kdDmD": {
-      "type": "featured-reviews",
+    "rich_text_GbjdEL": {
+      "type": "rich-text",
+      "blocks": {
+        "number_GE4wCY": {
+          "type": "number",
+          "settings": {
+            "number": "5",
+            "margin_bottom": -50,
+            "number_bg_color": "#121212",
+            "show_desktop": true,
+            "show_mobile": true
+          }
+        },
+        "text_QbhCh8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our customers swear by this duo for relief <strong>before, during,</strong> and <strong>after intimacy. </strong></p>",
+            "text_style": "text-body-large"
+          }
+        }
+      },
+      "block_order": [
+        "number_GE4wCY",
+        "text_QbhCh8"
+      ],
       "settings": {
+        "show_desktop": true,
+        "show_mobile": false,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "1744245464323bcf96": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_carousel_DVUx4A": {
+          "type": "shopify://apps/okendo/blocks/reviews-carousel/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "show_heading": false,
+            "heading": "",
+            "badge_link": "",
+            "product": "intimate-moisturizer-duo-vaginal-moisturizer"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_carousel_DVUx4A"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_liquid_tn3UB9": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n\n.oke-reviewCard {\nborder-radius: 10px;\nbackground: white;\n}\n</style>",
         "color_scheme": "",
-        "show_line_separator": true,
-        "title": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "rich_text_yieUGc": {
@@ -381,11 +466,13 @@
         "heading_3NQYNM"
       ],
       "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "inverse",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 72,
         "padding_bottom": 0
       }
     },
@@ -506,9 +593,12 @@
     "image_with_text_gtPjF3",
     "image_with_text_pikH8p",
     "image_with_text_R3nh6Y",
+    "image_banner_jJXDdB",
     "image_with_text_zQnWfR",
     "image_with_text_K74Aig",
-    "featured_reviews_4kdDmD",
+    "rich_text_GbjdEL",
+    "1744245464323bcf96",
+    "custom_liquid_tn3UB9",
     "rich_text_yieUGc",
     "featured_product_7Dexwj",
     "faq_kdwVd8"

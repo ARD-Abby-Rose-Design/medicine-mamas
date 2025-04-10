@@ -1,0 +1,165 @@
+<style>
+    .reviews-board {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    
+.review-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    box-shadow: 0 0 0 1px #e5e5e5;
+  }
+
+  .review-rating-circle {
+    background-color: #000;
+    color: white;
+    font-weight: bold;
+    font-size: 1.6rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .review-author {
+    font-weight: 700;
+  }
+
+  .review-meta {
+    font-size: 0.85rem;
+    color: #666;
+  }
+
+  .review-stars {
+    margin: 0.5rem 0;
+  }
+
+  .review-title {
+    font-weight: 700;
+  }
+
+  .review-body {
+    margin: 0.5rem 0 1rem;
+    font-size: 0.95rem;
+  }
+
+  .review-footer {
+    font-size: 0.8rem;
+    color: #555;
+    margin-top: auto;
+  }
+
+  .review-image img {
+    border-radius: 1rem;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+</style>
+
+<div class="page-width section-{{ section.id }}-padding">
+  <div id="reviews-board--{{ section.id }}" class="reviews-board">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'review' %}
+          <div class="review-card" {{ block.shopify_attributes }}>
+            <div class="review-rating-circle">{{ block.settings.number }}</div>
+            <div class="review-author">{{ block.settings.author }}</div>
+            <div class="review-meta">{{ block.settings.meta }}</div>
+            <div class="review-stars">{{ block.settings.stars }}</div>
+            <div class="review-title">{{ block.settings.title }}</div>
+            <div class="review-body">{{ block.settings.body }}</div>
+            <div class="review-footer">Was this helpful? 👍 1 👎 0</div>
+          </div>
+        {% when 'image' %}
+            {% if block.settings.image != blank %}
+                <div class="review-image" {{ block.shopify_attributes }}>
+                {{ block.settings.image | image_url: width: 600 |  image_tag }}
+                </div>
+            {% endif %}
+      {% endcase %}
+    {% endfor %}
+  </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "Reviews Board",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "show_desktop",
+            "label": "Show on Desktop",
+            "default": false
+        },
+        {
+            "type": "checkbox",
+            "id": "show_mobile",
+            "label": "Show on Mobile",
+            "default": true
+        }
+    ],
+    "blocks": [
+        {
+            "type": "review",
+            "name": "Review",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "author",
+                    "label": "Author",
+                    "default": "John Doe"
+                },
+                {
+                    "type": "text",
+                    "id": "meta",
+                    "label": "Meta Information",
+                    "default": "Verified Buyer"
+                },
+                {
+                    "type": "text",
+                    "id": "stars",
+                    "label": "Stars",
+                    "default": "⭐⭐⭐⭐⭐"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Great Product!"
+                },
+                {
+                    "type": "textarea",
+                    "id": "body",
+                    "label": "Review Body"
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "name": "Image",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Reviews Board"
+        }
+    ]
+}
+{% endschema %}

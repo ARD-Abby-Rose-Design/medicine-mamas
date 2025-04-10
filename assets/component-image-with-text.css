@@ -49,11 +49,14 @@
   .image-with-text__media--large {
     height: 69.5rem;
   }
-}
 
 .image-with-text__media-item--small {
   width: calc(40% - var(--grid-desktop-horizontal-spacing) * 2 / 3) !important;
 }
+
+}
+
+
 
 .image-with-text__media--placeholder {
   position: relative;

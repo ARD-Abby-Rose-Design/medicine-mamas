@@ -8,25 +8,7 @@
 
 {%- style -%}
 
-
-  .featured-product .product__checkmarks { 
-  padding: 2rem 0;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-}
-
-.featured-product .rating-star::before {
-  -webkit-text-fill-color: #B41214 !important;
-}
-
-.featured-product .product__title h1 {
-  text-transform: none;
-}
-
-.featured-product .widget__radio, .featured-product .dropdown-select select, .featured-product .dropdown-select ul {
-  background-color: white;
-}
-  .section-{{ section.id }}-padding {
+.section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
@@ -185,8 +167,16 @@
                   {{- block.settings.text -}}
                 </div>
               {%- when 'title' -%}
-                <div class="product__title" {{ block.shopify_attributes }}>
-                  <h1 class="h3">{{ product.title | escape }}</h1>
+                <div class="product__title{% if block.settings.show_price %} product__title--with-price{% endif %}" {{ block.shopify_attributes }}>
+                  <h1 class="product__title-title h3">{{ product.title | escape }}</h1>
+                  {% if block.settings.show_price %}
+                    <div class="product__title-price">
+                      <div class="h4">{{ product.selected_or_first_available_variant.price |  money_without_trailing_zeros }}</div>
+                      {% if product.selected_or_first_available_variant.compare_at_price != blank and product.selected_or_first_available_variant.price < product.selected_or_first_available_variant.compare_at_price %}
+                      <div class="h4"><s>{{ product.selected_or_first_available_variant.compare_at_price |  money_without_trailing_zeros}}</s></div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
                   {% if product.metafields.size.information != nil %}
                   <div class="product__size-info">
                     {{ product.metafields.size.information.value }}
@@ -433,10 +423,10 @@
                 {% render 'icon-with-text',
                   block: block
                 %}
-
               {% when 'bundle_products'%}
                 {% render 'product-bundle-products', products: product.metafields.bundle.products.value, heading: block.settings.heading %}
-
+              {% when 'included_products'%}
+                {%- render 'included-products-tabs', block: block -%}
             {%- endcase -%}
           {%- endfor -%}
           {%-  if section.settings.show_full_details -%}
@@ -752,6 +742,12 @@
             ],
             "default": "h1",
             "label": "t:sections.all.heading_size.label"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_price",
+            "default": false,
+            "label": "Show price"
           }
         ]
       },
@@ -1141,6 +1137,18 @@
           {
             "type": "paragraph",
             "content": "t:sections.featured-product.blocks.rating.settings.paragraph.content"
+          }
+        ]
+      },
+      {
+        "type": "included_products",
+        "name": "Included products",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "product_list",
+            "id": "included_products",
+            "label": "Included products"
           }
         ]
       },
@@ -1840,7 +1848,7 @@
                 "label": "Subtitle"
               }
             ]
-          },
+          }
         ]
       }
     ],

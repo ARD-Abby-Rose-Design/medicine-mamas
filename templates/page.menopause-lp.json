@@ -359,7 +359,8 @@
         "title_qCmgHd": {
           "type": "title",
           "settings": {
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "show_price": true
           }
         },
         "rich_text_FnFW4L": {
@@ -405,13 +406,14 @@
             "heading_3_style": "body"
           }
         },
-        "collapsible_tab_JC6Ja8": {
-          "type": "collapsible_tab",
+        "included_products_9fP3Ra": {
+          "type": "included_products",
           "settings": {
-            "heading": "Ingredients",
-            "icon": "none",
-            "content": "<p>{{ section.settings.product.metafields.custom.key_ingredients | metafield_tag }}</p>",
-            "page": ""
+            "included_products": [
+              "vmagic-vulvar-balm-skincare-jar",
+              "vmagic-feminine-lips-stick",
+              "vmagic-feminine-wash"
+            ]
           }
         }
       },
@@ -423,7 +425,7 @@
         "custom_liquid_aR7g7T",
         "buy_buttons_BQTnpP",
         "icon_with_text_mbQKz6",
-        "collapsible_tab_JC6Ja8"
+        "included_products_9fP3Ra"
       ],
       "settings": {
         "product": "vmagic-menopause-must-haves",

@@ -478,14 +478,23 @@
 .image-with-text__review {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
+  max-width: 300px;
+  gap: 1.8rem;
+  padding: 1.8rem;
   border-radius: 2rem;
   background-color: #FFFFFF;
 }
 
 .image-with-text__review > * {
   margin: 0;
+}
+
+.image-with-text__review-header > * {
+  margin: 0;
+}
+
+.image-with-text-verified {
+  font-size: 1.2rem;
 }
 
 .image-with-text__review.page-width {
@@ -496,3 +505,4 @@
 .image-with-text__review-stars {
   letter-spacing: 0.33rem;
 }
+

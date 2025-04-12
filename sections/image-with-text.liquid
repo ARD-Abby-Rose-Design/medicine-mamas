@@ -2,6 +2,76 @@
 
 {%- style -%}
 
+.image-with-text__collage {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+
+.collage-item {
+  position: absolute;
+  height: 80%;
+}
+
+.collage-item:nth-of-type(1) {
+  top: 0;
+  left: 0;
+  width: 52.5%;
+}
+
+.collage-item:nth-of-type(2) {
+  top: 15%;
+  right: 0;
+  width: 52.5%;
+}
+
+.collage-item:nth-of-type(2) img,
+.collage-item:nth-of-type(2) video {
+  border: 4px solid #FDF7F2;
+}
+
+.collage-media {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.collage-media img,
+.collage-hover-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.collage-hover-video {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.collage-media:hover .collage-hover-video {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.collage-caption {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 3;
+  font-size: 1.4rem;
+}
+
+.collage-caption p {
+  line-height: 1;
+  margin: 0;
+}
+
+
 
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -38,6 +108,9 @@
         {% if section.settings.height == 'adapt' and section.settings.video != blank and section.settings.media_type == 'video' %}
           style="padding-bottom: {{ 1 | divided_by: section.settings.video.aspect_ratio | times: 100 }}%;"
         {% endif %}
+        {% if section.settings.height == 'adapt' and section.settings.video != blank and section.settings.media_type == 'collage' %}
+          style="padding-bottom: 100%;"
+        {% endif %}
       >
         {%- if section.settings.image != blank or section.settings.video != blank -%}
           {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
@@ -53,15 +126,57 @@
               (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
             {%- endcapture -%}
           {%- endif -%}
-          {% if section.settings.media_type == 'image' %}
-          {{
-            section.settings.image
-            | image_url: width: 1500
-            | image_tag: loading: 'lazy', sizes: sizes, widths: widths
-          }}
-          {% elsif section.settings.media_type == 'video' %}
-            {{ section.settings.video | video_tag: image_size: '1100x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true, class: 'media-with-text__video js-player' }}
-          {% endif %}
+          {% case section.settings.media_type %}
+            {% when 'image' %}
+              {{ section.settings.image | image_url: width: 1500 | image_tag: loading: 'lazy', sizes: sizes, widths: widths }}
+            {% when 'video' %}
+              {{ section.settings.video | video_tag: image_size: '1100x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true, class: 'media-with-text__video js-player' }}
+              {% when 'collage' %}
+                <div class="image-with-text__collage">
+                  {% if section.settings.image != blank or section.settings.video != blank %}
+                    <div class="collage-item">
+                      <div class="collage-media">
+                        {% if section.settings.media_caption != blank %}
+                          <div class="collage-caption" style="color: {{ section.settings.media_caption_color }};">
+                            {{ section.settings.media_caption }}
+                          </div>
+                        {% endif %}
+                      {% if section.settings.image != blank and section.settings.video != blank %}
+                        {{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy' }}
+                        <div class="collage-hover-video">
+                          {{ section.settings.video | video_tag: image_size: '900x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
+                        </div>
+                      {% elsif section.settings.image != blank %}
+                        {{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy' }}
+                      {% elsif section.settings.video != blank %}
+                        {{ section.settings.video | video_tag: image_size: '900x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
+                      {% endif %}
+                    </div>
+                  </div>
+                  {% endif %}
+                  {% if section.settings.collage_image != blank or section.settings.collage_video != blank %}
+                    <div class="collage-item">
+                      <div class="collage-media">
+                        {% if section.settings.collage_media_caption != blank %}
+                          <div class="collage-caption" style="color: {{ section.settings.collage_media_caption_color }};">
+                            {{ section.settings.collage_media_caption }}
+                          </div>
+                        {% endif %}
+                        {% if section.settings.collage_image != blank and section.settings.collage_video != blank %}
+                          {{ section.settings.collage_image | image_url: width: 900 | image_tag: loading: 'lazy' }}
+                          <div class="collage-hover-video">
+                            {{ section.settings.collage_video | video_tag: image_size: '900x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
+                          </div>
+                        {% elsif section.settings.collage_image != blank %}
+                          {{ section.settings.collage_image | image_url: width: 900 | image_tag: loading: 'lazy' }}
+                        {% elsif section.settings.collage_video != blank %}
+                          {{ section.settings.collage_video | video_tag: image_size: '900x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+          {% endcase %}
         {%- else -%}
           {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
@@ -123,23 +238,23 @@
                 </style>
               {% endif %}
             {%- when 'button' -%}
-              <div class="image-with-text__button">
-                {%- if block.settings.button_label != blank -%}
-                  <a
-                    {% if block.settings.button_link == blank %}
-                      role="link" aria-disabled="true"
-                    {% else %}
-                      href="{{ block.settings.button_link }}"
+              {%- if block.settings.button_label != blank -%}
+                <div class="image-with-text__button">
+                    <a
+                      {% if block.settings.button_link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link }}"
+                      {% endif %}
+                      class="button{% if block.settings.button_arrow %} button--arrow{% endif %}"
+                      {{ block.shopify_attributes }}
+                    >
+                      {{ block.settings.button_label | escape }}
+                    </a>
+                    {% if block.settings.button_subtitle != blank %}
+                      <div class="center" style="font-size: 1.2rem; margin-top: 0.6rem;">{{ block.settings.button_subtitle }}</div>
                     {% endif %}
-                    class="button{% if block.settings.button_arrow %} button--arrow{% endif %}"
-                    {{ block.shopify_attributes }}
-                  >
-                    {{ block.settings.button_label | escape }}
-                  </a>
-                  {% if block.settings.button_subtitle != blank %}
-                    <div class="center" style="font-size: 1.2rem; margin-top: 0.6rem;">{{ block.settings.button_subtitle }}</div>
-                  {% endif %}
-              </div>
+                </div>
               {%- endif -%}
             {%- when 'results' -%}
               <style>
@@ -196,11 +311,13 @@
                     }
                   }
                 </style>
-                <div class="image-with-text__review-stars">★★★★★</div>
-                <h4>{{ block.settings.review_product }}</h4>
-                <div>✓ VERIFIED REVIEW</div>
-                <h5>{{ block.settings.review_name }}</h5>
-                <h5>{{ block.settings.review_title }}</h5>
+                <div class="image-with-text__review-header">
+                  <div class="image-with-text__review-stars">★★★★★</div>
+                  <h4>{{ block.settings.review_product }}</h4>
+                  <div class="image-with-text-verified h5">✓ VERIFIED REVIEW</div>
+                </div>
+                <div class="h5"><strong>{{ block.settings.review_name }}</strong></div>
+                <div class="h5"><strong>{{ block.settings.review_title }}</strong></div>
                 <p>{{ block.settings.review_text }}</p>
               </div>
             {%- when 'number' -%}
@@ -264,10 +381,22 @@
       "id": "image",
       "label": "t:sections.image-with-text.settings.image.label"
     },
+
     {
       "type": "video",
       "id": "video",
       "label": "Video"
+    },
+    {
+      "type": "richtext",
+      "id": "media_caption",
+      "label": "Overlay caption"
+    },
+    {
+      "type": "color",
+      "id": "media_caption_color",
+      "label": "Overlay caption color",
+      "default": "#ffffff" 
     },
     {
       "type": "select",
@@ -280,6 +409,10 @@
         {
           "value": "video",
           "label": "Video"
+        },
+        {
+          "value": "collage",
+          "label": "Collage"
         }
       ],
       "default": "image",
@@ -434,6 +567,33 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "Collage media"
+    },
+    {
+      "type": "image_picker",
+      "id": "collage_image",
+      "label": "Collage image",
+      "info": "If media type is set to collage, shows in second position"
+    },
+    {
+      "type": "video",
+      "id": "collage_video",
+      "label": "Collage video",
+      "info": "If media type is set to collage, shows in second position"
+    },
+    {
+      "type": "richtext",
+      "id": "collage_media_caption",
+      "label": "Overlay caption"
+    },
+    {
+      "type": "color",
+      "id": "collage_media_caption_color",
+      "label": "Overlay caption color",
+      "default": "#ffffff" 
     },
     {
       "type": "header",
@@ -810,4 +970,6 @@
     }
   ]
 }
+
 {% endschema %}
+

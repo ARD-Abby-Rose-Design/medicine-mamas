@@ -694,7 +694,7 @@
     "custom_liquid_k4xjeM": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<style>\n.oke-w-reviews-list-item {\nbackground-color: white;\nborder-radius: 10px;\nmargin-bottom: 10px;\n</style",
+        "custom_liquid": "<style>\n.oke-w-reviews-list-item {\nbackground-color: white;\nborder-radius: 10px;\nmargin-bottom: 10px;\n\n@media screen and (max-width: 750px) {\n\n.oke-w-reviewSplit-main {\nflex-direction: row !important;\njustify-content: space-between !important;\ngap: 1.4rem !important;\npadding: 1.4rem !important;\n}\n\n.oke-w-reviewSplit-mid {\nmargin-top: 0px !important;\nwidth: 75% !important;\ntext-align: left !important;\n\n}\n</style>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0

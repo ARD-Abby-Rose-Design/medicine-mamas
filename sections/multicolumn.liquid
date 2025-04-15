@@ -13,6 +13,15 @@
     {% endif %}
   }
 
+  .multicolumn-card__video-wrapper video::-webkit-media-controls {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+.multicolumn-card__video-wrapper video:hover::-webkit-media-controls {
+    opacity: 1;
+  }
+
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {

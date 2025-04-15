@@ -274,8 +274,8 @@
           "settings": {
             "review_product": "VMAGIC® VULVA WASH",
             "review_name": "Sandy",
-            "review_title": "SO HELPFUL",
-            "review_text": "“The vulva wash is great and gentle. It soothes and provides immediate relief to dry and itchy intimate areas.”",
+            "review_title": "Life-Changing Relief for Menopause Symptoms!",
+            "review_text": "\"The wash is incredible; it leaves me feeling fresh, clean, and confident without any harsh chemicals or irritation. I no longer have that lingering anxiety about discomfort during sex or worrying about an off smell.\" -Camelia G.",
             "show_desktop": true,
             "show_mobile": false
           }
@@ -450,6 +450,7 @@
           "type": "column",
           "settings": {
             "video": "shopify://files/videos/Vulva Wash.mov",
+            "video_poster": "shopify://shop_images/Frame_85.jpg",
             "title": "Dr. Caroyln Moyers",
             "text": "<p>“Say goodbye to vaginal irritation. This is the lipstick you never knew you needed. I use it for so many of my patients in post partum or menopause!”</p>",
             "link_label": "",
@@ -463,6 +464,7 @@
           "type": "column",
           "settings": {
             "video": "shopify://files/videos/Medicine Mama 1.mov",
+            "video_poster": "shopify://shop_images/Frame_85_3325ca91-5575-40cf-9d29-23bc85fb5d68.jpg",
             "title": "Beingmarcellahill",
             "text": "<p>“The Vulva Balm restores moisture and alleviates painful sex. Since using the vulva balm, I’m much more comfortable.” </p>",
             "link_label": "",
@@ -476,6 +478,7 @@
           "type": "column",
           "settings": {
             "video": "shopify://files/videos/IG STORY SET 2 ( split into 2 frames) .mov",
+            "video_poster": "shopify://shop_images/Frame_85_fafcfdfd-fd7b-4bd2-a93d-6cb0639ffe90.jpg",
             "title": "@indiabatson",
             "text": "<p>“The Vulva Wash is a gentle, fragrance free cleanser that rejuvenates and nourishes skin, rinses residue-free and helps support the pH of your vulva.”</p>",
             "link_label": "",

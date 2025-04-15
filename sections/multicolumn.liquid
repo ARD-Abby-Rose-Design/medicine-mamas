@@ -156,6 +156,7 @@
                   </div>
                 </div>
               {%- elsif block.settings.video != blank -%}
+                {% assign thumbnail = block.settings.video.preview_image | image_url: width: 300 %}
                 <div class="multicolumn-card__video-wrapper">
                   <div
                     class="media media--transparent media--{{ section.settings.image_ratio }}"
@@ -163,7 +164,10 @@
                       style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
                     {% endif %}
                   >
-                    {{ block.settings.video | video_tag: autoplay: true, muted: true, loop: true }}
+                  {% if forloop.index == 1 %}
+                    {{ block.settings.video | video_tag: autoplay: true, muted: true, loop: true, controls: true, poster: thumbnail }}                  
+                  {% else %}
+                  {{ block.settings.video | video_tag: autoplay: false, muted: false, loop: true, controls: true, poster: thumbnail }}                  {% endif %}
                   </div>
                 </div>
               {%- endif -%}
@@ -508,6 +512,11 @@
           "label": "Video"
         },
         {
+          "type": "image_picker",
+          "id": "video_poster",
+          "label": "Video poster"
+        },
+        {
           "type": "inline_richtext",
           "id": "title",
           "default": "Column",
@@ -570,3 +579,21 @@
   ]
 }
 {% endschema %}
+
+
+<script>
+function pauseOtherVideosOnPlay() {
+  const videos = document.querySelectorAll('video');
+  videos.forEach(video => {
+    video.addEventListener('play', function () {
+      videos.forEach(otherVideo => {
+        if (otherVideo !== video && !otherVideo.paused) {
+          otherVideo.pause();
+        }
+      });
+    });
+  });
+}
+
+setTimeout(pauseOtherVideosOnPlay, 500);
+</script>

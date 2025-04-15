@@ -27,11 +27,19 @@
             "text": "Subscribe + Save 20% Off for life!",
             "link": "shopify://pages/subscribe-save"
           }
+        },
+        "announcement_dWrNMp": {
+          "type": "announcement",
+          "settings": {
+            "text": "Save $$ on bundles!",
+            "link": "https://medicinemama.com/collections/gift-set-collections"
+          }
         }
       },
       "block_order": [
         "announcement-bar-0",
-        "a10e6e15-b6bd-4170-bf00-23f197219773"
+        "a10e6e15-b6bd-4170-bf00-23f197219773",
+        "announcement_dWrNMp"
       ],
       "settings": {
         "color_scheme": "accent-2",

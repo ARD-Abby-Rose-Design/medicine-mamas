@@ -24,7 +24,7 @@
           "type": "text",
           "settings": {
             "text": "<p><strong>OVER 15,000 5-STAR REVIEWS</strong></p>",
-            "text_size": "text-body",
+            "text_size": "text-body-large",
             "background_style": "none",
             "background_color": "#ffffff",
             "bullets_to_checkmarks": false
@@ -40,8 +40,8 @@
         "text_6GVxmp": {
           "type": "text",
           "settings": {
-            "text": "<p>Relieve vulva dryness and irritation throughout (peri)menopause with our all<br/>natural, hormone-free must-haves.</p>",
-            "text_size": "text-body",
+            "text": "<p>Relieve vulva dryness and irritation throughout (peri)menopause with our allnatural, hormone-free must-haves.</p>",
+            "text_size": "text-body-large",
             "background_style": "none",
             "background_color": "#ffffff",
             "bullets_to_checkmarks": false
@@ -154,14 +154,14 @@
           "type": "heading",
           "settings": {
             "heading": "VMAGIC® Vulva Balm + Lips Stick",
-            "heading_size": "h3"
+            "heading_size": "h2"
           }
         },
         "text_UDXNPF": {
           "type": "text",
           "settings": {
             "text": "<p><strong>Helps alleviate dryness</strong> and <strong>pain with sex</strong> in the vulva, especially during (peri)menopause, by restoring moisture and elasticity.</p>",
-            "text_size": "text-body",
+            "text_size": "text-body-large",
             "background_style": "none",
             "background_color": "#ffffff",
             "bullets_to_checkmarks": false
@@ -256,14 +256,14 @@
           "type": "heading",
           "settings": {
             "heading": "VMAGIC® Vulva Wash",
-            "heading_size": "h3"
+            "heading_size": "h2"
           }
         },
         "text_m8cUbC": {
           "type": "text",
           "settings": {
             "text": "<p>An all natural, fragrance-free cleanser that <strong>helps support pH balance  while neutralizing odor</strong>. Hydration at its finest, without ever stripping the skin.</p>",
-            "text_size": "text-body",
+            "text_size": "text-body-large",
             "background_style": "none",
             "background_color": "#ffffff",
             "bullets_to_checkmarks": false
@@ -317,9 +317,9 @@
       "type": "featured-review",
       "settings": {
         "review_product": "VMAGIC® VULVA WASH",
-        "review_name": "Sandy",
-        "review_title": "SO HELPFUL",
-        "review_text": "“The vulva wash is great and gentle. It soothes and provides immediate relief to dry and itchy intimate areas.”",
+        "review_name": "Camelia G.",
+        "review_title": "Life-Changing Relief for Menopause Symptoms!",
+        "review_text": "“The wash is incredible; it leaves me feeling fresh, clean, and confident without any harsh chemicals or irritation. I no longer have that lingering anxiety about discomfort during sex or worrying about an off smell.”",
         "show_desktop": false,
         "show_mobile": true
       }

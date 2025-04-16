@@ -427,6 +427,7 @@
   .image-with-text__text-item {
     margin-top: 2rem;
   }
+
 }
 
 
@@ -478,7 +479,6 @@
 .image-with-text__review {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
   gap: 1.8rem;
   padding: 1.8rem;
   border-radius: 2rem;
@@ -504,6 +504,13 @@
 
 .image-with-text__review-stars {
   letter-spacing: 0.33rem;
+}
+
+@media screen and (min-width: 750px) {
+  .image-with-text__review {
+    max-width: 320px;
+  }
+  
 }
 
 .image-with-text__collage {

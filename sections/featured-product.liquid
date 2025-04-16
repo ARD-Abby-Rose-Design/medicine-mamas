@@ -171,9 +171,9 @@
                   <h1 class="product__title-title h3">{{ product.title | escape }}</h1>
                   {% if block.settings.show_price %}
                     <div class="product__title-price">
-                      <div class="h4">{{ product.selected_or_first_available_variant.price |  money_without_trailing_zeros }}</div>
+                      <div class="h3">{{ product.selected_or_first_available_variant.price |  money_without_trailing_zeros }}</div>
                       {% if product.selected_or_first_available_variant.compare_at_price != blank and product.selected_or_first_available_variant.price < product.selected_or_first_available_variant.compare_at_price %}
-                      <div class="h4"><s>{{ product.selected_or_first_available_variant.compare_at_price |  money_without_trailing_zeros}}</s></div>
+                      <div class="h3"><s>{{ product.selected_or_first_available_variant.compare_at_price |  money_without_trailing_zeros}}</s></div>
                       {% endif %}
                     </div>
                   {% endif %}

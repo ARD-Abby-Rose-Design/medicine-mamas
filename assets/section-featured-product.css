@@ -41,7 +41,7 @@
 
 .featured-product .product__title--with-price {
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: start;
   gap: 1rem;
 }
@@ -89,6 +89,21 @@
 }
 
 @media screen and (min-width: 750px) {
+
+  .featured-product .product__title--with-price  {
+    grid-template-columns: 4fr 1fr;
+ 
+  }
+
+  .featured-product .product__title-price {
+    gap: 0;
+  }
+
+  .featured-product .product__title-price .h3 {
+    font-size: 2rem;
+    line-height: normal;
+  }
+
   .featured-product .product__media-item {
     padding-bottom: 0;
   }

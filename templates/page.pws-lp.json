@@ -583,13 +583,13 @@
             "heading_3_style": "body"
           }
         },
-        "collapsible_tab_aVjPzY": {
-          "type": "collapsible_tab",
+        "included_products_UjwYqn": {
+          "type": "included_products",
           "settings": {
-            "heading": "Ingredients",
-            "icon": "none",
-            "content": "<p>{{ section.settings.product.metafields.custom.key_ingredients | metafield_tag }}</p>",
-            "page": ""
+            "included_products": [
+              "vmagic-vulvar-balm-skincare-jar",
+              "organic-lubricant-intimate-moisturizer"
+            ]
           }
         }
       },
@@ -602,7 +602,7 @@
         "custom_liquid_WaMLkG",
         "buy_buttons_dgAxVq",
         "icon_with_text_RTM9Vn",
-        "collapsible_tab_aVjPzY"
+        "included_products_UjwYqn"
       ],
       "settings": {
         "product": "intimate-moisturizer-duo",

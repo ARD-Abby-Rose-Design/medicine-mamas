@@ -114,7 +114,7 @@
         "heading_MCLpWt": {
           "type": "heading",
           "settings": {
-            "heading": "REAL RESULTS, BACKED BY SCIENCE",
+            "heading": "Real Results, Backed by Science",
             "heading_size": "h2"
           }
         },
@@ -174,7 +174,7 @@
         "heading_6G78dz": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>INGREDIENTS YOU CAN TRUST</strong>",
+            "heading": "<strong>Ingredients You Can Trust</strong>",
             "heading_size": "h2"
           }
         },
@@ -206,10 +206,10 @@
         "text_X4wzQb"
       ],
       "settings": {
-        "video": "shopify://files/videos/3cc8a5c804a7f2ce1533f8fd46c2d47aaff8d1b1.mp4",
+        "image": "shopify://shop_images/Honey.jpg",
         "media_caption": "",
         "media_caption_color": "#ffffff",
-        "media_type": "video",
+        "media_type": "image",
         "height": "adapt",
         "show_desktop": true,
         "desktop_image_width": "medium",
@@ -242,6 +242,13 @@
             "show_mobile": true
           }
         },
+        "heading_Aripi3": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Trusted by Doctors. Loved by Women.</strong>",
+            "heading_size": "h2"
+          }
+        },
         "text_Q7bnWr": {
           "type": "text",
           "settings": {
@@ -265,6 +272,7 @@
       },
       "block_order": [
         "number_NCaCUg",
+        "heading_Aripi3",
         "text_Q7bnWr",
         "text_bMwBCe"
       ],

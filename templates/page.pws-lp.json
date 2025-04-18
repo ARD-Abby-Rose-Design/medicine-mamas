@@ -186,7 +186,7 @@
         "text_X4wzQb"
       ],
       "settings": {
-        "image": "shopify://shop_images/Frame_1000004860.png",
+        "image": "shopify://shop_images/Honey_Propolis.jpg",
         "media_caption": "",
         "media_caption_color": "#ffffff",
         "media_type": "image",
@@ -236,8 +236,8 @@
         "text_Q7bnWr"
       ],
       "settings": {
-        "video": "shopify://files/videos/Untitled design (6).mp4",
-        "media_caption": "",
+        "video": "shopify://files/videos/Honey + Propolis.mp4",
+        "media_caption": "<p>Dr Carlyn Moyers</p>",
         "media_caption_color": "#ffffff",
         "media_type": "video",
         "height": "medium",

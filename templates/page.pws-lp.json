@@ -153,8 +153,9 @@
       "type": "image-banner",
       "settings": {
         "image": "shopify://shop_images/Screenshot_2025-04-18_at_4.12.01_PM.png",
+        "image_2": "shopify://shop_images/Screenshot_2025-04-18_at_4.12.01_PM.png",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "adapt",
         "show_desktop": false,
         "desktop_content_position": "middle-center",
         "show_text_box": false,

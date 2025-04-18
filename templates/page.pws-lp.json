@@ -79,7 +79,7 @@
         "media_caption": "",
         "media_caption_color": "#ffffff",
         "media_type": "image",
-        "height": "large",
+        "height": "adapt",
         "show_desktop": true,
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -125,31 +125,12 @@
             "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
-        },
-        "heading_LiLfYL": {
-          "type": "heading",
-          "settings": {
-            "heading": "Step 2: Vaginal Lubricant with Hyaluronic Acid",
-            "heading_size": "h3"
-          }
-        },
-        "text_cDGHR7": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Designed for internal use, this lubricant <strong>hydrates and cushions the vaginal walls</strong>—where dryness can cause painful friction during intimacy. Hyaluronic acid attracts and retains moisture, offering <strong>immediate comfort and long-term relief</strong> from painful penetration.</p>",
-            "text_size": "text-body",
-            "background_style": "solid",
-            "background_color": "#ffffff",
-            "bullets_to_checkmarks": false
-          }
         }
       },
       "block_order": [
         "heading_qLRkX8",
         "heading_bkcYcQ",
-        "text_HjBaWm",
-        "heading_LiLfYL",
-        "text_cDGHR7"
+        "text_HjBaWm"
       ],
       "settings": {
         "image": "shopify://shop_images/mm-intimate-glide.jpg",
@@ -205,8 +186,8 @@
         "video": "shopify://files/videos/Vulva Balm - PDP UGC.mp4",
         "media_caption": "",
         "media_caption_color": "#ffffff",
-        "media_type": "image",
-        "height": "adapt",
+        "media_type": "video",
+        "height": "large",
         "show_desktop": true,
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -265,8 +246,8 @@
         "video": "shopify://files/videos/3cc8a5c804a7f2ce1533f8fd46c2d47aaff8d1b1.mp4",
         "media_caption": "",
         "media_caption_color": "#ffffff",
-        "media_type": "image",
-        "height": "adapt",
+        "media_type": "video",
+        "height": "large",
         "show_desktop": true,
         "desktop_image_width": "medium",
         "layout": "image_first",

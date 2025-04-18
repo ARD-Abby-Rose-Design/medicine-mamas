@@ -126,23 +126,6 @@
             "bullets_to_checkmarks": false
           }
         },
-        "heading_aGBzxV": {
-          "type": "heading",
-          "settings": {
-            "heading": "Step 1: Vulvar Moisturizer (<strong>VMAGIC® Vulva Balm)</strong>",
-            "heading_size": "h3"
-          }
-        },
-        "text_he3A78": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Think of this as your <strong>daily defense</strong> against dryness, irritation, and itching around the vulva—the external skin that often becomes fragile and uncomfortable during menopause. This rich, organic balm <strong>soothes, protects, and deeply moisturizes</strong> to restore healthy, supple skin.</p>",
-            "text_size": "text-body",
-            "background_style": "solid",
-            "background_color": "#ffffff",
-            "bullets_to_checkmarks": false
-          }
-        },
         "heading_LiLfYL": {
           "type": "heading",
           "settings": {
@@ -165,8 +148,6 @@
         "heading_qLRkX8",
         "heading_bkcYcQ",
         "text_HjBaWm",
-        "heading_aGBzxV",
-        "text_he3A78",
         "heading_LiLfYL",
         "text_cDGHR7"
       ],
@@ -193,6 +174,116 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 0
+      }
+    },
+    "image_with_text_B3gzDk": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_7rBeij": {
+          "type": "heading",
+          "settings": {
+            "heading": "Step 1: Vulvar Moisturizer (<strong>VMAGIC® Vulva Balm)</strong>",
+            "heading_size": "h3"
+          }
+        },
+        "text_fXMcHE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Think of this as your <strong>daily defense</strong> against dryness, irritation, and itching around the vulva—the external skin that often becomes fragile and uncomfortable during menopause. This rich, organic balm <strong>soothes, protects, and deeply moisturizes</strong> to restore healthy, supple skin.</p>",
+            "text_size": "text-body",
+            "background_style": "solid",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7rBeij",
+        "text_fXMcHE"
+      ],
+      "settings": {
+        "video": "shopify://files/videos/Vulva Balm - PDP UGC.mp4",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_type": "image",
+        "height": "adapt",
+        "show_desktop": true,
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "collage_media_caption": "",
+        "collage_media_caption_color": "#ffffff",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_GtQKWg": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_D4pEHd": {
+          "type": "heading",
+          "settings": {
+            "heading": "Step 2: Vaginal Lubricant with Hyaluronic Acid",
+            "heading_size": "h3"
+          }
+        },
+        "text_XFbBWt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Designed for internal use, this lubricant <strong>hydrates and cushions the vaginal walls</strong>—where dryness can cause painful friction during intimacy. Hyaluronic acid attracts and retains moisture, offering <strong>immediate comfort and long-term relief</strong> from painful penetration.</p>",
+            "text_size": "text-body",
+            "background_style": "solid",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "button_nYwaRt": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_arrow": true,
+            "button_subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_D4pEHd",
+        "text_XFbBWt",
+        "button_nYwaRt"
+      ],
+      "settings": {
+        "video": "shopify://files/videos/3cc8a5c804a7f2ce1533f8fd46c2d47aaff8d1b1.mp4",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_type": "image",
+        "height": "adapt",
+        "show_desktop": true,
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "collage_media_caption": "",
+        "collage_media_caption_color": "#ffffff",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "image_with_text_gtPjF3": {
@@ -719,6 +810,8 @@
     "main",
     "image_with_text_WTwPgc",
     "image_with_text_zQnWfR",
+    "image_with_text_B3gzDk",
+    "image_with_text_GtQKWg",
     "image_with_text_gtPjF3",
     "image_with_text_pikH8p",
     "image_with_text_R3nh6Y",

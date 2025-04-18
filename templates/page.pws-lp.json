@@ -111,6 +111,13 @@
             "show_mobile": true
           }
         },
+        "heading_MCLpWt": {
+          "type": "heading",
+          "settings": {
+            "heading": "INSTANT RELIEF",
+            "heading_size": "h2"
+          }
+        },
         "text_V6U7FY": {
           "type": "text",
           "settings": {
@@ -134,6 +141,7 @@
       },
       "block_order": [
         "number_W8TkHX",
+        "heading_MCLpWt",
         "text_V6U7FY",
         "text_QqTxwU"
       ],

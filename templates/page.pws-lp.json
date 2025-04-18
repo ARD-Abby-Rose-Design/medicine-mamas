@@ -127,23 +127,12 @@
             "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
-        },
-        "text_QqTxwU": {
-          "type": "text",
-          "settings": {
-            "text": "<p>When paired with our ultra-hydrating, hyaluronic acid–infused <strong>intimate lubricant</strong>, you get a full-circle solution designed to restore confidence, pleasure, and ease.</p><p><strong>Your comfort is not negotiable.</strong> These results prove it’s within reach.</p>",
-            "text_size": "text-body",
-            "background_style": "none",
-            "background_color": "#ffffff",
-            "bullets_to_checkmarks": false
-          }
         }
       },
       "block_order": [
         "number_W8TkHX",
         "heading_MCLpWt",
-        "text_V6U7FY",
-        "text_QqTxwU"
+        "text_V6U7FY"
       ],
       "settings": {
         "video": "shopify://files/videos/Vulva Balm - PDP UGC.mp4",
@@ -182,10 +171,17 @@
             "show_mobile": true
           }
         },
+        "heading_6G78dz": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>INGREDIENTS YOU CAN TRUST</strong>",
+            "heading_size": "h2"
+          }
+        },
         "text_F6W3Ff": {
           "type": "text",
           "settings": {
-            "text": "<p>Our Intimate Glide lubricant and moisturizer can help you say <strong>goodbye to dryness and discomfort</strong> during intimacy.</p>",
+            "text": "<p>Your intimate skin is <strong>thinner, more delicate, and more sensitive</strong>—especially during and after menopause. That’s why we skip synthetic chemicals and fillers, and instead use <strong>pure, organic ingredients</strong> specifically chosen to nourish, protect, and soothe your most vulnerable skin.</p>",
             "text_size": "text-body-large",
             "background_style": "none",
             "background_color": "#ffffff",
@@ -195,16 +191,17 @@
         "text_X4wzQb": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_size": "text-body",
+            "text": "<ul><li>Organic Ingredients</li><li>Fragrance Free</li><li>Hormone Free</li><li>No Parabens</li><li>No Pthalates</li></ul>",
+            "text_size": "text-body-large",
             "background_style": "none",
-            "background_color": "#ffffff",
-            "bullets_to_checkmarks": false
+            "background_color": "#121212",
+            "bullets_to_checkmarks": true
           }
         }
       },
       "block_order": [
         "number_dddb46",
+        "heading_6G78dz",
         "text_F6W3Ff",
         "text_X4wzQb"
       ],

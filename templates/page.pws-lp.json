@@ -40,7 +40,7 @@
         "text_nwnVHY": {
           "type": "text",
           "settings": {
-            "text": "<p>5 Reasons why menopausal women everywhere are obsessed with this moisturizing duo</p>",
+            "text": "<p>Why menopausal women everywhere are obsessed with this moisturizing duo</p>",
             "text_size": "text-body-large",
             "background_style": "none",
             "background_color": "#ffffff",
@@ -75,7 +75,7 @@
         "text_MkaVME"
       ],
       "settings": {
-        "image": "shopify://shop_images/mm-intimate-glide.jpg",
+        "image": "shopify://shop_images/Untitled_design_1.jpg",
         "media_caption": "",
         "media_caption_color": "#ffffff",
         "media_type": "image",
@@ -97,6 +97,102 @@
         "mobile_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "image_with_text_zQnWfR": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_qLRkX8": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Bye Bye Dry:</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "heading_bkcYcQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong> Your New Intimate Care Power Duo</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_HjBaWm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>When it comes to relieving pain with intimacy, <strong>external and internal hydration work hand in hand.</strong> That’s why our bundle includes <strong>both</strong> a vulvar moisturizer and a vaginal lubricant—because you deserve <strong>complete comfort</strong>, not partial relief.</p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "heading_aGBzxV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Step 1: Vulvar Moisturizer (<strong>VMAGIC® Vulva Balm)</strong>",
+            "heading_size": "h3"
+          }
+        },
+        "text_he3A78": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Think of this as your <strong>daily defense</strong> against dryness, irritation, and itching around the vulva—the external skin that often becomes fragile and uncomfortable during menopause. This rich, organic balm <strong>soothes, protects, and deeply moisturizes</strong> to restore healthy, supple skin.</p>",
+            "text_size": "text-body",
+            "background_style": "solid",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "heading_LiLfYL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Step 2: Vaginal Lubricant with Hyaluronic Acid",
+            "heading_size": "h3"
+          }
+        },
+        "text_cDGHR7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Designed for internal use, this lubricant <strong>hydrates and cushions the vaginal walls</strong>—where dryness can cause painful friction during intimacy. Hyaluronic acid attracts and retains moisture, offering <strong>immediate comfort and long-term relief</strong> from painful penetration.</p>",
+            "text_size": "text-body",
+            "background_style": "solid",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_qLRkX8",
+        "heading_bkcYcQ",
+        "text_HjBaWm",
+        "heading_aGBzxV",
+        "text_he3A78",
+        "heading_LiLfYL",
+        "text_cDGHR7"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/mm-intimate-glide.jpg",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_type": "image",
+        "height": "adapt",
+        "show_desktop": true,
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "collage_media_caption": "",
+        "collage_media_caption_color": "#ffffff",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 0
       }
     },
     "image_with_text_gtPjF3": {
@@ -138,7 +234,7 @@
         "video": "shopify://files/videos/Vulva Balm - PDP UGC.mp4",
         "media_caption": "",
         "media_caption_color": "#ffffff",
-        "media_type": "video",
+        "media_type": "collage",
         "height": "large",
         "show_desktop": true,
         "desktop_image_width": "medium",
@@ -252,7 +348,7 @@
         "text_Q7bnWr": {
           "type": "text",
           "settings": {
-            "text": "<p>Our products are packed with organic, non-synthetic ingredients to soothe delicate skin and support skin elasticity.</p>",
+            "text": "<p>When it comes to intimate health, <strong>what your doctor recommends matters</strong>—and we’re proud to be the <strong>#1 doctor-recommended vulvar moisturizer</strong> on the market.</p>",
             "text_size": "text-body-large",
             "background_style": "none",
             "background_color": "#ffffff",
@@ -278,10 +374,11 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Frame_1000004913.jpg",
-        "media_caption": "",
+        "video": "shopify://files/videos/Untitled design (6).mp4",
+        "media_caption": "<p>Dr. Carolyn Moyers</p>",
         "media_caption_color": "#ffffff",
-        "media_type": "image",
-        "height": "adapt",
+        "media_type": "video",
+        "height": "large",
         "show_desktop": true,
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -290,7 +387,7 @@
         "desktop_content_padding_left": 36,
         "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
-        "color_scheme": "",
+        "color_scheme": "background-1",
         "collage_media_caption": "",
         "collage_media_caption_color": "#ffffff",
         "image_behavior": "none",
@@ -337,58 +434,6 @@
         "show_text_below": false
       }
     },
-    "image_with_text_zQnWfR": {
-      "type": "image-with-text",
-      "blocks": {
-        "number_aD7mP6": {
-          "type": "number",
-          "settings": {
-            "number": "4",
-            "number_bg_color": "#121212",
-            "show_desktop": true,
-            "show_mobile": true
-          }
-        },
-        "text_HjBaWm": {
-          "type": "text",
-          "settings": {
-            "text": "<p>With our <strong>clinically-tested, organic formulas</strong>, our products beat out the competition (easily).</p>",
-            "text_size": "text-body-large",
-            "background_style": "none",
-            "background_color": "#ffffff",
-            "bullets_to_checkmarks": false
-          }
-        }
-      },
-      "block_order": [
-        "number_aD7mP6",
-        "text_HjBaWm"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/Frame_1000004886.jpg",
-        "media_caption": "",
-        "media_caption_color": "#ffffff",
-        "media_type": "image",
-        "height": "adapt",
-        "show_desktop": true,
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "desktop_content_padding_left": 36,
-        "desktop_content_padding_right": 36,
-        "content_layout": "no-overlap",
-        "color_scheme": "",
-        "collage_media_caption": "",
-        "collage_media_caption_color": "#ffffff",
-        "image_behavior": "none",
-        "show_mobile": true,
-        "layout_mobile": "text_first",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
     "image_with_text_K74Aig": {
       "type": "image-with-text",
       "blocks": {
@@ -401,23 +446,42 @@
             "show_mobile": true
           }
         },
+        "heading_pTaVAU": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>You’re Not Alone—And You Don’t Have to Live with the Pain</strong>",
+            "heading_size": "h2"
+          }
+        },
         "text_84AgDH": {
           "type": "text",
           "settings": {
-            "text": "<p>Our customers swear by this duo for relief <strong>before, during,</strong> and <strong>after intimacy. </strong></p>",
+            "text": "<p><strong>Over 400,000 women</strong> have trusted us to help them feel like themselves again—comfortable, confident, and finally enjoying intimacy without pain. </p>",
             "text_size": "text-body-large",
             "background_style": "none",
             "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
+        },
+        "review_Pi66g4": {
+          "type": "review",
+          "settings": {
+            "review_product": "Product Name",
+            "review_name": "Sandy",
+            "review_title": "SO HELPFUL",
+            "review_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "show_desktop": true,
+            "show_mobile": true
+          }
         }
       },
       "block_order": [
         "number_pEij48",
-        "text_84AgDH"
+        "heading_pTaVAU",
+        "text_84AgDH",
+        "review_Pi66g4"
       ],
       "settings": {
-        "image": "shopify://shop_images/Untitled_design_1.jpg",
         "media_caption": "",
         "media_caption_color": "#ffffff",
         "media_type": "image",
@@ -454,16 +518,24 @@
             "show_mobile": true
           }
         },
+        "heading_tH8kkn": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>You’re Not Alone—And You Don’t Have to Live with the Pain</strong>",
+            "heading_size": "h2"
+          }
+        },
         "text_QbhCh8": {
           "type": "text",
           "settings": {
-            "text": "<p>Our customers swear by this duo for relief <strong>before, during,</strong> and <strong>after intimacy. </strong></p>",
+            "text": "<p><strong>Over 400,000 women</strong> have trusted us to help them feel like themselves again—comfortable, confident, and finally enjoying intimacy without pain.</p>",
             "text_style": "text-body-large"
           }
         }
       },
       "block_order": [
         "number_GE4wCY",
+        "heading_tH8kkn",
         "text_QbhCh8"
       ],
       "settings": {
@@ -646,12 +718,12 @@
   "order": [
     "main",
     "image_with_text_WTwPgc",
+    "image_with_text_zQnWfR",
     "image_with_text_gtPjF3",
     "image_with_text_pikH8p",
     "image_with_text_R3nh6Y",
     "image_banner_wcE9U3",
     "image_banner_jJXDdB",
-    "image_with_text_zQnWfR",
     "image_with_text_K74Aig",
     "rich_text_GbjdEL",
     "1744245464323bcf96",

@@ -102,15 +102,6 @@
     "image_with_text_gtPjF3": {
       "type": "image-with-text",
       "blocks": {
-        "number_W8TkHX": {
-          "type": "number",
-          "settings": {
-            "number": "1",
-            "number_bg_color": "#121212",
-            "show_desktop": true,
-            "show_mobile": true
-          }
-        },
         "heading_MCLpWt": {
           "type": "heading",
           "settings": {
@@ -130,7 +121,6 @@
         }
       },
       "block_order": [
-        "number_W8TkHX",
         "heading_MCLpWt",
         "text_V6U7FY"
       ],
@@ -162,15 +152,6 @@
     "image_with_text_pikH8p": {
       "type": "image-with-text",
       "blocks": {
-        "number_dddb46": {
-          "type": "number",
-          "settings": {
-            "number": "2",
-            "number_bg_color": "#121212",
-            "show_desktop": true,
-            "show_mobile": true
-          }
-        },
         "heading_6G78dz": {
           "type": "heading",
           "settings": {
@@ -200,16 +181,15 @@
         }
       },
       "block_order": [
-        "number_dddb46",
         "heading_6G78dz",
         "text_F6W3Ff",
         "text_X4wzQb"
       ],
       "settings": {
-        "image": "shopify://shop_images/Honey.jpg",
+        "image": "shopify://shop_images/Frame_1000004860.png",
         "media_caption": "",
         "media_caption_color": "#ffffff",
-        "media_type": "video",
+        "media_type": "image",
         "height": "medium",
         "show_desktop": true,
         "desktop_image_width": "medium",
@@ -233,15 +213,6 @@
     "image_with_text_R3nh6Y": {
       "type": "image-with-text",
       "blocks": {
-        "number_NCaCUg": {
-          "type": "number",
-          "settings": {
-            "number": "3",
-            "number_bg_color": "#121212",
-            "show_desktop": true,
-            "show_mobile": true
-          }
-        },
         "heading_Aripi3": {
           "type": "heading",
           "settings": {
@@ -258,27 +229,15 @@
             "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
-        },
-        "text_bMwBCe": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We know that the tissue surrounding the vulva is very sensitive, and <strong>our feminine care products are gentle</strong> <strong>help protect against irritation.</strong></p>",
-            "text_size": "text-body",
-            "background_style": "none",
-            "background_color": "#ffffff",
-            "bullets_to_checkmarks": false
-          }
         }
       },
       "block_order": [
-        "number_NCaCUg",
         "heading_Aripi3",
-        "text_Q7bnWr",
-        "text_bMwBCe"
+        "text_Q7bnWr"
       ],
       "settings": {
         "video": "shopify://files/videos/Untitled design (6).mp4",
-        "media_caption": "<p>Dr. Carolyn Moyers</p>",
+        "media_caption": "",
         "media_caption_color": "#ffffff",
         "media_type": "video",
         "height": "medium",
@@ -340,15 +299,6 @@
     "image_with_text_K74Aig": {
       "type": "image-with-text",
       "blocks": {
-        "number_pEij48": {
-          "type": "number",
-          "settings": {
-            "number": "5",
-            "number_bg_color": "#121212",
-            "show_desktop": true,
-            "show_mobile": true
-          }
-        },
         "heading_pTaVAU": {
           "type": "heading",
           "settings": {
@@ -379,7 +329,6 @@
         }
       },
       "block_order": [
-        "number_pEij48",
         "heading_pTaVAU",
         "text_84AgDH",
         "review_Pi66g4"
@@ -411,16 +360,6 @@
     "rich_text_GbjdEL": {
       "type": "rich-text",
       "blocks": {
-        "number_GE4wCY": {
-          "type": "number",
-          "settings": {
-            "number": "5",
-            "margin_bottom": -50,
-            "number_bg_color": "#121212",
-            "show_desktop": true,
-            "show_mobile": true
-          }
-        },
         "heading_tH8kkn": {
           "type": "heading",
           "settings": {
@@ -437,7 +376,6 @@
         }
       },
       "block_order": [
-        "number_GE4wCY",
         "heading_tH8kkn",
         "text_QbhCh8"
       ],

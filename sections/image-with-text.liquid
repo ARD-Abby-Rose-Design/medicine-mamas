@@ -33,7 +33,7 @@
   <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %} {% if section.settings.layout_mobile == 'text_first' %} image-with-text__grid--reverse-mobile{% endif %} ">
     <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
       <div
-        class="image-with-text__media image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
+        class="image-with-text__media image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank or section.settings.video != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
         {% if section.settings.height == 'adapt' and section.settings.image != blank and section.settings.media_type == 'image' %}
           style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
         {% endif %}
@@ -62,52 +62,52 @@
             {% when 'image' %}
               {{ section.settings.image | image_url: width: 1500 | image_tag: loading: 'lazy', sizes: sizes, widths: widths }}
             {% when 'video' %}
-              {{ section.settings.video | video_tag: image_size: '1100x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true, class: 'media-with-text__video js-player' }}
-              {% when 'collage' %}
-                <div class="image-with-text__collage">
-                  {% if section.settings.image != blank or section.settings.video != blank %}
-                    <div class="collage-item">
-                      <div class="collage-media">
-                        {% if section.settings.media_caption != blank %}
-                          <div class="collage-caption" style="color: {{ section.settings.media_caption_color }};">
-                            {{ section.settings.media_caption }}
-                          </div>
-                        {% endif %}
-                      {% if section.settings.image != blank and section.settings.video != blank %}
-                        {{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy' }}
-                        <div class="collage-hover-video">
-                          {{ section.settings.video | video_tag: image_size: '900x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
+              {{ section.settings.video | video_tag: image_size: '1500x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
+            {% when 'collage' %}
+              <div class="image-with-text__collage">
+                {% if section.settings.image != blank or section.settings.video != blank %}
+                  <div class="collage-item">
+                    <div class="collage-media">
+                      {% if section.settings.media_caption != blank %}
+                        <div class="collage-caption" style="color: {{ section.settings.media_caption_color }};">
+                          {{ section.settings.media_caption }}
                         </div>
-                      {% elsif section.settings.image != blank %}
-                        {{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy' }}
-                      {% elsif section.settings.video != blank %}
+                      {% endif %}
+                    {% if section.settings.image != blank and section.settings.video != blank %}
+                      {{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy' }}
+                      <div class="collage-hover-video">
                         {{ section.settings.video | video_tag: image_size: '900x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
+                      </div>
+                    {% elsif section.settings.image != blank %}
+                      {{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy' }}
+                    {% elsif section.settings.video != blank %}
+                      {{ section.settings.video | video_tag: image_size: '900x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
+                    {% endif %}
+                  </div>
+                </div>
+                {% endif %}
+                {% if section.settings.collage_image != blank or section.settings.collage_video != blank %}
+                  <div class="collage-item">
+                    <div class="collage-media">
+                      {% if section.settings.collage_media_caption != blank %}
+                        <div class="collage-caption" style="color: {{ section.settings.collage_media_caption_color }};">
+                          {{ section.settings.collage_media_caption }}
+                        </div>
+                      {% endif %}
+                      {% if section.settings.collage_image != blank and section.settings.collage_video != blank %}
+                        {{ section.settings.collage_image | image_url: width: 900 | image_tag: loading: 'lazy' }}
+                        <div class="collage-hover-video">
+                          {{ section.settings.collage_video | video_tag: image_size: '900x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
+                        </div>
+                      {% elsif section.settings.collage_image != blank %}
+                        {{ section.settings.collage_image | image_url: width: 900 | image_tag: loading: 'lazy' }}
+                      {% elsif section.settings.collage_video != blank %}
+                        {{ section.settings.collage_video | video_tag: image_size: '900x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
                       {% endif %}
                     </div>
                   </div>
-                  {% endif %}
-                  {% if section.settings.collage_image != blank or section.settings.collage_video != blank %}
-                    <div class="collage-item">
-                      <div class="collage-media">
-                        {% if section.settings.collage_media_caption != blank %}
-                          <div class="collage-caption" style="color: {{ section.settings.collage_media_caption_color }};">
-                            {{ section.settings.collage_media_caption }}
-                          </div>
-                        {% endif %}
-                        {% if section.settings.collage_image != blank and section.settings.collage_video != blank %}
-                          {{ section.settings.collage_image | image_url: width: 900 | image_tag: loading: 'lazy' }}
-                          <div class="collage-hover-video">
-                            {{ section.settings.collage_video | video_tag: image_size: '900x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
-                          </div>
-                        {% elsif section.settings.collage_image != blank %}
-                          {{ section.settings.collage_image | image_url: width: 900 | image_tag: loading: 'lazy' }}
-                        {% elsif section.settings.collage_video != blank %}
-                          {{ section.settings.collage_video | video_tag: image_size: '900x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
-                        {% endif %}
-                      </div>
-                    </div>
-                  {% endif %}
-                </div>
+                {% endif %}
+              </div>
           {% endcase %}
         {%- else -%}
           {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}

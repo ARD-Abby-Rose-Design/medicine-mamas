@@ -347,10 +347,10 @@
         "review_Pi66g4": {
           "type": "review",
           "settings": {
-            "review_product": "Product Name",
+            "review_product": "Inside & Out: Hydration Duo",
             "review_name": "Sandy",
-            "review_title": "SO HELPFUL",
-            "review_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "review_title": "Finally feel normal again!",
+            "review_text": "I like a lot of other women had no idea that the pain I was feeling during intercourse was due to menopause. I wasn’t sure what was going on other that the fact that it became so painful I didn’t want to do it anymore and my poor husband didn’t want to touch me for fear he would hurt me. These products were a game changer. I have been using for a week and it worked! I have finally been able to do the deed again and felt no pain, no tearing!",
             "show_desktop": true,
             "show_mobile": true
           }
@@ -421,26 +421,6 @@
         "full_width": true,
         "padding_top": 64,
         "padding_bottom": 0
-      }
-    },
-    "1744245464323bcf96": {
-      "type": "apps",
-      "blocks": {
-        "okendo_reviews_carousel_DVUx4A": {
-          "type": "shopify://apps/okendo/blocks/reviews-carousel/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "show_heading": false,
-            "heading": "",
-            "badge_link": "",
-            "product": "intimate-moisturizer-duo"
-          }
-        }
-      },
-      "block_order": [
-        "okendo_reviews_carousel_DVUx4A"
-      ],
-      "settings": {
-        "include_margins": true
       }
     },
     "custom_liquid_tn3UB9": {
@@ -599,7 +579,6 @@
     "image_banner_jJXDdB",
     "image_with_text_K74Aig",
     "rich_text_GbjdEL",
-    "1744245464323bcf96",
     "custom_liquid_tn3UB9",
     "rich_text_yieUGc",
     "featured_product_7Dexwj",

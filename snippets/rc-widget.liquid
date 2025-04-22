@@ -6,12 +6,10 @@
   >
     <div class="widget__template-radio hidden">
       <div class="widget__radio-wrapper">
-        
-          <div class="widget__radio subscription-radio {% if product.selected_or_first_available_variant.selling_plan_allocations.size == 0 %}hidden{% endif %}">
+          <div class="widget__radio subscription-radio">
             <div class="widget__radio-option-selector">
               <input id="selling_plan_subsave__{{ product.id }}" class="widget__radio-input" type="radio" name="selling_plan">
               <label for="selling_plan_subsave__{{ product.id }}" class="widget__radio-label">
-                
                 <span class="widget__radio-option-text">
                   <span class="option-text"></span>
                   <span class="option-discount"></span>

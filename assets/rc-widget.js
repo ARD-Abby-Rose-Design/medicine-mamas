@@ -10,6 +10,7 @@ class RechargeWidget extends HTMLElement {
       this.nextShipment;
       this.dropdownSelect = this.querySelector('dropdown-select');
       this.ulList = this.dropdownSelect.querySelector('ul[role="listbox"]');
+      this.shopifyVariants = JSON.parse(document.getElementById('ProductJson-shopify').textContent);
       this.initializeWidget();
   }
 
@@ -21,8 +22,6 @@ class RechargeWidget extends HTMLElement {
       this.widget = await recharge.cdn.getCDNWidgetSettings(this.productID);
       this.product = await recharge.cdn.getCDNProduct(this.productID);
       this.setVariables(document.querySelector(':root'))
-
-
 
       // if (this.widget.published)  {
           this.widgetTemplate = document.querySelector('.widget__template-radio');
@@ -114,10 +113,8 @@ class RechargeWidget extends HTMLElement {
       window.location = '/account'
   }
 
-  // Define an async function called renderWidget
   async renderWidget() {
 
-      // Assign several variables by destructuring from the instance object
       let widgetTemplate = this.widgetTemplate,
           variantID = this.variantID,
           widget = this.widget,
@@ -129,21 +126,24 @@ class RechargeWidget extends HTMLElement {
           compareAtPrice = sellingVariant.prices.compare_at_price,
           subscribePrice = sellingVariant.prices.discounted_price;
 
+      const shopifyVariant = this.shopifyVariants.find(v => v.id === variantID);
+      const hasSellingPlans = shopifyVariant?.selling_plan_allocations?.length > 0;
 
-      // Check if the widget is set to select subscription as the default choice and update the price accordingly
+      if (!hasSellingPlans) {
+        document.querySelector('.widget').classList.add('visually-hidden');
+      }
+
       if (this.widget.select_subscription_first) {
           sellingPlan = sellingVariant.selling_plan_allocations[0].selling_plan_id;
           price = subscribePrice;
       }
 
-      // Determine the correct price element based on whether there is a compare-at price
       if (compareAtPrice) {
           priceEl = document.querySelector('.price__sale .price-item.price-item--sale');
       } else {
           priceEl = document.querySelector('.price__regular .price-item.price-item--regular')
       }
 
-      // Create an input element for the selling plan and add it to the product form
       let sellingPlanInput = document.createElement('input');
       sellingPlanInput.classList.add('selling-plan-input')
       sellingPlanInput.name = 'selling_plan';
@@ -151,7 +151,6 @@ class RechargeWidget extends HTMLElement {
       sellingPlanInput.value = sellingPlan;
       document.querySelector('.product-form form').appendChild(sellingPlanInput)
 
-      // Render radio buttons or checkbox depending on widget template type and product subscription availability
       if (widget.widget_template_type != 'checkbox') {
           if (!prod.is_subscription_only) {
               switch(widget.select_subscription_first) {
@@ -167,23 +166,18 @@ class RechargeWidget extends HTMLElement {
           } else {
               this.renderSubscriptionRadio(sellingVariant, widgetTemplate);
           }
-          // Add change event listeners to the variant id input and update the widget when the variant changes
-          document.querySelector('.product-variant-id').addEventListener('change', this.updateRadioWidget.bind(this, widgetTemplate));
+          document.querySelector('input[name="id"]').addEventListener('change', this.updateRadioWidget.bind(this, widgetTemplate));
       } else {
           this.renderSubscriptionCheckbox(sellingVariant, widgetTemplate);
-          // Add change event listeners to the variant id input and update the widget when the variant changes
           document.querySelector('.product-variant-id').addEventListener('change', this.updateCheckboxWidget.bind(this, widgetTemplate));
       }
 
-      // Update the product price with the correct price
       this.updatePrice(price, subscribePrice, compareAtPrice);
 
-      // Render subscription details if necessary
       if (widget.show_subscription_details) {
           this.renderDetails();
       }
 
-      // Remove the hidden class from the widget element
       document.querySelector('.widget').classList.remove('hidden');
   }
 
@@ -395,9 +389,8 @@ class RechargeWidget extends HTMLElement {
       }
   }
 
-  // update radios
   updateRadioWidget() {
-      let prod =  this.product,
+      let prod = this.product,
           variantID = Number(document.querySelector('.product-variant-id').value),
           sellingVariant = this.getSellingVariant(variantID),
           priceContainer = document.querySelector('.price'),
@@ -410,8 +403,24 @@ class RechargeWidget extends HTMLElement {
           oneTimeRadio = widgetTemplate.querySelector('.one-time-radio .widget__radio-input'),
           sellingPlanInput = document.querySelector('.product-form form .selling-plan-input'),
           sellingPlanSelect = this.querySelector('.selling-plan-group__select');
-          
-      priceContainer.classList.add('recharge-price-modifier');
+
+        const shopifyVariant = this.shopifyVariants.find(v => v.id === variantID);
+        const hasSellingPlans = shopifyVariant?.selling_plan_allocations?.length > 0;
+        console.log('hasSellingPlans', hasSellingPlans);
+
+        if (!hasSellingPlans) {
+            document.querySelector('.widget').classList.add('visually-hidden');
+            document.querySelector('.product-form form .selling-plan-input').value = '';
+            return;
+        } else {
+            document.querySelector('.widget').classList.remove('visually-hidden');
+        }
+
+        
+
+      if (priceContainer) {
+        priceContainer.classList.add('recharge-price-modifier');
+      }
 
       sellingPlanSelect.innerHTML = ''
 
@@ -478,8 +487,12 @@ class RechargeWidget extends HTMLElement {
     } else if (selected === 'subscription') {
       newPrice = subscribePrice;
     }
-    
-    addButtonPriceEl.innerText = '$' + newPrice;
+
+    if (selected === 'one-time' && compareAtPrice && compareAtPrice > price) {
+      addButtonPriceEl.innerHTML = `<span><s>$${compareAtPrice}</s></span><span> $${price}</span>`;
+    } else {
+      addButtonPriceEl.innerHTML = `$${newPrice}`;
+    }
   }
 
   renderDetails() {

@@ -88,8 +88,12 @@
             </span>
             <span class="product-form__submit--dash">-</span>
             <span id="price-{{ section_id }}" class="product-form__submit--price">
-              
-            {{ product.selected_or_first_available_variant.price | money }}
+            {% if product.selected_or_first_available_variant.selling_plan_allocations.size < 1 %}
+              <span><s>{{ product.selected_or_first_available_variant.compare_at_price | money }}</s></span>
+              <span> {{ product.selected_or_first_available_variant.price | money }}</span>
+            {% else %}
+              {{ product.selected_or_first_available_variant.price | money }}
+            {% endif %}
             </span>
             <div class="loading-overlay__spinner hidden">
               <svg

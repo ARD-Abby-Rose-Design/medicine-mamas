@@ -149,7 +149,7 @@ recharge-widget {
 }
 
 .widget__radio + .widget__radio {
-  margin-top: 2rem;
+  margin-top: 2rem !important;
 }
 
 .widget__radio-label {

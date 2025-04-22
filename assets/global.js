@@ -1101,7 +1101,7 @@ class VariantSelects extends HTMLElement {
     const sectionId = this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section;
 
     const fetchUrl = `${this.dataset.url}?variant=${requestedVariantId}&section_id=${
-      this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section
+      sectionId
     }`;
 
 

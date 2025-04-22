@@ -236,7 +236,7 @@
             {%- when 'variant_picker' -%}
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id, picker_type: block.settings.picker_type %}
             {%- when 'buy_buttons' -%}
-              {% render 'rc-widget', product: product %}
+                {% render 'rc-widget', product: product %}
               <div class="quantity-and-buttons">
                 {%- render 'product-quantity-input', product: product, product_form_id: product_form_id -%}
                 {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup-avai_availability: true -%}

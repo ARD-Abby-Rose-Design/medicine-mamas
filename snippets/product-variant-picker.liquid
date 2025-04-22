@@ -29,7 +29,7 @@
           {% render 'product-variant-options', product: product, option: option, block: block, picker_type: picker_type %}
         </fieldset>
       {%- endfor -%}
-      <script type="application/json">
+      <script type="application/json" id="ProductJson-shopify">
         {{ product.variants | json }}
       </script>
     </variant-radios>
@@ -63,7 +63,7 @@
         </div>
       {%- endfor -%}
 
-      <script type="application/json">
+      <script type="application/json" id="ProductJson-shopify">
         {{ product.variants | json }}
       </script>
     </variant-selects>

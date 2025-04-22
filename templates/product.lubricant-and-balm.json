@@ -243,6 +243,8 @@
         "heading_hMyykH"
       ],
       "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "inverse",
@@ -266,6 +268,8 @@
           "settings": {
             "text": "<p>Intimate Glide combats painful intercourse by enhancing lubrication, reducing dryness, and preventing further skin irritation. Say goodbye to intimate dryness and hello to long-lasting moisture.</p>",
             "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
         }
@@ -276,16 +280,29 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Hero_Resized.png",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#FFFFFF",
+        "media_caption_position": "top-left",
         "media_type": "image",
         "height": "adapt",
+        "show_desktop": true,
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
         "color_scheme": "",
+        "collage_media_caption": "",
+        "collage_media_caption_color": "#ffffff",
         "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
         "mobile_content_alignment": "left",
+        "overlay_caption_position_mobile": "top-left",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -305,6 +322,8 @@
           "settings": {
             "text": "<p>VMAGIC® Vulva Balm can help to soften and hydrate delicate vulvar tissues making intimacy a more enjoyable time.</p>",
             "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
         }
@@ -315,16 +334,29 @@
       ],
       "settings": {
         "image": "shopify://shop_images/medicine-mama-vulva-balm-1_28e24218-564c-4a38-a454-7e2506d35376.jpg",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#FFFFFF",
+        "media_caption_position": "top-left",
         "media_type": "image",
         "height": "adapt",
+        "show_desktop": true,
         "desktop_image_width": "small",
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
         "color_scheme": "",
+        "collage_media_caption": "",
+        "collage_media_caption_color": "#ffffff",
         "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
         "mobile_content_alignment": "left",
+        "overlay_caption_position_mobile": "top-left",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -338,7 +370,10 @@
             "title": "Free Shipping",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "product": "",
+            "product_badge_color": "#FCF7F0",
+            "product_benefits": ""
           }
         },
         "column-1": {
@@ -347,7 +382,10 @@
             "title": "Hassle-Free Exchanges",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "product": "",
+            "product_badge_color": "#FCF7F0",
+            "product_benefits": ""
           }
         }
       },
@@ -359,11 +397,13 @@
       "settings": {
         "title": "",
         "heading_size": "h1",
+        "heading_alignment": "",
         "text": "",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 2,
         "column_alignment": "left",
+        "border_style": "none",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
@@ -507,6 +547,8 @@
           "settings": {
             "text": "<p>Meet Dr. Clare Bertucio; mother, wife, physician of 20+ years, fierce women’s health advocate and now CEO. With Dr. Clare, no question is too bold or too taboo. She’s working to build a more informed, confident, and liberated female community. Join in the conversation, embrace your Vulva, and be a part of this revolutionary journey that Medicine Mama is leading. Go ahead #askmedmama.</p>",
             "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
         },
@@ -515,7 +557,8 @@
           "settings": {
             "button_label": "Learn More",
             "button_link": "https://medicinemama.com/pages/about",
-            "button_arrow": true
+            "button_arrow": true,
+            "button_subtitle": ""
           }
         }
       },
@@ -528,27 +571,83 @@
       "settings": {
         "image": "shopify://shop_images/vulvavsvagina.jpg",
         "video": "shopify://files/videos/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#FFFFFF",
+        "media_caption_position": "top-left",
         "media_type": "video",
         "height": "small",
+        "show_desktop": true,
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
         "color_scheme": "",
+        "collage_media_caption": "",
+        "collage_media_caption_color": "#ffffff",
         "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
         "mobile_content_alignment": "left",
+        "overlay_caption_position_mobile": "top-left",
         "padding_top": 36,
         "padding_bottom": 64
       }
     },
-    "339a2a23-2076-4857-bb07-eaed9749925f": {
+    "rich_text_daTrVp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_V7ttmX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Reviews",
+            "heading_size": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "heading_V7ttmX"
+      ],
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "inverse",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "174528530441f553c0": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_3nQkiU": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_3nQkiU"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_liquid_BYFEeU": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{% render 'okendo-reviews-widget', product: product %}",
-        "color_scheme": "inverse",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "custom_liquid": "<style>\n.oke-w-reviews-list-item {\nbackground-color: white;\nborder-radius: 10px;\nmargin-bottom: 10px;\n\n@media screen and (max-width: 750px) {\n\n.oke-w-reviewSplit-main {\nflex-direction: row !important;\njustify-content: space-between !important;\ngap: 1.4rem !important;\npadding: 1.4rem !important;\n}\n\n.oke-w-reviewSplit-mid {\nmargin-top: 0px !important;\nwidth: 75% !important;\ntext-align: left !important;\n\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "83437bf3-3644-46eb-abaf-c2b104a9887f": {
@@ -574,7 +673,9 @@
     "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa",
     "c3a50a1b-b9e4-4730-8667-125f047ed335",
     "44e52141-129c-4172-8099-dc699805e02c",
-    "339a2a23-2076-4857-bb07-eaed9749925f",
+    "rich_text_daTrVp",
+    "174528530441f553c0",
+    "custom_liquid_BYFEeU",
     "83437bf3-3644-46eb-abaf-c2b104a9887f"
   ]
 }

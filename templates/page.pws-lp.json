@@ -75,7 +75,7 @@
         "text_MkaVME"
       ],
       "settings": {
-        "image": "shopify://shop_images/Untitled_design_1.jpg",
+        "image": "shopify://shop_images/mm-intimate-glide.jpg",
         "media_caption": "<p>30-Day Risk-Free Guarantee</p>",
         "media_caption_color": "#121212",
         "media_caption_bg": "solid",
@@ -152,7 +152,7 @@
       ],
       "settings": {
         "video": "shopify://files/videos/Copy of Untitled (1080 × 1350 px) (1080 × 1920 px) (1200 x 1200 px) (1).mp4",
-        "media_caption": "",
+        "media_caption": "<p>VMAGIC® Vulva Balm</p>",
         "media_caption_color": "#ffffff",
         "media_caption_bg": "none",
         "media_caption_bg_color": "#000000",
@@ -177,25 +177,6 @@
         "overlay_caption_position_mobile": "top-left",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "image_banner_QFMDAr": {
-      "type": "image-banner",
-      "settings": {
-        "image": "shopify://shop_images/Screenshot_2025-04-18_at_4.12.01_PM.png",
-        "image_2": "shopify://shop_images/Screenshot_2025-04-18_at_4.12.01_PM.png",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "show_desktop": false,
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "show_mobile": true,
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
       }
     },
     "image_with_text_pikH8p": {
@@ -255,8 +236,8 @@
     "image_banner_wcE9U3": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify://shop_images/Frame_1000004860.png",
-        "image_2": "shopify://shop_images/Frame_1000004860.png",
+        "image": "shopify://shop_images/HONEY.png",
+        "image_2": "shopify://shop_images/Copy_of_HONEY.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "show_desktop": false,
@@ -290,22 +271,11 @@
             "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
-        },
-        "text_9rMAQD": {
-          "type": "text",
-          "settings": {
-            "text": "<p>\"We love this product! My patients use and adore it. It's organic and non-irritating\" </p><p>- Dr. Carolyn Moyers, </p><p>Board Certified OBGYN</p>",
-            "text_size": "text-body-large",
-            "background_style": "solid",
-            "background_color": "#ffffff",
-            "bullets_to_checkmarks": false
-          }
         }
       },
       "block_order": [
         "heading_Aripi3",
-        "text_Q7bnWr",
-        "text_9rMAQD"
+        "text_Q7bnWr"
       ],
       "settings": {
         "video": "shopify://files/videos/Honey + Propolis (1).mp4",
@@ -339,7 +309,7 @@
     "image_banner_jJXDdB": {
       "type": "image-banner",
       "settings": {
-        "image_2": "shopify://shop_images/medicine-mama-vulva-balm-1_28e24218-564c-4a38-a454-7e2506d35376.jpg",
+        "image_2": "shopify://shop_images/Others.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "show_desktop": false,
@@ -392,6 +362,7 @@
         "review_Pi66g4"
       ],
       "settings": {
+        "image": "shopify://shop_images/Untitled_design_1.jpg",
         "media_caption": "",
         "media_caption_color": "#ffffff",
         "media_caption_bg": "none",
@@ -622,7 +593,6 @@
     "main",
     "image_with_text_WTwPgc",
     "image_with_text_gtPjF3",
-    "image_banner_QFMDAr",
     "image_with_text_pikH8p",
     "image_banner_wcE9U3",
     "image_with_text_R3nh6Y",

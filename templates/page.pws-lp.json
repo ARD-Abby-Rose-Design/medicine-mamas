@@ -231,7 +231,7 @@
         "media_caption_bg_color": "#000000",
         "media_caption_position": "top-left",
         "media_type": "image",
-        "height": "medium",
+        "height": "adapt",
         "show_desktop": true,
         "desktop_image_width": "medium",
         "layout": "text_first",

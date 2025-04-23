@@ -248,7 +248,7 @@
         "image": "shopify://shop_images/HONEY_1.jpg",
         "image_2": "shopify://shop_images/Copy_of_HONEY_1.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "adapt",
+        "image_height": "medium",
         "show_desktop": false,
         "desktop_content_position": "middle-center",
         "show_text_box": true,

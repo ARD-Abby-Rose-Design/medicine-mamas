@@ -323,7 +323,7 @@
       "settings": {
         "image_2": "shopify://shop_images/Others_1200_x_1200_px.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "large",
+        "image_height": "medium",
         "show_desktop": false,
         "desktop_content_position": "middle-center",
         "show_text_box": true,

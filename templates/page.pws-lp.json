@@ -246,7 +246,7 @@
       "type": "image-banner",
       "settings": {
         "image": "shopify://shop_images/HONEY.png",
-        "image_2": "shopify://shop_images/Copy_of_HONEY.png",
+        "image_2": "shopify://shop_images/Copy_of_HONEY_1.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "show_desktop": false,

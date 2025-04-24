@@ -17,6 +17,16 @@
     {% endif %}
   }
 
+  #ImageWithText--{{ section.id }} .collage-caption {
+    color: {{ section.settings.collage_media_caption_color }};
+    {% if section.settings.collage_media_caption_bg == 'solid' %}
+      background-color: {{ section.settings.collage_media_caption_bg_color }};
+      padding: 0.4rem 0.6rem;
+      border-radius: 0.8rem;
+      opacity: 0.7;
+    {% endif %}
+  }
+
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
@@ -38,60 +48,60 @@
 
 {% assign scheme1 = settings.color_schemes | first %}
 
-<div id="ImageWithText--{{ section.id }}" class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.show_mobile == false %} medium-hide small-hide{% endif %}{% if section.settings.show_desktop == false %} medium-up-hide large-up-hide{% endif %}{% if section.settings.show_desktop == false %} hide-desktop{% endif %}">
+<div id="ImageWithText--{{ section.id }}" class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.show_mobile == false %} medium-hide small-hide{% endif %}{% if section.settings.show_desktop == false %} medium-up-hide large-up-hide hide-desktop{% endif %}">
   <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %} {% if section.settings.layout_mobile == 'text_first' %} image-with-text__grid--reverse-mobile{% endif %} ">
     <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
       <div
         class="image-with-text__media image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank or section.settings.video != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
-        {% if section.settings.height == 'adapt' and section.settings.video != blank and section.settings.media_type == 'collage' %}
+        {% if section.settings.height == 'adapt' and section.settings.image != blank %}
           style="padding-bottom: 100%;"
         {% endif %}
       >
         {%- if section.settings.image != blank or section.settings.video != blank -%}
-            <div class="image-with-text__collage">
-              {% if section.settings.image != blank or section.settings.video != blank %}
-                <div class="collage-item">
-                  <div class="collage-media">
-                    {% if section.settings.media_caption != blank %}
-                      <div class="media-caption media-caption--{{ section.settings.media_caption_position }} media-caption-mobile--{{ section.settings.overlay_caption_position_mobile }}">
-                        {{ section.settings.media_caption }}
-                      </div>
-                    {% endif %}
-                  {% if section.settings.image != blank and section.settings.video != blank %}
-                    {{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy' }}
-                    <div class="collage-hover-video">
-                      {{ section.settings.video | video_tag: image_size: '900x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
+          <div class="image-with-text__collage">
+            {% if section.settings.image != blank or section.settings.video != blank %}
+              <div class="collage-item">
+                <div class="collage-media">
+                  {% if section.settings.media_caption != blank %}
+                    <div class="media-caption media-caption--{{ section.settings.media_caption_position }} media-caption-mobile--{{ section.settings.overlay_caption_position_mobile }}">
+                      {{ section.settings.media_caption }}
                     </div>
-                  {% elsif section.settings.image != blank %}
-                    {{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy' }}
-                  {% elsif section.settings.video != blank %}
+                  {% endif %}
+                {% if section.settings.image != blank and section.settings.video != blank %}
+                  {{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy' }}
+                  <div class="collage-hover-video">
                     {{ section.settings.video | video_tag: image_size: '900x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
+                  </div>
+                {% elsif section.settings.image != blank %}
+                  {{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy' }}
+                {% elsif section.settings.video != blank %}
+                  {{ section.settings.video | video_tag: image_size: '900x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
+                {% endif %}
+              </div>
+            </div>
+            {% endif %}
+            {% if section.settings.collage_image != blank or section.settings.collage_video != blank %}
+              <div class="collage-item">
+                <div class="collage-media">
+                  {% if section.settings.collage_media_caption != blank %}
+                    <div class="collage-caption media-caption--{{ section.settings.collage_media_caption_position }} media-caption-mobile--{{ section.settings.collage_media_caption_position_mobile}}">
+                      {{ section.settings.collage_media_caption }}
+                    </div>
+                  {% endif %}
+                  {% if section.settings.collage_image != blank and section.settings.collage_video != blank %}
+                    {{ section.settings.collage_image | image_url: width: 900 | image_tag: loading: 'lazy' }}
+                    <div class="collage-hover-video">
+                      {{ section.settings.collage_video | video_tag: image_size: '900x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
+                    </div>
+                  {% elsif section.settings.collage_image != blank %}
+                    {{ section.settings.collage_image | image_url: width: 900 | image_tag: loading: 'lazy' }}
+                  {% elsif section.settings.collage_video != blank %}
+                    {{ section.settings.collage_video | video_tag: image_size: '900x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
                   {% endif %}
                 </div>
               </div>
-              {% endif %}
-              {% if section.settings.collage_image != blank or section.settings.collage_video != blank %}
-                <div class="collage-item">
-                  <div class="collage-media">
-                    {% if section.settings.collage_media_caption != blank %}
-                      <div class="collage-caption" style="color: {{ section.settings.collage_media_caption_color }};">
-                        {{ section.settings.collage_media_caption }}
-                      </div>
-                    {% endif %}
-                    {% if section.settings.collage_image != blank and section.settings.collage_video != blank %}
-                      {{ section.settings.collage_image | image_url: width: 900 | image_tag: loading: 'lazy' }}
-                      <div class="collage-hover-video">
-                        {{ section.settings.collage_video | video_tag: image_size: '900x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
-                      </div>
-                    {% elsif section.settings.collage_image != blank %}
-                      {{ section.settings.collage_image | image_url: width: 900 | image_tag: loading: 'lazy' }}
-                    {% elsif section.settings.collage_video != blank %}
-                      {{ section.settings.collage_video | video_tag: image_size: '900x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
-                    {% endif %}
-                  </div>
-                </div>
-              {% endif %}
-            </div>
+            {% endif %}
+          </div>
         {%- else -%}
           {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
@@ -291,6 +301,10 @@
   },
   "settings": [
     {
+      "type": "header",
+      "content": "First frame"
+    },
+    {
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.image-with-text.settings.image.label"
@@ -358,26 +372,134 @@
       "default": "top-left",
       "label": "Overlay caption position"
     },
-
     {
       "type": "select",
-      "id": "media_type",
+      "id": "overlay_caption_position_mobile",
       "options": [
         {
-          "value": "image",
-          "label": "Image"
+          "value": "top-left",
+          "label": "Top left"
         },
         {
-          "value": "video",
-          "label": "Video"
+          "value": "top-right",
+          "label": "Top right"
         },
         {
-          "value": "collage",
-          "label": "Collage"
+          "value": "bottom-left",
+          "label": "Bottom left"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Bottom right"
         }
       ],
-      "default": "image",
-      "label": "Media type"
+      "default": "top-left",
+      "label": "Overlay caption position - mobile"
+    },
+    {
+      "type": "header",
+      "content": "Second frame"
+    },
+    {
+      "type": "image_picker",
+      "id": "collage_image",
+      "label": "Image"
+    },
+    {
+      "type": "video",
+      "id": "collage_video",
+      "label": "Video"
+    },
+    {
+      "type": "richtext",
+      "id": "collage_media_caption",
+      "label": "Overlay caption"
+    },
+    {
+      "type": "color",
+      "id": "collage_media_caption_color",
+      "label": "Overlay caption color",
+      "default": "#ffffff" 
+    },
+    {
+      "type": "select",
+      "id": "collage_media_caption_bg",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "solid",
+          "label": "Solid"
+        }
+      ],
+      "default": "none",
+      "label": "Overlay caption background"
+    },
+    {
+      "type": "color",
+      "id": "collage_media_caption_bg_color",
+      "label": "Overlay caption background color",
+      "default": "#FFFFFF" 
+    },
+    {
+      "type": "select",
+      "id": "collage_media_caption_position",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "Top left"
+        },
+        {
+          "value": "top-right",
+          "label": "Top right"
+        },
+        {
+          "value": "bottom-left",
+          "label": "Bottom left"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Bottom right"
+        }
+      ],
+      "default": "top-left",
+      "label": "Overlay caption position"
+    },
+    {
+      "type": "select",
+      "id": "collage_media_caption_position_mobile",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "Top left"
+        },
+        {
+          "value": "top-right",
+          "label": "Top right"
+        },
+        {
+          "value": "bottom-left",
+          "label": "Bottom left"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Bottom right"
+        }
+      ],
+      "default": "top-left",
+      "label": "Overlay caption position - mobile"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_desktop",
+      "label": "Show on Desktop",
+      "default": true  
     },
     {
       "type": "select",
@@ -401,14 +523,9 @@
         }
       ],
       "default": "adapt",
-      "label": "t:sections.image-with-text.settings.height.label"
+      "label": "Media height"
     },
-    {
-      "type": "checkbox",
-      "id": "show_desktop",
-      "label": "Show on Desktop",
-      "default": true  
-    },
+
     {
       "type": "select",
       "id": "desktop_image_width",
@@ -531,33 +648,6 @@
     },
     {
       "type": "header",
-      "content": "Collage media"
-    },
-    {
-      "type": "image_picker",
-      "id": "collage_image",
-      "label": "Collage image",
-      "info": "If media type is set to collage, shows in second position"
-    },
-    {
-      "type": "video",
-      "id": "collage_video",
-      "label": "Collage video",
-      "info": "If media type is set to collage, shows in second position"
-    },
-    {
-      "type": "richtext",
-      "id": "collage_media_caption",
-      "label": "Overlay caption"
-    },
-    {
-      "type": "color",
-      "id": "collage_media_caption_color",
-      "label": "Overlay caption color",
-      "default": "#ffffff" 
-    },
-    {
-      "type": "header",
       "content": "t:sections.all.animation.content"
     },
     {
@@ -626,30 +716,7 @@
       "default": "left",
       "label": "t:sections.image-with-text.settings.mobile_content_alignment.label"
     },
-    {
-      "type": "select",
-      "id": "overlay_caption_position_mobile",
-      "options": [
-        {
-          "value": "top-left",
-          "label": "Top left"
-        },
-        {
-          "value": "top-right",
-          "label": "Top right"
-        },
-        {
-          "value": "bottom-left",
-          "label": "Bottom left"
-        },
-        {
-          "value": "bottom-right",
-          "label": "Bottom right"
-        }
-      ],
-      "default": "top-left",
-      "label": "Overlay caption position"
-    },
+    
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"

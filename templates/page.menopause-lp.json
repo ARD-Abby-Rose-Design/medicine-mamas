@@ -81,8 +81,6 @@
         "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
         "color_scheme": "",
-        "collage_media_caption": "",
-        "collage_media_caption_color": "#ffffff",
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
@@ -151,17 +149,17 @@
         "padding_bottom": 0
       }
     },
-    "image_with_text_w9pkAa": {
-      "type": "image-with-text",
+    "collage_with_text_NeRYCB": {
+      "type": "collage-with-text",
       "blocks": {
-        "heading_cHFgXb": {
+        "heading_DDnQx3": {
           "type": "heading",
           "settings": {
             "heading": "VMAGIC® Vulva Balm + Lips Stick",
             "heading_size": "h2"
           }
         },
-        "text_UDXNPF": {
+        "text_tztrQe": {
           "type": "text",
           "settings": {
             "text": "<p><strong>Helps alleviate dryness</strong> and <strong>pain with sex</strong> in the vulva, especially during (peri)menopause, by restoring moisture and elasticity.</p>",
@@ -171,7 +169,7 @@
             "bullets_to_checkmarks": false
           }
         },
-        "results_MVDRTA": {
+        "results_A6XBN6": {
           "type": "results",
           "settings": {
             "result_number1": "100%",
@@ -186,9 +184,9 @@
         }
       },
       "block_order": [
-        "heading_cHFgXb",
-        "text_UDXNPF",
-        "results_MVDRTA"
+        "heading_DDnQx3",
+        "text_tztrQe",
+        "results_A6XBN6"
       ],
       "settings": {
         "image": "shopify://shop_images/mm-collage2-1-image.jpg",
@@ -198,9 +196,17 @@
         "media_caption_bg": "none",
         "media_caption_bg_color": "#ffffff",
         "media_caption_position": "top-left",
-        "media_type": "collage",
-        "height": "adapt",
+        "overlay_caption_position_mobile": "top-left",
+        "collage_image": "shopify://shop_images/mm-collage2-image.png",
+        "collage_video": "shopify://files/videos/mm-collage2-video.mp4",
+        "collage_media_caption": "<p><strong>VMAGIC® Lips Stick<br/></strong>(for on-the-go)</p>",
+        "collage_media_caption_color": "#121212",
+        "collage_media_caption_bg": "none",
+        "collage_media_caption_bg_color": "#ffffff",
+        "collage_media_caption_position": "top-left",
+        "collage_media_caption_position_mobile": "top-left",
         "show_desktop": true,
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
@@ -209,17 +215,12 @@
         "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
         "color_scheme": "",
-        "collage_image": "shopify://shop_images/mm-collage2-image.png",
-        "collage_video": "shopify://files/videos/mm-collage2-video.mp4",
-        "collage_media_caption": "<p><strong>VMAGIC® Lips Stick<br/></strong>(for on-the-go)</p>",
-        "collage_media_caption_color": "#121212",
         "image_behavior": "none",
         "show_mobile": true,
-        "layout_mobile": "text_first",
+        "layout_mobile": "image_first",
         "mobile_content_alignment": "center",
-        "overlay_caption_position_mobile": "top-left",
-        "padding_top": 40,
-        "padding_bottom": 24
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "results_HLPkzY": {
@@ -257,17 +258,17 @@
         "show_mobile": true
       }
     },
-    "image_with_text_Q49KMU": {
-      "type": "image-with-text",
+    "collage_with_text_dJe3iH": {
+      "type": "collage-with-text",
       "blocks": {
-        "heading_F6BPhf": {
+        "heading_8cLzjK": {
           "type": "heading",
           "settings": {
             "heading": "VMAGIC® Vulva Wash",
             "heading_size": "h2"
           }
         },
-        "text_m8cUbC": {
+        "text_BXAAzQ": {
           "type": "text",
           "settings": {
             "text": "<p>An all natural, fragrance-free cleanser that <strong>helps support pH balance  while neutralizing odor</strong>. Hydration at its finest, without ever stripping the skin.</p>",
@@ -277,7 +278,7 @@
             "bullets_to_checkmarks": false
           }
         },
-        "review_eTjVTK": {
+        "review_AJMG7M": {
           "type": "review",
           "settings": {
             "review_product": "VMAGIC® VULVA WASH",
@@ -290,9 +291,9 @@
         }
       },
       "block_order": [
-        "heading_F6BPhf",
-        "text_m8cUbC",
-        "review_eTjVTK"
+        "heading_8cLzjK",
+        "text_BXAAzQ",
+        "review_AJMG7M"
       ],
       "settings": {
         "image": "shopify://shop_images/mm-collage-image.jpg",
@@ -300,11 +301,18 @@
         "media_caption": "<p><strong>VMAGIC® Vulva Wash</strong></p>",
         "media_caption_color": "#ffffff",
         "media_caption_bg": "none",
-        "media_caption_bg_color": "#ffffff",
+        "media_caption_bg_color": "#FFFFFF",
         "media_caption_position": "top-left",
-        "media_type": "collage",
-        "height": "adapt",
+        "overlay_caption_position_mobile": "top-left",
+        "collage_video": "shopify://files/videos/mm-collage-video.mp4",
+        "collage_media_caption": "",
+        "collage_media_caption_color": "#ffffff",
+        "collage_media_caption_bg": "none",
+        "collage_media_caption_bg_color": "#FFFFFF",
+        "collage_media_caption_position": "top-left",
+        "collage_media_caption_position_mobile": "top-left",
         "show_desktop": true,
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
@@ -313,16 +321,12 @@
         "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
         "color_scheme": "",
-        "collage_video": "shopify://files/videos/mm-collage-video.mp4",
-        "collage_media_caption": "",
-        "collage_media_caption_color": "#ffffff",
         "image_behavior": "none",
         "show_mobile": true,
-        "layout_mobile": "text_first",
-        "mobile_content_alignment": "center",
-        "overlay_caption_position_mobile": "top-left",
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "left",
         "padding_top": 36,
-        "padding_bottom": 24
+        "padding_bottom": 36
       }
     },
     "featured_review_y8Y3FK": {
@@ -588,8 +592,6 @@
         "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
         "color_scheme": "",
-        "collage_media_caption": "",
-        "collage_media_caption_color": "#ffffff",
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "text_first",
@@ -734,9 +736,9 @@
     "image_with_text_E8ERLA",
     "scrolling_marquee_h7KxJ4",
     "rich_text_ezx9pM",
-    "image_with_text_w9pkAa",
+    "collage_with_text_NeRYCB",
     "results_HLPkzY",
-    "image_with_text_Q49KMU",
+    "collage_with_text_dJe3iH",
     "featured_review_y8Y3FK",
     "rich_text_NTgFRg",
     "featured_product_cjmznm",

@@ -7,16 +7,39 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  #ImageWithText--{{ section.id }} .media-caption {
-    color: {{ section.settings.media_caption_color }};
-    {% if section.settings.media_caption_bg == 'solid' %}
-      background-color: {{ section.settings.media_caption_bg_color }};
-      padding: 0.4rem 0.6rem;
-      border-radius: 0.8rem;
-      opacity: 0.7;
-    {% endif %}
+  .flip-media.image-with-text__media {
+    min-height: auto !important;
   }
 
+  .media-flip-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .media-flip-button {
+    background-color: white;
+    color: rgb(18, 18, 18);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(18, 18, 18);
+    padding: 1.6rem 2rem;
+    cursor: pointer;
+    font: inherit;
+    line-height: normal;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 1.1rem;
+  }
+
+  .media-flip-button.active {
+    border-color: #B41214;
+    background-color: #B41214;
+    color: white;
+
+  }
 
 
 
@@ -35,16 +58,32 @@
     font-size: calc(var(--font-heading-scale) * 7rem) !important;
   }
 
+
+  .media-flip-with-text .image-with-text__content--top {
+    padding-top: 8rem;
+  }
 }
+
+  @media screen and (min-width: 1025px) {
+    .media-flip-with-text .image-with-text__content--top {
+    padding-top: 18rem;
+    }
+  }
+
+
 {%- endstyle -%}
 
 {% assign scheme1 = settings.color_schemes | first %}
 
-<div id="ImageWithText--{{ section.id }}" class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.show_mobile == false %} medium-hide small-hide{% endif %}{% if section.settings.show_desktop == false %} medium-up-hide large-up-hide{% endif %}{% if section.settings.show_desktop == false %} hide-desktop{% endif %}">
+<div id="ImageWithText--{{ section.id }}" class="media-flip-with-text image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.show_mobile == false %} medium-hide small-hide{% endif %}{% if section.settings.show_desktop == false %} medium-up-hide large-up-hide hide-desktop{% endif %}">
   <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %} {% if section.settings.layout_mobile == 'text_first' %} image-with-text__grid--reverse-mobile{% endif %} ">
     <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
+      <div class="media-flip-buttons">
+        <button type="button" class="media-flip-button active" data-media="primary">{{ section.settings.button_text }}</button>
+        <button type="button" class="media-flip-button" data-media="flip">{{ section.settings.flip_button_text }}</button>
+      </div>  
       <div
-        class="image-with-text__media image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank or section.settings.video != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
+        class="flip-media image-with-text__media image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank or section.settings.video != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
         {% if section.settings.height == 'adapt' and section.settings.image != blank and section.settings.media_type == 'image' %}
           style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
         {% endif %}
@@ -68,30 +107,42 @@
           {%- endif -%}
           {% case section.settings.media_type %}
             {% when 'image' %}
-              {% if section.settings.media_caption != blank %}
-                <div class="media-caption media-caption--{{ section.settings.media_caption_position }} media-caption-mobile--{{ section.settings.overlay_caption_position_mobile }}">
-                  {{ section.settings.media_caption }}
-                </div>
-              {% endif %}
               {{ section.settings.image | image_url: width: 1500 | image_tag: loading: 'lazy', sizes: sizes, widths: widths }}
             {% when 'video' %}
-              {% if section.settings.media_caption != blank %}
-                <div class="media-caption media-caption--{{ section.settings.media_caption_position }} media-caption-mobile--{{ section.settings.overlay_caption_position_mobile }}">
-                  {{ section.settings.media_caption }}
-                </div>
-              {% endif %}
               {{ section.settings.video | video_tag: image_size: '1500x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
-            
           {% endcase %}
         {%- else -%}
           {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
+        {%- if section.settings.flip_image != blank or section.settings.flip_video != blank -%}
+            {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
+              {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
+              {%- capture sizes -%}
+                (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
+                (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
+              {%- endcapture -%}
+            {%- else -%}
+              {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
+              {%- capture sizes -%}
+                (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+                (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+              {%- endcapture -%}
+            {%- endif -%}
+            {% case section.settings.flip_media_type %}
+                {% when 'image' %}
+                    {{ section.settings.flip_image | image_url: width: 1500 | image_tag: loading: 'lazy', sizes: sizes, widths: widths, class: 'visually-hidden' }}
+                {% when 'video' %}
+                    {{ section.settings.flip_video | video_tag: image_size: '1500x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true, class: 'visually-hidden' }}
+            {% endcase %}
+        {%- endif -%}
+       
       </div>
     </div>
+
     <div class="image-with-text__text-item grid__item">
       <div
         class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} content-container"
-      >
+        >
         {%- for block in section.blocks -%}
           {% case block.type %}
             {%- when 'heading' -%}
@@ -268,11 +319,40 @@
   </div>
 </div>
 
+<script>
+    function mediaFlip() {
+      const container = document.querySelector('#ImageWithText--{{ section.id }}');
+      const buttons = container.querySelectorAll('.media-flip-button');
+      const mediaElements = container.querySelectorAll('.flip-media img, .flip-media video');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          buttons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+
+          const showPrimary = button.dataset.media === 'primary';
+
+          mediaElements.forEach((el, index) => {
+            if (showPrimary && index === 0) {
+              el.classList.remove('visually-hidden');
+            } else if (!showPrimary && index === 1) {
+              el.classList.remove('visually-hidden');
+            } else {
+              el.classList.add('visually-hidden');
+            }
+          });
+        });
+      });
+    }
+
+  document.addEventListener('DOMContentLoaded', mediaFlip);
+</script>
+
 
 
 {% schema %}
 {
-  "name": "Media with text",
+  "name": "Media flip with text",
   "class": "section",
   "disabled_on": {
     "groups": [
@@ -281,6 +361,10 @@
     ]
   },
   "settings": [
+    {
+      "type": "header",
+      "content": "First frame"
+    },
     {
       "type": "image_picker",
       "id": "image",
@@ -293,78 +377,70 @@
       "label": "Video"
     },
     {
-      "type": "richtext",
-      "id": "media_caption",
-      "label": "Overlay caption"
+        "type": "select",
+        "id": "media_type",
+        "options": [
+          {
+            "value": "image",
+            "label": "Image"
+          },
+          {
+            "value": "video",
+            "label": "Video"
+          }
+        ],
+        "default": "image",
+        "label": "Media type"
     },
     {
-      "type": "color",
-      "id": "media_caption_color",
-      "label": "Overlay caption color",
-      "default": "#ffffff" 
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text"
     },
     {
-      "type": "select",
-      "id": "media_caption_bg",
-      "options": [
-        {
-          "value": "none",
-          "label": "None"
-        },
-        {
-          "value": "solid",
-          "label": "Solid"
-        }
-      ],
-      "default": "none",
-      "label": "Overlay caption background"
+      "type": "header",
+      "content": "Second frame"
     },
     {
-      "type": "color",
-      "id": "media_caption_bg_color",
-      "label": "Overlay caption background color",
-      "default": "#FFFFFF" 
+      "type": "image_picker",
+      "id": "flip_image",
+      "label": "Image"
     },
     {
-      "type": "select",
-      "id": "media_caption_position",
-      "options": [
-        {
-          "value": "top-left",
-          "label": "Top left"
-        },
-        {
-          "value": "top-right",
-          "label": "Top right"
-        },
-        {
-          "value": "bottom-left",
-          "label": "Bottom left"
-        },
-        {
-          "value": "bottom-right",
-          "label": "Bottom right"
-        }
-      ],
-      "default": "top-left",
-      "label": "Overlay caption position"
+      "type": "video",
+      "id": "flip_video",
+      "label": "Video"
     },
-
     {
-      "type": "select",
-      "id": "media_type",
-      "options": [
-        {
-          "value": "image",
-          "label": "Image"
-        },
-        {
-          "value": "video",
-          "label": "Video"
-        }
-      ],
-      "default": "image",
-      "label": "Media type"
+        "type": "select",
+        "id": "flip_media_type",
+        "options": [
+          {
+            "value": "image",
+            "label": "Image"
+          },
+          {
+            "value": "video",
+            "label": "Video"
+          }
+        ],
+        "default": "image",
+        "label": "Media type"
+    },
+    {
+        "type": "text",
+        "id": "flip_button_text",
+        "label": "Button text"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_desktop",
+      "label": "Show on Desktop",
+      "default": true  
     },
     {
       "type": "select",
@@ -388,14 +464,9 @@
         }
       ],
       "default": "adapt",
-      "label": "t:sections.image-with-text.settings.height.label"
+      "label": "Media height"
     },
-    {
-      "type": "checkbox",
-      "id": "show_desktop",
-      "label": "Show on Desktop",
-      "default": true  
-    },
+
     {
       "type": "select",
       "id": "desktop_image_width",
@@ -515,7 +586,7 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "background-1"
-    },    
+    },
     {
       "type": "header",
       "content": "t:sections.all.animation.content"
@@ -586,30 +657,7 @@
       "default": "left",
       "label": "t:sections.image-with-text.settings.mobile_content_alignment.label"
     },
-    {
-      "type": "select",
-      "id": "overlay_caption_position_mobile",
-      "options": [
-        {
-          "value": "top-left",
-          "label": "Top left"
-        },
-        {
-          "value": "top-right",
-          "label": "Top right"
-        },
-        {
-          "value": "bottom-left",
-          "label": "Bottom left"
-        },
-        {
-          "value": "bottom-right",
-          "label": "Bottom right"
-        }
-      ],
-      "default": "top-left",
-      "label": "Overlay caption position"
-    },
+    
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
@@ -900,7 +948,7 @@
   ],
   "presets": [
     {
-      "name": "Media with text",
+      "name": "Media flip with text",
       "blocks": [
         {
           "type": "heading"

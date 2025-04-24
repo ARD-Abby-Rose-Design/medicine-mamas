@@ -92,11 +92,6 @@
         "desktop_content_padding_right": 172,
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
-        "collage_media_caption": "",
-        "collage_media_caption_color": "#ffffff",
-        "collage_media_caption_bg": "none",
-        "collage_media_caption_bg_color": "#FFFFFF",
-        "collage_media_caption_position": "top-left",
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
@@ -171,11 +166,6 @@
         "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
-        "collage_media_caption": "<p>VMAGIC®</p>",
-        "collage_media_caption_color": "#ffffff",
-        "collage_media_caption_bg": "none",
-        "collage_media_caption_bg_color": "#FFFFFF",
-        "collage_media_caption_position": "top-left",
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
@@ -228,11 +218,6 @@
         "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
         "color_scheme": "",
-        "collage_media_caption": "",
-        "collage_media_caption_color": "#ffffff",
-        "collage_media_caption_bg": "none",
-        "collage_media_caption_bg_color": "#FFFFFF",
-        "collage_media_caption_position": "top-left",
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
@@ -242,23 +227,57 @@
         "padding_bottom": 36
       }
     },
-    "image_banner_wcE9U3": {
-      "type": "image-banner",
+    "media_toggle_with_text_nAtrwd": {
+      "type": "media-flip-with-text",
+      "blocks": {
+        "text_nArdeU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our products are packed with <strong>organic, non-synthetic ingredients</strong> to <strong>soothe delicate skin and support skin elasticity</strong>.</p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "text_hadeMA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We know that the tissue surrounding the vulva is very sensitive, and our feminine care products are gentle help protect against irritation.</p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "text_nArdeU",
+        "text_hadeMA"
+      ],
       "settings": {
         "image": "shopify://shop_images/HONEY_1.jpg",
-        "image_2": "shopify://shop_images/Copy_of_HONEY_1.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "show_desktop": false,
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
+        "media_type": "image",
+        "button_text": "VMAGIC®",
+        "flip_image": "shopify://shop_images/Copy_of_HONEY_1.jpg",
+        "flip_media_type": "image",
+        "flip_button_text": "INTIMATE GLIDE",
+        "show_desktop": true,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
         "color_scheme": "",
         "image_behavior": "none",
         "show_mobile": true,
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": false
+        "layout_mobile": "text_first",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "image_with_text_R3nh6Y": {
@@ -304,11 +323,6 @@
         "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
-        "collage_media_caption": "",
-        "collage_media_caption_color": "#ffffff",
-        "collage_media_caption_bg": "none",
-        "collage_media_caption_bg_color": "#FFFFFF",
-        "collage_media_caption_position": "top-left",
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
@@ -391,11 +405,6 @@
         "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
         "color_scheme": "",
-        "collage_media_caption": "",
-        "collage_media_caption_color": "#ffffff",
-        "collage_media_caption_bg": "none",
-        "collage_media_caption_bg_color": "#FFFFFF",
-        "collage_media_caption_position": "top-left",
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
@@ -589,7 +598,7 @@
     "image_with_text_WTwPgc",
     "image_with_text_gtPjF3",
     "image_with_text_pikH8p",
-    "image_banner_wcE9U3",
+    "media_toggle_with_text_nAtrwd",
     "image_with_text_R3nh6Y",
     "image_banner_jJXDdB",
     "image_with_text_K74Aig",

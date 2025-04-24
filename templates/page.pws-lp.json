@@ -114,27 +114,7 @@
         "text_V6U7FY": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Painful intimacy isn’t something you just have to live with. </strong>In a clinical trial for VMAGIC® Vulva Balm<strong>:</strong><br/></p>",
-            "text_size": "text-body-large",
-            "background_style": "none",
-            "background_color": "#ffffff",
-            "bullets_to_checkmarks": false
-          }
-        },
-        "text_UzdJVJ": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li><strong>92% of women</strong> reported a noticeable <strong>reduction in dryness</strong> after just <strong>2 weeks</strong> of consistent use.*<br/></li></ul><p></p><ul><li><strong>79% said they felt soothing relief immediately.</strong>*</li></ul>",
-            "text_size": "text-body-large",
-            "background_style": "solid",
-            "background_color": "#ffffff",
-            "bullets_to_checkmarks": true
-          }
-        },
-        "text_mheKPG": {
-          "type": "text",
-          "settings": {
-            "text": "<p>This isn’t guesswork—it’s science-backed comfort.<br/> </p>",
+            "text": "<p><strong>Painful intimacy isn’t something you just have to live with. </strong></p><p>In a clinical trial for VMAGIC® Vulva Balm<strong>:</strong><br/></p>",
             "text_size": "text-body-large",
             "background_style": "none",
             "background_color": "#ffffff",
@@ -144,9 +124,7 @@
       },
       "block_order": [
         "heading_MCLpWt",
-        "text_V6U7FY",
-        "text_UzdJVJ",
-        "text_mheKPG"
+        "text_V6U7FY"
       ],
       "settings": {
         "video": "shopify://files/videos/Copy of Untitled (1080 × 1350 px) (1080 × 1920 px) (1200 x 1200 px) (1).mp4",
@@ -166,6 +144,51 @@
         "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "left",
+        "overlay_caption_position_mobile": "top-left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_FpU4eK": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_7PDPQA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "text_7PDPQA"
+      ],
+      "name": "Media with text",
+      "settings": {
+        "image": "shopify://shop_images/Copy_of_HONEY_3.jpg",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#FFFFFF",
+        "media_caption_position": "top-left",
+        "media_type": "image",
+        "height": "adapt",
+        "show_desktop": true,
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "",
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
@@ -597,6 +620,7 @@
     "main",
     "image_with_text_WTwPgc",
     "image_with_text_gtPjF3",
+    "image_with_text_FpU4eK",
     "image_with_text_pikH8p",
     "media_toggle_with_text_nAtrwd",
     "image_with_text_R3nh6Y",

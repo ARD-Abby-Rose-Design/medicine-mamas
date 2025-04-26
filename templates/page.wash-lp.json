@@ -16,9 +16,488 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_with_text_zAmjDz": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_pKLK8n": {
+          "type": "text",
+          "settings": {
+            "text": "<p>OVER 15,000 5-STAR REVIEWS</p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "heading_tVJHbY": {
+          "type": "heading",
+          "settings": {
+            "heading": "For gentle, non-irritating, pH-balanced  odor control",
+            "heading_size": "hmedium"
+          }
+        },
+        "text_WfCCNY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Give your vulva a refreshing boost without ingredients that irritate or cause odor.</p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "button_bCDFCN": {
+          "type": "button",
+          "settings": {
+            "button_label": "Subscribe & Save up to 20%",
+            "button_link": "shopify://products/vmagic-feminine-wash",
+            "button_arrow": false,
+            "button_subtitle": "30-DAY RISK FREE GUARANTEE"
+          }
+        }
+      },
+      "block_order": [
+        "text_pKLK8n",
+        "heading_tVJHbY",
+        "text_WfCCNY",
+        "button_bCDFCN"
+      ],
+      "name": "Media with text",
+      "settings": {
+        "image": "shopify://shop_images/medicine-mama-vmagic-vulva-wash.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "media_caption": "<p>★★★★★</p><h4>VMAGIC® VULVA WASH</h4><h5>✓ VERIFIED REVIEW</h5><h5><strong>Erika</strong></h5><p>“It made an <strong>immediate and positive difference with odor</strong> and general comfort.”</p>",
+        "media_caption_color": "#121212",
+        "media_caption_bg": "review",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-right",
+        "second_media_caption": "<p>Rated Best Gentle Feminine Wash image:elle</p>",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "solid",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "bottom-left",
+        "show_desktop": true,
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 0,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "center",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "bottom-center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "media_overlay_with_text_dgCQkB": {
+      "type": "media-overlay-with-text",
+      "blocks": {
+        "heading_qexmTQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our VMAGIC® Vulva Wash is developed specifically to support the pH of your vulva.",
+            "heading_size": "h2"
+          }
+        },
+        "text_zNqjzY": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>Odor Control</h4><p>Unpleasant odor in your intimate area can result from numerous factors. Our intimate wash <strong>removes odor causing bacteria</strong> at the source.</p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "text_VeJ4h6": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>pH Optimized</h4><p>Our feminine wash contains <strong>no fragrance or harsh surfactants</strong> to support your intimate microbiome. Our formula is also OBGYN approved, and helps maintain a healthy intimate pH.</p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "text_njJjE8": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>Soothe Irritation</h4><p>Our <strong>clinically-proven ingredients</strong> help eliminate and also protect against symptoms of itching, redness, and irritation. </p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "text_TKwnwM": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>Support Menstrual Hygiene</h4><p>Residual menstrual flow can create discomfort and make us feel less fresh. Our <strong>specially-formulated</strong> feminine vulva wash can help. </p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_qexmTQ",
+        "text_zNqjzY",
+        "text_VeJ4h6",
+        "text_njJjE8",
+        "text_TKwnwM"
+      ],
+      "name": "Media overlay with text",
+      "settings": {
+        "video": "shopify://files/videos/mm-collage-video.mp4",
+        "media_type": "video",
+        "height": "large",
+        "overlay_image": "shopify://shop_images/mm-collage-image.jpg",
+        "overlay_media_type": "image",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "<p>VMAGIC® Vulva Wash</p>",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "scrolling_marquee_fTQEHH": {
+      "type": "scrolling-marquee",
+      "blocks": {
+        "text_trReaG": {
+          "type": "text",
+          "settings": {
+            "text": "Neat."
+          }
+        },
+        "text_XWzWwd": {
+          "type": "text",
+          "settings": {
+            "text": "Neat."
+          }
+        },
+        "text_GDjqhK": {
+          "type": "text",
+          "settings": {
+            "text": "Neat."
+          }
+        }
+      },
+      "block_order": [
+        "text_trReaG",
+        "text_XWzWwd",
+        "text_GDjqhK"
+      ],
+      "name": "Scrolling marquee",
+      "settings": {
+        "color_scheme": "inverse",
+        "type": "text",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "featured_review_bJ3gVn": {
+      "type": "featured-review",
+      "name": "Featured Review",
+      "settings": {
+        "review_product": "VMAGIC® VULVA WASH",
+        "review_name": "Erika",
+        "review_title": "",
+        "review_text": "“It made an immediate and positive difference with odor and general comfort.”",
+        "show_desktop": false,
+        "show_mobile": true
+      }
+    },
+    "featured_product_wpGEQn": {
+      "type": "featured-product",
+      "blocks": {
+        "rating_dxjyKh": {
+          "type": "rating",
+          "settings": {}
+        },
+        "title_qwXXf3": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1",
+            "show_price": false
+          }
+        },
+        "description_NWVMbP": {
+          "type": "description",
+          "settings": {}
+        },
+        "checkmarks_r8mxb8": {
+          "type": "checkmarks",
+          "settings": {}
+        },
+        "custom_liquid_VexGWp": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"custom-recharge\"></div>"
+          }
+        },
+        "buy_buttons_7nGCEP": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "button_style": "red",
+            "show_return_policy_note": true,
+            "return_policy_note": "Try 30-day risk free, love it or your money back!"
+          }
+        }
+      },
+      "block_order": [
+        "rating_dxjyKh",
+        "title_qwXXf3",
+        "description_NWVMbP",
+        "checkmarks_r8mxb8",
+        "custom_liquid_VexGWp",
+        "buy_buttons_7nGCEP"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "vmagic-feminine-wash",
+        "color_scheme": "inverse",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "show_full_details": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_GeV937": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_P4hVCn": {
+          "type": "heading",
+          "settings": {
+            "heading": "How our wash measures up",
+            "heading_size": "hmedium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_P4hVCn"
+      ],
+      "name": "Media with text",
+      "settings": {
+        "image": "shopify://shop_images/mm-vulva-wash-comparison.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": false,
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "text_first",
+        "mobile_content_alignment": "center",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_MqYAMb": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_pnL9RD": {
+          "type": "heading",
+          "settings": {
+            "heading": "clinically proven ingredients",
+            "heading_size": "hmedium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pnL9RD"
+      ],
+      "name": "Media with text",
+      "settings": {
+        "image": "shopify://shop_images/mm-vulva-wash-ingredients_50f325a0-99b3-4ab5-bef9-f6e76edcb473.jpg",
+        "media_type": "image",
+        "height": "adapt",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-0ab9ad54-e2fa-4ec4-9db9-27dbbc20cadc",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "text_first",
+        "mobile_content_alignment": "center",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_Y49J8F": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_HWtBhY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Meet the Medicine Mama herself",
+            "heading_size": "hmedium"
+          }
+        },
+        "text_CNP4VF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>“We want to provide women with solutions for the changes they experience in their vulvar skin throughout their lifetime. No one should ever feel embarrassed to talk about common vulvar symptoms, such as itching, stinging, or irritation, or feel they need to suffer in silence, when solutions are readily available.”</p>",
+            "text_size": "text-body",
+            "background_style": "solid",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "heading_qcQznB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dr. Clare Bertucio",
+            "heading_size": "h3"
+          }
+        },
+        "text_FDgtkw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Medicine Mama CEO + Chief Medical Officer</p>",
+            "text_size": "text-body-small",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HWtBhY",
+        "text_CNP4VF",
+        "heading_qcQznB",
+        "text_FDgtkw"
+      ],
+      "name": "Media with text",
+      "settings": {
+        "video": "shopify://files/videos/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
+        "media_type": "video",
+        "height": "medium",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "center",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "text_first",
+        "mobile_content_alignment": "center",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "faq_xUgWW9": {
+      "type": "faq",
+      "name": "FAQ",
+      "settings": {
+        "heading": "Your questions, answered",
+        "color_scheme": "inverse",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_with_text_zAmjDz",
+    "media_overlay_with_text_dgCQkB",
+    "scrolling_marquee_fTQEHH",
+    "featured_review_bJ3gVn",
+    "featured_product_wpGEQn",
+    "image_with_text_GeV937",
+    "image_with_text_MqYAMb",
+    "image_with_text_Y49J8F",
+    "faq_xUgWW9"
   ]
 }

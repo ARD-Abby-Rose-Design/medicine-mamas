@@ -20,16 +20,12 @@ endif
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  #ImageWithText--{{ section.id }} .media-caption--none,
-  #ImageWithText--{{ section.id }} .media-caption--solid,
-  #ImageWithText--{{ section.id }} .media-caption--review,
+  #ImageWithText--{{ section.id }} .media-caption
   {
     color: {{ section.settings.media_caption_color }};
   }
 
-  #ImageWithText--{{ section.id }} .media-caption--none.second-media-caption,
-  #ImageWithText--{{ section.id }} .media-caption--solid.second-media-caption,
-  #ImageWithText--{{ section.id }} .media-caption--review.second-media-caption,
+  #ImageWithText--{{ section.id }} .media-caption.second-media-caption,
   {
     color: {{ section.settings.second_media_caption_color }};
   }
@@ -54,9 +50,28 @@ endif
   }
 
   #ImageWithText--{{ section.id }} .media-caption--review.second-media-caption {
-    background-color: {{ section.settings.second.media_caption_bg_color }};
+    background-color: {{ section.settings.second_media_caption_bg_color }};
 
   }
+
+  .media-overlay {
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    width: 45%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    }
+
+    .media-overlay img, .media-overlay video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
 
 
   @media screen and (min-width: 750px) {
@@ -88,19 +103,6 @@ endif
         {% endif %}
       >
         {%- if section.settings.image != blank or section.settings.video != blank -%}
-          {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
-            {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
-            {%- capture sizes -%}
-              (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
-              (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
-            {%- endcapture -%}
-          {%- else -%}
-            {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
-            {%- capture sizes -%}
-              (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
-              (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
-            {%- endcapture -%}
-          {%- endif -%}
           {% case section.settings.media_type %}
             {% when 'image' %}
               {% if media_caption != blank %}
@@ -109,22 +111,12 @@ endif
                   {% if section.settings.media_caption contains 'image:elle' %}{% render 'icon-elle' %}{% endif %}
                 </div>
               {% endif %}
-              {% if section.settings.second_media_caption != blank %}
-                <div class="media-caption media-caption--{{ section.settings.second_media_caption_position }} second-media-caption media-caption-mobile--{{ section.settings.second_media_caption_position_mobile }} media-caption--{{ section.settings.second_media_caption_bg }}">
-                  {{ second_media_caption }}
-                  {% if section.settings.second_media_caption contains 'image:elle' %}{% render 'icon-elle' %}{% endif %}
-                </div>
-              {% endif %}
+           
               {{ section.settings.image | image_url: width: 1500 | image_tag: loading: 'lazy', sizes: sizes, widths: widths }}
             {% when 'video' %}
               {% if media_caption != blank %}
                 <div class="media-caption media-caption--{{ section.settings.media_caption_position }} media-caption-mobile--{{ section.settings.media_caption_position_mobile }} media-caption--{{ section.settings.media_caption_bg }}">
                   {{ media_caption }}{% if section.settings.media_caption contains 'image:elle' %}{% render 'icon-elle' %}{% endif %}
-                </div>
-              {% endif %}
-              {% if section.settings.second_media_caption != blank %}
-                <div class="media-caption media-caption--{{ section.settings.second_media_caption_position }} second-media-caption media-caption-mobile--{{ section.settings.second_media_caption_position_mobile }} media-caption--{{ section.settings.second_media_caption_bg }}">
-                  {{ second_media_caption }}{% if section.settings.second_media_caption contains 'image:elle' %}{% render 'icon-elle' %}{% endif %}
                 </div>
               {% endif %}
               {{ section.settings.video | video_tag: image_size: '1500x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
@@ -133,6 +125,41 @@ endif
           {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
       </div>
+      {%- if section.settings.overlay_image != blank or section.settings.overlay_video != blank -%}
+        <div class="media-overlay">
+            {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
+            {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
+            {%- capture sizes -%}
+                (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
+                (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
+            {%- endcapture -%}
+            {%- else -%}
+            {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
+            {%- capture sizes -%}
+                (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+                (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+            {%- endcapture -%}
+            {%- endif -%}
+            {% case section.settings.overlay_media_type %}
+                {% when 'image' %}
+                    {% if section.settings.second_media_caption != blank %}
+                        <div class="media-caption second-media-caption media-caption--{{ section.settings.second_media_caption_position }} media-caption-mobile--{{ section.settings.second_media_caption_position_mobile }} media-caption--{{ section.settings.second_media_caption_bg }}">
+                        {{ second_media_caption }}
+                        {% if section.settings.second_media_caption contains 'image:elle' %}{% render 'icon-elle' %}{% endif %}
+                        </div>
+                    {% endif %}
+                    {{ section.settings.overlay_image | image_url: width: 1500 | image_tag: loading: 'lazy', sizes: sizes, widths: widths }}
+                {% when 'video' %}
+                    {% if section.settings.second_media_caption != blank %}
+                        <div class="media-caption second-media-caption media-caption--{{ section.settings.second_media_caption_position }} media-caption-mobile--{{ section.settings.second_media_caption_position_mobile }} media-caption--{{ section.settings.second_media_caption_bg }}">
+                        {{ second_media_caption }}
+                        {% if section.settings.second_media_caption contains 'image:elle' %}{% render 'icon-elle' %}{% endif %}
+                        </div>
+                    {% endif %}
+                    {{ section.settings.overlay_video | video_tag: image_size: '1500x', loop: true, controls: false, muted: true, autoplay: true, playsinline: true }}
+            {% endcase %}
+            </div>
+        {%- endif -%}
     </div>
     <div class="image-with-text__text-item grid__item">
       <div
@@ -318,7 +345,7 @@ endif
 
 {% schema %}
 {
-  "name": "Media with text",
+  "name": "Media overlay with text",
   "class": "section",
   "disabled_on": {
     "groups": [
@@ -329,7 +356,7 @@ endif
   "settings": [
     {
       "type": "header",
-      "content": "Media"
+      "content": "First frame"
     },
     {
       "type": "image_picker",
@@ -385,7 +412,37 @@ endif
     },
     {
       "type": "header",
-      "content": "Overlay captions"
+      "content": "Second frame"
+    },
+    {
+      "type": "image_picker",
+      "id": "overlay_image",
+      "label": "Image"
+    },
+    {
+      "type": "video",
+      "id": "overlay_video",
+      "label": "Video"
+    },
+    {
+        "type": "select",
+        "id": "overlay_media_type",
+        "options": [
+          {
+            "value": "image",
+            "label": "Image"
+          },
+          {
+            "value": "video",
+            "label": "Video"
+          }
+        ],
+        "default": "image",
+        "label": "Media type"
+    },
+    {
+      "type": "header",
+      "content": "First caption"
     },
     {
       "type": "richtext",
@@ -450,7 +507,7 @@ endif
     },
     {
       "type": "header",
-      "content": "Secondary caption"
+      "content": "Second caption"
     },
     {
       "type": "richtext",
@@ -1063,7 +1120,7 @@ endif
   ],
   "presets": [
     {
-      "name": "Media with text",
+      "name": "Media overlay with text",
       "blocks": [
         {
           "type": "heading"

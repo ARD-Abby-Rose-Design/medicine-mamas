@@ -313,6 +313,8 @@ h3,
 h4,
 h5,
 .h0,
+.hlarge,
+.hmedium,
 .h1,
 .h2,
 .h3,
@@ -341,6 +343,33 @@ h5,
 
   }
 }
+
+.hlarge {
+  font-size: calc(var(--font-heading-scale) * 4.2rem);
+  font-family: 'Impact', var(--font-heading-family);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 750px) {
+  
+  .hlarge {
+    font-size: calc(var(--font-heading-scale) * 7rem);
+  }
+}
+
+.hmedium {
+  font-size: calc(var(--font-heading-scale) * 3.2rem);
+  font-family: 'Impact', var(--font-heading-family);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+  @media only screen and (min-width: 750px) {
+    .hmedium {
+      font-size: calc(var(--font-heading-scale) * 6.2rem);
+    }
+  }
 
 h1,
 .h1 {

@@ -402,6 +402,9 @@
       },
       "heading_size": {
         "label": "Heading size",
+        "options__0": {
+          "label": "Header XL"
+        },
         "options__1": {
           "label": "Header Large"
         },
@@ -1337,7 +1340,7 @@
           "options__3": {
             "label": "Large"
           },
-          "label": "Desktop image width",
+          "label": "Image width",
           "info": "Image is automatically optimized for mobile."
         },
         "layout": {
@@ -1347,7 +1350,7 @@
           "options__2": {
             "label": "Image second"
           },
-          "label": "Desktop image placement",
+          "label": "Image placement",
           "info": "Image first is the default mobile layout."
         },
         "desktop_content_alignment": {
@@ -1360,7 +1363,7 @@
           "options__3": {
             "label": "Right"
           },
-          "label": "Desktop content alignment"
+          "label": "Content alignment"
         },
         "desktop_content_position": {
           "options__1": {
@@ -1372,7 +1375,7 @@
           "options__3": {
             "label": "Bottom"
           },
-          "label": "Desktop content position"
+          "label": "Content position"
         },
         "content_layout": {
           "options__1": {
@@ -1393,7 +1396,7 @@
           "options__3": {
             "label": "Right"
           },
-          "label": "Mobile content alignment"
+          "label": "Content alignment"
         }
       },
       "blocks": {

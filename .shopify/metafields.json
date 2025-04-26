@@ -1,29 +1,7 @@
 {
-  "article": [
-    {
-      "key": "category",
-      "namespace": "custom",
-      "name": "Category",
-      "description": "",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    }
-  ],
+  "article": [],
   "blog": [],
-  "collection": [
-    {
-      "key": "text",
-      "namespace": "seo",
-      "name": "SEO Text",
-      "description": "",
-      "type": {
-        "name": "rich_text_field",
-        "category": "TEXT"
-      }
-    }
-  ],
+  "collection": [],
   "company": [],
   "company_location": [],
   "location": [],
@@ -31,6 +9,116 @@
   "order": [],
   "page": [],
   "product": [
+    {
+      "key": "custom_product",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Product",
+      "description": "Use to indicate whether or not the unique product identifiers (UPIs) GTIN, MPN, and brand are available for your product.",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "color-pattern",
+      "namespace": "shopify",
+      "name": "Color",
+      "description": "Defines the primary color or pattern, such as blue or striped",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "target-gender",
+      "namespace": "shopify",
+      "name": "Target gender",
+      "description": "Identifies the intended gender for a product, such as female, male or unisex",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "size",
+      "namespace": "shopify",
+      "name": "Size",
+      "description": "Used to specify the size of a product, such as 0-3 months or Extra large (XL)",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "sleeve-length-type",
+      "namespace": "shopify",
+      "name": "Sleeve length type",
+      "description": "Specifies the style of sleeves on clothing items, such as short or sleeveless",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "age-group",
+      "namespace": "shopify",
+      "name": "Age group",
+      "description": "Defines the target age range for a product, such as adults or kids",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "fabric",
+      "namespace": "shopify",
+      "name": "Fabric",
+      "description": "Identifies the type of fabric used in a product, for example, cotton or denim",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "clothing-features",
+      "namespace": "shopify",
+      "name": "Clothing features",
+      "description": "Describes unique properties of apparel, such as water resistant or wrinkle resistant",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "dress-style",
+      "namespace": "shopify",
+      "name": "Dress style",
+      "description": "Identifies the design of a dress, such as wrap or empire waist",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "mini_images",
+      "namespace": "foursixty",
+      "name": "Foursixty Shop Mini Product Images",
+      "description": null,
+      "type": {
+        "name": "list.file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "mini_available",
+      "namespace": "foursixty",
+      "name": "Show Foursixty Product Mini",
+      "description": null,
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
     {
       "key": "rating",
       "namespace": "reviews",
@@ -52,180 +140,70 @@
       }
     },
     {
-      "key": "details",
-      "namespace": "custom",
-      "name": "Details",
-      "description": "",
-      "type": {
-        "name": "multi_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "how_to_use",
-      "namespace": "custom",
-      "name": "How To Use",
-      "description": "",
-      "type": {
-        "name": "multi_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "trial_results",
-      "namespace": "custom",
-      "name": "Trial Results",
-      "description": "",
-      "type": {
-        "name": "multi_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "key_ingredients",
-      "namespace": "custom",
-      "name": "Key Ingredients",
-      "description": "",
-      "type": {
-        "name": "multi_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "trustbadges",
-      "namespace": "custom",
-      "name": "TrustBadges",
-      "description": "",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "short_description",
-      "namespace": "custom",
-      "name": "Short Description",
-      "description": "",
-      "type": {
-        "name": "multi_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "checkmarks",
-      "namespace": "custom",
-      "name": "Checkmarks",
-      "description": "",
-      "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "ingredients",
-      "namespace": "custom",
-      "name": "Ingredients",
-      "description": "",
+      "key": "dress-occasion",
+      "namespace": "shopify",
+      "name": "Dress occasion",
+      "description": "Specifies the intended occasion for a dress, e.g. holiday, everyday",
       "type": {
         "name": "list.metaobject_reference",
         "category": "REFERENCE"
       }
     },
     {
-      "key": "products",
-      "namespace": "bundle",
-      "name": "Bundle & Save Products",
-      "description": "",
+      "key": "description",
+      "namespace": "pdp",
+      "name": "PDP Description",
+      "description": "Shows in collapsible tab in product info on PDP",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "materials_care",
+      "namespace": "pdp",
+      "name": "PDP Materials & Care",
+      "description": "Shows in materials & care collapsible tab on PDP",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "details",
+      "namespace": "pdp",
+      "name": "PDP Details",
+      "description": "Shows in details collapsible tab on PDP",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "swatch_color",
+      "namespace": "pdp",
+      "name": "Swatch Color",
+      "description": "If 'Linked Swatches' are activated on PDP, this color will show in the swatch",
+      "type": {
+        "name": "color",
+        "category": "COLOR"
+      }
+    },
+    {
+      "key": "linked_products",
+      "namespace": "pdp",
+      "name": "Linked products",
+      "description": "Assign products that you want to link to on the PDP via swatches",
       "type": {
         "name": "list.product_reference",
         "category": "REFERENCE"
       }
     },
     {
-      "key": "videos",
-      "namespace": "see",
-      "name": "See it in action",
+      "key": "swatch_label",
+      "namespace": "pdp",
+      "name": "Swatch label",
       "description": "",
-      "type": {
-        "name": "list.file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "trial",
-      "namespace": "clinical",
-      "name": "Clinical Trial Information",
-      "description": "",
-      "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "marquee",
-      "namespace": "custom",
-      "name": "Marquee",
-      "description": "",
-      "type": {
-        "name": "metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "upsell",
-      "namespace": "cart",
-      "name": "Cart upsell",
-      "description": "",
-      "type": {
-        "name": "product_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "information",
-      "namespace": "size",
-      "name": "Size information",
-      "description": "",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "reviews",
-      "namespace": "featured",
-      "name": "Featured reviews",
-      "description": "",
-      "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "custom_product",
-      "namespace": "mm-google-shopping",
-      "name": "Google: Custom Product",
-      "description": "Use to indicate whether or not the unique product identifiers (UPIs) GTIN, MPN, and brand are available for your product.",
-      "type": {
-        "name": "boolean",
-        "category": "TRUE_FALSE"
-      }
-    },
-    {
-      "key": "picker_images",
-      "namespace": "custom",
-      "name": "Picker Images",
-      "description": "Set the small images in the picker for the different pack options",
-      "type": {
-        "name": "list.file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "picker_type",
-      "namespace": "custom",
-      "name": "Picker Type",
-      "description": "Set the picker type for the quick-add drawer. NOTE: For PDP refer to customizer.",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
@@ -237,7 +215,7 @@
       "key": "custom_label_4",
       "namespace": "mm-google-shopping",
       "name": "Google: Custom Label 4",
-      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
@@ -247,7 +225,7 @@
       "key": "custom_label_3",
       "namespace": "mm-google-shopping",
       "name": "Google: Custom Label 3",
-      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
@@ -257,7 +235,7 @@
       "key": "custom_label_2",
       "namespace": "mm-google-shopping",
       "name": "Google: Custom Label 2",
-      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
@@ -267,7 +245,7 @@
       "key": "custom_label_1",
       "namespace": "mm-google-shopping",
       "name": "Google: Custom Label 1",
-      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
@@ -277,7 +255,7 @@
       "key": "custom_label_0",
       "namespace": "mm-google-shopping",
       "name": "Google: Custom Label 0",
-      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
@@ -344,5 +322,26 @@
       }
     }
   ],
-  "shop": []
+  "shop": [
+    {
+      "key": "mini_images",
+      "namespace": "foursixty",
+      "name": "Foursixty Shop Mini Store Images",
+      "description": null,
+      "type": {
+        "name": "list.file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "mini_available",
+      "namespace": "foursixty",
+      "name": "Show Foursixty Store Mini",
+      "description": null,
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    }
+  ]
 }

@@ -725,6 +725,7 @@ class SliderComponent extends HTMLElement {
 
 customElements.define('slider-component', SliderComponent);
 
+
 class SlideshowComponent extends SliderComponent {
   constructor() {
     super();
@@ -970,6 +971,49 @@ class SlideshowComponent extends SliderComponent {
 }
 
 customElements.define('slideshow-component', SlideshowComponent);
+
+class SocialSlider extends SliderComponent {
+  constructor() {
+    super();
+
+    this.sliderCards = this.querySelectorAll('.social-slider__card');
+    this.setupPlayButtons();
+  }
+
+  setupPlayButtons() {
+    this.sliderCards.forEach(this.setupSingleCard.bind(this));
+  }
+
+  setupSingleCard(card) {
+    const video = card.querySelector('video');
+    const playButton = card.querySelector('.custom-play-button');
+
+    if (!video || !playButton) return;
+
+    playButton.addEventListener('click', (event) => this.handlePlayButtonClick(event, card, video));
+    video.addEventListener('pause', () => this.handleVideoPause(card));
+    video.addEventListener('ended', () => this.handleVideoPause(card));
+    video.addEventListener('click', () => this.handleVideoClick(video));
+  }
+
+  handlePlayButtonClick(event, card, video) {
+    event.preventDefault();
+    video.play();
+    card.classList.add('playing');
+  }
+
+  handleVideoPause(card) {
+    card.classList.remove('playing');
+  }
+
+  handleVideoClick(video) {
+    if (!video.paused) {
+      video.pause();
+    }
+  }
+}
+
+customElements.define('social-slider', SocialSlider);
 
 class VariantSelects extends HTMLElement {
   constructor() {

@@ -67,7 +67,7 @@
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
-        "desktop_content_padding_left": 36,
+        "desktop_content_padding_left": 0,
         "desktop_content_padding_right": 152,
         "content_layout": "no-overlap",
         "color_scheme": "",
@@ -80,14 +80,48 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_9JtczV": {
+      "type": "rich-text",
+      "blocks": {
+        "text_7FkGWY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>★★★★★  (15,000+)</p>",
+            "text_style": "text-body-small"
+          }
+        },
+        "heading_jCRAeN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Real reviews, real skin",
+            "heading_size": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "text_7FkGWY",
+        "heading_jCRAeN"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 44,
+        "padding_bottom": 24
+      }
+    },
     "featured_reviews_8qLNGU": {
       "type": "featured-reviews",
       "name": "Featured reviews",
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,
-        "title": "Real reviews, real skin",
-        "padding_top": 36,
+        "title": "",
+        "padding_top": 0,
         "padding_bottom": 36
       }
     },
@@ -148,8 +182,84 @@
         "content_alignment": "center",
         "color_scheme": "inverse",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "products_accordion_apFByF": {
+      "type": "products-accordion",
+      "blocks": {
+        "product_d4DLUX": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-feminine-lips-stick",
+            "image": "shopify://shop_images/mm-lips_stick-included-products.jpg",
+            "show_review": true,
+            "reviewer_name": "<p>Kristin B.</p>",
+            "review_title": "You need this!",
+            "review_text": "<p>“My skin down there has never looked better. I use this twice a day. I had little razor bumps which are completely gone. This makes my skin better prepped for when I shave I feel, causing less bumps overall.”</p>"
+          }
+        },
+        "product_cmBKB3": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-grooming-polish",
+            "image": "shopify://shop_images/medicine-mama-vmagic-grooming-polish-1_538ab8c8-07a6-4ddf-b0b8-d2eda793f0ce.jpg",
+            "show_review": true,
+            "reviewer_name": "<p>Lorien B.</p>",
+            "review_title": "Wish this came in a big bucket!",
+            "review_text": "<p>“This is the micropolish of my dreams - not too gritty and not too oily. Perfect for bikini line but really wish there was a larger size option... like MUCH larger lol.”</p>"
+          }
+        },
+        "product_HDTRLc": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-feminine-wash",
+            "image": "shopify://shop_images/medicine-mama-vmagic-vulva-wash.jpg",
+            "show_review": true,
+            "reviewer_name": "<p>Stephanie</p>",
+            "review_title": "Feels so good!",
+            "review_text": "<p>“This wash has been a miracle. So soothing, never any irritation. Will absolutely repurchase.”</p>"
+          }
+        }
+      },
+      "block_order": [
+        "product_d4DLUX",
+        "product_cmBKB3",
+        "product_HDTRLc"
+      ],
+      "name": "Products accordion",
+      "settings": {
+        "color_scheme": "inverse",
+        "background_style": "primary",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_8mefDJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_grx7eV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop now",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_grx7eV"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 0
       }
     },
     "featured_product_mH3ceK": {
@@ -183,6 +293,17 @@
             "custom_liquid": "<div class=\"custom-recharge\"></div>"
           }
         },
+        "buy_buttons_9M7XR4": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true,
+            "button_style": "red",
+            "show_return_policy_note": true,
+            "return_policy_note": "Try 30-day risk free, love it or your money back!"
+          }
+        },
         "included_products_P63Rbg": {
           "type": "included_products",
           "settings": {
@@ -200,6 +321,7 @@
         "rich_text_eMg8HG",
         "checkmarks_kajdJK",
         "custom_liquid_rYjPgq",
+        "buy_buttons_9M7XR4",
         "included_products_P63Rbg"
       ],
       "name": "t:sections.featured-product.presets.name",
@@ -298,7 +420,7 @@
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "THE GROOMING ROUTINE EVERYONE IS TALKING ABOUT",
-        "heading_size": "hmedium",
+        "heading_size": "hlarge",
         "heading_alignment": "center",
         "text": "",
         "image_width": "full",
@@ -306,7 +428,8 @@
         "columns_desktop": 5,
         "column_alignment": "left",
         "border_style": "none",
-        "background_style": "primary",
+        "background_style": "custom",
+        "background_color": "#ffffff",
         "button_label": "",
         "button_link": "",
         "color_scheme": "inverse",
@@ -314,6 +437,84 @@
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "rich_text_RzFYTp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zMPWTh": {
+          "type": "heading",
+          "settings": {
+            "heading": "3 STEPS TO STOP INGROWN HAIRS",
+            "heading_size": "hlarge"
+          }
+        },
+        "text_63UE8W": {
+          "type": "text",
+          "settings": {
+            "text": "<p>(Your skin will thank you!)</p>",
+            "text_style": "text-body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zMPWTh",
+        "text_63UE8W"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 36
+      }
+    },
+    "steps_gdiniw": {
+      "type": "steps",
+      "blocks": {
+        "steps_card_W3D44n": {
+          "type": "steps_card",
+          "settings": {
+            "product": "vmagic-grooming-polish",
+            "product_image": "shopify://shop_images/IngrownHair-Grooming-Scrub-Bundle.jpg",
+            "title": "EXFOLIATE",
+            "product_benefits": "<p>Use before trimming to buff away dead skin, clear pores, and help prevent ingrown hairs.</p>"
+          }
+        },
+        "steps_card_NABeb3": {
+          "type": "steps_card",
+          "settings": {
+            "product": "vmagic-feminine-wash",
+            "product_image": "shopify://shop_images/mm-vulva_wash-included_products.jpg",
+            "title": "WASH",
+            "product_benefits": "<p>Use a quarter size amount into hands or soft sponge and apply directly to skin. Rinse clean with warm water.</p>"
+          }
+        },
+        "steps_card_ey6DcD": {
+          "type": "steps_card",
+          "settings": {
+            "product": "vmagic-feminine-lips-stick",
+            "product_video": "shopify://files/videos/mm-collage2-video.mp4",
+            "title": "MOISTURIZE",
+            "product_benefits": "<p>Apply after trimming to calm, hydrate, and protect sensitive skin from burns, bumps and irritation.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "steps_card_W3D44n",
+        "steps_card_NABeb3",
+        "steps_card_ey6DcD"
+      ],
+      "name": "Steps",
+      "settings": {
+        "color_scheme": "inverse",
+        "padding_top": 0,
+        "padding_bottom": 44,
+        "background_color": "#ffffff"
       }
     },
     "rich_text_GyYtpp": {
@@ -370,6 +571,107 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_EpVAbB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Yy98nX": {
+          "type": "heading",
+          "settings": {
+            "heading": "TRIED, TRIMMED AND APPROVED",
+            "heading_size": "hlarge"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Yy98nX"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "social_slider_Hdbjgc": {
+      "type": "social-slider",
+      "blocks": {
+        "slide_nenk67": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/brittney.richards's Video - May 28, 2024.mp4",
+            "url": ""
+          }
+        },
+        "slide_iGMkh3": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/You’re so lucky to have.mp4",
+            "url": ""
+          }
+        },
+        "slide_kCEmky": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/Untitled design (10).mp4",
+            "url": ""
+          }
+        },
+        "slide_WwAxaq": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/Video.mov",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_nenk67",
+        "slide_iGMkh3",
+        "slide_kCEmky",
+        "slide_WwAxaq"
+      ],
+      "name": "Social Slider",
+      "settings": {
+        "color_scheme": "inverse",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_xMjRRf": {
+      "type": "rich-text",
+      "blocks": {
+        "button_JpXLLi": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop the bundle",
+            "button_link": "shopify://products/vmagic-grooming-kit",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_JpXLLi"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
     "faq_n8LWtD": {
       "type": "faq",
       "name": "FAQ",
@@ -384,14 +686,22 @@
   "order": [
     "main",
     "image_with_text_WexptL",
+    "rich_text_9JtczV",
     "featured_reviews_8qLNGU",
     "scrolling_marquee_4RiNQH",
     "rich_text_3D4nCX",
+    "products_accordion_apFByF",
+    "rich_text_8mefDJ",
     "featured_product_mH3ceK",
     "multicolumn_pMFmHc",
+    "rich_text_RzFYTp",
+    "steps_gdiniw",
     "rich_text_GyYtpp",
     "174562032607fed5ad",
     "custom_liquid_b8aeM9",
+    "rich_text_EpVAbB",
+    "social_slider_Hdbjgc",
+    "rich_text_xMjRRf",
     "faq_n8LWtD"
   ]
 }

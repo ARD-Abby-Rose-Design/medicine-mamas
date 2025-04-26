@@ -5,8 +5,7 @@
     }
 
 
-
-  .included-products > div {
+  .steps > div {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -14,7 +13,7 @@
       gap: 2rem;
   }
 
-  .included-products__card {
+  .steps__card {
       width: 100%;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -23,31 +22,44 @@
       padding: 1rem;
   }
 
-  #included-products--{{ section.id }} .included-products__card {
+  #steps--{{ section.id }} .steps__card {
       background-color: {{ section.settings.background_color }};
   }
 
-  .included-products__content {
+  .steps__content {
       grid-column: span 6;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
   }
 
-  .included-products__content-lower {
+  .steps__content-upper {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+  }
+
+  .steps__content-title {
+      display: flex;
+      flex-direction: column;
+      padding-top: 0.6rem;
+      gap: 0.5rem;
+  }
+
+  .steps__content-lower {
       padding-top: 1rem;
       border-top: 1px solid #B41214;
   }
 
-  .included-products__media {
+  .steps__media {
       grid-column: span 6;
       max-width: 100%;
       height: 100%;
       overflow: hidden;
   }
 
-  .included-products__image img,
-  .included-products__video video {
+  .steps__image img,
+  .steps__video video {
       aspect-ratio: 2 / 3;
       width: 100%;
       height: auto;
@@ -60,16 +72,13 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
       }
 
-      .included-products__card {
+      .steps__card {
       flex: 1 1 calc(100% / 3 - 2rem);
   }
   }
 {% endstyle %}
 
-<div
-  id="included-products--{{ section.id }}"
-  class="included-products color-{{ section.settings.color_scheme }} gradient"
->
+<div id="steps--{{ section.id }}" class="steps color-{{ section.settings.color_scheme }} gradient">
   <div
     class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
@@ -84,29 +93,32 @@
           {% assign product_brand = 'VMAGIC®' %}
           {% assign product_title = product.title | split: 'VMAGIC®' | last | strip %}
         {% endif %}
-        <div id="included-products__card--{{ block.id }}" class="included-products__card">
-          <div class="included-products__content">
-            <div class="included-products__content-upper">
-              {% if product.title contains 'VMAGIC' %}
-                <div>{{ product_brand }}</div>
-              {% endif %}
-              <div class="h3">{{ product_title }}</div>
-              <div>{{ block.settings.product_benefits }}</div>
+        <div id="steps__card--{{ block.id }}" class="steps__card">
+          <div class="steps__content">
+            <div class="steps__content-upper">
+              <div class="h3">
+                {{ forloop.index }}
+              </div>
+              <div class="steps__content-title">
+                <div class="h4">{{ block.settings.title }}</div>
+                <div>{{ block.settings.product_benefits | strip_html }}</div>
+              </div>
             </div>
-            <div class="included-products__content-lower">
-              {{ block.settings.product_location }}
+            <div class="steps__content-lower">
+              <div>{{ product_brand }}</div>
+              <div>{{ product_title }}</div>
             </div>
           </div>
           {% if block.settings.product_image != blank or block.settings.product_video != blank %}
-            <div class="included-products__media">
+            <div class="steps__media">
               {% if block.settings.product_image != blank %}
-                <div class="included-products__image">
+                <div class="steps__image">
                   <a href="{{ product.url }}">
                     {{ block.settings.product_image | image_url: width: 400 | image_tag }}
                   </a>
                 </div>
               {% elsif block.settings.product_video %}
-                <div class="included-products__video">
+                <div class="steps__video">
                   <a href="{{ product.url }}">
                     {{
                       block.settings.product_video
@@ -125,7 +137,7 @@
 
 {% schema %}
 {
-  "name": "Included Products",
+  "name": "Steps",
   "tag": "section",
   "class": "section",
   "settings": [
@@ -164,8 +176,8 @@
   ],
   "blocks": [
     {
-      "type": "product",
-      "name": "Product",
+      "type": "steps_card",
+      "name": "Steps card",
       "limit": 3,
       "settings": [
         {
@@ -184,23 +196,23 @@
           "label": "Product video"
         },
         {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Title",
+          "default": "Title"
+        },
+        {
           "type": "richtext",
           "id": "product_benefits",
           "label": "Product benefits",
           "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>"
-        },
-        {
-          "type": "text",
-          "id": "product_location",
-          "label": "Product location",
-          "default": "Location"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Included Products"
+      "name": "Steps"
     }
   ]
 }

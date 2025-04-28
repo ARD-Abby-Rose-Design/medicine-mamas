@@ -66,6 +66,7 @@
       "name": "Media with text",
       "settings": {
         "image": "shopify://shop_images/medicine-mama-vmagic-vulva-wash.jpg",
+        "video_autoplay": "autoplay",
         "media_type": "image",
         "height": "adapt",
         "media_caption": "<p>★★★★★</p><h4>VMAGIC® VULVA WASH</h4><h5>✓ VERIFIED REVIEW</h5><h5><strong>Erika</strong></h5><p>“It made an <strong>immediate and positive difference with odor</strong> and general comfort.”</p>",
@@ -303,6 +304,130 @@
         "padding_bottom": 36
       }
     },
+    "image_with_text_mzdCed": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_FqXykr": {
+          "type": "heading",
+          "settings": {
+            "heading": "\"I thought you weren't supposed to wash your vagina?\"",
+            "heading_size": "h3"
+          }
+        },
+        "text_Nd4CNX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>You’re right, the Vagina is like a “self cleaning oven.” <br/><strong>However, the Vulva is a different story.</strong></p><p><strong>Our gentle, fragrance free cleanser that rejuvenates  and nourishes skin, rinses residue-free and helps support the pH of your vulva.</strong></p>",
+            "text_size": "text-body",
+            "background_style": "solid",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_FqXykr",
+        "text_Nd4CNX"
+      ],
+      "name": "Media with text",
+      "settings": {
+        "video": "shopify://files/videos/mm-vulva-wash-facts_social.mp4",
+        "video_autoplay": "",
+        "media_type": "video",
+        "height": "adapt",
+        "media_caption": "<h4>Dr. Carolyn Moyers</h4><p><strong>Board Certified OBGYN, NAMS (North American Menopause Society) Certified Menopause Practitioner, and the founder and CEO of Sky Women’s Health.</strong></p>",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "below",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "desktop_content_padding_left": 120,
+        "desktop_content_padding_right": 120,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "text_first",
+        "mobile_content_alignment": "center",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 36,
+        "padding_bottom": 140
+      }
+    },
+    "rich_text_iLptBJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jQt9FM": {
+          "type": "heading",
+          "settings": {
+            "heading": "When should I use a feminine WaSH?",
+            "heading_size": "hlarge"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jQt9FM"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "text_cards_3ax9Lj": {
+      "type": "text-cards",
+      "blocks": {
+        "text_card_gFntJY": {
+          "type": "text_card",
+          "settings": {
+            "text_card_title": "Post-workout",
+            "text_card_content": "Using a feminine wash post-workout can help you get rid of sweat and may help prevent bacterial overgrowth."
+          }
+        },
+        "text_card_rcBUNr": {
+          "type": "text_card",
+          "settings": {
+            "text_card_title": "Pre- and post-intimacy",
+            "text_card_content": "Wash before intimacy for fresh confidence; wash after to assist in removing potential traces of bodily fluids, lubricants, or contraceptives, helping prevent discomfort, odor, and irritation."
+          }
+        },
+        "text_card_9Fw9ke": {
+          "type": "text_card",
+          "settings": {
+            "text_card_title": "During your menstrual cycle",
+            "text_card_content": "During menstruation, your vulva can become extremely dry and sensitive. Gently cleansing can help alleviate symptoms of dryness and sensitivity brought on by menstruation, restore moisture, gently cleanse, and balance pH."
+          }
+        }
+      },
+      "block_order": [
+        "text_card_gFntJY",
+        "text_card_rcBUNr",
+        "text_card_9Fw9ke"
+      ],
+      "name": "Text cards",
+      "settings": {
+        "color_scheme": "inverse",
+        "padding_top": 36,
+        "padding_bottom": 64,
+        "content_alignment": "center"
+      }
+    },
     "image_with_text_GeV937": {
       "type": "image-with-text",
       "blocks": {
@@ -320,6 +445,7 @@
       "name": "Media with text",
       "settings": {
         "image": "shopify://shop_images/mm-vulva-wash-comparison.jpg",
+        "video_autoplay": "autoplay",
         "media_type": "image",
         "height": "adapt",
         "media_caption": "",
@@ -351,6 +477,84 @@
         "padding_bottom": 36
       }
     },
+    "multicolumn_with_text_jDKrqy": {
+      "type": "multicolumn-with-text",
+      "blocks": {
+        "heading_MQLUHj": {
+          "type": "heading",
+          "settings": {
+            "heading": "make it part of your routine",
+            "heading_size": "hlarge"
+          }
+        },
+        "column_7ghEfj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/mm-vulva_wash-included_products.jpg",
+            "title": "Step 1",
+            "text": "<p>Dispense a quarter size amount of the <strong>VMAGIC® Feminine Wash</strong> product into hands or soft sponge and apply directly to skin. Rinse clean with warm water. Gently dry.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "vmagic-feminine-wash",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": "",
+            "button_label": "SHOP NOW",
+            "show_price": false
+          }
+        },
+        "column_njwcCz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/medicine-mama-vulva-balm-1.jpg",
+            "title": "Step 2",
+            "text": "<p>Scoop out a small amount of VMAGIC® <strong>Vulva Balm</strong> with clean, dry fingers and massage into vulvar skin (includes inner and/or outer labia, the clitoris, vaginal opening or mons pubis).</p>",
+            "link_label": "",
+            "link": "",
+            "product": "vmagic-vulvar-balm-skincare-jar",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": "",
+            "button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_MQLUHj",
+        "column_7ghEfj",
+        "column_njwcCz"
+      ],
+      "name": "Multicolumn with text",
+      "settings": {
+        "video_autoplay": "autoplay",
+        "media_type": "image",
+        "height": "adapt",
+        "show_desktop": true,
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "border_style": "none",
+        "background_style": "custom",
+        "background_color": "#ffffff",
+        "button_label": "",
+        "button_link": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_mobile": true,
+        "layout_mobile": "text_first",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_MqYAMb": {
       "type": "image-with-text",
       "blocks": {
@@ -368,6 +572,7 @@
       "name": "Media with text",
       "settings": {
         "image": "shopify://shop_images/mm-vulva-wash-ingredients_50f325a0-99b3-4ab5-bef9-f6e76edcb473.jpg",
+        "video_autoplay": "autoplay",
         "media_type": "image",
         "height": "adapt",
         "media_caption": "",
@@ -446,6 +651,7 @@
       "name": "Media with text",
       "settings": {
         "video": "shopify://files/videos/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
+        "video_autoplay": "autoplay",
         "media_type": "video",
         "height": "medium",
         "media_caption": "",
@@ -463,8 +669,8 @@
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "center",
-        "desktop_content_padding_left": 36,
-        "desktop_content_padding_right": 36,
+        "desktop_content_padding_left": 120,
+        "desktop_content_padding_right": 120,
         "content_layout": "no-overlap",
         "color_scheme": "inverse",
         "image_behavior": "none",
@@ -495,7 +701,11 @@
     "scrolling_marquee_fTQEHH",
     "featured_review_bJ3gVn",
     "featured_product_wpGEQn",
+    "image_with_text_mzdCed",
+    "rich_text_iLptBJ",
+    "text_cards_3ax9Lj",
     "image_with_text_GeV937",
+    "multicolumn_with_text_jDKrqy",
     "image_with_text_MqYAMb",
     "image_with_text_Y49J8F",
     "faq_xUgWW9"

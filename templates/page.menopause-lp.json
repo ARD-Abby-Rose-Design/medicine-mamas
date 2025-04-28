@@ -34,7 +34,7 @@
           "type": "heading",
           "settings": {
             "heading": "MENOPAUSE RELIEF STARTS HERE",
-            "heading_size": "h1"
+            "heading_size": "hlarge"
           }
         },
         "text_6GVxmp": {
@@ -65,6 +65,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/mm-meno_hero.jpg",
+        "video_autoplay": "autoplay",
         "media_type": "image",
         "height": "adapt",
         "media_caption": "",
@@ -75,7 +76,7 @@
         "second_media_caption": "",
         "second_media_caption_color": "#ffffff",
         "second_media_caption_bg": "none",
-        "second_media_caption_bg_color": "#FFFFFF",
+        "second_media_caption_bg_color": "#ffffff",
         "second_media_caption_position": "top-left",
         "show_desktop": true,
         "desktop_image_width": "small",
@@ -137,7 +138,7 @@
           "type": "heading",
           "settings": {
             "heading": "SOOTHING RELIEF HAS ARRIVED",
-            "heading_size": "h1"
+            "heading_size": "hlarge"
           }
         }
       },
@@ -518,7 +519,7 @@
       ],
       "settings": {
         "title": "Loved by women everywhere",
-        "heading_size": "h1",
+        "heading_size": "hlarge",
         "heading_alignment": "center",
         "text": "",
         "image_width": "full",
@@ -544,7 +545,7 @@
           "type": "heading",
           "settings": {
             "heading": "MEET THE MEDICINE MAMA HERSELF",
-            "heading_size": "h1"
+            "heading_size": "hlarge"
           }
         },
         "text_EWmYAj": {
@@ -583,6 +584,7 @@
       ],
       "settings": {
         "video": "shopify://files/videos/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
+        "video_autoplay": "autoplay",
         "media_type": "video",
         "height": "medium",
         "media_caption": "",
@@ -593,7 +595,7 @@
         "second_media_caption": "",
         "second_media_caption_color": "#ffffff",
         "second_media_caption_bg": "none",
-        "second_media_caption_bg_color": "#FFFFFF",
+        "second_media_caption_bg_color": "#ffffff",
         "second_media_caption_position": "top-left",
         "show_desktop": true,
         "desktop_image_width": "small",
@@ -689,7 +691,7 @@
           "type": "heading",
           "settings": {
             "heading": "OVER 400,000 HAPPY CUSTOMERS",
-            "heading_size": "h1"
+            "heading_size": "hlarge"
           }
         }
       },

@@ -605,10 +605,19 @@
   max-width: 18rem;
 }
 
-.media-caption--review h4, 
-.media-caption--review h5,
-.media-caption--review h6,
-.media-caption--review p {
+.media-caption--below {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.media-caption h4,
+.media-caption--below h4, 
+.media-caption h5,
+.media-caption--below h5,
+.media-caption h6,
+.media-caption--below h6,
+.media-caption p,
+.media-caption--below p {
   margin: 1rem 0;
   }
 
@@ -644,7 +653,11 @@
 
   .media-caption--review {
     display: block;
-  }  
+  }
+  
+  .media-caption--below {
+    margin-top: 2rem;
+  }
 
   .media-caption--top-left {
     top: 1.5rem;

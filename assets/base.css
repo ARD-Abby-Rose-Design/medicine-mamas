@@ -351,7 +351,7 @@ h5,
   letter-spacing: 2px;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 980px) {
   
   .hlarge {
     font-size: calc(var(--font-heading-scale) * 7rem);
@@ -365,7 +365,7 @@ h5,
   letter-spacing: 2px;
 }
 
-  @media only screen and (min-width: 750px) {
+  @media only screen and (min-width: 980px) {
     .hmedium {
       font-size: calc(var(--font-heading-scale) * 6.2rem);
     }
@@ -1200,7 +1200,7 @@ summary::-webkit-details-marker {
   background-color: transparent;
 }
 
-.media > *:not(.zoom):not(.deferred-media__poster-button):not(.media-caption):not(.media-flip-buttons),
+.media > *:not(.zoom):not(.deferred-media__poster-button):not(.media-caption):not(.media-flip-buttons):not(.custom-play-button),
 .media model-viewer {
   display: block;
   max-width: 100%;
@@ -3568,4 +3568,27 @@ details-disclosure>details {
 .color-inverse .link {
   color: black;
   text-decoration: underline;
+}
+
+
+.custom-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.custom-play-button svg {
+width: 75%;
+height: 75%;
 }

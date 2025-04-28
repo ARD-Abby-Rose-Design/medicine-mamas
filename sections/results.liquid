@@ -1,77 +1,76 @@
 {% style %}
-    #image-with-text__results--{{ section.id }} {
-        {% if section.settings.show_mobile %}
-            display: flex;
-        {% else %}
-            display: none;
-        {% endif %}
-    }
-    @media screen and (min-width: 749px) {
-        #image-with-text__results--{{ section.id }} {
-            {% if section.settings.show_desktop %}
-                display: flex;
-            {% else %}
-                display: none;
-            {% endif %}
-        }
-    }
+  #image-with-text__results--{{ section.id }} {
+      {% if section.settings.show_mobile %}
+          display: flex;
+      {% else %}
+          display: none;
+      {% endif %}
+  }
+  @media screen and (min-width: 749px) {
+      #image-with-text__results--{{ section.id }} {
+          {% if section.settings.show_desktop %}
+              display: flex;
+          {% else %}
+              display: none;
+          {% endif %}
+      }
+  }
 {% endstyle %}
 
 <div class="page-width">
-    <div id="image-with-text__results--{{ section.id }}" class="image-with-text__results-section">
-        {% for block in section.blocks %}
-            <div class="image-with-text__result">
-                <h2 class="image-with-text__result-number h1">{{ block.settings.result_number }}</h2>
-                <p>{{ block.settings.result_text }}</p>
-            </div>
-        {% endfor %}
-    </div>
+  <div id="image-with-text__results--{{ section.id }}" class="image-with-text__results-section">
+    {% for block in section.blocks %}
+      <div class="image-with-text__result">
+        <h2 class="image-with-text__result-number h1">{{ block.settings.result_number }}</h2>
+        <p>{{ block.settings.result_text }}</p>
+      </div>
+    {% endfor %}
+  </div>
 </div>
 
 {% schema %}
+{
+  "name": "Results",
+  "settings": [
     {
-    "name": "Results",
-    "settings": [
-    { 
-    "type": "checkbox",
-    "id": "show_desktop",
-    "label": "Show on Desktop",
-    "default": false
+      "type": "checkbox",
+      "id": "show_desktop",
+      "label": "Show on Desktop",
+      "default": false
     },
     {
-    "type": "checkbox",
-    "id": "show_mobile",
-    "label": "Show on Mobile",
-    "default": true
+      "type": "checkbox",
+      "id": "show_mobile",
+      "label": "Show on Mobile",
+      "default": true
     }
-    ],
-    "blocks": [
+  ],
+  "blocks": [
     {
-    "type": "result",
-    "name": "Result",
-    "settings": [
+      "type": "result",
+      "name": "Result",
+      "settings": [
+        {
+          "type": "text",
+          "id": "result_number",
+          "default": "99%",
+          "label": "Result Number"
+        },
+        {
+          "type": "text",
+          "id": "result_text",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "label": "Result Text"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
     {
-    "type": "text",
-    "id": "result_number",
-    "default": "99%",
-    "label": "Result Number"
-    },
-    {
-    "type": "text",
-    "id": "result_text",
-    "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "label": "Result Text"
+      "name": "Results",
+      "category": "Custom"
     }
-    ]
-    }
-    
-    ],
-    
-    "presets": [
-    {
-    "name": "Results",
-    "category": "Custom"
-    }
-    ]
-    }
+  ]
+}
 {% endschema %}

@@ -83,7 +83,7 @@
           "settings": {
             "heading": "What's Inside?",
             "icon": "none",
-            "content": "<p>Vulva Balm 2oz - Our best-selling vulva moisturizer</p><p>Intimate Glide 4oz - New organic aloe and water-based personal lubricant.</p>",
+            "content": "<p>Travel Size Bundle:</p><ul><li>Vulva Balm 2oz</li><li>Intimate Glide 2.5oz </li></ul><p>Full Size Bundle:</p><ul><li>Vulva Balm 2oz</li><li>Intimate Glide 4oz </li></ul>",
             "page": ""
           }
         },
@@ -290,7 +290,7 @@
         "second_media_caption": "",
         "second_media_caption_color": "#ffffff",
         "second_media_caption_bg": "none",
-        "second_media_caption_bg_color": "#FFFFFF",
+        "second_media_caption_bg_color": "#ffffff",
         "second_media_caption_position": "top-left",
         "show_desktop": true,
         "desktop_image_width": "medium",
@@ -349,7 +349,7 @@
         "second_media_caption": "",
         "second_media_caption_color": "#ffffff",
         "second_media_caption_bg": "none",
-        "second_media_caption_bg_color": "#FFFFFF",
+        "second_media_caption_bg_color": "#ffffff",
         "second_media_caption_position": "top-left",
         "show_desktop": true,
         "desktop_image_width": "small",
@@ -592,7 +592,7 @@
         "second_media_caption": "",
         "second_media_caption_color": "#ffffff",
         "second_media_caption_bg": "none",
-        "second_media_caption_bg_color": "#FFFFFF",
+        "second_media_caption_bg_color": "#ffffff",
         "second_media_caption_position": "top-left",
         "show_desktop": true,
         "desktop_image_width": "medium",

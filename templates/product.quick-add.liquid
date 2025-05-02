@@ -24,9 +24,14 @@
 
 {% render 'rc-widget', product: product %}
 
+
 <div class="quantity-and-buttons">
   {%- render 'product-quantity-input', product: product, product_form_id: 'product-form-quick-add' -%}
   {%- render 'buy-buttons', block: block, product: product, product_form_id: 'product-form-quick-add', section_id: section.id, show_pickup_availability: true -%}
 </div>
 
 <a class="quick-add__details link" href="{{ product.url }}">Details</a>
+
+<script type="application/json" id="ProductJson-shopify">
+   {{ product.variants | json }}
+</script>

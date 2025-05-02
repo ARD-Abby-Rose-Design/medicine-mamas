@@ -35,6 +35,9 @@
         </button>
       </div>
       <div class="quick-add__inner">
+        <script type="application/json" id="ProductJson-shopify">
+            {{ product.variants | json }}
+        </script>
       </div>
       <div class="loading-overlay__spinner hidden">
         <svg
@@ -50,3 +53,4 @@
     </div>
   </div>
 </quick-add-drawer>
+

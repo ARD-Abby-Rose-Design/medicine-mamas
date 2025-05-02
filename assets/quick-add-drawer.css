@@ -49,13 +49,6 @@ quick-add-drawer .link {
   margin-top: 2rem;
 }
 
-
-@media screen and (max-width: 749px) {
-  quick-add-drawer .drawer__inner {
-    padding: 0px 20px;
-  }
-}
-
 .quick-add-drawer__title {
   text-transform: uppercase;
 }
@@ -88,10 +81,10 @@ quick-add-drawer .buy-buttons__wrapper {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
+  
 }
 
 quick-add-variant-picker {
-
   width: calc(33% - 0.2rem);
 }
 

@@ -76,12 +76,13 @@ quick-add-drawer .buy-buttons__wrapper {
   margin-left: 0;
 }
 
-
-.variant-picker-container {
+.quick-add__inner .variant-picker-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   margin-bottom: 2rem;
 }
+
+
 quick-add-variant-picker {
   width: calc(33% - 0.2rem);
 }

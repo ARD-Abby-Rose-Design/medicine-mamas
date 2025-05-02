@@ -17,6 +17,7 @@
 {%- if product.variants.size > 1 -%}
   <div class="variant-picker-container">
   {% for variant in product.variants %}
+
     {%- render 'quick-add-variant-picker', product: product, variant: variant -%}
   {% endfor %}
   </div>

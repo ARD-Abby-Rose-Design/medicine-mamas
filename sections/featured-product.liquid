@@ -550,6 +550,10 @@
   endif
 -%}
 
+  <script type="application/json" id="ProductJson-shopify">
+   {{ product.variants | json }}
+ </script>
+
 <script type="application/ld+json">
   {
     "@context": "http://schema.org/",

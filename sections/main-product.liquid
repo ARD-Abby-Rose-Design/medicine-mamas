@@ -388,6 +388,7 @@
     <script src="{{ 'product-model.js' | asset_url }}" defer></script>
   {%- endif -%}
 
+
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       function isIE() {
@@ -476,6 +477,9 @@
       display: none;
     }
   </style>
+   <script type="application/json" id="ProductJson-shopify">
+   {{ product.variants | json }}
+ </script>
 {% endif %}
 
 {{ 'okendo-reviews-widget.css' | asset_url | stylesheet_tag }}

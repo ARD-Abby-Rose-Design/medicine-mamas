@@ -86,7 +86,7 @@ quick-add-drawer .buy-buttons__wrapper {
 
 .variant-picker-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   margin-bottom: 2rem;
 }
 

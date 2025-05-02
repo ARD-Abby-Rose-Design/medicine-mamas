@@ -28,7 +28,7 @@
   }
 
   .product__info-wrapper {
-    padding: 0 0 0 10rem;
+    padding: 0 0 0 5rem;
   }
 
   .product__info-wrapper--extra-padding {
@@ -53,6 +53,11 @@
 }
 
 @media screen and (min-width: 990px) {
+
+  .product__info-wrapper {
+    padding: 0 0 0 10rem;
+  }
+
   .product--large:not(.product--no-media) .product__media-wrapper {
     max-width: 65%;
     width: calc(65% - var(--grid-desktop-horizontal-spacing) / 2);
@@ -211,7 +216,7 @@ fieldset.product-form__input .form__label {
   color: rgb(var(--color-foreground));
   display: inline-block;
   margin: 0.7rem 0.5rem 0.2rem 0;
-  padding: 1rem 2rem;
+  padding: 0.7rem 1rem;
   font-size: 1.4rem;
   letter-spacing: 0.1rem;
   line-height: 1;

@@ -13,7 +13,7 @@
 
 {{ 'quick-add-drawer.css' | asset_url | stylesheet_tag }}
 
-<quick-add-drawer  data-section="quick-add" class="drawer">
+<quick-add-drawer data-section={{ section.id }} class="drawer">
   <div id="QuickAddDrawer" class="cart-drawer">
     <div id="QuickAddDrawer-Overlay" class="cart-drawer__overlay"></div>
     <div
@@ -33,6 +33,11 @@
         >
           {% render 'icon-close' %}
         </button>
+      </div>
+      <div class="quick-add__inner">
+        <script type="application/json" id="ProductJson-shopify">
+            {{ product.variants | json }}
+        </script>
       </div>
       <div class="loading-overlay__spinner hidden">
         <svg

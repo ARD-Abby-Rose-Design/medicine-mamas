@@ -33,6 +33,6 @@
 
 <a class="quick-add__details link" href="{{ product.url }}">Details</a>
 
-<script type="application/json" id="ProductJson-shopify">
+<script type="application/json" data-product-id="{{ product.id }}" class="ProductJson-shopify" id="ProductJson-shopify-quick-add">
    {{ product.variants | json }}
 </script>

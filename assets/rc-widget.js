@@ -10,39 +10,73 @@ class RechargeWidget extends HTMLElement {
       this.nextShipment;
       this.dropdownSelect = this.querySelector('dropdown-select');
       this.ulList = this.dropdownSelect.querySelector('ul[role="listbox"]');
-      this.shopifyVariants = JSON.parse(document.getElementById('ProductJson-shopify').textContent);
+  }
+
+  connectedCallback() {
       this.initializeWidget();
   }
 
   async initializeWidget () {
+      console.log('[RechargeWidget] initializeWidget started');
       await this.login();
 
-      this.productID = this.querySelector('.widget').getAttribute('data-product-id');
-      this.variantID = Number(this.querySelector('.widget').getAttribute('data-variant-id'));
+      const section = this.closest('[data-section]');
+      const sectionId = section?.getAttribute('data-section');
+      const scriptId = `ProductJson-shopify-${sectionId}`;
+      const jsonScript = document.getElementById(scriptId);
+
+      if (jsonScript && jsonScript.textContent?.trim()) {
+        try {
+          this.shopifyVariants = JSON.parse(jsonScript.textContent);
+          console.log('[RechargeWidget] Parsed shopifyVariants from:', scriptId, this.shopifyVariants);
+        } catch (err) {
+          console.error('[RechargeWidget] Failed to parse product JSON from:', scriptId, err);
+          this.shopifyVariants = [];
+        }
+      } else {
+        console.warn('[RechargeWidget] No ProductJson script found for section:', sectionId);
+        this.shopifyVariants = [];
+      }
+
+      this.productID = this.querySelector('.widget')?.getAttribute('data-product-id');
+      this.variantID = Number(this.querySelector('.widget')?.getAttribute('data-variant-id'));
+      console.log('[RechargeWidget] productID:', this.productID, 'variantID:', this.variantID);
+
       this.widget = await recharge.cdn.getCDNWidgetSettings(this.productID);
+      console.log('[RechargeWidget] widget settings:', this.widget);
+
       this.product = await recharge.cdn.getCDNProduct(this.productID);
-      this.setVariables(document.querySelector(':root'))
+      console.log('[RechargeWidget] product:', this.product);
 
-      // if (this.widget.published)  {
-          this.widgetTemplate = document.querySelector('.widget__template-radio');
-          // check the widget template type and set the widget template variable to the correct template
-          switch(this.widget.widget_template_type) {
-              case 'radio_group':
-                  this.widgetTemplate.classList.add('radio-group');
-                  break;
-              case 'button_group':
-                  this.widgetTemplate.classList.add('button-group');
-                  break;
-              case 'checkbox':
-                  this.widgetTemplate = document.querySelector('.widget__template-checkbox');
-                  break;
-          }
-          this.renderWidget()
+      this.setVariables(document.querySelector(':root'));
+      console.log('[RechargeWidget] CSS variables set');
 
-          if (this.session) {
-              this.getNextShipment()
-          }
-      // }
+      this.widgetTemplate = document.querySelector('.widget__template-radio');
+      console.log('[RechargeWidget] initial widgetTemplate:', this.widgetTemplate);
+
+      switch(this.widget.widget_template_type) {
+          case 'radio_group':
+              this.widgetTemplate.classList.add('radio-group');
+              break;
+          case 'button_group':
+              this.widgetTemplate.classList.add('button-group');
+              break;
+          case 'checkbox':
+              this.widgetTemplate = document.querySelector('.widget__template-checkbox');
+              break;
+      }
+
+      console.log('[RechargeWidget] widgetTemplate after switch:', this.widgetTemplate);
+
+      this.renderWidget();
+      console.log('[RechargeWidget] renderWidget called');
+
+      if (this.session) {
+          console.log('[RechargeWidget] session exists, getting next shipment');
+          this.getNextShipment();
+      } else {
+          console.warn('[RechargeWidget] No session found');
+      }
   }
 
   async login() {
@@ -126,7 +160,10 @@ class RechargeWidget extends HTMLElement {
           compareAtPrice = sellingVariant.prices.compare_at_price,
           subscribePrice = sellingVariant.prices.discounted_price;
 
-      const shopifyVariant = this.shopifyVariants.find(v => v.id === variantID);
+      const shopifyVariant = this.shopifyVariants.find(v => String(v.id) === String(variantID));
+      console.log('[RechargeWidget] variantID:', variantID, typeof variantID);
+      console.log('[RechargeWidget] shopifyVariants:', this.shopifyVariants.map(v => [v.id, typeof v.id]));
+      console.log('[RechargeWidget] matched shopifyVariant:', shopifyVariant);
       const hasSellingPlans = shopifyVariant?.selling_plan_allocations?.length > 0;
 
       if (!hasSellingPlans) {
@@ -184,7 +221,6 @@ class RechargeWidget extends HTMLElement {
   getSellingVariant(variantID) {
       let sellingVariant
 
-      // get selling plan of current variant and set it as the value of the selling sellingVariant variable
       this.product.variants.forEach(function (variant) {
           if (variant.id === variantID) {
               sellingVariant = variant
@@ -204,7 +240,6 @@ class RechargeWidget extends HTMLElement {
       root.style.setProperty('--rc-widget-link-color', this.widget.popup_link_color);
   }
 
-  // render the subscription radio button
   renderSubscriptionRadio(sellingVariant) {
       let widget = this.widget,
           prod = this.product,
@@ -217,14 +252,12 @@ class RechargeWidget extends HTMLElement {
           subscribePrice = price,
           _this = this;
 
-      // if a discount is applied, change the text to the subscribe with discount message and set the price to the discounted price
       if (discount) {
           subscribePrice = discountedPrice;
           subscribeText = widget.subscribe_message;
           widgetTemplate.querySelector('.subscription-radio .option-discount').innerText = prod.selling_plan_groups[0].selling_plans[0].price_adjustments_value + '%'
       }
 
-      // set the text and price of the subscription radio button
       widgetTemplate.querySelector('.subscription-radio .option-text').innerHTML = subscribeText;
       widgetTemplate.querySelector('.subscription-radio .option-price').innerText = '$' + subscribePrice;
 
@@ -236,7 +269,6 @@ class RechargeWidget extends HTMLElement {
           compareAtEl.classList.add('hidden');
       }
 
-      // if the widget is set to select the subscription radio by default, add the active class and check the radio button
       if (widget.widget_template_type === 'radio_group' || widget.widget_template_type === 'button_group') {
           widgetTemplate.appendChild(widgetTemplate.querySelector('.widget__selling-plans'));
           widgetTemplate.querySelector('.widget__selling-plans-dropdown__label').classList.remove('visually-hidden')

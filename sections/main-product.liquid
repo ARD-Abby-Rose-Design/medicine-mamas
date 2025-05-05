@@ -477,8 +477,8 @@
       display: none;
     }
   </style>
-   <script type="application/json" id="ProductJson-shopify">
-   {{ product.variants | json }}
+      <script type="application/json" data-product-id="{{ product.id }}" class="ProductJson-shopify" id="ProductJson-shopify-{{ section.id }}">
+      {{ product.variants | json }}
  </script>
 {% endif %}
 

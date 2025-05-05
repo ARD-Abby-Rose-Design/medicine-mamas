@@ -311,6 +311,21 @@
             "return_policy_note": "Try 30-day risk free, love it or your money back!"
           }
         },
+        "icon_with_text_q3MVyc": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "organic",
+            "heading_1": "Organic, hormone-free ingredients",
+            "heading_1_style": "body",
+            "icon_2": "lab_tested",
+            "heading_2": "Clinically tested",
+            "heading_2_style": "body",
+            "icon_3": "physician",
+            "heading_3": "Endorsed by physicians",
+            "heading_3_style": "body"
+          }
+        },
         "included_products_P63Rbg": {
           "type": "included_products",
           "settings": {
@@ -329,6 +344,7 @@
         "checkmarks_kajdJK",
         "custom_liquid_rYjPgq",
         "buy_buttons_9M7XR4",
+        "icon_with_text_q3MVyc",
         "included_products_P63Rbg"
       ],
       "name": "t:sections.featured-product.presets.name",
@@ -444,6 +460,36 @@
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "rich_text_dmbhRL": {
+      "type": "rich-text",
+      "blocks": {
+        "button_9C8qBV": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop the bundle",
+            "button_link": "shopify://products/vmagic-grooming-kit",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_9C8qBV"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 52
       }
     },
     "rich_text_RzFYTp": {
@@ -701,6 +747,7 @@
     "rich_text_8mefDJ",
     "featured_product_mH3ceK",
     "multicolumn_pMFmHc",
+    "rich_text_dmbhRL",
     "rich_text_RzFYTp",
     "steps_gdiniw",
     "rich_text_GyYtpp",

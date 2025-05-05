@@ -58,7 +58,7 @@
   >
 {%- endif -%}
 
-<section class="color-{{ section.settings.color_scheme }} {% if section.settings.secondary_background %}background-secondary{% else %}gradient{% endif %}">
+<section data-section="{{ section.id }}" class="color-{{ section.settings.color_scheme }} {% if section.settings.secondary_background %}background-secondary{% else %}gradient{% endif %}">
   <div class="page-width section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %}">
     <div class="featured-product product product--{{ section.settings.media_size }} grid grid--1-col gradient color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 or section.settings.product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
@@ -519,10 +519,16 @@
           {%- endif -%}
         </div>
       {%- endif -%}
+      
     </div>
 
     {% render 'product-media-modal', product: product, variant_images: media_to_render %}
+    
   </div>
+  <script type="application/json" data-product-id="{{ product.id }}" class="ProductJson-shopify" id="ProductJson-shopify-{{ section.id }}">
+{{ product.variants | json }}
+</script>
+
 </section>
 
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
@@ -550,9 +556,8 @@
   endif
 -%}
 
-  <script type="application/json" id="ProductJson-shopify">
-   {{ product.variants | json }}
- </script>
+
+
 
 <script type="application/ld+json">
   {

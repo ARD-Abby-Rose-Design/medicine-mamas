@@ -24,7 +24,7 @@
           "type": "heading",
           "settings": {
             "heading": "Say goodbye to bumps and irritation for good",
-            "heading_size": "hlarge"
+            "heading_size": "h1"
           }
         },
         "text_ECHdDh": {
@@ -453,7 +453,7 @@
           "type": "heading",
           "settings": {
             "heading": "3 STEPS TO STOP INGROWN HAIRS",
-            "heading_size": "hlarge"
+            "heading_size": "h1"
           }
         },
         "text_63UE8W": {
@@ -531,7 +531,7 @@
           "type": "heading",
           "settings": {
             "heading": "Over 15,000 5-Star Reviews",
-            "heading_size": "hlarge"
+            "heading_size": "h1"
           }
         }
       },
@@ -546,7 +546,7 @@
         "content_alignment": "left",
         "color_scheme": "inverse",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 56,
         "padding_bottom": 52
       }
     },

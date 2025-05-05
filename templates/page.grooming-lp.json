@@ -66,7 +66,7 @@
         "second_media_caption": "",
         "second_media_caption_color": "#ffffff",
         "second_media_caption_bg": "none",
-        "second_media_caption_bg_color": "#FFFFFF",
+        "second_media_caption_bg_color": "#ffffff",
         "second_media_caption_position": "top-left",
         "show_desktop": true,
         "desktop_image_width": "small",
@@ -101,7 +101,7 @@
           "type": "heading",
           "settings": {
             "heading": "Real reviews, real skin",
-            "heading_size": "h3"
+            "heading_size": "h2"
           }
         }
       },

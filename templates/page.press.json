@@ -59,8 +59,44 @@
         "column_AbiCQY": {
           "type": "column",
           "settings": {
+            "title": "<em>Giddy - July 2024 - Dr. Clare Bertucio</em>",
+            "text": "<p><a href=\"https://www.getmegiddy.com/sex-life-after-vulvar-cancer\" title=\"https://www.getmegiddy.com/sex-life-after-vulvar-cancer\">Kick-starting Your Sex Life After Vulvar</a></p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
+        "column_qC7HCR": {
+          "type": "column",
+          "settings": {
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
+        "column_XtYzyV": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
+        "column_f6QfqD": {
+          "type": "column",
+          "settings": {
+            "title": "<em>Live Strong - June 2023 - Dr. Clare Bertucio</em>",
+            "text": "<p><a href=\"https://www.livestrong.com/article/13774882-energy-tips-from-doctors/\" title=\"https://www.livestrong.com/article/13774882-energy-tips-from-doctors/\">7 Things Doctors Do Every Day Before Breakfast For More Energy</a></p>",
             "link_label": "",
             "link": "",
             "product": "",
@@ -73,7 +109,10 @@
         "column_pYe4pL",
         "column_Bg6rAr",
         "column_nHEMqc",
-        "column_AbiCQY"
+        "column_AbiCQY",
+        "column_qC7HCR",
+        "column_XtYzyV",
+        "column_f6QfqD"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -100,18 +139,6 @@
     "multicolumn_XEq6ha": {
       "type": "multicolumn",
       "blocks": {
-        "column_n39yPE": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": "",
-            "product": "",
-            "product_badge_color": "#fcf7f0",
-            "product_benefits": ""
-          }
-        },
         "column_AWMJg6": {
           "type": "column",
           "settings": {
@@ -138,7 +165,6 @@
         }
       },
       "block_order": [
-        "column_n39yPE",
         "column_AWMJg6",
         "column_wN7cU7"
       ],

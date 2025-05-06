@@ -55,12 +55,25 @@
             "product_badge_color": "#FCF7F0",
             "product_benefits": ""
           }
+        },
+        "column_AbiCQY": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
         }
       },
       "block_order": [
         "column_pYe4pL",
         "column_Bg6rAr",
-        "column_nHEMqc"
+        "column_nHEMqc",
+        "column_AbiCQY"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -131,7 +144,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "PRESS",
+        "title": "",
         "heading_size": "h1",
         "heading_alignment": "",
         "text": "",

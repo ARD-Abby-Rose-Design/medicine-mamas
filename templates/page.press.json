@@ -188,6 +188,18 @@
             "product_benefits": ""
           }
         },
+        "column_LTAk3B": {
+          "type": "column",
+          "settings": {
+            "title": "<em>Woman's World - October 2023 - Medicine Mama VMAGIC®</em>",
+            "text": "<p><a href=\"https://www.womansworld.com/shopping/best-natural-products-for-vaginal-dryness\" title=\"https://www.womansworld.com/shopping/best-natural-products-for-vaginal-dryness\">14 Best Products for Vaginal Dryness and Overall Comfort</a></p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
         "column_UwnVt8": {
           "type": "column",
           "settings": {
@@ -205,6 +217,7 @@
         "column_AWMJg6",
         "column_wN7cU7",
         "column_xhgrcG",
+        "column_LTAk3B",
         "column_UwnVt8"
       ],
       "name": "t:sections.multicolumn.presets.name",

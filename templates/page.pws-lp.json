@@ -262,7 +262,7 @@
         "color_scheme": "inverse",
         "image_behavior": "none",
         "show_mobile": true,
-        "layout_mobile": "image_first",
+        "layout_mobile": "text_first",
         "mobile_content_alignment": "left",
         "media_caption_position_mobile": "top-left",
         "second_media_caption_position_mobile": "top-left",

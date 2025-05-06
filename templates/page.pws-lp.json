@@ -270,6 +270,22 @@
     "media_toggle_with_text_nAtrwd": {
       "type": "media-flip-with-text",
       "blocks": {
+        "number_q6c7CA": {
+          "type": "number",
+          "settings": {
+            "number": "3",
+            "number_bg_color": "#121212",
+            "show_desktop": true,
+            "show_mobile": true
+          }
+        },
+        "heading_74NRah": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ingredients You Can Trust",
+            "heading_size": "h2"
+          }
+        },
         "text_nArdeU": {
           "type": "text",
           "settings": {
@@ -292,6 +308,8 @@
         }
       },
       "block_order": [
+        "number_q6c7CA",
+        "heading_74NRah",
         "text_nArdeU",
         "text_hadeMA"
       ],

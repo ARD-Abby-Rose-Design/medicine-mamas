@@ -28,7 +28,7 @@
             "link_label": "",
             "link": "",
             "product": "",
-            "product_badge_color": "#FCF7F0",
+            "product_badge_color": "#fcf7f0",
             "product_benefits": ""
           }
         },
@@ -40,19 +40,19 @@
             "link_label": "",
             "link": "",
             "product": "",
-            "product_badge_color": "#FCF7F0",
+            "product_badge_color": "#fcf7f0",
             "product_benefits": ""
           }
         },
         "column_nHEMqc": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "<em>New Beauty - July 2024 - Medicine Mama VMAGIC®</em>",
+            "text": "<p><a href=\"https://www.newbeauty.com/vaginal-skin-care-trend/\" title=\"https://www.newbeauty.com/vaginal-skin-care-trend/\">Skin Care for Down There Is Trending. What Do Doctors Really Think?</a></p>",
             "link_label": "",
             "link": "",
             "product": "",
-            "product_badge_color": "#FCF7F0",
+            "product_badge_color": "#fcf7f0",
             "product_benefits": ""
           }
         },

@@ -135,7 +135,7 @@
         "text": "",
         "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
+        "columns_desktop": 1,
         "column_alignment": "left",
         "border_style": "none",
         "background_style": "primary",

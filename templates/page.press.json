@@ -92,6 +92,18 @@
             "product_benefits": ""
           }
         },
+        "column_LdwbnU": {
+          "type": "column",
+          "settings": {
+            "title": "<em>Huffington Post - April 2024 - Medicine Mama VMAGIC®</em>",
+            "text": "<p><a href=\"https://sg.news.yahoo.com/vulva-balms-going-viral-doctors-070024025.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAEfX3k3UxXl1x18GwASvu5TJeg2YhCPrFCgbUBQzFyAPU-kAg8rKrom5xy-Qk7PDSlIsoDbL5DTkD0F1c26f7rk1Xl99-3bHYZz5UqNNsQJmkcd7TyMha-e-43uG-FlbiHbRAWxCWA_3rxB1czAbXjrAbk9FBoMIcNr5jJJ92EXp\" title=\"https://sg.news.yahoo.com/vulva-balms-going-viral-doctors-070024025.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAEfX3k3UxXl1x18GwASvu5TJeg2YhCPrFCgbUBQzFyAPU-kAg8rKrom5xy-Qk7PDSlIsoDbL5DTkD0F1c26f7rk1Xl99-3bHYZz5UqNNsQJmkcd7TyMha-e-43uG-FlbiHbRAWxCWA_3rxB1czAbXjrAbk9FBoMIcNr5jJJ92EXp\">Vulva Balms Are Going Viral - And Doctors Have Thoughts</a></p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
         "column_f6QfqD": {
           "type": "column",
           "settings": {
@@ -112,6 +124,7 @@
         "column_AbiCQY",
         "column_qC7HCR",
         "column_XtYzyV",
+        "column_LdwbnU",
         "column_f6QfqD"
       ],
       "name": "t:sections.multicolumn.presets.name",

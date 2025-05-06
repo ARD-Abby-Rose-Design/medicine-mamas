@@ -53,6 +53,7 @@
             "button_label": "Find Relief & Save Up to 20%",
             "button_link": "shopify://collections/intimacy",
             "button_arrow": true,
+            "big_button": false,
             "button_subtitle": ""
           }
         },
@@ -121,11 +122,11 @@
         "text_V6U7FY": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Painful intimacy isn’t something you just have to live with. </strong></p><p>In a clinical trial for VMAGIC® Vulva Balm<strong>:</strong><br/></p>",
+            "text": "<p><strong>Painful intimacy isn’t something you just have to live with. </strong></p><p>In a clinical trial for VMAGIC® Vulva Balm, <strong>92% saw a reduction in intimate dryness after consistent 2 week use*</strong>, and <strong>79% reported immediate soothing relief*</strong><br/></p>",
             "text_size": "text-body-large",
             "background_style": "none",
             "background_color": "#ffffff",
-            "bullets_to_checkmarks": false
+            "bullets_to_checkmarks": true
           }
         }
       },
@@ -152,58 +153,6 @@
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "desktop_content_padding_left": 36,
-        "desktop_content_padding_right": 36,
-        "content_layout": "no-overlap",
-        "color_scheme": "inverse",
-        "image_behavior": "none",
-        "show_mobile": true,
-        "layout_mobile": "image_first",
-        "mobile_content_alignment": "left",
-        "media_caption_position_mobile": "top-left",
-        "second_media_caption_position_mobile": "top-left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_FpU4eK": {
-      "type": "image-with-text",
-      "blocks": {
-        "text_7PDPQA": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_size": "text-body",
-            "background_style": "none",
-            "background_color": "#ffffff",
-            "bullets_to_checkmarks": false
-          }
-        }
-      },
-      "block_order": [
-        "text_7PDPQA"
-      ],
-      "name": "Media with text",
-      "settings": {
-        "image": "shopify://shop_images/Copy_of_HONEY_3.jpg",
-        "video_autoplay": "autoplay",
-        "media_type": "image",
-        "height": "adapt",
-        "media_caption": "",
-        "media_caption_color": "#ffffff",
-        "media_caption_bg": "none",
-        "media_caption_bg_color": "#ffffff",
-        "media_caption_position": "top-left",
-        "second_media_caption": "",
-        "second_media_caption_color": "#ffffff",
-        "second_media_caption_bg": "none",
-        "second_media_caption_bg_color": "#ffffff",
-        "second_media_caption_position": "top-left",
-        "show_desktop": true,
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "desktop_content_padding_left": 36,
         "desktop_content_padding_right": 36,
@@ -276,6 +225,25 @@
         "second_media_caption_position_mobile": "top-left",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "image_banner_FhVPcf": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/mm-lips_stick-included-products.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "show_desktop": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
       }
     },
     "media_toggle_with_text_nAtrwd": {
@@ -662,8 +630,8 @@
     "main",
     "image_with_text_WTwPgc",
     "image_with_text_gtPjF3",
-    "image_with_text_FpU4eK",
     "image_with_text_pikH8p",
+    "image_banner_FhVPcf",
     "media_toggle_with_text_nAtrwd",
     "image_with_text_R3nh6Y",
     "image_banner_jJXDdB",

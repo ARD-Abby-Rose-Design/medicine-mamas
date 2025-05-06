@@ -232,6 +232,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/mm-lips_stick-included-products.jpg",
+        "image_2": "shopify://shop_images/mm-lips_stick-included-products.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "show_desktop": false,

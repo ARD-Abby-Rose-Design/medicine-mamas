@@ -220,8 +220,8 @@ endif
                       {% else %}
                         href="{{ block.settings.button_link }}"
                       {% endif %}
-                      class="button{% if block.settings.button_arrow %} button--arrow{% endif %}"
-                      {{ block.shopify_attributes }}
+                      class="button{% if block.settings.button_arrow %} button--arrow{% endif %} {% if block.settings.big_button %}button--big{% endif %}"
+                      {{ block.shopify_attributes }} 
                     >
                       {{ block.settings.button_label | escape }}
                     </a>
@@ -1005,6 +1005,12 @@ endif
           "id": "button_arrow",
           "default": true,
           "label": "Arrow button style"
+        },
+        {
+          "type": "checkbox",
+          "id": "big_button",
+          "default": false,
+          "label": "Big button style"
         },
         {
           "type": "inline_richtext",

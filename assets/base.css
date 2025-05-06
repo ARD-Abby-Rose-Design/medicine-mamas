@@ -1286,6 +1286,10 @@ deferred-media {
   color: white !important;
 }
 
+.button--big {
+  padding: 1.6rem 6.2rem !important;
+}
+
 .button,
 .shopify-challenge__button,
 .customer button,

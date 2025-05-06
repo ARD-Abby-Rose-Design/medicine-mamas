@@ -43,6 +43,7 @@
             "button_label": "Get smooth now",
             "button_link": "shopify://products/vmagic-grooming-kit",
             "button_arrow": false,
+            "big_button": true,
             "button_subtitle": "OVER 15,000 5-STAR REVIEWS"
           }
         }

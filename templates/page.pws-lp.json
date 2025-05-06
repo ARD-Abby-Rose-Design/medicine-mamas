@@ -194,9 +194,9 @@
         "text_F6W3Ff"
       ],
       "settings": {
-        "image": "shopify://shop_images/medicine-mama-vulva-balm-1.jpg",
+        "video": "shopify://files/videos/3cc8a5c804a7f2ce1533f8fd46c2d47aaff8d1b1.mp4",
         "video_autoplay": "autoplay",
-        "media_type": "image",
+        "media_type": "video",
         "height": "adapt",
         "media_caption": "",
         "media_caption_color": "#ffffff",
@@ -231,8 +231,8 @@
       "type": "image-banner",
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/mm-lips_stick-included-products.jpg",
-        "image_2": "shopify://shop_images/mm-lips_stick-included-products.jpg",
+        "image": "shopify://shop_images/Untitled_design_7b736bda-ba4c-4c46-9c76-0b3873e78c25.jpg",
+        "image_2": "shopify://shop_images/Untitled_design_7b736bda-ba4c-4c46-9c76-0b3873e78c25.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "show_desktop": false,
@@ -244,7 +244,7 @@
         "show_mobile": true,
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
-        "show_text_below": true
+        "show_text_below": false
       }
     },
     "media_toggle_with_text_nAtrwd": {

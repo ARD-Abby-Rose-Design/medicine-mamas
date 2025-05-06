@@ -162,11 +162,24 @@
             "product_badge_color": "#fcf7f0",
             "product_benefits": ""
           }
+        },
+        "column_UwnVt8": {
+          "type": "column",
+          "settings": {
+            "title": "<em>Hello Giggles - November 2022 - Dr. Clare Bertucio</em>",
+            "text": "<p><a href=\"https://hellogiggles.com/things-you-can-do-today-to-look-glowing-all-week-beauty-experts-say/\" title=\"https://hellogiggles.com/things-you-can-do-today-to-look-glowing-all-week-beauty-experts-say/\">10 Things You Can Do Today To Look Glowing All Week</a></p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
         }
       },
       "block_order": [
         "column_AWMJg6",
-        "column_wN7cU7"
+        "column_wN7cU7",
+        "column_UwnVt8"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {

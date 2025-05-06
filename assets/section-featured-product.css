@@ -140,3 +140,12 @@
     z-index: 1;
   }
 }
+
+
+.product__title-title {
+  line-height: 1;
+}
+
+.product__rich-text p + ul {
+  margin-top: 0;
+}

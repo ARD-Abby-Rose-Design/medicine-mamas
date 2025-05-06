@@ -6,6 +6,18 @@
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 
+{%- liquid
+  assign product = section.settings.product
+
+  if section.settings.media_size == 'large'
+    assign media_width = 0.65
+  elsif section.settings.media_size == 'medium'
+    assign media_width = 0.55
+  elsif section.settings.media_size == 'small'
+    assign media_width = 0.45
+  endif
+-%}
+
 {%- style -%}
 
 .section-{{ section.id }}-padding {
@@ -20,21 +32,20 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+{% if product.handle contains 'grooming-kit' or product.handle contains 'intimate-moisturizer-duo' %}
+  .product__title-title {
+    max-width: 60%;
+  }
+{% endif %}
+
+ 
 {%- endstyle -%}
 
 <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
 
-{%- liquid
-  assign product = section.settings.product
 
-  if section.settings.media_size == 'large'
-    assign media_width = 0.65
-  elsif section.settings.media_size == 'medium'
-    assign media_width = 0.55
-  elsif section.settings.media_size == 'small'
-    assign media_width = 0.45
-  endif
--%}
+
 
 {% comment %} TODO: assign `product.selected_or_first_available_variant` to variable and replace usage to reduce verbosity {% endcomment %}
 
@@ -164,6 +175,13 @@
                   class="product__rich-text rte{% if block.settings.text_alignment == 'center' %} center{% endif %}"
                   {{ block.shopify_attributes }}
                 >
+                {% if block.settings.text contains 'Includes:' %}
+                  <style>
+                    .product__rich-text p {
+                      margin-bottom: 0.5rem;
+                    }
+                  </style>
+                {% endif %}
                   {{- block.settings.text -}}
                 </div>
               {%- when 'title' -%}

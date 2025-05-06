@@ -75,13 +75,13 @@
         "border_style": "none",
         "background_style": "primary",
         "background_color": "#ffffff",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "multicolumn_cQbAjd": {

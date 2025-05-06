@@ -163,6 +163,18 @@
             "product_benefits": ""
           }
         },
+        "column_xhgrcG": {
+          "type": "column",
+          "settings": {
+            "title": "<em>Byrdie - October 2023 - Medicine Mama VMAGIC®</em>",
+            "text": "<p><a href=\"https://www.byrdie.com/october-2023-beauty-launches-8347917\" title=\"https://www.byrdie.com/october-2023-beauty-launches-8347917\">The Best October Beauty Launches to Have on Your Radar</a></p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
         "column_UwnVt8": {
           "type": "column",
           "settings": {
@@ -179,6 +191,7 @@
       "block_order": [
         "column_AWMJg6",
         "column_wN7cU7",
+        "column_xhgrcG",
         "column_UwnVt8"
       ],
       "name": "t:sections.multicolumn.presets.name",

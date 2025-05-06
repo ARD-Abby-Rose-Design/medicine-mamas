@@ -20,19 +20,74 @@
     "multicolumn_XEq6ha": {
       "type": "multicolumn",
       "blocks": {
-        "column_wN7cU7": {
+        "column_n39yPE": {
           "type": "column",
           "settings": {
-            "title": "<strong>Medium</strong> - <em>December 2024 - Medicine Mama VMAGIC®</em>",
-            "text": "<p><a href=\"https://medium.com/authority-magazine/dr-alyssa-dweck-of-bonafide-health-on-5-things-you-need-to-thrive-through-perimenopause-0f20eea2c9c2\" target=\"_blank\"><em><strong>5 Things You Need to Thrive During Perimenopause</strong></em></a></p>",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
-            "link": "https://medicinemama.com/blogs/vmagic",
+            "link": "",
             "product": "",
-            "product_badge_color": "#FCF7F0",
+            "product_badge_color": "#fcf7f0",
             "product_benefits": ""
           }
         },
-        "column_n39yPE": {
+        "column_AWMJg6": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
+        "column_wN7cU7": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>WWD</strong> - <em>November 2023 - Medicine Mama VMAGIC®</em>",
+            "text": "<p><a href=\"https://wwd.com/beauty-industry-news/wellness/millennials-enter-perimenopause-1235909637\" title=\"https://wwd.com/beauty-industry-news/wellness/millennials-enter-perimenopause-1235909637\"><em>The Millenopause Era</em></a></p>",
+            "link_label": "",
+            "link": "https://medicinemama.com/blogs/vmagic",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_n39yPE",
+        "column_AWMJg6",
+        "column_wN7cU7"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "PRESS",
+        "heading_size": "h1",
+        "heading_alignment": "",
+        "text": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "border_style": "none",
+        "background_style": "primary",
+        "background_color": "#ffffff",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_cQbAjd": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_pYe4pL": {
           "type": "column",
           "settings": {
             "title": "Column",
@@ -44,7 +99,19 @@
             "product_benefits": ""
           }
         },
-        "column_AWMJg6": {
+        "column_Bg6rAr": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#FCF7F0",
+            "product_benefits": ""
+          }
+        },
+        "column_nHEMqc": {
           "type": "column",
           "settings": {
             "title": "Column",
@@ -58,13 +125,13 @@
         }
       },
       "block_order": [
-        "column_wN7cU7",
-        "column_n39yPE",
-        "column_AWMJg6"
+        "column_pYe4pL",
+        "column_Bg6rAr",
+        "column_nHEMqc"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "PRESS",
+        "title": "",
         "heading_size": "h1",
         "heading_alignment": "",
         "text": "",
@@ -87,6 +154,7 @@
   },
   "order": [
     "main",
-    "multicolumn_XEq6ha"
+    "multicolumn_XEq6ha",
+    "multicolumn_cQbAjd"
   ]
 }

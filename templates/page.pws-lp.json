@@ -434,6 +434,15 @@
     "image_with_text_R3nh6Y": {
       "type": "image-with-text",
       "blocks": {
+        "number_JJwz6d": {
+          "type": "number",
+          "settings": {
+            "number": "4",
+            "number_bg_color": "#121212",
+            "show_desktop": true,
+            "show_mobile": true
+          }
+        },
         "heading_Aripi3": {
           "type": "heading",
           "settings": {
@@ -453,6 +462,7 @@
         }
       },
       "block_order": [
+        "number_JJwz6d",
         "heading_Aripi3",
         "text_Q7bnWr"
       ],

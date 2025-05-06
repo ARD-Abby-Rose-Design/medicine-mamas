@@ -53,13 +53,15 @@
         },
         "f83c6b2b-54f9-40fb-a044-8549bb35a96d": {
           "type": "text_banner_row",
+          "disabled": true,
           "settings": {
             "metaobject_handle": "why-subscribe",
-            "position": 17
+            "position": 14
           }
         },
         "be9bfcd6-b9d0-4c07-a70b-084a54f3a893": {
           "type": "marketing_tile",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/2X-tile.jpg",
             "heading": "",
@@ -109,6 +111,8 @@
       ],
       "disabled": true,
       "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "inverse",

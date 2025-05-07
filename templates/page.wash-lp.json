@@ -53,6 +53,7 @@
             "button_label": "Subscribe & Save up to 20%",
             "button_link": "shopify://products/vmagic-feminine-wash",
             "button_arrow": false,
+            "big_button": false,
             "button_subtitle": "30-DAY RISK FREE GUARANTEE"
           }
         }
@@ -250,6 +251,7 @@
           "type": "title",
           "settings": {
             "heading_size": "h1",
+            "heading_width": 33,
             "show_price": false
           }
         },

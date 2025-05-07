@@ -19,33 +19,21 @@
 -%}
 
 {%- style -%}
-
-.section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+  .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
-  }
 
-{% if product.handle contains 'grooming-kit' or product.handle contains 'intimate-moisturizer-duo' %}
-  .product__title-title {
-    max-width: 60%;
-  }
-{% endif %}
+    @media screen and (min-width: 750px) {
 
- 
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
 {%- endstyle -%}
 
 <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
-
-
-
 
 {% comment %} TODO: assign `product.selected_or_first_available_variant` to variable and replace usage to reduce verbosity {% endcomment %}
 
@@ -69,9 +57,15 @@
   >
 {%- endif -%}
 
-<section data-section="{{ section.id }}" class="color-{{ section.settings.color_scheme }} {% if section.settings.secondary_background %}background-secondary{% else %}gradient{% endif %}">
+<section
+  data-section="{{ section.id }}"
+  class="color-{{ section.settings.color_scheme }} {% if section.settings.secondary_background %}background-secondary{% else %}gradient{% endif %}"
+>
   <div class="page-width section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %}">
-    <div class="featured-product product product--{{ section.settings.media_size }} grid grid--1-col gradient color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 or section.settings.product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+    <div
+      id="featured-product--{{ section.id }}"
+      class="featured-product product product--{{ section.settings.media_size }} grid grid--1-col gradient color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 or section.settings.product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %}"
+    >
       <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
         <media-gallery
           id="MediaGallery-{{ section.id }}"
@@ -175,30 +169,52 @@
                   class="product__rich-text rte{% if block.settings.text_alignment == 'center' %} center{% endif %}"
                   {{ block.shopify_attributes }}
                 >
-                {% if block.settings.text contains 'Includes:' %}
-                  <style>
-                    .product__rich-text p {
-                      margin-bottom: 0.5rem;
-                    }
-                  </style>
-                {% endif %}
+                  {% if block.settings.text contains 'Includes:' %}
+                    <style>
+                      .product__rich-text p {
+                        margin-bottom: 0.5rem;
+                      }
+                    </style>
+                  {% endif %}
                   {{- block.settings.text -}}
                 </div>
               {%- when 'title' -%}
-                <div class="product__title{% if block.settings.show_price %} product__title--with-price{% endif %}" {{ block.shopify_attributes }}>
+                <style>
+                  @media screen and (min-width: 750px) {
+                    #featured-product--{{ section.id }} .product__title-title {
+                      max-width: {{ block.settings.heading_width }}%;
+                    }
+                  }
+                </style>
+                <div
+                  class="product__title{% if block.settings.show_price %} product__title--with-price{% endif %}"
+                  {{ block.shopify_attributes }}
+                >
                   <h1 class="product__title-title h3">{{ product.title | escape }}</h1>
                   {% if block.settings.show_price %}
                     <div class="product__title-price">
-                      <div class="h3">{{ product.selected_or_first_available_variant.price |  money_without_trailing_zeros }}</div>
-                      {% if product.selected_or_first_available_variant.compare_at_price != blank and product.selected_or_first_available_variant.price < product.selected_or_first_available_variant.compare_at_price %}
-                      <div class="h3"><s>{{ product.selected_or_first_available_variant.compare_at_price |  money_without_trailing_zeros}}</s></div>
+                      <div class="h3">
+                        {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+                      </div>
+                      {% if product.selected_or_first_available_variant.compare_at_price != blank
+                        and product.selected_or_first_available_variant.price
+                          < product.selected_or_first_available_variant.compare_at_price
+                      %}
+                        <div class="h3">
+                          <s>
+                            {{-
+                              product.selected_or_first_available_variant.compare_at_price
+                              | money_without_trailing_zeros
+                            -}}
+                          </s>
+                        </div>
                       {% endif %}
                     </div>
                   {% endif %}
-                  {% if product.metafields.size.information != nil %}
-                  <div class="product__size-info">
-                    {{ product.metafields.size.information.value }}
-                  </div>
+                  {% if product.metafields.size.information != null %}
+                    <div class="product__size-info">
+                      {{ product.metafields.size.information.value }}
+                    </div>
                   {% endif %}
                 </div>
               {%- when 'price' -%}
@@ -236,13 +252,18 @@
                 >
                   {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
                     {%- if product.selected_or_first_available_variant.inventory_quantity > 0 -%}
-                      {%- if product.selected_or_first_available_variant.inventory_quantity <= block.settings.inventory_threshold -%}
+                      {%- if product.selected_or_first_available_variant.inventory_quantity
+                          <= block.settings.inventory_threshold
+                      -%}
                         <svg width="15" height="15" aria-hidden="true">
                           <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(238,148,65, 0.3)"/>
                           <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(238,148,65)"/>
                         </svg>
                         {%- if block.settings.show_inventory_quantity -%}
-                          {{- 'products.product.inventory_low_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity -}}
+                          {{-
+                            'products.product.inventory_low_stock_show_count'
+                            | t: quantity: product.selected_or_first_available_variant.inventory_quantity
+                          -}}
                         {%- else -%}
                           {{- 'products.product.inventory_low_stock' | t -}}
                         {%- endif -%}
@@ -252,9 +273,12 @@
                           <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(62,214,96)"/>
                         </svg>
                         {%- if block.settings.show_inventory_quantity -%}
-                          {{- 'products.product.inventory_in_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity -}}
+                          {{-
+                            'products.product.inventory_in_stock_show_count'
+                            | t: quantity: product.selected_or_first_available_variant.inventory_quantity
+                          -}}
                         {%- else -%}
-                            {{- 'products.product.inventory_in_stock' | t -}}
+                          {{- 'products.product.inventory_in_stock' | t -}}
                         {%- endif -%}
                       {%- endif -%}
                     {%- else -%}
@@ -287,7 +311,8 @@
                   role="status"
                   {{ block.shopify_attributes }}
                 >
-                  <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span> {{- product.selected_or_first_available_variant.sku -}}
+                  <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span>
+                  {{- product.selected_or_first_available_variant.sku -}}
                 </p>
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
@@ -311,7 +336,6 @@
                   </details>
                 </div>
               {%- when 'quantity_selector' -%}
-
               {%- when 'popup' -%}
                 <modal-opener
                   class="product-popup-modal__opener no-js-hidden quick-add-hidden"
@@ -332,35 +356,46 @@
                 </a>
               {%- when 'share' -%}
                 {% assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin %}
-                {% render 'share-button',
-                  block: block,
-                  share_link: share_url
-                %}
+                {% render 'share-button', block: block, share_link: share_url %}
               {%- when 'checkmarks' %}
                 {% if product.metafields.custom.checkmarks != blank %}
-                <div class="product__checkmarks">
-                  {% for mark in product.metafields.custom.checkmarks.value %}
-                  <div class="product__checkmark">{{ mark }}</div>
-                  {% endfor %}
-                </div>
+                  <div class="product__checkmarks">
+                    {% for mark in product.metafields.custom.checkmarks.value %}
+                      <div class="product__checkmark">{{ mark }}</div>
+                    {% endfor %}
+                  </div>
                 {% endif %}
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'buy_buttons' -%}
-
-                  {% render 'rc-widget', product: product %}
+                {% render 'rc-widget', product: product %}
                 <div class="quantity-and-buttons">
                   {%- if block.settings.show_quantity_selector -%}
                     {%- render 'product-quantity-input', product: product, product_form_id: product_form_id -%}
                   {%- endif -%}
-                  {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
+                  {%- render 'buy-buttons',
+                    block: block,
+                    product: product,
+                    product_form_id: product_form_id,
+                    section_id: section.id,
+                    show_pickup_availability: true
+                  -%}
                 </div>
               {%- when 'rating' -%}
                 {%- render 'star-rating', product: product -%}
               {%- when 'complementary' -%}
-                <product-recommendations class="complementary-products quick-add-hidden no-js-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}{% if block.settings.enable_quick_add %} complementary-products-contains-quick-add{% endif %}" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ block.settings.product_list_limit }}&intent=complementary">
+                <product-recommendations
+                  class="complementary-products quick-add-hidden no-js-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}{% if block.settings.enable_quick_add %} complementary-products-contains-quick-add{% endif %}"
+                  data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ block.settings.product_list_limit }}&intent=complementary"
+                >
                   {%- if recommendations.performed and recommendations.products_count > 0 -%}
-                    <aside aria-label="{{ 'accessibility.complementary_products' | t }}" {{ block.shopify_attributes }}{% if block.settings.make_collapsible_row %} class="product__accordion accordion"{% endif %}>
+                    <aside
+                      aria-label="{{ 'accessibility.complementary_products' | t }}"
+                      {{ block.shopify_attributes -}}
+                      {% if block.settings.make_collapsible_row %}
+                        class="product__accordion accordion"
+                      {% endif %}
+                    >
                       <div class="complementary-products__container">
                         {%- if block.settings.make_collapsible_row -%}
                           <details id="Details-{{ block.id }}-{{ section.id }}" open>
@@ -375,16 +410,39 @@
                           {%- endif -%}
                         </div>
                         {%- if block.settings.make_collapsible_row -%}
-                            {% render 'icon-caret' %}
+                          {% render 'icon-caret' %}
                           </summary>
                         {%- endif -%}
                         <slideshow-component class="slider-mobile-gutter">
-                          {%- assign number_of_slides = recommendations.products_count | plus: 0.0 | divided_by: block.settings.products_per_page | ceil -%}
-                          <div id="Slider-{{ block.id }}" class="contains-card contains-card--product complementary-slider grid grid--1-col slider slider--everywhere" role="list"{% if number_of_slides > 1 %} aria-label="{{ 'general.slider.name' | t }}"{% endif %}>
+                          {%- assign number_of_slides = recommendations.products_count
+                            | plus: 0.0
+                            | divided_by: block.settings.products_per_page
+                            | ceil
+                          -%}
+                          <div
+                            id="Slider-{{ block.id }}"
+                            class="contains-card contains-card--product complementary-slider grid grid--1-col slider slider--everywhere"
+                            role="list"
+                            {% if number_of_slides > 1 %}
+                              aria-label="{{ 'general.slider.name' | t }}"
+                            {% endif %}
+                          >
                             {%- for i in (1..number_of_slides) -%}
-                              <div id="Slide-{{ block.id }}-{{ forloop.index }}" class="complementary-slide complementary-slide--{{ settings.card_style }} grid__item slider__slide slideshow__slide" tabindex="-1" role="group"{% if number_of_slides > 1 %} aria-roledescription="{{ 'sections.slideshow.slide' | t }}" aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"{% endif %}>
+                              <div
+                                id="Slide-{{ block.id }}-{{ forloop.index }}"
+                                class="complementary-slide complementary-slide--{{ settings.card_style }} grid__item slider__slide slideshow__slide"
+                                tabindex="-1"
+                                role="group"
+                                {% if number_of_slides > 1 %}
+                                  aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+                                  aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                                {% endif %}
+                              >
                                 <ul class="list-unstyled" role="list">
-                                  {%- for product in recommendations.products limit: block.settings.products_per_page offset: continue -%}
+                                  {%- for product in recommendations.products
+                                    limit: block.settings.products_per_page
+                                    offset: continue
+                                  -%}
                                     <li>
                                       {% render 'card-product',
                                         card_product: product,
@@ -404,7 +462,14 @@
                           </div>
                           {%- if number_of_slides > 1 -%}
                             <div class="slider-buttons no-js-hidden">
-                              <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
+                              <button
+                                type="button"
+                                class="slider-button slider-button--prev"
+                                name="previous"
+                                aria-label="{{ 'general.slider.previous_slide' | t }}"
+                              >
+                                {% render 'icon-caret' %}
+                              </button>
                               <div class="slider-counter slider-counter--{{ block.settings.pagination_style }}{% if block.settings.pagination_style == 'counter' or block.settings.pagination_style == 'numbers' %} caption{% endif %}">
                                 {%- if block.settings.pagination_style == 'counter' -%}
                                   <span class="slider-counter--current">1</span>
@@ -414,14 +479,29 @@
                                 {%- else -%}
                                   <div class="slideshow__control-wrapper">
                                     {%- for i in (1..number_of_slides) -%}
-                                      <button class="slider-counter__link slider-counter__link--{{ block.settings.pagination_style }} link" aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}" aria-controls="Slider-{{ block.id }}">
-                                        {%- if block.settings.pagination_style == 'numbers' -%}{{ forloop.index }}{% else %}<span class="dot"></span>{%- endif -%}
+                                      <button
+                                        class="slider-counter__link slider-counter__link--{{ block.settings.pagination_style }} link"
+                                        aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                                        aria-controls="Slider-{{ block.id }}"
+                                      >
+                                        {%- if block.settings.pagination_style == 'numbers' -%}
+                                          {{ forloop.index -}}
+                                        {%- else -%}
+                                          <span class="dot"></span>
+                                        {%- endif -%}
                                       </button>
                                     {%- endfor -%}
                                   </div>
                                 {%- endif -%}
                               </div>
-                              <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
+                              <button
+                                type="button"
+                                class="slider-button slider-button--next"
+                                name="next"
+                                aria-label="{{ 'general.slider.next_slide' | t }}"
+                              >
+                                {% render 'icon-caret' %}
+                              </button>
                             </div>
                           {%- endif -%}
                         </slideshow-component>
@@ -439,16 +519,17 @@
                   {%- endif -%}
                 </product-recommendations>
               {%- when 'icon-with-text' -%}
-                {% render 'icon-with-text',
-                  block: block
+                {% render 'icon-with-text', block: block %}
+              {% when 'bundle_products' %}
+                {% render 'product-bundle-products',
+                  products: product.metafields.bundle.products.value,
+                  heading: block.settings.heading
                 %}
-              {% when 'bundle_products'%}
-                {% render 'product-bundle-products', products: product.metafields.bundle.products.value, heading: block.settings.heading %}
-              {% when 'included_products'%}
+              {% when 'included_products' %}
                 {%- render 'included-products-tabs', block: block -%}
             {%- endcase -%}
           {%- endfor -%}
-          {%-  if section.settings.show_full_details -%}
+          {%- if section.settings.show_full_details -%}
             <a
               {% if product == blank %}
                 role="link" aria-disabled="true"
@@ -537,16 +618,18 @@
           {%- endif -%}
         </div>
       {%- endif -%}
-      
     </div>
 
     {% render 'product-media-modal', product: product, variant_images: media_to_render %}
-    
   </div>
-  <script type="application/json" data-product-id="{{ product.id }}" class="ProductJson-shopify" id="ProductJson-shopify-{{ section.id }}">
-{{ product.variants | json }}
-</script>
-
+  <script
+    type="application/json"
+    data-product-id="{{ product.id }}"
+    class="ProductJson-shopify"
+    id="ProductJson-shopify-{{ section.id }}"
+  >
+    {{ product.variants | json }}
+  </script>
 </section>
 
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
@@ -573,9 +656,6 @@
     assign seo_media = product.featured_media
   endif
 -%}
-
-
-
 
 <script type="application/ld+json">
   {
@@ -659,1455 +739,1465 @@
 {% endif %}
 
 {% schema %}
-  {
-    "name": "t:sections.featured-product.name",
-    "tag": "section",
-    "class": "section section-featured-product",
-    "disabled_on": {
-      "groups": ["header", "footer"]
+{
+  "name": "t:sections.featured-product.name",
+  "tag": "section",
+  "class": "section section-featured-product",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "blocks": [
+    {
+      "type": "@app"
     },
-    "blocks": [
-      {
-        "type": "@app"
-      },
-      {
-        "type": "text",
-        "name": "t:sections.featured-product.blocks.text.name",
-        "settings": [
-          {
-            "type": "inline_richtext",
-            "id": "text",
-            "default": "Text block",
-            "label": "t:sections.featured-product.blocks.text.settings.text.label"
-          },
-          {
-            "type": "select",
-            "id": "text_style",
-            "options": [
-              {
-                "value": "body",
-                "label": "t:sections.featured-product.blocks.text.settings.text_style.options__1.label"
-              },
-              {
-                "value": "subtitle",
-                "label": "t:sections.featured-product.blocks.text.settings.text_style.options__2.label"
-              },
-              {
-                "value": "uppercase",
-                "label": "t:sections.featured-product.blocks.text.settings.text_style.options__3.label"
-              }
-            ],
-            "default": "body",
-            "label": "t:sections.featured-product.blocks.text.settings.text_style.label"
-          },
-          {
-            "type": "select",
-            "id": "text_alignment",
-            "label": "Text alignment",
-            "default": "left",
-            "options": [
-              {
-                "value": "left",
-                "label": "Left"
-              },
-              {
-                "value": "center",
-                "label": "Center"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "rich_text",
-        "name": "Rich text",
-        "settings": [
-          {
-            "type": "richtext",
-            "id": "text",
-            "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>",
-            "label": "Text"
-          },
-          {
-            "type": "select",
-            "id": "text_alignment",
-            "label": "Text alignment",
-            "default": "left",
-            "options": [
-              {
-                "value": "left",
-                "label": "Left"
-              },
-              {
-                "value": "center",
-                "label": "Center"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "title",
-        "name": "t:sections.featured-product.blocks.title.name",
-        "limit": 1,
-        "settings": [
-          {
-            "type": "select",
-            "id": "heading_size",
-            "options": [
-              {
-                "value": "h2",
-                "label": "t:sections.all.heading_size.options__1.label"
-              },
-              {
-                "value": "h1",
-                "label": "t:sections.all.heading_size.options__2.label"
-              },
-              {
-                "value": "h0",
-                "label": "t:sections.all.heading_size.options__3.label"
-              }
-            ],
-            "default": "h1",
-            "label": "t:sections.all.heading_size.label"
-          },
-          {
-            "type": "checkbox",
-            "id": "show_price",
-            "default": false,
-            "label": "Show price"
-          }
-        ]
-      },
-      {
-        "type": "bundle_products",
-        "name": "Bundle products",
-        "limit": 1,
-        "settings": [
-          {
-            "type": "text",
-            "id": "heading",
-            "default": "Bundle & Save",
-            "label": "Heading"
-          }
-        ]
-      },
-      {
-        "type": "price",
-        "name": "t:sections.featured-product.blocks.price.name",
-        "limit": 1
-      },
-      {
-        "type": "sku",
-        "name": "t:sections.featured-product.blocks.sku.name",
-        "limit": 1,
-        "settings": [
-          {
-            "type": "select",
-            "id": "text_style",
-            "options": [
-              {
-                "value": "body",
-                "label": "t:sections.featured-product.blocks.sku.settings.text_style.options__1.label"
-              },
-              {
-                "value": "subtitle",
-                "label": "t:sections.featured-product.blocks.sku.settings.text_style.options__2.label"
-              },
-              {
-                "value": "uppercase",
-                "label": "t:sections.featured-product.blocks.sku.settings.text_style.options__3.label"
-              }
-            ],
-            "default": "body",
-            "label": "t:sections.featured-product.blocks.sku.settings.text_style.label"
-          }
-        ]
-      },
-      {
-        "type": "quantity_selector",
-        "name": "t:sections.featured-product.blocks.quantity_selector.name",
-        "limit": 1
-      },
-      {
-        "type": "variant_picker",
-        "name": "t:sections.featured-product.blocks.variant_picker.name",
-        "limit": 1,
-        "settings": [
-          {
-            "type": "select",
-            "id": "picker_type",
-            "options": [
-              {
-                "value": "dropdown",
-                "label": "t:sections.featured-product.blocks.variant_picker.settings.picker_type.options__1.label"
-              },
-              {
-                "value": "button",
-                "label": "t:sections.featured-product.blocks.variant_picker.settings.picker_type.options__2.label"
-              }
-            ],
-            "default": "button",
-            "label": "t:sections.featured-product.blocks.variant_picker.settings.picker_type.label"
-          }
-        ]
-      },
-      {
-        "type": "buy_buttons",
-        "name": "t:sections.featured-product.blocks.buy_buttons.name",
-        "limit": 1,
-        "settings": [
-          {
-            "type": "checkbox",
-            "id": "show_quantity_selector",
-            "default": true,
-            "label": "Show quantity selector"
-          },
-          {
-            "type": "checkbox",
-            "id": "show_dynamic_checkout",
-            "default": true,
-            "label": "t:sections.featured-product.blocks.buy_buttons.settings.show_dynamic_checkout.label",
-            "info": "t:sections.featured-product.blocks.buy_buttons.settings.show_dynamic_checkout.info"
-          },
-          {
-            "type": "checkbox",
-            "id": "show_gift_card_recipient",
-            "default": true,
-            "label": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.label",
-            "info": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.info"
-          },
-          {
-            "type": "select",
-            "id": "button_style",
-            "default": "default",
-            "label": "Button style",
-            "options": [
-              {
-                "value": "default",
-                "label": "Default"
-              },
-              {
-                "value": "red",
-                "label": "Red"
-              }
-            ]
-          },
-          {
-            "type": "checkbox",
-            "id": "show_return_policy_note",
-            "default": false,
-            "label": "Show return policy note"
-          },
-          {
-            "type": "inline_richtext",
-            "id": "return_policy_note",
-            "label": "Return policy note",
-            "default": "Try 30-day risk free, love it or your money back!"
-          }
-        ]
-      },
-      {
-        "type": "description",
-        "name": "Description",
-        "limit": 1
-      },
-      {
-        "type": "checkmarks",
-        "name": "Checkmarks",
-        "limit": 1
-      },
-      {
-        "type": "share",
-        "name": "t:sections.featured-product.blocks.share.name",
-        "limit": 1,
-        "settings": [
-          {
-            "type": "text",
-            "id": "share_label",
-            "label": "t:sections.featured-product.blocks.share.settings.text.label",
-            "default": "Share"
-          },
-          {
-            "type": "paragraph",
-            "content": "t:sections.featured-product.blocks.share.settings.featured_image_info.content"
-          },
-          {
-            "type": "paragraph",
-            "content": "t:sections.featured-product.blocks.share.settings.title_info.content"
-          }
-        ]
-      },
-      {
-        "type": "custom_liquid",
-        "name": "t:sections.custom-liquid.name",
-        "settings": [
-          {
-            "type": "liquid",
-            "id": "custom_liquid",
-            "label": "t:sections.custom-liquid.settings.custom_liquid.label",
-            "info": "t:sections.custom-liquid.settings.custom_liquid.info"
-          }
-        ]
-      },
-      {
-        "type": "collapsible_tab",
-        "name": "t:sections.main-product.blocks.collapsible_tab.name",
-        "settings": [
-          {
-            "type": "text",
-            "id": "heading",
-            "default": "Collapsible row",
-            "info": "t:sections.main-product.blocks.collapsible_tab.settings.heading.info",
-            "label": "t:sections.main-product.blocks.collapsible_tab.settings.heading.label"
-          },
-          {
-            "type": "select",
-            "id": "icon",
-            "options": [
-              {
-                "value": "none",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
-              },
-              {
-                "value": "apple",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__2.label"
-              },
-              {
-                "value": "banana",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__3.label"
-              },
-              {
-                "value": "bottle",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__4.label"
-              },
-              {
-                "value": "box",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
-              },
-              {
-                "value": "carrot",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__6.label"
-              },
-              {
-                "value": "chat_bubble",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__7.label"
-              },
-              {
-                "value": "check_mark",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__8.label"
-              },
-              {
-                "value": "clipboard",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__9.label"
-              },
-              {
-                "value": "dairy",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__10.label"
-              },
-              {
-                "value": "dairy_free",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__11.label"
-              },
-              {
-                "value": "dryer",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__12.label"
-              },
-              {
-                "value": "eye",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__13.label"
-              },
-              {
-                "value": "fire",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__14.label"
-              },
-              {
-                "value": "gluten_free",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__15.label"
-              },
-              {
-                "value": "heart",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__16.label"
-              },
-              {
-                "value": "iron",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
-              },
-              {
-                "value": "leaf",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
-              },
-              {
-                "value": "leather",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__19.label"
-              },
-              {
-                "value": "lightning_bolt",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__20.label"
-              },
-              {
-                "value": "lipstick",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__21.label"
-              },
-              {
-                "value": "lock",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__22.label"
-              },
-              {
-                "value": "map_pin",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__23.label"
-              },
-              {
-                "value": "nut_free",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
-              },
-              {
-                "value": "pants",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__25.label"
-              },
-              {
-                "value": "paw_print",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__26.label"
-              },
-              {
-                "value": "pepper",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__27.label"
-              },
-              {
-                "value": "perfume",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__28.label"
-              },
-              {
-                "value": "plane",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__29.label"
-              },
-              {
-                "value": "plant",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__30.label"
-              },
-              {
-                "value": "price_tag",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__31.label"
-              },
-              {
-                "value": "question_mark",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__32.label"
-              },
-              {
-                "value": "recycle",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__33.label"
-              },
-              {
-                "value": "return",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__34.label"
-              },
-              {
-                "value": "ruler",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__35.label"
-              },
-              {
-                "value": "serving_dish",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__36.label"
-              },
-              {
-                "value": "shirt",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__37.label"
-              },
-              {
-                "value": "shoe",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__38.label"
-              },
-              {
-                "value": "silhouette",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__39.label"
-              },
-              {
-                "value": "snowflake",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__40.label"
-              },
-              {
-                "value": "star",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__41.label"
-              },
-              {
-                "value": "stopwatch",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__42.label"
-              },
-              {
-                "value": "truck",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__43.label"
-              },
-              {
-                "value": "washing",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__44.label"
-              }
-            ],
-            "default": "check_mark",
-            "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.label"
-          },
-          {
-            "type": "richtext",
-            "id": "content",
-            "label": "t:sections.main-product.blocks.collapsible_tab.settings.content.label"
-          },
-          {
-            "type": "page",
-            "id": "page",
-            "label": "t:sections.main-product.blocks.collapsible_tab.settings.page.label"
-          }
-        ]
-      },
-      {
-        "type": "rating",
-        "name": "t:sections.featured-product.blocks.rating.name",
-        "limit": 1,
-        "settings": [
-          {
-            "type": "paragraph",
-            "content": "t:sections.featured-product.blocks.rating.settings.paragraph.content"
-          }
-        ]
-      },
-      {
-        "type": "included_products",
-        "name": "Included products",
-        "limit": 1,
-        "settings": [
-          {
-            "type": "product_list",
-            "id": "included_products",
-            "label": "Included products"
-          }
-        ]
-      },
-      {
-        "type": "icon-with-text",
-        "name": "t:sections.main-product.blocks.icon_with_text.name",
-        "settings": [
-          {
-            "type": "select",
-            "id": "layout",
-            "options": [
-              {
-                "value": "horizontal",
-                "label": "t:sections.main-product.blocks.icon_with_text.settings.layout.options__1.label"
-              },
-              {
-                "value": "vertical",
-                "label": "t:sections.main-product.blocks.icon_with_text.settings.layout.options__2.label"
-              }
-            ],
-            "default": "horizontal",
-            "label": "t:sections.main-product.blocks.icon_with_text.settings.layout.label"
-          },
-          {
-            "type": "header",
-            "content": "t:sections.main-product.blocks.icon_with_text.settings.content.label",
-            "info": "t:sections.main-product.blocks.icon_with_text.settings.content.info"
-          },
-          {
-            "type": "select",
-            "id": "icon_1",
-            "options": [
-              {
-                "value": "none",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
-              },
-              {
-                "value": "apple",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__2.label"
-              },
-              {
-                "value": "banana",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__3.label"
-              },
-              {
-                "value": "bottle",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__4.label"
-              },
-              {
-                "value": "box",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
-              },
-              {
-                "value": "carrot",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__6.label"
-              },
-              {
-                "value": "chat_bubble",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__7.label"
-              },
-              {
-                "value": "check_mark",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__8.label"
-              },
-              {
-                "value": "clipboard",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__9.label"
-              },
-              {
-                "value": "dairy",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__10.label"
-              },
-              {
-                "value": "dairy_free",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__11.label"
-              },
-              {
-                "value": "dryer",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__12.label"
-              },
-              {
-                "value": "eye",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__13.label"
-              },
-              {
-                "value": "fire",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__14.label"
-              },
-              {
-                "value": "gluten_free",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__15.label"
-              },
-              {
-                "value": "heart",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__16.label"
-              },
-              {
-                "value": "iron",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
-              },
-              {
-                "value": "lab_tested",
-                "label": "Lab tested"
-              },
-              {
-                "value": "leaf",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
-              },
-              {
-                "value": "leather",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__19.label"
-              },
-              {
-                "value": "lightning_bolt",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__20.label"
-              },
-              {
-                "value": "lipstick",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__21.label"
-              },
-              {
-                "value": "lock",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__22.label"
-              },
-              {
-                "value": "map_pin",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__23.label"
-              },
-              {
-                "value": "nut_free",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
-              },
-              {
-                "value": "organic",
-                "label": "Organic"
-              },
-              {
-                "value": "pants",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__25.label"
-              },
-              {
-                "value": "paw_print",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__26.label"
-              },
-              {
-                "value": "pepper",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__27.label"
-              },
-              {
-                "value": "perfume",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__28.label"
-              },
-              {
-                "value": "physician",
-                "label": "Physician tested"
-              },
-              {
-                "value": "plane",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__29.label"
-              },
-              {
-                "value": "plant",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__30.label"
-              },
-              {
-                "value": "price_tag",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__31.label"
-              },
-              {
-                "value": "question_mark",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__32.label"
-              },
-              {
-                "value": "recycle",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__33.label"
-              },
-              {
-                "value": "return",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__34.label"
-              },
-              {
-                "value": "ruler",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__35.label"
-              },
-              {
-                "value": "serving_dish",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__36.label"
-              },
-              {
-                "value": "shirt",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__37.label"
-              },
-              {
-                "value": "shoe",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__38.label"
-              },
-              {
-                "value": "silhouette",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__39.label"
-              },
-              {
-                "value": "snowflake",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__40.label"
-              },
-              {
-                "value": "star",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__41.label"
-              },
-              {
-                "value": "stopwatch",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__42.label"
-              },
-              {
-                "value": "truck",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__43.label"
-              },
-              {
-                "value": "washing",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__44.label"
-              }
-            ],
-            "default": "heart",
-            "label": "t:sections.main-product.blocks.icon_with_text.settings.icon_1.label"
-          },
-          {
-            "type": "image_picker",
-            "id": "image_1",
-            "label": "t:sections.main-product.blocks.icon_with_text.settings.image_1.label"
-          },
-          {
-            "type": "inline_richtext",
-            "id": "heading_1",
-            "default": "Heading",
-            "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_1.label",
-            "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
-          },
-          {
-            "type": "select",
-            "id": "heading_1_style",
-            "label": "First heading style",
-            "default": "subtitle",
-            "options": [
-              {
-                "value": "body",
-                "label": "Body"
-              },
-              {
-                "value": "subtitle",
-                "label": "Subtitle"
-              }
-            ]
-          },
-          {
-            "type": "select",
-            "id": "icon_2",
-            "options": [
-              {
-                "value": "none",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
-              },
-              {
-                "value": "apple",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__2.label"
-              },
-              {
-                "value": "banana",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__3.label"
-              },
-              {
-                "value": "bottle",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__4.label"
-              },
-              {
-                "value": "box",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
-              },
-              {
-                "value": "carrot",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__6.label"
-              },
-              {
-                "value": "chat_bubble",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__7.label"
-              },
-              {
-                "value": "check_mark",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__8.label"
-              },
-              {
-                "value": "clipboard",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__9.label"
-              },
-              {
-                "value": "dairy",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__10.label"
-              },
-              {
-                "value": "dairy_free",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__11.label"
-              },
-              {
-                "value": "dryer",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__12.label"
-              },
-              {
-                "value": "eye",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__13.label"
-              },
-              {
-                "value": "fire",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__14.label"
-              },
-              {
-                "value": "gluten_free",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__15.label"
-              },
-              {
-                "value": "heart",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__16.label"
-              },
-              {
-                "value": "iron",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
-              },
-              {
-                "value": "lab_tested",
-                "label": "Lab tested"
-              },
-              {
-                "value": "leaf",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
-              },
-              {
-                "value": "leather",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__19.label"
-              },
-              {
-                "value": "lightning_bolt",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__20.label"
-              },
-              {
-                "value": "lipstick",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__21.label"
-              },
-              {
-                "value": "lock",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__22.label"
-              },
-              {
-                "value": "map_pin",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__23.label"
-              },
-              {
-                "value": "nut_free",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
-              },
-              {
-                "value": "organic",
-                "label": "Organic"
-              },
-              {
-                "value": "pants",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__25.label"
-              },
-              {
-                "value": "paw_print",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__26.label"
-              },
-              {
-                "value": "pepper",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__27.label"
-              },
-              {
-                "value": "perfume",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__28.label"
-              },
-              {
-                "value": "physician",
-                "label": "Physician tested"
-              },
-              {
-                "value": "plane",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__29.label"
-              },
-              {
-                "value": "plant",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__30.label"
-              },
-              {
-                "value": "price_tag",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__31.label"
-              },
-              {
-                "value": "question_mark",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__32.label"
-              },
-              {
-                "value": "recycle",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__33.label"
-              },
-              {
-                "value": "return",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__34.label"
-              },
-              {
-                "value": "ruler",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__35.label"
-              },
-              {
-                "value": "serving_dish",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__36.label"
-              },
-              {
-                "value": "shirt",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__37.label"
-              },
-              {
-                "value": "shoe",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__38.label"
-              },
-              {
-                "value": "silhouette",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__39.label"
-              },
-              {
-                "value": "snowflake",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__40.label"
-              },
-              {
-                "value": "star",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__41.label"
-              },
-              {
-                "value": "stopwatch",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__42.label"
-              },
-              {
-                "value": "truck",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__43.label"
-              },
-              {
-                "value": "washing",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__44.label"
-              }
-            ],
-            "default": "return",
-            "label": "t:sections.main-product.blocks.icon_with_text.settings.icon_2.label"
-          },
-          {
-            "type": "image_picker",
-            "id": "image_2",
-            "label": "t:sections.main-product.blocks.icon_with_text.settings.image_2.label"
-          },
-          {
-            "type": "inline_richtext",
-            "id": "heading_2",
-            "default": "Heading",
-            "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_2.label",
-            "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
-          },
-          {
-            "type": "select",
-            "id": "heading_2_style",
-            "label": "Second heading style",
-            "default": "subtitle",
-            "options": [
-              {
-                "value": "body",
-                "label": "Body"
-              },
-              {
-                "value": "subtitle",
-                "label": "Subtitle"
-              }
-            ]
-          },
-          {
-            "type": "select",
-            "id": "icon_3",
-            "options": [
-              {
-                "value": "none",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
-              },
-              {
-                "value": "apple",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__2.label"
-              },
-              {
-                "value": "banana",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__3.label"
-              },
-              {
-                "value": "bottle",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__4.label"
-              },
-              {
-                "value": "box",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
-              },
-              {
-                "value": "carrot",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__6.label"
-              },
-              {
-                "value": "chat_bubble",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__7.label"
-              },
-              {
-                "value": "check_mark",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__8.label"
-              },
-              {
-                "value": "clipboard",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__9.label"
-              },
-              {
-                "value": "dairy",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__10.label"
-              },
-              {
-                "value": "dairy_free",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__11.label"
-              },
-              {
-                "value": "dryer",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__12.label"
-              },
-              {
-                "value": "eye",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__13.label"
-              },
-              {
-                "value": "fire",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__14.label"
-              },
-              {
-                "value": "gluten_free",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__15.label"
-              },
-              {
-                "value": "heart",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__16.label"
-              },
-              {
-                "value": "iron",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
-              },
-              {
-                "value": "lab_tested",
-                "label": "Lab tested"
-              },
-              {
-                "value": "leaf",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
-              },
-              {
-                "value": "leather",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__19.label"
-              },
-              {
-                "value": "lightning_bolt",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__20.label"
-              },
-              {
-                "value": "lipstick",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__21.label"
-              },
-              {
-                "value": "lock",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__22.label"
-              },
-              {
-                "value": "map_pin",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__23.label"
-              },
-              {
-                "value": "nut_free",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
-              },
-              {
-                "value": "organic",
-                "label": "Organic"
-              },
-              {
-                "value": "pants",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__25.label"
-              },
-              {
-                "value": "paw_print",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__26.label"
-              },
-              {
-                "value": "pepper",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__27.label"
-              },
-              {
-                "value": "perfume",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__28.label"
-              },
-              {
-                "value": "physician",
-                "label": "Physician tested"
-              },
-              {
-                "value": "plane",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__29.label"
-              },
-              {
-                "value": "plant",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__30.label"
-              },
-              {
-                "value": "price_tag",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__31.label"
-              },
-              {
-                "value": "question_mark",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__32.label"
-              },
-              {
-                "value": "recycle",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__33.label"
-              },
-              {
-                "value": "return",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__34.label"
-              },
-              {
-                "value": "ruler",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__35.label"
-              },
-              {
-                "value": "serving_dish",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__36.label"
-              },
-              {
-                "value": "shirt",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__37.label"
-              },
-              {
-                "value": "shoe",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__38.label"
-              },
-              {
-                "value": "silhouette",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__39.label"
-              },
-              {
-                "value": "snowflake",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__40.label"
-              },
-              {
-                "value": "star",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__41.label"
-              },
-              {
-                "value": "stopwatch",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__42.label"
-              },
-              {
-                "value": "truck",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__43.label"
-              },
-              {
-                "value": "washing",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__44.label"
-              }
-            ],
-            "default": "truck",
-            "label": "t:sections.main-product.blocks.icon_with_text.settings.icon_3.label"
-          },
-          {
-            "type": "image_picker",
-            "id": "image_3",
-            "label": "t:sections.main-product.blocks.icon_with_text.settings.image_3.label"
-          },
-          {
-            "type": "inline_richtext",
-            "id": "heading_3",
-            "default": "Heading",
-            "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.label",
-            "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
-          },
-          {
-            "type": "select",
-            "id": "heading_3_style",
-            "label": "Third heading style",
-            "default": "subtitle",
-            "options": [
-              {
-                "value": "body",
-                "label": "Body"
-              },
-              {
-                "value": "subtitle",
-                "label": "Subtitle"
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "settings": [
-      {
-        "type": "product",
-        "id": "product",
-        "label": "t:sections.featured-product.settings.product.label"
-      },
-      {
-        "type": "color_scheme",
-        "id": "color_scheme",
-        "label": "t:sections.all.colors.label",
-        "default": "background-1"
-      },
-      {
-        "type": "checkbox",
-        "id": "secondary_background",
-        "default": false,
-        "label": "t:sections.featured-product.settings.secondary_background.label"
-      },
-      {
-        "type": "header",
-        "content": "t:sections.featured-product.settings.header.content",
-        "info": "t:sections.featured-product.settings.header.info"
-      },
-      {
-        "type": "select",
-        "id": "media_size",
-        "options": [
-          {
-            "value": "small",
-            "label": "t:sections.main-product.settings.media_size.options__1.label"
-          },
-          {
-            "value": "medium",
-            "label": "t:sections.main-product.settings.media_size.options__2.label"
-          },
-          {
-            "value": "large",
-            "label": "t:sections.main-product.settings.media_size.options__3.label"
-          }
-        ],
-        "default": "medium",
-        "label": "t:sections.main-product.settings.media_size.label",
-        "info": "t:sections.main-product.settings.media_size.info"
-      },
-      {
-        "type": "checkbox",
-        "id": "constrain_to_viewport",
-        "default": true,
-        "label": "t:sections.main-product.settings.constrain_to_viewport.label"
-      },
-      {
-        "type": "select",
-        "id": "media_fit",
-        "options": [
-          {
-            "value": "contain",
-            "label": "t:sections.main-product.settings.media_fit.options__1.label"
-          },
-          {
-            "value": "cover",
-            "label": "t:sections.main-product.settings.media_fit.options__2.label"
-          }
-        ],
-        "default": "contain",
-        "label": "t:sections.main-product.settings.media_fit.label"
-      },
-      {
-        "type": "select",
-        "id": "media_position",
-        "options": [
-          {
-            "value": "left",
-            "label": "t:sections.featured-product.settings.media_position.options__1.label"
-          },
-          {
-            "value": "right",
-            "label": "t:sections.featured-product.settings.media_position.options__2.label"
-          }
-        ],
-        "default": "left",
-        "label": "t:sections.featured-product.settings.media_position.label",
-        "info": "t:sections.featured-product.settings.media_position.info"
-      },
-      {
-        "type": "select",
-        "id": "image_zoom",
-        "options": [
-          {
-            "value": "lightbox",
-            "label": "t:sections.main-product.settings.image_zoom.options__1.label"
-          },
-          {
-            "value": "hover",
-            "label": "t:sections.main-product.settings.image_zoom.options__2.label"
-          },
-          {
-            "value": "none",
-            "label": "t:sections.main-product.settings.image_zoom.options__3.label"
-          }
-        ],
-        "default": "lightbox",
-        "label": "t:sections.main-product.settings.image_zoom.label",
-        "info": "t:sections.main-product.settings.image_zoom.info"
-      },
-      {
-        "type": "checkbox",
-        "id": "hide_variants",
-        "default": false,
-        "label": "t:sections.main-product.settings.hide_variants.label"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_video_looping",
-        "default": false,
-        "label": "t:sections.featured-product.settings.enable_video_looping.label"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_full_details",
-        "default": true,
-        "label": "Show link to full PDP"
-      },
-      {
-        "type": "header",
-        "content": "t:sections.all.padding.section_padding_heading"
-      },
-      {
-        "type": "range",
-        "id": "padding_top",
-        "min": 0,
-        "max": 100,
-        "step": 4,
-        "unit": "px",
-        "label": "t:sections.all.padding.padding_top",
-        "default": 36
-      },
-      {
-        "type": "range",
-        "id": "padding_bottom",
-        "min": 0,
-        "max": 100,
-        "step": 4,
-        "unit": "px",
-        "label": "t:sections.all.padding.padding_bottom",
-        "default": 36
-      }
-    ],
-    "presets": [
-      {
-        "name": "t:sections.featured-product.presets.name",
-        "settings": {
-          "color_scheme": "inverse",
-          "secondary_background": false,
-          "media_size": "medium",
-          "constrain_to_viewport": true,
-          "media_fit": "contain",
-          "media_position": "left",
-          "image_zoom": "hover",
-          "hide_variants": false,
-          "enable_video_looping": false,
-          "padding_top": 36,
-          "padding_bottom": 36
+    {
+      "type": "text",
+      "name": "t:sections.featured-product.blocks.text.name",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "default": "Text block",
+          "label": "t:sections.featured-product.blocks.text.settings.text.label"
         },
-        "blocks": [
-          {
-            "type": "rating"
-          },
-          {
-            "type": "title",
-            "settings": {
-              "heading_size": "h1"
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "t:sections.featured-product.blocks.text.settings.text_style.options__1.label"
+            },
+            {
+              "value": "subtitle",
+              "label": "t:sections.featured-product.blocks.text.settings.text_style.options__2.label"
+            },
+            {
+              "value": "uppercase",
+              "label": "t:sections.featured-product.blocks.text.settings.text_style.options__3.label"
             }
-          },
-          {
-            "type": "description"
-          },
-          {
-            "type": "checkmarks"
-          },
-          {
-            "type": "custom_liquid",
-            "settings": {
-              "custom_liquid": "<div class=\"custom-recharge\"><\/div>"
+          ],
+          "default": "body",
+          "label": "t:sections.featured-product.blocks.text.settings.text_style.label"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "label": "Text alignment",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
             }
-          },
-          {
-            "type": "buy_buttons",
-            "settings": {
-              "show_dynamic_checkout": false,
-              "show_gift_card_recipient": false
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rich_text",
+      "name": "Rich text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "label": "Text alignment",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
             }
-          },
-          {
-            "type": "text",
-            "settings": {
-              "text": "<a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days<\/a>",
-              "text_style": "body"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "title",
+      "name": "t:sections.featured-product.blocks.title.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
             }
-          },
-          {
-            "type": "collapsible_tab",
-            "settings": {
-              "heading": "How to Use",
-              "icon": "none",
-              "content": "<p>{{ section.settings.product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
-              "page": ""
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "range",
+          "id": "heading_width",
+          "label": "Heading width",
+          "default": 100,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_price",
+          "default": false,
+          "label": "Show price"
+        }
+      ]
+    },
+    {
+      "type": "bundle_products",
+      "name": "Bundle products",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Bundle & Save",
+          "label": "Heading"
+        }
+      ]
+    },
+    {
+      "type": "price",
+      "name": "t:sections.featured-product.blocks.price.name",
+      "limit": 1
+    },
+    {
+      "type": "sku",
+      "name": "t:sections.featured-product.blocks.sku.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "t:sections.featured-product.blocks.sku.settings.text_style.options__1.label"
+            },
+            {
+              "value": "subtitle",
+              "label": "t:sections.featured-product.blocks.sku.settings.text_style.options__2.label"
+            },
+            {
+              "value": "uppercase",
+              "label": "t:sections.featured-product.blocks.sku.settings.text_style.options__3.label"
             }
-          },
-          {
-            "type": "collapsible_tab",
-            "settings": {
-              "heading": "Ingredients",
-              "icon": "none",
-              "content": "<p>{{ section.settings.product.metafields.custom.key_ingredients | metafield_tag }}<\/p>",
-              "page": ""
+          ],
+          "default": "body",
+          "label": "t:sections.featured-product.blocks.sku.settings.text_style.label"
+        }
+      ]
+    },
+    {
+      "type": "quantity_selector",
+      "name": "t:sections.featured-product.blocks.quantity_selector.name",
+      "limit": 1
+    },
+    {
+      "type": "variant_picker",
+      "name": "t:sections.featured-product.blocks.variant_picker.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "picker_type",
+          "options": [
+            {
+              "value": "dropdown",
+              "label": "t:sections.featured-product.blocks.variant_picker.settings.picker_type.options__1.label"
+            },
+            {
+              "value": "button",
+              "label": "t:sections.featured-product.blocks.variant_picker.settings.picker_type.options__2.label"
             }
-          },
-          {
-            "type": "collapsible_tab",
-            "settings": {
-              "heading": "Product Benefits & Trial Results",
-              "icon": "none",
-              "content": "<p>{{ section.settings.product.metafields.custom.trial_results | metafield_tag }}<\/p>",
-              "page": ""
+          ],
+          "default": "button",
+          "label": "t:sections.featured-product.blocks.variant_picker.settings.picker_type.label"
+        }
+      ]
+    },
+    {
+      "type": "buy_buttons",
+      "name": "t:sections.featured-product.blocks.buy_buttons.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_quantity_selector",
+          "default": true,
+          "label": "Show quantity selector"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_dynamic_checkout",
+          "default": true,
+          "label": "t:sections.featured-product.blocks.buy_buttons.settings.show_dynamic_checkout.label",
+          "info": "t:sections.featured-product.blocks.buy_buttons.settings.show_dynamic_checkout.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_gift_card_recipient",
+          "default": true,
+          "label": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.label",
+          "info": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.info"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "default": "default",
+          "label": "Button style",
+          "options": [
+            {
+              "value": "default",
+              "label": "Default"
+            },
+            {
+              "value": "red",
+              "label": "Red"
             }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "show_return_policy_note",
+          "default": false,
+          "label": "Show return policy note"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "return_policy_note",
+          "label": "Return policy note",
+          "default": "Try 30-day risk free, love it or your money back!"
+        }
+      ]
+    },
+    {
+      "type": "description",
+      "name": "Description",
+      "limit": 1
+    },
+    {
+      "type": "checkmarks",
+      "name": "Checkmarks",
+      "limit": 1
+    },
+    {
+      "type": "share",
+      "name": "t:sections.featured-product.blocks.share.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "share_label",
+          "label": "t:sections.featured-product.blocks.share.settings.text.label",
+          "default": "Share"
+        },
+        {
+          "type": "paragraph",
+          "content": "t:sections.featured-product.blocks.share.settings.featured_image_info.content"
+        },
+        {
+          "type": "paragraph",
+          "content": "t:sections.featured-product.blocks.share.settings.title_info.content"
+        }
+      ]
+    },
+    {
+      "type": "custom_liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "t:sections.custom-liquid.settings.custom_liquid.label",
+          "info": "t:sections.custom-liquid.settings.custom_liquid.info"
+        }
+      ]
+    },
+    {
+      "type": "collapsible_tab",
+      "name": "t:sections.main-product.blocks.collapsible_tab.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Collapsible row",
+          "info": "t:sections.main-product.blocks.collapsible_tab.settings.heading.info",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
+            },
+            {
+              "value": "apple",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__2.label"
+            },
+            {
+              "value": "banana",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__3.label"
+            },
+            {
+              "value": "bottle",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__4.label"
+            },
+            {
+              "value": "box",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
+            },
+            {
+              "value": "carrot",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__6.label"
+            },
+            {
+              "value": "chat_bubble",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__7.label"
+            },
+            {
+              "value": "check_mark",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__8.label"
+            },
+            {
+              "value": "clipboard",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__9.label"
+            },
+            {
+              "value": "dairy",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__10.label"
+            },
+            {
+              "value": "dairy_free",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__11.label"
+            },
+            {
+              "value": "dryer",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__12.label"
+            },
+            {
+              "value": "eye",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__13.label"
+            },
+            {
+              "value": "fire",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__14.label"
+            },
+            {
+              "value": "gluten_free",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__15.label"
+            },
+            {
+              "value": "heart",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__16.label"
+            },
+            {
+              "value": "iron",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
+            },
+            {
+              "value": "leaf",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
+            },
+            {
+              "value": "leather",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__19.label"
+            },
+            {
+              "value": "lightning_bolt",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__20.label"
+            },
+            {
+              "value": "lipstick",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__21.label"
+            },
+            {
+              "value": "lock",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__22.label"
+            },
+            {
+              "value": "map_pin",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__23.label"
+            },
+            {
+              "value": "nut_free",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
+            },
+            {
+              "value": "pants",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__25.label"
+            },
+            {
+              "value": "paw_print",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__26.label"
+            },
+            {
+              "value": "pepper",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__27.label"
+            },
+            {
+              "value": "perfume",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__28.label"
+            },
+            {
+              "value": "plane",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__29.label"
+            },
+            {
+              "value": "plant",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__30.label"
+            },
+            {
+              "value": "price_tag",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__31.label"
+            },
+            {
+              "value": "question_mark",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__32.label"
+            },
+            {
+              "value": "recycle",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__33.label"
+            },
+            {
+              "value": "return",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__34.label"
+            },
+            {
+              "value": "ruler",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__35.label"
+            },
+            {
+              "value": "serving_dish",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__36.label"
+            },
+            {
+              "value": "shirt",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__37.label"
+            },
+            {
+              "value": "shoe",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__38.label"
+            },
+            {
+              "value": "silhouette",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__39.label"
+            },
+            {
+              "value": "snowflake",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__40.label"
+            },
+            {
+              "value": "star",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__41.label"
+            },
+            {
+              "value": "stopwatch",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__42.label"
+            },
+            {
+              "value": "truck",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__43.label"
+            },
+            {
+              "value": "washing",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__44.label"
+            }
+          ],
+          "default": "check_mark",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.label"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.content.label"
+        },
+        {
+          "type": "page",
+          "id": "page",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.page.label"
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "name": "t:sections.featured-product.blocks.rating.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "t:sections.featured-product.blocks.rating.settings.paragraph.content"
+        }
+      ]
+    },
+    {
+      "type": "included_products",
+      "name": "Included products",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "product_list",
+          "id": "included_products",
+          "label": "Included products"
+        }
+      ]
+    },
+    {
+      "type": "icon-with-text",
+      "name": "t:sections.main-product.blocks.icon_with_text.name",
+      "settings": [
+        {
+          "type": "select",
+          "id": "layout",
+          "options": [
+            {
+              "value": "horizontal",
+              "label": "t:sections.main-product.blocks.icon_with_text.settings.layout.options__1.label"
+            },
+            {
+              "value": "vertical",
+              "label": "t:sections.main-product.blocks.icon_with_text.settings.layout.options__2.label"
+            }
+          ],
+          "default": "horizontal",
+          "label": "t:sections.main-product.blocks.icon_with_text.settings.layout.label"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.main-product.blocks.icon_with_text.settings.content.label",
+          "info": "t:sections.main-product.blocks.icon_with_text.settings.content.info"
+        },
+        {
+          "type": "select",
+          "id": "icon_1",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
+            },
+            {
+              "value": "apple",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__2.label"
+            },
+            {
+              "value": "banana",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__3.label"
+            },
+            {
+              "value": "bottle",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__4.label"
+            },
+            {
+              "value": "box",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
+            },
+            {
+              "value": "carrot",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__6.label"
+            },
+            {
+              "value": "chat_bubble",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__7.label"
+            },
+            {
+              "value": "check_mark",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__8.label"
+            },
+            {
+              "value": "clipboard",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__9.label"
+            },
+            {
+              "value": "dairy",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__10.label"
+            },
+            {
+              "value": "dairy_free",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__11.label"
+            },
+            {
+              "value": "dryer",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__12.label"
+            },
+            {
+              "value": "eye",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__13.label"
+            },
+            {
+              "value": "fire",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__14.label"
+            },
+            {
+              "value": "gluten_free",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__15.label"
+            },
+            {
+              "value": "heart",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__16.label"
+            },
+            {
+              "value": "iron",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
+            },
+            {
+              "value": "lab_tested",
+              "label": "Lab tested"
+            },
+            {
+              "value": "leaf",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
+            },
+            {
+              "value": "leather",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__19.label"
+            },
+            {
+              "value": "lightning_bolt",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__20.label"
+            },
+            {
+              "value": "lipstick",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__21.label"
+            },
+            {
+              "value": "lock",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__22.label"
+            },
+            {
+              "value": "map_pin",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__23.label"
+            },
+            {
+              "value": "nut_free",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
+            },
+            {
+              "value": "organic",
+              "label": "Organic"
+            },
+            {
+              "value": "pants",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__25.label"
+            },
+            {
+              "value": "paw_print",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__26.label"
+            },
+            {
+              "value": "pepper",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__27.label"
+            },
+            {
+              "value": "perfume",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__28.label"
+            },
+            {
+              "value": "physician",
+              "label": "Physician tested"
+            },
+            {
+              "value": "plane",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__29.label"
+            },
+            {
+              "value": "plant",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__30.label"
+            },
+            {
+              "value": "price_tag",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__31.label"
+            },
+            {
+              "value": "question_mark",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__32.label"
+            },
+            {
+              "value": "recycle",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__33.label"
+            },
+            {
+              "value": "return",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__34.label"
+            },
+            {
+              "value": "ruler",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__35.label"
+            },
+            {
+              "value": "serving_dish",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__36.label"
+            },
+            {
+              "value": "shirt",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__37.label"
+            },
+            {
+              "value": "shoe",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__38.label"
+            },
+            {
+              "value": "silhouette",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__39.label"
+            },
+            {
+              "value": "snowflake",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__40.label"
+            },
+            {
+              "value": "star",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__41.label"
+            },
+            {
+              "value": "stopwatch",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__42.label"
+            },
+            {
+              "value": "truck",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__43.label"
+            },
+            {
+              "value": "washing",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__44.label"
+            }
+          ],
+          "default": "heart",
+          "label": "t:sections.main-product.blocks.icon_with_text.settings.icon_1.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "t:sections.main-product.blocks.icon_with_text.settings.image_1.label"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_1",
+          "default": "Heading",
+          "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_1.label",
+          "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        },
+        {
+          "type": "select",
+          "id": "heading_1_style",
+          "label": "First heading style",
+          "default": "subtitle",
+          "options": [
+            {
+              "value": "body",
+              "label": "Body"
+            },
+            {
+              "value": "subtitle",
+              "label": "Subtitle"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "icon_2",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
+            },
+            {
+              "value": "apple",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__2.label"
+            },
+            {
+              "value": "banana",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__3.label"
+            },
+            {
+              "value": "bottle",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__4.label"
+            },
+            {
+              "value": "box",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
+            },
+            {
+              "value": "carrot",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__6.label"
+            },
+            {
+              "value": "chat_bubble",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__7.label"
+            },
+            {
+              "value": "check_mark",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__8.label"
+            },
+            {
+              "value": "clipboard",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__9.label"
+            },
+            {
+              "value": "dairy",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__10.label"
+            },
+            {
+              "value": "dairy_free",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__11.label"
+            },
+            {
+              "value": "dryer",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__12.label"
+            },
+            {
+              "value": "eye",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__13.label"
+            },
+            {
+              "value": "fire",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__14.label"
+            },
+            {
+              "value": "gluten_free",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__15.label"
+            },
+            {
+              "value": "heart",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__16.label"
+            },
+            {
+              "value": "iron",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
+            },
+            {
+              "value": "lab_tested",
+              "label": "Lab tested"
+            },
+            {
+              "value": "leaf",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
+            },
+            {
+              "value": "leather",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__19.label"
+            },
+            {
+              "value": "lightning_bolt",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__20.label"
+            },
+            {
+              "value": "lipstick",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__21.label"
+            },
+            {
+              "value": "lock",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__22.label"
+            },
+            {
+              "value": "map_pin",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__23.label"
+            },
+            {
+              "value": "nut_free",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
+            },
+            {
+              "value": "organic",
+              "label": "Organic"
+            },
+            {
+              "value": "pants",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__25.label"
+            },
+            {
+              "value": "paw_print",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__26.label"
+            },
+            {
+              "value": "pepper",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__27.label"
+            },
+            {
+              "value": "perfume",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__28.label"
+            },
+            {
+              "value": "physician",
+              "label": "Physician tested"
+            },
+            {
+              "value": "plane",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__29.label"
+            },
+            {
+              "value": "plant",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__30.label"
+            },
+            {
+              "value": "price_tag",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__31.label"
+            },
+            {
+              "value": "question_mark",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__32.label"
+            },
+            {
+              "value": "recycle",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__33.label"
+            },
+            {
+              "value": "return",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__34.label"
+            },
+            {
+              "value": "ruler",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__35.label"
+            },
+            {
+              "value": "serving_dish",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__36.label"
+            },
+            {
+              "value": "shirt",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__37.label"
+            },
+            {
+              "value": "shoe",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__38.label"
+            },
+            {
+              "value": "silhouette",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__39.label"
+            },
+            {
+              "value": "snowflake",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__40.label"
+            },
+            {
+              "value": "star",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__41.label"
+            },
+            {
+              "value": "stopwatch",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__42.label"
+            },
+            {
+              "value": "truck",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__43.label"
+            },
+            {
+              "value": "washing",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__44.label"
+            }
+          ],
+          "default": "return",
+          "label": "t:sections.main-product.blocks.icon_with_text.settings.icon_2.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "t:sections.main-product.blocks.icon_with_text.settings.image_2.label"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_2",
+          "default": "Heading",
+          "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_2.label",
+          "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        },
+        {
+          "type": "select",
+          "id": "heading_2_style",
+          "label": "Second heading style",
+          "default": "subtitle",
+          "options": [
+            {
+              "value": "body",
+              "label": "Body"
+            },
+            {
+              "value": "subtitle",
+              "label": "Subtitle"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "icon_3",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
+            },
+            {
+              "value": "apple",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__2.label"
+            },
+            {
+              "value": "banana",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__3.label"
+            },
+            {
+              "value": "bottle",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__4.label"
+            },
+            {
+              "value": "box",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
+            },
+            {
+              "value": "carrot",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__6.label"
+            },
+            {
+              "value": "chat_bubble",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__7.label"
+            },
+            {
+              "value": "check_mark",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__8.label"
+            },
+            {
+              "value": "clipboard",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__9.label"
+            },
+            {
+              "value": "dairy",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__10.label"
+            },
+            {
+              "value": "dairy_free",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__11.label"
+            },
+            {
+              "value": "dryer",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__12.label"
+            },
+            {
+              "value": "eye",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__13.label"
+            },
+            {
+              "value": "fire",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__14.label"
+            },
+            {
+              "value": "gluten_free",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__15.label"
+            },
+            {
+              "value": "heart",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__16.label"
+            },
+            {
+              "value": "iron",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
+            },
+            {
+              "value": "lab_tested",
+              "label": "Lab tested"
+            },
+            {
+              "value": "leaf",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
+            },
+            {
+              "value": "leather",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__19.label"
+            },
+            {
+              "value": "lightning_bolt",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__20.label"
+            },
+            {
+              "value": "lipstick",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__21.label"
+            },
+            {
+              "value": "lock",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__22.label"
+            },
+            {
+              "value": "map_pin",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__23.label"
+            },
+            {
+              "value": "nut_free",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
+            },
+            {
+              "value": "organic",
+              "label": "Organic"
+            },
+            {
+              "value": "pants",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__25.label"
+            },
+            {
+              "value": "paw_print",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__26.label"
+            },
+            {
+              "value": "pepper",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__27.label"
+            },
+            {
+              "value": "perfume",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__28.label"
+            },
+            {
+              "value": "physician",
+              "label": "Physician tested"
+            },
+            {
+              "value": "plane",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__29.label"
+            },
+            {
+              "value": "plant",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__30.label"
+            },
+            {
+              "value": "price_tag",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__31.label"
+            },
+            {
+              "value": "question_mark",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__32.label"
+            },
+            {
+              "value": "recycle",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__33.label"
+            },
+            {
+              "value": "return",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__34.label"
+            },
+            {
+              "value": "ruler",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__35.label"
+            },
+            {
+              "value": "serving_dish",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__36.label"
+            },
+            {
+              "value": "shirt",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__37.label"
+            },
+            {
+              "value": "shoe",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__38.label"
+            },
+            {
+              "value": "silhouette",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__39.label"
+            },
+            {
+              "value": "snowflake",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__40.label"
+            },
+            {
+              "value": "star",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__41.label"
+            },
+            {
+              "value": "stopwatch",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__42.label"
+            },
+            {
+              "value": "truck",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__43.label"
+            },
+            {
+              "value": "washing",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__44.label"
+            }
+          ],
+          "default": "truck",
+          "label": "t:sections.main-product.blocks.icon_with_text.settings.icon_3.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "t:sections.main-product.blocks.icon_with_text.settings.image_3.label"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_3",
+          "default": "Heading",
+          "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.label",
+          "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        },
+        {
+          "type": "select",
+          "id": "heading_3_style",
+          "label": "Third heading style",
+          "default": "subtitle",
+          "options": [
+            {
+              "value": "body",
+              "label": "Body"
+            },
+            {
+              "value": "subtitle",
+              "label": "Subtitle"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "t:sections.featured-product.settings.product.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "secondary_background",
+      "default": false,
+      "label": "t:sections.featured-product.settings.secondary_background.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.featured-product.settings.header.content",
+      "info": "t:sections.featured-product.settings.header.info"
+    },
+    {
+      "type": "select",
+      "id": "media_size",
+      "options": [
+        {
+          "value": "small",
+          "label": "t:sections.main-product.settings.media_size.options__1.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.main-product.settings.media_size.options__2.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.main-product.settings.media_size.options__3.label"
+        }
+      ],
+      "default": "medium",
+      "label": "t:sections.main-product.settings.media_size.label",
+      "info": "t:sections.main-product.settings.media_size.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "constrain_to_viewport",
+      "default": true,
+      "label": "t:sections.main-product.settings.constrain_to_viewport.label"
+    },
+    {
+      "type": "select",
+      "id": "media_fit",
+      "options": [
+        {
+          "value": "contain",
+          "label": "t:sections.main-product.settings.media_fit.options__1.label"
+        },
+        {
+          "value": "cover",
+          "label": "t:sections.main-product.settings.media_fit.options__2.label"
+        }
+      ],
+      "default": "contain",
+      "label": "t:sections.main-product.settings.media_fit.label"
+    },
+    {
+      "type": "select",
+      "id": "media_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.featured-product.settings.media_position.options__1.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.featured-product.settings.media_position.options__2.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.featured-product.settings.media_position.label",
+      "info": "t:sections.featured-product.settings.media_position.info"
+    },
+    {
+      "type": "select",
+      "id": "image_zoom",
+      "options": [
+        {
+          "value": "lightbox",
+          "label": "t:sections.main-product.settings.image_zoom.options__1.label"
+        },
+        {
+          "value": "hover",
+          "label": "t:sections.main-product.settings.image_zoom.options__2.label"
+        },
+        {
+          "value": "none",
+          "label": "t:sections.main-product.settings.image_zoom.options__3.label"
+        }
+      ],
+      "default": "lightbox",
+      "label": "t:sections.main-product.settings.image_zoom.label",
+      "info": "t:sections.main-product.settings.image_zoom.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_variants",
+      "default": false,
+      "label": "t:sections.main-product.settings.hide_variants.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video_looping",
+      "default": false,
+      "label": "t:sections.featured-product.settings.enable_video_looping.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_full_details",
+      "default": true,
+      "label": "Show link to full PDP"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "color_scheme": "inverse",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": [
+        {
+          "type": "rating"
+        },
+        {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
           }
-        ]
-      }
-    ]
-  }
+        },
+        {
+          "type": "description"
+        },
+        {
+          "type": "checkmarks"
+        },
+        {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"custom-recharge\"><\/div>"
+          }
+        },
+        {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        {
+          "type": "text",
+          "settings": {
+            "text": "<a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days<\/a>",
+            "text_style": "body"
+          }
+        },
+        {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How to Use",
+            "icon": "none",
+            "content": "<p>{{ section.settings.product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredients",
+            "icon": "none",
+            "content": "<p>{{ section.settings.product.metafields.custom.key_ingredients | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Product Benefits & Trial Results",
+            "icon": "none",
+            "content": "<p>{{ section.settings.product.metafields.custom.trial_results | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}

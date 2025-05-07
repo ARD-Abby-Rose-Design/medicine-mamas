@@ -384,6 +384,7 @@
           "type": "title",
           "settings": {
             "heading_size": "h1",
+            "heading_width": 60,
             "show_price": true
           }
         },

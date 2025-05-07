@@ -111,11 +111,26 @@
   .background-secondary .featured-product {
     padding: 5rem;
   }
+
+  .featured-product .product-media-container.constrain-height.media-fit-contain {
+    width: 100%;
+  }
+
+  .featured-product.product.grid {
+    gap: 3rem;
+  }
+  
 }
 
 @media screen and (min-width: 990px) {
+
+
+  .featured-product.product.grid {
+    gap: 5rem;
+  }
   .featured-product .product__media-wrapper {
     width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2) !important;
+    justify-content: flex-start;
   }
   
   .product__info-wrapper {
@@ -131,7 +146,7 @@
   }
 
   .featured-product:not(.product--no-media) > .product__info-wrapper {
-    padding: 0 7rem;
+    padding: 0;
   }
 
   .background-secondary .featured-product {

@@ -572,21 +572,22 @@
         "background_color": "#ffffff"
       }
     },
-    "rich_text_GyYtpp": {
-      "type": "rich-text",
+    "richtext_with_button_LWXHew": {
+      "type": "richtext-with-button",
       "blocks": {
-        "heading_kyEMUn": {
+        "heading_DLjyRB": {
           "type": "heading",
           "settings": {
-            "heading": "Over 15,000 5-Star Reviews",
-            "heading_size": "h1"
+            "heading": "<p>Over 15,000 <br/>5-Star Reviews</p>",
+            "heading_size": "hlarge",
+            "width": 100
           }
         }
       },
       "block_order": [
-        "heading_kyEMUn"
+        "heading_DLjyRB"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "Richt text with button",
       "settings": {
         "show_desktop": true,
         "show_mobile": true,
@@ -594,8 +595,16 @@
         "content_alignment": "left",
         "color_scheme": "inverse",
         "full_width": true,
-        "padding_top": 56,
-        "padding_bottom": 52
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "button_label": "Get smooth now",
+        "button_link": "shopify://products/vmagic-grooming-kit",
+        "button_alignment": "right",
+        "big_button": true,
+        "button_style_secondary": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_secondary_2": false
       }
     },
     "174562032607fed5ad": {
@@ -752,7 +761,7 @@
     "rich_text_dmbhRL",
     "rich_text_RzFYTp",
     "steps_gdiniw",
-    "rich_text_GyYtpp",
+    "richtext_with_button_LWXHew",
     "174562032607fed5ad",
     "custom_liquid_b8aeM9",
     "rich_text_EpVAbB",

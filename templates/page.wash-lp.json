@@ -493,7 +493,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/mm-vulva_wash-included_products.jpg",
-            "title": "Step 1",
+            "title": "<strong>Step 1</strong>",
             "text": "<p>Dispense a quarter size amount of the <strong>VMAGIC® Feminine Wash</strong> product into hands or soft sponge and apply directly to skin. Rinse clean with warm water. Gently dry.</p>",
             "link_label": "",
             "link": "",
@@ -508,7 +508,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/medicine-mama-vulva-balm-1.jpg",
-            "title": "Step 2",
+            "title": "<strong>Step 2</strong>",
             "text": "<p>Scoop out a small amount of VMAGIC® <strong>Vulva Balm</strong> with clean, dry fingers and massage into vulvar skin (includes inner and/or outer labia, the clitoris, vaginal opening or mons pubis).</p>",
             "link_label": "",
             "link": "",

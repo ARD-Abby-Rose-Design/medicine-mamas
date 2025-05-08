@@ -18,37 +18,49 @@
 %}
 
 {%- style -%}
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-    }
+     .section-{{ section.id }}-padding {
+       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+     }
 
-    .section-{{ section.id }}-padding li {
-    {% if section.settings.border_style == 'solid' %}
-      border: 1px solid #E9E4DE;
-    {% endif %}
-  }
+     .section-{{ section.id }}-padding li {
+     {% if section.settings.border_style == 'solid' %}
+       border: 1px solid #E9E4DE;
+     {% endif %}
+   }
 
-  {% if section.settings.background_style == 'custom' %}
- 
-  #multicolumn--{{ section.id }} .multicolumn-card {
+
+     @media screen and (min-width: 750px) {
+       .section-{{ section.id }}-padding {
+         padding-top: {{ section.settings.padding_top }}px;
+         padding-bottom: {{ section.settings.padding_bottom }}px;
+       }
+   }
+
+   @media screen and (min-width: 980px) {
+     #ImageWithText--{{ section.id }} .image-with-text__content {
+       padding-left: {{ section.settings.desktop_content_padding_left }}px !important;
+       padding-right: {{ section.settings.desktop_content_padding_right }}px !important;
+       }
+   }
+
+
+   {% if section.settings.background_style == 'custom' %}
+
+  #multicolumn-with-text--{{ section.id }} .multicolumn-card {
     background-color: {{ section.settings.background_color }} !important;
   }
   {% endif %}
 
 
-    @media screen and (min-width: 750px) {
-      .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
-      }
-  }
+  .multicolumn-with-text .multicolumn-card-spacing {
+    padding-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+   }
 
-  @media screen and (min-width: 980px) {
-    #ImageWithText--{{ section.id }} .image-with-text__content {
-      padding-left: {{ section.settings.desktop_content_padding_left }}px !important;
-      padding-right: {{ section.settings.desktop_content_padding_right }}px !important;
-      }
+  .multicolumn-with-text .multicolumn-card__info {
+    padding: 1.6rem;
   }
 {%- endstyle -%}
 
@@ -61,8 +73,8 @@
     <div class="image-with-text__grid grid grid--gapless grid--1-col grid--2-col-tablet {% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %} {% if section.settings.layout_mobile == 'text_first' %} image-with-text__grid--reverse-mobile{% endif %} ">
       <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
         <div
-          id="multicolumn--{{ section.id }}"
-          class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}"
+          id="multicolumn-with-text--{{ section.id }}"
+          class="multicolumn multicolumn-with-text color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}"
         >
           <slider-component class="slider-mobile-gutter">
             <ul
@@ -179,7 +191,7 @@
                       <div class="multicolumn-card__info">
                         <div class="multicolumn-card__content">
                           {%- if block.settings.title != blank -%}
-                            <h3 class="inline-richtext h4">{{ block.settings.title }}</h3>
+                            <p>{{ block.settings.title }}</p>
                           {%- endif -%}
                           {%- if block.settings.text != blank -%}
                             <div class="rte">{{ block.settings.text }}</div>
@@ -198,7 +210,6 @@
                           {%- endif -%}
                         </div>
                         {%- if block.settings.product != blank -%}
-                           {%- assign product_form_id = 'product-form-' | append: block.id -%}
                           <div class="multicolumn-card__product">
                             <div
                               id="multicolumn-card__product-card--{{ block.id }}"
@@ -215,7 +226,14 @@
                               <div class="rte">{{ block.settings.product_benefits }}</div>
                             {%- endif -%}
                             {% if block.settings.button_label != blank %}
-                                {%- render 'buy-buttons', block: block, product: {{  block.settings.product }}, product_form_id: product_form_id, section_id: block.id, show_pickup_availability: false -%}
+                              {%- assign product_form_id = 'product-form-' | append: block.id -%}
+                              {%- render 'buy-buttons',
+                                block: block,
+                                product: block.settings.product,
+                                product_form_id: product_form_id,
+                                section_id: section.id,
+                                show_pickup_availability: true
+                              -%}
                             {% endif %}
                           </div>
                         {%- endif -%}
@@ -993,15 +1011,15 @@
           "label": "Product benefits"
         },
         {
-            "type": "text",
-            "id": "button_label",
-            "label": "Button label" 
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label"
         },
         {
-            "type": "checkbox",
-            "id": "show_price",
-            "label": "Show price in button",
-            "default": false
+          "type": "checkbox",
+          "id": "show_price",
+          "label": "Show price in button",
+          "default": false
         }
       ]
     },

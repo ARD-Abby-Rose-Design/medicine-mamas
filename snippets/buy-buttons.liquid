@@ -10,7 +10,13 @@
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
-<div {{ block.shopify_attributes }} class="buy-buttons__wrapper" {% if block.settings.show_quantity_selector == false %} style="margin-left: 0 !important"{% endif %}>
+<div
+  {{ block.shopify_attributes }}
+  class="buy-buttons__wrapper"
+  {% if block.settings.show_quantity_selector == false %}
+    style="margin-left: 0 !important"
+  {% endif %}
+>
   {%- if product != blank -%}
     {%- liquid
       assign gift_card_recipient_feature_active = false
@@ -61,7 +67,7 @@
         <div class="product-form__buttons">
           {%- liquid
             assign check_against_inventory = true
-            if product.selected_or_first_available_variant.inventory_management != 'shopify' or  product.selected_or_first_available_variant.inventory_policy == 'continue'
+            if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
               assign check_against_inventory = false
             endif
             if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
@@ -69,7 +75,7 @@
             endif
           -%}
           <button
-            id = "ProductSubmitButton-{{ section_id }}"
+            id="ProductSubmitButton-{{ section_id }}"
             type="submit"
             name="add"
             class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}{% if block.settings.button_style == 'red' %} button--red{% endif %}"
@@ -80,21 +86,30 @@
             <span class="product-form__submit--label">
               {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
-              {%- elsif product.tags contains "pre-order" -%}
+              {%- elsif product.tags contains 'pre-order' -%}
                 {{ 'products.product.preorder' | t }}
               {%- else -%}
-                {{ 'products.product.add_to_cart' | t }}
+                {% if block.settings.button_label != blank %}
+                  {{ block.settings.button_label }}
+                {% else %}
+                  {{ 'products.product.add_to_cart' | t }}
+                {% endif %}
               {%- endif -%}
             </span>
-            <span class="product-form__submit--dash">-</span>
-            <span id="price-{{ section_id }}" class="product-form__submit--price">
-            {% if product.selected_or_first_available_variant.selling_plan_allocations.size < 1 %}
-              <span><s>{{ product.selected_or_first_available_variant.compare_at_price | money }}</s></span>
-              <span> {{ product.selected_or_first_available_variant.price | money }}</span>
-            {% else %}
-              {{ product.selected_or_first_available_variant.price | money }}
-            {% endif %}
-            </span>
+            {% unless block.settings.show_price == false %}
+              <span class="product-form__submit--dash">-</span>
+              <span id="price-{{ section_id }}" class="product-form__submit--price">
+                {% if product.selected_or_first_available_variant.selling_plan_allocations.size < 1 %}
+                  <span
+                    ><s>{{ product.selected_or_first_available_variant.compare_at_price | money }}</s></span
+                  >
+                  <span> {{ product.selected_or_first_available_variant.price | money }}</span>
+                {% else %}
+                  {{ product.selected_or_first_available_variant.price | money }}
+                {% endif %}
+              </span>
+            {% endunless %}
+
             <div class="loading-overlay__spinner hidden">
               <svg
                 aria-hidden="true"
@@ -113,10 +128,9 @@
         </div>
         {% if block.settings.show_return_policy_note and block.settings.return_policy_note != blank %}
           <div class="product-form__return-policy-note center">
-              {{ block.settings.return_policy_note }}
+            {{ block.settings.return_policy_note }}
           </div>
         {% endif %}
-
       {%- endform -%}
     </product-form>
   {%- else -%}

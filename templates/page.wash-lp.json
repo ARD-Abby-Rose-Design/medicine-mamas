@@ -501,7 +501,8 @@
             "product_badge_color": "#fcf7f0",
             "product_benefits": "",
             "button_label": "SHOP NOW",
-            "show_price": false
+            "show_price": false,
+            "button_style": "red"
           }
         },
         "column_njwcCz": {
@@ -515,8 +516,9 @@
             "product": "vmagic-vulvar-balm-skincare-jar",
             "product_badge_color": "#fcf7f0",
             "product_benefits": "",
-            "button_label": "",
-            "show_price": false
+            "button_label": "ADD TO CART",
+            "show_price": true,
+            "button_style": "red"
           }
         }
       },

@@ -592,6 +592,16 @@
     "rich_text_GbjdEL": {
       "type": "rich-text",
       "blocks": {
+        "number_8hmQt7": {
+          "type": "number",
+          "settings": {
+            "number": "5",
+            "margin_bottom": 0,
+            "number_bg_color": "#121212",
+            "show_desktop": true,
+            "show_mobile": true
+          }
+        },
         "heading_tH8kkn": {
           "type": "heading",
           "settings": {
@@ -608,6 +618,7 @@
         }
       },
       "block_order": [
+        "number_8hmQt7",
         "heading_tH8kkn",
         "text_QbhCh8"
       ],
@@ -633,21 +644,6 @@
     },
     "rich_text_a9LjTQ": {
       "type": "rich-text",
-      "blocks": {
-        "number_3YzAVd": {
-          "type": "number",
-          "settings": {
-            "number": "5",
-            "margin_bottom": 10,
-            "number_bg_color": "#121212",
-            "show_desktop": true,
-            "show_mobile": true
-          }
-        }
-      },
-      "block_order": [
-        "number_3YzAVd"
-      ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "show_desktop": true,

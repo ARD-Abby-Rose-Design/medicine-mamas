@@ -599,7 +599,7 @@
 
 .media-caption--review {
   display: none;
-  padding: 0.8rem 1rem;
+  padding: 1.6rem;
   border-radius: 0.8rem;
   opacity: 1;
   max-width: 18rem;
@@ -610,6 +610,8 @@
   margin-bottom: 2rem;
 }
 
+.media-caption h3,
+.media-caption--below h3, 
 .media-caption h4,
 .media-caption--below h4, 
 .media-caption h5,

@@ -20,11 +20,11 @@
     "image_with_text_WexptL": {
       "type": "image-with-text",
       "blocks": {
-        "heading_HPnBKN": {
-          "type": "heading",
+        "heading_with_line_breaks_rRYpaT": {
+          "type": "heading_with_line_breaks",
           "settings": {
-            "heading": "Say goodbye to bumps and irritation for good",
-            "heading_size": "h1"
+            "heading_with_line_breaks": "<p>Say goodbye<br/>to bumps<br/>and irritation<br/>for good</p>",
+            "heading_with_line_breaks_size": "hmedium"
           }
         },
         "text_ECHdDh": {
@@ -49,7 +49,7 @@
         }
       },
       "block_order": [
-        "heading_HPnBKN",
+        "heading_with_line_breaks_rRYpaT",
         "text_ECHdDh",
         "button_8rfWc8"
       ],
@@ -579,8 +579,7 @@
           "type": "heading",
           "settings": {
             "heading": "<p>Over 15,000 <br/>5-Star Reviews</p>",
-            "heading_size": "hlarge",
-            "width": 100
+            "heading_size": "hlarge"
           }
         }
       },

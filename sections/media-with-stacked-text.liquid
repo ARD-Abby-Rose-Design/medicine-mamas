@@ -47,6 +47,9 @@
 
     #ImageWithText--{{ section.id }} .media-caption--review {
       background-color: {{ section.settings.media_caption_bg_color }};
+      padding: 0.8rem 1rem;
+      border-radius: 0.8rem;
+      opacity: 1;
     }
 
     #ImageWithText--{{ section.id }} .media-caption--review.second-media-caption {
@@ -73,13 +76,24 @@
       padding-right: {{ section.settings.desktop_content_padding_right }}px !important;
       }
   }
+
+  .image-with-stacked-text img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media screen and (min-width: 989px) {
+  .media-with-stacked-text .image-with-text__media-item {
+    padding: 4rem 2rem;
+  }
+}
 {%- endstyle -%}
 
 {% assign scheme1 = settings.color_schemes | first %}
 <div class="color-{{ section.settings.color_scheme }}">
   <div
     id="ImageWithText--{{ section.id }}"
-    class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.show_mobile == false %} medium-hide small-hide{% endif %}{% if section.settings.show_desktop == false %} medium-up-hide large-up-hide{% endif %}{% if section.settings.show_desktop == false %} hide-desktop{% endif %}"
+    class="media-with-stacked-text image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.show_mobile == false %} medium-hide small-hide{% endif %}{% if section.settings.show_desktop == false %} medium-up-hide large-up-hide{% endif %}{% if section.settings.show_desktop == false %} hide-desktop{% endif %}"
   >
     <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %} {% if section.settings.layout_mobile == 'text_first' %} image-with-text__grid--reverse-mobile{% endif %} ">
       <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
@@ -89,6 +103,7 @@
           </div>
         {% endif %}
         <div
+          style="max-height: 90% !important;"
           class="image-with-text__media image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank or section.settings.video != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
           {% if section.settings.height == 'adapt'
             and section.settings.image != blank
@@ -207,13 +222,6 @@
                 >
                   {{ block.settings.heading | replace: 'Body,', 'Body,<br>' }}
                 </h2>
-                {%- when 'heading_with_line_breaks' -%}
-                  <h2
-                    class="image-with-text__heading heading-with-line-breaks inline-richtext {{ block.settings.heading_with_line_breaks_size }}"
-                    {{ block.shopify_attributes }}
-                  >
-                    {{ block.settings.heading_with_line_breaks }}
-                  </h2>
               {%- when 'caption' -%}
                 <p
                   class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
@@ -221,13 +229,12 @@
                 >
                   {{ block.settings.caption | escape }}
                 </p>
-                
               {%- when 'text' -%}
                 <style>
                   #image-with-text__text--{{ block.id }} {
                     {% if block.settings.background_style == 'solid' %}
                       background-color: {{ block.settings.background_color }};
-                      padding: 1.6rem 2.4rem;
+                      padding: 1.4rem;
                       border-radius: 0.8rem;
                     {% endif %}
                   }
@@ -385,6 +392,14 @@
                   </style>
                   <div>{{ block.settings.number }}</div>
                 </div>
+              {%- when 'image' -%}
+                {% if block.settings.image != blank %}
+                  <div
+                    class="image-with-stacked-text {% if block.settings.show_mobile != true %} small-hide{% endif %}{%  if block.settings.show_desktop != true %} medium-up-hide{% endif %}"
+                  >
+                    {{ block.settings.image | image_url: width: 1500 | image_tag: loading: 'lazy' }}
+                  </div>
+                {% endif %}
             {%- endcase -%}
           {%- endfor -%}
         </div>
@@ -429,7 +444,7 @@
 
 {% schema %}
 {
-  "name": "Media with text",
+  "name": "Media with stacked text",
   "class": "section",
   "disabled_on": {
     "groups": ["header", "footer"]
@@ -1198,65 +1213,35 @@
       ]
     },
     {
-      "type": "heading_with_line_breaks",
-      "name": "Heading with line-breaks",
+      "type": "image",
+      "name": "Image",
       "settings": [
         {
-          "type": "richtext",
-          "id": "heading_with_line_breaks",
-          "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
         },
         {
-          "type": "select",
-          "id": "heading_with_line_breaks_size",
-          "options": [
-            {
-              "value": "h1",
-              "label": "t:sections.all.heading_size.options__0.label"
-            },
-            {
-              "value": "hlarge",
-              "label": "t:sections.all.heading_size.options__1.label"
-            },
-            {
-              "value": "hmedium",
-              "label": "t:sections.all.heading_size.options__2.label"
-            },
-            {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__3.label"
-            },
-            {
-              "value": "h3",
-              "label": "t:sections.all.heading_size.options__4.label"
-            },
-            {
-              "value": "h4",
-              "label": "t:sections.all.heading_size.options__5.label"
-            },
-            {
-              "value": "h5",
-              "label": "t:sections.all.heading_size.options__6.label"
-            }
-          ],
-          "default": "h1",
-          "label": "t:sections.all.heading_size.label"
+          "type": "checkbox",
+          "id": "show_desktop",
+          "label": "Show on Desktop",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_mobile",
+          "label": "Show on Mobile",
+          "default": true
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Media with text",
+      "name": "Media with stacked text",
       "blocks": [
         {
           "type": "heading"
-        },
-        {
-          "type": "text"
-        },
-        {
-          "type": "button"
         }
       ]
     }

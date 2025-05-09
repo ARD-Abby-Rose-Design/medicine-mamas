@@ -2314,6 +2314,11 @@ product-info .loading-overlay:not(.hidden)~*,
   outline: none;
 }
 
+.heading-with-line-breaks p {
+  line-height: 0.9;
+  margin: 0;
+}
+
 .header__heading {
   margin: 0;
   line-height: 0;

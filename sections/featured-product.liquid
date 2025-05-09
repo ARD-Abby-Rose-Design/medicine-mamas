@@ -527,6 +527,9 @@
                 %}
               {% when 'included_products' %}
                 {%- render 'included-products-tabs', block: block -%}
+              {% when 'benefits_ingredients' %}
+                  {%- render 'benefits-ingredients-tabs', block: block, product: product -%}
+
             {%- endcase -%}
           {%- endfor -%}
           {%- if section.settings.show_full_details -%}
@@ -1267,6 +1270,23 @@
           "type": "product_list",
           "id": "included_products",
           "label": "Included products"
+        }
+      ]
+    },
+    {
+      "type": "benefits_ingredients",
+      "name": "Benefits & Ingredients",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "benefits",
+          "label": "Benefits content"
+        },
+        {
+          "type": "richtext",
+          "id": "ingredients",
+          "label": "Ingredients content"
         }
       ]
     },

@@ -30,11 +30,11 @@
             "bullets_to_checkmarks": false
           }
         },
-        "heading_tVJHbY": {
-          "type": "heading",
+        "heading_with_line_breaks_j4HyPr": {
+          "type": "heading_with_line_breaks",
           "settings": {
-            "heading": "For gentle, non-irritating, pH-balanced  odor control",
-            "heading_size": "hmedium"
+            "heading_with_line_breaks": "<p>For gentle, <br/>non-irritating, <br/>pH-balanced  <br/>odor control</p>",
+            "heading_with_line_breaks_size": "hmedium"
           }
         },
         "text_WfCCNY": {
@@ -60,7 +60,7 @@
       },
       "block_order": [
         "text_pKLK8n",
-        "heading_tVJHbY",
+        "heading_with_line_breaks_j4HyPr",
         "text_WfCCNY",
         "button_bCDFCN"
       ],
@@ -86,7 +86,7 @@
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "desktop_content_padding_left": 0,
-        "desktop_content_padding_right": 36,
+        "desktop_content_padding_right": 116,
         "content_layout": "no-overlap",
         "color_scheme": "inverse",
         "image_behavior": "none",
@@ -99,6 +99,18 @@
         "padding_bottom": 36
       }
     },
+    "featured_review_bJ3gVn": {
+      "type": "featured-review",
+      "name": "Featured Review",
+      "settings": {
+        "review_product": "VMAGIC® VULVA WASH",
+        "review_name": "Erika",
+        "review_title": "",
+        "review_text": "<p>“It made an<strong> immediate and positive difference</strong> <strong>with</strong> <strong>odor</strong> and general comfort.”</p>",
+        "show_desktop": false,
+        "show_mobile": true
+      }
+    },
     "media_overlay_with_text_dgCQkB": {
       "type": "media-overlay-with-text",
       "blocks": {
@@ -106,7 +118,7 @@
           "type": "heading",
           "settings": {
             "heading": "Our VMAGIC® Vulva Wash is developed specifically to support the pH of your vulva.",
-            "heading_size": "h2"
+            "heading_size": "h3"
           }
         },
         "text_zNqjzY": {
@@ -228,16 +240,30 @@
         "padding_bottom": 40
       }
     },
-    "featured_review_bJ3gVn": {
-      "type": "featured-review",
-      "name": "Featured Review",
+    "rich_text_cJnUhz": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ezU3yX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop Feminine Wash",
+            "heading_size": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ezU3yX"
+      ],
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "review_product": "VMAGIC® VULVA WASH",
-        "review_name": "Erika",
-        "review_title": "",
-        "review_text": "“It made an immediate and positive difference with odor and general comfort.”",
-        "show_desktop": false,
-        "show_mobile": true
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
       }
     },
     "featured_product_wpGEQn": {
@@ -251,8 +277,8 @@
           "type": "title",
           "settings": {
             "heading_size": "h1",
-            "heading_width": 33,
-            "show_price": false
+            "heading_width": 38,
+            "show_price": true
           }
         },
         "description_NWVMbP": {
@@ -279,6 +305,28 @@
             "show_return_policy_note": true,
             "return_policy_note": "Try 30-day risk free, love it or your money back!"
           }
+        },
+        "icon_with_text_V6FKbp": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "organic",
+            "heading_1": "Organic, hormone-free ingredients",
+            "heading_1_style": "body",
+            "icon_2": "lab_tested",
+            "heading_2": "Clinically tested",
+            "heading_2_style": "body",
+            "icon_3": "physician",
+            "heading_3": "Endorsed by physicians",
+            "heading_3_style": "body"
+          }
+        },
+        "benefits_ingredients_meYtN9": {
+          "type": "benefits_ingredients",
+          "settings": {
+            "benefits": "<p>This calming, vulva safe, natural formula washes and moisturizes intimate skin without foaming and is gentle enough for daily use.   </p><p>Fragrance, an often-unnecessary irritant, has intentionally been left out of this formula to respect the delicate nature of your  vulvar skin.</p>",
+            "ingredients": ""
+          }
         }
       },
       "block_order": [
@@ -287,7 +335,9 @@
         "description_NWVMbP",
         "checkmarks_r8mxb8",
         "custom_liquid_VexGWp",
-        "buy_buttons_7nGCEP"
+        "buy_buttons_7nGCEP",
+        "icon_with_text_V6FKbp",
+        "benefits_ingredients_meYtN9"
       ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
@@ -301,9 +351,9 @@
         "image_zoom": "hover",
         "hide_variants": false,
         "enable_video_looping": false,
-        "show_full_details": true,
+        "show_full_details": false,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 44
       }
     },
     "image_with_text_mzdCed": {
@@ -337,7 +387,7 @@
         "video_autoplay": "",
         "media_type": "video",
         "height": "adapt",
-        "media_caption": "<h4>Dr. Carolyn Moyers</h4><p><strong>Board Certified OBGYN, NAMS (North American Menopause Society) Certified Menopause Practitioner, and the founder and CEO of Sky Women’s Health.</strong></p>",
+        "media_caption": "<h3>Dr. Carolyn Moyers</h3><p><strong>Board Certified OBGYN, NAMS (North American Menopause Society) Certified Menopause Practitioner, and the founder and CEO of Sky Women’s Health.</strong></p>",
         "media_caption_color": "#ffffff",
         "media_caption_bg": "below",
         "media_caption_bg_color": "#ffffff",
@@ -398,22 +448,22 @@
         "text_card_gFntJY": {
           "type": "text_card",
           "settings": {
-            "text_card_title": "Post-workout",
-            "text_card_content": "Using a feminine wash post-workout can help you get rid of sweat and may help prevent bacterial overgrowth."
+            "text_card_title": "<strong>Post-workout</strong>",
+            "text_card_content": "<p>Using a feminine wash post-workout can help you get rid of sweat and may help prevent bacterial overgrowth.</p>"
           }
         },
         "text_card_rcBUNr": {
           "type": "text_card",
           "settings": {
-            "text_card_title": "Pre- and post-intimacy",
-            "text_card_content": "Wash before intimacy for fresh confidence; wash after to assist in removing potential traces of bodily fluids, lubricants, or contraceptives, helping prevent discomfort, odor, and irritation."
+            "text_card_title": "<strong>Pre- and post-intimacy</strong>",
+            "text_card_content": "<p>Wash before intimacy for fresh confidence; wash after to assist in removing potential traces of bodily fluids, lubricants, or contraceptives, helping prevent discomfort, odor, and irritation.</p>"
           }
         },
         "text_card_9Fw9ke": {
           "type": "text_card",
           "settings": {
-            "text_card_title": "During your menstrual cycle",
-            "text_card_content": "During menstruation, your vulva can become extremely dry and sensitive. Gently cleansing can help alleviate symptoms of dryness and sensitivity brought on by menstruation, restore moisture, gently cleanse, and balance pH."
+            "text_card_title": "<strong>During your menstrual cycle</strong>",
+            "text_card_content": "<p>During menstruation, your vulva can become extremely dry and sensitive. Gently cleansing can help alleviate symptoms of dryness and sensitivity brought on by menstruation, restore moisture, gently cleanse, and balance pH.</p>"
           }
         }
       },
@@ -430,26 +480,35 @@
         "content_alignment": "center"
       }
     },
-    "image_with_text_GeV937": {
-      "type": "image-with-text",
+    "media_with_stacked_text_T4XVBJ": {
+      "type": "media-with-stacked-text",
       "blocks": {
-        "heading_P4hVCn": {
+        "heading_di9MMm": {
           "type": "heading",
           "settings": {
             "heading": "How our wash measures up",
             "heading_size": "hmedium"
           }
+        },
+        "image_nAeaAr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/mm-stacked-text.jpg",
+            "show_desktop": true,
+            "show_mobile": false
+          }
         }
       },
       "block_order": [
-        "heading_P4hVCn"
+        "heading_di9MMm",
+        "image_nAeaAr"
       ],
-      "name": "Media with text",
+      "name": "Media with stacked text",
       "settings": {
-        "image": "shopify://shop_images/mm-vulva-wash-comparison.jpg",
+        "image": "shopify://shop_images/frame-1000004920.jpg",
         "video_autoplay": "autoplay",
         "media_type": "image",
-        "height": "adapt",
+        "height": "large",
         "media_caption": "",
         "media_caption_color": "#ffffff",
         "media_caption_bg": "none",
@@ -460,9 +519,9 @@
         "second_media_caption_bg": "none",
         "second_media_caption_bg_color": "#ffffff",
         "second_media_caption_position": "top-left",
-        "show_desktop": false,
+        "show_desktop": true,
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "desktop_content_padding_left": 36,
@@ -628,17 +687,10 @@
             "bullets_to_checkmarks": false
           }
         },
-        "heading_qcQznB": {
-          "type": "heading",
-          "settings": {
-            "heading": "Dr. Clare Bertucio",
-            "heading_size": "h3"
-          }
-        },
         "text_FDgtkw": {
           "type": "text",
           "settings": {
-            "text": "<p>Medicine Mama CEO + Chief Medical Officer</p>",
+            "text": "<h3>Dr. Clare Bertucio</h3><p>Medicine Mama CEO + Chief Medical Officer</p>",
             "text_size": "text-body-small",
             "background_style": "none",
             "background_color": "#ffffff",
@@ -649,7 +701,6 @@
       "block_order": [
         "heading_HWtBhY",
         "text_CNP4VF",
-        "heading_qcQznB",
         "text_FDgtkw"
       ],
       "name": "Media with text",
@@ -701,14 +752,15 @@
   "order": [
     "main",
     "image_with_text_zAmjDz",
+    "featured_review_bJ3gVn",
     "media_overlay_with_text_dgCQkB",
     "scrolling_marquee_fTQEHH",
-    "featured_review_bJ3gVn",
+    "rich_text_cJnUhz",
     "featured_product_wpGEQn",
     "image_with_text_mzdCed",
     "rich_text_iLptBJ",
     "text_cards_3ax9Lj",
-    "image_with_text_GeV937",
+    "media_with_stacked_text_T4XVBJ",
     "multicolumn_with_text_jDKrqy",
     "image_with_text_MqYAMb",
     "image_with_text_Y49J8F",

@@ -52,9 +52,6 @@
   }
   {% endif %}
 
-  .multicolumn-with-text .image-with-text__heading p {
-    line-height: 1;
-  }
 
   .multicolumn-with-text .multicolumn-card-spacing {
     padding-top: 0;
@@ -310,7 +307,7 @@
             {% case block.type %}
               {%- when 'heading' -%}
                 <h2
-                  class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
+                  class="image-with-text__heading heading-with-line-breaks inline-richtext {{ block.settings.heading_size }}"
                   {{ block.shopify_attributes }}
                 >
                   {{ block.settings.heading | replace: 'Body,', 'Body,<br>' }}

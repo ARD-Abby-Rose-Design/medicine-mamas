@@ -1,0 +1,146 @@
+<style>
+  .included-products-tabs {
+    font-family: var(--font-body-family);
+  }
+
+  .included-products-tabs__tabs {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1.4rem;
+  }
+
+  .included-products-tabs__tab {
+    width: 50%;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 1.6rem;
+  }
+
+  .included-products-tabs__tab--active {
+    border-color: black;
+    font-weight: bold;
+  }
+
+  .included-products-tabs__panel {
+    display: none;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .included-products-tabs__panel--active {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    visibility: visible;
+    height: auto;
+    overflow: visible;
+  }
+
+  .included-products-tabs__item {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .included-products-tabs__media {
+    flex-shrink: 0;
+  }
+
+  .included-products-tabs__media img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+
+  .included-products-tabs__content {
+    flex: 1;
+  }
+
+  .included-products-tabs__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .included-products-tabs__title {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  .included-products-tabs__size {
+    font-size: 1.4rem;
+    color: #555;
+    white-space: nowrap;
+    margin-left: 1rem;
+  }
+
+  .included-products-tabs__description,
+  .included-products-tabs__ingredients {
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
+
+  .included-products-tabs__description p,
+  .included-products-tabs__ingredients p {
+    margin: 0;
+  }
+</style>
+
+<div class="included-products-tabs" {{ section.shopify_attributes }}>
+  <div class="included-products-tabs__tabs" role="tablist">
+    <button
+      class="included-products-tabs__tab included-products-tabs__tab--active"
+      role="tab"
+      aria-selected="true"
+      aria-controls="included-products-tabs-panel-included"
+    >
+      Benefits
+    </button>
+    <button
+      class="included-products-tabs__tab"
+      role="tab"
+      aria-selected="false"
+      aria-controls="included-products-tabs-panel-ingredients"
+    >
+      Ingredients
+    </button>
+  </div>
+  <div
+    id="included-products-tabs-panel-included"
+    class="included-products-tabs__panel included-products-tabs__panel--active"
+    role="tabpanel"
+  >
+    <div class="included-products-tabs__description">{{ block.settings.benefits }}</div>
+  </div>
+
+  <div id="included-products-tabs-panel-ingredients" class="included-products-tabs__panel" role="tabpanel" hidden>
+    <div class="included-products-tabs__ingredients">
+      {% if block.settings.ingredients != blank %}
+        {{ block.settings.ingredients }}
+      {% else %}
+        {{ product.metafields.custom.key_ingredients.value }}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.included-products-tabs__tab');
+  const panels = document.querySelectorAll('.included-products-tabs__panel');
+
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach((t) => t.classList.remove('included-products-tabs__tab--active'));
+      panels.forEach((p) => p.classList.remove('included-products-tabs__panel--active'));
+      panels.forEach((p) => p.setAttribute('hidden', true));
+
+      tab.classList.add('included-products-tabs__tab--active');
+      panels[i].classList.add('included-products-tabs__panel--active');
+      panels[i].removeAttribute('hidden');
+    });
+  });
+</script>

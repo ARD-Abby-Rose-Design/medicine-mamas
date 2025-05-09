@@ -52,6 +52,9 @@
   }
   {% endif %}
 
+  .multicolumn-with-text .image-with-text__heading p {
+    line-height: 1;
+  }
 
   .multicolumn-with-text .multicolumn-card-spacing {
     padding-top: 0;
@@ -62,23 +65,35 @@
   .multicolumn-with-text .multicolumn-card__info {
     padding: 1.6rem;
   }
+
+  .multicolum-with-text .multicolumn-card__product {
+    gap: 0;
+  }
+
+  .multicolumn-with-text .buy-buttons__wrapper {
+    margin-left: 0;
+  }
+
+
+ 
+
 {%- endstyle -%}
 
 {% assign scheme1 = settings.color_schemes | first %}
 <div class="color-{{ section.settings.color_scheme }}">
   <div
-    id="ImageWithText--{{ section.id }}"
-    class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.show_mobile == false %} medium-hide small-hide{% endif %}{% if section.settings.show_desktop == false %} medium-up-hide large-up-hide{% endif %}{% if section.settings.show_desktop == false %} hide-desktop{% endif %}"
+    id="multicolumn-with-text--{{ section.id }}"
+    class="multicolumn-with-text image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.show_mobile == false %} medium-hide small-hide{% endif %}{% if section.settings.show_desktop == false %} medium-up-hide large-up-hide{% endif %}{% if section.settings.show_desktop == false %} hide-desktop{% endif %}"
   >
-    <div class="image-with-text__grid grid grid--gapless grid--1-col grid--2-col-tablet {% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %} {% if section.settings.layout_mobile == 'text_first' %} image-with-text__grid--reverse-mobile{% endif %} ">
+    <div class="multicolumn-with-text__grid image-with-text__grid grid grid--gapless grid--1-col grid--2-col-tablet {% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %} {% if section.settings.layout_mobile == 'text_first' %} image-with-text__grid--reverse-mobile{% endif %} ">
       <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
         <div
-          id="multicolumn-with-text--{{ section.id }}"
-          class="multicolumn multicolumn-with-text color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}"
+          
+          class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}"
         >
           <slider-component class="slider-mobile-gutter">
             <ul
-              class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile grid--peek{% endif %}"
+              class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down  grid--{{ section.settings.columns_desktop }}-col-desktop slider slider--tablet{% if show_mobile_slider %}  slider--mobile grid--peek{% endif %}"
               id="Slider-{{ section.id }}"
               role="list"
             >
@@ -210,7 +225,7 @@
                           {%- endif -%}
                         </div>
                         {%- if block.settings.product != blank -%}
-                          <div class="multicolumn-card__product">
+                          <div class="multicolumn-card__product" style="display: block;">
                             <div
                               id="multicolumn-card__product-card--{{ block.id }}"
                               class="multicolumn-card__product-card"
@@ -271,7 +286,7 @@
               </div>
             {%- endif -%}
           </slider-component>
-          <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
+          <div class="center{% if show_mobile_slider %} small-hide{% endif %}">
             {%- if section.settings.button_label != blank -%}
               <a
                 class="button button--primary"
@@ -516,9 +531,6 @@
 {
   "name": "Multicolumn with text",
   "class": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
   "settings": [
     {
       "type": "header",
@@ -1044,9 +1056,8 @@
       "name": "t:sections.image-with-text.blocks.heading.name",
       "settings": [
         {
-          "type": "inline_richtext",
+          "type": "richtext",
           "id": "heading",
-          "default": "Image with text",
           "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
         },
         {

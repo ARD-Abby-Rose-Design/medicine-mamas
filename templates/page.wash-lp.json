@@ -485,7 +485,7 @@
         "heading_MQLUHj": {
           "type": "heading",
           "settings": {
-            "heading": "make it part of your routine",
+            "heading": "<p>make it<br/>part of<br/>your<br/>routine</p>",
             "heading_size": "hlarge"
           }
         },

@@ -43,6 +43,9 @@
 {%- liquid 
   if template contains 'product' and product 
     assign reviews_obj = product.metafields.featured.reviews.value
+  elsif section.settings.product != blank
+    assign product = section.settings.product
+    assign reviews_obj = product.metafields.featured.reviews.value
   else
     assign reviews_obj = shop.metaobjects.featured_review.values
   endif
@@ -97,6 +100,12 @@
       "id": "title",
       "label": "Heading",
       "default": "Over 11,000 5-star Reviews"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product",
+      "info": "Only assign a product if you want to show product-specific reviews on a non-PDP page."
     },
     {
       "type": "header",

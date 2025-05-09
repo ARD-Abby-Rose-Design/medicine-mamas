@@ -45,7 +45,11 @@
     assign reviews_obj = product.metafields.featured.reviews.value
   elsif section.settings.product != blank
     assign product = section.settings.product
-    assign reviews_obj = product.metafields.featured.reviews.value
+    if product.metafields.featured.reviews.value != blank
+      assign reviews_obj = product.metafields.featured.reviews.value
+    else
+      assign reviews_obj = shop.metaobjects.featured_review.values
+    endif
   else
     assign reviews_obj = shop.metaobjects.featured_review.values
   endif

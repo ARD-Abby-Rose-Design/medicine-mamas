@@ -1,0 +1,828 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_WTwPgc": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_GQBJXQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>OVER 15,000 5-STAR REVIEWS</strong></p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "heading_cdEMaH": {
+          "type": "heading",
+          "settings": {
+            "heading": "BETTER SEX IN TWO WEEKS",
+            "heading_size": "hlarge"
+          }
+        },
+        "text_nwnVHY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>5 reasons why menopausal women everywhere are obsessed with this moisturizing duo</p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "button_9gR3Xi": {
+          "type": "button",
+          "settings": {
+            "button_label": "Find Relief & Save Up to 20%",
+            "button_link": "shopify://collections/intimacy",
+            "button_arrow": true,
+            "big_button": false,
+            "button_subtitle": ""
+          }
+        },
+        "text_MkaVME": {
+          "type": "text",
+          "settings": {
+            "text": "<p><span style=\"text-decoration:underline\">READ ON</span></p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "text_GQBJXQ",
+        "heading_cdEMaH",
+        "text_nwnVHY",
+        "button_9gR3Xi",
+        "text_MkaVME"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/mm-intimate-glide.jpg",
+        "video_autoplay": "autoplay",
+        "media_type": "image",
+        "height": "adapt",
+        "media_caption": "<p>30-Day Risk-Free Guarantee</p>",
+        "media_caption_color": "#121212",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-right",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 0,
+        "desktop_content_padding_right": 144,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "center",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_3n9iiR": {
+      "type": "image-with-text",
+      "blocks": {
+        "number_bdFxr6": {
+          "type": "number",
+          "settings": {
+            "number": "1",
+            "number_bg_color": "#121212",
+            "show_desktop": true,
+            "show_mobile": true
+          }
+        },
+        "heading_AVFiXh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bye Bye Dry: Your New Intimate Care Power Duo",
+            "heading_size": "h2"
+          }
+        },
+        "text_nUage3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>When it comes to relieving pain with intimacy, external and internal hydration work hand in hand. That’s why our bundle includes both a vulvar moisturizer and a vaginal lubricant.</p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "text_aJqaXk": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Step 1: VMAGIC® Vulva Balm</strong></p><p>Think of this as your daily defense against dryness, irritation, and itching around the vulva—the external skin that often becomes fragile and uncomfortable during menopause. This rich, organic balm soothes, protects, and deeply moisturizes to restore healthy, supple skin. </p>",
+            "text_size": "text-body",
+            "background_style": "solid",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "text_3TQRTN": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Step 2: Intimate Glide </strong></p><p>A Vaginal Lubricant with Hyaluronic Acid designed for internal use. This lubricant hydrates and cushions the vaginal walls—where dryness can cause painful friction during intimacy. Hyaluronic acid attracts and retains moisture, offering immediate comfort and long-term relief from painful penetration</p>",
+            "text_size": "text-body",
+            "background_style": "solid",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "number_bdFxr6",
+        "heading_AVFiXh",
+        "text_nUage3",
+        "text_aJqaXk",
+        "text_3TQRTN"
+      ],
+      "name": "Media with text",
+      "settings": {
+        "video": "shopify://files/videos/3cc8a5c804a7f2ce1533f8fd46c2d47aaff8d1b1.mp4",
+        "video_autoplay": "autoplay",
+        "media_type": "video",
+        "height": "adapt",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_gtPjF3": {
+      "type": "image-with-text",
+      "blocks": {
+        "number_mtVDhc": {
+          "type": "number",
+          "settings": {
+            "number": "2",
+            "number_bg_color": "#121212",
+            "show_desktop": true,
+            "show_mobile": true
+          }
+        },
+        "heading_MCLpWt": {
+          "type": "heading",
+          "settings": {
+            "heading": "Real Results, Backed by Science",
+            "heading_size": "h2"
+          }
+        },
+        "text_V6U7FY": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Painful intimacy isn’t something you just have to live with. </strong></p><p>In a clinical trial for VMAGIC® Vulva Balm, <strong>92% saw a reduction in intimate dryness after consistent 2 week use*</strong>, and <strong>79% reported immediate soothing relief*</strong><br/></p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": true
+          }
+        }
+      },
+      "block_order": [
+        "number_mtVDhc",
+        "heading_MCLpWt",
+        "text_V6U7FY"
+      ],
+      "settings": {
+        "video": "shopify://files/videos/Copy of Untitled (1080 × 1350 px) (1080 × 1920 px) (1200 x 1200 px) (1).mp4",
+        "video_autoplay": "autoplay",
+        "media_type": "video",
+        "height": "adapt",
+        "media_caption": "<p>VMAGIC® Vulva Balm</p>",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#000000",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_pikH8p": {
+      "type": "image-with-text",
+      "blocks": {
+        "number_BjyYqb": {
+          "type": "number",
+          "settings": {
+            "number": "2",
+            "number_bg_color": "#121212",
+            "show_desktop": true,
+            "show_mobile": true
+          }
+        },
+        "heading_6G78dz": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Clinically Proven Ingredients</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_F6W3Ff": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Your intimate skin is <strong>thinner, more delicate, and more sensitive</strong>—especially during and after menopause. </p><p>That’s why we skip synthetic chemicals and fillers, and instead use <strong>pure, organic ingredients</strong> specifically chosen to nourish, protect, and soothe your most vulnerable skin.</p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "number_BjyYqb",
+        "heading_6G78dz",
+        "text_F6W3Ff"
+      ],
+      "disabled": true,
+      "settings": {
+        "video": "shopify://files/videos/3cc8a5c804a7f2ce1533f8fd46c2d47aaff8d1b1.mp4",
+        "video_autoplay": "autoplay",
+        "media_type": "video",
+        "height": "adapt",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#000000",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_FhVPcf": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Untitled_design_7b736bda-ba4c-4c46-9c76-0b3873e78c25.jpg",
+        "image_2": "shopify://shop_images/Untitled_design_7b736bda-ba4c-4c46-9c76-0b3873e78c25.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "show_desktop": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "media_toggle_with_text_nAtrwd": {
+      "type": "media-flip-with-text",
+      "blocks": {
+        "number_q6c7CA": {
+          "type": "number",
+          "settings": {
+            "number": "3",
+            "number_bg_color": "#121212",
+            "show_desktop": true,
+            "show_mobile": true
+          }
+        },
+        "heading_74NRah": {
+          "type": "heading",
+          "settings": {
+            "heading": "Clinically Proven Ingredients",
+            "heading_size": "h2"
+          }
+        },
+        "text_nArdeU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our products are packed with <strong>organic, non-synthetic ingredients</strong> to <strong>soothe delicate skin and support skin elasticity</strong>.</p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "text_hadeMA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We know that the tissue surrounding the vulva is very sensitive, and our feminine care products are gentle and help protect against irritation.</p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "number_q6c7CA",
+        "heading_74NRah",
+        "text_nArdeU",
+        "text_hadeMA"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/HONEY_1.jpg",
+        "media_type": "image",
+        "button_text": "VMAGIC®",
+        "flip_image": "shopify://shop_images/Copy_of_HONEY_1.jpg",
+        "flip_media_type": "image",
+        "flip_button_text": "INTIMATE GLIDE",
+        "show_desktop": true,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "text_first",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_R3nh6Y": {
+      "type": "image-with-text",
+      "blocks": {
+        "number_JJwz6d": {
+          "type": "number",
+          "settings": {
+            "number": "4",
+            "number_bg_color": "#121212",
+            "show_desktop": true,
+            "show_mobile": true
+          }
+        },
+        "heading_Aripi3": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Trusted by Doctors. Loved by Women.</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_Q7bnWr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>When it comes to intimate health, <strong>what your doctor recommends matters</strong>—and we’re proud to be the <strong>#1 doctor-recommended vulvar moisturizer</strong> on the market.</p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "number_JJwz6d",
+        "heading_Aripi3",
+        "text_Q7bnWr"
+      ],
+      "settings": {
+        "video": "shopify://files/videos/Honey + Propolis (1).mp4",
+        "video_autoplay": "autoplay",
+        "media_type": "video",
+        "height": "adapt",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#000000",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_jJXDdB": {
+      "type": "image-banner",
+      "settings": {
+        "image_2": "shopify://shop_images/Others_1200_x_1200_px.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "show_desktop": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "image_with_text_K74Aig": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_pTaVAU": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>You’re Not Alone—And You Don’t Have to Live with the Pain</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_84AgDH": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Over 400,000 women</strong> have trusted us to help them feel like themselves again—comfortable, confident, and finally enjoying intimacy without pain. </p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "review_Pi66g4": {
+          "type": "review",
+          "settings": {
+            "review_product": "Inside & Out: Hydration Duo",
+            "review_name": "Sandy",
+            "review_title": "Finally feel normal again!",
+            "review_text": "I like a lot of other women had no idea that the pain I was feeling during intercourse was due to menopause. I wasn’t sure what was going on other that the fact that it became so painful I didn’t want to do it anymore and my poor husband didn’t want to touch me for fear he would hurt me. These products were a game changer. I have been using for a week and it worked! I have finally been able to do the deed again and felt no pain, no tearing!",
+            "show_desktop": true,
+            "show_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_pTaVAU",
+        "text_84AgDH",
+        "review_Pi66g4"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Untitled_design_1.jpg",
+        "video_autoplay": "autoplay",
+        "media_type": "image",
+        "height": "adapt",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#000000",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": false,
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_GbjdEL": {
+      "type": "rich-text",
+      "blocks": {
+        "number_8hmQt7": {
+          "type": "number",
+          "settings": {
+            "number": "5",
+            "margin_bottom": 0,
+            "number_bg_color": "#121212",
+            "show_desktop": true,
+            "show_mobile": true
+          }
+        },
+        "heading_tH8kkn": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>You’re Not Alone—And You Don’t Have to Live with the Pain</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_QbhCh8": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Over 400,000 women</strong> have trusted us to help them feel like themselves again—comfortable, confident, and finally enjoying intimacy without pain.</p>",
+            "text_style": "text-body-large"
+          }
+        }
+      },
+      "block_order": [
+        "number_8hmQt7",
+        "heading_tH8kkn",
+        "text_QbhCh8"
+      ],
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": false,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 64,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_tn3UB9": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n\n.oke-reviewCard {\nborder-radius: 10px;\nbackground: white;\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_a9LjTQ": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "featured_reviews_QHKyFL": {
+      "type": "featured-reviews",
+      "name": "Featured reviews",
+      "settings": {
+        "color_scheme": "inverse",
+        "show_line_separator": true,
+        "title": "",
+        "product": "intimate-moisturizer-duo",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_yieUGc": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_3NQYNM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop Hydration and Relief",
+            "heading_size": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3NQYNM"
+      ],
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 0
+      }
+    },
+    "featured_product_7Dexwj": {
+      "type": "featured-product",
+      "blocks": {
+        "rating_DnnC3J": {
+          "type": "rating",
+          "settings": {}
+        },
+        "title_TNYAey": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1",
+            "heading_width": 60,
+            "show_price": true
+          }
+        },
+        "text_KJTaJE": {
+          "type": "text",
+          "settings": {
+            "text": "Helps bring soothing, immediate relief on your (peri)menopausal journey.",
+            "text_style": "body",
+            "text_alignment": "left"
+          }
+        },
+        "rich_text_pWd6ac": {
+          "type": "rich_text",
+          "settings": {
+            "text": "<p><strong>Includes:</strong></p><ul><li>1x VMAGIC®  Vulva Balm 2 oz</li><li>1x Intimate Clide 4 oz</li></ul>",
+            "text_alignment": "left"
+          }
+        },
+        "checkmarks_Wed9dM": {
+          "type": "checkmarks",
+          "settings": {}
+        },
+        "custom_liquid_WaMLkG": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"custom-recharge\"></div>"
+          }
+        },
+        "buy_buttons_dgAxVq": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "button_style": "red",
+            "show_return_policy_note": true,
+            "return_policy_note": "Try 30-day risk free, love it or your money back!"
+          }
+        },
+        "icon_with_text_RTM9Vn": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "organic",
+            "heading_1": "Organic, hormone-free ingredients",
+            "heading_1_style": "body",
+            "icon_2": "lab_tested",
+            "heading_2": "Clinically tested",
+            "heading_2_style": "body",
+            "icon_3": "lab_tested",
+            "heading_3": "Endorsed by physicians",
+            "heading_3_style": "body"
+          }
+        },
+        "included_products_UjwYqn": {
+          "type": "included_products",
+          "settings": {
+            "included_products": [
+              "vmagic-vulvar-balm-skincare-jar",
+              "organic-lubricant-intimate-moisturizer"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "rating_DnnC3J",
+        "title_TNYAey",
+        "text_KJTaJE",
+        "rich_text_pWd6ac",
+        "checkmarks_Wed9dM",
+        "custom_liquid_WaMLkG",
+        "buy_buttons_dgAxVq",
+        "icon_with_text_RTM9Vn",
+        "included_products_UjwYqn"
+      ],
+      "settings": {
+        "product": "intimate-moisturizer-duo",
+        "color_scheme": "inverse",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "show_full_details": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "faq_kdwVd8": {
+      "type": "faq",
+      "settings": {
+        "heading": "PAUSING FOR ANY QUESTIONS!",
+        "color_scheme": "inverse",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_WTwPgc",
+    "image_with_text_3n9iiR",
+    "image_with_text_gtPjF3",
+    "image_with_text_pikH8p",
+    "image_banner_FhVPcf",
+    "media_toggle_with_text_nAtrwd",
+    "image_with_text_R3nh6Y",
+    "image_banner_jJXDdB",
+    "image_with_text_K74Aig",
+    "rich_text_GbjdEL",
+    "custom_liquid_tn3UB9",
+    "rich_text_a9LjTQ",
+    "featured_reviews_QHKyFL",
+    "rich_text_yieUGc",
+    "featured_product_7Dexwj",
+    "faq_kdwVd8"
+  ]
+}

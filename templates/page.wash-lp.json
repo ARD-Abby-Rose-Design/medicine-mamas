@@ -34,7 +34,7 @@
           "type": "heading_with_line_breaks",
           "settings": {
             "heading_with_line_breaks": "<p>For gentle, <br/>non-irritating, <br/>pH-balanced  <br/>odor control</p>",
-            "heading_with_line_breaks_size": "hmedium"
+            "heading_with_line_breaks_size": "hlarge"
           }
         },
         "text_WfCCNY": {
@@ -118,7 +118,7 @@
           "type": "heading",
           "settings": {
             "heading": "Our VMAGIC® Vulva Wash is developed specifically to support the pH of your vulva.",
-            "heading_size": "h3"
+            "heading_size": "h2"
           }
         },
         "text_zNqjzY": {
@@ -189,7 +189,7 @@
         "show_desktop": true,
         "desktop_image_width": "medium",
         "layout": "image_first",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "desktop_content_padding_left": 36,
         "desktop_content_padding_right": 36,
@@ -247,7 +247,7 @@
           "type": "heading",
           "settings": {
             "heading": "Shop Feminine Wash",
-            "heading_size": "h3"
+            "heading_size": "h2"
           }
         }
       },
@@ -370,7 +370,7 @@
           "type": "text",
           "settings": {
             "text": "<p>You’re right, the Vagina is like a “self cleaning oven.” <br/><strong>However, the Vulva is a different story.</strong></p><p><strong>Our gentle, fragrance free cleanser that rejuvenates  and nourishes skin, rinses residue-free and helps support the pH of your vulva.</strong></p>",
-            "text_size": "text-body",
+            "text_size": "text-body-large",
             "background_style": "solid",
             "background_color": "#ffffff",
             "bullets_to_checkmarks": false

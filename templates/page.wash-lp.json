@@ -674,14 +674,14 @@
           "type": "heading",
           "settings": {
             "heading": "Meet the Medicine Mama herself",
-            "heading_size": "hmedium"
+            "heading_size": "hlarge"
           }
         },
         "text_CNP4VF": {
           "type": "text",
           "settings": {
             "text": "<p>“We want to provide women with solutions for the changes they experience in their vulvar skin throughout their lifetime. No one should ever feel embarrassed to talk about common vulvar symptoms, such as itching, stinging, or irritation, or feel they need to suffer in silence, when solutions are readily available.”</p>",
-            "text_size": "text-body",
+            "text_size": "text-body-large",
             "background_style": "solid",
             "background_color": "#ffffff",
             "bullets_to_checkmarks": false
@@ -691,7 +691,7 @@
           "type": "text",
           "settings": {
             "text": "<h3>Dr. Clare Bertucio</h3><p>Medicine Mama CEO + Chief Medical Officer</p>",
-            "text_size": "text-body-small",
+            "text_size": "text-body",
             "background_style": "none",
             "background_color": "#ffffff",
             "bullets_to_checkmarks": false

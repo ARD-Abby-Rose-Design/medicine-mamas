@@ -374,11 +374,11 @@
           "type": "column",
           "settings": {
             "video": "shopify://files/videos/Untitled design.mp4",
-            "title": "instagram_username",
+            "title": "@corryntimm",
             "text": "<p>It is super soothing and offers a comfortable layer of moisture for any kind of discomfort. Probably my favorite vulvar moisturizing product I have ever used. </p>",
             "link_label": "",
             "link": "",
-            "product": "vmagic-feminine-wash",
+            "product": "vmagic-grooming-polish",
             "product_badge_color": "#fcf7f0",
             "product_benefits": "Helped with:"
           }
@@ -388,11 +388,11 @@
           "settings": {
             "image": "shopify://shop_images/Screenshot_2025-05-13_at_11.29.24_AM.png",
             "video": "shopify://files/videos/4.mp4",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "@indiabatson",
+            "text": "<p>\"I love how easy it is to apply, and super hydrating to prevent any irritation post-shave.\"</p>",
             "link_label": "",
             "link": "",
-            "product": "vmagic-grooming-polish",
+            "product": "vmagic-feminine-lips-stick",
             "product_badge_color": "#fcf7f0",
             "product_benefits": "Helped with:"
           }
@@ -413,9 +413,9 @@
         "column_xWXkDP": {
           "type": "column",
           "settings": {
-            "video": "shopify://files/videos/2.mp4",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/Screenshot_2025-05-13_at_12.18.38_PM.png",
+            "title": "@lifestyle_wifestlye",
+            "text": "<p>\"It's made with incredible ingredients -- just like we have a facial skincare routine, why shouldn't we have a routine for most sensitive skin.\"</p>",
             "link_label": "",
             "link": "",
             "product": "vmagic-feminine-lips-stick",

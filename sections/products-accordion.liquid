@@ -42,7 +42,7 @@
 
     .products-accordion__header {
       width: 100%;
-      background: var(--gradient-background);
+       background: #fff;
       text-align: left;
       padding: 2rem 2.4rem;
       font-size: 1.6rem;
@@ -52,10 +52,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
-
-    .products-accordion__item.active .products-accordion__header {
-      background: #fff;
     }
 
     .products-accordion__icon svg{
@@ -131,13 +127,60 @@
         visibility: visible;
         }
 
-   
+   @media screen and (max-width: 749px) {
+      
+    .products-accordion__title {
+      font-size: 2.4rem;
+    }
+    }
 
     @media screen and (min-width: 750px) {
       .products-accordion__image {
         margin-bottom: 1rem;
       }
+
     }
+
+    @media screen and (min-width: 750px) and (max-width: 1024px) {
+
+     .products-accordion__body-title {
+      max-width: 85%;
+     }
+      
+      .products-accordion__item.active .products-accordion__body-content {
+        display: flex;
+        flex-direction: row;
+        gap: 2.4rem;
+        overflow: hidden;
+      }
+
+      .products-accordion__review {
+        order: 1;
+        flex: 1 1 0;
+      }
+
+      .products-accordion__image {
+        order: 2;
+        flex: 1 1 0;
+        margin-bottom: 0;
+      }
+
+      .products-accordion__image img {
+        aspect-ratio:  1 / 1;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+
+      .products-accordion__list.medium-hide{
+        display: none;
+      }
+      .products-accordion__image.large-up-hide {
+        display: block !important;
+      }
+    }
+
 {%- endstyle -%}
 
 <div
@@ -166,9 +209,10 @@
           </button>
           <div class="products-accordion__body">
             {%- assign description = block.settings.product.description | split: 'Ingredients' | first | strip_html -%}
-            <div class="h6" >{{ description }}</div>
+            <div class="products-accordion__body-title h6" >{{ description }}</div>
+            <div class="products-accordion__body-content">
             {% if block.settings.image != blank %}
-              <div class="products-accordion__image medium-hide large-up-hide">
+              <div class="products-accordion__image large-up-hide">
                 {{ block.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy' }}
               </div>
             {% endif %}
@@ -182,11 +226,12 @@
                 <div class="review-text">{{ block.settings.review_text }}</div>
               </div>
             {% endif %}
+            </div>
           </div>
         </div>
       {% endfor %}
     </div>
-    <div class="products-accordion__list  grid__item small-hide">
+    <div class="products-accordion__list  grid__item small-hide medium-hide">
       {% for block in section.blocks %}
         {% if block.settings.image != blank %}
           <div

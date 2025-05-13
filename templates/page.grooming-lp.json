@@ -373,7 +373,7 @@
         "column_AF4BTU": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_85_3325ca91-5575-40cf-9d29-23bc85fb5d68.jpg",
+            "video": "shopify://files/videos/Untitled design.mp4",
             "title": "instagram_username",
             "text": "<p>It is super soothing and offers a comfortable layer of moisture for any kind of discomfort. Probably my favorite vulvar moisturizing product I have ever used. </p>",
             "link_label": "",
@@ -386,7 +386,8 @@
         "column_Ke6XAn": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_85_fafcfdfd-fd7b-4bd2-a93d-6cb0639ffe90.jpg",
+            "image": "shopify://shop_images/Screenshot_2025-05-13_at_11.29.24_AM.png",
+            "video": "shopify://files/videos/4.mp4",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
@@ -399,20 +400,20 @@
         "column_rx4dwB": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_85_3325ca91-5575-40cf-9d29-23bc85fb5d68.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "video": "shopify://files/videos/3.mp4",
+            "title": "@allisonhoeller",
+            "text": "<p>\"My all time favorite exfoliator for down there. The exfoliating sugars are so tiny and gentle on skin\" </p>",
             "link_label": "",
             "link": "",
-            "product": "vmagic-feminine-wash",
+            "product": "vmagic-grooming-polish",
             "product_badge_color": "#fcf7f0",
-            "product_benefits": "Helped with:"
+            "product_benefits": "Helped with: Ingrown Hairs"
           }
         },
         "column_xWXkDP": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_85_fafcfdfd-fd7b-4bd2-a93d-6cb0639ffe90.jpg",
+            "video": "shopify://files/videos/2.mp4",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
@@ -422,17 +423,18 @@
             "product_benefits": "Helped with:"
           }
         },
-        "column_MhJYrt": {
+        "column_HA7y7A": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_85_3325ca91-5575-40cf-9d29-23bc85fb5d68.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/Screenshot_2025-05-13_at_11.31.39_AM.png",
+            "video": "shopify://files/videos/5.mp4",
+            "title": "@allisonhoeller",
+            "text": "<p>\"This unscented wash, cleanses, and it supports a healthy pH which is the #1 priority\"</p>",
             "link_label": "",
             "link": "",
-            "product": "vmagic-grooming-polish",
+            "product": "vmagic-feminine-wash",
             "product_badge_color": "#fcf7f0",
-            "product_benefits": "Helped with:"
+            "product_benefits": "Helped with: pH Balance"
           }
         }
       },
@@ -441,7 +443,7 @@
         "column_Ke6XAn",
         "column_rx4dwB",
         "column_xWXkDP",
-        "column_MhJYrt"
+        "column_HA7y7A"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {

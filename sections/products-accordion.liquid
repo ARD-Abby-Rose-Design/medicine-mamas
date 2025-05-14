@@ -1,252 +1,76 @@
-{%- style -%}
-      .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-      }
+{{ 'component-products-accordion.css' | asset_url | stylesheet_tag }}
 
-      @media screen and (min-width: 750px) {
-      .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
-      }
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-    .products-accordion.grid {
-        align-items: stretch;
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
     }
-
-    .products-accordion__list.grid__item {
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        flex: 1 1 0;
-    }
-
-    .products-accordion__list {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 2.4rem;
-    }
-
-    .products-accordion__item {
-      border: 1px solid #C7C7C7;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .products-accordion__item.active {
-      border: 1px solid #000;
-    }
-
-    .products-accordion__header {
-      width: 100%;
-       background: #fff;
-      text-align: left;
-      padding: 2rem 2.4rem;
-      font-size: 1.6rem;
-      font-weight: 600;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .products-accordion__icon svg{
-      transform: rotate(90deg);
-      transition: transform 0.4s ease;
-    }
-    .products-accordion__item.active .products-accordion__icon svg {
-      transform: rotate(270deg);
-    }
-
-    .products-accordion__body {
-      display: none;
-      padding: 0 2.4rem 2rem 2.4rem;
-      background: #fff;
-    }
-
-    .products-accordion__body .h6 {
-      font-size: 1.8rem
-    }
-
-    .products-accordion__item.active .products-accordion__body {
-      display: flex;
-        flex-direction: column;
-        gap: 2.4rem;
-    }
-
-    .products-accordion__body img {
-      aspect-ratio: 1.5 / 1;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    .products-accordion__review {
-        padding: 1.2rem 1.4rem;
-        background: var(--gradient-background);
-        border-radius: 20px;
-    }
-
-    .products-accordion__review strong {
-      font-weight: bold;
-      display: block;
-      margin: 0.4rem 0;
-    }
-
-    .products-accordion__review .review-title {
-      font-weight: 600;
-    }
-
-  
-
-    .products-accordion__list.grid__item:has(.products-accordion__image) {
-        position: relative;
-        width: 100%;
-        height: auto;
-        overflow: hidden;    
-        }
-
-    .products-accordion__list > .products-accordion__image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        object-fit: cover;
-        width: 100%;
-        height: auto;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.4s ease;
-        }
-
-        .products-accordion__list > .products-accordion__image.active {
-        opacity: 1;
-        visibility: visible;
-        }
-
-   @media screen and (max-width: 749px) {
-      
-    .products-accordion__title {
-      font-size: 2.4rem;
-    }
-    }
-
-    @media screen and (min-width: 750px) {
-      .products-accordion__image {
-        margin-bottom: 1rem;
-      }
-
-    }
-
-    @media screen and (min-width: 750px) and (max-width: 1024px) {
-
-     .products-accordion__body-title {
-      max-width: 85%;
-     }
-      
-      .products-accordion__item.active .products-accordion__body-content {
-        display: flex;
-        flex-direction: row;
-        gap: 2.4rem;
-        overflow: hidden;
-      }
-
-      .products-accordion__review {
-        order: 1;
-        flex: 1 1 0;
-      }
-
-      .products-accordion__image {
-        order: 2;
-        flex: 1 1 0;
-        margin-bottom: 0;
-      }
-
-      .products-accordion__image img {
-        aspect-ratio:  1 / 1;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-      }
-
-
-      .products-accordion__list.medium-hide{
-        display: none;
-      }
-      .products-accordion__image.large-up-hide {
-        display: block !important;
-      }
-    }
+  }
 
 {%- endstyle -%}
 
-<div
-  class="color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}"
->
-  <div
-    class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-  >
-  <div class="products-accordion grid grid--1-col grid--2-col-tablet">
-    <div class="products-accordion__list grid__item">
-      {% for block in section.blocks %}
-        <div
-          class="products-accordion__item {% if forloop.index == 1 %}active{% endif %}"
-          {% if forloop.index == 1 %}
+<div class="color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
+  <div class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div class="products-accordion grid grid--1-col grid--2-col-tablet">
+      <div class="products-accordion__list grid__item">
+        {% for block in section.blocks %}
+          <div
+            class="products-accordion__item {% if forloop.index == 1 %}active{% endif %}"
+            {% if forloop.index == 1 %}
             aria-expanded="true"
-          {% else %}
+            {% else %}
             aria-expanded="false"
-          {% endif %}
-          data-index="{{ forloop.index }}"
-        >
-          <button class="products-accordion__header" type="button">
-            <span class="products-accordion__title h3">
-              {{- block.settings.product.title | default: 'Product title' -}}
-            </span>
-            <span class="products-accordion__icon">{%- render 'icon-chevron'-%}</span>
-          </button>
-          <div class="products-accordion__body">
-            {%- assign description = block.settings.product.description | split: 'Ingredients' | first | strip_html -%}
-            <div class="products-accordion__body-title h6" >{{ description }}</div>
-            <div class="products-accordion__body-content">
-            {% if block.settings.image != blank %}
-              <div class="products-accordion__image large-up-hide">
-                {{ block.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy' }}
-              </div>
             {% endif %}
-            {% if block.settings.show_review %}
-              <div class="products-accordion__review">
-                <div>★★★★★</div>
-                <strong>{{ block.settings.product.title | upcase }}</strong>
-                <div>✓ VERIFIED REVIEW</div>
-                <div class="reviewer-name">{{ block.settings.reviewer_name }}</div>
-                <div class="review-title">{{ block.settings.review_title }}</div>
-                <div class="review-text">{{ block.settings.review_text }}</div>
+            data-index="{{ forloop.index }}">
+            <button class="products-accordion__header" type="button">
+              <span class="products-accordion__title h3">
+                {{- block.settings.product.title | default: 'Product title' -}}
+              </span>
+              <span class="products-accordion__icon">{%- render 'icon-chevron' -%}</span>
+            </button>
+            <div class="products-accordion__body">
+              {%- assign description = block.settings.product.description | split: 'Ingredients' | first | strip_html
+              -%}
+              <div class="products-accordion__body-title h6">{{ description }}</div>
+              <div class="products-accordion__body-content">
+                {% if block.settings.image != blank %}
+                  <div class="products-accordion__image large-up-hide">
+                    {{ block.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy' }}
+                  </div>
+                {% endif %}
+                {% if block.settings.show_review %}
+                  <div class="products-accordion__review">
+                    <div>★★★★★</div>
+                    <strong>{{ block.settings.product.title | upcase }}</strong>
+                    <div>✓ VERIFIED REVIEW</div>
+                    <div class="reviewer-name">{{ block.settings.reviewer_name }}</div>
+                    <div class="review-title">{{ block.settings.review_title }}</div>
+                    <div class="review-text">{{ block.settings.review_text }}</div>
+                  </div>
+                {% endif %}
               </div>
-            {% endif %}
             </div>
           </div>
-        </div>
-      {% endfor %}
-    </div>
-    <div class="products-accordion__list  grid__item small-hide medium-hide">
-      {% for block in section.blocks %}
-        {% if block.settings.image != blank %}
-          <div
-            class="products-accordion__image {% if forloop.index == 1 %}active{% endif %}"
-            data-index="{{ forloop.index }}"
-          >
-            {{
-              block.settings.image
-              | image_url: width: 1400
-              | image_tag: loading: 'lazy', style: 'width: 100%; height: auto; object-fit: cover;'
-            }}
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
+        {% endfor %}
+      </div>
+      <div class="products-accordion__list grid__item small-hide medium-hide">
+        {% for block in section.blocks %}
+          {% if block.settings.image != blank %}
+            <div class="products-accordion__image {% if forloop.index == 1 %}active{% endif %}" data-index="{{ forloop.index }}">
+              {{
+                block.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', style: 'width: 100%; height: auto; object-fit: cover;'
+              }}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
@@ -269,7 +93,9 @@
         item.classList.add('active');
 
         const index = item.dataset.index;
-        const matchingImage = document.querySelector(`.products-accordion__list > .products-accordion__image[data-index="${index}"]`);
+        const matchingImage = document.querySelector(
+          `.products-accordion__list > .products-accordion__image[data-index="${index}"]`
+        );
         if (matchingImage) {
           matchingImage.classList.add('active');
         }
@@ -284,104 +110,96 @@
 </script>
 
 {% schema %}
-{
-  "name": "Products accordion",
-  "settings": [
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "background-1"
-    },
-    {
-      "type": "select",
-      "id": "background_style",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:sections.multicolumn.settings.background_style.options__1.label"
-        },
-        {
-          "value": "primary",
-          "label": "t:sections.multicolumn.settings.background_style.options__2.label"
-        }
-      ],
-      "default": "primary",
-      "label": "t:sections.multicolumn.settings.background_style.label"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
-    }
-  ],
-  "blocks": [
-    {
-      "type": "product",
-      "name": "Product",
-      "settings": [
-        {
-          "type": "product",
-          "id": "product",
-          "label": "Product"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
-        },
-        {
-          "type": "header",
-          "content": "Review"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_review",
-          "label": "Show review",
-          "default": true
-        },
-        {
-          "type": "richtext",
-          "id": "reviewer_name",
-          "label": "Reviewer name",
-          "default": "<p>John Doe</p>"
-        },
-        {
-          "type": "inline_richtext",
-          "id": "review_title",
-          "label": "Review title",
-          "default": "Great product!"
-        },
-        {
-          "type": "richtext",
-          "id": "review_text",
-          "label": "Review text",
-          "default": "<p>This is a great product!</p>"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Products accordion",
-      "category": "Custom"
-    }
-  ]
-}
+  {
+    "name": "Products accordion",
+    "settings": [
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "background-1"
+      }, {
+        "type": "select",
+        "id": "background_style",
+        "options": [
+          {
+            "value": "none",
+            "label": "t:sections.multicolumn.settings.background_style.options__1.label"
+          }, {
+            "value": "primary",
+            "label": "t:sections.multicolumn.settings.background_style.options__2.label"
+          }
+        ],
+        "default": "primary",
+        "label": "t:sections.multicolumn.settings.background_style.label"
+      }, {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+    ],
+    "blocks": [
+      {
+        "type": "product",
+        "name": "Product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "header",
+            "content": "Review"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_review",
+            "label": "Show review",
+            "default": true
+          }, {
+            "type": "richtext",
+            "id": "reviewer_name",
+            "label": "Reviewer name",
+            "default": "<p>John Doe</p>"
+          }, {
+            "type": "inline_richtext",
+            "id": "review_title",
+            "label": "Review title",
+            "default": "Great product!"
+          }, {
+            "type": "richtext",
+            "id": "review_text",
+            "label": "Review text",
+            "default": "<p>This is a great product!</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Products accordion",
+        "category": "Custom"
+      }
+    ]
+  }
 {% endschema %}
- 

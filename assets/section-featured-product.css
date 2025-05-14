@@ -15,9 +15,7 @@
   width: 100%;
 }
 
-.featured-product .product__media-item:not(:first-child) {
-  display: none;
-}
+
 
 .featured-product .placeholder-svg {
   display: block;
@@ -89,6 +87,14 @@
 }
 
 @media screen and (min-width: 750px) {
+
+  .featured-product .product__media-item {
+  display: none;
+}
+
+.featured-product .product__media-item.is-active {
+  display: block;
+}
 
   .featured-product .product__title--with-price  {
     grid-template-columns: 4fr 1fr;

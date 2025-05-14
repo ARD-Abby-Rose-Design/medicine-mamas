@@ -87,9 +87,11 @@ if (!customElements.get('media-gallery')) {
       }
 
       playActiveMedia(activeItem) {
-        window.pauseAllMedia();
         const deferredMedia = activeItem.querySelector('.deferred-media');
-        if (deferredMedia) deferredMedia.loadContent(false);
+        if (deferredMedia) {
+          window.pauseAllMedia();
+          deferredMedia.loadContent(false);
+        }
       }
 
       preventStickyHeader() {

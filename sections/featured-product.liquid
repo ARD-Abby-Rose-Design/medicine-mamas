@@ -1,21 +1,16 @@
-{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
 {{ 'section-featured-product.css' | asset_url | stylesheet_tag }}
+  {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+  {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+
 {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
-{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+  {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
   assign product = section.settings.product
-
-  if section.settings.media_size == 'large'
-    assign media_width = 0.65
-  elsif section.settings.media_size == 'medium'
-    assign media_width = 0.55
-  elsif section.settings.media_size == 'small'
-    assign media_width = 0.45
-  endif
+  assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'
 -%}
 
 {%- style -%}
@@ -34,6 +29,7 @@
 {%- endstyle -%}
 
 <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
+
 
 {% comment %} TODO: assign `product.selected_or_first_available_variant` to variable and replace usage to reduce verbosity {% endcomment %}
 
@@ -58,6 +54,7 @@
 {%- endif -%}
 
 <section
+    id="MainProduct-{{ section.id }}"
   data-section="{{ section.id }}"
   class="color-{{ section.settings.color_scheme }} {% if section.settings.secondary_background %}background-secondary{% else %}gradient{% endif %}"
 >
@@ -67,82 +64,9 @@
       class="featured-product product product--{{ section.settings.media_size }} grid grid--1-col gradient color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 or section.settings.product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %}"
     >
       <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
-        <media-gallery
-          id="MediaGallery-{{ section.id }}"
-          role="region"
-          aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
-          data-desktop-layout="stacked"
-        >
-          <div
-            id="GalleryViewer-{{ section.id }}"
-            class="product__media-list{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
-          >
-            {%- if section.settings.product != blank -%}
-              {%- if product.selected_or_first_available_variant.featured_media != null -%}
-                {%- assign media = product.selected_or_first_available_variant.featured_media -%}
-                <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
-                  {% render 'product-thumbnail',
-                    media: media,
-                    position: 'featured',
-                    loop: section.settings.enable_video_looping,
-                    modal_id: section.id,
-                    xr_button: false,
-                    media_width: media_width,
-                    media_fit: section.settings.media_fit,
-                    constrain_to_viewport: section.settings.constrain_to_viewport
-                  %}
-                </div>
-              {%- endif -%}
-              {%- liquid
-                assign media_to_render = product.featured_media.id
-                for variant in product.variants
-                  assign media_to_render = media_to_render | append: variant.featured_media.id | append: ' '
-                endfor
-              -%}
-              {%- for media in product.media -%}
-                {%- if media_to_render contains media.id
-                  and media.id != product.selected_or_first_available_variant.featured_media.id
-                -%}
-                  <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
-                    {% render 'product-thumbnail',
-                      media: media,
-                      position: forloop.index,
-                      loop: section.settings.enable_video_looping,
-                      modal_id: section.id,
-                      xr_button: false,
-                      media_width: media_width,
-                      media_fit: section.settings.media_fit,
-                      constrain_to_viewport: section.settings.constrain_to_viewport
-                    %}
-                  </div>
-                {%- endif -%}
-              {%- endfor -%}
-            {%- else -%}
-              <div class="product__media-item">
-                <div
-                  class="product-media-container global-media-settings gradient{% if section.settings.constrain_to_viewport %} constrain-height{% endif %}"
-                  style="--ratio: 1.0; --preview-ratio: 1.0;"
-                >
-                  {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-                </div>
-              </div>
-            {%- endif -%}
-          </div>
-          {%- if first_3d_model -%}
-            <button
-              class="button button--full-width product__xr-button"
-              type="button"
-              aria-label="{{ 'products.product.xr_button_label' | t }}"
-              data-shopify-xr
-              data-shopify-model3d-id="{{ first_3d_model.id }}"
-              data-shopify-title="{{ product.title | escape }}"
-              data-shopify-xr-hidden
-            >
-              {% render 'icon-3d-model' %}
-              {{ 'products.product.xr_button' | t }}
-            </button>
-          {%- endif -%}
-        </media-gallery>
+        {% if section.settings.product != blank %}
+          {% render 'product-media-gallery', product: product, variant_images: variant_images %}
+        {% endif %}
       </div>
       <div class="product__info-wrapper grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <product-info
@@ -528,8 +452,7 @@
               {% when 'included_products' %}
                 {%- render 'included-products-tabs', block: block -%}
               {% when 'benefits_ingredients' %}
-                  {%- render 'benefits-ingredients-tabs', block: block, product: product -%}
-
+                {%- render 'benefits-ingredients-tabs', block: block, product: product -%}
             {%- endcase -%}
           {%- endfor -%}
           {%- if section.settings.show_full_details -%}
@@ -550,80 +473,12 @@
       {%- if section.settings.media_position == 'right' -%}
         <div class="grid__item product__media-wrapper small-hide">
           {%- if section.settings.product != blank -%}
-            <media-gallery
-              id="MediaGallery-{{ section.id }}-right"
-              role="region"
-              aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
-              data-desktop-layout="stacked"
-            >
-              <div
-                id="GalleryViewer-{{ section.id }}-right"
-                class="product__media-list{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
-              >
-                {%- if product.selected_or_first_available_variant.featured_media != null -%}
-                  {%- assign media = product.selected_or_first_available_variant.featured_media -%}
-                  <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
-                    {% render 'product-thumbnail',
-                      media: media,
-                      position: 'featured',
-                      loop: section.settings.enable_video_looping,
-                      modal_id: section.id,
-                      xr_button: false,
-                      media_width: media_width,
-                      media_fit: section.settings.media_fit,
-                      constrain_to_viewport: section.settings.constrain_to_viewport
-                    %}
-                  </div>
-                {%- endif -%}
-                {%- for media in product.media -%}
-                  {%- if media_to_render contains media.id
-                    and media.id != product.selected_or_first_available_variant.featured_media.id
-                  -%}
-                    <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
-                      {% render 'product-thumbnail',
-                        media: media,
-                        position: forloop.index,
-                        loop: section.settings.enable_video_looping,
-                        modal_id: section.id,
-                        xr_button: false,
-                        media_width: media_width,
-                        media_fit: section.settings.media_fit,
-                        constrain_to_viewport: section.settings.constrain_to_viewport
-                      %}
-                    </div>
-                  {%- endif -%}
-                {%- endfor -%}
-              </div>
-              {%- if first_3d_model -%}
-                <button
-                  class="button button--full-width product__xr-button"
-                  type="button"
-                  aria-label="{{ 'products.product.xr_button_label' | t }}"
-                  data-shopify-xr
-                  data-shopify-model3d-id="{{ first_3d_model.id }}"
-                  data-shopify-title="{{ product.title | escape }}"
-                  data-shopify-xr-hidden
-                >
-                  {% render 'icon-3d-model' %}
-                  {{ 'products.product.xr_button' | t }}
-                </button>
-              {%- endif -%}
-            </media-gallery>
-          {%- else -%}
-            <div class="product__media-item">
-              <div
-                class="product-media-container global-media-settings gradient{% if section.settings.constrain_to_viewport %} constrain-height{% endif %}"
-                style="--ratio: 1.0; --preview-ratio: 1.0;"
-              >
-                {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-              </div>
-            </div>
+            {% render 'product-media-gallery', product: product, variant_images: variant_images, is_duplicate: true %}
           {%- endif -%}
         </div>
       {%- endif -%}
     </div>
-
-    {% render 'product-media-modal', product: product, variant_images: media_to_render %}
+    {% render 'product-media-modal', product: product, variant_images: variant_images %}
   </div>
   <script
     type="application/json"
@@ -644,6 +499,11 @@
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
+
+{% if product.media.size > 0 %}
+  <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
+{% endif %}
 
 {%- if first_3d_model -%}
   <script type="application/json" id="ProductJSON-{{ product.id }}">
@@ -735,11 +595,6 @@
     });
   });
 </script>
-
-{% if product.media.size > 0 %}
-  <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
-{% endif %}
 
 {% schema %}
 {
@@ -2009,9 +1864,15 @@
       "label": "t:sections.featured-product.settings.secondary_background.label"
     },
     {
+      "type": "checkbox",
+      "id": "enable_sticky_info",
+      "default": true,
+      "label": "t:sections.main-product.settings.enable_sticky_info.label"
+    },
+    {
       "type": "header",
-      "content": "t:sections.featured-product.settings.header.content",
-      "info": "t:sections.featured-product.settings.header.info"
+      "content": "t:sections.main-product.settings.header.content",
+      "info": "t:sections.main-product.settings.header.info"
     },
     {
       "type": "select",
@@ -2030,14 +1891,14 @@
           "label": "t:sections.main-product.settings.media_size.options__3.label"
         }
       ],
-      "default": "medium",
+      "default": "large",
       "label": "t:sections.main-product.settings.media_size.label",
       "info": "t:sections.main-product.settings.media_size.info"
     },
     {
       "type": "checkbox",
       "id": "constrain_to_viewport",
-      "default": true,
+      "default": false,
       "label": "t:sections.main-product.settings.constrain_to_viewport.label"
     },
     {
@@ -2058,20 +1919,44 @@
     },
     {
       "type": "select",
+      "id": "gallery_layout",
+      "options": [
+        {
+          "value": "stacked",
+          "label": "t:sections.main-product.settings.gallery_layout.options__1.label"
+        },
+        {
+          "value": "columns",
+          "label": "t:sections.main-product.settings.gallery_layout.options__2.label"
+        },
+        {
+          "value": "thumbnail",
+          "label": "t:sections.main-product.settings.gallery_layout.options__3.label"
+        },
+        {
+          "value": "thumbnail_slider",
+          "label": "t:sections.main-product.settings.gallery_layout.options__4.label"
+        }
+      ],
+      "default": "stacked",
+      "label": "t:sections.main-product.settings.gallery_layout.label"
+    },
+    {
+      "type": "select",
       "id": "media_position",
       "options": [
         {
           "value": "left",
-          "label": "t:sections.featured-product.settings.media_position.options__1.label"
+          "label": "t:sections.main-product.settings.media_position.options__1.label"
         },
         {
           "value": "right",
-          "label": "t:sections.featured-product.settings.media_position.options__2.label"
+          "label": "t:sections.main-product.settings.media_position.options__2.label"
         }
       ],
       "default": "left",
-      "label": "t:sections.featured-product.settings.media_position.label",
-      "info": "t:sections.featured-product.settings.media_position.info"
+      "label": "t:sections.main-product.settings.media_position.label",
+      "info": "t:sections.main-product.settings.media_position.info"
     },
     {
       "type": "select",
@@ -2095,6 +1980,26 @@
       "info": "t:sections.main-product.settings.image_zoom.info"
     },
     {
+      "type": "select",
+      "id": "mobile_thumbnails",
+      "options": [
+        {
+          "value": "columns",
+          "label": "t:sections.main-product.settings.mobile_thumbnails.options__1.label"
+        },
+        {
+          "value": "show",
+          "label": "t:sections.main-product.settings.mobile_thumbnails.options__2.label"
+        },
+        {
+          "value": "hide",
+          "label": "t:sections.main-product.settings.mobile_thumbnails.options__3.label"
+        }
+      ],
+      "default": "hide",
+      "label": "t:sections.main-product.settings.mobile_thumbnails.label"
+    },
+    {
       "type": "checkbox",
       "id": "hide_variants",
       "default": false,
@@ -2104,13 +2009,7 @@
       "type": "checkbox",
       "id": "enable_video_looping",
       "default": false,
-      "label": "t:sections.featured-product.settings.enable_video_looping.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_full_details",
-      "default": true,
-      "label": "Show link to full PDP"
+      "label": "t:sections.main-product.settings.enable_video_looping.label"
     },
     {
       "type": "header",

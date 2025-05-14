@@ -2,60 +2,88 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  .section-{{ section.id }}-padding li {
-    {% if section.settings.border_style == 'solid' %}
-      border: 1px solid #E9E4DE;
-    {% endif %}
-  }
-
-  {% if section.settings.background_style == 'custom' %}
- 
-  #multicolumn--{{ section.id }} .multicolumn-card {
-    background-color: {{ section.settings.background_color }} !important;
-  }
-  {% endif %}
-
-  .multicolumn-card__video-wrapper video::-webkit-media-controls {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-.multicolumn-card__video-wrapper video:hover::-webkit-media-controls {
-    opacity: 1;
-  }
-
-
-  @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
 
-    {% if section.blocks.size < 4 %}
-      .multicolumn .page-width {
-        max-width: 1100px;
-      }
+    .section-{{ section.id }}-padding li {
+      {% if section.settings.border_style == 'solid' %}
+        border: 1px solid #E9E4DE;
+      {% endif %}
+    }
 
-      .multicolumn .title {
-        font-size: 6rem;
-      }
+    {% if section.settings.background_style == 'custom' %}
+
+    #multicolumn--{{ section.id }} .multicolumn-card {
+      background-color: {{ section.settings.background_color }} !important;
+    }
     {% endif %}
 
-    {% if section.settings.heading_alignment == 'center' %}
+    .multicolumn-card__video-wrapper video::-webkit-media-controls {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
 
-      .title-wrapper-with-link {
-        justify-content: center;
+  .multicolumn-card__video-wrapper video:hover::-webkit-media-controls {
+      opacity: 1;
+    }
+
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
       }
-      .title-wrapper-with-link .title {
-        text-align: center;
-      }
+
+
+
+      {% if section.blocks.size < 4 %}
+        #multicolumn--{{ section.id }} .page-width {
+          max-width: 1100px;
+        }
+
+        #multicolumn--{{ section.id }} .title {
+          font-size: 6rem;
+        }
       {% endif %}
+
+       
+
+      {% if section.settings.heading_alignment == 'center' %}
+
+        .title-wrapper-with-link {
+          justify-content: center;
+        }
+        .title-wrapper-with-link .title {
+          text-align: center;
+        }
+        {% endif %}
+    }
+
+    @media screen and (min-width: 990px) {
+
+    #multicolumn--{{ section.id }} .slider {
+      flex-wrap: nowrap;
+      position: relative;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scroll-padding-left: 1.5rem;
+        -webkit-overflow-scrolling: touch;
+    }
+     
+    #multicolumn--{{ section.id }} .multicolumn-list__item {
+    width: calc(100% / {{ section.settings.columns_desktop }} - var(--grid-desktop-horizontal-spacing) * 3);
+    min-width: 340px;
+    }
+
+    #multicolumn--{{ section.id }} .grid--peek.slider .grid__item:first-of-type {
+    margin-left: 1.5rem;
   }
+
+  
+    }
 {%- endstyle -%}
 
 {%- liquid
@@ -64,18 +92,27 @@
   if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
     assign show_mobile_slider = true
   endif
+
+  assign columns_desktop_int = section.settings.columns_desktop | plus: 0
+  assign show_desktop_slider = false
+  if section.settings.enable_desktop_slider and section.blocks.size > columns_desktop_int
+    assign show_desktop_slider = true
+  endif
 -%}
 
-<div id="multicolumn--{{ section.id }}" class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
 <div
-    class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+  id="multicolumn--{{ section.id }}"
+  class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}"
+>
+  <div
+    class="{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
     {% endif %}
   >
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
-        <h2 class="title inline-richtext {{ section.settings.heading_size }} {{ section.settings.heading_alignment }}">
+        <h2 class="title inline-richtext {{ section.settings.heading_size }} {{ section.settings.heading_alignment }}" >
           {{ section.settings.title }}
         </h2>
         {% if section.settings.text != blank %}
@@ -88,9 +125,9 @@
         {%- endif -%}
       </div>
     {%- endunless -%}
-    <slider-component class="slider-mobile-gutter">
+    <slider-component class="slider-mobile-gutter{% if show_desktop_slider %} slider-component-desktop{% endif %}">
       <ul
-        class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile grid--peek{% endif %}"
+        class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile slider--tablet grid--peek{% endif %}{% if show_desktop_slider %} slider--desktop{% endif %}"
         id="Slider-{{ section.id }}"
         role="list"
       >
@@ -105,9 +142,9 @@
         {%- for block in section.blocks -%}
           {%- if block.settings.product != blank -%}
             <style>
-                #multicolumn-card__product-card--{{ block.id }} {
-                  background-color: {{ block.settings.product_badge_color }};
-                }
+              #multicolumn-card__product-card--{{ block.id }} {
+                background-color: {{ block.settings.product_badge_color }};
+              }
             </style>
           {%- endif -%}
           {%- assign empty_column = '' -%}
@@ -121,7 +158,7 @@
 
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
-            class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile or show_desktop_slider %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {{ block.shopify_attributes }}
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
@@ -180,10 +217,17 @@
                       style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
                     {% endif %}
                   >
-                  {% if forloop.index == 1 %}
-                    {{ block.settings.video | video_tag: autoplay: true, muted: true, loop: true, controls: true, poster: thumbnail }}                  
-                  {% else %}
-                  {{ block.settings.video | video_tag: autoplay: false, muted: false, loop: true, controls: true, poster: thumbnail }}                  {% endif %}
+                    {% if forloop.index == 1 %}
+                      {{
+                        block.settings.video
+                        | video_tag: autoplay: true, muted: true, loop: true, controls: true, poster: thumbnail
+                      }}
+                    {% else %}
+                      {{
+                        block.settings.video
+                        | video_tag: autoplay: false, muted: false, loop: true, controls: true, poster: thumbnail
+                      }}
+                    {% endif %}
                   </div>
                 </div>
               {%- endif -%}
@@ -205,18 +249,18 @@
                       {% endif %}
                     >
                       {{- block.settings.link_label | escape -}}
-                      </a>
+                    </a>
                   {%- endif -%}
                 </div>
                 {%- if block.settings.product != blank -%}
-                  <div class="multicolumn-card__product" >
+                  <div class="multicolumn-card__product">
                     <div id="multicolumn-card__product-card--{{ block.id }}" class="multicolumn-card__product-card">
-                    {{ block.settings.product.featured_image | image_url: width: 50 | image_tag }}
-                    <a
-                      href="{{ block.settings.product.url }}"
-                    >
-                      {{- block.settings.product.title | escape -}}
-                    </a>
+                      {{ block.settings.product.featured_image | image_url: width: 50 | image_tag }}
+                      <a
+                        href="{{ block.settings.product.url }}"
+                      >
+                        {{- block.settings.product.title | escape -}}
+                      </a>
                     </div>
                     {%- if block.settings.product_benefits != blank -%}
                       <div class="rte">{{ block.settings.product_benefits }}</div>
@@ -224,13 +268,12 @@
                   </div>
                 {%- endif -%}
               </div>
-              
             </div>
           </li>
         {%- endfor -%}
       </ul>
 
-      {%- if show_mobile_slider -%}
+      {%- if show_mobile_slider or show_desktop_slider -%}
         <div class="slider-buttons no-js-hidden medium-hide">
           <button
             type="button"
@@ -284,43 +327,43 @@
   },
   "settings": [
     {
-      "type": "inline_richtext",
+      "type": "richtext",
       "id": "title",
-      "default": "Multicolumn",
+      "default": "<p>Multicolumn</p>",
       "label": "t:sections.multicolumn.settings.title.label"
     },
     {
       "type": "select",
       "id": "heading_size",
       "options": [
-            {
-              "value": "h1",
-              "label": "t:sections.all.heading_size.options__0.label"
-            },
-            {
-              "value": "hlarge",
-              "label": "t:sections.all.heading_size.options__1.label"
-            },
-            {
-              "value": "hmedium",
-              "label": "t:sections.all.heading_size.options__2.label"
-            },
-            {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__3.label"
-            },
-            {
-              "value": "h3",
-              "label": "t:sections.all.heading_size.options__4.label"
-            },
-            {
-              "value": "h4",
-              "label": "t:sections.all.heading_size.options__5.label"
-            },
-            {
-              "value": "h5",
-              "label": "t:sections.all.heading_size.options__6.label"
-            }
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__0.label"
+        },
+        {
+          "value": "hlarge",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "hmedium",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "h4",
+          "label": "t:sections.all.heading_size.options__5.label"
+        },
+        {
+          "value": "h5",
+          "label": "t:sections.all.heading_size.options__6.label"
+        }
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
@@ -400,6 +443,18 @@
       "label": "t:sections.multicolumn.settings.columns_desktop.label"
     },
     {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "t:sections.video.settings.full_width.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_desktop_slider",
+      "default": false,
+      "label": "Show desktop slider"
+    },
+    {
       "type": "select",
       "id": "column_alignment",
       "options": [
@@ -429,7 +484,6 @@
           "value": "solid",
           "label": "Solid"
         }
-  
       ]
     },
     {
@@ -611,20 +665,19 @@
 }
 {% endschema %}
 
-
 <script>
-function pauseOtherVideosOnPlay() {
-  const videos = document.querySelectorAll('video');
-  videos.forEach(video => {
-    video.addEventListener('play', function () {
-      videos.forEach(otherVideo => {
-        if (otherVideo !== video && !otherVideo.paused) {
-          otherVideo.pause();
-        }
+  function pauseOtherVideosOnPlay() {
+    const videos = document.querySelectorAll('video');
+    videos.forEach((video) => {
+      video.addEventListener('play', function () {
+        videos.forEach((otherVideo) => {
+          if (otherVideo !== video && !otherVideo.paused) {
+            otherVideo.pause();
+          }
+        });
       });
     });
-  });
-}
+  }
 
-setTimeout(pauseOtherVideosOnPlay, 500);
+  setTimeout(pauseOtherVideosOnPlay, 500);
 </script>

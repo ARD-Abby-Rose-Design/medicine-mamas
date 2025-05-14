@@ -386,7 +386,6 @@
         "column_Ke6XAn": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Screenshot_2025-05-13_at_11.29.24_AM.png",
             "video": "shopify://files/videos/4.mp4",
             "title": "@indiabatson",
             "text": "<p>\"I love how easy it is to apply, and super hydrating to prevent any irritation post-shave.\"</p>",
@@ -426,7 +425,6 @@
         "column_HA7y7A": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Screenshot_2025-05-13_at_11.31.39_AM.png",
             "video": "shopify://files/videos/5.mp4",
             "title": "@allisonhoeller",
             "text": "<p>\"This unscented wash, cleanses, and it supports a healthy pH which is the #1 priority\"</p>",
@@ -447,13 +445,15 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "THE GROOMING ROUTINE EVERYONE IS TALKING ABOUT",
-        "heading_size": "hlarge",
+        "title": "<p>THE GROOMING ROUTINE<br/>EVERYONE IS TALKING ABOUT</p>",
+        "heading_size": "hmedium",
         "heading_alignment": "center",
         "text": "",
         "image_width": "full",
         "image_ratio": "portrait",
         "columns_desktop": 5,
+        "full_width": true,
+        "enable_desktop_slider": true,
         "column_alignment": "left",
         "border_style": "none",
         "background_style": "custom",

@@ -20,6 +20,18 @@
     "multicolumn_cQbAjd": {
       "type": "multicolumn",
       "blocks": {
+        "column_apHVGt": {
+          "type": "column",
+          "settings": {
+            "title": "<em>Well+Good - May 2025 - Medicine Mama VMAGIC®</em>",
+            "text": "<p><a href=\"https://www.wellandgood.com/shopping/best-vulva-moisturizers\" target=\"_blank\" title=\"https://www.wellandgood.com/shopping/best-vulva-moisturizers\">10 Vulva Moisturizers To Bid Goodbye To Dry, Irritated Lips</a></p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
         "column_pYe4pL": {
           "type": "column",
           "settings": {
@@ -118,6 +130,7 @@
         }
       },
       "block_order": [
+        "column_apHVGt",
         "column_pYe4pL",
         "column_Bg6rAr",
         "column_nHEMqc",
@@ -129,13 +142,15 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "PRESS",
+        "title": "<p>PRESS</p>",
         "heading_size": "h1",
         "heading_alignment": "",
         "text": "",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 1,
+        "full_width": false,
+        "enable_desktop_slider": false,
         "column_alignment": "left",
         "border_style": "none",
         "background_style": "primary",
@@ -229,6 +244,8 @@
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 1,
+        "full_width": false,
+        "enable_desktop_slider": false,
         "column_alignment": "left",
         "border_style": "none",
         "background_style": "primary",

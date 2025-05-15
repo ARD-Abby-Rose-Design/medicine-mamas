@@ -344,14 +344,16 @@
         "product": "vmagic-feminine-wash",
         "color_scheme": "inverse",
         "secondary_background": false,
+        "enable_sticky_info": true,
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
+        "gallery_layout": "stacked",
         "media_position": "left",
         "image_zoom": "hover",
+        "mobile_thumbnails": "hide",
         "hide_variants": false,
         "enable_video_looping": false,
-        "show_full_details": false,
         "padding_top": 36,
         "padding_bottom": 44
       }
@@ -738,14 +740,71 @@
         "padding_bottom": 36
       }
     },
-    "faq_xUgWW9": {
-      "type": "faq",
-      "name": "FAQ",
+    "collapsible_content_4MDQHj": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_FdDEnd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I thought you weren't supposed to wash your vagina?",
+            "row_content": "<p>You are right, the Vagina is like a  \"self cleaning oven\" and you do not need to wash or cleanse it. However, the Vulva is a different story. If you choose to wash your Vulva (Mons Pubis, Labia Minora, Labia Majora, Clitoris and Vaginal Opening-the external skin) it is best to use a mild, gentle cleanser or warm water alone.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ephtYN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why can't I use a traditional body wash on my vulva?",
+            "row_content": "<p>Traditional body washes can be full of harsh surfactants and more often than not have added fragrance. Fragrances, even essential oils, can be irritating to delicate vulvar skin and can even disrupt the natural protective biome of this delicate area.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tCeDQC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can the Medicine Mama® Feminine Wash be used other places than the vulva?",
+            "row_content": "<p>Yes, you can use our wash all over the body. Our gentle, fragrance free cleanser can easily replace your daily body wash. With our new 2X size, our wash lasts even longer.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_NUezYX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will this prevent odor? Will this make my vulva smell good?",
+            "row_content": "<p>We have intentionally left out fragrance as it can be disruptive to your natural microbiome. More often than not if you have an odor there is a bigger underlying problem that you should check in with your physician about. A fragranced cleanser can mask a bigger issue.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_eNdD99": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does this support my body’s pH?",
+            "row_content": "<p>Our vulva wash is developed specifically to support the pH of your vulva (slightly more acidic than the vagina) and not disrupt it with fragrance or harsh ingredients.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_FdDEnd",
+        "collapsible_row_ephtYN",
+        "collapsible_row_tCeDQC",
+        "collapsible_row_NUezYX",
+        "collapsible_row_eNdD99"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
       "settings": {
-        "heading": "Your questions, answered",
+        "caption": "",
+        "heading": "your questions, answered",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
         "color_scheme": "inverse",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -764,6 +823,6 @@
     "multicolumn_with_text_jDKrqy",
     "image_with_text_MqYAMb",
     "image_with_text_Y49J8F",
-    "faq_xUgWW9"
+    "collapsible_content_4MDQHj"
   ]
 }

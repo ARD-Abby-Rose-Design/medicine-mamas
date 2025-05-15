@@ -276,12 +276,12 @@
         "media_caption": "",
         "media_caption_color": "#ffffff",
         "media_caption_bg": "none",
-        "media_caption_bg_color": "#FFFFFF",
+        "media_caption_bg_color": "#ffffff",
         "media_caption_position": "top-left",
         "second_media_caption": "",
         "second_media_caption_color": "#ffffff",
         "second_media_caption_bg": "none",
-        "second_media_caption_bg_color": "#FFFFFF",
+        "second_media_caption_bg_color": "#ffffff",
         "second_media_caption_position": "top-left",
         "show_desktop": true,
         "desktop_image_width": "medium",
@@ -335,12 +335,12 @@
         "media_caption": "",
         "media_caption_color": "#ffffff",
         "media_caption_bg": "none",
-        "media_caption_bg_color": "#FFFFFF",
+        "media_caption_bg_color": "#ffffff",
         "media_caption_position": "top-left",
         "second_media_caption": "",
         "second_media_caption_color": "#ffffff",
         "second_media_caption_bg": "none",
-        "second_media_caption_bg_color": "#FFFFFF",
+        "second_media_caption_bg_color": "#ffffff",
         "second_media_caption_position": "top-left",
         "show_desktop": true,
         "desktop_image_width": "small",
@@ -394,12 +394,12 @@
         "media_caption": "",
         "media_caption_color": "#ffffff",
         "media_caption_bg": "none",
-        "media_caption_bg_color": "#FFFFFF",
+        "media_caption_bg_color": "#ffffff",
         "media_caption_position": "top-left",
         "second_media_caption": "",
         "second_media_caption_color": "#ffffff",
         "second_media_caption_bg": "none",
-        "second_media_caption_bg_color": "#FFFFFF",
+        "second_media_caption_bg_color": "#ffffff",
         "second_media_caption_position": "top-left",
         "show_desktop": true,
         "desktop_image_width": "small",
@@ -431,7 +431,7 @@
             "link_label": "",
             "link": "",
             "product": "",
-            "product_badge_color": "#FCF7F0",
+            "product_badge_color": "#fcf7f0",
             "product_benefits": ""
           }
         },
@@ -443,7 +443,7 @@
             "link_label": "",
             "link": "",
             "product": "",
-            "product_badge_color": "#FCF7F0",
+            "product_badge_color": "#fcf7f0",
             "product_benefits": ""
           }
         }
@@ -461,6 +461,8 @@
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 2,
+        "full_width": false,
+        "enable_desktop_slider": false,
         "column_alignment": "left",
         "border_style": "none",
         "background_style": "none",
@@ -618,6 +620,7 @@
             "button_label": "Learn More",
             "button_link": "https://medicinemama.com/pages/about",
             "button_arrow": true,
+            "big_button": false,
             "button_subtitle": ""
           }
         }
@@ -637,12 +640,12 @@
         "media_caption": "",
         "media_caption_color": "#ffffff",
         "media_caption_bg": "none",
-        "media_caption_bg_color": "#FFFFFF",
+        "media_caption_bg_color": "#ffffff",
         "media_caption_position": "top-left",
         "second_media_caption": "",
         "second_media_caption_color": "#ffffff",
         "second_media_caption_bg": "none",
-        "second_media_caption_bg_color": "#FFFFFF",
+        "second_media_caption_bg_color": "#ffffff",
         "second_media_caption_position": "top-left",
         "show_desktop": true,
         "desktop_image_width": "medium",
@@ -666,10 +669,10 @@
     "339a2a23-2076-4857-bb07-eaed9749925f": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{% render 'okendo-reviews-widget', product: product %}",
+        "custom_liquid": "<style>\n.oke-w-reviews-list-item {\nbackground-color: white;\nborder-radius: 10px;\nmargin-bottom: 10px;\n\n.oke-w-reviewSplit-left {\nborder-right: 1px solid #D9D9D9 !important;\npadding-right: 1rem !important;\n}\n\n@media screen and (max-width: 750px) {\n\n.oke-w-reviewSplit-main {\nalign-items: flex-start !important;\njustify-content: space-between !important;\ngap: 1.4rem !important;\npadding: 1.4rem !important;\n}\n\n.oke-w-reviewSplit-mid {\nmargin-top: 0px !important;\nwidth: 75% !important;\ntext-align: left !important;\n}\n.oke-w-reviewSplit-left {\ntext-align: left !important;\nborder-right: none !important;\n}\n}\n</style>",
         "color_scheme": "inverse",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "83437bf3-3644-46eb-abaf-c2b104a9887f": {

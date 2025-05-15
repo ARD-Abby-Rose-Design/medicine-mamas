@@ -1,3 +1,11 @@
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+
+
+{%- comment -%}
+  This section is used to create a social slider with images or videos.
+  It includes settings for padding and color scheme.
+{%- endcomment -%}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -11,9 +19,6 @@
     margin: 2.4rem auto;
   }
 
-    .social-slider .slider__slide {
-    width: calc(100% - 10rem);
-  }
 
 
   .social-slider__card {
@@ -70,7 +75,13 @@
     opacity: 0;
     pointer-events: none;
   }
+  
+  @media screen and (max-width: 749px) {
+      .social-slider .slider__slide {
+    width: calc(100% - 10rem);
+  }
 
+  }
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -79,18 +90,28 @@
 
     .social-slider .slider {
       column-gap: 2rem;
-      width: 100%;
     }
 
 
   }
+    @media screen and (min-width: 990px) {
+    .social-slider .slider {
+      column-gap: 3rem;
+      justify-content: center;
+    }
+
+    .social-slider .slider__slide {
+     
+      max-width: 310px;
+    }
+}
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
-    <social-slider class="social-slider slider-mobile-gutter slider-component-desktop">
+    <social-slider class="social-slider slider-mobile-gutter ">
       <ul
         id="Slider-{{ section.id }}"
-        class="grid slider slider--mobile slider--desktop slider--tablet grid--1-col grid--2-col-tablet grid--5-col-desktop grid--peek "
+        class="grid slider slider--mobile slider--tablet grid--1-col grid--2-col-tablet grid--4-col-desktop grid--peek"
         role="list"
         aria-label="Social post slider">
         {% for block in section.blocks %}

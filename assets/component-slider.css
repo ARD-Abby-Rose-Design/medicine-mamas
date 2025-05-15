@@ -391,3 +391,9 @@ slider-component.slider-component-full-width {
 .slider-button--prev:not([disabled]):hover .icon {
   transform: rotate(180deg) scale(1.1);
 }
+
+
+  .slider__slide.playing .custom-play-button {
+    opacity: 0;
+    pointer-events: none;
+  }

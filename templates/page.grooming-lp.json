@@ -389,6 +389,7 @@
           "type": "column",
           "settings": {
             "video": "shopify://files/videos/4.mp4",
+            "video_poster": "shopify://shop_images/Screenshot_2025-05-13_at_11.29.24_AM.png",
             "title": "@indiabatson",
             "text": "<p>\"I love how easy it is to apply, and super hydrating to prevent any irritation post-shave.\"</p>",
             "link_label": "",
@@ -402,6 +403,7 @@
           "type": "column",
           "settings": {
             "video": "shopify://files/videos/3.mp4",
+            "video_poster": "shopify://shop_images/Screenshot_2025-05-13_at_11.31.39_AM.png",
             "title": "@allisonhoeller",
             "text": "<p>\"My all time favorite exfoliator for down there. The exfoliating sugars are so tiny and gentle on skin\" </p>",
             "link_label": "",
@@ -414,7 +416,8 @@
         "column_xWXkDP": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Screenshot_2025-05-13_at_12.18.38_PM.png",
+            "video": "shopify://files/videos/Kiernan_Medicine Mama - Video 1080x1920.mp4",
+            "video_poster": "shopify://shop_images/Screenshot_2025-05-13_at_12.18.38_PM.png",
             "title": "@lifestyle_wifestlye",
             "text": "<p>\"It's made with incredible ingredients -- just like we have a facial skincare routine, why shouldn't we have a routine for most sensitive skin.\"</p>",
             "link_label": "",
@@ -428,6 +431,7 @@
           "type": "column",
           "settings": {
             "video": "shopify://files/videos/5.mp4",
+            "video_poster": "shopify://shop_images/Screenshot_2025-05-13_at_11.31.39_AM.png",
             "title": "@allisonhoeller",
             "text": "<p>\"This unscented wash, cleanses, and it supports a healthy pH which is the #1 priority\"</p>",
             "link_label": "",
@@ -465,6 +469,7 @@
         "color_scheme": "inverse",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
+        "show_slider_buttons": false,
         "padding_top": 36,
         "padding_bottom": 36
       }

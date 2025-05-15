@@ -48,7 +48,7 @@
         }
       {% endif %}
 
-       
+
 
       {% if section.settings.heading_alignment == 'center' %}
 
@@ -72,7 +72,7 @@
         scroll-padding-left: 1.5rem;
         -webkit-overflow-scrolling: touch;
     }
-     
+
     #multicolumn--{{ section.id }} .multicolumn-list__item {
     width: calc(100% / {{ section.settings.columns_desktop }} - var(--grid-desktop-horizontal-spacing) * 3);
     min-width: 340px;
@@ -82,7 +82,7 @@
     margin-left: 1.5rem;
   }
 
-  
+
     }
 {%- endstyle -%}
 
@@ -112,7 +112,7 @@
   >
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
-        <h2 class="title inline-richtext {{ section.settings.heading_size }} {{ section.settings.heading_alignment }}" >
+        <h2 class="title inline-richtext {{ section.settings.heading_size }} {{ section.settings.heading_alignment }}">
           {{ section.settings.title }}
         </h2>
         {% if section.settings.text != blank %}
@@ -209,7 +209,11 @@
                   </div>
                 </div>
               {%- elsif block.settings.video != blank -%}
-                {% assign thumbnail = block.settings.video.preview_image | image_url: width: 300 %}
+                {% if block.settings.video_poster != blank %}
+                  {% assign thumbnail = block.settings.video_poster | image_url: width: 300 %}
+                {% else %}
+                  {% assign thumbnail = block.settings.video.preview_image | image_url: width: 300 %}
+                {% endif %}
                 <div class="multicolumn-card__video-wrapper">
                   <div
                     class="media media--transparent media--{{ section.settings.image_ratio }}"
@@ -220,14 +224,17 @@
                     {% if forloop.index == 1 %}
                       {{
                         block.settings.video
-                        | video_tag: autoplay: true, muted: true, loop: true, controls: true, poster: thumbnail
+                        | video_tag: autoplay: false, muted: false, loop: true, controls: false, poster: thumbnail
                       }}
                     {% else %}
                       {{
                         block.settings.video
-                        | video_tag: autoplay: false, muted: false, loop: true, controls: true, poster: thumbnail
+                        | video_tag: autoplay: false, muted: false, loop: true, controls: false, poster: thumbnail
                       }}
                     {% endif %}
+                    <div class="custom-play-button">
+                      {% render 'icon-play' %}
+                    </div>
                   </div>
                 </div>
               {%- endif -%}
@@ -272,32 +279,10 @@
           </li>
         {%- endfor -%}
       </ul>
-
-      {%- if show_mobile_slider or show_desktop_slider -%}
-        <div class="slider-buttons no-js-hidden medium-hide">
-          <button
-            type="button"
-            class="slider-button slider-button--prev"
-            name="previous"
-            aria-label="{{ 'general.slider.previous_slide' | t }}"
-          >
-            {% render 'icon-caret' %}
-          </button>
-          <div class="slider-counter caption">
-            <span class="slider-counter--current">1</span>
-            <span aria-hidden="true"> / </span>
-            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-            <span class="slider-counter--total">{{ section.blocks.size }}</span>
-          </div>
-          <button
-            type="button"
-            class="slider-button slider-button--next"
-            name="next"
-            aria-label="{{ 'general.slider.next_slide' | t }}"
-          >
-            {% render 'icon-caret' %}
-          </button>
-        </div>
+      {%- if show_desktop_slider and section.settings.show_slider_buttons -%}
+        {% render 'slider-buttons' %}
+      {% elsif show_mobile_slider and section.settings.show_slider_buttons %}
+        {% render 'slider-buttons' %}
       {%- endif -%}
     </slider-component>
     <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
@@ -555,6 +540,12 @@
       "id": "swipe_on_mobile",
       "default": false,
       "label": "t:sections.multicolumn.settings.swipe_on_mobile.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_slider_buttons",
+      "default": true,
+      "label": "Show slider buttons"
     },
     {
       "type": "header",

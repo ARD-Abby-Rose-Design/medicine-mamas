@@ -39,42 +39,7 @@
     object-fit: cover;
   }
 
-  .social-slider__card video::-webkit-media-controls {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
 
-  .social-slider__card video:hover::-webkit-media-controls {
-    opacity: 1;
-  }
-
-  .social-slider__overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  .social-slider__card:hover .social-slider__overlay {
-    opacity: 1;
-  }
-
-  .social-slider__overlay svg {
-    width: 24px;
-    height: 24px;
-    fill: white !important;
-    color: white !important;
-  }
-
-
-  .social-slider__card.playing .custom-play-button {
-    opacity: 0;
-    pointer-events: none;
-  }
   
   @media screen and (max-width: 749px) {
       .social-slider .slider__slide {
@@ -108,7 +73,7 @@
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
-    <social-slider class="social-slider slider-mobile-gutter ">
+    <slider-component class="social-slider slider-mobile-gutter ">
       <ul
         id="Slider-{{ section.id }}"
         class="grid slider slider--mobile slider--tablet grid--1-col grid--2-col-tablet grid--4-col-desktop grid--peek"
@@ -163,7 +128,7 @@
           </span>
         </button>
       </div>
-    </social-slider>
+    </slider-component>
 </div>
 
 {% schema %}

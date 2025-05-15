@@ -1,132 +1,110 @@
 {%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  .social-slider .slider {
+    column-gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+    margin: 2.4rem auto;
+  }
+
+    .social-slider .slider__slide {
+    width: calc(100% - 10rem);
+  }
+
+
+  .social-slider__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden !important;
+    border-radius: 24px;
+    position: relative;
+  }
+
+
+  .social-slider__card img,
+  .social-slider__card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .social-slider__card video::-webkit-media-controls {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .social-slider__card video:hover::-webkit-media-controls {
+    opacity: 1;
+  }
+
+  .social-slider__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .social-slider__card:hover .social-slider__overlay {
+    opacity: 1;
+  }
+
+  .social-slider__overlay svg {
+    width: 24px;
+    height: 24px;
+    fill: white !important;
+    color: white !important;
+  }
+
+
+  .social-slider__card.playing .custom-play-button {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
     }
 
     .social-slider .slider {
-        column-gap: 1rem;
-        align-items: center;
-        scroll-padding-left: calc(var(--desktop-margin-left-first-item) * 0);
-        width: 100%;
-        margin: 2.4rem auto;
-    }
-
-    .social-slider .slider__slide {
-        width: calc((100% - 1rem) / 2) !important;
-        max-width: calc((100% - 1rem) / 2) !important;
-    }
-
-    .social-slider .slider__slide:first-child {
-        margin-left: calc(var(--desktop-margin-left-first-item) * 0);
-        scroll-margin-left: calc(var(--desktop-margin-left-first-item) * 0);
+      column-gap: 2rem;
+      width: 100%;
     }
 
 
-    .social-slider__card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        overflow: hidden !important;
-        border-radius: 24px;
-        position: relative;
-    }
-
-  
-    .social-slider__card img, .social-slider__card video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .social-slider__card video::-webkit-media-controls {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-            .social-slider__card video:hover::-webkit-media-controls {
-                opacity: 1;
-    }
-
-    .social-slider__overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .social-slider__card:hover .social-slider__overlay {
-      opacity: 1;
-    }
-
-    .social-slider__overlay svg {
-      width: 24px;
-      height: 24px;
-      fill: white !important;
-      color: white !important;
-    }
-
-    
-
-.social-slider__card.playing .custom-play-button {
-  opacity: 0;
-  pointer-events: none;
-}
-  
-    @media screen and (min-width: 750px) {
-      .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
-      }
-
-        .social-slider .slider {
-            column-gap: 2rem;
-            width: 100%;
-        }
-
-        .social-slider .slider__slide {
-            width: calc((100% - (2rem * 3)) / 4) !important;
-            max-width: calc((100% - (2rem * 3)) / 4) !important;
-        }
-
-
-   
-    }
-
-
-
-
-
-    
+  }
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
-  <div class="page-width">
     <social-slider class="social-slider slider-mobile-gutter slider-component-desktop">
       <ul
         id="Slider-{{ section.id }}"
-        class="grid slider slider--desktop slider--tablet grid--2-col-tablet-down grid--5-col-desktop"
+        class="grid slider slider--mobile slider--desktop slider--tablet grid--1-col grid--2-col-tablet grid--5-col-desktop grid--peek "
         role="list"
-        aria-label="Social post slider"
-      >
+        aria-label="Social post slider">
         {% for block in section.blocks %}
-          <li
-            id="Slide-{{ section.id }}-{{ forloop.index }}"
-            class="slider__slide grid__item"
-          >
+          <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="slider__slide grid__item">
             <div class="social-slider__card">
               {% if block.settings.image != blank %}
                 {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy' }}
               {% elsif block.settings.video != blank %}
                 {% assign thumbnail = block.settings.video.preview_image | image_url: width: 300 %}
-                {{ block.settings.video | video_tag: autoplay: false, controls: false, muted: false, loading: 'lazy', poster: thumbnail }}
+                {{
+                  block.settings.video | video_tag: autoplay: false, controls: false, muted: false, loading: 'lazy', poster: thumbnail
+                }}
                 <div class="custom-play-button">
-                 {%  render 'icon-play' %}
+                  {% render 'icon-play' %}
                 </div>
               {% endif %}
             </div>
@@ -140,15 +118,16 @@
           class="slider-button slider-button--prev"
           name="previous"
           aria-label="Previous slide"
-          aria-controls="Slider-{{ section.id }}"
-        >
+          aria-controls="Slider-{{ section.id }}">
           <span class="svg-wrapper">
             {{ 'icon-caret.svg' | inline_asset_content }}
           </span>
         </button>
         <div class="slider-counter caption">
           <span class="slider-counter--current"></span>
-          <span aria-hidden="true"> / </span>
+          <span aria-hidden="true">
+            /
+          </span>
           <span class="visually-hidden">of</span>
           <span class="slider-counter--total"></span>
         </div>
@@ -157,75 +136,69 @@
           class="slider-button slider-button--next"
           name="next"
           aria-label="Next slide"
-          aria-controls="Slider-{{ section.id }}"
-        >
+          aria-controls="Slider-{{ section.id }}">
           <span class="svg-wrapper">
             {{ 'icon-caret.svg' | inline_asset_content }}
           </span>
         </button>
       </div>
     </social-slider>
-  </div>
 </div>
 
 {% schema %}
-    {
-        "name": "Social Slider",
+  {
+    "name": "Social Slider",
+    "settings": [
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color Scheme",
+        "default": "scheme-1"
+      }, {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "Top padding",
+        "default": 36
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "Bottom padding",
+        "default": 36
+      }
+    ],
+    "blocks": [
+      {
+        "type": "slide",
+        "name": "Slide",
         "settings": [
-                {
-                    "type": "color_scheme",
-                    "id": "color_scheme",
-                    "label": "Color Scheme",
-                    "default": "scheme-1"
-                },
-                {
-                    "type": "range",
-                    "id": "padding_top",
-                    "min": 0,
-                    "max": 100,
-                    "step": 4,
-                    "unit": "px",
-                    "label": "Top padding",
-                    "default": 36
-                },
-                {
-                    "type": "range",
-                    "id": "padding_bottom",
-                    "min": 0,
-                    "max": 100,
-                    "step": 4,
-                    "unit": "px",
-                    "label": "Bottom padding",
-                    "default": 36
-                }
-            ],
-        "blocks": [
-            {
-                "type": "slide",
-                "name": "Slide",
-                "settings": [
-                    {
-                        "type": "image_picker",
-                        "id": "image",
-                        "label": "Image"
-                    },
-                    {
-                        "type": "video",
-                        "id": "video",
-                        "label": "Video"
-                    },
-                    {
-                        "type": "url",
-                        "id": "url",
-                        "label": "Social post URL"
-                    }
-                ]
-            }
-        ],
-        "presets": [
-            {
-                "name": "Social Slider"
-            }
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }, {
+            "type": "video",
+            "id": "video",
+            "label": "Video"
+          }, {
+            "type": "url",
+            "id": "url",
+            "label": "Social post URL"
+          }
         ]
-    }
+      }
+    ],
+    "presets": [
+      {
+        "name": "Social Slider"
+      }
+    ]
+  }
 {% endschema %}

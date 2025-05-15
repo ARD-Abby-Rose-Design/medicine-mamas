@@ -521,6 +521,15 @@
     "image_with_text_K74Aig": {
       "type": "image-with-text",
       "blocks": {
+        "number_wBXYbQ": {
+          "type": "number",
+          "settings": {
+            "number": "5",
+            "number_bg_color": "#121212",
+            "show_desktop": true,
+            "show_mobile": true
+          }
+        },
         "heading_pTaVAU": {
           "type": "heading",
           "settings": {
@@ -540,6 +549,7 @@
         },
         "review_Pi66g4": {
           "type": "review",
+          "disabled": true,
           "settings": {
             "review_product": "Inside & Out: Hydration Duo",
             "review_name": "Sandy",
@@ -551,6 +561,7 @@
         }
       },
       "block_order": [
+        "number_wBXYbQ",
         "heading_pTaVAU",
         "text_84AgDH",
         "review_Pi66g4"
@@ -586,7 +597,7 @@
         "media_caption_position_mobile": "top-left",
         "second_media_caption_position_mobile": "top-left",
         "padding_top": 0,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "rich_text_GbjdEL": {
@@ -784,25 +795,76 @@
         "product": "intimate-moisturizer-duo",
         "color_scheme": "inverse",
         "secondary_background": false,
+        "enable_sticky_info": true,
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
+        "gallery_layout": "stacked",
         "media_position": "left",
         "image_zoom": "hover",
+        "mobile_thumbnails": "hide",
         "hide_variants": false,
         "enable_video_looping": false,
-        "show_full_details": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "faq_kdwVd8": {
-      "type": "faq",
+    "collapsible_content_TfekQh": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_JrTyDm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are ®VMAGIC products safe?",
+            "row_content": "<p>Yes, ®VMAGIC products are safe, gentle and effective on even the most delicate skin. ®VMAGIC is lab-tested for safety and has a perfect score of zero on the irritant index.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_nLQdPA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the Medicine Mama 100% Satisfaction Guarantee?",
+            "row_content": "<p>We offer a 30-day 100% money back satisfaction guarantee on all purchases made on our website. If for any reason you don’t love our products, you are welcome to return them within 30 days of receipt for a complete refund of your purchase price (less S&H), with no questions asked.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_gYf79a": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do your products contain any potentially harmful ingredients?",
+            "row_content": "<p>Our mission is to create the highest quality natural products possible, which is why all Medicine Mama products are made from ONLY pure, certified organic ingredients. In accordance with California’s Toxic-Free Cosmetics Act, our products do not—and never will—contain any of the following: formaldehyde, paraformaldehyde, methylene glycol, quaternium-15, mercury, dibutyl/diethyl hexyl phthalates, isobutyl/isopropyl parabens, any member of the family of toxic chemicals known as PFAS, and M- and o-phenylenediamine.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_AFbKX9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How often should I use the ®VMAGIC Vulva Balm? When will I see results?",
+            "row_content": "<p>For optimal skin health, use ®VMAGIC daily, reapplying as often as needed or desired.</p><p>Immediately after use, you will feel relief from dryness, itching and inflammation. After a few days of use, the overall health, balance and skin integrity will improve. In a clinical trial 92% saw a reduction in dryness after consistent 2-week use.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_JrTyDm",
+        "collapsible_row_nLQdPA",
+        "collapsible_row_gYf79a",
+        "collapsible_row_AFbKX9"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
       "settings": {
-        "heading": "PAUSING FOR ANY QUESTIONS!",
+        "caption": "",
+        "heading": "Pausing for any questions!",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
         "color_scheme": "inverse",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -823,6 +885,6 @@
     "featured_reviews_QHKyFL",
     "rich_text_yieUGc",
     "featured_product_7Dexwj",
-    "faq_kdwVd8"
+    "collapsible_content_TfekQh"
   ]
 }

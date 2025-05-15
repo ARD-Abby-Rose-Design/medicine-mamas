@@ -24,14 +24,14 @@
           "type": "heading_with_line_breaks",
           "settings": {
             "heading_with_line_breaks": "<p>Say goodbye<br/>to bumps<br/>and irritation<br/>for good</p>",
-            "heading_with_line_breaks_size": "hmedium"
+            "heading_with_line_breaks_size": "hlarge"
           }
         },
         "text_ECHdDh": {
           "type": "text",
           "settings": {
             "text": "<p>Smooth, irritation-free skin starts with the right grooming routine. Our <strong>VMAGIC® Grooming Essentials</strong> is here to help.</p>",
-            "text_size": "text-body",
+            "text_size": "text-body-large",
             "background_style": "none",
             "background_color": "#ffffff",
             "bullets_to_checkmarks": false

@@ -279,10 +279,31 @@
           </li>
         {%- endfor -%}
       </ul>
-      {%- if show_desktop_slider and section.settings.show_slider_buttons -%}
-        {% render 'slider-buttons' %}
-      {% elsif show_mobile_slider and section.settings.show_slider_buttons %}
-        {% render 'slider-buttons' %}
+      {%- if show_mobile_slider or show_desktop_slider -%}
+        <div class="slider-buttons no-js-hidden medium-hide {% unless section.settings.show_slider_buttons %} visually-hidden{% endunless %}">
+          <button
+            type="button"
+            class="slider-button slider-button--prev"
+            name="previous"
+            aria-label="{{ 'general.slider.previous_slide' | t }}"
+          >
+            {% render 'icon-caret' %}
+          </button>
+          <div class="slider-counter caption">
+            <span class="slider-counter--current">1</span>
+            <span aria-hidden="true"> / </span>
+            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+            <span class="slider-counter--total">{{ section.blocks.size }}</span>
+          </div>
+          <button
+            type="button"
+            class="slider-button slider-button--next"
+            name="next"
+            aria-label="{{ 'general.slider.next_slide' | t }}"
+          >
+            {% render 'icon-caret' %}
+          </button>
+        </div>
       {%- endif -%}
     </slider-component>
     <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
@@ -655,20 +676,3 @@
   ]
 }
 {% endschema %}
-
-<script>
-  function pauseOtherVideosOnPlay() {
-    const videos = document.querySelectorAll('video');
-    videos.forEach((video) => {
-      video.addEventListener('play', function () {
-        videos.forEach((otherVideo) => {
-          if (otherVideo !== video && !otherVideo.paused) {
-            otherVideo.pause();
-          }
-        });
-      });
-    });
-  }
-
-  setTimeout(pauseOtherVideosOnPlay, 500);
-</script>

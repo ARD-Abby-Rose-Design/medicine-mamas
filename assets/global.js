@@ -653,10 +653,20 @@ class SliderComponent extends HTMLElement {
       const video = slide?.querySelector('video');
       if (!slide || !video) return;
 
-      button.addEventListener('click', (event) => this.handlePlayButtonClick(event, slide, video));
+      button.addEventListener('click', (event) => {
+        this.pauseAllVideos();
+        this.handlePlayButtonClick(event, slide, video);
+      });
       video.addEventListener('pause', () => this.handleVideoPause(slide));
       video.addEventListener('ended', () => this.handleVideoPause(slide));
       video.addEventListener('click', () => this.handleVideoClick(video));
+    });
+  }
+  pauseAllVideos() {
+    document.querySelectorAll('video').forEach((vid) => {
+      vid.pause();
+      const slide = vid.closest('.slider__slide');
+      if (slide) slide.classList.remove('playing');
     });
   }
 

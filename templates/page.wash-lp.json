@@ -794,7 +794,7 @@
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
-        "heading": "your questions, answered",
+        "heading": "Questions?",
         "heading_size": "h1",
         "heading_alignment": "left",
         "layout": "none",

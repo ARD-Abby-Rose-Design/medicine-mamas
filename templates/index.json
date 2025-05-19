@@ -45,11 +45,14 @@
         "image_2": "shopify://shop_images/medicine-mama-mobile-hero_9f3fa689-d83c-4c36-ae0e-b0cf1a4562b2.jpg",
         "image_overlay_opacity": 10,
         "image_height": "adapt",
+        "show_desktop": true,
+        "below_header": true,
         "desktop_content_position": "middle-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
         "color_scheme": "accent-1",
         "image_behavior": "none",
+        "show_mobile": true,
         "mobile_content_alignment": "left",
         "stack_images_on_mobile": false,
         "show_text_below": false
@@ -132,6 +135,8 @@
         "36e8eaff-e03e-42da-8a9c-7d3c1a3a7133"
       ],
       "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "inverse",
@@ -193,6 +198,7 @@
         "color_scheme": "",
         "show_line_separator": true,
         "title": "<b>Over 11,000 5-Star Reviews</b>",
+        "product": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -260,6 +266,8 @@
           "settings": {
             "text": "<p>At Medicine Mama we aren’t afraid to say VULVA and create products that go beyond supporting skin function alone. Vulva care is bigger; it’s self love, a way to get in-touch with our bodies, and empowers women to make informed decisions. So go ahead - Get In-Touch!</p>",
             "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
         },
@@ -268,7 +276,9 @@
           "settings": {
             "button_label": "Learn More",
             "button_link": "shopify://blogs/vmagic/vulva-vs-vagina-vulvar-anatomy-and-how-it-differs-from-the-vagina",
-            "button_arrow": true
+            "button_arrow": true,
+            "big_button": false,
+            "button_subtitle": ""
           }
         }
       },
@@ -280,16 +290,34 @@
       ],
       "settings": {
         "image": "shopify://shop_images/what-is-vulva-care.jpg",
+        "video_autoplay": "autoplay",
         "media_type": "image",
         "height": "adapt",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
         "color_scheme": "inverse",
         "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
         "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
         "padding_top": 36,
         "padding_bottom": 68
       }

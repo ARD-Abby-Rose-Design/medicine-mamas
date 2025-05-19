@@ -316,13 +316,27 @@
       this.createObserver();
     }
 
-    setHeaderHeight() {
-      document.documentElement.style.setProperty('--header-height', `${this.header.offsetHeight}px`);
-      const bodyClasses = document.body.classList;
-      if(bodyClasses.contains('template-index')) {
-        document.getElementById('MainContent').style.marginTop = `-${this.header.offsetHeight}px`;
-      }
-    }
+setHeaderHeight() {
+  const headerHeight = this.header.offsetHeight;
+
+  document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+  
+  const mainContent = document.getElementById('MainContent');
+  const firstSection = mainContent?.querySelector('.shopify-section');
+
+  const hasBelowHeaderDiv = firstSection?.querySelector('.section-below-header');
+  const isImageWithText = firstSection?.querySelector('.image-with-text');
+  const isMobile = window.matchMedia('(max-width: 749px)').matches;
+
+
+  const shouldApplyMargin =
+    hasBelowHeaderDiv &&
+    (!isImageWithText || (isImageWithText && isMobile));
+
+  if (shouldApplyMargin) {
+    mainContent.style.marginTop = `-${headerHeight}px`;
+  }
+}
 
     disconnectedCallback() {
       this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);

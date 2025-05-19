@@ -73,13 +73,55 @@
       padding-right: {{ section.settings.desktop_content_padding_right }}px !important;
       }
   }
+      {% if section.settings.full_width %}
+    @media screen and (max-width: 749px) {
+
+              #ImageWithText--{{ section.id }}.mobile-full-width {
+                max-width: none;
+                padding: 0;
+                      }
+
+              #ImageWithText--{{ section.id }}.mobile-full-width .image-with-text__text-item {
+                max-width: var(--page-width);
+                padding: 0 1.5rem;
+              }
+    }
+        {% endif %}
 {%- endstyle -%}
 
 {% assign scheme1 = settings.color_schemes | first %}
 <div class="color-{{ section.settings.color_scheme }}">
   <div
     id="ImageWithText--{{ section.id }}"
-    class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.show_mobile == false %} medium-hide small-hide{% endif %}{% if section.settings.show_desktop == false %} medium-up-hide large-up-hide{% endif %}{% if section.settings.show_desktop == false %} hide-desktop{% endif %}"
+    class="
+      image-with-text
+      color-{{ section.settings.color_scheme }}
+      image-with-text--{{ section.settings.content_layout }}
+      page-width
+      isolate
+      {% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %}
+        collapse-borders
+      {% endif %}
+      {% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %}
+        collapse-corners
+      {% endunless %}
+      section-{{ section.id }}-padding
+      {% if settings.animations_reveal_on_scroll %}
+        scroll-trigger animate--slide-in
+      {% endif %}
+      {% if section.settings.show_mobile == false %}
+        medium-hide small-hide
+      {% endif %}
+      {% if section.settings.show_desktop == false %}
+        medium-up-hide large-up-hide hide-desktop
+      {% endif %}
+      {% if section.settings.full_width %}
+        mobile-full-width
+      {% endif %}
+      {% if section.settings.below_header %}
+        section-below-header
+      {% endif %}
+    "
   >
     <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %} {% if section.settings.layout_mobile == 'text_first' %} image-with-text__grid--reverse-mobile{% endif %} ">
       <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
@@ -207,13 +249,13 @@
                 >
                   {{ block.settings.heading | replace: 'Body,', 'Body,<br>' }}
                 </h2>
-                {%- when 'heading_with_line_breaks' -%}
-                  <h2
-                    class="image-with-text__heading heading-with-line-breaks inline-richtext {{ block.settings.heading_with_line_breaks_size }}"
-                    {{ block.shopify_attributes }}
-                  >
-                    {{ block.settings.heading_with_line_breaks }}
-                  </h2>
+              {%- when 'heading_with_line_breaks' -%}
+                <h2
+                  class="image-with-text__heading heading-with-line-breaks inline-richtext {{ block.settings.heading_with_line_breaks_size }}"
+                  {{ block.shopify_attributes }}
+                >
+                  {{ block.settings.heading_with_line_breaks }}
+                </h2>
               {%- when 'caption' -%}
                 <p
                   class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
@@ -221,7 +263,7 @@
                 >
                   {{ block.settings.caption | escape }}
                 </p>
-                
+
               {%- when 'text' -%}
                 <style>
                   #image-with-text__text--{{ block.id }} {
@@ -823,6 +865,19 @@
       ],
       "default": "image_first",
       "label": "Image placement"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width media",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "below_header",
+      "label": "Place below header",
+      "info": "If section is first on page",
+      "default": false
     },
     {
       "type": "select",

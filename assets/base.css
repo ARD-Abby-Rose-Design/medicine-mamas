@@ -2536,13 +2536,13 @@ menu-drawer+.header__search {
   margin-left: 4px;
 }
 
-.template-index #MainContent {
-  /* margin-top: -102px; */
+#MainContent {
+ margin-top: -102px;
 }
 
 @media screen and (max-width: 749px) {
-  .template-index #MainContent {
-    /* margin-top: -76px; */
+  #MainContent {
+    margin-top: -76px;
   }
 }
 

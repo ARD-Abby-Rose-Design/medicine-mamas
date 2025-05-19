@@ -106,7 +106,7 @@
         collapse-corners
       {% endunless %}
       section-{{ section.id }}-padding
-      {% if settings.animations_reveal_on_scroll %}
+      {% if settings.animations_reveal_on_scroll and section.settings.below_header == false %}
         scroll-trigger animate--slide-in
       {% endif %}
       {% if section.settings.show_mobile == false %}

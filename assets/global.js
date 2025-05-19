@@ -193,23 +193,31 @@ class StickyHeader extends HTMLElement {
 
 setHeaderHeight() {
   const headerHeight = this.header.offsetHeight;
+  console.log('[setHeaderHeight] headerHeight:', headerHeight);
 
   document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
   
   const mainContent = document.getElementById('MainContent');
   const firstSection = mainContent?.querySelector('.shopify-section');
+  console.log('[setHeaderHeight] firstSection:', firstSection);
 
   const hasBelowHeaderDiv = firstSection?.querySelector('.section-below-header');
   const isImageWithText = firstSection?.querySelector('.image-with-text');
   const isMobile = window.matchMedia('(max-width: 749px)').matches;
 
+  console.log('[setHeaderHeight] hasBelowHeaderDiv:', !!hasBelowHeaderDiv);
+  console.log('[setHeaderHeight] isImageWithText:', !!isImageWithText);
+  console.log('[setHeaderHeight] isMobile:', isMobile);
 
   const shouldApplyMargin =
     hasBelowHeaderDiv &&
     (!isImageWithText || (isImageWithText && isMobile));
 
+  console.log('[setHeaderHeight] shouldApplyMargin:', shouldApplyMargin);
+
   if (shouldApplyMargin) {
     mainContent.style.marginTop = `-${headerHeight}px`;
+    console.log('[setHeaderHeight] applied marginTop:', `-${headerHeight}px`);
   }
 }
 
@@ -287,7 +295,7 @@ setHeaderHeight() {
   }
 
   customElements.define('sticky-header', StickyHeader);
-  
+
 class QuantityInput extends HTMLElement {
   constructor() {
     super();

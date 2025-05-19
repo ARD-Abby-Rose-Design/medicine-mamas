@@ -116,7 +116,7 @@
         "c3fc4fbc-7110-4025-b5cf-a35c02bdc389"
       ],
       "settings": {
-        "title": "What We Stand For",
+        "title": "<p>What We Stand For</p>",
         "heading_size": "h3",
         "text": "",
         "image_width": "full",
@@ -251,7 +251,7 @@
         "template--16826884096229__579092b5-efcc-49ca-8c87-cde3d68f8c9a-column-2"
       ],
       "settings": {
-        "title": "Our Female Health Advisors",
+        "title": "<p>Our Female Health Advisors</p>",
         "heading_size": "h2",
         "text": "<p>To better serve our Medicine Mama family, we have engaged subject matter experts that can help us better serve you at every age and stage of womanhood.</p>",
         "image_width": "full",

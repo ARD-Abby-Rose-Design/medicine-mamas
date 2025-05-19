@@ -345,7 +345,7 @@ h5,
 }
 
 .hlarge {
-  font-size: calc(var(--font-heading-scale) * 4.2rem);
+  font-size: calc(var(--font-heading-scale) * 4.9rem);
   font-family: 'Impact', var(--font-heading-family);
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -359,7 +359,7 @@ h5,
 }
 
 .hmedium {
-  font-size: calc(var(--font-heading-scale) * 3.2rem);
+  font-size: calc(var(--font-heading-scale) * 4.35rem);
   font-family: 'Impact', var(--font-heading-family);
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -2536,15 +2536,6 @@ menu-drawer+.header__search {
   margin-left: 4px;
 }
 
-#MainContent {
- margin-top: -102px;
-}
-
-@media screen and (max-width: 749px) {
-  #MainContent {
-    margin-top: -76px;
-  }
-}
 
 .no-js .predictive-search {
   display: none;

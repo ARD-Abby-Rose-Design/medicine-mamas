@@ -20,6 +20,16 @@
     "image_with_text_WexptL": {
       "type": "image-with-text",
       "blocks": {
+        "text_jXLPkQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>MEMORIAL DAY SALE - 30% OFF</p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#f51e28",
+            "bullets_to_checkmarks": false
+          }
+        },
         "heading_with_line_breaks_rRYpaT": {
           "type": "heading_with_line_breaks",
           "settings": {
@@ -49,6 +59,7 @@
         }
       },
       "block_order": [
+        "text_jXLPkQ",
         "heading_with_line_breaks_rRYpaT",
         "text_ECHdDh",
         "button_8rfWc8"

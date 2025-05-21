@@ -32,6 +32,8 @@
           "settings": {
             "text": "<p>Over my 30+ years of practice I saw firsthand the lack of understanding women have when it comes to their bodies. When I started to dig deeper, I found that while feminine care was beginning to receive the “clean beauty treatment”, many of the bestselling products on the market were still using Vagina and Vulva interchangeably or vaguely referencing “care down there”. Not to mention they were using known skin irritants under the guise of “natural”. As a physician, I knew the importance of correctly identifying, labeling, and caring for our most intimate, unique, and empowering zones and the harm that could be done in not doing so. I knew I could do better for women and set out to conquer the next frontier of skincare - VULVA CARE!</p><p>[signature]</p>",
             "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
         },
@@ -40,6 +42,8 @@
           "settings": {
             "text": "<p>Dr. Clare Bertucio<br/>CEO + Chief Medical Officer</p>",
             "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
         }
@@ -51,16 +55,36 @@
       ],
       "settings": {
         "image": "shopify://shop_images/medicine-mama-dr-clare-bertucio.jpg",
+        "video_autoplay": "autoplay",
         "media_type": "image",
         "height": "adapt",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
-        "color_scheme": "",
+        "color_scheme": "inverse",
         "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -75,7 +99,10 @@
             "title": "Viva La Vulva™ ",
             "text": "<p>We proudly say Vulva! You won't see us hiding behind fruit, flowers or cartoons - this is done with purpose and designed to celebrate instead of stigmatizing female anatomy.</p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
           }
         },
         "template--16826884096229__bb6fa93c-580c-4f56-ac2b-c29a63b74e12-column-2": {
@@ -85,7 +112,10 @@
             "title": "Intentional Formulations",
             "text": "<p>We create safe, easy to use products for the Vulva. Our formulations leverage experts, research and testing and only include science backed ingredients that are supportive of vulvar wellness. </p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
           }
         },
         "template--16826884096229__bb6fa93c-580c-4f56-ac2b-c29a63b74e12-column-3": {
@@ -95,7 +125,10 @@
             "title": "Self Love is Empowering",
             "text": "<p>We believe knowledge is power and a catalyst for change. Necessary change begins with women knowing and feeling comfortable with every part of their bodies.</p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
           }
         },
         "c3fc4fbc-7110-4025-b5cf-a35c02bdc389": {
@@ -105,7 +138,10 @@
             "title": "Proud to be Women",
             "text": "<p>We are by women and for all women. Being in this space comes with responsibility and we will always reflect and celebrate all types of womanhood.</p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
           }
         }
       },
@@ -118,17 +154,23 @@
       "settings": {
         "title": "<p>What We Stand For</p>",
         "heading_size": "h3",
+        "heading_alignment": "",
         "text": "",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 4,
+        "full_width": false,
+        "enable_desktop_slider": false,
         "column_alignment": "left",
+        "border_style": "none",
         "background_style": "none",
+        "background_color": "#ffffff",
         "button_label": "",
         "button_link": "",
         "color_scheme": "inverse",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
+        "show_slider_buttons": true,
         "padding_top": 72,
         "padding_bottom": 36
       }
@@ -148,6 +190,8 @@
           "settings": {
             "text": "<p>At Medicine Mama we create boldly pure vulva care that puts women of all ages and stages in touch with themselves, their bodies and womankind. We proudly say Vulva, because as women we have a responsibility to advance the dialogue that has been ignored and stigmatized for far too long. If it were up to us, every woman would know the difference between the vulva and vagina and would be empowered to talk about caring for them as freely as they talk about their 10-step skincare routine. Until then, we encourage you to join us as we create a supportive space for education, empowerment, and most importantly care for our bodies.</p>",
             "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
         },
@@ -156,7 +200,9 @@
           "settings": {
             "button_label": "Shop Now",
             "button_link": "shopify://collections/all-products",
-            "button_arrow": true
+            "button_arrow": true,
+            "big_button": false,
+            "button_subtitle": ""
           }
         }
       },
@@ -167,16 +213,36 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Our-Mission_563cca81-c643-4544-bea4-22edb429f3c6.jpg",
+        "video_autoplay": "autoplay",
         "media_type": "image",
         "height": "adapt",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
         "desktop_image_width": "small",
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
-        "color_scheme": "",
+        "color_scheme": "inverse",
         "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -232,7 +298,10 @@
             "title": "Dr. Carolyn Moyers",
             "text": "<p>Board Certified OBGYN, NAMS (North American Menopause Society) Certified Menopause Practitioner, and the founder and CEO of Sky Women’s Health.</p>",
             "link_label": "Learn More",
-            "link": "https://www.instagram.com/drcarolynmoyers/"
+            "link": "https://www.instagram.com/drcarolynmoyers/",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
           }
         },
         "template--16826884096229__579092b5-efcc-49ca-8c87-cde3d68f8c9a-column-2": {
@@ -242,7 +311,10 @@
             "title": "Dr. Sara Reardon",
             "text": "<p>Board Certified women's health and pelvic floor therapist specializing in the treatment of pelvic floor muscle dysfunction, Mom of 2, and Author of Floored.</p>",
             "link_label": "Learn More",
-            "link": "https://www.instagram.com/the.vagina.whisperer/"
+            "link": "https://www.instagram.com/the.vagina.whisperer/",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
           }
         }
       },
@@ -253,17 +325,23 @@
       "settings": {
         "title": "<p>Our Female Health Advisors</p>",
         "heading_size": "h2",
+        "heading_alignment": "",
         "text": "<p>To better serve our Medicine Mama family, we have engaged subject matter experts that can help us better serve you at every age and stage of womanhood.</p>",
         "image_width": "full",
         "image_ratio": "square",
         "columns_desktop": 2,
+        "full_width": false,
+        "enable_desktop_slider": false,
         "column_alignment": "center",
+        "border_style": "none",
         "background_style": "none",
+        "background_color": "#ffffff",
         "button_label": "",
         "button_link": "",
         "color_scheme": "inverse",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
+        "show_slider_buttons": true,
         "padding_top": 36,
         "padding_bottom": 36
       }

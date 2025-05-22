@@ -56,6 +56,18 @@
             "product_benefits": ""
           }
         },
+        "column_XULJfk": {
+          "type": "column",
+          "settings": {
+            "title": "<em>Origin - July 2024 - Medicine Mama VMAGIC®</em>",
+            "text": "<p><a href=\"https://www.theoriginway.com/blog/vulva-balm-reviews\" title=\"https://www.theoriginway.com/blog/vulva-balm-reviews\">We Tested 5 Vulva Balms: See Our Top Pick</a></p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
         "column_nHEMqc": {
           "type": "column",
           "settings": {
@@ -116,6 +128,18 @@
             "product_benefits": ""
           }
         },
+        "column_mbB4UR": {
+          "type": "column",
+          "settings": {
+            "title": "<em>Byrdie - October 2023 - Medicine Mama VMAGIC®</em>",
+            "text": "<p><a href=\"https://www.byrdie.com/october-2023-beauty-launches-8347917\" title=\"https://www.byrdie.com/october-2023-beauty-launches-8347917\">The Best Beauty Launches This Month</a></p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
         "column_f6QfqD": {
           "type": "column",
           "settings": {
@@ -133,11 +157,13 @@
         "column_apHVGt",
         "column_pYe4pL",
         "column_Bg6rAr",
+        "column_XULJfk",
         "column_nHEMqc",
         "column_AbiCQY",
         "column_XtYzyV",
         "column_LdwbnU",
         "column_qC7HCR",
+        "column_mbB4UR",
         "column_f6QfqD"
       ],
       "name": "t:sections.multicolumn.presets.name",
@@ -160,6 +186,7 @@
         "color_scheme": "inverse",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
+        "show_slider_buttons": true,
         "padding_top": 36,
         "padding_bottom": 0
       }
@@ -255,6 +282,7 @@
         "color_scheme": "inverse",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
+        "show_slider_buttons": true,
         "padding_top": 36,
         "padding_bottom": 36
       }

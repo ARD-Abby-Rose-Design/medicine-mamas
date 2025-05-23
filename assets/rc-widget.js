@@ -17,7 +17,6 @@ class RechargeWidget extends HTMLElement {
   }
 
   async initializeWidget () {
-      console.log('[RechargeWidget] initializeWidget started');
       await this.login();
 
       const section = this.closest('[data-section]');
@@ -28,31 +27,23 @@ class RechargeWidget extends HTMLElement {
       if (jsonScript && jsonScript.textContent?.trim()) {
         try {
           this.shopifyVariants = JSON.parse(jsonScript.textContent);
-          console.log('[RechargeWidget] Parsed shopifyVariants from:', scriptId, this.shopifyVariants);
         } catch (err) {
-          console.error('[RechargeWidget] Failed to parse product JSON from:', scriptId, err);
           this.shopifyVariants = [];
         }
       } else {
-        console.warn('[RechargeWidget] No ProductJson script found for section:', sectionId);
         this.shopifyVariants = [];
       }
 
       this.productID = this.querySelector('.widget')?.getAttribute('data-product-id');
       this.variantID = Number(this.querySelector('.widget')?.getAttribute('data-variant-id'));
-      console.log('[RechargeWidget] productID:', this.productID, 'variantID:', this.variantID);
 
       this.widget = await recharge.cdn.getCDNWidgetSettings(this.productID);
-      console.log('[RechargeWidget] widget settings:', this.widget);
 
       this.product = await recharge.cdn.getCDNProduct(this.productID);
-      console.log('[RechargeWidget] product:', this.product);
 
       this.setVariables(document.querySelector(':root'));
-      console.log('[RechargeWidget] CSS variables set');
 
       this.widgetTemplate = document.querySelector('.widget__template-radio');
-      console.log('[RechargeWidget] initial widgetTemplate:', this.widgetTemplate);
 
       switch(this.widget.widget_template_type) {
           case 'radio_group':
@@ -66,16 +57,10 @@ class RechargeWidget extends HTMLElement {
               break;
       }
 
-      console.log('[RechargeWidget] widgetTemplate after switch:', this.widgetTemplate);
-
       this.renderWidget();
-      console.log('[RechargeWidget] renderWidget called');
 
       if (this.session) {
-          console.log('[RechargeWidget] session exists, getting next shipment');
           this.getNextShipment();
-      } else {
-          console.warn('[RechargeWidget] No session found');
       }
   }
 
@@ -161,9 +146,6 @@ class RechargeWidget extends HTMLElement {
           subscribePrice = sellingVariant.prices.discounted_price;
 
       const shopifyVariant = this.shopifyVariants.find(v => String(v.id) === String(variantID));
-      console.log('[RechargeWidget] variantID:', variantID, typeof variantID);
-      console.log('[RechargeWidget] shopifyVariants:', this.shopifyVariants.map(v => [v.id, typeof v.id]));
-      console.log('[RechargeWidget] matched shopifyVariant:', shopifyVariant);
       const hasSellingPlans = shopifyVariant?.selling_plan_allocations?.length > 0;
 
       if (!hasSellingPlans) {
@@ -438,7 +420,6 @@ class RechargeWidget extends HTMLElement {
 
         const shopifyVariant = this.shopifyVariants.find(v => v.id === variantID);
         const hasSellingPlans = shopifyVariant?.selling_plan_allocations?.length > 0;
-        console.log('hasSellingPlans', hasSellingPlans);
 
         if (!hasSellingPlans) {
             document.querySelector('.widget').classList.add('visually-hidden');

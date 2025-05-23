@@ -161,140 +161,130 @@ function onKeyUpEscape(event) {
 }
 
 class StickyHeader extends HTMLElement {
-    constructor() {
-      super();
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    this.header = document.querySelector('.section-header');
+    this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' || this.getAttribute('data-sticky-type') === 'reduce-logo-size';
+    this.headerBounds = {};
+
+    this.setHeaderHeight();
+
+    window.matchMedia('(max-width: 990px)').addEventListener('change', this.setHeaderHeight.bind(this));
+
+    if (this.headerIsAlwaysSticky) {
+      this.header.classList.add('shopify-section-header-sticky');
+    };
+
+    this.currentScrollTop = 0;
+    this.preventReveal = false;
+    this.predictiveSearch = this.querySelector('predictive-search');
+
+    this.onScrollHandler = this.onScroll.bind(this);
+    this.hideHeaderOnScrollUp = () => this.preventReveal = true;
+
+    this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+    window.addEventListener('scroll', this.onScrollHandler, false);
+
+    this.createObserver();
+  }
+
+  setHeaderHeight() {
+    const headerHeight = this.header.offsetHeight;
+
+    document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+
+    const mainContent = document.getElementById('MainContent');
+    const firstSection = mainContent?.querySelector('.shopify-section');
+
+    const hasBelowHeaderDiv = firstSection?.querySelector('.section-below-header');
+    const isMobile = window.matchMedia('(max-width: 749px)').matches;
+    const isBanner = firstSection?.querySelector('.banner') !== null;
+
+    const shouldApplyMargin =
+      (hasBelowHeaderDiv && isMobile) || isBanner;
+
+    if (shouldApplyMargin) {
+      mainContent.style.marginTop = `-${headerHeight + 1}px`;
+    }
+  }
+
+  disconnectedCallback() {
+    this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+    window.removeEventListener('scroll', this.onScrollHandler);
+  }
+
+  createObserver() {
+    let observer = new IntersectionObserver((entries, observer) => {
+      this.headerBounds = entries[0].intersectionRect;
+      observer.disconnect();
+    });
+
+    observer.observe(this.header);
+  }
+
+  onScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
+
+    if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+      this.header.classList.add('scrolled-past-header');
+      if (this.preventHide) return;
+      requestAnimationFrame(this.hide.bind(this));
+    } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+      this.header.classList.add('scrolled-past-header');
+      if (!this.preventReveal) {
+        requestAnimationFrame(this.reveal.bind(this));
+      } else {
+        window.clearTimeout(this.isScrolling);
+
+        this.isScrolling = setTimeout(() => {
+          this.preventReveal = false;
+        }, 66);
+
+        requestAnimationFrame(this.hide.bind(this));
+      }
+    } else if (scrollTop <= this.headerBounds.top) {
+      this.header.classList.remove('scrolled-past-header');
+      requestAnimationFrame(this.reset.bind(this));
     }
 
-    connectedCallback() {
-      this.header = document.querySelector('.section-header');
-      this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' || this.getAttribute('data-sticky-type') === 'reduce-logo-size';
-      this.headerBounds = {};
+    this.currentScrollTop = scrollTop;
+  }
 
-      this.setHeaderHeight();
+  hide() {
+    if (this.headerIsAlwaysSticky) return;
+    this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
+    this.closeMenuDisclosure();
+    this.closeSearchModal();
+  }
 
-      window.matchMedia('(max-width: 990px)').addEventListener('change', this.setHeaderHeight.bind(this));
+  reveal() {
+    if (this.headerIsAlwaysSticky) return;
+    this.header.classList.add('shopify-section-header-sticky', 'animate');
+    this.header.classList.remove('shopify-section-header-hidden');
+  }
 
-      if (this.headerIsAlwaysSticky) {
-        this.header.classList.add('shopify-section-header-sticky');
-      };
+  reset() {
+    if (this.headerIsAlwaysSticky) return;
+    this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
+  }
 
-      this.currentScrollTop = 0;
-      this.preventReveal = false;
-      this.predictiveSearch = this.querySelector('predictive-search');
+  closeMenuDisclosure() {
+    this.disclosures = this.disclosures || this.header.querySelectorAll('header-menu');
+    this.disclosures.forEach(disclosure => disclosure.close());
+  }
 
-      this.onScrollHandler = this.onScroll.bind(this);
-      this.hideHeaderOnScrollUp = () => this.preventReveal = true;
-
-      this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-      window.addEventListener('scroll', this.onScrollHandler, false);
-
-      this.createObserver();
-    }
-
-setHeaderHeight() {
-  const headerHeight = this.header.offsetHeight;
-  console.log('[setHeaderHeight] headerHeight:', headerHeight);
-
-  document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
-  
-  const mainContent = document.getElementById('MainContent');
-  const firstSection = mainContent?.querySelector('.shopify-section');
-  console.log('[setHeaderHeight] firstSection:', firstSection);
-
-  const hasBelowHeaderDiv = firstSection?.querySelector('.section-below-header');
-  const isImageWithText = firstSection?.querySelector('.image-with-text');
-  const isMobile = window.matchMedia('(max-width: 749px)').matches;
-
-  console.log('[setHeaderHeight] hasBelowHeaderDiv:', !!hasBelowHeaderDiv);
-  console.log('[setHeaderHeight] isImageWithText:', !!isImageWithText);
-  console.log('[setHeaderHeight] isMobile:', isMobile);
-
-  const shouldApplyMargin =
-    hasBelowHeaderDiv &&
-    (!isImageWithText || (isImageWithText && isMobile));
-
-  console.log('[setHeaderHeight] shouldApplyMargin:', shouldApplyMargin);
-
-  if (shouldApplyMargin) {
-    mainContent.style.marginTop = `-${headerHeight}px`;
-    console.log('[setHeaderHeight] applied marginTop:', `-${headerHeight}px`);
+  closeSearchModal() {
+    this.searchModal = this.searchModal || this.header.querySelector('details-modal');
+    this.searchModal.close(false);
   }
 }
 
-    disconnectedCallback() {
-      this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-      window.removeEventListener('scroll', this.onScrollHandler);
-    }
-
-    createObserver() {
-      let observer = new IntersectionObserver((entries, observer) => {
-        this.headerBounds = entries[0].intersectionRect;
-        observer.disconnect();
-      });
-
-      observer.observe(this.header);
-    }
-
-    onScroll() {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
-
-      if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-        this.header.classList.add('scrolled-past-header');
-        if (this.preventHide) return;
-        requestAnimationFrame(this.hide.bind(this));
-      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-        this.header.classList.add('scrolled-past-header');
-        if (!this.preventReveal) {
-          requestAnimationFrame(this.reveal.bind(this));
-        } else {
-          window.clearTimeout(this.isScrolling);
-
-          this.isScrolling = setTimeout(() => {
-            this.preventReveal = false;
-          }, 66);
-
-          requestAnimationFrame(this.hide.bind(this));
-        }
-      } else if (scrollTop <= this.headerBounds.top) {
-        this.header.classList.remove('scrolled-past-header');
-        requestAnimationFrame(this.reset.bind(this));
-      }
-
-      this.currentScrollTop = scrollTop;
-    }
-
-    hide() {
-      if (this.headerIsAlwaysSticky) return;
-      this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
-      this.closeMenuDisclosure();
-      this.closeSearchModal();
-    }
-
-    reveal() {
-      if (this.headerIsAlwaysSticky) return;
-      this.header.classList.add('shopify-section-header-sticky', 'animate');
-      this.header.classList.remove('shopify-section-header-hidden');
-    }
-
-    reset() {
-      if (this.headerIsAlwaysSticky) return;
-      this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
-    }
-
-    closeMenuDisclosure() {
-      this.disclosures = this.disclosures || this.header.querySelectorAll('header-menu');
-      this.disclosures.forEach(disclosure => disclosure.close());
-    }
-
-    closeSearchModal() {
-      this.searchModal = this.searchModal || this.header.querySelector('details-modal');
-      this.searchModal.close(false);
-    }
-  }
-
-  customElements.define('sticky-header', StickyHeader);
+customElements.define('sticky-header', StickyHeader);
 
 class QuantityInput extends HTMLElement {
   constructor() {
@@ -526,7 +516,6 @@ class MenuDrawer extends HTMLElement {
     const parentMenuElement = detailsElement.closest('.has-submenu');
     const isOpen = detailsElement.hasAttribute('open');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    console.log
 
     function addTrapFocus() {
       trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
@@ -654,7 +643,7 @@ class HeaderDrawer extends MenuDrawer {
   }
 
   close() {
-    this.classList.remove('active','animate');
+    this.classList.remove('active', 'animate');
     removeTrapFocus(this.activeElement);
     document.body.classList.remove(`overflow-hidden-${this.dataset.breakpoint}`);
   }
@@ -777,6 +766,7 @@ class SliderComponent extends HTMLElement {
     if (!this.slider || !this.nextButton) return;
 
     this.initPages();
+    this.setupDotNavigation();
     const resizeObserver = new ResizeObserver((entries) => this.initPages());
     resizeObserver.observe(this.slider);
 
@@ -785,6 +775,7 @@ class SliderComponent extends HTMLElement {
     this.nextButton.addEventListener('click', this.onButtonClick.bind(this));
     this.setupCustomPlayButtons();
   }
+
   setupCustomPlayButtons() {
     const sliderButtons = this.querySelectorAll('.custom-play-button');
     sliderButtons.forEach((button) => {
@@ -878,6 +869,14 @@ class SliderComponent extends HTMLElement {
     } else {
       this.nextButton.removeAttribute('disabled');
     }
+
+    if (this.dotButtons && this.dotButtons.length > 0) {
+      this.dotButtons.forEach((dot, idx) => {
+        const isActive = idx + 1 === this.currentPage;
+        dot.classList.toggle('is-active', isActive);
+        dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+    }
   }
 
   isSlideVisible(element, offset = 0) {
@@ -900,6 +899,21 @@ class SliderComponent extends HTMLElement {
       left: position,
     });
   }
+
+  setupDotNavigation() {
+    this.dotButtons = this.querySelectorAll('.slider-dot');
+    if (this.dotButtons.length > 0) {
+      this.dotButtons.forEach((dot) => {
+        dot.addEventListener('click', (e) => {
+          const index = parseInt(e.currentTarget.dataset.index, 10);
+          if (!isNaN(index)) {
+            this.setSlidePosition((index - 1) * this.sliderItemOffset);
+          }
+        });
+      });
+    }
+  }
+
 }
 
 customElements.define('slider-component', SliderComponent);
@@ -996,7 +1010,7 @@ class SlideshowComponent extends SliderComponent {
 
   setSlidePosition(position) {
     if (this.setPositionTimeout) clearTimeout(this.setPositionTimeout);
-    this.setPositionTimeout = setTimeout (() => {
+    this.setPositionTimeout = setTimeout(() => {
       this.slider.scrollTo({
         left: position,
       });
@@ -1142,7 +1156,7 @@ class SlideshowComponent extends SliderComponent {
     const slideScrollPosition =
       this.slider.scrollLeft +
       this.sliderFirstItemNode.clientWidth *
-        (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
+      (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
     this.slider.scrollTo({
       left: slideScrollPosition,
     });
@@ -1191,7 +1205,7 @@ class VariantSelects extends HTMLElement {
         })
         .includes(false);
     });
-   
+
   }
 
   updateMedia() {
@@ -1281,9 +1295,8 @@ class VariantSelects extends HTMLElement {
     const requestedVariantId = this.currentVariant.id;
     const sectionId = this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section;
 
-    const fetchUrl = `${this.dataset.url}?variant=${requestedVariantId}&section_id=${
-      sectionId
-    }`;
+    const fetchUrl = `${this.dataset.url}?variant=${requestedVariantId}&section_id=${sectionId
+      }`;
 
 
     fetch(fetchUrl)
@@ -1308,7 +1321,7 @@ class VariantSelects extends HTMLElement {
     const addButton = productForm.querySelector('[name="add"]');
     const addButtonText = productForm.querySelector('[name="add"] > span');
     if (!addButton) return;
-  
+
     if (disable) {
       addButton.setAttribute('disabled', 'disabled');
       if (text) addButtonText.textContent = text;
@@ -1496,19 +1509,19 @@ class HorizontalScroller extends HTMLElement {
 
 
   checkScrollButtons() {
-    if(this.content.scrollLeft <= 10) {
+    if (this.content.scrollLeft <= 10) {
       this.previousButton.classList.add('disabled')
     } else {
       this.previousButton.classList.remove('disabled')
     }
-    if(this.content.scrollLeft >= this.content.scrollWidth - this.content.clientWidth - 50) {
+    if (this.content.scrollLeft >= this.content.scrollWidth - this.content.clientWidth - 50) {
       this.nextButton.classList.add('disabled')
     } else {
       this.nextButton.classList.remove('disabled')
     }
   }
 
-  
+
 }
 
 customElements.define('horizontal-scroller', HorizontalScroller);

@@ -120,8 +120,8 @@
         {%- endunless -%}
       {%- endfor -%}
     </ul>
-    {%- unless is_duplicate -%}
-      <div class="slider-buttons no-js-hidden quick-add-hidden{% if hide_mobile_slider %} small-hide{% endif %}">
+  {%- unless is_duplicate -%}
+      <div class="slider-buttons no-js-hidden quick-add-hidden small-hide">
         <button
           type="button"
           class="slider-button slider-button--prev"
@@ -146,6 +146,21 @@
         </button>
       </div>
     {%- endunless -%}
+    <div class="slider-pagination-wrapper medium-up-hide">
+      <ul class="slider-pagination" role="tablist">
+        {%- for i in (1..media_count) -%}
+          <li>
+            <button
+              class="slider-dot{% if forloop.index == 1 %} is-active{% endif %}"
+              data-index="{{ forloop.index }}"
+              role="tab"
+              aria-label="Go to slide {{ forloop.index }}"
+              aria-selected="{% if forloop.index == 1 %}true{% else %}false{% endif %}"
+            ></button>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
   </slider-component>
   {%- if first_3d_model -%}
     <button

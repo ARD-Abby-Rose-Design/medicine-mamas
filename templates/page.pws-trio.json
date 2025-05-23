@@ -791,7 +791,6 @@
         "image_zoom": "hover",
         "hide_variants": false,
         "enable_video_looping": false,
-        "show_full_details": true,
         "padding_top": 36,
         "padding_bottom": 36
       }

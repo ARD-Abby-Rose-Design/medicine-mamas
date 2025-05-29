@@ -33,8 +33,8 @@
         "heading_with_line_breaks_j4HyPr": {
           "type": "heading_with_line_breaks",
           "settings": {
-            "heading_with_line_breaks": "<p>For gentle, <br/>non-irritating, <br/>pH-balanced  <br/>odor control</p>",
-            "heading_with_line_breaks_size": "hlarge"
+            "heading_with_line_breaks": "<p>For gentle, <br/>non-irritating, <br/>pH-balanced <br/>odor control</p>",
+            "heading_with_line_breaks_size": "hmedium"
           }
         },
         "text_WfCCNY": {
@@ -64,7 +64,6 @@
         "text_WfCCNY",
         "button_bCDFCN"
       ],
-      "name": "Media with text",
       "settings": {
         "image": "shopify://shop_images/medicine-mama-vmagic-vulva-wash.jpg",
         "video_autoplay": "autoplay",
@@ -101,16 +100,26 @@
         "padding_bottom": 36
       }
     },
+    "custom_liquid_nWJ746": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n@media screen and (max-width: 750px) {\n.hmedium {\n    font-size: 37px;\n}\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "featured_review_bJ3gVn": {
       "type": "featured-review",
-      "name": "Featured Review",
       "settings": {
         "review_product": "VMAGIC® VULVA WASH",
         "review_name": "Erika",
         "review_title": "",
         "review_text": "<p>“It made an<strong> immediate and positive difference</strong> <strong>with</strong> <strong>odor</strong> and general comfort.”</p>",
         "show_desktop": false,
-        "show_mobile": true
+        "show_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "media_overlay_with_text_dgCQkB": {
@@ -171,7 +180,6 @@
         "text_njJjE8",
         "text_TKwnwM"
       ],
-      "name": "Media overlay with text",
       "settings": {
         "video": "shopify://files/videos/mm-collage-video.mp4",
         "media_type": "video",
@@ -234,7 +242,6 @@
         "text_XWzWwd",
         "text_GDjqhK"
       ],
-      "name": "Scrolling marquee",
       "settings": {
         "color_scheme": "inverse",
         "type": "text",
@@ -256,7 +263,6 @@
       "block_order": [
         "heading_ezU3yX"
       ],
-      "name": "t:sections.rich-text.presets.name",
       "settings": {
         "show_desktop": true,
         "show_mobile": true,
@@ -341,7 +347,6 @@
         "icon_with_text_V6FKbp",
         "benefits_ingredients_meYtN9"
       ],
-      "name": "t:sections.featured-product.presets.name",
       "settings": {
         "product": "vmagic-feminine-wash",
         "color_scheme": "inverse",
@@ -385,7 +390,6 @@
         "heading_FqXykr",
         "text_Nd4CNX"
       ],
-      "name": "Media with text",
       "settings": {
         "video": "shopify://files/videos/mm-vulva-wash-facts_social.mp4",
         "video_autoplay": "",
@@ -429,14 +433,13 @@
           "type": "heading",
           "settings": {
             "heading": "When should I use a feminine WaSH?",
-            "heading_size": "hlarge"
+            "heading_size": "hmedium"
           }
         }
       },
       "block_order": [
         "heading_jQt9FM"
       ],
-      "name": "t:sections.rich-text.presets.name",
       "settings": {
         "show_desktop": true,
         "show_mobile": true,
@@ -444,7 +447,7 @@
         "content_alignment": "center",
         "color_scheme": "inverse",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
@@ -478,7 +481,6 @@
         "text_card_rcBUNr",
         "text_card_9Fw9ke"
       ],
-      "name": "Text cards",
       "settings": {
         "color_scheme": "inverse",
         "padding_top": 36,
@@ -509,7 +511,6 @@
         "heading_di9MMm",
         "image_nAeaAr"
       ],
-      "name": "Media with stacked text",
       "settings": {
         "image": "shopify://shop_images/frame-1000004920.jpg",
         "video_autoplay": "autoplay",
@@ -557,7 +558,7 @@
         "column_7ghEfj": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/mm-vulva_wash-included_products.jpg",
+            "image": "shopify://shop_images/5a1b5ac857c18e6e0ced6a7508725c31995607f9.jpg",
             "title": "<strong>Step 1</strong>",
             "text": "<p>Dispense a quarter size amount of the <strong>VMAGIC® Feminine Wash</strong> product into hands or soft sponge and apply directly to skin. Rinse clean with warm water. Gently dry.</p>",
             "link_label": "",
@@ -592,7 +593,6 @@
         "column_7ghEfj",
         "column_njwcCz"
       ],
-      "name": "Multicolumn with text",
       "settings": {
         "video_autoplay": "autoplay",
         "media_type": "image",
@@ -638,7 +638,6 @@
       "block_order": [
         "heading_pnL9RD"
       ],
-      "name": "Media with text",
       "settings": {
         "image": "shopify://shop_images/mm-vulva-wash-ingredients_50f325a0-99b3-4ab5-bef9-f6e76edcb473.jpg",
         "video_autoplay": "autoplay",
@@ -711,7 +710,6 @@
         "text_CNP4VF",
         "text_FDgtkw"
       ],
-      "name": "Media with text",
       "settings": {
         "video": "shopify://files/videos/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
         "video_autoplay": "autoplay",
@@ -799,7 +797,6 @@
         "collapsible_row_NUezYX",
         "collapsible_row_eNdD99"
       ],
-      "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
         "heading": "Questions?",
@@ -819,6 +816,7 @@
   "order": [
     "main",
     "image_with_text_zAmjDz",
+    "custom_liquid_nWJ746",
     "featured_review_bJ3gVn",
     "media_overlay_with_text_dgCQkB",
     "scrolling_marquee_fTQEHH",

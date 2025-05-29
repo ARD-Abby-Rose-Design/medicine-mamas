@@ -38,7 +38,7 @@
    }
 
    @media screen and (min-width: 980px) {
-     #ImageWithText--{{ section.id }} .image-with-text__content {
+     #multicolumn-with-text--{{ section.id }} .image-with-text__content {
        padding-left: {{ section.settings.desktop_content_padding_left }}px !important;
        padding-right: {{ section.settings.desktop_content_padding_right }}px !important;
        }
@@ -51,6 +51,10 @@
     background-color: {{ section.settings.background_color }} !important;
   }
   {% endif %}
+
+  .multicolumn-with-text .button {
+    margin-top: 0;
+  }
 
 
   .multicolumn-with-text .multicolumn-card-spacing {
@@ -222,7 +226,7 @@
                           {%- endif -%}
                         </div>
                         {%- if block.settings.product != blank -%}
-                          <div class="multicolumn-card__product" style="display: block;">
+                          <div class="multicolumn-card__product">
                             <div
                               id="multicolumn-card__product-card--{{ block.id }}"
                               class="multicolumn-card__product-card"
@@ -257,7 +261,7 @@
             </ul>
 
             {%- if show_mobile_slider -%}
-              <div class="slider-buttons no-js-hidden medium-hide">
+              <div class="slider-buttons no-js-hidden small-hide medium-hide">
                 <button
                   type="button"
                   class="slider-button slider-button--prev"

@@ -445,6 +445,11 @@ a.product__text {
   display: none;
 }
 
+
+.product-form__submit--price s {
+  opacity: 0.5;
+}
+
 @media screen and (min-width: 750px) {
   .product__info-container {
     max-width: 60rem;
@@ -1688,6 +1693,11 @@ a.product__text {
 }
 
 .product__checkmarks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
   margin: 2rem 0;
 
 }
@@ -1696,6 +1706,8 @@ a.product__text {
   .product__checkmarks {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 3rem;
   }
   .product__checkmark + .product__checkmark {
     margin-left: 1.5rem;
@@ -1703,9 +1715,7 @@ a.product__text {
 }
 
 @media screen and (max-width: 1199px) {
-  .product__checkmark + .product__checkmark {
-    margin-top: .75rem;
-  }
+  
   .product__checkmarks {
     margin-bottom: 2rem;
   }

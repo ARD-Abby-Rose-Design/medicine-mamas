@@ -502,10 +502,13 @@ class RechargeWidget extends HTMLElement {
     }
 
     if (selected === 'one-time' && compareAtPrice && compareAtPrice > price) {
-      addButtonPriceEl.innerHTML = `<span><s>$${compareAtPrice}</s></span><span> $${price}</span>`;
-    } else {
+      addButtonPriceEl.innerHTML = `<span>$${newPrice}&nbsp;</span><span><s>$${compareAtPrice}</s></span>`;
+    } else if (selected === 'subscription' && compareAtPrice && compareAtPrice > subscribePrice) {
+      addButtonPriceEl.innerHTML = `<span>$${newPrice}&nbsp;</span><span><s>$${compareAtPrice}</s></span>`;
+    }  else  {
       addButtonPriceEl.innerHTML = `$${newPrice}`;
     }
+    
   }
 
   renderDetails() {

@@ -64,7 +64,6 @@
         "text_ECHdDh",
         "button_8rfWc8"
       ],
-      "name": "Media with text",
       "settings": {
         "image": "shopify://shop_images/f58f0cbaa668b7c126c4de955a6fa8555f6b5f1e.png",
         "video_autoplay": "autoplay",
@@ -123,7 +122,6 @@
         "text_7FkGWY",
         "heading_jCRAeN"
       ],
-      "name": "t:sections.rich-text.presets.name",
       "settings": {
         "show_desktop": true,
         "show_mobile": true,
@@ -137,7 +135,6 @@
     },
     "featured_reviews_8qLNGU": {
       "type": "featured-reviews",
-      "name": "Featured reviews",
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,
@@ -174,7 +171,6 @@
         "text_NyHrpf",
         "text_Qdgda6"
       ],
-      "name": "Scrolling marquee",
       "settings": {
         "color_scheme": "inverse",
         "type": "text",
@@ -196,7 +192,6 @@
       "block_order": [
         "heading_dgJzRa"
       ],
-      "name": "t:sections.rich-text.presets.name",
       "settings": {
         "show_desktop": true,
         "show_mobile": true,
@@ -250,7 +245,6 @@
         "product_cmBKB3",
         "product_HDTRLc"
       ],
-      "name": "Products accordion",
       "settings": {
         "color_scheme": "inverse",
         "background_style": "primary",
@@ -272,7 +266,6 @@
       "block_order": [
         "heading_grx7eV"
       ],
-      "name": "t:sections.rich-text.presets.name",
       "settings": {
         "show_desktop": true,
         "show_mobile": true,
@@ -363,7 +356,6 @@
         "icon_with_text_q3MVyc",
         "included_products_P63Rbg"
       ],
-      "name": "t:sections.featured-product.presets.name",
       "settings": {
         "product": "vmagic-grooming-kit",
         "color_scheme": "inverse",
@@ -462,7 +454,6 @@
         "column_xWXkDP",
         "column_HA7y7A"
       ],
-      "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "<p>THE GROOMING ROUTINE<br/>EVERYONE IS TALKING ABOUT</p>",
         "heading_size": "hmedium",
@@ -506,7 +497,6 @@
       "block_order": [
         "button_9C8qBV"
       ],
-      "name": "t:sections.rich-text.presets.name",
       "settings": {
         "show_desktop": true,
         "show_mobile": true,
@@ -540,7 +530,6 @@
         "heading_zMPWTh",
         "text_63UE8W"
       ],
-      "name": "t:sections.rich-text.presets.name",
       "settings": {
         "show_desktop": true,
         "show_mobile": true,
@@ -588,7 +577,6 @@
         "steps_card_NABeb3",
         "steps_card_ey6DcD"
       ],
-      "name": "Steps",
       "settings": {
         "color_scheme": "inverse",
         "padding_top": 0,
@@ -610,7 +598,6 @@
       "block_order": [
         "heading_DLjyRB"
       ],
-      "name": "Richt text with button",
       "settings": {
         "show_desktop": true,
         "show_mobile": false,
@@ -657,7 +644,6 @@
         "button_VJwQPe",
         "heading_xUnztx"
       ],
-      "name": "t:sections.rich-text.presets.name",
       "settings": {
         "show_desktop": false,
         "show_mobile": true,
@@ -689,7 +675,6 @@
     },
     "custom_liquid_b8aeM9": {
       "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<style>\n\n.okeReviews[data-oke-container].oke-w, div.okeReviews.oke-w {\nmax-width: none !important;\n}\n\n.oke-w-reviews-list-item {\nbackground-color: white;\nborder-radius: 10px;\nmargin-bottom: 10px;\n}\n\n.oke-w-reviewSplit-left {\nborder-right: 1px solid #D9D9D9 !important;\npadding-right: 1rem !important;\n}\n\n.oke-w-reviews-head, .oke-w-reviews-controls, .oke-w-header {\ndisplay: none !important;\nopacity: 0 !important;\n}\n\n@media screen and (max-width: 750px) {\n\n.oke-w-reviewSplit-main {\nalign-items: flex-start !important;\njustify-content: space-between !important;\ngap: 1.4rem !important;\npadding: 1.4rem !important;\n}\n\n.oke-w-reviewSplit-mid {\nmargin-top: 0px !important;\ntext-align: left !important;\n}\n\n.oke-w-reviewSplit-left {\ntext-align: left !important;\nborder-right: none !important;\n}\n}\n</style>",
         "color_scheme": "",
@@ -704,14 +689,13 @@
           "type": "heading",
           "settings": {
             "heading": "TRIED, TRIMMED AND APPROVED",
-            "heading_size": "hlarge"
+            "heading_size": "hmedium"
           }
         }
       },
       "block_order": [
         "heading_Yy98nX"
       ],
-      "name": "t:sections.rich-text.presets.name",
       "settings": {
         "show_desktop": true,
         "show_mobile": true,
@@ -761,7 +745,6 @@
         "slide_kCEmky",
         "slide_WwAxaq"
       ],
-      "name": "Social Slider",
       "settings": {
         "color_scheme": "inverse",
         "padding_top": 0,
@@ -787,7 +770,6 @@
       "block_order": [
         "button_JpXLLi"
       ],
-      "name": "t:sections.rich-text.presets.name",
       "settings": {
         "show_desktop": true,
         "show_mobile": true,
@@ -841,7 +823,6 @@
         "collapsible_row_PRGzNn",
         "collapsible_row_XaxKaJ"
       ],
-      "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
         "heading": "Questions?",

@@ -136,7 +136,7 @@
     }
   }
 
-  @media screen and (min-width: 750px) and(max-width: 1024px) {
+  @media screen and (min-width: 750px) and (max-width: 1024px) {
 
     .products-accordion__body-title {
       max-width: 85%;

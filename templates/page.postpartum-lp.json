@@ -1,0 +1,504 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_JLj6Wk": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_xMRWBT": {
+          "type": "heading",
+          "settings": {
+            "heading": "things i wish my ob-gyn told me to prepare for postpartum",
+            "heading_size": "hmedium"
+          }
+        },
+        "text_DtpD8H": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The postpartum symptoms no one talks about, and what you can do about it - keep reading.</p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "button_3VcMnY": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop the Total Care Gift Set",
+            "button_link": "shopify://products/postpartum-care-kit",
+            "button_arrow": true,
+            "big_button": false,
+            "button_subtitle": "<a href=\"/products/postpartum-care-kit\" title=\"Push to Postpartum: Total Care Gift Set\">READ MORE</a>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xMRWBT",
+        "text_DtpD8H",
+        "button_3VcMnY"
+      ],
+      "name": "Media with text",
+      "settings": {
+        "image": "shopify://shop_images/530de05f5f2711e3fd8499e56db24b3f7dbcff8f.png",
+        "video_autoplay": "autoplay",
+        "media_type": "image",
+        "height": "adapt",
+        "media_caption": "<p>30-Day Risk-Free Guarantee</p>",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "solid",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 0,
+        "desktop_content_padding_right": 116,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "full_width": true,
+        "below_header": true,
+        "mobile_content_alignment": "center",
+        "media_caption_position_mobile": "bottom-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "image_text_banner_BLiiA3": {
+      "type": "image-text-banner",
+      "blocks": {
+        "heading_CUnKaj": {
+          "type": "heading",
+          "settings": {
+            "heading": "During postpartum women experience the largest drop in hormones in their lifetime.",
+            "heading_size": "hmedium"
+          }
+        },
+        "text_6idMFT": {
+          "type": "text",
+          "settings": {
+            "text": "It’s like going from taking 100 birth control pills to 0 over the course of 3 days post-delivery.",
+            "text_style": "text-body-large"
+          }
+        },
+        "text_box_eVUQtW": {
+          "type": "text_box",
+          "settings": {
+            "heading": "<p>SO WHY DOES IT <br/>MATTER?</p>",
+            "text": "<p><strong>Low estrogen causes symptoms that mimic menopause, like vaginal dryness and pain during sex. </strong>Breastfeeding and pumping moms will be living in a low-estrogen state until they stop nursing, and if you aren’t breastfeeding, it can still take weeks for hormones to get back in balance</p>"
+          }
+        },
+        "text_box_eRFmj9": {
+          "type": "text_box",
+          "settings": {
+            "heading": "<p>AND what can <br/>you do?</p>",
+            "text": "<p><strong>Address some of the side effects by giving yourself time to recover and arm yourself with effective products to treat the symptoms. </strong>A few of our OB-GYN approved recommendations:</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CUnKaj",
+        "text_6idMFT",
+        "text_box_eVUQtW",
+        "text_box_eRFmj9"
+      ],
+      "name": "Image text banner",
+      "settings": {
+        "image": "shopify://shop_images/494e9f9467c105e4f8675408c41dee4ff64dbf3e.png",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "show_desktop": true,
+        "below_header": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "accent-1",
+        "image_behavior": "none",
+        "show_mobile": false,
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "image_with_text_TnwyyU": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_wihtnm": {
+          "type": "heading",
+          "settings": {
+            "heading": "During Postpartum...",
+            "heading_size": "hmedium"
+          }
+        },
+        "text_bBUQWe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Women have the single largest drop in hormones  in their lifetime. It’s like going from taking 100 birth control pills to 0 over the course of 3 days  post-delivery. </p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_wihtnm",
+        "text_bBUQWe"
+      ],
+      "name": "Media with text",
+      "settings": {
+        "image": "shopify://shop_images/494e9f9467c105e4f8675408c41dee4ff64dbf3e.png",
+        "video_autoplay": "autoplay",
+        "media_type": "image",
+        "height": "adapt",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": false,
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "text_first",
+        "full_width": false,
+        "below_header": false,
+        "mobile_content_alignment": "center",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_bLwLLm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_eQwkj8": {
+          "type": "heading",
+          "settings": {
+            "heading": "So why does it matter?",
+            "heading_size": "h3"
+          }
+        },
+        "text_gNGPPT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Low estrogen causes symptoms that mimic menopause, like vaginal dryness and pain during sex. Breastfeeding and pumping moms will be living in a low-estrogen state until they stop nursing, and if you aren’t breastfeeding, it can still take weeks for hormones to get back in balance</p>",
+            "text_style": "text-body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_eQwkj8",
+        "text_gNGPPT"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": false,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_nnd4H3": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tQNj46": {
+          "type": "heading",
+          "settings": {
+            "heading": "What can you do to address some of these side effects?",
+            "heading_size": "h3"
+          }
+        },
+        "text_mPTAWp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Give yourself time to recover and arm yourself with effective products to treat the symptoms. A few of our OB-GYN approved recommendations:</p>",
+            "text_style": "text-body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tQNj46",
+        "text_mPTAWp"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 0
+      }
+    },
+    "products_accordion_Yfw8tW": {
+      "type": "products-accordion",
+      "blocks": {
+        "product_4gq9wM": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-vulvar-balm-skincare-jar",
+            "image": "shopify://shop_images/medicine-mama-vulva-balm-1_dade95b1-916d-4825-9049-940e941795ad.jpg",
+            "show_review": true,
+            "reviewer_name": "<p>M.H.</p>",
+            "review_title": "Highly recommend",
+            "review_text": "<p>“Highly recommend. New mama in the postpartum recovery phase. Developed bad itches from pads and I’ve tried all the assortments from witch hazel, cortisone cream, different types of rash creams and NONE WORKS!! The cream helped with itches and worked so much better than anything else. It didn’t take everything away but I’m definitely now finally able to get some rest between the feedings finally!”</p>"
+          }
+        },
+        "product_79MDc7": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-feminine-lips-stick",
+            "image": "shopify://shop_images/mm-collage2-image.png",
+            "show_review": true,
+            "reviewer_name": "<p>Kristin B.</p>",
+            "review_title": "You need this!",
+            "review_text": "<p>“My skin down there has never looked better. I use this twice a day. I had little razor bumps which are completely gone. This makes my skin better prepped for when I shave I feel, causing less bumps overall.”</p>"
+          }
+        },
+        "product_kQfNDJ": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-feminine-wash",
+            "image": "shopify://shop_images/medicine-mama-vmagic-vulva-wash_26347b8e-36af-4dbf-ba21-d6f4cfd55ce0.jpg",
+            "show_review": true,
+            "reviewer_name": "<p>Cindy</p>",
+            "review_title": "Truly Magic!",
+            "review_text": "<p>“I love love LOVE that this is a pump bottle. So easy to use. The consistency is thin but not too thin, which makes this very easy to rinse off. I feel clean. I would definitely recommend this to anyone.”</p>"
+          }
+        },
+        "product_VcTB3R": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "show_review": false,
+            "reviewer_name": "<p>John Doe</p>",
+            "review_title": "Great product!",
+            "review_text": "<p>This is a great product!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "product_4gq9wM",
+        "product_79MDc7",
+        "product_kQfNDJ",
+        "product_VcTB3R"
+      ],
+      "name": "Products accordion",
+      "settings": {
+        "color_scheme": "inverse",
+        "background_style": "primary",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "scrolling_marquee_QVMYhe": {
+      "type": "scrolling-marquee",
+      "blocks": {
+        "text_Ferd3i": {
+          "type": "text",
+          "settings": {
+            "text": "Neat."
+          }
+        },
+        "text_ebarKg": {
+          "type": "text",
+          "settings": {
+            "text": "Neat."
+          }
+        },
+        "text_dcB8Rz": {
+          "type": "text",
+          "settings": {
+            "text": "Neat."
+          }
+        }
+      },
+      "block_order": [
+        "text_Ferd3i",
+        "text_ebarKg",
+        "text_dcB8Rz"
+      ],
+      "name": "Scrolling marquee",
+      "settings": {
+        "color_scheme": "inverse",
+        "type": "text",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_tG7tic": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_iHXEkX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop postpartum Relief",
+            "heading_size": "hmedium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_iHXEkX"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 24
+      }
+    },
+    "1748745503e13e92d3": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_Rww8YM": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "postpartum-care-kit",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_Rww8YM"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_liquid_acV7C6": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n\n.okeReviews[data-oke-container].oke-w, div.okeReviews.oke-w {\nmax-width: none !important;\n}\n\n.oke-w-reviews-list-item {\nbackground-color: white;\nborder-radius: 10px;\nmargin-bottom: 10px;\n}\n\n.oke-w-reviewSplit-left {\nborder-right: 1px solid #D9D9D9 !important;\npadding-right: 1rem !important;\n}\n\n.oke-w-reviews-head, .oke-w-reviews-controls, .oke-w-header {\ndisplay: none !important;\nopacity: 0 !important;\n}\n\n@media screen and (max-width: 750px) {\n\n.oke-w-reviewSplit-main {\nalign-items: flex-start !important;\njustify-content: space-between !important;\ngap: 1.4rem !important;\npadding: 1.4rem !important;\n}\n\n.oke-w-reviewSplit-mid {\nmargin-top: 0px !important;\ntext-align: left !important;\n}\n\n.oke-w-reviewSplit-left {\ntext-align: left !important;\nborder-right: none !important;\n}\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collapsible_content_nxBKXa": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_CjFcCT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I only need to use these products during postpartum?",
+            "row_content": "<p>While dryness peaks during postpartum due to the drop in hormones. Our pregnancy to postpartum kit was designed to support mama's through all stages of pregnancy - from conception to postpartum.While trying to conceive our kit can help relieve irritation from intimate activity.During pregnancy use the Vulva Balm as a pregnancy safe rich moisturizer to soothe skin as it stretches and becomes itchy. We also recommend our natural Vulva Wash to cleanse without disrupting your natural pH.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_79JxNH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use these products if I am pregnant?",
+            "row_content": "<p>There are no ingredients that should restrict use during pregnancy. However, we always recommend consulting with your physician before starting any personal care regimen while pregnant or trying to conceive.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qC6RDL": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are Medicine Mama products estrogen free?",
+            "row_content": "<p>All of our products are hormone and soy free.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tmXAyE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How fast can I expect to see results?",
+            "row_content": "<p>For optimal skin health, use ®VMAGIC daily, reapplying as often as needed or desired.Results vary, but in a clinical study 79% of users found immediate relief and 92% saw a reduction in dryness with continued use in as little as two weeks.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_CjFcCT",
+        "collapsible_row_79JxNH",
+        "collapsible_row_qC6RDL",
+        "collapsible_row_tmXAyE"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Questions?",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "inverse",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_JLj6Wk",
+    "image_text_banner_BLiiA3",
+    "image_with_text_TnwyyU",
+    "rich_text_bLwLLm",
+    "rich_text_nnd4H3",
+    "products_accordion_Yfw8tW",
+    "scrolling_marquee_QVMYhe",
+    "rich_text_tG7tic",
+    "1748745503e13e92d3",
+    "custom_liquid_acV7C6",
+    "collapsible_content_nxBKXa"
+  ]
+}

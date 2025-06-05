@@ -20,6 +20,18 @@
     "multicolumn_cQbAjd": {
       "type": "multicolumn",
       "blocks": {
+        "column_CckFeE": {
+          "type": "column",
+          "settings": {
+            "title": "<em>SELF - June 2025 - Dr. Clare Bertucio</em>",
+            "text": "<p><a href=\"https://www.self.com/story/best-lubes\" title=\"https://www.self.com/story/best-lubes\">The Best Lube Is the One That Works for You. Here’s How to Find It</a></p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
         "column_apHVGt": {
           "type": "column",
           "settings": {
@@ -154,6 +166,7 @@
         }
       },
       "block_order": [
+        "column_CckFeE",
         "column_apHVGt",
         "column_pYe4pL",
         "column_Bg6rAr",

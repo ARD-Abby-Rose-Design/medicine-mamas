@@ -20,6 +20,18 @@
     "multicolumn_cQbAjd": {
       "type": "multicolumn",
       "blocks": {
+        "column_Gkf8Ne": {
+          "type": "column",
+          "settings": {
+            "title": "<em>New York Post - June 2025 - Dr. Clare Bertucio</em>",
+            "text": "<p><a href=\"https://nypost.com/2025/06/10/health/why-women-need-to-be-doing-vaginal-self-exams-and-how-to-do-it/\" title=\"https://nypost.com/2025/06/10/health/why-women-need-to-be-doing-vaginal-self-exams-and-how-to-do-it/\">This doctor wants you to do regular vaginal self exams — what you’re looking for and the right way to do it</a></p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
         "column_CckFeE": {
           "type": "column",
           "settings": {
@@ -166,6 +178,7 @@
         }
       },
       "block_order": [
+        "column_Gkf8Ne",
         "column_CckFeE",
         "column_apHVGt",
         "column_pYe4pL",

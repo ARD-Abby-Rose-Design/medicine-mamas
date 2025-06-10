@@ -38,7 +38,7 @@
             <div class="products-accordion__body">
               {%- assign description = block.settings.product.description | split: 'Ingredients' | first | strip_html
               -%}
-              <div class="products-accordion__body-title h6">{{ description }}</div>
+              <div class="products-accordion__body-title h7">{{ description }}</div>
               <div class="products-accordion__body-content">
                 {% if block.settings.image != blank %}
                   <div class="products-accordion__image large-up-hide">

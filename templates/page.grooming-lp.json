@@ -174,7 +174,7 @@
           "type": "heading",
           "settings": {
             "heading": "Meet your everyday grooming essentials",
-            "heading_size": "hlarge"
+            "heading_size": "hmedium"
           }
         }
       },
@@ -609,6 +609,13 @@
     "rich_text_MRzBEQ": {
       "type": "rich-text",
       "blocks": {
+        "heading_xUnztx": {
+          "type": "heading",
+          "settings": {
+            "heading": "Over 15,000 5-Star Reviews",
+            "heading_size": "hlarge"
+          }
+        },
         "button_VJwQPe": {
           "type": "button",
           "settings": {
@@ -620,18 +627,11 @@
             "button_link_2": "",
             "button_style_secondary_2": false
           }
-        },
-        "heading_xUnztx": {
-          "type": "heading",
-          "settings": {
-            "heading": "Over 15,000 5-Star Reviews",
-            "heading_size": "hlarge"
-          }
         }
       },
       "block_order": [
-        "button_VJwQPe",
-        "heading_xUnztx"
+        "heading_xUnztx",
+        "button_VJwQPe"
       ],
       "settings": {
         "show_desktop": false,
@@ -641,7 +641,7 @@
         "color_scheme": "inverse",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 40
       }
     },
     "174562032607fed5ad": {

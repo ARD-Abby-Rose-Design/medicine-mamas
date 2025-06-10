@@ -40,7 +40,7 @@
         "76aa32e7-c0a8-4d8c-916d-fda6edf42187": {
           "type": "text",
           "settings": {
-            "text": "<p>Dr. Clare Bertucio<br/>CEO + Chief Medical Officer</p>",
+            "text": "<p><a href=\"https://medicinemama.com/blogs/authors/clare-bertucio\" target=\"_blank\" title=\"https://medicinemama.com/blogs/authors/clare-bertucio\">Dr. Clare Bertucio</a><br/>CEO + Chief Medical Officer</p>",
             "text_size": "text-body",
             "background_style": "none",
             "background_color": "#ffffff",

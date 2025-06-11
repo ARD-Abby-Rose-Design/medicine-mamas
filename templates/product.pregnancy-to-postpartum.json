@@ -199,6 +199,15 @@
         "padding_bottom": 52
       }
     },
+    "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa": {
+      "type": "you-speak",
+      "settings": {
+        "color_scheme": "inverse",
+        "title": "See The Magic",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "6cdfb8e6-a773-44fa-ae13-b790f3d71579": {
       "type": "featured-reviews",
       "settings": {
@@ -287,6 +296,8 @@
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
         "media_caption_position_mobile": "top-left",
         "second_media_caption_position_mobile": "top-left",
@@ -346,6 +357,8 @@
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
         "media_caption_position_mobile": "top-left",
         "second_media_caption_position_mobile": "top-left",
@@ -405,20 +418,13 @@
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
         "media_caption_position_mobile": "top-left",
         "second_media_caption_position_mobile": "top-left",
         "padding_top": 20,
         "padding_bottom": 20
-      }
-    },
-    "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa": {
-      "type": "you-speak",
-      "settings": {
-        "color_scheme": "inverse",
-        "title": "See The Magic",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "c3a50a1b-b9e4-4730-8667-125f047ed335": {
@@ -666,10 +672,12 @@
         "desktop_content_padding_left": 36,
         "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
-        "color_scheme": "",
+        "color_scheme": "background-2",
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
         "media_caption_position_mobile": "top-left",
         "second_media_caption_position_mobile": "top-left",
@@ -733,12 +741,12 @@
   "order": [
     "main",
     "cac67cc4-85e1-4f5d-9af0-5bfbe86ec590",
+    "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa",
     "6cdfb8e6-a773-44fa-ae13-b790f3d71579",
     "61b83918-3465-4607-bf85-62c487efba89",
     "50b033ae-f7f1-4b0a-b956-da9b75aee309",
     "90d878aa-6cfc-4f37-af51-fdca7ab9475b",
     "9d0f63ce-5d04-4d58-8622-efb9fda8f05c",
-    "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa",
     "c3a50a1b-b9e4-4730-8667-125f047ed335",
     "related-products",
     "17a80875-d3ad-4af8-9b12-88f5dbe0162b",

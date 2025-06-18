@@ -119,48 +119,6 @@
         "padding_bottom": 36
       }
     },
-    "you_speak_eRLBtr": {
-      "type": "you-speak",
-      "blocks": {
-        "video_cMih9T": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Video 2.mp4"
-          }
-        },
-        "video_wPVxhA": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Untitled design (3).mp4"
-          }
-        },
-        "video_qnkddy": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Kiernan:Medicine Mama - Video 1.MOV"
-          }
-        },
-        "video_KtjpGq": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Ig story set 1 ( split into 2 frames) (1).mov"
-          }
-        }
-      },
-      "block_order": [
-        "video_cMih9T",
-        "video_wPVxhA",
-        "video_qnkddy",
-        "video_KtjpGq"
-      ],
-      "name": "You speak",
-      "settings": {
-        "color_scheme": "inverse",
-        "title": "PARTNERS",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "bb6fa93c-580c-4f56-ac2b-c29a63b74e12": {
       "type": "multicolumn",
       "blocks": {
@@ -244,6 +202,48 @@
         "padding_bottom": 36
       }
     },
+    "you_speak_eRLBtr": {
+      "type": "you-speak",
+      "blocks": {
+        "video_cMih9T": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Video 2.mp4"
+          }
+        },
+        "video_wPVxhA": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Untitled design (3).mp4"
+          }
+        },
+        "video_qnkddy": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Kiernan:Medicine Mama - Video 1.MOV"
+          }
+        },
+        "video_KtjpGq": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Ig story set 1 ( split into 2 frames) (1).mov"
+          }
+        }
+      },
+      "block_order": [
+        "video_cMih9T",
+        "video_wPVxhA",
+        "video_qnkddy",
+        "video_KtjpGq"
+      ],
+      "name": "You speak",
+      "settings": {
+        "color_scheme": "inverse",
+        "title": "PARTNERS",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "collapsible_content_NMfcBz": {
       "type": "collapsible-content",
       "blocks": {
@@ -306,8 +306,8 @@
   "order": [
     "main",
     "c868727a-415d-4336-9603-2593930c15f4",
-    "you_speak_eRLBtr",
     "bb6fa93c-580c-4f56-ac2b-c29a63b74e12",
+    "you_speak_eRLBtr",
     "collapsible_content_NMfcBz"
   ]
 }

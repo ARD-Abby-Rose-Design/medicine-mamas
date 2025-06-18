@@ -214,7 +214,7 @@
         "template--16826884096229__8d2c3f5e-a399-44d4-81bc-bb20bf312e7d-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>If you have any questions about becoming a wholesaler, we’d love to chat. If you’re ready to dive right in, please fill out our <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSeSvbEnQsOGwiOt5mb7narmzz8ahul5xGSlRpKEdSx-IcgasQ/viewform?usp=sf_link\" title=\"https://docs.google.com/forms/d/e/1FAIpQLSeSvbEnQsOGwiOt5mb7narmzz8ahul5xGSlRpKEdSx-IcgasQ/viewform?usp=sf_link\">Wholesale Application</a> form and we'll help you get set up with an account.</p>",
+            "text": "<p>If you have any questions about becoming a affiliate, we’d love to chat. If you’re ready to dive right in, please fill out our <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSeSvbEnQsOGwiOt5mb7narmzz8ahul5xGSlRpKEdSx-IcgasQ/viewform?usp=sf_link\" title=\"https://docs.google.com/forms/d/e/1FAIpQLSeSvbEnQsOGwiOt5mb7narmzz8ahul5xGSlRpKEdSx-IcgasQ/viewform?usp=sf_link\">Wholesale Application</a> form and we'll help you get set up with an account.</p>",
             "text_size": "text-body",
             "background_style": "none",
             "background_color": "#ffffff",
@@ -272,12 +272,71 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collapsible_content_NMfcBz": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_YBgbPe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_fwqYcK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_RHncCC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_EMp6Yw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_YBgbPe",
+        "collapsible_row_fwqYcK",
+        "collapsible_row_RHncCC",
+        "collapsible_row_EMp6Yw"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "FAQ",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "inverse",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "c868727a-415d-4336-9603-2593930c15f4",
     "bb6fa93c-580c-4f56-ac2b-c29a63b74e12",
-    "8d2c3f5e-a399-44d4-81bc-bb20bf312e7d"
+    "8d2c3f5e-a399-44d4-81bc-bb20bf312e7d",
+    "collapsible_content_NMfcBz"
   ]
 }

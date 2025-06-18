@@ -125,7 +125,7 @@
         "template--16826884096229__bb6fa93c-580c-4f56-ac2b-c29a63b74e12-column-1": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/medicine-mama-grooming-kit.jpg",
+            "image": "shopify://shop_images/Untitled_design_7.png",
             "title": "Competitive Commission Rates",
             "text": "<p>As a new partner, earn up to 20% commission on sales referred to MedicineMama.com and Amazon.</p>",
             "link_label": "",
@@ -138,9 +138,10 @@
         "template--16826884096229__bb6fa93c-580c-4f56-ac2b-c29a63b74e12-column-2": {
           "type": "column",
           "settings": {
-            "title": "Upfluence",
-            "text": "<p>- 20% Commission</p><p>- 30 Day Cookie Window</p>",
-            "link_label": "JOIN NOW",
+            "image": "shopify://shop_images/Untitled_design_6.png",
+            "title": "Leading Conversion Rates",
+            "text": "<p>We're the #1 selling Vulva Balm on Amazon! With conversion rates 2-3x industry average - trusted by over 400,000 women.</p>",
+            "link_label": "",
             "link": "https://creators.upfluence.com/sign-up?_gl=1*1vqaa3h*_gcl_au*MTE0MDQ4NDk2Ny4xNzUwMjc4OTQ3",
             "product": "",
             "product_badge_color": "#fcf7f0",
@@ -150,9 +151,10 @@
         "template--16826884096229__bb6fa93c-580c-4f56-ac2b-c29a63b74e12-column-3": {
           "type": "column",
           "settings": {
-            "title": "Amazon Associates",
-            "text": "<p>- 3% Commission</p>",
-            "link_label": "JOIN NOW",
+            "image": "shopify://shop_images/Untitled_design_4_e3a43399-3a69-4852-91ea-08bcb1cbab8e.png",
+            "title": "Winning Together",
+            "text": "<p>Medicine Mama has seen exceptional growth and engagement growing over 100% YoY. Our products are widely recognized and primed for easy conversion.</p>",
+            "link_label": "",
             "link": "https://affiliate-program.amazon.com/",
             "product": "",
             "product_badge_color": "#fcf7f0",
@@ -162,9 +164,10 @@
         "c3fc4fbc-7110-4025-b5cf-a35c02bdc389": {
           "type": "column",
           "settings": {
-            "title": "Skimlinks",
-            "text": "<p>Publisher affiliate network</p>",
-            "link_label": "APPLY NOW",
+            "image": "shopify://shop_images/Untitled_design_5_f8e541ed-a3d6-4dbb-bb7d-e7c9f911540d.png",
+            "title": "Money Back Guarantee",
+            "text": "<p>We promise your network will love our products, thats why we offer a 30-Day money back guarantee on all products.</p>",
+            "link_label": "",
             "link": "https://signup.skimlinks.com/",
             "product": "",
             "product_badge_color": "#fcf7f0",
@@ -179,11 +182,11 @@
         "c3fc4fbc-7110-4025-b5cf-a35c02bdc389"
       ],
       "settings": {
-        "title": "<p>We offer:</p>",
+        "title": "<p>Why become an affiliate?</p>",
         "heading_size": "h3",
         "heading_alignment": "",
         "text": "",
-        "image_width": "half",
+        "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 4,
         "full_width": false,

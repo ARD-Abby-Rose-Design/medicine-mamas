@@ -151,7 +151,7 @@
         "template--16826884096229__bb6fa93c-580c-4f56-ac2b-c29a63b74e12-column-3": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/mm2.png",
+            "image": "shopify://shop_images/amazon-associates.png",
             "title": "Order Direct",
             "text": "<p>Already a retailer? Sign in below to place a new order direct - perfect for smaller retailers and medical practices.</p>",
             "link_label": "LOGIN TO WHOLESALE PORTAL",

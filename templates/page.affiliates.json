@@ -23,14 +23,14 @@
         "template--17038566031589__c868727a-415d-4336-9603-2593930c15f4-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Interested in Becoming A Retail Partner?",
+            "heading": "Let's get affiliated.",
             "heading_size": "h3"
           }
         },
         "template--17038566031589__c868727a-415d-4336-9603-2593930c15f4-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>With over 12,000 5-Star reviews, its safe to say people love us -- and your customers will too! Round out your retail offerings with Doctor backed boldly pure vulva care.</p>",
+            "text": "<p>We would love to partner with individuals who share our values and are looking to help spread awareness about vulva care.</p>",
             "text_size": "text-body",
             "background_style": "none",
             "background_color": "#ffffff",
@@ -106,9 +106,9 @@
         "template--16826884096229__bb6fa93c-580c-4f56-ac2b-c29a63b74e12-column-1": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/unfi.png",
-            "title": "UNFI",
-            "text": "<p>Reach out to sales@medicinemama.com for items numbers or request them from your UNFI Account Manager.</p>",
+            "image": "shopify://shop_images/LTK_Logo_2021-Black-01.png",
+            "title": "Like To Know",
+            "text": "",
             "link_label": "PLACE ORDER VIA UNFI",
             "link": "https://www.unfi.com/customer-login",
             "product": "",
@@ -163,7 +163,7 @@
         "c3fc4fbc-7110-4025-b5cf-a35c02bdc389"
       ],
       "settings": {
-        "title": "<p>Place An Order</p>",
+        "title": "<p>Start earning comission via :</p>",
         "heading_size": "h3",
         "heading_alignment": "",
         "text": "",

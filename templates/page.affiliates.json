@@ -253,16 +253,16 @@
         "collapsible_row_YBgbPe": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "row_content": "",
+            "heading": "What are requirements to join?",
+            "row_content": "<p>Medicine Mama partners with a wide range of partners, including influencers, healthcare professionals, content sites, shopping comparison sites, etc. A digital presence that can use link tracking is required. We reserve the right to refuse applications that violate our terms of use.</p>",
             "page": ""
           }
         },
         "collapsible_row_fwqYcK": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "row_content": "",
+            "heading": "How do I earn comission",
+            "row_content": "<p>You will earn a commission if your affiliate link was last clicked before the customer makes a purchase. Affiliate commission will be paid via the affiliate platform you are using (LTK, Amazon, Upfluence).</p>",
             "page": ""
           }
         },

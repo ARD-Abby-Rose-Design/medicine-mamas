@@ -201,78 +201,6 @@
         "padding_bottom": 36
       }
     },
-    "8d2c3f5e-a399-44d4-81bc-bb20bf312e7d": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--16826884096229__8d2c3f5e-a399-44d4-81bc-bb20bf312e7d-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "CONTACT",
-            "heading_size": "h1"
-          }
-        },
-        "template--16826884096229__8d2c3f5e-a399-44d4-81bc-bb20bf312e7d-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>If you have any questions about becoming a affiliate, we’d love to chat. If you’re ready to dive right in, please fill out our <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSeSvbEnQsOGwiOt5mb7narmzz8ahul5xGSlRpKEdSx-IcgasQ/viewform?usp=sf_link\" title=\"https://docs.google.com/forms/d/e/1FAIpQLSeSvbEnQsOGwiOt5mb7narmzz8ahul5xGSlRpKEdSx-IcgasQ/viewform?usp=sf_link\">Wholesale Application</a> form and we'll help you get set up with an account.</p>",
-            "text_size": "text-body",
-            "background_style": "none",
-            "background_color": "#ffffff",
-            "bullets_to_checkmarks": false
-          }
-        },
-        "template--16826884096229__8d2c3f5e-a399-44d4-81bc-bb20bf312e7d-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Contact Sales",
-            "button_link": "mailto:sales@medicinemama.com",
-            "button_arrow": true,
-            "big_button": false,
-            "button_subtitle": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--16826884096229__8d2c3f5e-a399-44d4-81bc-bb20bf312e7d-heading-1",
-        "template--16826884096229__8d2c3f5e-a399-44d4-81bc-bb20bf312e7d-text-1",
-        "template--16826884096229__8d2c3f5e-a399-44d4-81bc-bb20bf312e7d-button-1"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/Our-Mission_563cca81-c643-4544-bea4-22edb429f3c6.jpg",
-        "video_autoplay": "autoplay",
-        "media_type": "image",
-        "height": "adapt",
-        "media_caption": "",
-        "media_caption_color": "#ffffff",
-        "media_caption_bg": "none",
-        "media_caption_bg_color": "#ffffff",
-        "media_caption_position": "top-left",
-        "second_media_caption": "",
-        "second_media_caption_color": "#ffffff",
-        "second_media_caption_bg": "none",
-        "second_media_caption_bg_color": "#ffffff",
-        "second_media_caption_position": "top-left",
-        "show_desktop": true,
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "desktop_content_padding_left": 36,
-        "desktop_content_padding_right": 36,
-        "content_layout": "no-overlap",
-        "color_scheme": "inverse",
-        "image_behavior": "none",
-        "show_mobile": true,
-        "layout_mobile": "image_first",
-        "full_width": false,
-        "below_header": false,
-        "mobile_content_alignment": "left",
-        "media_caption_position_mobile": "top-left",
-        "second_media_caption_position_mobile": "top-left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "collapsible_content_NMfcBz": {
       "type": "collapsible-content",
       "blocks": {
@@ -330,13 +258,55 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "you_speak_eRLBtr": {
+      "type": "you-speak",
+      "blocks": {
+        "video_cMih9T": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Video 2.mp4"
+          }
+        },
+        "video_wPVxhA": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Untitled design (3).mp4"
+          }
+        },
+        "video_qnkddy": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Kiernan:Medicine Mama - Video 1.MOV"
+          }
+        },
+        "video_KtjpGq": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Ig story set 1 ( split into 2 frames) (1).mov"
+          }
+        }
+      },
+      "block_order": [
+        "video_cMih9T",
+        "video_wPVxhA",
+        "video_qnkddy",
+        "video_KtjpGq"
+      ],
+      "name": "You speak",
+      "settings": {
+        "color_scheme": "",
+        "title": "YouSpeak",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
     "c868727a-415d-4336-9603-2593930c15f4",
     "bb6fa93c-580c-4f56-ac2b-c29a63b74e12",
-    "8d2c3f5e-a399-44d4-81bc-bb20bf312e7d",
-    "collapsible_content_NMfcBz"
+    "collapsible_content_NMfcBz",
+    "you_speak_eRLBtr"
   ]
 }

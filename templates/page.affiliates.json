@@ -269,16 +269,16 @@
         "collapsible_row_RHncCC": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "row_content": "",
+            "heading": "Do you offer custom discount codes for affiliates?",
+            "row_content": "<p>We do not offer customer discount codes for affiliates at this time.</p>",
             "page": ""
           }
         },
         "collapsible_row_EMp6Yw": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "row_content": "",
+            "heading": "What is the cookie duration and commision percentage?",
+            "row_content": "<p>This will vary depending on the affiliate program you are using between 4%-20% and cookie windows of 7-60 days. </p>",
             "page": ""
           }
         }

@@ -57,8 +57,18 @@
         "442dd473-7bc2-4311-91f3-1b436dd307d7": {
           "type": "button",
           "settings": {
-            "button_label": "Already Created Your Wholesale Profile? Login",
-            "button_link": "https://shopify.com/7052147/account",
+            "button_label": "Amazon Associates",
+            "button_link": "https://affiliate-program.amazon.com/",
+            "button_arrow": true,
+            "big_button": false,
+            "button_subtitle": ""
+          }
+        },
+        "button_f83U6N": {
+          "type": "button",
+          "settings": {
+            "button_label": "Upfluence Creators",
+            "button_link": "https://creators.upfluence.com/sign-up?_gl=1*1vqaa3h*_gcl_au*MTE0MDQ4NDk2Ny4xNzUwMjc4OTQ3",
             "button_arrow": true,
             "big_button": false,
             "button_subtitle": ""
@@ -70,7 +80,8 @@
         "template--17038566031589__c868727a-415d-4336-9603-2593930c15f4-text-1",
         "heading_jCLkYg",
         "template--17038566031589__c868727a-415d-4336-9603-2593930c15f4-button-1",
-        "442dd473-7bc2-4311-91f3-1b436dd307d7"
+        "442dd473-7bc2-4311-91f3-1b436dd307d7",
+        "button_f83U6N"
       ],
       "settings": {
         "image": "shopify://shop_images/medicine-mama-desktop-hero_f8197687-e76e-4bfd-bf8b-1eb8ad3ba6fc.jpg",
@@ -117,7 +128,7 @@
             "image": "shopify://shop_images/LTK_Logo_2021-Black-01.png",
             "title": "LTK Affiliate",
             "text": "<p>- 17% Commission</p><p>- 60 day cookie window</p>",
-            "link_label": "APPLY NOW",
+            "link_label": "JOIN NOW",
             "link": "https://company.shopltk.com/en/creator",
             "product": "",
             "product_badge_color": "#fcf7f0",
@@ -127,11 +138,11 @@
         "template--16826884096229__bb6fa93c-580c-4f56-ac2b-c29a63b74e12-column-2": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/kehe.png",
-            "title": "KeHE",
-            "text": "<p>Reach out to sales@medicinemama.com for items numbers or request them from your KeHE Account Manager.</p>",
-            "link_label": "PLACE ORDER VIA KeHE",
-            "link": "https://www.kehe.com/retailers/",
+            "image": "shopify://shop_images/eyJidWNrZXQiOiJwYXJ0bmVycGFnZS5wcm9kIiwia2V5IjoibWVkaWEvY29udGFjdF9pbWFnZXMvNThlOGMwMjgtOWI1NS00OTY0LWI0OWEtYzAyYTUyYTIzOTAzLzc4NzM1MTgwX2xvZ28tdXBmbHVlbmNlLWJsdWUucG5nIiwiZWRpdHMiOns.webp",
+            "title": "Upfluence",
+            "text": "<p>- 20% Commission</p><p>- 30 Day Cookie Window</p>",
+            "link_label": "JOIN NOW",
+            "link": "https://creators.upfluence.com/sign-up?_gl=1*1vqaa3h*_gcl_au*MTE0MDQ4NDk2Ny4xNzUwMjc4OTQ3",
             "product": "",
             "product_badge_color": "#fcf7f0",
             "product_benefits": ""

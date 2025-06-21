@@ -99,7 +99,7 @@
             {% unless block.settings.show_price == false %}
               <span class="product-form__submit--dash">-</span>
               <span id="price-{{ section_id }}" class="product-form__submit--price">
-                {% if product.selected_or_first_available_variant.selling_plan_allocations.size > 1 %}
+                {% if product.selected_or_first_available_variant.price < product.selected_or_first_available_variant.compare_at_price %}
                   <span> {{ product.selected_or_first_available_variant.price | money }}</span>
                   <span><s>{{ product.selected_or_first_available_variant.compare_at_price | money }}</s></span>
                 {% else %}

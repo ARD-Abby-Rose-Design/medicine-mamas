@@ -1,144 +1,210 @@
-<style>
-   .section-{{ section.id }}-padding {
-     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-   }
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+{{ 'section-featured-product.css' | asset_url | stylesheet_tag }}
+{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 
-   @media screen and (min-width: 750px) {
-     .section-{{ section.id }}-padding {
-       padding-top: {{ section.settings.padding_top }}px;
-       padding-bottom: {{ section.settings.padding_bottom }}px;
-     }
-   }
-  .featured-products-stacked {
-     display: flex;
-    flex-direction: column;
-     justify-content: center;
-        align-items: center;
-     gap: 8rem;
+<style>
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .featured-products-stacked__header {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .featured-products-stacked {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+    margin-top: 4rem;
+  }
+
+   @media screen and (min-width: 749px) {
+    .featured-products-stacked {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    }
+
+  .featured-products-stacked h3,
+  .featured-products-stacked h4 {
+    margin: 0;
+  }
+
 
   .featured-products-stacked__card {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     justify-content: center;
     align-items: center;
     width: calc(100%);
     background-color: {{ section.settings.background_color }};
   }
 
- .featured-products-stacked__image {
-  height: 280px;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  @media screen and (min-width: 749px) {
+    .featured-products-stacked__card {
 
-.featured-products-stacked__image img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
+      width: calc(100%/{{ section.blocks.size }} - 8rem);
+    }
+
+  }
+
+  .featured-products-stacked__image {
+    height: 280px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .featured-products-stacked__image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 
   .featured-products-stacked__card-content {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.4rem;
+    border: 1px solid #E9E4DE;
     padding: 1.6rem;
     width: 100%;
   }
 
   .featured-products-stacked .product__title--with-price {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: start;
-  gap: 1rem;
-}
-
-.featured-products-stacked .product__title-title {
-  grid-column: 1;
-  text-transform: none;
-}
-
-.featured-products-stacked .product__title-price {
-  grid-column: 2;
-  text-align: right;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.featured-products-stacked .product__title-price s {
-  color: #7E7C78;
-}
-
-.featured-products-stacked .product__title h1 {
-  text-transform: none;
-}
-
-    @media screen and (min-width: 749px) {
-          .featured-products-stacked__card {
-
-    width: calc(100%/{{ section.blocks.size }} - 8rem);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: start;
+    gap: 1rem;
+    margin: 0;
   }
 
-    }
+  .featured-products-stacked .product__title-title {
+    grid-column: span 9;
+    text-transform: none;
+  }
+
+  .featured-products-stacked .product__title-price {
+    grid-column: span 3;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .featured-products-stacked .product__title-price .h4 {
+    font-size: 2rem;
+  }
+
+  .featured-products-stacked .product__title-price s {
+    color: #7E7C78;
+  }
+
+  .featured-products-stacked .product__title h1 {
+    text-transform: none;
+  }
+
+  .featured-products-stacked__card .product__checkmarks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    gap: 1rem;
+  }
+
+  .featured-products-stacked__card .product__checkmark + .product__checkmark {
+    margin: 0;
+  }
+
+  .featured-products-stacked .product__included-products p + ul {
+    margin-block-start: 0.8rem;
+  }
+
+  .featured-products-stacked .product__included-products p {
+    margin: 0;
+  }
+
 </style>
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
-  <div class="featured-products-stacked page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="featured-products-stacked__header hmedium">{{ section.settings.heading |  escape }}</h2>
+    {%- endif -%}
+  <div class="featured-products-stacked page-width" id="FeaturedProductsStacked--{{ section.id }}">
     {%- for block in section.blocks -%}
-        
-    <div class="featured-products-stacked__card">
-      {%- assign product = block.settings.product -%}
-      {%- if product != blank -%}
-        {% assign image = product.featured_image %}
-        {%- if block.settings.image != blank -%}
+      <div class="featured-products-stacked__card" id="FeaturedProductsStackedCard--{{ block.id }}">
+        {%- assign product = block.settings.product -%}
+        {%- if product != blank -%}
+          {% assign image = product.featured_image %}
+          {%- if block.settings.image != blank -%}
             {%- assign image = block.settings.image -%}
-        {%- endif -%}
-      
-            <a href="{{ product.url | within: product }}" class="featured-products-stacked__image">
-               {{ image |  image_url: width: 3200 | image_tag }}
-            </a>
-        <div class="featured-products-stacked__card-content">
-        <div
-          class="product__title product__title--with-price"
-          {{ block.shopify_attributes }}
-        >
-          <h1 class="product__title-title h3">{{ product.title | escape }}</h1>
-            <div class="product__title-price">
-              <div class="h3">
-                {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+          {%- endif -%}
+
+          <a href="{{ product.url | within: product }}" class="featured-products-stacked__image">
+           {% render 'media-caption', block: block, location: '#FeaturedProductsStackedCard--' %}
+            {{ image | image_url: width: 3200 | image_tag }}
+          </a>
+          <div class="featured-products-stacked__card-content">
+            {% render 'okendo-reviews-product-rating-summary', product: product %}
+            <div class="product__title product__title--with-price" {{ block.shopify_attributes }}>
+              <h3 class="product__title-title h3">{{ product.title | escape }}</h3>
+              <div class="product__title-price">
+                <h4 class="h4">
+                  {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+                </h4>
+                {% if product.selected_or_first_available_variant.compare_at_price != blank
+                  and product.selected_or_first_available_variant.price
+                    < product.selected_or_first_available_variant.compare_at_price
+                %}
+                  <h4 class="h4">
+                    <s>
+                      {{-
+                        product.selected_or_first_available_variant.compare_at_price
+                        | money_without_trailing_zeros
+                      -}}
+                    </s>
+                  </h4>
+                {% endif %}
               </div>
-              {% if product.selected_or_first_available_variant.compare_at_price != blank
-                and product.selected_or_first_available_variant.price
-                  < product.selected_or_first_available_variant.compare_at_price
-              %}
-                <div class="h3">
-                  <s>
-                    {{- product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros -}}
-                  </s>
-                </div>
-              {% endif %}
             </div>
-        </div>
-        {% if block.settings.button_label != blank %}
-          {%- assign product_form_id = 'product-form-' | append: block.id -%}
-          {%- render 'buy-buttons',
-            block: block,
-            product: block.settings.product,
-            product_form_id: product_form_id,
-            section_id: section.id,
-            show_pickup_availability: true
-          -%}
-        {% endif %}
-        </div>
-      {%- endif -%}
+            {% if block.settings.included_products != blank %}
+              <div class="product__included-products rte">
+                {{ block.settings.included_products }}
+              </div>
+            {% endif %}
+            {% if product.metafields.custom.checkmarks != blank %}
+              <div class="product__checkmarks">
+                {% for mark in product.metafields.custom.checkmarks.value %}
+                  <div class="product__checkmark">{{ mark }}</div>
+                {% endfor %}
+              </div>
+            {% endif %}
+            {% if block.settings.button_label != blank %}
+              {%- assign product_form_id = 'product-form-' | append: block.id -%}
+              {%- render 'buy-buttons',
+                block: block,
+                product: block.settings.product,
+                product_form_id: product_form_id,
+                section_id: section.id,
+                show_pickup_availability: true
+              -%}
+            {% endif %}
+          </div>
+        {%- endif -%}
       </div>
     {%- endfor -%}
   </div>
@@ -149,10 +215,15 @@
   "name": "Featured products stacked",
   "settings": [
     {
-        "type": "color",
-        "id": "background_color",
-        "label": "Cards background color",
-        "default": "#ffffff"
+        "type": "text",
+        "id": "heading",
+        "label": "Section heading"    
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Cards background color",
+      "default": "#ffffff"
     },
     {
       "type": "color_scheme",
@@ -193,14 +264,31 @@
           "label": "Product"
         },
         {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+      
+        {
+          "type": "richtext",
+          "id": "included_products",
+          "label": "Included products"
         },
         {
-          "type": "inline_richtext",
-          "id": "product_benefits",
-          "label": "Product benefits"
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_dynamic_checkout",
+          "label": "Show dynamic checkout button",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_pickup_availability",
+          "label": "Show pickup availability",
+          "default": true
         },
         {
           "type": "text",
@@ -228,7 +316,217 @@
               "label": "Red"
             }
           ]
+        },
+         {
+          "type": "checkbox",
+          "id": "show_return_policy_note",
+          "default": false,
+          "label": "Show return policy note"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "return_policy_note",
+          "label": "Return policy note",
+          "default": "Try 30-day risk free, love it or your money back!"
+        },
+          {
+          "type": "header",
+          "content": "Captions"
+        },
+        {
+          "type": "richtext",
+          "id": "media_caption",
+          "label": "Text"
+        },
+        {
+          "type": "color",
+          "id": "media_caption_color",
+          "label": "Text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "select",
+          "id": "media_caption_bg",
+          "options": [
+            {
+              "value": "none",
+              "label": "Overlay"
+            },
+            {
+              "value": "solid",
+              "label": "Overlay w/ background"
+            },
+            {
+              "value": "review",
+              "label": "Review"
+            },
+            {
+              "value": "below",
+              "label": "Below media"
+            }
+          ],
+          "default": "none",
+          "label": "Caption style"
+        },
+        {
+          "type": "color",
+          "id": "media_caption_bg_color",
+          "label": "Background color",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "select",
+          "id": "media_caption_position",
+          "options": [
+            {
+              "value": "top-left",
+              "label": "Top left"
+            },
+            {
+              "value": "top-right",
+              "label": "Top right"
+            },
+            {
+              "value": "bottom-left",
+              "label": "Bottom left"
+            },
+            {
+              "value": "bottom-right",
+              "label": "Bottom right"
+            }
+          ],
+          "default": "top-left",
+          "label": "Position"
+        },
+        {
+          "type": "header",
+          "content": "Secondary caption"
+        },
+        {
+          "type": "richtext",
+          "id": "second_media_caption",
+          "label": "Text"
+        },
+        {
+          "type": "color",
+          "id": "second_media_caption_color",
+          "label": "Text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "select",
+          "id": "second_media_caption_bg",
+          "options": [
+            {
+              "value": "none",
+              "label": "Overlay"
+            },
+            {
+              "value": "solid",
+              "label": "Overlay w/ background"
+            },
+            {
+              "value": "review",
+              "label": "Review"
+            },
+            {
+              "value": "below",
+              "label": "Below media"
+            }
+          ],
+          "default": "none",
+          "label": "Caption style"
+        },
+        {
+          "type": "color",
+          "id": "second_media_caption_bg_color",
+          "label": "Background color",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "select",
+          "id": "second_media_caption_position",
+          "options": [
+            {
+              "value": "top-left",
+              "label": "Top left"
+            },
+            {
+              "value": "top-right",
+              "label": "Top right"
+            },
+            {
+              "value": "bottom-left",
+              "label": "Bottom left"
+            },
+            {
+              "value": "bottom-right",
+              "label": "Bottom right"
+            }
+          ],
+          "default": "top-left",
+          "label": "Position"
+        },
+        {
+            "type": "header",
+            "content": "Mobile captions"
+        },
+        {
+      "type": "select",
+      "id": "media_caption_position_mobile",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "Top left"
+        },
+        {
+          "value": "top-right",
+          "label": "Top right"
+        },
+        {
+          "value": "bottom-left",
+          "label": "Bottom left"
+        },
+        {
+          "value": "bottom-center",
+          "label": "Bottom center"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Bottom right"
         }
+      ],
+      "default": "top-left",
+      "label": "First caption position"
+    },
+    {
+      "type": "select",
+      "id": "second_media_caption_position_mobile",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "Top left"
+        },
+        {
+          "value": "top-right",
+          "label": "Top right"
+        },
+        {
+          "value": "bottom-left",
+          "label": "Bottom left"
+        },
+        {
+          "value": "bottom-center",
+          "label": "Bottom center"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Bottom right"
+        }
+      ],
+      "default": "top-left",
+      "label": "Second caption position"
+    }
       ]
     }
   ],

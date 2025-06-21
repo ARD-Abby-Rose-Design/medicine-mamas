@@ -1,0 +1,101 @@
+<style>
+
+  {{ location }}{{ block.id }} .media-caption--none,
+  {{ location }}{{ block.id }} .media-caption--solid,
+  {{ location }}{{ block.id }} .media-caption--review
+  {
+    color: {{ block.settings.media_caption_color }};
+  }
+
+  {{ location }}{{ block.id }} .media-caption--none.second-media-caption,
+  {{ location }}{{ block.id }} .media-caption--solid.second-media-caption,
+  {{ location }}{{ block.id }} .media-caption--review.second-media-caption
+  {
+    color: {{ block.settings.second_media_caption_color }};
+  }
+
+  {{ location }}{{ block.id }} .media-caption--solid {
+      background-color: {{ block.settings.media_caption_bg_color }};
+      padding: 0.4rem 0.6rem;
+      border-radius: 0.8rem;
+      opacity: 0.7;
+  }
+
+  {{ location }}{{ block.id }} .media-caption--solid.second-media-caption {
+      background-color: {{ block.settings.second_media_caption_bg_color }};
+  }
+
+
+  {{ location }}{{ block.id }} .media-caption--review {
+    background-color: {{ block.settings.media_caption_bg_color }};
+  }
+
+  {{ location }}{{ block.id }} .media-caption--review.second-media-caption {
+    background-color: {{ block.settings.second_media_caption_bg_color }};
+  }
+
+  {% if block.settings.media_caption_position_mobile == block.settings.second_media_caption_position_mobile %}
+  
+      {{ location }}{{ block.id }} .second-media-caption.media-caption-mobile--top-left {
+        top: 4.6rem;
+      }
+
+      {{ location }}{{ block.id }} .second-media-caption.media-caption-mobile--top-right {
+        top: 4.6rem;
+      }
+
+      {{ location }}{{ block.id }} .media-caption-mobile--bottom-left:not(.second-media-caption) {
+        bottom: 3.4rem;
+      }
+
+      {{ location }}{{ block.id }} .media-caption-mobile--bottom-center:not(.second-media-caption) {
+        bottom: 3.4rem;
+      }
+
+      {{ location }}{{ block.id }} .media-caption-mobile--bottom-right:not(.second-media-caption) {
+        bottom: 3.4rem;
+      }
+    
+  {% endif %}
+
+  {% if block.settings.media_caption_position == block.settings.second_media_caption_position %}
+  
+    {{ location }}{{ block.id }} .second-media-caption .media-caption--top-left {
+      top: 3.4rem;
+    }
+
+    {{ location }}{{ block.id }} .second-media-caption .media-caption--top-right {
+      top: 3.4rem;
+    }
+
+    {{ location }}{{ block.id }} .media-caption--bottom-left:not(.second-media-caption) {
+      bottom: 3.4rem;
+    }
+
+    {{ location }}{{ block.id }} .media-caption--bottom-center:not(.second-media-caption) {
+      bottom: 3.4rem;
+    }
+
+    {{ location }}{{ block.id }} .media-caption--bottom-right:not(.second-media-caption) {
+      bottom: 3.4rem;
+    }
+
+  {% endif %}
+
+
+</style>
+
+{% if block.settings.media_caption != blank and block.settings.media_caption_bg != 'below' %}
+  <div id="media-caption--{{ block.id }}" class="media-caption media-caption--{{ block.settings.media_caption_position }} media-caption-mobile--{{ block.settings.media_caption_position_mobile }} media-caption--{{ block.settings.media_caption_bg }}">
+    {{ block.settings.media_caption }}
+    {% if block.settings.media_caption contains 'image:elle' %}{% render 'icon-elle' %}{% endif %}
+  </div>
+{% endif %}
+{% if block.settings.second_media_caption != blank and block.settings.second_media_caption_bg != 'below' %}
+  <div id="second-media-caption--{{ block.id }}" class="media-caption media-caption--{{ block.settings.second_media_caption_position }} second-media-caption media-caption-mobile--{{ block.settings.second_media_caption_position_mobile }} media-caption--{{ block.settings.second_media_caption_bg }}">
+    {{ block.settings.second_media_caption }}
+    {% if block.settings.second_media_caption contains 'image:elle' -%}
+      {%- render 'icon-elle' -%}
+    {%- endif %}
+  </div>
+{% endif %}

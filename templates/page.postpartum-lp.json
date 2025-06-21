@@ -339,6 +339,59 @@
         "padding_bottom": 36
       }
     },
+    "experts_slider_U78tr8": {
+      "type": "experts-slider",
+      "blocks": {
+        "slide_JFePy9": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/a70247051fd14aac9d8d9f5ab9255889.MP4",
+            "expert_name": "Dr. Marcy Crouch, Pelvic Floor Physical Therapist",
+            "media_title": "<strong>Vulvar dryness – why does it happen?</strong>"
+          }
+        },
+        "slide_6KyTL6": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/Untitled design_70f6cf46-d443-408e-81f8-4dcc67379fd6.mp4",
+            "expert_name": "Dr. Marcy Crouch, Pelvic Floor Physical Therapist",
+            "media_title": "<strong>Vulvar dryness – why does it happen?</strong>"
+          }
+        },
+        "slide_BB3Hdk": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/Video-538.mp4",
+            "expert_name": "Dr. Sara Reardron, Pelvic Floor Physical Therapist",
+            "media_title": "<strong>How to apply a vulvar moisturizer</strong>"
+          }
+        },
+        "slide_3RxzQf": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/Video-607.mp4",
+            "expert_name": "Dr. Sara Reardron, Pelvic Floor Physical Therapist",
+            "media_title": "<strong>How to apply a vulvar moisturizer</strong>"
+          }
+        }
+      },
+      "block_order": [
+        "slide_JFePy9",
+        "slide_6KyTL6",
+        "slide_BB3Hdk",
+        "slide_3RxzQf"
+      ],
+      "name": "Experts Slider",
+      "settings": {
+        "heading": "Hear from the experts:",
+        "heading_size": "hlarge",
+        "subheading": "Postpartum dryness and what can help",
+        "subheading_size": "h2",
+        "color_scheme": "inverse",
+        "padding_top": 84,
+        "padding_bottom": 52
+      }
+    },
     "scrolling_marquee_QVMYhe": {
       "type": "scrolling-marquee",
       "blocks": {
@@ -398,6 +451,54 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 24
+      }
+    },
+    "featured_products_stacked_NXYTNT": {
+      "type": "featured-products-stacked",
+      "blocks": {
+        "product_wB8HA7": {
+          "type": "product",
+          "settings": {
+            "product": "postpartum-care-kit",
+            "image": "shopify://shop_images/530de05f5f2711e3fd8499e56db24b3f7dbcff8f.png",
+            "product_benefits": "",
+            "button_label": "ADD TO CART",
+            "show_price": true,
+            "button_style": "red"
+          }
+        },
+        "product_JHcheD": {
+          "type": "product",
+          "settings": {
+            "product": "organic-lubricant-intimate-moisturizer",
+            "product_benefits": "",
+            "button_label": "ADD TO CART",
+            "show_price": true,
+            "button_style": "red"
+          }
+        },
+        "product_DV7dpn": {
+          "type": "product",
+          "settings": {
+            "product": "intimacy-bundle",
+            "product_benefits": "",
+            "button_label": "ADD TO CART",
+            "show_price": true,
+            "button_style": "red"
+          }
+        }
+      },
+      "block_order": [
+        "product_wB8HA7",
+        "product_JHcheD",
+        "product_DV7dpn"
+      ],
+      "name": "Featured Products Stacked",
+      "settings": {
+        "background_color": "#ffffff",
+        "color_scheme": "inverse",
+        "padding_top": 64,
+        "padding_bottom": 112
       }
     },
     "1748745503e13e92d3": {
@@ -495,8 +596,10 @@
     "rich_text_bLwLLm",
     "rich_text_nnd4H3",
     "products_accordion_Yfw8tW",
+    "experts_slider_U78tr8",
     "scrolling_marquee_QVMYhe",
     "rich_text_tG7tic",
+    "featured_products_stacked_NXYTNT",
     "1748745503e13e92d3",
     "custom_liquid_acV7C6",
     "collapsible_content_nxBKXa"

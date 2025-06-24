@@ -461,7 +461,15 @@
           "settings": {
             "product": "postpartum-care-kit",
             "image": "shopify://shop_images/530de05f5f2711e3fd8499e56db24b3f7dbcff8f.png",
-            "media_caption": "<p>Best VLAUE</p>",
+            "included_products": "<p>Includes:</p><ul><li>VMAGIC®  Vulva Wash 8 oz</li><li>VMAGIC®  Vulva Balm 2 oz</li><li>VMAGIC® Lips Stick .65 oz</li><li>Upside Down Peri Bottle</li><li>Medicine Mama Drawstring Carry-All Bag</li></ul>",
+            "show_dynamic_checkout": true,
+            "show_pickup_availability": true,
+            "button_label": "ADD TO CART",
+            "show_price": true,
+            "button_style": "red",
+            "show_return_policy_note": false,
+            "return_policy_note": "Try 30-day risk free, love it or your money back!",
+            "media_caption": "<p>Best VALUE</p>",
             "media_caption_color": "#ffffff",
             "media_caption_bg": "none",
             "media_caption_bg_color": "#ffffff",
@@ -471,16 +479,22 @@
             "second_media_caption_bg": "none",
             "second_media_caption_bg_color": "#ffffff",
             "second_media_caption_position": "top-left",
-            "included_products": "<p>Includes:</p><ul><li>VMAGIC®  Vulva Wash 8 oz</li><li>VMAGIC®  Vulva Balm 2 oz</li><li>VMAGIC® Lips Stick .65 oz</li><li>Upside Down Peri Bottle</li><li>Medicine Mama Drawstring Carry-All Bag</li></ul>",
-            "button_label": "ADD TO CART",
-            "show_price": true,
-            "button_style": "red"
+            "media_caption_position_mobile": "top-left",
+            "second_media_caption_position_mobile": "top-left"
           }
         },
         "product_JHcheD": {
           "type": "product",
           "settings": {
             "product": "organic-lubricant-intimate-moisturizer",
+            "included_products": "",
+            "show_dynamic_checkout": true,
+            "show_pickup_availability": true,
+            "button_label": "ADD TO CART",
+            "show_price": true,
+            "button_style": "red",
+            "show_return_policy_note": false,
+            "return_policy_note": "Try 30-day risk free, love it or your money back!",
             "media_caption": "",
             "media_caption_color": "#ffffff",
             "media_caption_bg": "none",
@@ -491,16 +505,22 @@
             "second_media_caption_bg": "none",
             "second_media_caption_bg_color": "#ffffff",
             "second_media_caption_position": "top-left",
-            "included_products": "",
-            "button_label": "ADD TO CART",
-            "show_price": true,
-            "button_style": "red"
+            "media_caption_position_mobile": "top-left",
+            "second_media_caption_position_mobile": "top-left"
           }
         },
         "product_DV7dpn": {
           "type": "product",
           "settings": {
             "product": "intimacy-bundle",
+            "included_products": "",
+            "show_dynamic_checkout": true,
+            "show_pickup_availability": true,
+            "button_label": "ADD TO CART",
+            "show_price": true,
+            "button_style": "red",
+            "show_return_policy_note": false,
+            "return_policy_note": "Try 30-day risk free, love it or your money back!",
             "media_caption": "",
             "media_caption_color": "#ffffff",
             "media_caption_bg": "none",
@@ -511,10 +531,8 @@
             "second_media_caption_bg": "none",
             "second_media_caption_bg_color": "#ffffff",
             "second_media_caption_position": "top-left",
-            "included_products": "",
-            "button_label": "ADD TO CART",
-            "show_price": true,
-            "button_style": "red"
+            "media_caption_position_mobile": "top-left",
+            "second_media_caption_position_mobile": "top-left"
           }
         }
       },
@@ -525,6 +543,7 @@
       ],
       "name": "Featured Products Stacked",
       "settings": {
+        "heading": "",
         "background_color": "#ffffff",
         "color_scheme": "inverse",
         "padding_top": 64,

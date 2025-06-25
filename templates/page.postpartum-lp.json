@@ -59,7 +59,7 @@
         "video_autoplay": "autoplay",
         "media_type": "image",
         "height": "adapt",
-        "media_caption": "<p>30-Day Risk-Free Guarantee</p>",
+        "media_caption": "",
         "media_caption_color": "#ffffff",
         "media_caption_bg": "solid",
         "media_caption_bg_color": "#ffffff",
@@ -427,32 +427,6 @@
         "padding_bottom": 52
       }
     },
-    "rich_text_tG7tic": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_iHXEkX": {
-          "type": "heading",
-          "settings": {
-            "heading": "Shop postpartum Relief",
-            "heading_size": "hmedium"
-          }
-        }
-      },
-      "block_order": [
-        "heading_iHXEkX"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "show_desktop": true,
-        "show_mobile": true,
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "inverse",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 24
-      }
-    },
     "featured_products_stacked_NXYTNT": {
       "type": "featured-products-stacked",
       "blocks": {
@@ -462,7 +436,7 @@
             "product": "postpartum-care-kit",
             "image": "shopify://shop_images/530de05f5f2711e3fd8499e56db24b3f7dbcff8f.png",
             "included_products": "<p>Includes:</p><ul><li>VMAGIC®  Vulva Wash 8 oz</li><li>VMAGIC®  Vulva Balm 2 oz</li><li>VMAGIC® Lips Stick .65 oz</li><li>Upside Down Peri Bottle</li><li>Medicine Mama Drawstring Carry-All Bag</li></ul>",
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_pickup_availability": true,
             "button_label": "ADD TO CART",
             "show_price": true,
@@ -470,17 +444,17 @@
             "show_return_policy_note": false,
             "return_policy_note": "Try 30-day risk free, love it or your money back!",
             "media_caption": "<p>Best VALUE</p>",
-            "media_caption_color": "#ffffff",
-            "media_caption_bg": "none",
+            "media_caption_color": "#121212",
+            "media_caption_bg": "solid",
             "media_caption_bg_color": "#ffffff",
             "media_caption_position": "top-right",
-            "second_media_caption": "",
-            "second_media_caption_color": "#ffffff",
-            "second_media_caption_bg": "none",
+            "second_media_caption": "<p>Free Gift Bag</p>",
+            "second_media_caption_color": "#121212",
+            "second_media_caption_bg": "solid",
             "second_media_caption_bg_color": "#ffffff",
-            "second_media_caption_position": "top-left",
-            "media_caption_position_mobile": "top-left",
-            "second_media_caption_position_mobile": "top-left"
+            "second_media_caption_position": "top-right",
+            "media_caption_position_mobile": "top-right",
+            "second_media_caption_position_mobile": "top-right"
           }
         },
         "product_JHcheD": {
@@ -488,7 +462,7 @@
           "settings": {
             "product": "organic-lubricant-intimate-moisturizer",
             "included_products": "",
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_pickup_availability": true,
             "button_label": "ADD TO CART",
             "show_price": true,
@@ -514,7 +488,7 @@
           "settings": {
             "product": "intimacy-bundle",
             "included_products": "",
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_pickup_availability": true,
             "button_label": "ADD TO CART",
             "show_price": true,
@@ -543,11 +517,51 @@
       ],
       "name": "Featured Products Stacked",
       "settings": {
-        "heading": "",
+        "heading": "Shop Postpartum Relief",
         "background_color": "#ffffff",
         "color_scheme": "inverse",
-        "padding_top": 64,
+        "padding_top": 60,
         "padding_bottom": 112
+      }
+    },
+    "rich_text_prj3kX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8VfYeg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Over 15,000 5-Star Reviews",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8VfYeg"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "featured_reviews_3qANpm": {
+      "type": "featured-reviews",
+      "name": "Featured reviews",
+      "settings": {
+        "color_scheme": "",
+        "show_line_separator": true,
+        "show_desktop": false,
+        "show_mobile": true,
+        "title": "",
+        "product": "postpartum-care-kit",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "1748745503e13e92d3": {
@@ -572,7 +586,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n\n.okeReviews[data-oke-container].oke-w, div.okeReviews.oke-w {\nmax-width: none !important;\n}\n\n.oke-w-reviews-list-item {\nbackground-color: white;\nborder-radius: 10px;\nmargin-bottom: 10px;\n}\n\n.oke-w-reviewSplit-left {\nborder-right: 1px solid #D9D9D9 !important;\npadding-right: 1rem !important;\n}\n\n.oke-w-reviews-head, .oke-w-reviews-controls, .oke-w-header {\ndisplay: none !important;\nopacity: 0 !important;\n}\n\n@media screen and (max-width: 750px) {\n\n.oke-w-reviewSplit-main {\nalign-items: flex-start !important;\njustify-content: space-between !important;\ngap: 1.4rem !important;\npadding: 1.4rem !important;\n}\n\n.oke-w-reviewSplit-mid {\nmargin-top: 0px !important;\ntext-align: left !important;\n}\n\n.oke-w-reviewSplit-left {\ntext-align: left !important;\nborder-right: none !important;\n}\n}\n</style>",
+        "custom_liquid": "<style>\n\n.okeReviews[data-oke-container].oke-w, div.okeReviews.oke-w {\nmax-width: none !important;\n}\n\n.oke-w-reviews-list-item {\nbackground-color: white;\nborder-radius: 10px;\nmargin-bottom: 10px;\n}\n\n.oke-w-reviewSplit-left {\nborder-right: 1px solid #D9D9D9 !important;\npadding-right: 1rem !important;\n}\n\n.oke-w-reviews-head, .oke-w-reviews-controls, .oke-w-header {\ndisplay: none !important;\nopacity: 0 !important;\n}\n\n@media screen and (max-width: 750px) {\n\n.okeReviews {\ndisplay: none !important;\n}\n\n.oke-w-reviewSplit-main {\nalign-items: flex-start !important;\njustify-content: space-between !important;\ngap: 1.4rem !important;\npadding: 1.4rem !important;\n}\n\n.oke-w-reviewSplit-mid {\nmargin-top: 0px !important;\ntext-align: left !important;\n}\n\n.oke-w-reviewSplit-left {\ntext-align: left !important;\nborder-right: none !important;\n}\n}\n</style>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -647,8 +661,9 @@
     "products_accordion_Yfw8tW",
     "experts_slider_U78tr8",
     "scrolling_marquee_QVMYhe",
-    "rich_text_tG7tic",
     "featured_products_stacked_NXYTNT",
+    "rich_text_prj3kX",
+    "featured_reviews_3qANpm",
     "1748745503e13e92d3",
     "custom_liquid_acV7C6",
     "collapsible_content_nxBKXa"

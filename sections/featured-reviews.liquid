@@ -57,7 +57,7 @@
 
 
 
-<div class="featured-reviews  small-full-width section-{{ section.id }}-padding">
+<div class="featured-reviews small-full-width section-{{ section.id }}-padding {% unless section.settings.show_desktop %}medium-up-hide large-up-hide{% endunless %} {% unless section.settings.show_mobile %}small-hide{% endunless %}">
   <h3 class="h3 featured-reviews__header center page-width">{{ section.settings.title }}</h3>
   <div class="featured-reviews__slider">
     <div class="page-width">
@@ -98,6 +98,18 @@
       "id": "show_line_separator",
       "default": true,
       "label": "t:sections.header.settings.show_line_separator.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_desktop",
+      "label": "Show on desktop",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_mobile",
+      "label": "Show on mobile",
+      "default": true
     },
     {
       "type": "text",

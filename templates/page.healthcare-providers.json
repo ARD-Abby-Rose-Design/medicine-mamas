@@ -17,6 +17,34 @@
         "padding_bottom": 28
       }
     },
+    "1751401849361eb5e0": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_rwfRAr": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "538563",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#000000",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_rwfRAr"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "c868727a-415d-4336-9603-2593930c15f4": {
       "type": "image-with-text",
       "blocks": {
@@ -32,6 +60,8 @@
           "settings": {
             "text": "<p>With over 12,000 5-Star reviews, its safe to say people love us -- and your customers will too! Round out your retail offerings with Doctor backed boldly pure vulva care.</p>",
             "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
         },
@@ -40,7 +70,9 @@
           "settings": {
             "button_label": "Apply Now",
             "button_link": "https://docs.google.com/forms/d/e/1FAIpQLSeSvbEnQsOGwiOt5mb7narmzz8ahul5xGSlRpKEdSx-IcgasQ/viewform?usp=sf_link",
-            "button_arrow": true
+            "button_arrow": true,
+            "big_button": false,
+            "button_subtitle": ""
           }
         },
         "442dd473-7bc2-4311-91f3-1b436dd307d7": {
@@ -48,7 +80,9 @@
           "settings": {
             "button_label": "Already Created Your Wholesale Profile? Login",
             "button_link": "https://shopify.com/7052147/account",
-            "button_arrow": true
+            "button_arrow": true,
+            "big_button": false,
+            "button_subtitle": ""
           }
         }
       },
@@ -60,16 +94,36 @@
       ],
       "settings": {
         "image": "shopify://shop_images/medicine-mama-desktop-hero_f8197687-e76e-4bfd-bf8b-1eb8ad3ba6fc.jpg",
+        "video_autoplay": "autoplay",
         "media_type": "image",
         "height": "adapt",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
         "color_scheme": "",
         "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -84,7 +138,10 @@
             "title": "UNFI",
             "text": "<p>Reach out to sales@medicinemama.com for items numbers or request them from your UNFI Account Manager.</p>",
             "link_label": "PLACE ORDER VIA UNFI",
-            "link": "https://www.unfi.com/customer-login"
+            "link": "https://www.unfi.com/customer-login",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
           }
         },
         "template--16826884096229__bb6fa93c-580c-4f56-ac2b-c29a63b74e12-column-2": {
@@ -94,7 +151,10 @@
             "title": "KeHE",
             "text": "<p>Reach out to sales@medicinemama.com for items numbers or request them from your KeHE Account Manager.</p>",
             "link_label": "PLACE ORDER VIA KeHE",
-            "link": "https://www.kehe.com/retailers/"
+            "link": "https://www.kehe.com/retailers/",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
           }
         },
         "template--16826884096229__bb6fa93c-580c-4f56-ac2b-c29a63b74e12-column-3": {
@@ -104,7 +164,10 @@
             "title": "Order Direct",
             "text": "<p>Already a retailer? Sign in below to place a new order direct - perfect for smaller retailers and medical practices.</p>",
             "link_label": "LOGIN TO WHOLESALE PORTAL",
-            "link": "https://shopify.com/7052147/account"
+            "link": "https://shopify.com/7052147/account",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
           }
         },
         "c3fc4fbc-7110-4025-b5cf-a35c02bdc389": {
@@ -114,7 +177,10 @@
             "title": "Apply Now",
             "text": "<p>Want to place your first order? Apply now to carry Medicine Mama products in your retail store or medical practice.</p>",
             "link_label": "APPLY NOW",
-            "link": "https://docs.google.com/forms/d/e/1FAIpQLSeSvbEnQsOGwiOt5mb7narmzz8ahul5xGSlRpKEdSx-IcgasQ/viewform?usp=sf_link"
+            "link": "https://docs.google.com/forms/d/e/1FAIpQLSeSvbEnQsOGwiOt5mb7narmzz8ahul5xGSlRpKEdSx-IcgasQ/viewform?usp=sf_link",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
           }
         }
       },
@@ -127,17 +193,23 @@
       "settings": {
         "title": "<p>Place An Order</p>",
         "heading_size": "h3",
+        "heading_alignment": "",
         "text": "",
         "image_width": "half",
         "image_ratio": "adapt",
         "columns_desktop": 4,
+        "full_width": false,
+        "enable_desktop_slider": false,
         "column_alignment": "left",
+        "border_style": "none",
         "background_style": "none",
+        "background_color": "#ffffff",
         "button_label": "",
         "button_link": "",
         "color_scheme": "inverse",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
+        "show_slider_buttons": true,
         "padding_top": 72,
         "padding_bottom": 36
       }
@@ -157,6 +229,8 @@
           "settings": {
             "text": "<p>If you have any questions about becoming a wholesaler, we’d love to chat. If you’re ready to dive right in, please fill out our <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSeSvbEnQsOGwiOt5mb7narmzz8ahul5xGSlRpKEdSx-IcgasQ/viewform?usp=sf_link\" title=\"https://docs.google.com/forms/d/e/1FAIpQLSeSvbEnQsOGwiOt5mb7narmzz8ahul5xGSlRpKEdSx-IcgasQ/viewform?usp=sf_link\">Wholesale Application</a> form and we'll help you get set up with an account.</p>",
             "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
         },
@@ -165,7 +239,9 @@
           "settings": {
             "button_label": "Contact Sales",
             "button_link": "mailto:sales@medicinemama.com",
-            "button_arrow": true
+            "button_arrow": true,
+            "big_button": false,
+            "button_subtitle": ""
           }
         }
       },
@@ -176,16 +252,36 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Our-Mission_563cca81-c643-4544-bea4-22edb429f3c6.jpg",
+        "video_autoplay": "autoplay",
         "media_type": "image",
         "height": "adapt",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
         "desktop_image_width": "small",
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
         "color_scheme": "",
         "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -193,6 +289,7 @@
   },
   "order": [
     "main",
+    "1751401849361eb5e0",
     "c868727a-415d-4336-9603-2593930c15f4",
     "bb6fa93c-580c-4f56-ac2b-c29a63b74e12",
     "8d2c3f5e-a399-44d4-81bc-bb20bf312e7d"

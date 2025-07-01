@@ -17,41 +17,13 @@
         "padding_bottom": 28
       }
     },
-    "1751401849361eb5e0": {
-      "type": "apps",
-      "blocks": {
-        "forms_inline_rwfRAr": {
-          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
-          "settings": {
-            "form_id": "538563",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
-            "button_label_color": "#FFFFFF",
-            "links_color": "#000000",
-            "errors_color": "#E02229",
-            "text_alignment": "center",
-            "form_alignment": "center",
-            "padding_top": 0,
-            "padding_bottom": 0,
-            "padding_right": 0,
-            "padding_left": 0
-          }
-        }
-      },
-      "block_order": [
-        "forms_inline_rwfRAr"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "c868727a-415d-4336-9603-2593930c15f4": {
       "type": "image-with-text",
       "blocks": {
         "template--17038566031589__c868727a-415d-4336-9603-2593930c15f4-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Interested in Becoming A Retail Partner?",
+            "heading": "<strong>Relief That Works</strong>",
             "heading_size": "h3"
           }
         },
@@ -115,7 +87,7 @@
         "desktop_content_padding_left": 36,
         "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
-        "color_scheme": "",
+        "color_scheme": "inverse",
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
@@ -126,6 +98,34 @@
         "second_media_caption_position_mobile": "top-left",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "1751401849361eb5e0": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_rwfRAr": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "538563",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#000000",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_rwfRAr"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "bb6fa93c-580c-4f56-ac2b-c29a63b74e12": {
@@ -289,8 +289,8 @@
   },
   "order": [
     "main",
-    "1751401849361eb5e0",
     "c868727a-415d-4336-9603-2593930c15f4",
+    "1751401849361eb5e0",
     "bb6fa93c-580c-4f56-ac2b-c29a63b74e12",
     "8d2c3f5e-a399-44d4-81bc-bb20bf312e7d"
   ]

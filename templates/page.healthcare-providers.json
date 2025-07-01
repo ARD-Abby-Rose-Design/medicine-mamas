@@ -19,6 +19,7 @@
     },
     "c868727a-415d-4336-9603-2593930c15f4": {
       "type": "image-with-text",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/medicine-mama-desktop-hero_f8197687-e76e-4bfd-bf8b-1eb8ad3ba6fc.jpg",
         "video_autoplay": "autoplay",
@@ -64,9 +65,9 @@
             "form_id": "538563",
             "text_color": "#202020",
             "button_background_color": "#202020",
-            "button_label_color": "#FFFFFF",
+            "button_label_color": "#ffffff",
             "links_color": "#000000",
-            "errors_color": "#E02229",
+            "errors_color": "#e02229",
             "text_alignment": "center",
             "form_alignment": "center",
             "padding_top": 0,

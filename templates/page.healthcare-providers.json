@@ -19,51 +19,6 @@
     },
     "c868727a-415d-4336-9603-2593930c15f4": {
       "type": "image-with-text",
-      "blocks": {
-        "template--17038566031589__c868727a-415d-4336-9603-2593930c15f4-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>Relief That Works</strong>",
-            "heading_size": "h3"
-          }
-        },
-        "template--17038566031589__c868727a-415d-4336-9603-2593930c15f4-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>With over 12,000 5-Star reviews, its safe to say people love us -- and your customers will too! Round out your retail offerings with Doctor backed boldly pure vulva care.</p>",
-            "text_size": "text-body",
-            "background_style": "none",
-            "background_color": "#ffffff",
-            "bullets_to_checkmarks": false
-          }
-        },
-        "template--17038566031589__c868727a-415d-4336-9603-2593930c15f4-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Apply Now",
-            "button_link": "https://docs.google.com/forms/d/e/1FAIpQLSeSvbEnQsOGwiOt5mb7narmzz8ahul5xGSlRpKEdSx-IcgasQ/viewform?usp=sf_link",
-            "button_arrow": true,
-            "big_button": false,
-            "button_subtitle": ""
-          }
-        },
-        "442dd473-7bc2-4311-91f3-1b436dd307d7": {
-          "type": "button",
-          "settings": {
-            "button_label": "Already Created Your Wholesale Profile? Login",
-            "button_link": "https://shopify.com/7052147/account",
-            "button_arrow": true,
-            "big_button": false,
-            "button_subtitle": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--17038566031589__c868727a-415d-4336-9603-2593930c15f4-heading-1",
-        "template--17038566031589__c868727a-415d-4336-9603-2593930c15f4-text-1",
-        "template--17038566031589__c868727a-415d-4336-9603-2593930c15f4-button-1",
-        "442dd473-7bc2-4311-91f3-1b436dd307d7"
-      ],
       "settings": {
         "image": "shopify://shop_images/medicine-mama-desktop-hero_f8197687-e76e-4bfd-bf8b-1eb8ad3ba6fc.jpg",
         "video_autoplay": "autoplay",
@@ -190,6 +145,7 @@
         "template--16826884096229__bb6fa93c-580c-4f56-ac2b-c29a63b74e12-column-3",
         "c3fc4fbc-7110-4025-b5cf-a35c02bdc389"
       ],
+      "disabled": true,
       "settings": {
         "title": "<p>Place An Order</p>",
         "heading_size": "h3",
@@ -250,6 +206,7 @@
         "template--16826884096229__8d2c3f5e-a399-44d4-81bc-bb20bf312e7d-text-1",
         "template--16826884096229__8d2c3f5e-a399-44d4-81bc-bb20bf312e7d-button-1"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/Our-Mission_563cca81-c643-4544-bea4-22edb429f3c6.jpg",
         "video_autoplay": "autoplay",

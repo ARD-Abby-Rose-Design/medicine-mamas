@@ -14,6 +14,13 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "a10e6e15-b6bd-4170-bf00-23f197219773": {
+          "type": "announcement",
+          "settings": {
+            "text": "Subscribe + Save 25% Off for life!",
+            "link": "shopify://pages/subscribe-save"
+          }
+        },
         "announcement_dWrNMp": {
           "type": "announcement",
           "settings": {
@@ -27,19 +34,12 @@
             "text": "Free Shipping on all U.S. orders over $50",
             "link": ""
           }
-        },
-        "a10e6e15-b6bd-4170-bf00-23f197219773": {
-          "type": "announcement",
-          "settings": {
-            "text": "Subscribe + Save 20% Off for life!",
-            "link": "shopify://pages/subscribe-save"
-          }
         }
       },
       "block_order": [
+        "a10e6e15-b6bd-4170-bf00-23f197219773",
         "announcement_dWrNMp",
-        "announcement-bar-0",
-        "a10e6e15-b6bd-4170-bf00-23f197219773"
+        "announcement-bar-0"
       ],
       "settings": {
         "color_scheme": "accent-2",

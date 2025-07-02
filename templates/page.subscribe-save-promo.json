@@ -368,6 +368,8 @@
       "settings": {
         "color_scheme": "inverse",
         "show_line_separator": true,
+        "show_desktop": true,
+        "show_mobile": true,
         "title": "<b>Over 11,000 5-Star Reviews</b>",
         "product": "",
         "padding_top": 36,

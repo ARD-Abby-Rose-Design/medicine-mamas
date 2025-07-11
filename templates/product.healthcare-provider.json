@@ -217,6 +217,7 @@
     },
     "17a80875-d3ad-4af8-9b12-88f5dbe0162b": {
       "type": "product-ingredients",
+      "disabled": true,
       "settings": {
         "heading": "Clinically Studied Ingredients",
         "heading_size": "h2",
@@ -543,6 +544,7 @@
       "block_order": [
         "heading_dyzFrm"
       ],
+      "disabled": true,
       "settings": {
         "show_desktop": true,
         "show_mobile": true,
@@ -568,6 +570,7 @@
       "block_order": [
         "okendo_reviews_widget_yP47Ug"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }

@@ -243,6 +243,53 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_f6iLxD": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KQc3aR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Help Your Patients Feel Better, Natually.",
+            "heading_size": "h2"
+          }
+        },
+        "text_UWmY7X": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Request free samples of our non-hormonal, clinically backed formulas designed to deliver real relief.</p>",
+            "text_style": "text-body-large"
+          }
+        },
+        "button_HFQbWR": {
+          "type": "button",
+          "settings": {
+            "button_label": "Clinical Product Information",
+            "button_link": "https://drive.google.com/drive/folders/1Hgv_KlQmxTuphC5qbfVcXQtoL4Ln0j21?usp=sharing",
+            "button_style_secondary": false,
+            "big_button": true,
+            "button_label_2": "Clinical Education",
+            "button_link_2": "https://drive.google.com/drive/folders/1rxkb1c4bC0aCAcgPXSV-fkmesW6ZjU31?usp=sharing",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_KQc3aR",
+        "text_UWmY7X",
+        "button_HFQbWR"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -250,6 +297,7 @@
     "c868727a-415d-4336-9603-2593930c15f4",
     "1751401849361eb5e0",
     "bb6fa93c-580c-4f56-ac2b-c29a63b74e12",
-    "8d2c3f5e-a399-44d4-81bc-bb20bf312e7d"
+    "8d2c3f5e-a399-44d4-81bc-bb20bf312e7d",
+    "rich_text_f6iLxD"
   ]
 }

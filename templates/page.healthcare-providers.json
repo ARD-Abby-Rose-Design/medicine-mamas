@@ -56,6 +56,54 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_Un7p3x": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_YaWBE6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Request Patient Samples",
+            "heading_size": "h2"
+          }
+        },
+        "text_NwbdgD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Please complete the form below to join our waitlist, our sample program is only open to US based providers at the moment</p>",
+            "text_style": "text-body"
+          }
+        },
+        "button_WxMLQE": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "big_button": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_YaWBE6",
+        "text_NwbdgD",
+        "button_WxMLQE"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "1751401849361eb5e0": {
       "type": "apps",
       "blocks": {
@@ -233,6 +281,7 @@
   "order": [
     "main",
     "c868727a-415d-4336-9603-2593930c15f4",
+    "rich_text_Un7p3x",
     "1751401849361eb5e0",
     "8d2c3f5e-a399-44d4-81bc-bb20bf312e7d",
     "multicolumn_Mxg4jc"

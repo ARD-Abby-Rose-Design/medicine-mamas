@@ -155,12 +155,72 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "multicolumn_Mxg4jc": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_yBW8fY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Dr-Carloyn-Moyers.jpg",
+            "title": "Dr. Carolyn Moyers",
+            "text": "<p>Board Certified OBGYN, NAMS (North American Menopause Society) Certified Menopause Practitioner, and the founder and CEO of Sky Women’s Health.</p>",
+            "link_label": "Learn More",
+            "link": "https://medicinemama.com/blogs/authors/carolyn-moyers",
+            "product": "",
+            "product_badge_color": "#FCF7F0",
+            "product_benefits": ""
+          }
+        },
+        "column_6HyeFK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Dr-Sara-Reardon.jpg",
+            "title": "Dr. Sara Reardon",
+            "text": "<p>Board Certified women's health and pelvic floor therapist specializing in the treatment of pelvic floor muscle dysfunction, Mom of 2, and Author of Floored.</p>",
+            "link_label": "Learn More",
+            "link": "https://medicinemama.com/blogs/authors/sara-reardon",
+            "product": "",
+            "product_badge_color": "#FCF7F0",
+            "product_benefits": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_yBW8fY",
+        "column_6HyeFK"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<p>Our Female Health Advisors</p>",
+        "heading_size": "h2",
+        "heading_alignment": "",
+        "text": "<p>To better serve our Medicine Mama family, we have engaged subject matter experts that can help us better serve you at every age and stage of womanhood.</p>",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "full_width": false,
+        "enable_desktop_slider": false,
+        "column_alignment": "left",
+        "border_style": "none",
+        "background_style": "primary",
+        "background_color": "#ffffff",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "inverse",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "show_slider_buttons": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "c868727a-415d-4336-9603-2593930c15f4",
     "1751401849361eb5e0",
-    "8d2c3f5e-a399-44d4-81bc-bb20bf312e7d"
+    "8d2c3f5e-a399-44d4-81bc-bb20bf312e7d",
+    "multicolumn_Mxg4jc"
   ]
 }

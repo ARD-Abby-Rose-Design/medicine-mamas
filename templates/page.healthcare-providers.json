@@ -159,6 +159,19 @@
     "multicolumn_Mxg4jc": {
       "type": "multicolumn",
       "blocks": {
+        "column_Xnw8bG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/medicine-mama-dr-clare-bertucio_1bad01cf-8e09-4574-830b-88378039beee.jpg",
+            "title": "Dr. Clare Bertucio",
+            "text": "<p>CEO + Chief Medical Officer, Board Certified Radiation Oncologist, and Mother revolutionizing women's healthcare.</p>",
+            "link_label": "Learn More",
+            "link": "https://medicinemama.com/blogs/authors/clare-bertucio",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
         "column_yBW8fY": {
           "type": "column",
           "settings": {
@@ -187,6 +200,7 @@
         }
       },
       "block_order": [
+        "column_Xnw8bG",
         "column_yBW8fY",
         "column_6HyeFK"
       ],

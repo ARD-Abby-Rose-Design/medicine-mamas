@@ -282,7 +282,7 @@
         "image_width": "full",
         "image_ratio": "square",
         "columns_desktop": 3,
-        "full_width": true,
+        "full_width": false,
         "enable_desktop_slider": true,
         "column_alignment": "left",
         "border_style": "none",

@@ -229,7 +229,7 @@
             "link_label": "Learn More",
             "link": "https://medicinemama.com/blogs/authors/carolyn-moyers",
             "product": "",
-            "product_badge_color": "#FCF7F0",
+            "product_badge_color": "#fcf7f0",
             "product_benefits": ""
           }
         },
@@ -242,7 +242,7 @@
             "link_label": "Learn More",
             "link": "https://medicinemama.com/blogs/authors/sara-reardon",
             "product": "",
-            "product_badge_color": "#FCF7F0",
+            "product_badge_color": "#fcf7f0",
             "product_benefits": ""
           }
         }
@@ -262,7 +262,7 @@
         "image_ratio": "square",
         "columns_desktop": 3,
         "full_width": true,
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "column_alignment": "left",
         "border_style": "none",
         "background_style": "none",

@@ -161,7 +161,7 @@
         "columns_desktop": 4,
         "full_width": true,
         "enable_desktop_slider": true,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "border_style": "none",
         "background_style": "none",
         "background_color": "#ffffff",

@@ -151,7 +151,7 @@
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "<p>Our Female Health Advisors</p>",
-        "heading_size": "h2",
+        "heading_size": "h4",
         "heading_alignment": "",
         "text": "<p>To better serve our Medicine Mama family, we have engaged subject matter experts that can help us better serve you at every age and stage of womanhood.</p>",
         "image_width": "full",

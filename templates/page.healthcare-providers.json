@@ -100,41 +100,75 @@
         "padding_bottom": 36
       }
     },
-    "c868727a-415d-4336-9603-2593930c15f4": {
-      "type": "image-with-text",
-      "disabled": true,
+    "multicolumn_Mxg4jc": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Xnw8bG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/medicine-mama-dr-clare-bertucio_1bad01cf-8e09-4574-830b-88378039beee.jpg",
+            "title": "Dr. Clare Bertucio",
+            "text": "<p>CEO + Chief Medical Officer, Board Certified Radiation Oncologist, and Mother revolutionizing women's healthcare.</p>",
+            "link_label": "Learn More",
+            "link": "https://medicinemama.com/blogs/authors/clare-bertucio",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
+        "column_yBW8fY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Dr-Carloyn-Moyers.jpg",
+            "title": "Dr. Carolyn Moyers",
+            "text": "<p>Board Certified OBGYN, NAMS (North American Menopause Society) Certified Menopause Practitioner, and the founder and CEO of Sky Women’s Health.</p>",
+            "link_label": "Learn More",
+            "link": "https://medicinemama.com/blogs/authors/carolyn-moyers",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
+        "column_6HyeFK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Dr-Sara-Reardon.jpg",
+            "title": "Dr. Sara Reardon",
+            "text": "<p>Board Certified women's health and pelvic floor therapist specializing in the treatment of pelvic floor muscle dysfunction, Mom of 2, and Author of Floored.</p>",
+            "link_label": "Learn More",
+            "link": "https://medicinemama.com/blogs/authors/sara-reardon",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Xnw8bG",
+        "column_yBW8fY",
+        "column_6HyeFK"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "image": "shopify://shop_images/medicine-mama-desktop-hero_f8197687-e76e-4bfd-bf8b-1eb8ad3ba6fc.jpg",
-        "video_autoplay": "autoplay",
-        "media_type": "image",
-        "height": "adapt",
-        "media_caption": "",
-        "media_caption_color": "#ffffff",
-        "media_caption_bg": "none",
-        "media_caption_bg_color": "#ffffff",
-        "media_caption_position": "top-left",
-        "second_media_caption": "",
-        "second_media_caption_color": "#ffffff",
-        "second_media_caption_bg": "none",
-        "second_media_caption_bg_color": "#ffffff",
-        "second_media_caption_position": "top-left",
-        "show_desktop": true,
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "desktop_content_padding_left": 36,
-        "desktop_content_padding_right": 36,
-        "content_layout": "no-overlap",
-        "color_scheme": "inverse",
-        "image_behavior": "none",
-        "show_mobile": true,
-        "layout_mobile": "image_first",
+        "title": "<p>Our Female Health Advisors</p>",
+        "heading_size": "h2",
+        "heading_alignment": "",
+        "text": "<p>To better serve our Medicine Mama family, we have engaged subject matter experts that can help us better serve you at every age and stage of womanhood.</p>",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 3,
         "full_width": false,
-        "below_header": false,
-        "mobile_content_alignment": "left",
-        "media_caption_position_mobile": "top-left",
-        "second_media_caption_position_mobile": "top-left",
+        "enable_desktop_slider": true,
+        "column_alignment": "left",
+        "border_style": "none",
+        "background_style": "none",
+        "background_color": "#ffffff",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "inverse",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "show_slider_buttons": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -224,88 +258,14 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "multicolumn_Mxg4jc": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_Xnw8bG": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/medicine-mama-dr-clare-bertucio_1bad01cf-8e09-4574-830b-88378039beee.jpg",
-            "title": "Dr. Clare Bertucio",
-            "text": "<p>CEO + Chief Medical Officer, Board Certified Radiation Oncologist, and Mother revolutionizing women's healthcare.</p>",
-            "link_label": "Learn More",
-            "link": "https://medicinemama.com/blogs/authors/clare-bertucio",
-            "product": "",
-            "product_badge_color": "#fcf7f0",
-            "product_benefits": ""
-          }
-        },
-        "column_yBW8fY": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Dr-Carloyn-Moyers.jpg",
-            "title": "Dr. Carolyn Moyers",
-            "text": "<p>Board Certified OBGYN, NAMS (North American Menopause Society) Certified Menopause Practitioner, and the founder and CEO of Sky Women’s Health.</p>",
-            "link_label": "Learn More",
-            "link": "https://medicinemama.com/blogs/authors/carolyn-moyers",
-            "product": "",
-            "product_badge_color": "#fcf7f0",
-            "product_benefits": ""
-          }
-        },
-        "column_6HyeFK": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Dr-Sara-Reardon.jpg",
-            "title": "Dr. Sara Reardon",
-            "text": "<p>Board Certified women's health and pelvic floor therapist specializing in the treatment of pelvic floor muscle dysfunction, Mom of 2, and Author of Floored.</p>",
-            "link_label": "Learn More",
-            "link": "https://medicinemama.com/blogs/authors/sara-reardon",
-            "product": "",
-            "product_badge_color": "#fcf7f0",
-            "product_benefits": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_Xnw8bG",
-        "column_yBW8fY",
-        "column_6HyeFK"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "<p>Our Female Health Advisors</p>",
-        "heading_size": "h2",
-        "heading_alignment": "",
-        "text": "<p>To better serve our Medicine Mama family, we have engaged subject matter experts that can help us better serve you at every age and stage of womanhood.</p>",
-        "image_width": "full",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "full_width": false,
-        "enable_desktop_slider": true,
-        "column_alignment": "left",
-        "border_style": "none",
-        "background_style": "none",
-        "background_color": "#ffffff",
-        "button_label": "Button label",
-        "button_link": "",
-        "color_scheme": "inverse",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "show_slider_buttons": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "main",
     "8d2c3f5e-a399-44d4-81bc-bb20bf312e7d",
-    "c868727a-415d-4336-9603-2593930c15f4",
+    "multicolumn_Mxg4jc",
     "custom_liquid_X8jCWD",
     "rich_text_Un7p3x",
-    "1751401849361eb5e0",
-    "multicolumn_Mxg4jc"
+    "1751401849361eb5e0"
   ]
 }

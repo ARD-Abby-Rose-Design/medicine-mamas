@@ -148,6 +148,9 @@
         "column_yBW8fY",
         "column_6HyeFK"
       ],
+      "custom_css": [
+        ".multicolumn-list__item {min-width: 0;}"
+      ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "<p>Our Female Health Advisors</p>",

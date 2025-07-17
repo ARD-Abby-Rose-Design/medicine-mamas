@@ -151,6 +151,9 @@
         "template--16826884096229__bb6fa93c-580c-4f56-ac2b-c29a63b74e12-column-3",
         "c3fc4fbc-7110-4025-b5cf-a35c02bdc389"
       ],
+      "custom_css": [
+        ".multicolumn-list__item {min-width: 0;}"
+      ],
       "settings": {
         "title": "<p>What We Stand For</p>",
         "heading_size": "h3",

@@ -166,7 +166,7 @@
         "border_style": "none",
         "background_style": "none",
         "background_color": "#ffffff",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "color_scheme": "inverse",
         "columns_mobile": "1",

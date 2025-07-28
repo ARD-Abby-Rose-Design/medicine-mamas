@@ -215,6 +215,7 @@
           "type": "column",
           "settings": {
             "video": "shopify://files/videos/Lips Stick UGC.mp4",
+            "video_poster": "shopify://shop_images/230615_MedMama__SHOT9_00909.jpg",
             "title": "VMAGIC® Lips Stick",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",

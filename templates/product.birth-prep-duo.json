@@ -245,6 +245,7 @@
       ],
       "name": "Collage with text",
       "settings": {
+        "image": "shopify://shop_images/230615_MedMama__SHOT9_00909.jpg",
         "video": "shopify://files/videos/Lips Stick UGC.mp4",
         "media_caption": "",
         "media_caption_color": "#ffffff",
@@ -252,7 +253,7 @@
         "media_caption_bg_color": "#FFFFFF",
         "media_caption_position": "top-left",
         "overlay_caption_position_mobile": "top-left",
-        "collage_image": "shopify://shop_images/230615_MedMama__SHOT9_00909.jpg",
+        "collage_video": "shopify://files/videos/Untitled design (1)_fda0c0a8-c1e8-4435-9367-c42ee85cf92e.mp4",
         "collage_media_caption": "",
         "collage_media_caption_color": "#ffffff",
         "collage_media_caption_bg": "none",

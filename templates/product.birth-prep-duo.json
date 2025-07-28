@@ -243,6 +243,7 @@
         "text_DtDArP",
         "button_pPEaEG"
       ],
+      "disabled": true,
       "name": "Collage with text",
       "settings": {
         "image": "shopify://shop_images/230615_MedMama__SHOT9_00909.jpg",

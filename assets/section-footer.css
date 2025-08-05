@@ -621,4 +621,14 @@
   max-width: 100% !important;
 }
 
+.footer__disclaimer-wrapper {
+  margin-top: 20px;
+}
+
+.footer__disclaimer {
+  padding: 1rem;
+  max-width: 800px;
+  border: 1px solid rgba(var(--color-foreground), 0.1);
+  text-align: left;
+}
 

@@ -215,6 +215,78 @@
         "padding_bottom": 52
       }
     },
+    "image_with_text_4KRj8r": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_yYHnLJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Clinically Studied Ingredients",
+            "heading_size": "h2"
+          }
+        },
+        "text_PFCffx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "button_MBUy3q": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_arrow": true,
+            "big_button": false,
+            "button_subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_yYHnLJ",
+        "text_PFCffx",
+        "button_MBUy3q"
+      ],
+      "name": "Media with text",
+      "settings": {
+        "video_autoplay": "autoplay",
+        "media_type": "image",
+        "height": "adapt",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#FFFFFF",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#FFFFFF",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
+        "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "17a80875-d3ad-4af8-9b12-88f5dbe0162b": {
       "type": "product-ingredients",
       "settings": {
@@ -595,6 +667,7 @@
     "main",
     "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa",
     "cac67cc4-85e1-4f5d-9af0-5bfbe86ec590",
+    "image_with_text_4KRj8r",
     "17a80875-d3ad-4af8-9b12-88f5dbe0162b",
     "multicolumn",
     "related-products",

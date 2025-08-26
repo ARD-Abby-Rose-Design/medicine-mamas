@@ -1,3 +1,296 @@
+<style>
+  .purchase-option-container {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    padding: 0 12px;
+  }
+
+  .purchase-option-container.active--true {
+    background-color: #FFFFFF;
+  }
+
+
+  .purchase-option-header {
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .purchase-option {
+    border-top: 1px solid #000000;
+    padding: 12px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .purchase-option input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .purchase-option label {
+    padding-left: calc(18px + 6px);
+    margin-right: 6px;
+    position: relative;
+  }
+
+  .purchase-option label:before,
+  .purchase-option label:after {
+    content: " ";
+    display: inline-block;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+
+  .purchase-option label:before {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #000000;
+  }
+
+  .purchase-option label:after {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    left: 3px;
+    background-color: #FFFFFF;
+    transition: background-color 150ms ease;
+  }
+
+  .purchase-option input:checked + label:after {
+    background-color: #000000;
+  }
+
+
+  .purchase-option-badge {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    background-color: #FCF7F0;
+    padding: 3px 10px;
+    padding-top: 4px;
+  }
+
+
+  .option-price {
+    font-weight: 700;
+  }
+
+  .option-sale-price {
+    font-weight: 700;
+    color: red;
+  }
+
+  .option-compare-price {
+    font-weight: 700;
+    text-decoration: line-through;
+  }
+
+
+  .option-description {
+    margin: 6px 0;
+  }
+
+
+  .option-incentives {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    padding-bottom: 12px;
+  }
+
+  .option-incentive {
+    position: relative;
+    padding: 5px;
+    padding-left: 20px;
+  }
+
+  .option-incentive:before {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M12.75 1.24951L4.5 12.7495L1.25 9.49951' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+</style>
+
+<style>
+  component-dropdown {
+    display: block;
+    cursor: pointer;
+  }
+
+  component-dropdown > div:last-child {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  component-dropdown > div:last-child > div {
+    overflow: hidden;
+  }
+
+  component-dropdown.active--true > div:last-child {
+    grid-template-rows: 1fr;
+  }
+</style>
+
+<component-dropdown class="purchase-option-container active--true">
+  <div class="purchase-option-header">
+    <strong>Subscribe & Save!</strong>
+    <span>Price per unit: $40</span>
+  </div>
+  <div>
+    {%- for variant in product.variants -%}
+      {%- liquid
+        assign variant_allocation = nil
+
+        for allocation in variant.selling_plan_allocations
+          assign supply_number = variant.title | split: " " | first
+
+          if allocation.selling_plan.name contains supply_number
+            assign variant_allocation = allocation
+            break
+          endif
+        endfor
+
+        assign selling_plan_id = variant_allocation.selling_plan.id
+
+        assign description = variant.title | append: " " | append: variant_allocation.selling_plan.name
+        assign description = description | replace: "Delivery", "delivered"
+      -%}
+
+      <component-dropdown class="active--{{ forloop.first }}">
+        <div class="purchase-option">
+          <div>
+            <input name="selling_plan" type="radio" value="{{ selling_plan_id }}" {% if forloop.first %}checked{% endif %} />
+
+            <label>
+              {{ variant.title }} Supply
+            </label>
+
+            {%- if forloop.index == 2 -%}
+              <span class="purchase-option-badge">Most Popular!</span>
+            {%- endif -%}
+
+            {%- if forloop.last -%}
+              <span class="purchase-option-badge">Best Value!</span>
+            {%- endif -%}
+          </div>
+
+          <div>
+            {%- if variant_allocation.compare_at_price > variant_allocation.price -%}
+              <span class="option-sale-price">{{ variant_allocation.price | money }}</span>
+              <span class="option-compare-price">{{ variant_allocation.compare_at_price | money }}</span>
+            {%- else -%}
+              <span class="option-price">{{ variant_allocation.price | money }}</span>
+            {%- endif -%}
+          </div>
+        </div>
+        <div>
+          <p class="option-description">
+            {{ description }}
+          </p>
+          <ul class="option-incentives">
+            <li class="option-incentive">{% cycle "15%", "20%", "25%" %} off for life</li>
+            <li class="option-incentive">Pause, modify, or cancel anytime</li>
+            <li class="option-incentive">Free US shipping on every order over $50</li>
+          </ul>
+        </div>
+      </component-dropdown>
+    {%- endfor -%}
+  </div>
+</component-dropdown>
+
+<component-dropdown class="purchase-option-container">
+  <div class="purchase-option-header">
+    <strong>One-time Purchase</strong>
+  </div>
+  <div>
+    {%- for variant in product.variants -%}
+      <div class="purchase-option">
+        <div>
+          <input name="Packs" type="radio" value="{{ variant.title }}" {% if forloop.first %}checked{% endif %} />
+
+          <label>
+            {{ variant.title }} Supply
+          </label>
+        </div>
+        <div>
+          {%- if variant.compare_at_price > variant.price -%}
+            <span class="option-sale-price">{{ variant.price | money }}</span>
+            <span class="option-compare-price">{{ variant.compare_at_price | money }}</span>
+          {%- else -%}
+            <span class="option-price">{{ variant.price | money }}</span>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</component-dropdown>
+
+<script>
+  class ComponentDropdown extends HTMLElement {
+    constructor() {
+      super();
+    }
+
+    connectedCallback() {
+      this.initializeMarkup();
+      this.events();
+    }
+
+    events() {
+      this.addEventListener("click", (event) => {
+        if (this.classList.contains("active--true")) {
+          return;
+        } else {
+          this.hideGroup();
+          this.classList.add("active--true");
+        }
+      });
+    }
+
+    initializeMarkup() {
+      const content = this.querySelector(":scope > div:last-child");
+      const wrapper = document.createElement("div");
+
+      while (content.firstChild) {
+        wrapper.appendChild(content.firstChild);
+      }
+
+      content.appendChild(wrapper);
+    }
+
+    hideGroup() {
+      const parent_element = this.parentElement;
+      const group = parent_element.querySelectorAll(":scope > component-dropdown");
+
+      group.forEach((element) => {
+        element.classList.remove("active--true");
+      });
+    }
+  }
+
+  customElements.define("component-dropdown", ComponentDropdown);
+</script>
+
+{%- comment -%}
 <recharge-widget>
   <div
     class="widget hidden"
@@ -69,7 +362,7 @@
                 <span class="option-discount"></span>
                 <div class="option-compare-price{% if product.selected_or_first_available_variant.selling_plan_allocations.size != 0 %} hidden{% endif %}">
                   {{ product.selected_or_first_available_variant.compare_at_price |  money_without_trailing_zeros }}
-                </div>                
+                </div>
                 <div class="option-price {% if product.selected_or_first_available_variant.selling_plan_allocations.size == 0 %}bulk-discount{% endif %}"></div>
               </span>
             </label>
@@ -129,4 +422,4 @@
 </recharge-widget>
 
 <link rel="stylesheet" href="{{ 'rc-widget.css' | asset_url }}">
-
+{%- endcomment -%}

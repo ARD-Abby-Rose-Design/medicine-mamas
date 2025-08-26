@@ -24,7 +24,7 @@
       }
     }
 
- 
+
   {%- endstyle -%}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
@@ -55,7 +55,7 @@
   {%- endif -%}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
- 
+
 <div
   class="
     product
@@ -103,7 +103,7 @@
                   {{ product.metafields.size.information.value }}
                 </div>
                 {% endif %}
-                
+
               </div>
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
@@ -124,13 +124,6 @@
                   {%- endif -%}
                 </div>
               {%- endif -%}
-              <div {{ block.shopify_attributes }}>
-                {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
-                {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
-                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                  {{ form | payment_terms }}
-                {%- endform -%}
-              </div>
             {%- when 'inventory' -%}
               <p
                 class="product__inventory no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -184,7 +177,7 @@
                   {{ product.description }}
                 </div>
               {%- endif -%}
-            
+
             {%- when 'sku' -%}
               <p
                 class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -196,7 +189,7 @@
               </p>
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
-              
+
             {%- when 'collapsible_tab' -%}
               <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                 <details id="Details-{{ block.id }}-{{ section.id }}">
@@ -216,7 +209,7 @@
                 </details>
               </div>
             {%- when 'quantity_selector' -%}
-              
+
             {%- when 'popup' -%}
               <modal-opener
                 class="product-popup-modal__opener no-js-hidden quick-add-hidden"
@@ -244,7 +237,7 @@
             {%- when 'checkmarks' %}
               {% if product.metafields.custom.checkmarks != blank %}
               <div class="product__checkmarks">
-                {% for mark in product.metafields.custom.checkmarks.value %}  
+                {% for mark in product.metafields.custom.checkmarks.value %}
                 <div class="product__checkmark">{{ mark }}</div>
                 {% endfor %}
               </div>
@@ -2026,7 +2019,7 @@
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
     }
-    
+
   ]
 }
 {% endschema %}

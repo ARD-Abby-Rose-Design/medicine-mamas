@@ -241,23 +241,12 @@
             "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
-        },
-        "button_MBUy3q": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_arrow": true,
-            "big_button": false,
-            "button_subtitle": ""
-          }
         }
       },
       "block_order": [
         "heading_yYHnLJ",
         "heading_kPpPCj",
-        "text_PFCffx",
-        "button_MBUy3q"
+        "text_PFCffx"
       ],
       "name": "Media with text",
       "settings": {
@@ -370,6 +359,89 @@
         "image": "shopify://shop_images/Untitled_design_7.png",
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_atRGTK": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_EQ9rGJ": {
+          "type": "column",
+          "settings": {
+            "title": "IMMEDIATELY",
+            "text": "<p>Relief begins with the first dose.</p><p>As soon as the VMAGIC Vaginal Suppository is absorbed, its clinically tested hyaluronic acid starts replenishing moisture where your body needs it most. This deep hydration supports tissue strength and elasticity while soothing discomfort at the source.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#FCF7F0",
+            "product_benefits": ""
+          }
+        },
+        "column_YLnwaG": {
+          "type": "column",
+          "settings": {
+            "title": "ONE WEEK",
+            "text": "<p>Real relief. Feels like magic.</p><p>Clinical research shows that hyaluronic acid can reduce vaginal dryness by up to 49% in as little as nine days.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#FCF7F0",
+            "product_benefits": ""
+          }
+        },
+        "column_wLMKgT": {
+          "type": "column",
+          "settings": {
+            "title": "ONE MONTH",
+            "text": "<p>The results speak for themselves.</p><p>After a full month of consistent use women using hyaluronic acid to treat vaginal dryness had (use reference to footnote 1)</p><p> • 84% less vaginal dryness<br/> • 86% less itching and burning<br/> • 57% less pain with intimacy</p><p>VMAGIC Vaginal Suppository works with your body to restore comfort, confidence, and ease.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
+        "column_4jdA7f": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#FCF7F0",
+            "product_benefits": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_EQ9rGJ",
+        "column_YLnwaG",
+        "column_wLMKgT",
+        "column_4jdA7f"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<p>What to expect</p>",
+        "heading_size": "h2",
+        "heading_alignment": "",
+        "text": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 5,
+        "full_width": false,
+        "enable_desktop_slider": true,
+        "column_alignment": "left",
+        "border_style": "none",
+        "background_style": "primary",
+        "background_color": "#ffffff",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "show_slider_buttons": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -740,6 +812,7 @@
     "17a80875-d3ad-4af8-9b12-88f5dbe0162b",
     "1443dbb0-ea85-4289-811e-0188944eac12",
     "collapsible_content_6bg4eK",
+    "multicolumn_atRGTK",
     "multicolumn",
     "related-products",
     "c3a50a1b-b9e4-4730-8667-125f047ed335",

@@ -49,6 +49,7 @@
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "packs"
           }
@@ -268,12 +269,12 @@
         "media_caption": "",
         "media_caption_color": "#ffffff",
         "media_caption_bg": "none",
-        "media_caption_bg_color": "#FFFFFF",
+        "media_caption_bg_color": "#ffffff",
         "media_caption_position": "top-left",
         "second_media_caption": "",
         "second_media_caption_color": "#ffffff",
         "second_media_caption_bg": "none",
-        "second_media_caption_bg_color": "#FFFFFF",
+        "second_media_caption_bg_color": "#ffffff",
         "second_media_caption_position": "top-left",
         "show_desktop": true,
         "desktop_image_width": "medium",

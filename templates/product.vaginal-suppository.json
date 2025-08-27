@@ -353,7 +353,7 @@
         "heading_size": "h2",
         "heading_alignment": "center",
         "layout": "none",
-        "color_scheme": "background-1",
+        "color_scheme": "inverse",
         "container_color_scheme": "",
         "open_first_collapsible_row": false,
         "image": "shopify://shop_images/Untitled_design_7.png",
@@ -375,7 +375,7 @@
             "link_label": "",
             "link": "",
             "product": "",
-            "product_badge_color": "#FCF7F0",
+            "product_badge_color": "#fcf7f0",
             "product_benefits": ""
           }
         },
@@ -387,7 +387,7 @@
             "link_label": "",
             "link": "",
             "product": "",
-            "product_badge_color": "#FCF7F0",
+            "product_badge_color": "#fcf7f0",
             "product_benefits": ""
           }
         },
@@ -411,7 +411,7 @@
             "link_label": "",
             "link": "",
             "product": "",
-            "product_badge_color": "#FCF7F0",
+            "product_badge_color": "#fcf7f0",
             "product_benefits": ""
           }
         }
@@ -439,7 +439,7 @@
         "background_color": "#ffffff",
         "button_label": "Button label",
         "button_link": "",
-        "color_scheme": "",
+        "color_scheme": "inverse",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "show_slider_buttons": true,

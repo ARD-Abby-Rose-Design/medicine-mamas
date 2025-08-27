@@ -576,7 +576,7 @@
         "heading": "What to expect",
         "heading_size": "h2",
         "heading_alignment": "center",
-        "layout": "none",
+        "layout": "row",
         "color_scheme": "inverse",
         "container_color_scheme": "",
         "open_first_collapsible_row": false,
@@ -647,6 +647,7 @@
         "column_wLMKgT",
         "column_4jdA7f"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "<p>What to expect</p>",

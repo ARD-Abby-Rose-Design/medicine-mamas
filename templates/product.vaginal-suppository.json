@@ -606,6 +606,7 @@
         "column_YLnwaG": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_Aug_27_2025_10_26_08_AM.png",
             "title": "ONE WEEK",
             "text": "<p>Real relief. Feels like magic.</p><p>Clinical research shows that hyaluronic acid can reduce vaginal dryness by up to 49% in as little as nine days.</p>",
             "link_label": "",
@@ -659,13 +660,13 @@
         "enable_desktop_slider": true,
         "column_alignment": "left",
         "border_style": "none",
-        "background_style": "primary",
+        "background_style": "none",
         "background_color": "#ffffff",
         "button_label": "Button label",
         "button_link": "",
         "color_scheme": "inverse",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "show_slider_buttons": true,
         "padding_top": 36,
         "padding_bottom": 36

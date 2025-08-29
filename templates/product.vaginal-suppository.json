@@ -145,15 +145,6 @@
         "padding_bottom": 0
       }
     },
-    "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa": {
-      "type": "you-speak",
-      "settings": {
-        "color_scheme": "inverse",
-        "title": "See The Magic",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "cac67cc4-85e1-4f5d-9af0-5bfbe86ec590": {
       "type": "scrolling-marquee",
       "blocks": {
@@ -381,8 +372,8 @@
         "layout": "row",
         "color_scheme": "inverse",
         "container_color_scheme": "background-1",
-        "open_first_collapsible_row": false,
-        "image": "shopify://shop_images/Untitled_design_7.png",
+        "open_first_collapsible_row": true,
+        "image": "shopify://shop_images/Untitled_design_1_69b35ad9-2171-4e02-b21c-33d34704ae51.jpg",
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 36,
@@ -549,6 +540,15 @@
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 28
+      }
+    },
+    "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa": {
+      "type": "you-speak",
+      "settings": {
+        "color_scheme": "inverse",
+        "title": "See The Magic",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "c3a50a1b-b9e4-4730-8667-125f047ed335": {

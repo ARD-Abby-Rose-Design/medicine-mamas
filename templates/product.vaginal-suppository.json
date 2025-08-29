@@ -604,7 +604,7 @@
         "heading_alignment": "center",
         "layout": "row",
         "color_scheme": "inverse",
-        "container_color_scheme": "",
+        "container_color_scheme": "background-1",
         "open_first_collapsible_row": false,
         "image": "shopify://shop_images/Untitled_design_7.png",
         "image_ratio": "adapt",

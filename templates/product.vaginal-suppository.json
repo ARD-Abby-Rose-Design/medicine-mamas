@@ -528,6 +528,32 @@
         "padding_bottom": 52
       }
     },
+    "rich_text_tgNtbb": {
+      "type": "rich-text",
+      "blocks": {
+        "text_yjEiLn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Results based on main ingredient Hyaluronic Acid.</p><p>Chen J et al. J Sex Med. 2013;10(6):1575–84.</p>",
+            "text_style": "text-body-small"
+          }
+        }
+      },
+      "block_order": [
+        "text_yjEiLn"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
     "collapsible_content_6bg4eK": {
       "type": "collapsible-content",
       "blocks": {

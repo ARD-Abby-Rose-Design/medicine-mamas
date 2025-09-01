@@ -23,19 +23,20 @@
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
     }
-
-
   {%- endstyle -%}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
+
   {% if section.settings.image_zoom == 'hover' %}
     <script id="EnableZoomOnHover-main" src="{{ 'magnify.js' | asset_url }}" defer="defer"></script>
   {% endif %}
+
   {%- if request.design_mode -%}
     <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 
   {%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
+
   {%- if first_3d_model -%}
     {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
     <link
@@ -88,6 +89,7 @@
           {%- case block.type -%}
             {%- when '@app' -%}
               {% render block %}
+
             {%- when 'text' -%}
               <p
                 class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
@@ -95,16 +97,20 @@
               >
                 {{- block.settings.text -}}
               </p>
+
             {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }}>
-                <h1 class="h3">{{ product.title | escape }}</h1>
-                {% if product.metafields.size.information != nil %}
-                <div class="product__size-info">
-                  {{ product.metafields.size.information.value }}
-                </div>
-                {% endif %}
+                <h1 class="h3">
+                  {{ product.title | escape }}
+                </h1>
 
+                {% if product.metafields.size.information != nil %}
+                  <div class="product__size-info">
+                    {{ product.metafields.size.information.value }}
+                  </div>
+                {% endif %}
               </div>
+
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price',
@@ -114,6 +120,7 @@
                   price_class: 'price--large'
                 -%}
               </div>
+
               {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
                 <div class="product__tax caption rte">
                   {%- if cart.taxes_included -%}
@@ -124,6 +131,7 @@
                   {%- endif -%}
                 </div>
               {%- endif -%}
+
             {%- when 'inventory' -%}
               <p
                 class="product__inventory no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -171,9 +179,10 @@
                   {%- endif -%}
                 {%- endif -%}
               </p>
+
             {%- when 'description' -%}
               {%- if product.description != blank -%}
-                <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                <div class="product__description rte" {{ block.shopify_attributes }}>
                   {{ product.description }}
                 </div>
               {%- endif -%}
@@ -187,6 +196,7 @@
               >
                 <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span> {{- product.selected_or_first_available_variant.sku -}}
               </p>
+
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
 
@@ -208,6 +218,7 @@
                   </div>
                 </details>
               </div>
+
             {%- when 'quantity_selector' -%}
 
             {%- when 'popup' -%}
@@ -225,33 +236,41 @@
                   {{ block.settings.text | default: block.settings.page.title }}
                 </button>
               </modal-opener>
+
               <a href="{{ block.settings.page.url }}" class="product-popup-modal__button link no-js">
                 {{- block.settings.text -}}
               </a>
+
             {%- when 'share' -%}
               {% assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin %}
               {% render 'share-button',
                 block: block,
                 share_link: share_url
               %}
+
             {%- when 'checkmarks' %}
               {% if product.metafields.custom.checkmarks != blank %}
-              <div class="product__checkmarks">
-                {% for mark in product.metafields.custom.checkmarks.value %}
-                <div class="product__checkmark">{{ mark }}</div>
-                {% endfor %}
-              </div>
+                <div class="product__checkmarks">
+                  {% for mark in product.metafields.custom.checkmarks.value %}
+                    <div class="product__checkmark">{{ mark }}</div>
+                  {% endfor %}
+                </div>
               {% endif %}
+
             {%- when 'variant_picker' -%}
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id, picker_type: block.settings.picker_type %}
+
             {%- when 'buy_buttons' -%}
-                {% render 'rc-widget', product: product %}
+              {% render 'rc-widget', product: product %}
+
               <div class="quantity-and-buttons">
                 {%- render 'product-quantity-input', product: product, product_form_id: product_form_id -%}
                 {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup-avai_availability: true -%}
               </div>
+
             {%- when 'rating' -%}
               {%- render 'star-rating', product: product -%}
+
             {%- when 'complementary' -%}
               <product-recommendations class="complementary-products quick-add-hidden no-js-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}{% if block.settings.enable_quick_add %} complementary-products-contains-quick-add{% endif %}" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ block.settings.product_list_limit }}&intent=complementary">
                 {%- if recommendations.performed and recommendations.products_count > 0 -%}
@@ -261,6 +280,7 @@
                         <details id="Details-{{ block.id }}-{{ section.id }}" open>
                           <summary>
                       {%- endif %}
+
                       <div class="summary__title">
                         {%- if block.settings.make_collapsible_row -%}
                           {% render 'icon-accordion', icon: block.settings.icon %}
@@ -269,10 +289,12 @@
                           <h2 class="accordion__title text-body">{{ block.settings.block_heading }}</h2>
                         {%- endif -%}
                       </div>
+
                       {%- if block.settings.make_collapsible_row -%}
-                          {% render 'icon-caret' %}
+                        {% render 'icon-caret' %}
                         </summary>
                       {%- endif -%}
+
                       <slideshow-component class="slider-mobile-gutter">
                         {%- assign number_of_slides = recommendations.products_count | plus: 0.0 | divided_by: block.settings.products_per_page | ceil -%}
                         <div id="Slider-{{ block.id }}" class="contains-card contains-card--product complementary-slider grid grid--1-col slider slider--everywhere" role="list"{% if number_of_slides > 1 %} aria-label="{{ 'general.slider.name' | t }}"{% endif %}>
@@ -326,29 +348,32 @@
                     </div>
                   </aside>
                 {%- endif -%}
+
                 {{ 'component-card.css' | asset_url | stylesheet_tag }}
                 {{ 'component-complementary-products.css' | asset_url | stylesheet_tag }}
+
                 {%- if block.settings.enable_quick_add -%}
                   {{ 'quick-add.css' | asset_url | stylesheet_tag }}
                   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
                 {%- endif -%}
               </product-recommendations>
+
             {%- when 'icon-with-text' -%}
-              {% render 'icon-with-text',
-                block: block
-              %}
+              {% render 'icon-with-text', block: block %}
 
             {% when 'bundle_products'%}
               {% render 'product-bundle-products', products: product.metafields.bundle.products.value, heading: block.settings.heading %}
 
           {%- endcase -%}
         {%- endfor -%}
+
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
           {{ 'products.product.view_full_details' | t }}
           {% render 'icon-arrow' %}
         </a>
       </product-info>
     </div>
+
     {%- if section.settings.media_position == 'right' -%}
       {% comment %} Duplicate gallery to display after product content on tablet/desktop breakpoint {% endcomment %}
       <div class="grid__item product__media-wrapper small-hide">

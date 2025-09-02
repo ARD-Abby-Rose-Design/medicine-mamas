@@ -10,6 +10,16 @@
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
+{%- liquid
+  assign variant = product.selected_or_first_available_variant
+
+  assign variant_on_sale = false
+
+  if variant.price < variant.compare_at_price
+    assign variant_on_sale = true
+  endif
+-%}
+
 <div
   {{ block.shopify_attributes }}
   class="buy-buttons__wrapper"
@@ -52,8 +62,8 @@
         novalidate: 'novalidate',
         data-type: 'add-to-cart-form'
       -%}
-        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled class="product-variant-id" />
-        <input type="hidden" name="selling_plan" value="" class="product-selling-plan-id" />
+        <input type="hidden" name="id" value="{{ variant.id }}" disabled class="product-variant-id" />
+        <input type="hidden" name="selling_plan" value="" />
 
         {%- if gift_card_recipient_feature_active -%}
           {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
@@ -62,10 +72,10 @@
         <div class="product-form__buttons">
           {%- liquid
             assign check_against_inventory = true
-            if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
+            if variant.inventory_management != 'shopify' or variant.inventory_policy == 'continue'
               assign check_against_inventory = false
             endif
-            if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
+            if variant.quantity_rule.min > variant.inventory_quantity and check_against_inventory
               assign quantity_rule_soldout = true
             endif
           -%}
@@ -74,12 +84,12 @@
             type="submit"
             name="add"
             class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}{% if block.settings.button_style == 'red' %} button--red{% endif %}"
-            {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+            {% if variant.available == false or quantity_rule_soldout %}
               disabled
             {% endif %}
           >
             <span class="product-form__submit--label">
-              {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+              {%- if variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
               {%- elsif product.tags contains 'pre-order' -%}
                 {{ 'products.product.preorder' | t }}
@@ -91,14 +101,19 @@
                 {% endif %}
               {%- endif -%}
             </span>
+
             {% unless block.settings.show_price == false %}
+              {%- liquid
+                assign current_variant = variant.price
+              -%}
+
               <span class="product-form__submit--dash">-</span>
               <span id="price-{{ section_id }}" class="product-form__submit--price">
-                {% if product.selected_or_first_available_variant.price < product.selected_or_first_available_variant.compare_at_price %}
-                  <span> {{ product.selected_or_first_available_variant.price | money }}</span>
-                  <span><s>{{ product.selected_or_first_available_variant.compare_at_price | money }}</s></span>
+                {% if variant_on_sale %}
+                  <span> {{ variant.price | money }}</span>
+                  <span><s>{{ variant.compare_at_price | money }}</s></span>
                 {% else %}
-                  {{ product.selected_or_first_available_variant.price | money }}
+                  {{ variant.price | money }}
                 {% endif %}
               </span>
             {% endunless %}
@@ -144,17 +159,17 @@
   {%- if show_pickup_availability -%}
     {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
 
-    {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities
+    {%- assign pick_up_availabilities = variant.store_availabilities
       | where: 'pick_up_enabled', true
     -%}
 
     <pickup-availability
       class="product__pickup-availabilities no-js-hidden quick-add-hidden"
-      {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %}
+      {% if variant.available and pick_up_availabilities.size > 0 %}
         available
       {% endif %}
       data-root-url="{{ routes.root_url }}"
-      data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+      data-variant-id="{{ variant.id }}"
       data-has-only-default-variant="{{ product.has_only_default_variant }}"
     >
       <template>

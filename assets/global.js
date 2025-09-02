@@ -1379,6 +1379,103 @@ class VariantRadios extends VariantSelects {
 
 customElements.define('variant-radios', VariantRadios);
 
+class VariantSubscriptions extends HTMLElement {
+  constructor() {
+    super();
+
+    this.variantId = null;
+    this.sellingPlanId = null;
+  }
+
+  connectedCallback() {
+    this.form = document.getElementById(`product-form-${this.dataset.section}`);
+    this.inputId = this.form.querySelector("[name=id]");
+    this.inputSellingId = this.form.querySelector("[name=selling_plan]");
+
+    this.addEventListener("change", (event) => {
+      this.variantId = event.target.dataset.variantId;
+      this.sellingPlanId = event.target.value;
+      this.inputId.value = this.variantId;
+      this.inputSellingId.value = this.sellingPlanId;
+      this.updatePrice();
+      this.updateURL();
+    });
+  }
+
+  updatePrice() {
+    const fetchUrl = `${this.dataset.url}?variant=${this.variantId}&selling_plan=${this.sellingPlanId}&section_id=${this.dataset.section}`;
+    const destination = document.getElementById(`price-${this.dataset.section}`);
+
+    if (!destination) {
+      return;
+    }
+
+    fetch(fetchUrl)
+      .then((response) => response.text())
+      .then((responseText) => {
+        const html = new DOMParser().parseFromString(responseText, 'text/html');
+        const source = html.getElementById(`price-${this.dataset.section}`);
+
+        destination.innerHTML = source.innerHTML;
+      })
+      .catch((error) => console.error('Error fetching product info:', error));
+  }
+
+  updateURL() {
+    window.history.replaceState({}, '', `${this.dataset.url}?variant=${this.variantId}&selling_plan=${this.sellingPlanId}`);
+  }
+}
+
+customElements.define("component-variant-subscriptions", VariantSubscriptions);
+
+
+class OneTimeVariants extends HTMLElement {
+  constructor() {
+    super();
+
+    this.variantId = null;
+  }
+
+  connectedCallback() {
+    this.form = document.getElementById(`product-form-${this.dataset.section}`);
+    this.inputId = this.form.querySelector("[name=id]");
+    this.inputSellingId = this.form.querySelector("[name=selling_plan]");
+
+    this.addEventListener("change", (event) => {
+      this.variantId = event.target.value;
+      this.inputId.value = this.variantId;
+      this.inputSellingId.value = "";
+      this.updatePrice();
+      this.updateURL();
+    });
+  }
+
+  updatePrice() {
+    const fetchUrl = `${this.dataset.url}?variant=${this.variantId}&section_id=${this.dataset.section}`;
+    const destination = document.getElementById(`price-${this.dataset.section}`);
+
+    if (!destination) {
+      return;
+    }
+
+    fetch(fetchUrl)
+      .then((response) => response.text())
+      .then((responseText) => {
+        const html = new DOMParser().parseFromString(responseText, 'text/html');
+        const source = html.getElementById(`price-${this.dataset.section}`);
+
+        destination.innerHTML = source.innerHTML;
+      })
+      .catch((error) => console.error('Error fetching product info:', error));
+  }
+
+  updateURL() {
+    window.history.replaceState({}, '', `${this.dataset.url}?variant=${this.variantId}`);
+  }
+}
+
+customElements.define("component-one-time-variants", OneTimeVariants);
+
 class ProductRecommendations extends HTMLElement {
   constructor() {
     super();

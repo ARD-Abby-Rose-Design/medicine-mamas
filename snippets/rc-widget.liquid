@@ -174,80 +174,86 @@
   endif
 -%}
 
-<component-dropdown class="component-dropdown purchase-option-container active--{{ current_subscription }}">
-  <div class="purchase-option-header">
-    <strong>Subscribe & Save!</strong>
-    <span>Price per unit: $40</span>
-  </div>
-  <div>
-    {%- for variant in product.variants -%}
-      {%- liquid
-        assign variant_allocation = variant.selected_selling_plan_allocation
+<component-variant-subscriptions data-section="{{ section.id }}" data-url="{{ product.url }}" data-product-form-id="{{ product_form_id }}">
+  <script type="application/json" data-product-id="{{ product.id }}" class="ProductJson-shopify" id="ProductJson-shopify-{{ section.id }}">
+    {{ product.variants | json }}
+  </script>
 
-        unless variant_allocation
-          for allocation in variant.selling_plan_allocations
-            assign supply_number = variant.title | split: " " | first
+  <component-dropdown class="component-dropdown purchase-option-container active--{{ current_subscription }}">
+    <div class="purchase-option-header">
+      <strong>Subscribe & Save!</strong>
+      <span>Price per unit: $40</span>
+    </div>
+    <div>
+      {%- for variant in product.variants -%}
+        {%- liquid
+          assign variant_allocation = variant.selected_selling_plan_allocation
 
-            if allocation.selling_plan.name contains supply_number
-              assign variant_allocation = allocation
-              break
-            endif
-          endfor
-        endunless
+          unless variant_allocation
+            for allocation in variant.selling_plan_allocations
+              assign supply_number = variant.title | split: " " | first
 
-        assign selling_plan_id = variant_allocation.selling_plan.id
+              if allocation.selling_plan.name contains supply_number
+                assign variant_allocation = allocation
+                break
+              endif
+            endfor
+          endunless
 
-        assign description = variant.title | append: " " | append: variant_allocation.selling_plan.name
-        assign description = description | replace: "Delivery", "delivered"
+          assign selling_plan_id = variant_allocation.selling_plan.id
 
-        assign checked = nil
+          assign description = variant.title | append: " " | append: variant_allocation.selling_plan.name
+          assign description = description | replace: "Delivery", "delivered"
 
-        if variant.id == current_variant.id
-          assign checked = "checked"
-        endif
-      -%}
+          assign checked = nil
 
-      <component-radio-dropdown class="component-dropdown">
-        <div class="purchase-option">
-          <div>
-            <input name="subscription" type="radio" value="{{ selling_plan_id }}" {{ checked }} />
+          if variant.id == current_variant.id
+            assign checked = "checked"
+          endif
+        -%}
 
-            <label>
-              {{ variant.title }} Supply
-            </label>
+        <component-radio-dropdown class="component-dropdown">
+          <div class="purchase-option">
+            <div>
+              <input name="subscription_variant" type="radio" value="{{ selling_plan_id }}" {{ checked }} data-variant-id="{{ variant.id }}" />
 
-            {%- if forloop.index == 2 -%}
-              <span class="purchase-option-badge">Most Popular!</span>
-            {%- endif -%}
+              <label>
+                {{ variant.title }} Supply
+              </label>
 
-            {%- if forloop.last -%}
-              <span class="purchase-option-badge">Best Value!</span>
-            {%- endif -%}
+              {%- if forloop.index == 2 -%}
+                <span class="purchase-option-badge">Most Popular!</span>
+              {%- endif -%}
+
+              {%- if forloop.last -%}
+                <span class="purchase-option-badge">Best Value!</span>
+              {%- endif -%}
+            </div>
+
+            <div>
+              {%- if variant_allocation.compare_at_price > variant_allocation.price -%}
+                <span class="option-sale-price">{{ variant_allocation.price | money }}</span>
+                <span class="option-compare-price">{{ variant_allocation.compare_at_price | money }}</span>
+              {%- else -%}
+                <span class="option-price">{{ variant_allocation.price | money }}</span>
+              {%- endif -%}
+            </div>
           </div>
-
           <div>
-            {%- if variant_allocation.compare_at_price > variant_allocation.price -%}
-              <span class="option-sale-price">{{ variant_allocation.price | money }}</span>
-              <span class="option-compare-price">{{ variant_allocation.compare_at_price | money }}</span>
-            {%- else -%}
-              <span class="option-price">{{ variant_allocation.price | money }}</span>
-            {%- endif -%}
+            <p class="option-description">
+              {{ description }}
+            </p>
+            <ul class="option-incentives">
+              <li class="option-incentive">{% cycle "15%", "20%", "25%" %} off for life</li>
+              <li class="option-incentive">Pause, modify, or cancel anytime</li>
+              <li class="option-incentive">Free US shipping on every order over $50</li>
+            </ul>
           </div>
-        </div>
-        <div>
-          <p class="option-description">
-            {{ description }}
-          </p>
-          <ul class="option-incentives">
-            <li class="option-incentive">{% cycle "15%", "20%", "25%" %} off for life</li>
-            <li class="option-incentive">Pause, modify, or cancel anytime</li>
-            <li class="option-incentive">Free US shipping on every order over $50</li>
-          </ul>
-        </div>
-      </component-radio-dropdown>
-    {%- endfor -%}
-  </div>
-</component-dropdown>
+        </component-radio-dropdown>
+      {%- endfor -%}
+    </div>
+  </component-dropdown>
+</component-variant-subscriptions>
 
 <component-dropdown class="component-dropdown purchase-option-container active--{{ current_one_time_purchase }}">
   <div class="purchase-option-header">

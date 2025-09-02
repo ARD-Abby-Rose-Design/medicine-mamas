@@ -1379,61 +1379,6 @@ class VariantRadios extends VariantSelects {
 
 customElements.define('variant-radios', VariantRadios);
 
-class VariantSubscriptions extends VariantSelects {
-  constructor() {
-    super();
-
-    this.form = document.getElementById(this.dataset.productFormId);
-    this.variantInput = this.form.querySelector('input[name="id"]');
-    this.sellingPlanInput = this.form.querySelector('input[name="selling_plan"]');
-    this.radios = this.querySelectorAll('input[name="subscription_variant"]');
-
-    this.variantData = this.getVariantData();
-
-    this.addEventListener('change', (event) => this.onChange(event));
-
-    this.initializeFromChecked();
-  }
-
-  onChange(event) {
-    const target = event.target;
-
-    if (target.matches('input[name="subscription_variant"]')) {
-      this.selectByRadio(target);
-    }
-  }
-
-  initializeFromChecked() {
-    const checked = this.querySelector('input[name="subscription_variant"]:checked') || this.radios[0];
-    this.selectByRadio(checked);
-  }
-
-  selectByRadio(radio) {
-    const variantId = radio.dataset.variantId;
-    const planId = radio.value;
-    this.setFormInputs(variantId, planId);
-    this.renderAndSync(variantId);
-  }
-
-  setFormInputs(variantId, planId) {
-    this.variantInput.value = variantId;
-    this.variantInput.dispatchEvent(new Event('change', { bubbles: true }));
-    this.sellingPlanInput.removeAttribute("disabled");
-    this.sellingPlanInput.value = planId;
-  }
-
-  renderAndSync(variantId) {
-    this.currentVariant = this.variantData.find((v) => String(v.id) === String(variantId));
-
-    this.toggleAddButton(true, '', false);
-    this.updatePickupAvailability();
-    this.removeErrorMessage.bind(this);
-    this.renderProductInfo();
-  }
-}
-
-customElements.define("component-variant-subscriptions", VariantSubscriptions);
-
 class ProductRecommendations extends HTMLElement {
   constructor() {
     super();

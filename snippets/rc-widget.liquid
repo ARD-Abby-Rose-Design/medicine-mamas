@@ -154,6 +154,13 @@
   }
 </style>
 
+<style>
+  component-variant-subscriptions,
+  component-one-time-variants {
+    display: block;
+  }
+</style>
+
 {%- liquid
   assign current_variant = product.selected_or_first_available_variant
 
@@ -174,7 +181,7 @@
   endif
 -%}
 
-<component-variant-subscriptions data-section="{{ section.id }}" data-url="{{ product.url }}" data-product-form-id="{{ product_form_id }}">
+<component-variant-subscriptions data-section="{{ section.id }}" data-url="{{ product.url }}">
   <script type="application/json" data-product-id="{{ product.id }}" class="ProductJson-shopify" id="ProductJson-shopify-{{ section.id }}">
     {{ product.variants | json }}
   </script>
@@ -255,40 +262,42 @@
   </component-dropdown>
 </component-variant-subscriptions>
 
-<component-dropdown class="component-dropdown purchase-option-container active--{{ current_one_time_purchase }}">
-  <div class="purchase-option-header">
-    <strong>One-time Purchase</strong>
-  </div>
-  <div>
-    {%- for variant in product.variants -%}
-      {%- liquid
-        assign active = false
+<component-one-time-variants data-section="{{ section.id }}" data-url="{{ product.url }}">
+  <component-dropdown class="component-dropdown purchase-option-container active--{{ current_one_time_purchase }}">
+    <div class="purchase-option-header">
+      <strong>One-time Purchase</strong>
+    </div>
+    <div>
+      {%- for variant in product.variants -%}
+        {%- liquid
+          assign active = false
 
-        if variant.id == current_variant.id
-          assign active = true
-        endif
-      -%}
+          if variant.id == current_variant.id
+            assign active = true
+          endif
+        -%}
 
-      <div class="purchase-option">
-        <div>
-          <input name="one" type="radio" value="{{ variant.id }}" {% if active %}checked{% endif %} />
+        <div class="purchase-option">
+          <div>
+            <input name="one" type="radio" value="{{ variant.id }}" {% if active %}checked{% endif %} />
 
-          <label>
-            {{ variant.title }} Supply
-          </label>
+            <label>
+              {{ variant.title }} Supply
+            </label>
+          </div>
+          <div>
+            {%- if variant.compare_at_price > variant.price -%}
+              <span class="option-sale-price">{{ variant.price | money }}</span>
+              <span class="option-compare-price">{{ variant.compare_at_price | money }}</span>
+            {%- else -%}
+              <span class="option-price">{{ variant.price | money }}</span>
+            {%- endif -%}
+          </div>
         </div>
-        <div>
-          {%- if variant.compare_at_price > variant.price -%}
-            <span class="option-sale-price">{{ variant.price | money }}</span>
-            <span class="option-compare-price">{{ variant.compare_at_price | money }}</span>
-          {%- else -%}
-            <span class="option-price">{{ variant.price | money }}</span>
-          {%- endif -%}
-        </div>
-      </div>
-    {%- endfor -%}
-  </div>
-</component-dropdown>
+      {%- endfor -%}
+    </div>
+  </component-dropdown>
+</component-one-time-variants>
 
 <script>
   class ComponentDropdown extends HTMLElement {
@@ -324,8 +333,7 @@
     }
 
     hideGroup() {
-      const parent_element = this.parentElement;
-      const group = parent_element.querySelectorAll(":scope > component-dropdown");
+      const group = document.querySelectorAll("component-dropdown");
 
       group.forEach((element) => {
         element.classList.remove("active--true");
@@ -334,6 +342,7 @@
   }
 
   customElements.define("component-dropdown", ComponentDropdown);
+
 
   class ComponentRadioDropdown extends ComponentDropdown {
     constructor() {
@@ -346,4 +355,100 @@
   }
 
   customElements.define("component-radio-dropdown", ComponentRadioDropdown);
+
+
+  class VariantSubscriptions extends HTMLElement {
+    constructor() {
+      super();
+
+      this.variantId = null;
+      this.sellingPlanId = null;
+      this.form = document.getElementById(`product-form-${this.dataset.section}`);
+      this.inputId = this.form.querySelector("[name=id]");
+      this.inputSellingId = this.form.querySelector("[name=selling_plan]");
+    }
+
+    connectedCallback() {
+      this.addEventListener("change", (event) => {
+        this.variantId = event.target.dataset.variantId;
+        this.sellingPlanId = event.target.value;
+        this.inputId.value = this.variantId;
+        this.inputSellingId.value = this.sellingPlanId;
+        this.updatePrice();
+        this.updateURL();
+      });
+    }
+
+    updatePrice() {
+      const fetchUrl = `${this.dataset.url}?variant=${this.variantId}&selling_plan=${this.sellingPlanId}&section_id=${this.dataset.section}`;
+      const destination = document.getElementById(`price-${this.dataset.section}`);
+
+      if (!destination) {
+        return;
+      }
+
+      fetch(fetchUrl)
+        .then((response) => response.text())
+        .then((responseText) => {
+          const html = new DOMParser().parseFromString(responseText, 'text/html');
+          const source = html.getElementById(`price-${this.dataset.section}`);
+
+          destination.innerHTML = source.innerHTML;
+        })
+        .catch((error) => console.error('Error fetching product info:', error));
+    }
+
+    updateURL() {
+      window.history.replaceState({}, '', `${this.dataset.url}?variant=${this.variantId}&selling_plan=${this.sellingPlanId}`);
+    }
+  }
+
+  customElements.define("component-variant-subscriptions", VariantSubscriptions);
+
+
+  class OneTimeVariants extends HTMLElement {
+    constructor() {
+      super();
+
+      this.variantId = null;
+      this.form = document.getElementById(`product-form-${this.dataset.section}`);
+      this.inputId = this.form.querySelector("[name=id]");
+      this.inputSellingId = this.form.querySelector("[name=selling_plan]");
+    }
+
+    connectedCallback() {
+      this.addEventListener("change", (event) => {
+        this.variantId = event.target.value;
+        this.inputId.value = this.variantId;
+        this.inputSellingId.value = "";
+        this.updatePrice();
+        this.updateURL();
+      });
+    }
+
+    updatePrice() {
+      const fetchUrl = `${this.dataset.url}?variant=${this.variantId}&section_id=${this.dataset.section}`;
+      const destination = document.getElementById(`price-${this.dataset.section}`);
+
+      if (!destination) {
+        return;
+      }
+
+      fetch(fetchUrl)
+        .then((response) => response.text())
+        .then((responseText) => {
+          const html = new DOMParser().parseFromString(responseText, 'text/html');
+          const source = html.getElementById(`price-${this.dataset.section}`);
+
+          destination.innerHTML = source.innerHTML;
+        })
+        .catch((error) => console.error('Error fetching product info:', error));
+    }
+
+    updateURL() {
+      window.history.replaceState({}, '', `${this.dataset.url}?variant=${this.variantId}`);
+    }
+  }
+
+  customElements.define("component-one-time-variants", OneTimeVariants);
 </script>

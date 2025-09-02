@@ -13,10 +13,23 @@
 {%- liquid
   assign variant = product.selected_or_first_available_variant
 
-  assign variant_on_sale = false
+  assign price = variant.price
 
-  if variant.price < variant.compare_at_price
-    assign variant_on_sale = true
+  assign compare_price = variant.compare_at_price
+
+
+  assign allocation = variant.selected_selling_plan_allocation
+
+  if allocation
+    assign price = allocation.price
+    assign compare_price = allocation.compare_at_price
+  endif
+
+
+  assign on_sale = false
+
+  if price < compare_price
+    assign on_sale = true
   endif
 -%}
 
@@ -103,17 +116,13 @@
             </span>
 
             {% unless block.settings.show_price == false %}
-              {%- liquid
-                assign current_variant = variant.price
-              -%}
-
               <span class="product-form__submit--dash">-</span>
               <span id="price-{{ section_id }}" class="product-form__submit--price">
-                {% if variant_on_sale %}
-                  <span> {{ variant.price | money }}</span>
-                  <span><s>{{ variant.compare_at_price | money }}</s></span>
+                {% if on_sale %}
+                  <span> {{ price | money }}</span>
+                  <span><s>{{ compare_price | money }}</s></span>
                 {% else %}
-                  {{ variant.price | money }}
+                  {{ price | money }}
                 {% endif %}
               </span>
             {% endunless %}

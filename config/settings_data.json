@@ -144,22 +144,6 @@
           "show_preview_data": true
         }
       },
-      "17151115064775110295": {
-        "type": "shopify://apps/recharge-subscriptions/blocks/recharge-theme/371eed76-0b44-4869-9813-730372ea378e",
-        "disabled": false,
-        "settings": {
-          "color_brand": "#121212",
-          "contrast_color": "#ffffff",
-          "color_brand_secondary": "#121212",
-          "corners": "8px",
-          "app_background": "#fcf7f0",
-          "app_container": 1200,
-          "app_vertical_padding": 24,
-          "images_aspect_ratio": "1",
-          "cards_background": "#ffffff",
-          "cards_border_color": "rgba(0,0,0,0)"
-        }
-      },
       "855628211100114053": {
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
@@ -176,6 +160,22 @@
         "type": "shopify://apps/elevar-conversion-tracking/blocks/dataLayerEmbed/bc30ab68-b15c-4311-811f-8ef485877ad6",
         "disabled": false,
         "settings": {}
+      },
+      "17151115064775110295": {
+        "type": "shopify://apps/recharge-subscriptions/blocks/recharge-theme/371eed76-0b44-4869-9813-730372ea378e",
+        "disabled": true,
+        "settings": {
+          "color_brand": "#121212",
+          "contrast_color": "#ffffff",
+          "color_brand_secondary": "#121212",
+          "corners": "8px",
+          "app_background": "#fcf7f0",
+          "app_container": 1200,
+          "app_vertical_padding": 24,
+          "images_aspect_ratio": "1",
+          "cards_background": "#ffffff",
+          "cards_border_color": "rgba(0,0,0,0)"
+        }
       }
     },
     "color_schemes": {

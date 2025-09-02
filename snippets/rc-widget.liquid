@@ -130,27 +130,51 @@
 </style>
 
 <style>
-  component-dropdown {
+  .component-dropdown {
     display: block;
     cursor: pointer;
   }
 
-  component-dropdown > div:last-child {
+  .component-dropdown > div:last-child {
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
-  component-dropdown > div:last-child > div {
+  .component-dropdown > div:last-child > div {
     overflow: hidden;
   }
 
-  component-dropdown.active--true > div:last-child {
+  .component-dropdown.active--true > div:last-child {
+    grid-template-rows: 1fr;
+  }
+
+  component-radio-dropdown:has(input:checked) > div:last-child {
     grid-template-rows: 1fr;
   }
 </style>
 
-<component-dropdown class="purchase-option-container active--true">
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant
+
+  assign current_plan = current_variant.selected_selling_plan_allocation
+
+
+  assign current_subscription = false
+
+  if current_plan
+    assign current_subscription = true
+  endif
+
+
+  assign current_one_time_purchase = true
+
+  if current_plan
+    assign current_one_time_purchase = false
+  endif
+-%}
+
+<component-dropdown class="component-dropdown purchase-option-container active--{{ current_subscription }}">
   <div class="purchase-option-header">
     <strong>Subscribe & Save!</strong>
     <span>Price per unit: $40</span>
@@ -158,27 +182,35 @@
   <div>
     {%- for variant in product.variants -%}
       {%- liquid
-        assign variant_allocation = nil
+        assign variant_allocation = variant.selected_selling_plan_allocation
 
-        for allocation in variant.selling_plan_allocations
-          assign supply_number = variant.title | split: " " | first
+        unless variant_allocation
+          for allocation in variant.selling_plan_allocations
+            assign supply_number = variant.title | split: " " | first
 
-          if allocation.selling_plan.name contains supply_number
-            assign variant_allocation = allocation
-            break
-          endif
-        endfor
+            if allocation.selling_plan.name contains supply_number
+              assign variant_allocation = allocation
+              break
+            endif
+          endfor
+        endunless
 
         assign selling_plan_id = variant_allocation.selling_plan.id
 
         assign description = variant.title | append: " " | append: variant_allocation.selling_plan.name
         assign description = description | replace: "Delivery", "delivered"
+
+        assign checked = nil
+
+        if variant.id == current_variant.id
+          assign checked = "checked"
+        endif
       -%}
 
-      <component-dropdown class="active--{{ forloop.first }}">
+      <component-radio-dropdown class="component-dropdown">
         <div class="purchase-option">
           <div>
-            <input name="selling_plan" type="radio" value="{{ selling_plan_id }}" {% if forloop.first %}checked{% endif %} />
+            <input name="subscription" type="radio" value="{{ selling_plan_id }}" {{ checked }} />
 
             <label>
               {{ variant.title }} Supply
@@ -212,20 +244,28 @@
             <li class="option-incentive">Free US shipping on every order over $50</li>
           </ul>
         </div>
-      </component-dropdown>
+      </component-radio-dropdown>
     {%- endfor -%}
   </div>
 </component-dropdown>
 
-<component-dropdown class="purchase-option-container">
+<component-dropdown class="component-dropdown purchase-option-container active--{{ current_one_time_purchase }}">
   <div class="purchase-option-header">
     <strong>One-time Purchase</strong>
   </div>
   <div>
     {%- for variant in product.variants -%}
+      {%- liquid
+        assign active = false
+
+        if variant.id == current_variant.id
+          assign active = true
+        endif
+      -%}
+
       <div class="purchase-option">
         <div>
-          <input name="Packs" type="radio" value="{{ variant.title }}" {% if forloop.first %}checked{% endif %} />
+          <input name="one" type="radio" value="{{ variant.id }}" {% if active %}checked{% endif %} />
 
           <label>
             {{ variant.title }} Supply
@@ -288,6 +328,18 @@
   }
 
   customElements.define("component-dropdown", ComponentDropdown);
+
+  class ComponentRadioDropdown extends ComponentDropdown {
+    constructor() {
+      super();
+    }
+
+    connectedCallback() {
+      this.initializeMarkup();
+    }
+  }
+
+  customElements.define("component-radio-dropdown", ComponentRadioDropdown);
 </script>
 
 {%- comment -%}

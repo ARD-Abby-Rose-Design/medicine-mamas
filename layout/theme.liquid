@@ -329,9 +329,11 @@
         },
       });
     </script>
-      
+
+    {%- comment -%}
     <script src="{{ 'rc-widget.js' | asset_url }}" defer></script>
     {{ 'recharge.css' | asset_url | stylesheet_tag }}
+    {%- endcomment -%}
 
     {% comment %} Removed by Elevar - please sync with Github
     <!-- Reddit Pixel -->
@@ -342,7 +344,7 @@
     <!-- End Reddit Pixel -->
     {% endcomment %}
 
-  
+
   </head>
 
   <body class="template-{{ template.name }} gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -410,11 +412,11 @@
     {%- endif -%}
 
     {{ 'quick-add.css' | asset_url | stylesheet_tag }}
-    
+
     <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
 
-    
+
     <script defer src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
 
     {% render 'klaviyo-events' %}
@@ -423,7 +425,7 @@
       {{ 'recharge-customer.css' | asset_url | stylesheet_tag }}
     {% endif %}
 
-  
+
 
 <script type="text/javascript">
 var _learnq = _learnq || [];
@@ -434,7 +436,7 @@ _learnq.push(['track', 'Added to Cart', item]);
 classname[i].addEventListener('click', addToCart, false);
 }
 </script>
-  
+
     {% if product %}
       <script>
         console.log("subscriptions");

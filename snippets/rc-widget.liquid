@@ -177,22 +177,22 @@
 </style>
 
 {%- liquid
-  assign show_subscription = true
+  assign current_variant = product.selected_variant
 
-  if product.selected_variant and product.selected_selling_plan == nil
-    assign show_subscription = false
-  endif
+  assign current_selling_plan = product.selected_selling_plan | default: nil
 
 
   assign show_one_time = false
 
-  unless show_subscription
+  if current_variant and current_selling_plan == nil
     assign show_one_time = true
-  endunless
+  endif
 -%}
 
+<p>current selling plan: {{ current_selling_plan.name }}</p>
+
 <component-variant-subscriptions data-section="{{ section.id }}" data-url="{{ product.url }}">
-  <component-purchase-dropdown class="component-dropdown purchase-option-container active--{{ show_subscription }}">
+  <component-purchase-dropdown class="component-dropdown purchase-option-container active--true">
     <div class="purchase-option-header">
       <strong>Subscribe & Save!</strong>
     </div>
@@ -221,9 +221,15 @@
 
             assign checked = nil
 
-            if variant.id == current_variant.id or forloop.first
+            if variant.id == current_variant.id and variant_allocation.selling_plan.id == current_selling_plan.id
               assign checked = "checked"
             endif
+
+            unless current_variant or current_selling_plan
+              if forloop.first
+                assign checked = "checked"
+              endif
+            endunless
 
 
             assign number_of_units = variant.title | split: " " | first | times: 1
@@ -330,7 +336,7 @@
 
           <div class="purchase-option">
             <div>
-              <input name="one" type="radio" value="{{ variant.id }}" {{ checked }} />
+              <input name="one-time" type="radio" value="{{ variant.id }}" {{ checked }} />
 
               <label>
                 {{ variant.title }} Supply
@@ -382,32 +388,20 @@
     }
 
     events() {
-      if (this.classList.contains("active--true")) {
-        this.triggerChange();
-      }
-
       this.addEventListener("click", (event) => {
         if (this.classList.contains("active--true")) {
           return;
         } else {
           this.triggerChange();
-          this.hideGroup();
           this.classList.add("active--true");
         }
       });
     }
 
     triggerChange() {
-      const element = this.querySelector("input[type=radio]:checked");
+      const element = this.querySelector("input[type=radio]:checked") || this.querySelector("input[type=radio]");
+      element.checked = true;
       element.dispatchEvent(new Event("change", { bubbles: true }));
-    }
-
-    hideGroup() {
-      const dropdowns = document.querySelectorAll("component-purchase-dropdown");
-
-      dropdowns.forEach((element) => {
-        element.classList.remove("active--true");
-      });
     }
   }
 

@@ -352,7 +352,7 @@ h5,
 }
 
 @media only screen and (min-width: 980px) {
-  
+
   .hlarge {
     font-size: calc(var(--font-heading-scale) * 7rem);
   }
@@ -2019,7 +2019,6 @@ input[type='checkbox'] {
 
 .quantity__button:focus,
 .quantity__input:focus {
-  background-color: rgb(var(--color-background));
   z-index: 2;
 }
 
@@ -3496,7 +3495,7 @@ details-disclosure>details {
   max-width: 100%;
   margin-top: 12px;
   font-family: var(--font-body-family);
-} 
+}
 .dropdown-select select {
   position: relative;
   z-index: 30;
@@ -3545,7 +3544,7 @@ details-disclosure>details {
   z-index: 25;
   padding: 6px 0
 }
-.dropdown-select[open] select { 
+.dropdown-select[open] select {
   border-bottom: 0;
   border-radius: 10px 10px 0 0;
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.6668 11.3333L8.00016 4.66666L1.3335 11.3333' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");

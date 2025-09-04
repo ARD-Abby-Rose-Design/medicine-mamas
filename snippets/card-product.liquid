@@ -221,7 +221,7 @@
           </div>
 
           <button class="button" style="width: 100%;" onclick="window.location.pathname = {{ product.url }};">
-            View product
+            VIEW PRODUCT
           </button>
 
           {%- comment -%}
@@ -232,8 +232,8 @@
           >
             <span>{{ 'products.product.add_to_cart' | t }}</span>
           </button>
-          {%- endcomment -%}
           <div class="full-details__faux-link link">{{ 'products.product.view_details' | t }}</div>
+          {%- endcomment -%}
         </div>
 
         <div class="card__badge {{ settings.badge_position }}">

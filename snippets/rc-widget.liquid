@@ -177,27 +177,22 @@
 </style>
 
 {%- liquid
-  assign current_variant = product.selected_or_first_available_variant
+  assign show_subscription = true
 
-  assign current_plan = current_variant.selected_selling_plan_allocation
-
-
-  assign current_subscription = false
-
-  if current_plan
-    assign current_subscription = true
+  if product.selected_variant and product.selected_selling_plan == nil
+    assign show_subscription = false
   endif
 
 
-  assign current_one_time_purchase = true
+  assign show_one_time = false
 
-  if current_plan
-    assign current_one_time_purchase = false
-  endif
+  unless show_subscription
+    assign show_one_time = true
+  endunless
 -%}
 
 <component-variant-subscriptions data-section="{{ section.id }}" data-url="{{ product.url }}">
-  <component-purchase-dropdown class="component-dropdown purchase-option-container active--{{ current_subscription }}">
+  <component-purchase-dropdown class="component-dropdown purchase-option-container active--{{ show_subscription }}">
     <div class="purchase-option-header">
       <strong>Subscribe & Save!</strong>
     </div>
@@ -226,7 +221,7 @@
 
             assign checked = nil
 
-            if variant.id == current_variant.id
+            if variant.id == current_variant.id or forloop.first
               assign checked = "checked"
             endif
 
@@ -299,7 +294,7 @@
 </component-variant-subscriptions>
 
 <component-one-time-variants data-section="{{ section.id }}" data-url="{{ product.url }}">
-  <component-purchase-dropdown class="component-dropdown purchase-option-container active--{{ current_one_time_purchase }}">
+  <component-purchase-dropdown class="component-dropdown purchase-option-container active--{{ show_one_time }}">
     <div class="purchase-option-header">
       <strong>One-time Purchase</strong>
     </div>
@@ -307,10 +302,10 @@
       <div>
         {%- for variant in product.variants -%}
           {%- liquid
-            assign active = false
+            assign checked = nil
 
-            if variant.id == current_variant.id
-              assign active = true
+            if variant.id == current_variant.id or forloop.first
+              assign checked = "checked"
             endif
 
 
@@ -335,7 +330,7 @@
 
           <div class="purchase-option">
             <div>
-              <input name="one" type="radio" value="{{ variant.id }}" {% if active %}checked{% endif %} />
+              <input name="one" type="radio" value="{{ variant.id }}" {{ checked }} />
 
               <label>
                 {{ variant.title }} Supply

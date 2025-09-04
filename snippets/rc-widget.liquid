@@ -223,11 +223,15 @@
             assign description = variant.title | append: " " | append: variant_allocation.selling_plan.name
             assign description = description | replace: "Delivery", "delivered"
 
+
             assign checked = nil
 
             if variant.id == current_variant.id
               assign checked = "checked"
             endif
+
+
+            assign number_of_units = variant.title | split: " " | first | times: 1
           -%}
 
           <div class="component-dropdown component-radio-dropdown">
@@ -247,8 +251,6 @@
                   <span class="purchase-option-badge">Best Value!</span>
                 {%- endif -%}
               </div>
-
-              {%- assign number_of_units = variant.title | split: " " | first | times: 1 -%}
 
               <div class="purchase-option-price">
                 <div style="display: flex; flex-direction: column; text-align: center;">
@@ -310,6 +312,25 @@
             if variant.id == current_variant.id
               assign active = true
             endif
+
+
+            assign variant_on_sale = false
+
+            if variant.compare_at_price > variant.price
+              assign variant_on_sale = true
+            endif
+
+
+            assign discount_percentage = nil
+
+            if variant_on_sale
+              assign discount_percentage = variant.compare_at_price | minus: variant.price | times: 100.0
+              assign discount_percentage = discount_percentage | divided_by: variant.compare_at_price | round
+              assign discount_percentage = discount_percentage | append: "%"
+            endif
+
+
+            assign number_of_units = variant.title | split: " " | first | times: 1
           -%}
 
           <div class="purchase-option">
@@ -320,12 +341,28 @@
                 {{ variant.title }} Supply
               </label>
             </div>
-            <div>
-              {%- if variant.compare_at_price > variant.price -%}
-                <span class="option-sale-price">{{ variant.price | money }}</span>
-                <span class="option-compare-price">{{ variant.compare_at_price | money }}</span>
-              {%- else -%}
-                <span class="option-price">{{ variant.price | money }}</span>
+            <div class="purchase-option-price">
+              <div>
+                {%- if variant.compare_at_price > variant.price -%}
+                  <span class="option-sale-price">
+                    {{ variant.price | divided_by: number_of_units | money }}
+                  </span>
+                  <span class="option-compare-price">
+                    {{ variant.compare_at_price | divided_by: number_of_units | money }}
+                  </span>
+                {%- else -%}
+                  <span class="option-price">
+                    {{ variant.price | divided_by: number_of_units | money }}
+                  </span>
+                {%- endif -%}
+              </div>
+
+              {%- if discount_percentage -%}
+                <div>
+                  <span class="purchase-option-savings">
+                    Save {{ discount_percentage }}
+                  </span>
+                </div>
               {%- endif -%}
             </div>
           </div>
@@ -346,14 +383,24 @@
     }
 
     events() {
+      if (this.classList.contains("active--true")) {
+        this.triggerChange();
+      }
+
       this.addEventListener("click", (event) => {
         if (this.classList.contains("active--true")) {
           return;
         } else {
+          this.triggerChange();
           this.hideGroup();
           this.classList.add("active--true");
         }
       });
+    }
+
+    triggerChange() {
+      const element = this.querySelector("input[type=radio]:checked");
+      element.dispatchEvent(new Event("change", { bubbles: true }));
     }
 
     hideGroup() {

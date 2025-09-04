@@ -158,7 +158,7 @@
               </span>
               {% endcomment %}
             {%- endif -%}
-          
+
           </div>
         </div>
       </div>
@@ -196,7 +196,7 @@
                   endcomment
                 endif
               -%}
-              {% comment %} 
+              {% comment %}
                 {% if product.compare_at_price_max > product.price %}You save {{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%{% endif %}
               {% endcomment %}
               {%- if card_product.selling_plan_groups.size > 0 -%}
@@ -219,6 +219,12 @@
               {%- endif -%}
             </div>
           </div>
+
+          <button class="button" style="width: 100%;" onclick="window.location.pathname = {{ product.url }};">
+            View product
+          </button>
+
+          {%- comment -%}
           <button
             class="button quick-add__open"
             data-url="{{ card_product.url }}?view=quick-add"
@@ -226,6 +232,7 @@
           >
             <span>{{ 'products.product.add_to_cart' | t }}</span>
           </button>
+          {%- endcomment -%}
           <div class="full-details__faux-link link">{{ 'products.product.view_details' | t }}</div>
         </div>
 

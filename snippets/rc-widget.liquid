@@ -337,19 +337,23 @@
               </label>
             </div>
             <div class="purchase-option-price">
-              <div>
-                {%- if variant.compare_at_price > variant.price -%}
-                  <span class="option-sale-price">
-                    {{ variant.price | divided_by: number_of_units | money }}
-                  </span>
-                  <span class="option-compare-price">
-                    {{ variant.compare_at_price | divided_by: number_of_units | money }}
-                  </span>
-                {%- else -%}
-                  <span class="option-price">
-                    {{ variant.price | divided_by: number_of_units | money }}
-                  </span>
-                {%- endif -%}
+              <div style="display: flex; flex-direction: column; text-align: center;">
+                <span>
+                  {%- if variant.compare_at_price > variant.price -%}
+                    <span class="option-sale-price">
+                      {{ variant.price | divided_by: number_of_units | money }}
+                    </span>
+                    <span class="option-compare-price">
+                      {{ variant.compare_at_price | divided_by: number_of_units | money }}
+                    </span>
+                  {%- else -%}
+                    <span class="option-price">
+                      {{ variant.price | divided_by: number_of_units | money }}
+                    </span>
+                  {%- endif -%}
+                </span>
+
+                <span style="font-size: 11px;">per pack</span>
               </div>
 
               {%- if discount_percentage -%}

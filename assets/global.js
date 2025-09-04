@@ -1393,12 +1393,20 @@ class VariantSubscriptions extends HTMLElement {
     this.inputSellingId = this.form.querySelector("[name=selling_plan]");
 
     this.addEventListener("change", (event) => {
+      document.dispatchEvent(new CustomEvent("variantsubscriptions:change"));
+
       this.variantId = event.target.dataset.variantId;
       this.sellingPlanId = event.target.value;
       this.inputId.value = this.variantId;
       this.inputSellingId.value = this.sellingPlanId;
       this.updatePrice();
       this.updateURL();
+    });
+
+    document.addEventListener("onetimevariants:change", (event) => {
+      this.querySelectorAll("input[type=radio]").forEach((element) => {
+        element.checked = false;
+      });
     });
   }
 
@@ -1442,11 +1450,20 @@ class OneTimeVariants extends HTMLElement {
     this.inputSellingId = this.form.querySelector("[name=selling_plan]");
 
     this.addEventListener("change", (event) => {
+      document.dispatchEvent(new CustomEvent("onetimevariants:change"));
+
       this.variantId = event.target.value;
       this.inputId.value = this.variantId;
       this.inputSellingId.value = "";
       this.updatePrice();
       this.updateURL();
+    });
+
+    document.addEventListener("variantsubscriptions:change", (event) => {
+      this.querySelectorAll("input[type=radio]").forEach((element) => {
+        element.checked = false;
+      });
+      this.querySelector("component-purchase-dropdown").classList.remove("active--true");
     });
   }
 

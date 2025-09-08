@@ -1695,7 +1695,7 @@ a.product__text {
 .product__checkmarks {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1.5rem;
   align-items: center;
   margin: 2rem 0;
@@ -1706,21 +1706,20 @@ a.product__text {
   .product__checkmarks {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 3rem;
-  }
-  .product__checkmark + .product__checkmark {
-    margin-left: 1.5rem;
   }
 }
 
 @media screen and (max-width: 1199px) {
-  
   .product__checkmarks {
     margin-bottom: 2rem;
   }
 }
 
+.product__checkmark {
+  white-space: nowrap;
+}
 
 .product__checkmark:before {
   content: '';
@@ -1776,7 +1775,7 @@ a[title="Refund Policy"] {
     right: 5rem;
     bottom: 18px;
   }
- 
+
   .slider.slider--mobile .slider__slide {
     padding-top: 0 !important;
     padding-bottom: 0 !important;

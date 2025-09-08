@@ -42,6 +42,7 @@
 
   .purchase-option label {
     padding-left: calc(18px + 6px);
+    padding-top: 1px;
     margin-right: 6px;
     position: relative;
   }
@@ -215,6 +216,43 @@
     font-weight: 400;
     white-space: nowrap;
     text-transform: none;
+  }
+
+
+  .purchase-option-heading-one-time {
+    padding-left: calc(18px + 6px);
+    padding-top: 1px;
+    position: relative;
+  }
+
+  .purchase-option-heading-one-time:before,
+  .purchase-option-heading-one-time:after {
+    content: " ";
+    display: inline-block;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+
+  .purchase-option-heading-one-time:before {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #000000;
+  }
+
+  .purchase-option-heading-one-time:after {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    left: 3px;
+    background-color: #FFFFFF;
+    transition: background-color 150ms ease;
+  }
+
+  .purchase-option-container-one-time.active--true .purchase-option-heading-one-time:after {
+    background-color: #000000;
   }
 </style>
 
@@ -402,9 +440,9 @@
 </component-variant-subscriptions>
 
 <component-one-time-variants data-section="{{ section.id }}" data-url="{{ product.url }}">
-  <component-purchase-dropdown class="component-dropdown purchase-option-container active--{{ show_one_time }}">
+  <component-purchase-dropdown class="component-dropdown purchase-option-container purchase-option-container-one-time active--{{ show_one_time }}">
     <div class="purchase-option-header">
-      <strong>One-time Purchase</strong>
+      <strong class="purchase-option-heading-one-time">One-time Purchase</strong>
 
       <component-one-time-variants-prices class="purchase-option-price-container">
         {%- for variant in product.variants -%}

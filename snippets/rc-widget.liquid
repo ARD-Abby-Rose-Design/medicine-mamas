@@ -159,6 +159,63 @@
     left: 0;
     transform: translateY(-50%);
   }
+
+
+  .one-time-variant-container {
+    border-top: 1px solid black;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 16px 16px;
+    padding-bottom: 32px;
+  }
+
+  .one-time-variant {
+    position: relative;
+    flex: 1;
+  }
+
+  .one-time-variant input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .one-time-variant label {
+    display: block;
+    text-align: center;
+    border: 1.2px solid black;
+    text-transform: uppercase;
+    padding: .7rem 1rem;
+    border-radius: var(--variant-pills-radius);
+    position: relative;
+    background-color: #FCF7F0;
+  }
+
+  .one-time-variant input:checked + label {
+    background-color: #FFE5E0;
+  }
+
+  .one-time-variant-savings {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--red);
+    color: #FFFFFF;
+    padding: 4px 6px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 400;
+    white-space: nowrap;
+    text-transform: none;
+  }
 </style>
 
 <style>
@@ -385,50 +442,47 @@
     </div>
     <div>
       <div>
-        {%- for variant in product.variants -%}
-          {%- liquid
-            assign checked = nil
+        <div class="one-time-variant-container">
+          {%- for variant in product.variants -%}
+            {%- liquid
+              assign checked = nil
 
-            if variant.id == current_variant.id or forloop.first
-              assign checked = "checked"
-            endif
-
-
-            assign variant_on_sale = false
-
-            if variant.compare_at_price > variant.price
-              assign variant_on_sale = true
-            endif
+              if variant.id == current_variant.id or forloop.first
+                assign checked = "checked"
+              endif
 
 
-            assign discount_percentage = nil
+              assign variant_on_sale = false
 
-            if variant_on_sale
-              assign discount_percentage = variant.compare_at_price | minus: variant.price | times: 100.0
-              assign discount_percentage = discount_percentage | divided_by: variant.compare_at_price | round
-              assign discount_percentage = discount_percentage | append: "%"
-            endif
-          -%}
+              if variant.compare_at_price > variant.price
+                assign variant_on_sale = true
+              endif
 
-          <div class="purchase-option">
-            <div>
+
+              assign discount_percentage = nil
+
+              if variant_on_sale
+                assign discount_percentage = variant.compare_at_price | minus: variant.price | times: 100.0
+                assign discount_percentage = discount_percentage | divided_by: variant.compare_at_price | round
+                assign discount_percentage = discount_percentage | append: "%"
+              endif
+            -%}
+
+            <div class="one-time-variant">
               <input name="one-time" type="radio" value="{{ variant.id }}" {{ checked }} />
 
               <label>
-                {{ variant.title }} Supply
+                {{ variant.title }}
+
+                {%- if discount_percentage -%}
+                  <span class="one-time-variant-savings">
+                    {{ discount_percentage }} off
+                  </span>
+                {%- endif -%}
               </label>
             </div>
-            <div>
-              {%- if discount_percentage -%}
-                <div>
-                  <span class="purchase-option-savings">
-                    Save {{ discount_percentage }}
-                  </span>
-                </div>
-              {%- endif -%}
-            </div>
-          </div>
-        {%- endfor -%}
+          {%- endfor -%}
+        </div>
       </div>
     </div>
   </component-purchase-dropdown>

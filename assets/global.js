@@ -1393,7 +1393,11 @@ class VariantSubscriptions extends HTMLElement {
     this.inputSellingId = this.form.querySelector("[name=selling_plan]");
 
     this.addEventListener("change", (event) => {
-      document.dispatchEvent(new CustomEvent("variantsubscriptions:change"));
+      document.dispatchEvent(new CustomEvent("variantsubscriptions:change", {
+        detail: {
+          variant_id: event.target.dataset.variantId
+        }
+      }));
 
       this.variantId = event.target.dataset.variantId;
       this.sellingPlanId = event.target.value;
@@ -1492,6 +1496,37 @@ class OneTimeVariants extends HTMLElement {
 }
 
 customElements.define("component-one-time-variants", OneTimeVariants);
+
+
+class ComponentVariantSubscriptionPrices extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    const prices = this.querySelectorAll(".purchase-option-price");
+
+    document.addEventListener("onetimevariants:change", (event) => {
+      prices.forEach((element) => {
+        element.classList.remove("active--true");
+      });
+    });
+
+    document.addEventListener("variantsubscriptions:change", (event) => {
+      prices.forEach((element) => {
+        const variant_id = element.dataset.id;
+
+        if (variant_id == event.detail.variant_id) {
+          element.classList.add("active--true");
+        } else {
+          element.classList.remove("active--true");
+        }
+      });
+    });
+  }
+}
+
+customElements.define("component-variant-subscription-prices", ComponentVariantSubscriptionPrices);
 
 class ProductRecommendations extends HTMLElement {
   constructor() {

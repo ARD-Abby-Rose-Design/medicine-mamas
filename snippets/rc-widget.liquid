@@ -299,6 +299,9 @@
   if current_variant and current_selling_plan == nil
     assign show_one_time = true
   endif
+
+
+  assign first_variant = product.variants | first
 -%}
 
 <component-variant-subscriptions data-section="{{ section.id }}" data-url="{{ product.url }}">
@@ -344,7 +347,7 @@
                   {{ variant_allocation.price | divided_by: number_of_units | money }}
                 </span>
                 <span class="option-compare-price">
-                  {{ variant_allocation.compare_at_price | divided_by: number_of_units | money }}
+                  {{ first_variant.price | money }}
                 </span>
               {%- else -%}
                 <span class="option-price">
@@ -379,6 +382,15 @@
 
             assign description = variant.title | append: " " | append: variant_allocation.selling_plan.name
             assign description = description | replace: "Delivery", "delivered"
+
+            assign number_of_units = variant.title | split: " " | first | times: 1
+
+            assign variant_allocation_price_per_unit = variant_allocation.price | divided_by: number_of_units
+
+
+            assign discount_percentage = first_variant.price | minus: variant_allocation_price_per_unit | times: 100.0
+            assign discount_percentage = discount_percentage | divided_by: first_variant.price | round
+            assign discount_percentage = discount_percentage | append: "%"
 
 
             assign checked = nil
@@ -415,7 +427,7 @@
 
                 <div>
                   <span class="purchase-option-savings">
-                    save {% cycle "15%", "20%", "25%" %}
+                    save {{ discount_percentage }}
                   </span>
                 </div>
               </div>
@@ -426,7 +438,7 @@
                   <strong>{{ description }}</strong>
                 </p>
                 <ul class="option-incentives">
-                  <li class="option-incentive">{% cycle "15%", "20%", "25%" %} off for life</li>
+                  <li class="option-incentive">{{ discount_percentage }} off for life</li>
                   <li class="option-incentive">Pause, modify, or cancel anytime</li>
                   <li class="option-incentive">Free US shipping on every order over $50</li>
                 </ul>

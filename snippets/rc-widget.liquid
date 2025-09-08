@@ -12,10 +12,10 @@
 
 
   .purchase-option-header {
-    padding: 12px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 42px;
   }
 
 
@@ -90,6 +90,17 @@
     color: #F51E28;
     padding: 3px 10px;
     padding-top: 4px;
+  }
+
+
+  .purchase-option-price-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .purchase-option-price-container > * {
+    grid-area: 1 / 1;
   }
 
 
@@ -182,23 +193,6 @@
   }
 </style>
 
-<style>
-  component-variant-subscription-prices {
-    display: block;
-  }
-
-  component-variant-subscription-prices {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-  }
-
-  component-variant-subscription-prices > * {
-    grid-area: 1 / 1;
-    background-color: #FFFFFF;
-  }
-</style>
-
 {%- liquid
   assign current_variant = product.selected_variant | default: nil
 
@@ -214,10 +208,10 @@
 
 <component-variant-subscriptions data-section="{{ section.id }}" data-url="{{ product.url }}">
   <component-purchase-dropdown class="component-dropdown purchase-option-container active--true">
-    <div class="purchase-option-header" style="height: 42px;">
+    <div class="purchase-option-header">
       <strong>Subscribe & Save!</strong>
 
-      <component-variant-subscription-prices>
+      <component-variant-subscription-prices class="purchase-option-price-container">
         {%- for variant in product.variants -%}
           {%- liquid
             assign variant_allocation = variant.selected_selling_plan_allocation
@@ -354,6 +348,40 @@
   <component-purchase-dropdown class="component-dropdown purchase-option-container active--{{ show_one_time }}">
     <div class="purchase-option-header">
       <strong>One-time Purchase</strong>
+
+      <component-one-time-variants-prices class="purchase-option-price-container">
+        {%- for variant in product.variants -%}
+          {%- liquid
+            assign number_of_units = variant.title | split: " " | first | times: 1
+
+
+            assign active = false
+
+            if variant.id == current_variant.id and current_selling_plan == nil
+              assign active = true
+            endif
+          -%}
+
+          <div class="purchase-option-price active--{{ active }}" data-id="{{ variant.id }}">
+            <span>
+              {%- if variant.compare_at_price > variant.price -%}
+                <span class="option-sale-price">
+                  {{ variant.price | divided_by: number_of_units | money }}
+                </span>
+                <span class="option-compare-price">
+                  {{ variant.compare_at_price | divided_by: number_of_units | money }}
+                </span>
+              {%- else -%}
+                <span class="option-price">
+                  {{ variant.price | divided_by: number_of_units | money }}
+                </span>
+              {%- endif -%}
+            </span>
+
+            <span style="font-size: 11px;">per pack</span>
+          </div>
+        {%- endfor -%}
+      </component-one-time-variants-prices>
     </div>
     <div>
       <div>
@@ -380,9 +408,6 @@
               assign discount_percentage = discount_percentage | divided_by: variant.compare_at_price | round
               assign discount_percentage = discount_percentage | append: "%"
             endif
-
-
-            assign number_of_units = variant.title | split: " " | first | times: 1
           -%}
 
           <div class="purchase-option">
@@ -393,26 +418,7 @@
                 {{ variant.title }} Supply
               </label>
             </div>
-            <div class="purchase-option-price">
-              <div style="display: flex; flex-direction: column; text-align: center;">
-                <span>
-                  {%- if variant.compare_at_price > variant.price -%}
-                    <span class="option-sale-price">
-                      {{ variant.price | divided_by: number_of_units | money }}
-                    </span>
-                    <span class="option-compare-price">
-                      {{ variant.compare_at_price | divided_by: number_of_units | money }}
-                    </span>
-                  {%- else -%}
-                    <span class="option-price">
-                      {{ variant.price | divided_by: number_of_units | money }}
-                    </span>
-                  {%- endif -%}
-                </span>
-
-                <span style="font-size: 11px;">per pack</span>
-              </div>
-
+            <div>
               {%- if discount_percentage -%}
                 <div>
                   <span class="purchase-option-savings">

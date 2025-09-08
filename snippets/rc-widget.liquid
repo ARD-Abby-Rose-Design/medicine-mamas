@@ -15,6 +15,7 @@
     padding: 12px 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
 
@@ -24,12 +25,6 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-  }
-
-  .purchase-option-price {
-    display: flex;
-    column-gap: 6px;
     align-items: center;
   }
 
@@ -83,11 +78,10 @@
 
 
   .purchase-option-badge {
-    border: 1px solid #000000;
     border-radius: 10px;
-    background-color: #FCF7F0;
     padding: 3px 10px;
     padding-top: 4px;
+    color: #FFFFFF;
   }
 
   .purchase-option-savings {
@@ -96,6 +90,18 @@
     color: #F51E28;
     padding: 3px 10px;
     padding-top: 4px;
+  }
+
+
+  .purchase-option-price {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    visibility: hidden;
+  }
+
+  .purchase-option-price.active--true {
+    visibility: visible;
   }
 
 
@@ -176,8 +182,25 @@
   }
 </style>
 
+<style>
+  component-variant-subscription-prices {
+    display: block;
+  }
+
+  component-variant-subscription-prices {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  component-variant-subscription-prices > * {
+    grid-area: 1 / 1;
+    background-color: #FFFFFF;
+  }
+</style>
+
 {%- liquid
-  assign current_variant = product.selected_variant
+  assign current_variant = product.selected_variant | default: nil
 
   assign current_selling_plan = product.selected_selling_plan | default: nil
 
@@ -191,8 +214,60 @@
 
 <component-variant-subscriptions data-section="{{ section.id }}" data-url="{{ product.url }}">
   <component-purchase-dropdown class="component-dropdown purchase-option-container active--true">
-    <div class="purchase-option-header">
+    <div class="purchase-option-header" style="height: 42px;">
       <strong>Subscribe & Save!</strong>
+
+      <component-variant-subscription-prices>
+        {%- for variant in product.variants -%}
+          {%- liquid
+            assign variant_allocation = variant.selected_selling_plan_allocation
+
+            unless variant_allocation
+              for allocation in variant.selling_plan_allocations
+                assign supply_number = variant.title | split: " " | first
+
+                if allocation.selling_plan.name contains supply_number
+                  assign variant_allocation = allocation
+                  break
+                endif
+              endfor
+            endunless
+
+
+            assign number_of_units = variant.title | split: " " | first | times: 1
+
+
+            assign active = false
+
+            if current_variant == nil and forloop.first
+              assign active = true
+            endif
+
+            if variant_allocation.selling_plan.id == current_selling_plan.id
+              assign active = true
+            endif
+          -%}
+
+          <div class="purchase-option-price active--{{ active }}" data-id="{{ variant.id }}">
+            <span>
+              {%- if variant_allocation.compare_at_price > variant_allocation.price -%}
+                <span class="option-sale-price">
+                  {{ variant_allocation.price | divided_by: number_of_units | money }}
+                </span>
+                <span class="option-compare-price">
+                  {{ variant_allocation.compare_at_price | divided_by: number_of_units | money }}
+                </span>
+              {%- else -%}
+                <span class="option-price">
+                  {{ variant_allocation.price | divided_by: number_of_units | money }}
+                </span>
+              {%- endif -%}
+            </span>
+
+            <span style="font-size: 11px;">per pack</span>
+          </div>
+        {%- endfor -%}
+      </component-variant-subscription-prices>
     </div>
     <div>
       <div>
@@ -228,9 +303,6 @@
                 assign checked = "checked"
               endif
             endunless
-
-
-            assign number_of_units = variant.title | split: " " | first | times: 1
           -%}
 
           <div class="component-dropdown component-radio-dropdown">
@@ -241,35 +313,16 @@
                 <label>
                   {{ variant.title }} Supply
                 </label>
+              </div>
 
+              <div style="display: flex; gap: 6px; align-items: center;">
                 {%- if forloop.index == 2 -%}
-                  <span class="purchase-option-badge">Most Popular!</span>
+                  <span class="purchase-option-badge" style="background-color: #f51e28;">Most Popular!</span>
                 {%- endif -%}
 
                 {%- if forloop.last -%}
-                  <span class="purchase-option-badge">Best Value!</span>
+                  <span class="purchase-option-badge" style="background-color: #640F14;">Best Value!</span>
                 {%- endif -%}
-              </div>
-
-              <div class="purchase-option-price">
-                <div style="display: flex; flex-direction: column; text-align: center;">
-                  <span>
-                    {%- if variant_allocation.compare_at_price > variant_allocation.price -%}
-                      <span class="option-sale-price">
-                        {{ variant_allocation.price | divided_by: number_of_units | money }}
-                      </span>
-                      <span class="option-compare-price">
-                        {{ variant_allocation.compare_at_price | divided_by: number_of_units | money }}
-                      </span>
-                    {%- else -%}
-                      <span class="option-price">
-                        {{ variant_allocation.price | divided_by: number_of_units | money }}
-                      </span>
-                    {%- endif -%}
-                  </span>
-
-                  <span style="font-size: 11px;">per pack</span>
-                </div>
 
                 <div>
                   <span class="purchase-option-savings">

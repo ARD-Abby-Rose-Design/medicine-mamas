@@ -287,6 +287,98 @@
         "padding_bottom": 100
       }
     },
+    "rich_text_YeNTFV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bmTQzB": {
+          "type": "heading",
+          "settings": {
+            "heading": "CLINICALLY PROVEN",
+            "heading_size": "hlarge"
+          }
+        },
+        "heading_3NgNzT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hyaluronic Acid",
+            "heading_size": "h2"
+          }
+        },
+        "text_VqLfE6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As estrogen declines, the vaginal walls can begin to thin and lose moisture leading to increased pain with intimacy, risk of UTI’s, and discomfort in everyday activities Hyaluronic acid can help.</p>",
+            "text_style": "text-body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bmTQzB",
+        "heading_3NgNzT",
+        "text_VqLfE6"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "collapsible_content_7RyDMV": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_qEnciW": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What it is",
+            "row_content": "<p>Hyaluronic acid is a naturally occurring molecule scientifically shown to improve symptoms of vaginal atrophy by providing deep hydration, enhancing tissue elasticity, and soothing dryness. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_hPXwnz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How it works",
+            "row_content": "<p>Its exceptional water-binding capacity, holding up to 1,000 times its weight in water, helps maintain optimal moisture balance in the skin and supports the hydration and integrity of vaginal mucous membranes 1.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Da8kNj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why we love it",
+            "row_content": "<p>Clinically shown to be as effective as topical estrogen—without the use of hormones—it supports comfort, lubrication, and tissue health. This makes it a safe, science-backed choice for women seeking a non-hormonal alternative for dryness relief.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_qEnciW",
+        "collapsible_row_hPXwnz",
+        "collapsible_row_Da8kNj"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "inverse",
+        "container_color_scheme": "background-1",
+        "open_first_collapsible_row": true,
+        "image": "shopify://shop_images/Untitled_design_2.jpg",
+        "image_ratio": "adapt",
+        "desktop_layout": "image_first",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "1443dbb0-ea85-4289-811e-0188944eac12": {
       "type": "product-clinical-trial",
       "settings": {
@@ -838,6 +930,8 @@
     "cac67cc4-85e1-4f5d-9af0-5bfbe86ec590",
     "image_with_text_4KRj8r",
     "17a80875-d3ad-4af8-9b12-88f5dbe0162b",
+    "rich_text_YeNTFV",
+    "collapsible_content_7RyDMV",
     "1443dbb0-ea85-4289-811e-0188944eac12",
     "rich_text_tgNtbb",
     "collapsible_content_6bg4eK",

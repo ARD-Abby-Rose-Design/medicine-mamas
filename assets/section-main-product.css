@@ -351,6 +351,10 @@ fieldset.product-form__input .form__label {
 }
 
 
+.product__info-container .product__description {
+  font-size: 1.7rem;
+}
+
 .product__info-container .product__description,
 .product__info-container .icon-with-text {
   margin: 2.5rem 0;
@@ -1693,6 +1697,7 @@ a.product__text {
 }
 
 .product__checkmarks {
+  font-size: 1.7rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;

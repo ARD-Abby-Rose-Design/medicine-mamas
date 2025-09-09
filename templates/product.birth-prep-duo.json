@@ -55,6 +55,7 @@
         },
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"custom-recharge\"></div>"
           }
@@ -62,6 +63,15 @@
         "quantity_selector": {
           "type": "quantity_selector",
           "disabled": true,
+          "settings": {}
+        },
+        "variant_subscriptions_W3HxAL": {
+          "type": "variant_subscriptions",
+          "disabled": true,
+          "settings": {}
+        },
+        "default_subscriptions_4pTyTt": {
+          "type": "default_subscriptions",
           "settings": {}
         },
         "buy_buttons": {
@@ -117,6 +127,8 @@
         "variant_picker",
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46",
         "quantity_selector",
+        "variant_subscriptions_W3HxAL",
+        "default_subscriptions_4pTyTt",
         "buy_buttons",
         "afbb9305-0fee-485b-84f6-73e64fa05f10",
         "collapsible-row-2",
@@ -251,14 +263,14 @@
         "media_caption": "",
         "media_caption_color": "#ffffff",
         "media_caption_bg": "none",
-        "media_caption_bg_color": "#FFFFFF",
+        "media_caption_bg_color": "#ffffff",
         "media_caption_position": "top-left",
         "overlay_caption_position_mobile": "top-left",
         "collage_video": "shopify://files/videos/Untitled design (1)_fda0c0a8-c1e8-4435-9367-c42ee85cf92e.mp4",
         "collage_media_caption": "",
         "collage_media_caption_color": "#ffffff",
         "collage_media_caption_bg": "none",
-        "collage_media_caption_bg_color": "#FFFFFF",
+        "collage_media_caption_bg_color": "#ffffff",
         "collage_media_caption_position": "top-left",
         "collage_media_caption_position_mobile": "top-left",
         "show_desktop": true,

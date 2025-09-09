@@ -49,18 +49,29 @@
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "dropdown"
           }
         },
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"custom-recharge\"></div>"
           }
         },
         "quantity_selector": {
           "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "variant_subscriptions_RTQTqj": {
+          "type": "variant_subscriptions",
+          "settings": {}
+        },
+        "default_subscriptions_zbdGjx": {
+          "type": "default_subscriptions",
           "disabled": true,
           "settings": {}
         },
@@ -123,6 +134,8 @@
         "variant_picker",
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46",
         "quantity_selector",
+        "variant_subscriptions_RTQTqj",
+        "default_subscriptions_zbdGjx",
         "buy_buttons",
         "afbb9305-0fee-485b-84f6-73e64fa05f10",
         "collapsible-row-0",
@@ -268,6 +281,7 @@
         "color_scheme": "background-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
+        "show_slider_buttons": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -455,6 +469,8 @@
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
         "media_caption_position_mobile": "top-left",
         "second_media_caption_position_mobile": "top-left",

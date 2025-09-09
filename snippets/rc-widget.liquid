@@ -1,578 +1,131 @@
-<style>
-  .purchase-option-container {
-    background-color: transparent;
-    border-radius: 10px;
-    border: 1px solid #000000;
-    padding: 0 12px;
-  }
-
-  .purchase-option-container.active--true {
-    background-color: #FFFFFF;
-  }
-
-
-  .purchase-option-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 42px;
-  }
-
-
-  .purchase-option {
-    border-top: 1px solid #000000;
-    padding: 12px 0;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .purchase-option input {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    opacity: 0;
-    margin: 0;
-    cursor: pointer;
-  }
-
-  .purchase-option label {
-    padding-left: calc(18px + 6px);
-    padding-top: 1px;
-    margin-right: 6px;
-    position: relative;
-  }
-
-  .purchase-option label:before,
-  .purchase-option label:after {
-    content: " ";
-    display: inline-block;
-    border-radius: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-  }
-
-  .purchase-option label:before {
-    width: 18px;
-    height: 18px;
-    border: 1px solid #000000;
-  }
-
-  .purchase-option label:after {
-    width: 12px;
-    height: 12px;
-    border-radius: 100%;
-    left: 3px;
-    background-color: #FFFFFF;
-    transition: background-color 150ms ease;
-  }
-
-  .purchase-option input:checked + label:after {
-    background-color: #000000;
-  }
-
-
-  .purchase-option-badge {
-    border-radius: 10px;
-    padding: 3px 10px;
-    padding-top: 4px;
-    color: #FFFFFF;
-  }
-
-  .purchase-option-savings {
-    border-radius: 10px;
-    background-color: #FFE5E0;
-    color: #F51E28;
-    padding: 3px 10px;
-    padding-top: 4px;
-  }
-
-
-  .purchase-option-price-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-  }
-
-  .purchase-option-price-container > * {
-    grid-area: 1 / 1;
-  }
-
-
-  .purchase-option-price {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    visibility: hidden;
-  }
-
-  .purchase-option-price.active--true {
-    visibility: visible;
-  }
-
-
-  .option-price {
-    font-weight: 700;
-  }
-
-  .option-sale-price {
-    font-weight: 700;
-    color: red;
-  }
-
-  .option-compare-price {
-    font-weight: 700;
-    text-decoration: line-through;
-  }
-
-
-  .option-description {
-    margin: 6px 0;
-  }
-
-
-  .option-incentives {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    padding-bottom: 12px;
-  }
-
-  .option-incentive {
-    position: relative;
-    padding: 5px;
-    padding-left: 20px;
-  }
-
-  .option-incentive:before {
-    content: '';
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M12.75 1.24951L4.5 12.7495L1.25 9.49951' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    width: 14px;
-    height: 14px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
-
-
-  .one-time-variant-container {
-    border-top: 1px solid black;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 16px 16px;
-    padding-bottom: 32px;
-  }
-
-  .one-time-variant {
-    position: relative;
-    flex: 1;
-  }
-
-  .one-time-variant input {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    opacity: 0;
-    margin: 0;
-    cursor: pointer;
-  }
-
-  .one-time-variant label {
-    display: block;
-    text-align: center;
-    border: 1.2px solid black;
-    text-transform: uppercase;
-    padding: .7rem 1rem;
-    border-radius: var(--variant-pills-radius);
-    position: relative;
-    background-color: #FCF7F0;
-  }
-
-  .one-time-variant input:checked + label {
-    background-color: #FFE5E0;
-  }
-
-  .one-time-variant-savings {
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--red);
-    color: #FFFFFF;
-    padding: 4px 6px;
-    border-radius: 12px;
-    font-size: 1rem;
-    font-weight: 400;
-    white-space: nowrap;
-    text-transform: none;
-  }
-
-
-  .purchase-option-heading-one-time {
-    padding-left: calc(18px + 6px);
-    padding-top: 1px;
-    position: relative;
-  }
-
-  .purchase-option-heading-one-time:before,
-  .purchase-option-heading-one-time:after {
-    content: " ";
-    display: inline-block;
-    border-radius: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-  }
-
-  .purchase-option-heading-one-time:before {
-    width: 18px;
-    height: 18px;
-    border: 1px solid #000000;
-  }
-
-  .purchase-option-heading-one-time:after {
-    width: 12px;
-    height: 12px;
-    border-radius: 100%;
-    left: 3px;
-    background-color: #FFFFFF;
-    transition: background-color 150ms ease;
-  }
-
-  .purchase-option-container-one-time.active--true .purchase-option-heading-one-time:after {
-    background-color: #000000;
-  }
-</style>
-
-<style>
-  .component-dropdown {
-    display: block;
-    cursor: pointer;
-  }
-
-  .component-dropdown > div:last-child {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  .component-dropdown > div:last-child > div {
-    overflow: hidden;
-  }
-
-  .component-dropdown.active--true > div:last-child {
-    grid-template-rows: 1fr;
-  }
-
-  .component-radio-dropdown:has(input:checked) > div:last-child {
-    grid-template-rows: 1fr;
-  }
-</style>
-
-<style>
-  component-variant-subscriptions,
-  component-one-time-variants {
-    display: block;
-  }
-</style>
-
-{%- liquid
-  assign current_variant = product.selected_variant | default: nil
-
-  assign current_selling_plan = product.selected_selling_plan | default: nil
-
-
-  assign show_one_time = false
-
-  if current_variant and current_selling_plan == nil
-    assign show_one_time = true
-  endif
-
-
-  assign first_variant = product.variants | first
--%}
-
-<component-variant-subscriptions data-section="{{ section.id }}" data-url="{{ product.url }}">
-  <component-purchase-dropdown class="component-dropdown purchase-option-container active--true">
-    <div class="purchase-option-header">
-      <strong>Subscribe & Save!</strong>
-
-      <component-variant-subscription-prices class="purchase-option-price-container">
-        {%- for variant in product.variants -%}
-          {%- liquid
-            assign variant_allocation = variant.selected_selling_plan_allocation
-
-            unless variant_allocation
-              for allocation in variant.selling_plan_allocations
-                assign supply_number = variant.title | split: " " | first
-
-                if allocation.selling_plan.name contains supply_number
-                  assign variant_allocation = allocation
-                  break
-                endif
-              endfor
-            endunless
-
-
-            assign number_of_units = variant.title | split: " " | first | times: 1
-
-            if number_of_units == 0
-              assign number_of_units = 1
-            endif
-
-
-            assign active = false
-
-            if current_variant == nil and forloop.first
-              assign active = true
-            endif
-
-            if variant_allocation.selling_plan.id == current_selling_plan.id
-              assign active = true
-            endif
-          -%}
-
-          <div class="purchase-option-price active--{{ active }}" data-id="{{ variant.id }}">
-            <span>
-              {%- if variant_allocation.compare_at_price > variant_allocation.price -%}
-                <span class="option-sale-price">
-                  {{ variant_allocation.price | divided_by: number_of_units | money }}
+<recharge-widget>
+  <div
+    class="widget hidden"
+    data-product-id="{{ product.id }}"
+    data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+  >
+    <div class="widget__template-radio hidden">
+      <div class="widget__radio-wrapper">
+          <div class="widget__radio subscription-radio">
+            <div class="widget__radio-option-selector">
+              <input id="selling_plan_subsave__{{ product.id }}" class="widget__radio-input" type="radio" name="selling_plan">
+              <label for="selling_plan_subsave__{{ product.id }}" class="widget__radio-label">
+                <span class="widget__radio-option-text">
+                  <span class="option-text"></span>
+                  <span class="option-discount"></span>
+                  <span class="option-dash">-</span>
+                  <span class="option-compare-price"></span>
+                  <span class="option-price"></span>
                 </span>
-                <span class="option-compare-price">
-                  {{ first_variant.price | money }}
-                </span>
-              {%- else -%}
-                <span class="option-price">
-                  {{ variant_allocation.price | divided_by: number_of_units | money }}
-                </span>
-              {%- endif -%}
-            </span>
-
-            <span style="font-size: 11px;">per pack</span>
-          </div>
-        {%- endfor -%}
-      </component-variant-subscription-prices>
-    </div>
-    <div>
-      <div>
-        {%- for variant in product.variants -%}
-          {%- liquid
-            assign variant_allocation = variant.selected_selling_plan_allocation
-
-            unless variant_allocation
-              for allocation in variant.selling_plan_allocations
-                assign supply_number = variant.title | split: " " | first
-
-                if allocation.selling_plan.name contains supply_number
-                  assign variant_allocation = allocation
-                  break
-                endif
-              endfor
-            endunless
-
-            assign selling_plan_id = variant_allocation.selling_plan.id
-
-            assign description = variant.title | append: " " | append: variant_allocation.selling_plan.name
-            assign description = description | replace: "Delivery", "delivered"
-
-            assign number_of_units = variant.title | split: " " | first | times: 1
-
-            assign variant_allocation_price_per_unit = variant_allocation.price | divided_by: number_of_units
-
-
-            assign discount_percentage = first_variant.price | minus: variant_allocation_price_per_unit | times: 100.0
-            assign discount_percentage = discount_percentage | divided_by: first_variant.price | round
-            assign discount_percentage = discount_percentage | append: "%"
-
-
-            assign checked = nil
-
-            if variant.id == current_variant.id and variant_allocation.selling_plan.id == current_selling_plan.id
-              assign checked = "checked"
-            endif
-
-            unless current_variant or current_selling_plan
-              if forloop.first
-                assign checked = "checked"
-              endif
-            endunless
-          -%}
-
-          <div class="component-dropdown component-radio-dropdown">
-            <div class="purchase-option">
-              <div>
-                <input name="subscription_variant" type="radio" value="{{ selling_plan_id }}" {{ checked }} data-variant-id="{{ variant.id }}" />
-
-                <label>
-                  {{ variant.title }} Supply
-                </label>
-              </div>
-
-              <div style="display: flex; gap: 6px; align-items: center;">
-                {%- if forloop.index == 2 -%}
-                  <span class="purchase-option-badge" style="background-color: #f51e28;">Most Popular!</span>
-                {%- endif -%}
-
-                {%- if forloop.index == 3 -%}
-                  <span class="purchase-option-badge" style="background-color: #640F14;">Best Value!</span>
-                {%- endif -%}
-
-                <div>
-                  <span class="purchase-option-savings">
-                    save {{ discount_percentage }}
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div>
-                <p class="option-description">
-                  <strong>{{ description }}</strong>
-                </p>
-                <ul class="option-incentives">
-                  <li class="option-incentive">{{ discount_percentage }} off for life</li>
-                  <li class="option-incentive">Pause, modify, or cancel anytime</li>
-                  <li class="option-incentive">Free US shipping on every order over $50</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        {%- endfor -%}
-      </div>
-    </div>
-  </component-purchase-dropdown>
-</component-variant-subscriptions>
-
-<component-one-time-variants data-section="{{ section.id }}" data-url="{{ product.url }}">
-  <component-purchase-dropdown class="component-dropdown purchase-option-container purchase-option-container-one-time active--{{ show_one_time }}">
-    <div class="purchase-option-header">
-      <strong class="purchase-option-heading-one-time">One-time Purchase</strong>
-
-      <component-one-time-variants-prices class="purchase-option-price-container">
-        {%- for variant in product.variants -%}
-          {%- liquid
-            assign number_of_units = variant.title | split: " " | first | times: 1
-
-            if number_of_units == 0
-              assign number_of_units = 1
-            endif
-
-
-            assign active = false
-
-            if variant.id == current_variant.id and current_selling_plan == nil
-              assign active = true
-            endif
-          -%}
-
-          <div class="purchase-option-price active--{{ active }}" data-id="{{ variant.id }}">
-            <span>
-              {%- if variant.compare_at_price > variant.price -%}
-                <span class="option-sale-price">
-                  {{ variant.price | divided_by: number_of_units | money }}
-                </span>
-                <span class="option-compare-price">
-                  {{ variant.compare_at_price | divided_by: number_of_units | money }}
-                </span>
-              {%- else -%}
-                <span class="option-price">
-                  {{ variant.price | divided_by: number_of_units | money }}
-                </span>
-              {%- endif -%}
-            </span>
-
-            <span style="font-size: 11px;">per pack</span>
-          </div>
-        {%- endfor -%}
-      </component-one-time-variants-prices>
-    </div>
-    <div>
-      <div>
-        <div class="one-time-variant-container">
-          {%- for variant in product.variants -%}
-            {%- liquid
-              assign checked = nil
-
-              if variant.id == current_variant.id or forloop.first
-                assign checked = "checked"
-              endif
-
-
-              assign variant_on_sale = false
-
-              if variant.compare_at_price > variant.price
-                assign variant_on_sale = true
-              endif
-
-
-              assign discount_percentage = nil
-
-              if variant_on_sale
-                assign discount_percentage = variant.compare_at_price | minus: variant.price | times: 100.0
-                assign discount_percentage = discount_percentage | divided_by: variant.compare_at_price | round
-                assign discount_percentage = discount_percentage | append: "%"
-              endif
-            -%}
-
-            <div class="one-time-variant">
-              <input name="one-time" type="radio" value="{{ variant.id }}" {{ checked }} />
-
-              <label>
-                {{ variant.title }}
-
-                {%- if discount_percentage -%}
-                  <span class="one-time-variant-savings">
-                    {{ discount_percentage }} off
-                  </span>
-                {%- endif -%}
               </label>
             </div>
-          {%- endfor -%}
+
+            <div class="widget__selling-plans">
+              <dropdown-select class="dropdown-select" data-product-selling-plans-dropdown="">
+                <div
+                  aria-haspopup="listbox"
+                  aria-label="Deliver every 8 Weeks"
+                  aria-controls="listbox__{{ product.id }}"
+                  id="listbox-dropdown__{{ product.id }}"
+                  aria-expanded="true"
+                  role="button"
+                  tabindex="0"
+                >
+                  <select
+                    class="selling-plan-group__select text-bold ui-copy"
+                    name="selling-plan-group"
+                    data-custom-dropdown=""
+                    data-product-selling-plans-select=""
+                    data-product-selling-plan-group-name=""
+                    aria-label="Delivery options"
+                    tabindex="-1"
+                  >
+                  </select>
+                </div>
+                <ul
+                  role="listbox"
+                  id="listbox__{{ product.id }}"
+                  aria-labelledby="tab-1"
+                  aria-activedescendant="4132864214"
+                  tabindex="-1"
+                  aria-hidden="false"
+                >
+                </ul>
+              </dropdown-select>
+            </div>
+            {% assign checkmarks = 'recharge.checkmarks' | t | split: '|' %}
+            <ul class="rc-checkmarks">
+              {% for checkmark in checkmarks %}
+                <li class="rc-checkmark">{{ checkmark }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+            <div class="widget__radio one-time-radio" {% if product.selected_or_first_available_variant.selling_plan_allocations.size == 0 %}style="margin-top: 0px;"{% endif %}>
+          <div class="widget__radio-option-selector">
+            <input id="selling_plan_one-time__{{ product.id }}" class="widget__radio-input" type="radio" name="selling_plan">
+            <label for="selling_plan_one-time__{{ product.id }}" class="widget__radio-label">
+              <span class="widget__radio-option-text">
+                <span class="option-text"></span>-
+                <span class="option-discount"></span>
+                <div class="option-compare-price{% if product.selected_or_first_available_variant.selling_plan_allocations.size != 0 %} hidden{% endif %}">
+                  {{ product.selected_or_first_available_variant.compare_at_price |  money_without_trailing_zeros }}
+                </div>
+                <div class="option-price {% if product.selected_or_first_available_variant.selling_plan_allocations.size == 0 %}bulk-discount{% endif %}"></div>
+              </span>
+            </label>
+          </div>
         </div>
       </div>
     </div>
-  </component-purchase-dropdown>
-</component-one-time-variants>
 
-<script>
-  class ComponentPurchaseDropdown extends HTMLElement {
-    constructor() {
-      super();
-    }
+    <div class="widget__template-checkbox hidden">
+      <div class="widget__checkbox-wrapper">
+        <div class="widget__checkbox">
+          <label for="selling_plan_checkbox__{{ product.id }}" class="widget__checkbox-label">
+            <input id="selling_plan_checkbox__{{ product.id }}" class="widget__checkbox-input" type="checkbox" name="selling_plan_checkbox">
+            <span class="widget__checkbox-option-text">
+              <span class="option-text"></span>
+              <span class="option-discount"></span>
+              <span class="option-sub"></span>
+            </span>
+          </label>
+          <div class="widget__selling-plans hidden">
+            <label for="rc_selling_plan" class="widget__selling-plans-dropdown">
+              <span class="widget__selling-plans-dropdown__label visually-hidden">Delivery</span>
+              <select class="widget__selling-plans-dropdown__select" name="rc_selling_plan"></select>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    connectedCallback() {
-      this.events();
-    }
+    <div class="widget__subscription-details hidden" style="display: none;">
+      <button type="button" class="widget__subscription-details-button">
+        {% render 'icon-recharge-circle-arrow' %}
+        <span class="widget__subscription-details__text"></span>
+      </button>
+      <div class="widget__tooltip">
+        <div class="widget__tooltip-content">
+          <div class="how-it-works">
+            <span class="how-it-works__title"></span>
+          </div>
+          <a class="learn-more hidden" href="" rel="noopener noreferrer" target="_blank"></a>
+          <div class="widget__tooltip-footer hidden">
+            <a
+              href="http://rechargepayments.com/subscribe-with-recharge"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="widget-tooltip__badge"
+            >
+              <span class="powered-by">Powered by</span>
+              {% render 'icon-recharge-logo' %}
+            </a>
+          </div>
+        </div>
+        <div class="arrow"></div>
+      </div>
+    </div>
+  </div>
+</recharge-widget>
 
-    events() {
-      this.addEventListener("click", (event) => {
-        if (this.classList.contains("active--true")) {
-          return;
-        } else {
-          this.triggerChange();
-          this.classList.add("active--true");
-        }
-      });
-    }
-
-    triggerChange() {
-      const element = this.querySelector("input[type=radio]:checked") || this.querySelector("input[type=radio]");
-      element.checked = true;
-      element.dispatchEvent(new Event("change", { bubbles: true }));
-    }
-  }
-
-  customElements.define("component-purchase-dropdown", ComponentPurchaseDropdown);
-</script>
+<link rel="stylesheet" href="{{ 'rc-widget.css' | asset_url }}">

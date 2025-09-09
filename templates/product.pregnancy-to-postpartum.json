@@ -53,6 +53,11 @@
             "picker_type": "button"
           }
         },
+        "default_subscriptions_88XBf3": {
+          "type": "default_subscriptions",
+          "disabled": true,
+          "settings": {}
+        },
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46": {
           "type": "custom_liquid",
           "settings": {
@@ -115,6 +120,7 @@
         "6b38dc5b-1d2c-4b1e-8bad-3c2cbc663748",
         "price",
         "variant_picker",
+        "default_subscriptions_88XBf3",
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46",
         "quantity_selector",
         "buy_buttons",
@@ -213,6 +219,8 @@
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,
+        "show_desktop": true,
+        "show_mobile": true,
         "title": "<b>11,000+ 5-Star Reviews</b>",
         "product": "",
         "padding_top": 36,

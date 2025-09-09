@@ -53,6 +53,10 @@
             "picker_type": "button"
           }
         },
+        "default_subscriptions_N8GJey": {
+          "type": "default_subscriptions",
+          "settings": {}
+        },
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46": {
           "type": "custom_liquid",
           "settings": {
@@ -62,10 +66,6 @@
         "quantity_selector": {
           "type": "quantity_selector",
           "disabled": true,
-          "settings": {}
-        },
-        "default_subscriptions_N8GJey": {
-          "type": "default_subscriptions",
           "settings": {}
         },
         "buy_buttons": {
@@ -119,9 +119,9 @@
         "6b38dc5b-1d2c-4b1e-8bad-3c2cbc663748",
         "price",
         "variant_picker",
+        "default_subscriptions_N8GJey",
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46",
         "quantity_selector",
-        "default_subscriptions_N8GJey",
         "buy_buttons",
         "afbb9305-0fee-485b-84f6-73e64fa05f10",
         "collapsible-row-2",

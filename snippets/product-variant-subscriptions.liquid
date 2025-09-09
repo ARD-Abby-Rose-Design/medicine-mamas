@@ -302,6 +302,13 @@
 
 
   assign first_variant = product.variants | first
+
+
+  assign first_variant_price = first_variant.price
+
+  if first_variant.price < first_variant.compare_at_price
+    assign first_variant_price = first_variant.compare_at_price
+  endif
 -%}
 
 <component-variant-subscriptions data-section="{{ section.id }}" data-url="{{ product.url }}">
@@ -351,7 +358,7 @@
                   {{ variant_allocation.price | divided_by: number_of_units | money }}
                 </span>
                 <span class="option-compare-price">
-                  {{ first_variant.price | money }}
+                  {{ first_variant_price | money }}
                 </span>
               {%- else -%}
                 <span class="option-price">
@@ -392,8 +399,8 @@
             assign variant_allocation_price_per_unit = variant_allocation.price | divided_by: number_of_units
 
 
-            assign discount_percentage = first_variant.price | minus: variant_allocation_price_per_unit | times: 100.0
-            assign discount_percentage = discount_percentage | divided_by: first_variant.price | round
+            assign discount_percentage = first_variant_price | minus: variant_allocation_price_per_unit | times: 100.0
+            assign discount_percentage = discount_percentage | divided_by: first_variant_price | round
             assign discount_percentage = discount_percentage | append: "%"
 
 

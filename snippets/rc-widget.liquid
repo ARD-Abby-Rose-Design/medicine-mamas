@@ -328,6 +328,10 @@
 
             assign number_of_units = variant.title | split: " " | first | times: 1
 
+            if number_of_units == 0
+              assign number_of_units = 1
+            endif
+
 
             assign active = false
 
@@ -460,6 +464,10 @@
         {%- for variant in product.variants -%}
           {%- liquid
             assign number_of_units = variant.title | split: " " | first | times: 1
+
+            if number_of_units == 0
+              assign number_of_units = 1
+            endif
 
 
             assign active = false

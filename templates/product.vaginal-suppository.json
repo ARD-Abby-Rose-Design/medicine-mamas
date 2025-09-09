@@ -60,6 +60,10 @@
             "custom_liquid": "<div class=\"custom-recharge\"></div>"
           }
         },
+        "variant_subscriptions_MxpxXm": {
+          "type": "variant_subscriptions",
+          "settings": {}
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "disabled": true,
@@ -123,6 +127,7 @@
         "price",
         "variant_picker",
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46",
+        "variant_subscriptions_MxpxXm",
         "quantity_selector",
         "buy_buttons",
         "afbb9305-0fee-485b-84f6-73e64fa05f10",

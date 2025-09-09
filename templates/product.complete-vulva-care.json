@@ -49,7 +49,6 @@
         },
         "variant_picker": {
           "type": "variant_picker",
-          "disabled": true,
           "settings": {
             "picker_type": "button"
           }
@@ -68,6 +67,7 @@
         },
         "variant_subscriptions_QyJa3Q": {
           "type": "variant_subscriptions",
+          "disabled": true,
           "settings": {}
         },
         "default_subscriptions_N8GJey": {

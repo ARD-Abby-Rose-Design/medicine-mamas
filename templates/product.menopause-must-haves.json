@@ -53,6 +53,10 @@
             "picker_type": "button"
           }
         },
+        "default_subscriptions_fRArKU": {
+          "type": "default_subscriptions",
+          "settings": {}
+        },
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46": {
           "type": "custom_liquid",
           "settings": {
@@ -115,6 +119,7 @@
         "6b38dc5b-1d2c-4b1e-8bad-3c2cbc663748",
         "price",
         "variant_picker",
+        "default_subscriptions_fRArKU",
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46",
         "quantity_selector",
         "buy_buttons",
@@ -213,6 +218,8 @@
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,
+        "show_desktop": true,
+        "show_mobile": true,
         "title": "<b>11,000+ 5-Star Reviews</b>",
         "product": "",
         "padding_top": 36,
@@ -296,6 +303,8 @@
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
         "media_caption_position_mobile": "top-left",
         "second_media_caption_position_mobile": "top-left",
@@ -355,6 +364,8 @@
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
         "media_caption_position_mobile": "top-left",
         "second_media_caption_position_mobile": "top-left",
@@ -414,6 +425,8 @@
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
         "media_caption_position_mobile": "top-left",
         "second_media_caption_position_mobile": "top-left",
@@ -661,6 +674,8 @@
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
         "media_caption_position_mobile": "top-left",
         "second_media_caption_position_mobile": "top-left",

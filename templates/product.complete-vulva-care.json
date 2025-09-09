@@ -55,18 +55,12 @@
         },
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"custom-recharge\"></div>"
           }
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "disabled": true,
-          "settings": {}
-        },
-        "variant_subscriptions_QyJa3Q": {
-          "type": "variant_subscriptions",
           "disabled": true,
           "settings": {}
         },
@@ -127,7 +121,6 @@
         "variant_picker",
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46",
         "quantity_selector",
-        "variant_subscriptions_QyJa3Q",
         "default_subscriptions_N8GJey",
         "buy_buttons",
         "afbb9305-0fee-485b-84f6-73e64fa05f10",

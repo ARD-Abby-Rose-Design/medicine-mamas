@@ -1,131 +1,294 @@
-<recharge-widget>
-  <div
-    class="widget hidden"
-    data-product-id="{{ product.id }}"
-    data-variant-id="{{ product.selected_or_first_available_variant.id }}"
-  >
-    <div class="widget__template-radio hidden">
-      <div class="widget__radio-wrapper">
-          <div class="widget__radio subscription-radio">
-            <div class="widget__radio-option-selector">
-              <input id="selling_plan_subsave__{{ product.id }}" class="widget__radio-input" type="radio" name="selling_plan">
-              <label for="selling_plan_subsave__{{ product.id }}" class="widget__radio-label">
-                <span class="widget__radio-option-text">
-                  <span class="option-text"></span>
-                  <span class="option-discount"></span>
-                  <span class="option-dash">-</span>
-                  <span class="option-compare-price"></span>
-                  <span class="option-price"></span>
-                </span>
-              </label>
-            </div>
+<style>
+  .purchase-option-container {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    padding: 0 12px;
+  }
 
-            <div class="widget__selling-plans">
-              <dropdown-select class="dropdown-select" data-product-selling-plans-dropdown="">
-                <div
-                  aria-haspopup="listbox"
-                  aria-label="Deliver every 8 Weeks"
-                  aria-controls="listbox__{{ product.id }}"
-                  id="listbox-dropdown__{{ product.id }}"
-                  aria-expanded="true"
-                  role="button"
-                  tabindex="0"
-                >
-                  <select
-                    class="selling-plan-group__select text-bold ui-copy"
-                    name="selling-plan-group"
-                    data-custom-dropdown=""
-                    data-product-selling-plans-select=""
-                    data-product-selling-plan-group-name=""
-                    aria-label="Delivery options"
-                    tabindex="-1"
-                  >
-                  </select>
-                </div>
-                <ul
-                  role="listbox"
-                  id="listbox__{{ product.id }}"
-                  aria-labelledby="tab-1"
-                  aria-activedescendant="4132864214"
-                  tabindex="-1"
-                  aria-hidden="false"
-                >
-                </ul>
-              </dropdown-select>
-            </div>
-            {% assign checkmarks = 'recharge.checkmarks' | t | split: '|' %}
-            <ul class="rc-checkmarks">
-              {% for checkmark in checkmarks %}
-                <li class="rc-checkmark">{{ checkmark }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-            <div class="widget__radio one-time-radio" {% if product.selected_or_first_available_variant.selling_plan_allocations.size == 0 %}style="margin-top: 0px;"{% endif %}>
-          <div class="widget__radio-option-selector">
-            <input id="selling_plan_one-time__{{ product.id }}" class="widget__radio-input" type="radio" name="selling_plan">
-            <label for="selling_plan_one-time__{{ product.id }}" class="widget__radio-label">
-              <span class="widget__radio-option-text">
-                <span class="option-text"></span>-
-                <span class="option-discount"></span>
-                <div class="option-compare-price{% if product.selected_or_first_available_variant.selling_plan_allocations.size != 0 %} hidden{% endif %}">
-                  {{ product.selected_or_first_available_variant.compare_at_price |  money_without_trailing_zeros }}
-                </div>
-                <div class="option-price {% if product.selected_or_first_available_variant.selling_plan_allocations.size == 0 %}bulk-discount{% endif %}"></div>
-              </span>
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="widget__template-checkbox hidden">
-      <div class="widget__checkbox-wrapper">
-        <div class="widget__checkbox">
-          <label for="selling_plan_checkbox__{{ product.id }}" class="widget__checkbox-label">
-            <input id="selling_plan_checkbox__{{ product.id }}" class="widget__checkbox-input" type="checkbox" name="selling_plan_checkbox">
-            <span class="widget__checkbox-option-text">
-              <span class="option-text"></span>
-              <span class="option-discount"></span>
-              <span class="option-sub"></span>
+  .purchase-option-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 42px;
+    position: relative;
+  }
+
+  .purchase-option-header input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 75%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+
+  .purchase-option-badge {
+    border-radius: 10px;
+    padding: 3px 10px;
+    padding-top: 4px;
+    color: #FFFFFF;
+  }
+
+  .purchase-option-savings {
+    border-radius: 10px;
+    background-color: #FFE5E0;
+    color: #F51E28;
+    padding: 3px 10px;
+    padding-top: 4px;
+  }
+
+
+  .option-price {
+    font-weight: 700;
+  }
+
+  .option-sale-price {
+    font-weight: 700;
+    color: red;
+  }
+
+  .option-compare-price {
+    font-weight: 700;
+    text-decoration: line-through;
+  }
+
+
+  .option-incentives {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    padding-bottom: 12px;
+  }
+
+  .option-incentive {
+    position: relative;
+    padding: 5px;
+    padding-left: 20px;
+  }
+
+  .option-incentive:before {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M12.75 1.24951L4.5 12.7495L1.25 9.49951' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+
+  .purchase-option-heading {
+    padding-left: calc(18px + 6px);
+    padding-top: 1px;
+    position: relative;
+  }
+
+  .purchase-option-heading:before,
+  .purchase-option-heading:after {
+    content: " ";
+    display: inline-block;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+
+  .purchase-option-heading:before {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #000000;
+  }
+
+  .purchase-option-heading:after {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    left: 3px;
+    background-color: #FFFFFF;
+    transition: background-color 150ms ease;
+  }
+
+
+  .purchase-option-container:has(input:checked) {
+    background-color: #FFFFFF;
+  }
+
+  .purchase-option-container:has(input:checked) .purchase-option-heading:after {
+    background-color: #000000;
+  }
+
+
+  .purchase-option-price {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+
+  .subscriptions-select {
+    position: relative;
+    z-index: 30;
+    width: 100%;
+    margin: 0;
+    padding: 0 12px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    padding: 0 48px 0 12px;
+    border: 1px solid #000;
+    font-size: 15px;
+    font-family: var(--font-body-family);
+    border-radius: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.6668 4.66669L8.00016 11.3334L1.3335 4.66669' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-color: transparent;
+    text-overflow: "";
+    cursor: pointer;
+    appearance: none;
+  }
+
+  .subscriptions-select:focus {
+    outline: none;
+    box-shadow: none;
+  }
+</style>
+
+<style>
+  component-default-subscriptions {
+    display: block;
+  }
+</style>
+
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant
+
+  assign current_allocation = product.selected_or_first_available_selling_plan_allocation
+
+
+  assign discount_percentage = current_variant.compare_at_price | minus: current_allocation.price | times: 100.0
+  assign discount_percentage = discount_percentage | divided_by: current_variant.compare_at_price | round
+  assign discount_percentage = discount_percentage | append: "%"
+-%}
+
+<component-default-subscriptions data-section="{{ section.id }}" data-url="{{ product.url }}">
+  <div class="purchase-option-container active--true">
+    <div class="purchase-option-header">
+
+      {%- liquid
+        assign checked = "checked"
+
+        if product.selected_variant and product.selected_selling_plan == nil
+          assign checked = ""
+        endif
+      -%}
+
+      <input type="radio" name="purchase_option" value="subscription" {{ checked }} />
+
+      <label class="purchase-option-heading">
+        <strong>Subscribe & Save!</strong>
+      </label>
+
+      <div class="purchase-option-price">
+        <span class="purchase-option-savings">
+          save {{ discount_percentage }}
+        </span>
+
+        <span>
+          {%- if current_allocation.compare_at_price > current_allocation.price -%}
+            <span class="option-sale-price">
+              {{ current_allocation.price | money }}
             </span>
-          </label>
-          <div class="widget__selling-plans hidden">
-            <label for="rc_selling_plan" class="widget__selling-plans-dropdown">
-              <span class="widget__selling-plans-dropdown__label visually-hidden">Delivery</span>
-              <select class="widget__selling-plans-dropdown__select" name="rc_selling_plan"></select>
-            </label>
-          </div>
-        </div>
+            <span class="option-compare-price">
+              {{ current_variant.compare_at_price | money }}
+            </span>
+          {%- else -%}
+            <span class="option-price">
+              {{ current_allocation.price | money }}
+            </span>
+          {%- endif -%}
+        </span>
       </div>
     </div>
+    <div>
+      <select class="subscriptions-select">
+        {%- for allocation in current_variant.selling_plan_allocations -%}
+          {%- liquid
+            assign selected = ""
 
-    <div class="widget__subscription-details hidden" style="display: none;">
-      <button type="button" class="widget__subscription-details-button">
-        {% render 'icon-recharge-circle-arrow' %}
-        <span class="widget__subscription-details__text"></span>
-      </button>
-      <div class="widget__tooltip">
-        <div class="widget__tooltip-content">
-          <div class="how-it-works">
-            <span class="how-it-works__title"></span>
-          </div>
-          <a class="learn-more hidden" href="" rel="noopener noreferrer" target="_blank"></a>
-          <div class="widget__tooltip-footer hidden">
-            <a
-              href="http://rechargepayments.com/subscribe-with-recharge"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="widget-tooltip__badge"
-            >
-              <span class="powered-by">Powered by</span>
-              {% render 'icon-recharge-logo' %}
-            </a>
-          </div>
-        </div>
-        <div class="arrow"></div>
+            if product.selected_selling_plan == nil and forloop.first
+              assign selected = "selected"
+
+            elsif product.selected_selling_plan.id == allocation.selling_plan.id
+              assign selected = "selected"
+
+            endif
+          -%}
+
+          <option value="{{ allocation.selling_plan.id }}" {{ selected }}>
+            {{ allocation.selling_plan.name | capitalize }}
+          </option>
+        {%- endfor -%}
+      </select>
+
+      <ul class="option-incentives" style="margin-top: 12px;">
+        <li class="option-incentive">{{ discount_percentage }} off for life</li>
+        <li class="option-incentive">Pause, modify, or cancel anytime</li>
+        <li class="option-incentive">Free US shipping on every order over $50</li>
+      </ul>
+    </div>
+  </div>
+
+  {%- liquid
+    assign checked = ""
+
+    if product.selected_variant and product.selected_selling_plan == nil
+      assign checked = "checked"
+    endif
+
+    assign discount_percentage = current_variant.compare_at_price | minus: current_variant.price | times: 100.0
+    assign discount_percentage = discount_percentage | divided_by: current_variant.compare_at_price | round
+    assign discount_percentage = discount_percentage | append: "%"
+  -%}
+
+  <div class="purchase-option-container" style="margin-top: 12px;">
+    <div class="purchase-option-header">
+      <input type="radio" name="purchase_option" value="one-time" {{ checked }} />
+
+      <label class="purchase-option-heading">
+        <strong>One-time Purchase</strong>
+      </label>
+
+      <div class="purchase-option-price">
+        <span class="purchase-option-savings">
+          save {{ discount_percentage }}
+        </span>
+
+        <span>
+          {%- if current_variant.compare_at_price > current_variant.price -%}
+            <span class="option-sale-price">
+              {{ current_variant.price | money }}
+            </span>
+            <span class="option-compare-price">
+              {{ current_variant.compare_at_price | money }}
+            </span>
+          {%- else -%}
+            <span class="option-price">
+              {{ current_variant.price | money }}
+            </span>
+          {%- endif -%}
+        </span>
       </div>
     </div>
   </div>
-</recharge-widget>
-
-<link rel="stylesheet" href="{{ 'rc-widget.css' | asset_url }}">
+</component-default-descriptions>

@@ -1563,6 +1563,74 @@ class ComponentOneTimeVariantsPrices extends HTMLElement {
 
 customElements.define("component-one-time-variants-prices", ComponentOneTimeVariantsPrices);
 
+class ComponentDefaultSubscriptions extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    this.subscriptionSelect = this.querySelector("select");
+    this.form = document.getElementById(`product-form-${this.dataset.section}`);
+    this.inputSellingId = this.form.querySelector("[name=selling_plan]");
+    this.inputId = this.form.querySelector("[name=id]");
+
+    this.addEventListener("change", (event) => {
+      if (event.target.nodeName == "INPUT") {
+        if (event.target.value == "one-time") {
+          this.inputSellingId.value = "";
+        }
+
+        if (event.target.value == "subscription") {
+          this.inputSellingId.value = this.subscriptionSelect.value;
+        }
+      }
+
+      if (event.target.nodeName == "SELECT") {
+        this.inputSellingId.value = this.subscriptionSelect.value;
+      }
+
+      this.updatePrice();
+      this.updateURL();
+    });
+  }
+
+  updatePrice() {
+    let url = `${this.dataset.url}?section_id=${this.dataset.section}&variant=${this.inputId.value}`;
+
+    if (this.inputSellingId.value) {
+      url += `&selling_plan=${this.inputSellingId.value}`;
+    }
+
+    const destination = document.getElementById(`price-${this.dataset.section}`);
+
+    if (!destination) {
+      return;
+    }
+
+    fetch(url)
+      .then((response) => response.text())
+      .then((responseText) => {
+        const html = new DOMParser().parseFromString(responseText, 'text/html');
+        const source = html.getElementById(`price-${this.dataset.section}`);
+
+        destination.innerHTML = source.innerHTML;
+      })
+      .catch((error) => console.error('Error fetching product info:', error));
+  }
+
+  updateURL() {
+    let url = `${this.dataset.url}?variant=${this.inputId.value}`;
+
+    if (this.inputSellingId.value) {
+      url += `&selling_plan=${this.inputSellingId.value}`;
+    }
+
+    window.history.replaceState({}, '', url);
+  }
+}
+
+customElements.define("component-default-subscriptions", ComponentDefaultSubscriptions);
+
 class ProductRecommendations extends HTMLElement {
   constructor() {
     super();

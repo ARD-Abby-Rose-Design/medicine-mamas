@@ -18,11 +18,16 @@
   assign compare_price = variant.compare_at_price
 
 
-  assign allocation = variant.selected_selling_plan_allocation
+  assign allocation = product.selected_or_first_available_selling_plan_allocation
+
+  if product.selected_variant and product.selected_selling_plan_allocation == nil
+    assign allocation = nil
+  endif
+
 
   if allocation
     assign price = allocation.price
-    assign compare_price = allocation.compare_at_price
+    assign compare_price = variant.compare_at_price | default: variant.price
   endif
 
 

@@ -488,8 +488,5 @@
       "send_on": "YYYY-MM-DD",
       "send_on_label": "Send on (optional)"
     }
-  },
-  "recharge": {
-    "checkmarks": "Free Shipping on orders $50+|Easy to modify, pause, or cancel"
   }
 }

@@ -9,6 +9,16 @@
  */
 {
   "sections": {
+    "custom_liquid_fMtqcx": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"klaviyo-form-WMepGn\"></div>",
+        "color_scheme": "inverse",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "b64ab950-9d29-4aa6-aab0-8c292b3eed8f": {
       "type": "main-page",
       "disabled": true,
@@ -46,21 +56,11 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "custom_liquid_fMtqcx": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div class=\"klaviyo-form-WMepGn\"></div>",
-        "color_scheme": "inverse",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
+    "custom_liquid_fMtqcx",
     "b64ab950-9d29-4aa6-aab0-8c292b3eed8f",
-    "forms",
-    "custom_liquid_fMtqcx"
+    "forms"
   ]
 }

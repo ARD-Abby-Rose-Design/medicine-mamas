@@ -126,13 +126,6 @@
   }
 
 
-  .purchase-option-price {
-    display: flex;
-    gap: 6px;
-    align-items: center;
-  }
-
-
   .subscriptions-select {
     position: relative;
     z-index: 30;
@@ -199,26 +192,9 @@
         <strong>Subscribe & Save!</strong>
       </label>
 
-      <div class="purchase-option-price">
-        <span class="purchase-option-savings">
-          save {{ discount_percentage }}
-        </span>
-
-        <span>
-          {%- if current_allocation.compare_at_price > current_allocation.price -%}
-            <span class="option-sale-price">
-              {{ current_allocation.price | money }}
-            </span>
-            <span class="option-compare-price">
-              {{ current_variant.compare_at_price | money }}
-            </span>
-          {%- else -%}
-            <span class="option-price">
-              {{ current_allocation.price | money }}
-            </span>
-          {%- endif -%}
-        </span>
-      </div>
+      <span class="purchase-option-savings">
+        save {{ discount_percentage }}
+      </span>
     </div>
     <div>
       <select class="subscriptions-select">
@@ -269,26 +245,9 @@
         <strong>One-time Purchase</strong>
       </label>
 
-      <div class="purchase-option-price">
-        <span class="purchase-option-savings">
-          save {{ discount_percentage }}
-        </span>
-
-        <span>
-          {%- if current_variant.compare_at_price > current_variant.price -%}
-            <span class="option-sale-price">
-              {{ current_variant.price | money }}
-            </span>
-            <span class="option-compare-price">
-              {{ current_variant.compare_at_price | money }}
-            </span>
-          {%- else -%}
-            <span class="option-price">
-              {{ current_variant.price | money }}
-            </span>
-          {%- endif -%}
-        </span>
-      </div>
+      <span class="purchase-option-savings">
+        save {{ discount_percentage }}
+      </span>
     </div>
   </div>
 </component-default-descriptions>

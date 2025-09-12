@@ -49,12 +49,14 @@
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button"
           }
         },
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"custom-recharge\"></div>"
           }
@@ -62,6 +64,10 @@
         "quantity_selector": {
           "type": "quantity_selector",
           "disabled": true,
+          "settings": {}
+        },
+        "default_subscriptions_HKeXwY": {
+          "type": "default_subscriptions",
           "settings": {}
         },
         "buy_buttons": {
@@ -123,6 +129,7 @@
         "variant_picker",
         "2d5053f6-2c89-42a7-ba48-b38eb639ce46",
         "quantity_selector",
+        "default_subscriptions_HKeXwY",
         "buy_buttons",
         "afbb9305-0fee-485b-84f6-73e64fa05f10",
         "collapsible-row-0",
@@ -249,7 +256,10 @@
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,
+        "show_desktop": true,
+        "show_mobile": true,
         "title": "<b>Over 11,000 5-star Reviews</b>",
+        "product": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -306,13 +316,19 @@
       ],
       "settings": {
         "image": "shopify://shop_images/medicine-mama-vmagic-grooming-polish-1_b9d2d40c-70e4-405f-8430-a1ab383e1bda.jpg",
+        "video_autoplay": "autoplay",
         "media_type": "image",
         "height": "adapt",
         "media_caption": "",
         "media_caption_color": "#ffffff",
         "media_caption_bg": "none",
-        "media_caption_bg_color": "#FFFFFF",
+        "media_caption_bg_color": "#ffffff",
         "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
         "show_desktop": true,
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -325,7 +341,11 @@
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -357,13 +377,19 @@
       ],
       "settings": {
         "image": "shopify://shop_images/medicine-mama-vmagic-vulva-wash_4bf2052d-18ed-4585-a438-ede10fed5e49.jpg",
+        "video_autoplay": "autoplay",
         "media_type": "image",
         "height": "adapt",
         "media_caption": "",
         "media_caption_color": "#ffffff",
         "media_caption_bg": "none",
-        "media_caption_bg_color": "#FFFFFF",
+        "media_caption_bg_color": "#ffffff",
         "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
         "show_desktop": true,
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -376,7 +402,11 @@
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -408,13 +438,19 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Menopause-Hydration-Duo_638278f5-bc88-47c5-aeeb-978454fbba19.jpg",
+        "video_autoplay": "autoplay",
         "media_type": "image",
         "height": "adapt",
         "media_caption": "",
         "media_caption_color": "#ffffff",
         "media_caption_bg": "none",
-        "media_caption_bg_color": "#FFFFFF",
+        "media_caption_bg_color": "#ffffff",
         "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
         "show_desktop": true,
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -427,7 +463,11 @@
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -603,6 +643,7 @@
             "button_label": "Learn More",
             "button_link": "https://medicinemama.com/pages/about",
             "button_arrow": true,
+            "big_button": false,
             "button_subtitle": ""
           }
         }
@@ -616,13 +657,19 @@
       "settings": {
         "image": "shopify://shop_images/vulvavsvagina.jpg",
         "video": "shopify://files/videos/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
+        "video_autoplay": "autoplay",
         "media_type": "video",
         "height": "small",
         "media_caption": "",
         "media_caption_color": "#ffffff",
         "media_caption_bg": "none",
-        "media_caption_bg_color": "#FFFFFF",
+        "media_caption_bg_color": "#ffffff",
         "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
         "show_desktop": true,
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -635,7 +682,11 @@
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
         "padding_top": 36,
         "padding_bottom": 64
       }

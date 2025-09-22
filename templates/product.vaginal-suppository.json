@@ -508,8 +508,8 @@
       "settings": {
         "show_desktop": true,
         "show_mobile": true,
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "desktop_content_position": "right",
+        "content_alignment": "right",
         "color_scheme": "inverse",
         "full_width": true,
         "padding_top": 8,

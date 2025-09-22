@@ -610,6 +610,14 @@
             "page": ""
           }
         },
+        "collapsible_row_daJXAy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What causes vaginal dryness?",
+            "row_content": "<p>Vaginal dryness is something many women experience, though the reasons can vary throughout life. During menopause, lower estrogen levels affect the way vaginal tissue functions—reducing natural hydration, slowing blood flow, and gradually thinning the tissue itself. But menopause isn’t the only time dryness can appear. Shifts in hormones while breastfeeding, the use of certain medications like birth control, and lifestyle factors such as smoking can all play a role. No matter the cause, it’s a common and manageable part of women’s health.</p>",
+            "page": ""
+          }
+        },
         "acedb7de-fe32-4b9b-81d1-56a49b9758d1": {
           "type": "collapsible_row",
           "settings": {
@@ -688,6 +696,7 @@
         "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-2",
         "3d098281-82e0-4464-8c45-51558b939387",
         "eb2f3da0-456d-4475-b291-e4dd41821b0e",
+        "collapsible_row_daJXAy",
         "acedb7de-fe32-4b9b-81d1-56a49b9758d1",
         "03c90831-d75d-41e8-93e1-4cb4b4665480",
         "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-0",

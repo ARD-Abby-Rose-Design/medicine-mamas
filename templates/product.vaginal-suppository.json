@@ -278,7 +278,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "HOW IT WORKS",
-            "row_content": "<p>Its exceptional water-binding capacity, holding up to 1,000 times its weight in water, helps maintain optimal moisture balance in the skin and supports the hydration and integrity of vaginal mucous membranes 1.</p>",
+            "row_content": "<p>Its exceptional water-binding capacity, holding up to 1,000 times its weight in water, helps maintain optimal moisture balance in the skin and supports the hydration and integrity of vaginal mucous membranes¹.</p>",
             "page": ""
           }
         },
@@ -867,7 +867,7 @@
             "link_label": "",
             "link": "",
             "product": "",
-            "product_badge_color": "#FCF7F0",
+            "product_badge_color": "#fcf7f0",
             "product_benefits": ""
           }
         },
@@ -879,7 +879,7 @@
             "link_label": "",
             "link": "",
             "product": "",
-            "product_badge_color": "#FCF7F0",
+            "product_badge_color": "#fcf7f0",
             "product_benefits": ""
           }
         },
@@ -891,7 +891,7 @@
             "link_label": "",
             "link": "",
             "product": "",
-            "product_badge_color": "#FCF7F0",
+            "product_badge_color": "#fcf7f0",
             "product_benefits": ""
           }
         },
@@ -903,7 +903,7 @@
             "link_label": "",
             "link": "",
             "product": "",
-            "product_badge_color": "#FCF7F0",
+            "product_badge_color": "#fcf7f0",
             "product_benefits": ""
           }
         },
@@ -915,7 +915,7 @@
             "link_label": "",
             "link": "",
             "product": "",
-            "product_badge_color": "#FCF7F0",
+            "product_badge_color": "#fcf7f0",
             "product_benefits": ""
           }
         }

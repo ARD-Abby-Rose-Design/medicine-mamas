@@ -241,7 +241,7 @@
         "text_K8xzAp": {
           "type": "text",
           "settings": {
-            "text": "<p>As estrogen declines, the vaginal walls can begin to thin and lose moisture leading to increased pain with intimacy, risk of UTI’s, and discomfort in everyday activities Hyaluronic acid can help.</p>",
+            "text": "<p>As estrogen declines, the vaginal walls can begin to thin and lose moisture leading to increased pain with intimacy, risk of UTI’s, and discomfort in everyday activities ¹ Hyaluronic acid can help.</p>",
             "text_style": "text-body"
           }
         }
@@ -488,6 +488,32 @@
         "color_scheme": "inverse",
         "padding_top": 40,
         "padding_bottom": 52
+      }
+    },
+    "rich_text_hQewXP": {
+      "type": "rich-text",
+      "blocks": {
+        "text_87YBGU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Clinical results for hyaluronic acid ¹</p>",
+            "text_style": "text-body-small"
+          }
+        }
+      },
+      "block_order": [
+        "text_87YBGU"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 8,
+        "padding_bottom": 24
       }
     },
     "collapsible_content_bp3jwj": {
@@ -885,7 +911,7 @@
           "type": "column",
           "settings": {
             "title": "",
-            "text": "<p> ¹²³⁴⁵</p>",
+            "text": "<p>⁵ Chen M et al. Hyaluronic acid vs estrogen for vaginal atrophy: meta-analysis. Arch Gynecol Obstet. 2021;303(3):631-44</p>",
             "link_label": "",
             "link": "",
             "product": "",
@@ -938,6 +964,7 @@
     "multicolumn",
     "related-products",
     "1443dbb0-ea85-4289-811e-0188944eac12",
+    "rich_text_hQewXP",
     "collapsible_content_bp3jwj",
     "c3a50a1b-b9e4-4730-8667-125f047ed335",
     "44e52141-129c-4172-8099-dc699805e02c",

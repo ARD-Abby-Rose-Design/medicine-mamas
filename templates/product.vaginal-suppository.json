@@ -490,6 +490,65 @@
         "padding_bottom": 52
       }
     },
+    "collapsible_content_bp3jwj": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_die8Dd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "IMMEDIATELY",
+            "row_content": "<p>Relief begins with the first dose.</p><p>As soon as the VMAGIC Vaginal Suppository is absorbed, its clinically tested hyaluronic acid starts replenishing moisture where your body needs it most. This deep hydration supports tissue strength and elasticity while soothing discomfort at the source.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_3KFQmE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "ONE WEEK",
+            "row_content": "<p>Real relief. Feels like magic.</p><p>Clinical research shows that hyaluronic acid can reduce vaginal dryness by up to 49% in as little as nine days.¹</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_f98KPY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "ONE MONTH",
+            "row_content": "<p>The results speak for themselves.</p><p>After a full month of consistent use women using hyaluronic acid to treat vaginal dryness had.¹</p><p> • 84% less vaginal dryness<br/> • 86% less itching and burning<br/> • 57% less pain with intimacy</p><p>VMAGIC Vaginal Suppository works with your body to restore comfort, confidence, and ease.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_W6TPFk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "THREE MONTHS",
+            "row_content": "<p>Consistency is self-care.</p><p>With continued use, VMAGIC Vaginal Suppositories can help maintain healthy moisture levels, improve tissue resilience, and support ongoing intimate wellness.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_die8Dd",
+        "collapsible_row_3KFQmE",
+        "collapsible_row_f98KPY",
+        "collapsible_row_W6TPFk"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "What to expect",
+        "heading_size": "h3",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "inverse",
+        "container_color_scheme": "background-1",
+        "open_first_collapsible_row": true,
+        "image": "shopify://shop_images/Untitled_design_1_69b35ad9-2171-4e02-b21c-33d34704ae51.jpg",
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "c3a50a1b-b9e4-4730-8667-125f047ed335": {
       "type": "collapsible-content",
       "blocks": {
@@ -770,6 +829,102 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "multicolumn_774XX7": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_zmMQEc": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p> ¹ Chen J et al. Hyaluronic acid vaginal gel trial. J Sex Med. 2013;10(6):1575-84.</p><p></p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#FCF7F0",
+            "product_benefits": ""
+          }
+        },
+        "column_TNqAkr": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p> ² Ilhan G et al. Hormonal vs nonhormonal agents for vulvovaginal atrophy. J Menopausal Med. 2021;27(1):15-23.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#FCF7F0",
+            "product_benefits": ""
+          }
+        },
+        "column_ePDeXk": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p> ³ Agrawal S et al. Vaginal hyaluronic acid vs estrogen for GSM. Menopause. 2024;31(9):750-5.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#FCF7F0",
+            "product_benefits": ""
+          }
+        },
+        "column_NMypQb": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p> ⁴ Portman DJ, Gass ML; VVA Consensus Panel. Genitourinary syndrome of menopause terminology. Menopause. 2014;21(10):1063-8.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#FCF7F0",
+            "product_benefits": ""
+          }
+        },
+        "column_UWCawR": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p> ¹²³⁴⁵</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#FCF7F0",
+            "product_benefits": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_zmMQEc",
+        "column_TNqAkr",
+        "column_ePDeXk",
+        "column_NMypQb",
+        "column_UWCawR"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "heading_alignment": "",
+        "text": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "full_width": false,
+        "enable_desktop_slider": false,
+        "column_alignment": "left",
+        "border_style": "none",
+        "background_style": "primary",
+        "background_color": "#ffffff",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "inverse",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "show_slider_buttons": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -783,12 +938,14 @@
     "multicolumn",
     "related-products",
     "1443dbb0-ea85-4289-811e-0188944eac12",
+    "collapsible_content_bp3jwj",
     "c3a50a1b-b9e4-4730-8667-125f047ed335",
     "44e52141-129c-4172-8099-dc699805e02c",
     "339a2a23-2076-4857-bb07-eaed9749925f",
     "rich_text_mHQQBT",
     "1745283158574c6685",
     "custom_liquid_Ftj7Xc",
-    "83437bf3-3644-46eb-abaf-c2b104a9887f"
+    "83437bf3-3644-46eb-abaf-c2b104a9887f",
+    "multicolumn_774XX7"
   ]
 }

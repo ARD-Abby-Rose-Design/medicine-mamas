@@ -221,6 +221,98 @@
         "padding_bottom": 52
       }
     },
+    "rich_text_F7RnQW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NwCeEh": {
+          "type": "heading",
+          "settings": {
+            "heading": "CLINCALLY PROVEN",
+            "heading_size": "hmedium"
+          }
+        },
+        "heading_w6bjae": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hyaluronic Acid",
+            "heading_size": "h2"
+          }
+        },
+        "text_K8xzAp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As estrogen declines, the vaginal walls can begin to thin and lose moisture leading to increased pain with intimacy, risk of UTI’s, and discomfort in everyday activities Hyaluronic acid can help.</p>",
+            "text_style": "text-body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NwCeEh",
+        "heading_w6bjae",
+        "text_K8xzAp"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "collapsible_content_37YGAc": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_7zeRXg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHAT IT IS",
+            "row_content": "<p>Hyaluronic acid is a naturally occurring molecule scientifically shown to improve symptoms of vaginal atrophy by providing deep hydration, enhancing tissue elasticity, and soothing dryness. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_WikPhd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW IT WORKS",
+            "row_content": "<p>Its exceptional water-binding capacity, holding up to 1,000 times its weight in water, helps maintain optimal moisture balance in the skin and supports the hydration and integrity of vaginal mucous membranes 1.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_3EkzgJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHY WE LOVE IT",
+            "row_content": "<p>Clinically shown to be as effective as topical estrogen—without the use of hormones—it supports comfort, lubrication, and tissue health. This makes it a safe, science-backed choice for women seeking a non-hormonal alternative for dryness relief. ¹²³⁴⁵</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_7zeRXg",
+        "collapsible_row_WikPhd",
+        "collapsible_row_3EkzgJ"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "inverse",
+        "container_color_scheme": "background-1",
+        "open_first_collapsible_row": true,
+        "image": "shopify://shop_images/Untitled_design_2.jpg",
+        "image_ratio": "adapt",
+        "desktop_layout": "image_first",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_4KRj8r": {
       "type": "image-with-text",
       "blocks": {
@@ -265,6 +357,7 @@
         "text_PFCffx",
         "button_MBUy3q"
       ],
+      "disabled": true,
       "name": "Media with text",
       "settings": {
         "image": "shopify://shop_images/ChatGPT_Image_Jun_6_2025_11_12_21_AM.png",
@@ -683,6 +776,8 @@
     "main",
     "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa",
     "cac67cc4-85e1-4f5d-9af0-5bfbe86ec590",
+    "rich_text_F7RnQW",
+    "collapsible_content_37YGAc",
     "image_with_text_4KRj8r",
     "17a80875-d3ad-4af8-9b12-88f5dbe0162b",
     "multicolumn",

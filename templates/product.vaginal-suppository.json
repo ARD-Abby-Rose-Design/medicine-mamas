@@ -434,11 +434,25 @@
             "product_badge_color": "#fcf7f0",
             "product_benefits": ""
           }
+        },
+        "column_d9YTHV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Shot10Alt_Hero4_VaginalSuppository_023.jpg",
+            "title": "ONE MONTH",
+            "text": "<p>After one month of consistent use, women using hyaluronic acid to treat vaginal dryness reported 84% less dryness, 86% less itching and burning, and 57% less pain with intimacy¹. VMAGIC® Vaginal Suppositories work in harmony with your body to restore natural comfort, confidence, and ease.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
         }
       },
       "block_order": [
         "column-0",
-        "column-1"
+        "column-1",
+        "column_d9YTHV"
       ],
       "settings": {
         "title": "<p>What to expect</p>",

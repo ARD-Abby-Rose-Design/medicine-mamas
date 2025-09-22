@@ -412,8 +412,9 @@
         "column-0": {
           "type": "column",
           "settings": {
-            "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/Untitled_design_2.jpg",
+            "title": "DAY ONE",
+            "text": "<p>Relief begins with the first dose.</p><p>As soon as the VMAGIC Vaginal Suppository is absorbed, its clinically tested hyaluronic acid starts replenishing moisture where your body needs it most. This deep hydration supports tissue strength and elasticity while soothing discomfort at the source.</p>",
             "link_label": "",
             "link": "",
             "product": "",
@@ -424,8 +425,9 @@
         "column-1": {
           "type": "column",
           "settings": {
-            "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/Untitled_design_1_69b35ad9-2171-4e02-b21c-33d34704ae51.jpg",
+            "title": "ONE WEEK",
+            "text": "<p>Real relief. Feels like magic.</p><p>Clinical research shows that hyaluronic acid can reduce vaginal dryness by up to 49% in as little as nine days</p>",
             "link_label": "",
             "link": "",
             "product": "",
@@ -438,15 +440,14 @@
         "column-0",
         "column-1"
       ],
-      "disabled": true,
       "settings": {
-        "title": "",
-        "heading_size": "h1",
+        "title": "<p>What to expect</p>",
+        "heading_size": "h2",
         "heading_alignment": "",
-        "text": "",
+        "text": "<p>Relief as early as one week</p>",
         "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 2,
+        "columns_desktop": 4,
         "full_width": false,
         "enable_desktop_slider": false,
         "column_alignment": "left",
@@ -455,9 +456,9 @@
         "background_color": "#ffffff",
         "button_label": "",
         "button_link": "",
-        "color_scheme": "background-1",
+        "color_scheme": "inverse",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "show_slider_buttons": true,
         "padding_top": 36,
         "padding_bottom": 36

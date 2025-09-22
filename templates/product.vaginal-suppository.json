@@ -578,11 +578,11 @@
     "c3a50a1b-b9e4-4730-8667-125f047ed335": {
       "type": "collapsible-content",
       "blocks": {
-        "eb2f3da0-456d-4475-b291-e4dd41821b0e": {
+        "collapsible_row_3YNTXW": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are Medicine Mama products estrogen free?",
-            "row_content": "<p>All of our products are hormone and soy free.</p>",
+            "heading": "How does VMAGIC® Vaginal Suppository work?",
+            "row_content": "<p><strong>VMAGIC® Vaginal Suppository with Hyaluronic Acid</strong> delivers targeted hydration with 5 mg of hyaluronic acid to support comfort and moisture balance in delicate vaginal tissue.</p><p>As estrogen declines during menopause, the vaginal lining naturally loses collagen and its ability to retain water. This can lead to dryness, thinning, and discomfort. Hyaluronic acid—a molecule found naturally in the body that binds up to 1,000 times its weight in water—helps replenish this lost hydration. We’ve paired it with nutrient-rich sweet almond oil, which locks in moisture and nourishes sensitive tissue.</p><p>Together, these ingredients help restore natural suppleness, soothe irritation, and promote lasting comfort.</p>",
             "page": ""
           }
         },
@@ -590,7 +590,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How often should I use the vaginal moisturizer suppository?",
-            "row_content": "<p>VMAGIC Vulva Balm can be applied as liberally and as often as you like. We recommend starting with a small amount and working your way up as desired.</p>",
+            "row_content": "<p>Use once every 3 nights or as-needed to restore moisture.</p>",
             "page": ""
           }
         },
@@ -599,6 +599,14 @@
           "settings": {
             "heading": "How fast can I expect to see results?",
             "row_content": "<p>Results vary, but in a clinical study 79% of users found immediate relief and 92% saw a reduction in dryness with continued use of the vulva moisturizer in as little as two weeks.</p>",
+            "page": ""
+          }
+        },
+        "eb2f3da0-456d-4475-b291-e4dd41821b0e": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are Medicine Mama products estrogen free?",
+            "row_content": "<p>All of our products are hormone and soy free.</p>",
             "page": ""
           }
         },
@@ -676,9 +684,10 @@
         }
       },
       "block_order": [
-        "eb2f3da0-456d-4475-b291-e4dd41821b0e",
+        "collapsible_row_3YNTXW",
         "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-2",
         "3d098281-82e0-4464-8c45-51558b939387",
+        "eb2f3da0-456d-4475-b291-e4dd41821b0e",
         "acedb7de-fe32-4b9b-81d1-56a49b9758d1",
         "03c90831-d75d-41e8-93e1-4cb4b4665480",
         "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-0",

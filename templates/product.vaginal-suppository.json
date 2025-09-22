@@ -406,6 +406,59 @@
         "padding_bottom": 100
       }
     },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1443dbb0-ea85-4289-811e-0188944eac12": {
+      "type": "product-clinical-trial",
+      "settings": {
+        "color_scheme": "inverse",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_hQewXP": {
+      "type": "rich-text",
+      "blocks": {
+        "text_87YBGU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Clinical results for hyaluronic acid ¹</p>",
+            "text_style": "text-body-small"
+          }
+        }
+      },
+      "block_order": [
+        "text_87YBGU"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "right",
+        "content_alignment": "right",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 8,
+        "padding_bottom": 24
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -476,59 +529,6 @@
         "show_slider_buttons": true,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "related-products": {
-      "type": "related-products",
-      "disabled": true,
-      "settings": {
-        "heading": "You may also like",
-        "heading_size": "h2",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
-      }
-    },
-    "1443dbb0-ea85-4289-811e-0188944eac12": {
-      "type": "product-clinical-trial",
-      "settings": {
-        "color_scheme": "inverse",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "rich_text_hQewXP": {
-      "type": "rich-text",
-      "blocks": {
-        "text_87YBGU": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Clinical results for hyaluronic acid ¹</p>",
-            "text_style": "text-body-small"
-          }
-        }
-      },
-      "block_order": [
-        "text_87YBGU"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "show_desktop": true,
-        "show_mobile": true,
-        "desktop_content_position": "right",
-        "content_alignment": "right",
-        "color_scheme": "inverse",
-        "full_width": true,
-        "padding_top": 8,
-        "padding_bottom": 24
       }
     },
     "collapsible_content_bp3jwj": {
@@ -931,10 +931,10 @@
     "collapsible_content_37YGAc",
     "image_with_text_4KRj8r",
     "17a80875-d3ad-4af8-9b12-88f5dbe0162b",
-    "multicolumn",
     "related-products",
     "1443dbb0-ea85-4289-811e-0188944eac12",
     "rich_text_hQewXP",
+    "multicolumn",
     "collapsible_content_bp3jwj",
     "c3a50a1b-b9e4-4730-8667-125f047ed335",
     "44e52141-129c-4172-8099-dc699805e02c",

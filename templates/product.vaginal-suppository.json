@@ -562,7 +562,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "THREE MONTHS",
-            "row_content": "<p>Consistency is self-care.</p><p>With continued use, VMAGIC Vaginal Suppositories can help maintain healthy moisture levels, improve tissue resilience, and support ongoing intimate wellness.</p>",
+            "row_content": "<p>After three months, consistency truly pays off. With continued use, VMAGIC® Vaginal Suppositories not only help sustain healthy moisture levels but also support the natural resilience of vaginal tissue. This ongoing nourishment reinforces hydration, improves comfort, and promotes lasting intimate wellness as part of your self-care routine.</p>",
             "page": ""
           }
         }
@@ -573,6 +573,7 @@
         "collapsible_row_f98KPY",
         "collapsible_row_W6TPFk"
       ],
+      "disabled": true,
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",

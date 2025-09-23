@@ -263,6 +263,17 @@
         "padding_bottom": 0
       }
     },
+    "product_ingredients_yNf3xj": {
+      "type": "product-ingredients",
+      "name": "Product ingredients",
+      "settings": {
+        "heading": "t:sections.all.heading.label",
+        "heading_size": "h0",
+        "color_scheme": "inverse",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "collapsible_content_37YGAc": {
       "type": "collapsible-content",
       "blocks": {
@@ -929,6 +940,7 @@
     "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa",
     "cac67cc4-85e1-4f5d-9af0-5bfbe86ec590",
     "rich_text_F7RnQW",
+    "product_ingredients_yNf3xj",
     "collapsible_content_37YGAc",
     "image_with_text_4KRj8r",
     "17a80875-d3ad-4af8-9b12-88f5dbe0162b",

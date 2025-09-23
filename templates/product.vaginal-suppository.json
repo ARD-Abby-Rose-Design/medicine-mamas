@@ -474,6 +474,7 @@
       "name": "Media with text",
       "settings": {
         "image": "shopify://shop_images/Untitled_design_2.jpg",
+        "video": "shopify://files/videos/Copy of Untitled (1080 x 1920 px).mp4",
         "video_autoplay": "autoplay",
         "media_type": "image",
         "height": "adapt",

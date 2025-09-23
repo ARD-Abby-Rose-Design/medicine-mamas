@@ -295,7 +295,7 @@
         "text_a8BcyY": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>WHAT IT IS</strong></p><p>Hyaluronic acid is a naturally occurring molecule scientifically shown to improve symptoms of vaginal atrophy by providing deep hydration, enhancing tissue elasticity, and soothing dryness. </p>",
+            "text": "<p><strong>WHAT IT IS</strong></p><p>Hyaluronic acid is a natural molecule shown to ease vaginal atrophy by deeply hydrating, improving elasticity, and soothing dryness.</p>",
             "text_size": "text-body",
             "background_style": "solid",
             "background_color": "#ffffff",
@@ -305,7 +305,17 @@
         "text_x4L8Ji": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>HOW IT WORKS</strong></p><p>Its exceptional water-binding capacity, holding up to 1,000 times its weight in water, helps maintain optimal moisture balance in the skin and supports the hydration and integrity of vaginal mucous membranes¹.</p>",
+            "text": "<p><strong>HOW IT WORKS</strong></p><p>With the ability to hold up to 1,000 times its weight in water, it helps maintain moisture balance and support the hydration and integrity of vaginal tissue¹.</p>",
+            "text_size": "text-body",
+            "background_style": "solid",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "text_9zciMN": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>WHY WE LOVE IT</strong></p><p>Clinically shown to work as effectively as topical estrogen—without hormones—it supports comfort, lubrication, and tissue health, offering a safe, science-backed non-hormonal option for dryness relief.¹²³⁴⁵</p>",
             "text_size": "text-body",
             "background_style": "solid",
             "background_color": "#ffffff",
@@ -318,7 +328,8 @@
         "heading_7UHqLb",
         "text_UnVMNc",
         "text_a8BcyY",
-        "text_x4L8Ji"
+        "text_x4L8Ji",
+        "text_9zciMN"
       ],
       "name": "Media with text",
       "settings": {

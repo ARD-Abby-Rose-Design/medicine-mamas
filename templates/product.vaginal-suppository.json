@@ -271,34 +271,54 @@
           "type": "heading",
           "settings": {
             "heading": "Clinically Studied Ingredients",
+            "heading_size": "hmedium"
+          }
+        },
+        "heading_7UHqLb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hyaluronic Acid",
             "heading_size": "h2"
           }
         },
         "text_UnVMNc": {
           "type": "text",
+          "disabled": true,
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>As estrogen declines, the vaginal walls can begin to thin and lose moisture leading to increased pain with intimacy, risk of UTI’s, and discomfort in everyday activities Hyaluronic acid can help.</p>",
             "text_size": "text-body",
             "background_style": "none",
             "background_color": "#ffffff",
             "bullets_to_checkmarks": false
           }
         },
-        "button_7T9APF": {
-          "type": "button",
+        "text_a8BcyY": {
+          "type": "text",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_arrow": true,
-            "big_button": false,
-            "button_subtitle": ""
+            "text": "<p><strong>WHAT IT IS</strong></p><p>Hyaluronic acid is a naturally occurring molecule scientifically shown to improve symptoms of vaginal atrophy by providing deep hydration, enhancing tissue elasticity, and soothing dryness. </p>",
+            "text_size": "text-body",
+            "background_style": "solid",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "text_x4L8Ji": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>HOW IT WORKS</strong></p><p>Its exceptional water-binding capacity, holding up to 1,000 times its weight in water, helps maintain optimal moisture balance in the skin and supports the hydration and integrity of vaginal mucous membranes¹.</p>",
+            "text_size": "text-body",
+            "background_style": "solid",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
           }
         }
       },
       "block_order": [
         "heading_dCCCxA",
+        "heading_7UHqLb",
         "text_UnVMNc",
-        "button_7T9APF"
+        "text_a8BcyY",
+        "text_x4L8Ji"
       ],
       "name": "Media with text",
       "settings": {
@@ -324,7 +344,7 @@
         "desktop_content_padding_left": 36,
         "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
-        "color_scheme": "",
+        "color_scheme": "inverse",
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",

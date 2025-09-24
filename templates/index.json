@@ -148,6 +148,13 @@
     "7e3e8f0f-78b9-4967-8189-816964b57237": {
       "type": "featured-products-slider",
       "blocks": {
+        "text_9KxtpY": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_11623958-10fb-4433-98af-6da65ebd6614.png",
+            "product": "intimate-vaginal-moisturizer-vulvar-moisturizer-kit"
+          }
+        },
         "41138ccc-8d35-4ca8-b6b1-d1458aaf7f7b": {
           "type": "text",
           "settings": {
@@ -171,6 +178,7 @@
         }
       },
       "block_order": [
+        "text_9KxtpY",
         "41138ccc-8d35-4ca8-b6b1-d1458aaf7f7b",
         "dd925d7f-2e54-4e5e-b41a-74d1f0c37dfa",
         "baa02936-ee7c-4eb4-9e1c-2bd364787e0f"
@@ -197,6 +205,8 @@
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,
+        "show_desktop": true,
+        "show_mobile": true,
         "title": "<b>Over 11,000 5-Star Reviews</b>",
         "product": "",
         "padding_top": 36,
@@ -315,6 +325,8 @@
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
         "media_caption_position_mobile": "top-left",
         "second_media_caption_position_mobile": "top-left",

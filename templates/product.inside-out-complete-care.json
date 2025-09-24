@@ -291,35 +291,40 @@
         "padding_bottom": 52
       }
     },
+    "rich_text_GpxVDK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_dHXBWX": {
+          "type": "heading",
+          "settings": {
+            "heading": "What's inside",
+            "heading_size": "hmedium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dHXBWX"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 32
+      }
+    },
     "products_accordion_BBRgep": {
       "type": "products-accordion",
       "blocks": {
-        "product_jiGm6e": {
-          "type": "product",
-          "settings": {
-            "product": "organic-lubricant-intimate-moisturizer",
-            "image": "shopify://shop_images/Hero_Resized.png",
-            "show_review": false,
-            "reviewer_name": "<p>John Doe</p>",
-            "review_title": "Great product!",
-            "review_text": "<p>This is a great product!</p>"
-          }
-        },
         "product_ti3chk": {
           "type": "product",
           "settings": {
             "product": "vaginal-moisturizer-hyaluronic-acid-suppository",
             "image": "shopify://shop_images/Suppository_Alt-Images.jpg",
-            "show_review": true,
-            "reviewer_name": "<p>John Doe</p>",
-            "review_title": "Great product!",
-            "review_text": "<p>This is a great product!</p>"
-          }
-        },
-        "product_GFiDW8": {
-          "type": "product",
-          "settings": {
-            "product": "vmagic-feminine-lips-stick",
             "show_review": true,
             "reviewer_name": "<p>John Doe</p>",
             "review_title": "Great product!",
@@ -336,13 +341,34 @@
             "review_title": "Great product!",
             "review_text": "<p>This is a great product!</p>"
           }
+        },
+        "product_GFiDW8": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-feminine-lips-stick",
+            "show_review": true,
+            "reviewer_name": "<p>John Doe</p>",
+            "review_title": "Great product!",
+            "review_text": "<p>This is a great product!</p>"
+          }
+        },
+        "product_jiGm6e": {
+          "type": "product",
+          "settings": {
+            "product": "organic-lubricant-intimate-moisturizer",
+            "image": "shopify://shop_images/Hero_Resized.png",
+            "show_review": false,
+            "reviewer_name": "<p>John Doe</p>",
+            "review_title": "Great product!",
+            "review_text": "<p>This is a great product!</p>"
+          }
         }
       },
       "block_order": [
-        "product_jiGm6e",
         "product_ti3chk",
+        "product_UWLTzU",
         "product_GFiDW8",
-        "product_UWLTzU"
+        "product_jiGm6e"
       ],
       "name": "Products accordion",
       "settings": {
@@ -885,6 +911,7 @@
     "rich_text_F7RnQW",
     "related-products",
     "1443dbb0-ea85-4289-811e-0188944eac12",
+    "rich_text_GpxVDK",
     "products_accordion_BBRgep",
     "multicolumn",
     "image_with_text_nHxxP4",

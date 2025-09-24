@@ -698,6 +698,7 @@
       "block_order": [
         "heading_dyzFrm"
       ],
+      "disabled": true,
       "settings": {
         "show_desktop": true,
         "show_mobile": true,

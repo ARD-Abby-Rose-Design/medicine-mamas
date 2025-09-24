@@ -15,15 +15,22 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "BOLDLY PURE VULVA CARE",
+            "heading": "NEW!",
             "heading_size": "h1"
           }
         },
         "b68c30fa-30ad-4092-a2bf-83e0c585762a": {
           "type": "heading",
           "settings": {
-            "heading": "Be In-Touch with Your Self, Body, and Womankind",
+            "heading": "VMAGIC® Vaginal Suppository",
             "heading_size": "h2"
+          }
+        },
+        "heading_eCHEWn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Little insert, loads of hydration",
+            "heading_size": "h3"
           }
         },
         "button": {
@@ -38,10 +45,11 @@
       "block_order": [
         "heading",
         "b68c30fa-30ad-4092-a2bf-83e0c585762a",
+        "heading_eCHEWn",
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/medicine-mama-desktop-hero_f8197687-e76e-4bfd-bf8b-1eb8ad3ba6fc.jpg",
+        "image": "shopify://shop_images/Untitled_design_3_9f247feb-9bff-48d2-96d1-c5cc46ac76ac.png",
         "image_2": "shopify://shop_images/medicine-mama-mobile-hero_9f3fa689-d83c-4c36-ae0e-b0cf1a4562b2.jpg",
         "image_overlay_opacity": 10,
         "image_height": "adapt",
@@ -207,7 +215,7 @@
         "show_line_separator": true,
         "show_desktop": true,
         "show_mobile": true,
-        "title": "<b>Over 11,000 5-Star Reviews</b>",
+        "title": "Over 11,000 5-Star Reviews",
         "product": "",
         "padding_top": 36,
         "padding_bottom": 36

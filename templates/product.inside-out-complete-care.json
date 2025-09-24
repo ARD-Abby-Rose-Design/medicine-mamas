@@ -291,6 +291,67 @@
         "padding_bottom": 52
       }
     },
+    "products_accordion_BBRgep": {
+      "type": "products-accordion",
+      "blocks": {
+        "product_jiGm6e": {
+          "type": "product",
+          "settings": {
+            "product": "organic-lubricant-intimate-moisturizer",
+            "image": "shopify://shop_images/Hero_Resized.png",
+            "show_review": false,
+            "reviewer_name": "<p>John Doe</p>",
+            "review_title": "Great product!",
+            "review_text": "<p>This is a great product!</p>"
+          }
+        },
+        "product_ti3chk": {
+          "type": "product",
+          "settings": {
+            "product": "vaginal-moisturizer-hyaluronic-acid-suppository",
+            "image": "shopify://shop_images/Suppository_Alt-Images.jpg",
+            "show_review": true,
+            "reviewer_name": "<p>John Doe</p>",
+            "review_title": "Great product!",
+            "review_text": "<p>This is a great product!</p>"
+          }
+        },
+        "product_GFiDW8": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-feminine-lips-stick",
+            "show_review": true,
+            "reviewer_name": "<p>John Doe</p>",
+            "review_title": "Great product!",
+            "review_text": "<p>This is a great product!</p>"
+          }
+        },
+        "product_UWLTzU": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-vulvar-balm-skincare-jar",
+            "image": "shopify://shop_images/medicine-mama-vulva-balm-1_2c96b39d-b534-4219-bd6e-3ba6ef346255.jpg",
+            "show_review": true,
+            "reviewer_name": "<p>John Doe</p>",
+            "review_title": "Great product!",
+            "review_text": "<p>This is a great product!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "product_jiGm6e",
+        "product_ti3chk",
+        "product_GFiDW8",
+        "product_UWLTzU"
+      ],
+      "name": "Products accordion",
+      "settings": {
+        "color_scheme": "inverse",
+        "background_style": "primary",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -824,6 +885,7 @@
     "rich_text_F7RnQW",
     "related-products",
     "1443dbb0-ea85-4289-811e-0188944eac12",
+    "products_accordion_BBRgep",
     "multicolumn",
     "image_with_text_nHxxP4",
     "c3a50a1b-b9e4-4730-8667-125f047ed335",

@@ -325,7 +325,7 @@
           "settings": {
             "product": "vaginal-moisturizer-hyaluronic-acid-suppository",
             "image": "shopify://shop_images/Suppository_Alt-Images.jpg",
-            "show_review": true,
+            "show_review": false,
             "reviewer_name": "<p>John Doe</p>",
             "review_title": "Great product!",
             "review_text": "<p>This is a great product!</p>"
@@ -336,7 +336,7 @@
           "settings": {
             "product": "vmagic-vulvar-balm-skincare-jar",
             "image": "shopify://shop_images/medicine-mama-vulva-balm-1_2c96b39d-b534-4219-bd6e-3ba6ef346255.jpg",
-            "show_review": true,
+            "show_review": false,
             "reviewer_name": "<p>John Doe</p>",
             "review_title": "Great product!",
             "review_text": "<p>This is a great product!</p>"
@@ -346,7 +346,7 @@
           "type": "product",
           "settings": {
             "product": "vmagic-feminine-lips-stick",
-            "show_review": true,
+            "show_review": false,
             "reviewer_name": "<p>John Doe</p>",
             "review_title": "Great product!",
             "review_text": "<p>This is a great product!</p>"

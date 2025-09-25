@@ -320,6 +320,17 @@
     "products_accordion_BBRgep": {
       "type": "products-accordion",
       "blocks": {
+        "product_UWLTzU": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-vulvar-balm-skincare-jar",
+            "image": "shopify://shop_images/medicine-mama-vulva-balm-1_2c96b39d-b534-4219-bd6e-3ba6ef346255.jpg",
+            "show_review": true,
+            "reviewer_name": "<p>Amy K.</p>",
+            "review_title": "Since using the balm I have noticed significant difference in smoothness and relief of dryness of my intimate area. Its also helped in intimacy with my partner. No more burn!",
+            "review_text": "<p>Relief!</p>"
+          }
+        },
         "product_ti3chk": {
           "type": "product",
           "settings": {
@@ -330,45 +341,11 @@
             "review_title": "Great product!",
             "review_text": "<p>This is a great product!</p>"
           }
-        },
-        "product_UWLTzU": {
-          "type": "product",
-          "settings": {
-            "product": "vmagic-vulvar-balm-skincare-jar",
-            "image": "shopify://shop_images/medicine-mama-vulva-balm-1_2c96b39d-b534-4219-bd6e-3ba6ef346255.jpg",
-            "show_review": false,
-            "reviewer_name": "<p>John Doe</p>",
-            "review_title": "Great product!",
-            "review_text": "<p>This is a great product!</p>"
-          }
-        },
-        "product_GFiDW8": {
-          "type": "product",
-          "settings": {
-            "product": "vmagic-feminine-lips-stick",
-            "show_review": false,
-            "reviewer_name": "<p>John Doe</p>",
-            "review_title": "Great product!",
-            "review_text": "<p>This is a great product!</p>"
-          }
-        },
-        "product_jiGm6e": {
-          "type": "product",
-          "settings": {
-            "product": "organic-lubricant-intimate-moisturizer",
-            "image": "shopify://shop_images/Hero_Resized.png",
-            "show_review": false,
-            "reviewer_name": "<p>John Doe</p>",
-            "review_title": "Great product!",
-            "review_text": "<p>This is a great product!</p>"
-          }
         }
       },
       "block_order": [
-        "product_ti3chk",
         "product_UWLTzU",
-        "product_GFiDW8",
-        "product_jiGm6e"
+        "product_ti3chk"
       ],
       "name": "Products accordion",
       "settings": {

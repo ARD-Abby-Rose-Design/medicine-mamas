@@ -336,10 +336,10 @@
           "settings": {
             "product": "vaginal-moisturizer-hyaluronic-acid-suppository",
             "image": "shopify://shop_images/Suppository_Alt-Images.jpg",
-            "show_review": false,
-            "reviewer_name": "<p>John Doe</p>",
-            "review_title": "Great product!",
-            "review_text": "<p>This is a great product!</p>"
+            "show_review": true,
+            "reviewer_name": "<p>Dr. Sara Reardon</p>",
+            "review_title": "A breakthrough in relieving vaginal dryness and discomfort!",
+            "review_text": "<p>VMAGIC® Vaginal Suppositories are a breakthrough in relieving vaginal dryness and discomfort. Hormone-free and easy to use, they deliver deep hydration and soothing relief that women can feel from the very first dose. A must-have for every woman seeking comfort and confidence in perimenopause, menopause and beyond!</p>"
           }
         }
       },

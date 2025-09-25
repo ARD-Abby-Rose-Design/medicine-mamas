@@ -32,6 +32,8 @@
           "settings": {
             "text": "<ul><li>Subscribe and save 20% off for life</li><li>Easily modify, pause, or cancel at any time</li><li>Never run out of your favorite products</li></ul>",
             "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
             "bullets_to_checkmarks": true
           }
         },
@@ -41,7 +43,9 @@
           "settings": {
             "button_label": "Shop Bestsellers",
             "button_link": "shopify://collections/best-sellers",
-            "button_arrow": true
+            "button_arrow": true,
+            "big_button": false,
+            "button_subtitle": ""
           }
         }
       },
@@ -52,16 +56,36 @@
       ],
       "settings": {
         "image": "shopify://shop_images/medicine-mama-products_023f4027-7e3e-4351-ab01-70c91954c14d.jpg",
+        "video_autoplay": "autoplay",
         "media_type": "image",
         "height": "adapt",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
         "content_layout": "no-overlap",
-        "color_scheme": "",
+        "color_scheme": "inverse",
         "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -219,7 +243,10 @@
       "settings": {
         "color_scheme": "inverse",
         "show_line_separator": true,
+        "show_desktop": true,
+        "show_mobile": true,
         "title": "<b>Over 11,000 5-Star Reviews</b>",
+        "product": "",
         "padding_top": 36,
         "padding_bottom": 36
       }

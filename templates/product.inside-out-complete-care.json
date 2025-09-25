@@ -109,7 +109,7 @@
         "collapsible-row-2": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Product Benefits & Trial Results",
+            "heading": "What's Inside?",
             "icon": "none",
             "content": "<p>{{ product.metafields.custom.trial_results | metafield_tag }}</p>",
             "page": ""

@@ -1,0 +1,927 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "00f29d9e-75b2-40e9-9b23-4dab4df71a26": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        },
+        "486e96e5-7913-4672-8ce6-6f8671d1ad76": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "6b38dc5b-1d2c-4b1e-8bad-3c2cbc663748": {
+          "type": "checkmarks",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "picker_type": "packs"
+          }
+        },
+        "2d5053f6-2c89-42a7-ba48-b38eb639ce46": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"custom-recharge\"></div>"
+          }
+        },
+        "variant_subscriptions_MxpxXm": {
+          "type": "variant_subscriptions",
+          "settings": {}
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "afbb9305-0fee-485b-84f6-73e64fa05f10": {
+          "type": "text",
+          "settings": {
+            "text": "<a href=\"/policies/refund-policy\" title=\"Refund Policy\">Risk-free for 30 days</a>",
+            "text_style": "body"
+          }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How to Use",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredients",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.key_ingredients | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Product Benefits & Trial Results",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.trial_results | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "6c9152e1-7b64-4ac2-a3dc-cd9f5e79602e": {
+          "type": "bundle_products",
+          "settings": {
+            "heading": "BUNDLE + SAVE"
+          }
+        }
+      },
+      "block_order": [
+        "00f29d9e-75b2-40e9-9b23-4dab4df71a26",
+        "486e96e5-7913-4672-8ce6-6f8671d1ad76",
+        "title",
+        "caption",
+        "description",
+        "6b38dc5b-1d2c-4b1e-8bad-3c2cbc663748",
+        "price",
+        "variant_picker",
+        "2d5053f6-2c89-42a7-ba48-b38eb639ce46",
+        "variant_subscriptions_MxpxXm",
+        "quantity_selector",
+        "buy_buttons",
+        "afbb9305-0fee-485b-84f6-73e64fa05f10",
+        "collapsible-row-0",
+        "collapsible-row-1",
+        "collapsible-row-2",
+        "6c9152e1-7b64-4ac2-a3dc-cd9f5e79602e"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "small",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa": {
+      "type": "you-speak",
+      "settings": {
+        "color_scheme": "inverse",
+        "title": "See The Magic",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "cac67cc4-85e1-4f5d-9af0-5bfbe86ec590": {
+      "type": "scrolling-marquee",
+      "blocks": {
+        "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-0": {
+          "type": "text",
+          "settings": {
+            "text": "Hormone Free"
+          }
+        },
+        "17c4f4e2-2426-4cc7-9e58-854f72506cb6": {
+          "type": "checkmark",
+          "settings": {}
+        },
+        "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-1": {
+          "type": "text",
+          "settings": {
+            "text": "11,000 5-Star Reviews"
+          }
+        },
+        "f7007b7d-6de6-4992-9083-c4d78dcd276b": {
+          "type": "checkmark",
+          "settings": {}
+        },
+        "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-2": {
+          "type": "text",
+          "settings": {
+            "text": "Hormone Free"
+          }
+        },
+        "f28c2160-2d2f-494b-bd57-2ab0af1b823d": {
+          "type": "checkmark",
+          "settings": {}
+        },
+        "372c1169-1da6-4229-b1aa-4a13a1c9d479": {
+          "type": "text",
+          "settings": {
+            "text": "11,000 5-Star Reviews"
+          }
+        },
+        "efdcde4a-f101-4e27-9314-e41c0f0a2bb5": {
+          "type": "checkmark",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-0",
+        "17c4f4e2-2426-4cc7-9e58-854f72506cb6",
+        "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-1",
+        "f7007b7d-6de6-4992-9083-c4d78dcd276b",
+        "template--16789920940261__cac67cc4-85e1-4f5d-9af0-5bfbe86ec590-16891122842a8a131a-2",
+        "f28c2160-2d2f-494b-bd57-2ab0af1b823d",
+        "372c1169-1da6-4229-b1aa-4a13a1c9d479",
+        "efdcde4a-f101-4e27-9314-e41c0f0a2bb5"
+      ],
+      "settings": {
+        "color_scheme": "inverse",
+        "type": "text",
+        "padding_top": 64,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_F7RnQW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NwCeEh": {
+          "type": "heading",
+          "settings": {
+            "heading": "CLINCALLY PROVEN",
+            "heading_size": "hmedium"
+          }
+        },
+        "heading_w6bjae": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hyaluronic Acid",
+            "heading_size": "h2"
+          }
+        },
+        "text_K8xzAp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As estrogen declines, the vaginal walls can begin to thin and lose moisture leading to increased pain with intimacy, risk of UTI’s, and discomfort in everyday activities ¹. Hyaluronic acid can help.</p>",
+            "text_style": "text-body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NwCeEh",
+        "heading_w6bjae",
+        "text_K8xzAp"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1443dbb0-ea85-4289-811e-0188944eac12": {
+      "type": "product-clinical-trial",
+      "settings": {
+        "color_scheme": "inverse",
+        "padding_top": 16,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_GpxVDK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_dHXBWX": {
+          "type": "heading",
+          "settings": {
+            "heading": "What's inside",
+            "heading_size": "hmedium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dHXBWX"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 32
+      }
+    },
+    "products_accordion_BBRgep": {
+      "type": "products-accordion",
+      "blocks": {
+        "product_ti3chk": {
+          "type": "product",
+          "settings": {
+            "product": "vaginal-moisturizer-hyaluronic-acid-suppository",
+            "image": "shopify://shop_images/Suppository_Alt-Images.jpg",
+            "show_review": false,
+            "reviewer_name": "<p>John Doe</p>",
+            "review_title": "Great product!",
+            "review_text": "<p>This is a great product!</p>"
+          }
+        },
+        "product_UWLTzU": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-vulvar-balm-skincare-jar",
+            "image": "shopify://shop_images/medicine-mama-vulva-balm-1_2c96b39d-b534-4219-bd6e-3ba6ef346255.jpg",
+            "show_review": false,
+            "reviewer_name": "<p>John Doe</p>",
+            "review_title": "Great product!",
+            "review_text": "<p>This is a great product!</p>"
+          }
+        },
+        "product_GFiDW8": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-feminine-lips-stick",
+            "show_review": false,
+            "reviewer_name": "<p>John Doe</p>",
+            "review_title": "Great product!",
+            "review_text": "<p>This is a great product!</p>"
+          }
+        },
+        "product_jiGm6e": {
+          "type": "product",
+          "settings": {
+            "product": "organic-lubricant-intimate-moisturizer",
+            "image": "shopify://shop_images/Hero_Resized.png",
+            "show_review": false,
+            "reviewer_name": "<p>John Doe</p>",
+            "review_title": "Great product!",
+            "review_text": "<p>This is a great product!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "product_ti3chk",
+        "product_UWLTzU",
+        "product_GFiDW8",
+        "product_jiGm6e"
+      ],
+      "name": "Products accordion",
+      "settings": {
+        "color_scheme": "inverse",
+        "background_style": "primary",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_Sep_23_2025_03_39_42_PM.png",
+            "video": "shopify://files/videos/Copy of Untitled (1080 x 1920 px).mp4",
+            "title": "DAY ONE",
+            "text": "<p>Relief begins with the first dose. Once absorbed, VMAGIC® Vaginal Suppositories deliver clinically tested hyaluronic acid to deeply hydrate and replenish delicate tissue, supporting elasticity while easing dryness, irritation, and discomfort. Working in harmony with your body, VMAGIC® helps restore balance and lasting comfort.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_Sep_23_2025_03_39_42_PM_copy.png",
+            "title": "ONE WEEK",
+            "text": "<p>Within the first week, real relief begins to build. Clinical research shows that hyaluronic acid can reduce vaginal dryness by up to 49% in as little as nine days¹, helping tissue feel more supple, soothed, and hydrated.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
+        "column_d9YTHV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_Sep_23_2025_03_39_42_PM_copy_2.png",
+            "title": "ONE MONTH",
+            "text": "<p>After one month of consistent use, women using hyaluronic acid to treat vaginal dryness reported 84% less dryness, 86% less itching and burning, and 57% less pain with intimacy¹. VMAGIC® Vaginal Suppositories work in harmony with your body to restore natural comfort, confidence, and ease.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
+        "column_xANGeQ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_Sep_23_2025_03_39_42_PM_copy_3.png",
+            "title": "THREE MONTHS",
+            "text": "<p>After three months, consistency truly pays off. With continued use, VMAGIC® Vaginal Suppositories not only help sustain healthy moisture levels but also support the natural resilience of vaginal tissue. This ongoing nourishment reinforces hydration, improves comfort, and promotes lasting intimate wellness as part of your self-care routine.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        }
+      },
+      "block_order": [
+        "column-0",
+        "column-1",
+        "column_d9YTHV",
+        "column_xANGeQ"
+      ],
+      "settings": {
+        "title": "<p>What to expect</p>",
+        "heading_size": "h2",
+        "heading_alignment": "",
+        "text": "<h4>Relief as early as one week</h4>",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "full_width": false,
+        "enable_desktop_slider": false,
+        "column_alignment": "left",
+        "border_style": "none",
+        "background_style": "none",
+        "background_color": "#ffffff",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "inverse",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_slider_buttons": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_nHxxP4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_dCCCxA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Clinically Studied Ingredients",
+            "heading_size": "hmedium"
+          }
+        },
+        "heading_7UHqLb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hyaluronic Acid",
+            "heading_size": "h2"
+          }
+        },
+        "text_UnVMNc": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>As estrogen declines, the vaginal walls can begin to thin and lose moisture leading to increased pain with intimacy, risk of UTI’s, and discomfort in everyday activities Hyaluronic acid can help.</p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "text_a8BcyY": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>WHAT IT IS</strong></p><p>Hyaluronic acid is a natural molecule shown to ease vaginal atrophy by deeply hydrating, improving elasticity, and soothing dryness.</p>",
+            "text_size": "text-body",
+            "background_style": "solid",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "text_x4L8Ji": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>HOW IT WORKS</strong></p><p>With the ability to hold up to 1,000 times its weight in water, it helps maintain moisture balance and support the hydration and integrity of vaginal tissue¹.</p>",
+            "text_size": "text-body",
+            "background_style": "solid",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "text_9zciMN": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>WHY WE LOVE IT</strong></p><p>Clinically shown to work as effectively as topical estrogen—without hormones—it supports comfort, lubrication, and tissue health, offering a safe, science-backed non-hormonal option for dryness relief.¹²³⁴⁵</p>",
+            "text_size": "text-body",
+            "background_style": "solid",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_dCCCxA",
+        "heading_7UHqLb",
+        "text_UnVMNc",
+        "text_a8BcyY",
+        "text_x4L8Ji",
+        "text_9zciMN"
+      ],
+      "disabled": true,
+      "name": "Media with text",
+      "settings": {
+        "image": "shopify://shop_images/Untitled_design_2.jpg",
+        "video": "shopify://files/videos/Copy of Untitled (1080 x 1920 px).mp4",
+        "video_autoplay": "autoplay",
+        "media_type": "image",
+        "height": "adapt",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
+        "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "c3a50a1b-b9e4-4730-8667-125f047ed335": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_3YNTXW": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does VMAGIC® Vaginal Suppository work?",
+            "row_content": "<p><strong>VMAGIC® Vaginal Suppository with Hyaluronic Acid</strong> delivers targeted hydration with 5 mg of hyaluronic acid to support comfort and moisture balance in delicate vaginal tissue.</p><p>As estrogen declines during menopause, the vaginal lining naturally loses collagen and its ability to retain water. This can lead to dryness, thinning, and discomfort. Hyaluronic acid—a molecule found naturally in the body that binds up to 1,000 times its weight in water—helps replenish this lost hydration. We’ve paired it with nutrient-rich sweet almond oil, which locks in moisture and nourishes sensitive tissue.</p><p>Together, these ingredients help restore natural suppleness, soothe irritation, and promote lasting comfort.</p>",
+            "page": ""
+          }
+        },
+        "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How often should I use the vaginal moisturizer suppository?",
+            "row_content": "<p>Use once every 3 nights or as-needed to restore moisture.</p>",
+            "page": ""
+          }
+        },
+        "3d098281-82e0-4464-8c45-51558b939387": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How fast can I expect to see results?",
+            "row_content": "<p>Relief begins with the very first use, as hyaluronic acid immediately starts replenishing vaginal moisture and soothing dryness. Clinical research shows meaningful improvement within the first week, with dryness reduced by up to 49% in as little as nine days¹. With consistent daily use, results continue to build—after one month, women reported 84% less vaginal dryness, 86% less itching and burning, and 57% less pain with intimacy¹. Continued use over three months helps maintain healthy hydration, resilience, and lasting comfort.</p>",
+            "page": ""
+          }
+        },
+        "eb2f3da0-456d-4475-b291-e4dd41821b0e": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are Medicine Mama products estrogen free?",
+            "row_content": "<p>All of our products are hormone and soy free.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_daJXAy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What causes vaginal dryness?",
+            "row_content": "<p>Vaginal dryness is something many women experience, though the reasons can vary throughout life. During menopause, lower estrogen levels affect the way vaginal tissue functions—reducing natural hydration, slowing blood flow, and gradually thinning the tissue itself. But menopause isn’t the only time dryness can appear. Shifts in hormones while breastfeeding, the use of certain medications like birth control, and lifestyle factors such as smoking can all play a role. No matter the cause, it’s a common and manageable part of women’s health.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_YMwzY6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use VMAGIC® Vaginal Suppository before sex?",
+            "row_content": "<p>For best results, allow about an hour for the suppository to fully absorb, though timing may vary from woman to woman. VMAGIC® Vaginal Suppositories are designed to work gently with your body, and absorption can feel a little different for everyone. Please note: they are not compatible with natural rubber latex, polyurethane, or polyisoprene condoms.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_aJUt8U": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use VMAGIC® Vaginal Moisturizer if I’m currently on HRT?",
+            "row_content": "<p>Yes. VMAGIC® Vaginal Suppositories are hormone-free and safe to use alongside hormone replacement therapy (HRT). While HRT helps address systemic symptoms of menopause, our suppositories provide localized hydration with hyaluronic acid to directly soothe and moisturize vaginal tissue. Together, they can complement each other to support comfort and intimate wellness.</p><p><em>As always, we recommend checking with your healthcare provider before beginning any new regimen to ensure it’s right for you.</em></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_3YNTXW",
+        "template--16789920940261__c3a50a1b-b9e4-4730-8667-125f047ed335-168911188953db9c86-2",
+        "3d098281-82e0-4464-8c45-51558b939387",
+        "eb2f3da0-456d-4475-b291-e4dd41821b0e",
+        "collapsible_row_daJXAy",
+        "collapsible_row_YMwzY6",
+        "collapsible_row_aJUt8U"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Q&A",
+        "heading_size": "h3",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "inverse",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "44e52141-129c-4172-8099-dc699805e02c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dr. Clare",
+            "heading_size": "h0"
+          }
+        },
+        "8446f5a8-d48e-4d4e-9378-c20aa3d35a57": {
+          "type": "heading",
+          "settings": {
+            "heading": "#ASKMEDMAMA",
+            "heading_size": "h3"
+          }
+        },
+        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Meet Dr. Clare Bertucio; mother, wife, physician of 20+ years, fierce women’s health advocate and now CEO. With Dr. Clare, no question is too bold or too taboo. She’s working to build a more informed, confident, and liberated female community. Join in the conversation, embrace your Vulva, and be a part of this revolutionary journey that Medicine Mama is leading. Go ahead #askmedmama.</p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "https://medicinemama.com/pages/about",
+            "button_arrow": true,
+            "big_button": false,
+            "button_subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-0",
+        "8446f5a8-d48e-4d4e-9378-c20aa3d35a57",
+        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-1",
+        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-2"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/vulvavsvagina.jpg",
+        "video": "shopify://files/videos/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
+        "video_autoplay": "autoplay",
+        "media_type": "video",
+        "height": "small",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
+        "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 36,
+        "padding_bottom": 64
+      }
+    },
+    "339a2a23-2076-4857-bb07-eaed9749925f": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "{% render 'okendo-reviews-widget', product: product %}",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_mHQQBT": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_dyzFrm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Reviews",
+            "heading_size": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dyzFrm"
+      ],
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "inverse",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "1745283158574c6685": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_yP47Ug": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_yP47Ug"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_liquid_Ftj7Xc": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n.oke-w-reviews-list-item {\nbackground-color: white;\nborder-radius: 10px;\nmargin-bottom: 10px;\n\n.oke-w-reviewSplit-left {\nborder-right: 1px solid #D9D9D9 !important;\npadding-right: 1rem !important;\n}\n\n@media screen and (max-width: 750px) {\n\n.oke-w-reviewSplit-main {\nalign-items: flex-start !important;\njustify-content: space-between !important;\ngap: 1.4rem !important;\npadding: 1.4rem !important;\n}\n\n.oke-w-reviewSplit-mid {\nmargin-top: 0px !important;\nwidth: 75% !important;\ntext-align: left !important;\n}\n.oke-w-reviewSplit-left {\ntext-align: left !important;\nborder-right: none !important;\n}\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "83437bf3-3644-46eb-abaf-c2b104a9887f": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_774XX7": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_zmMQEc": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p> ¹ Chen J et al. Hyaluronic acid vaginal gel trial. J Sex Med. 2013;10(6):1575-84.</p><p></p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
+        "column_TNqAkr": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p> ² Ilhan G et al. Hormonal vs nonhormonal agents for vulvovaginal atrophy. J Menopausal Med. 2021;27(1):15-23.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
+        "column_ePDeXk": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p> ³ Agrawal S et al. Vaginal hyaluronic acid vs estrogen for GSM. Menopause. 2024;31(9):750-5.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
+        "column_NMypQb": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p> ⁴ Portman DJ, Gass ML; VVA Consensus Panel. Genitourinary syndrome of menopause terminology. Menopause. 2014;21(10):1063-8.</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        },
+        "column_UWCawR": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>⁵ Chen M et al. Hyaluronic acid vs estrogen for vaginal atrophy: meta-analysis. Arch Gynecol Obstet. 2021;303(3):631-44</p>",
+            "link_label": "",
+            "link": "",
+            "product": "",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_zmMQEc",
+        "column_TNqAkr",
+        "column_ePDeXk",
+        "column_NMypQb",
+        "column_UWCawR"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "heading_alignment": "",
+        "text": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "full_width": false,
+        "enable_desktop_slider": false,
+        "column_alignment": "left",
+        "border_style": "none",
+        "background_style": "primary",
+        "background_color": "#ffffff",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "inverse",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "show_slider_buttons": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa",
+    "cac67cc4-85e1-4f5d-9af0-5bfbe86ec590",
+    "rich_text_F7RnQW",
+    "related-products",
+    "1443dbb0-ea85-4289-811e-0188944eac12",
+    "rich_text_GpxVDK",
+    "products_accordion_BBRgep",
+    "multicolumn",
+    "image_with_text_nHxxP4",
+    "c3a50a1b-b9e4-4730-8667-125f047ed335",
+    "44e52141-129c-4172-8099-dc699805e02c",
+    "339a2a23-2076-4857-bb07-eaed9749925f",
+    "rich_text_mHQQBT",
+    "1745283158574c6685",
+    "custom_liquid_Ftj7Xc",
+    "83437bf3-3644-46eb-abaf-c2b104a9887f",
+    "multicolumn_774XX7"
+  ]
+}

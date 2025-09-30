@@ -4,6 +4,6 @@
   </div>
   <div class="order-item__content">
     <a href="{{ item.url }}" class="link">{{ item.title | upcase }}</a>
-    {% render 'price', price: item.price %}
+    <span>{{ item.price | money }}</span>
   </div>
 </div>

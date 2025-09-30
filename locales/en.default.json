@@ -346,7 +346,7 @@
   },
   "customer": {
     "account": {
-      "title": "%{first_name}'s Account",
+      "title": "{{ first_name }}'s Account",
       "welcome": "Hello, {{ first_name }}",
       "details": "Account Info",
       "view_addresses": "Manage Addresses",

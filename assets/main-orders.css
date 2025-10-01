@@ -1,4 +1,8 @@
 @media screen and (min-width: 750px) {
+  .main-orders__order + .main-orders__order {
+    margin-top: 3rem;
+  }
+  
   .main-orders__order {
     display: flex;
     gap: 2rem;

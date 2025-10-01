@@ -45,10 +45,6 @@
     {% assign do_it_for_fun = true %}
     {% for item in order.line_items %}
       {% render 'order-item-card', item: item %}
-      {% render 'order-item-card', item: item %}
-      {% render 'order-item-card', item: item %}
-      {% render 'order-item-card', item: item %}
-      {% render 'order-item-card', item: item %}
     {% endfor %}
     </div>
     {% if order.line_items > 3 or do_it_for_fun == true %}

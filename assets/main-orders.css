@@ -25,7 +25,7 @@
     width: 33%;
     width: calc(33% - 1rem);
     flex: 0 0 auto;
-  } 
+  }
   .main-order__order-products__inner {
     display: flex;
     flex-wrap: nowrap;

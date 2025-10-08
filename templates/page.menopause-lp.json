@@ -172,7 +172,7 @@
         "text_tztrQe": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Helps alleviate dryness</strong> and <strong>pain with sex</strong> in the vulva, especially during (peri)menopause, by restoring moisture and elasticity.</p>",
+            "text": "<p><strong>Helps alleviate dryness</strong> and <strong>pain with sex</strong> in the vulva, especiallyduring (peri)menopause, by restoring moisture and elasticity.</p>",
             "text_size": "text-body-large",
             "background_style": "none",
             "background_color": "#ffffff",
@@ -185,9 +185,9 @@
             "result_number1": "100%",
             "result_text1": "reported zero irritation*",
             "result_number2": "92%",
-            "result_text2": "noticed less dryness after consistent 2-week use**",
+            "result_text2": "noticed less drynessafter consistent2-week use**",
             "result_number3": "79%",
-            "result_text3": "reported immediate soothing relief from  intimate skin dryness*",
+            "result_text3": "reported immediatesoothing relief from intimate skin dryness*",
             "show_desktop": true,
             "show_mobile": false
           }
@@ -247,14 +247,14 @@
           "type": "result",
           "settings": {
             "result_number": "92%",
-            "result_text": "noticed less dryness after consistent 2-week use**"
+            "result_text": "noticed less drynessafter consistent2-week use**"
           }
         },
         "result_QEM7xa": {
           "type": "result",
           "settings": {
             "result_number": "79%",
-            "result_text": "reported immediate soothing relief from  intimate skin dryness*"
+            "result_text": "reported immediatesoothing relief from intimate skin dryness*"
           }
         }
       },
@@ -281,7 +281,7 @@
         "text_BXAAzQ": {
           "type": "text",
           "settings": {
-            "text": "<p>An all natural, fragrance-free cleanser that <strong>helps support pH balance  while neutralizing odor</strong>. Hydration at its finest, without ever stripping the skin.</p>",
+            "text": "<p>An all natural, fragrance-free cleanser that <strong>helps support pH balance while neutralizing odor</strong>. Hydration at its finest, without ever stripping the skin.</p>",
             "text_size": "text-body-large",
             "background_style": "none",
             "background_color": "#ffffff",
@@ -347,7 +347,9 @@
         "review_title": "Life-Changing Relief for Menopause Symptoms!",
         "review_text": "<p>“The wash is incredible; it leaves me feeling fresh, clean, and confident without any harsh chemicals or irritation. I no longer have that lingering anxiety about discomfort during sex or worrying about an off smell.”</p>",
         "show_desktop": false,
-        "show_mobile": true
+        "show_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "rich_text_NTgFRg": {
@@ -423,13 +425,13 @@
           "settings": {
             "layout": "horizontal",
             "icon_1": "organic",
-            "heading_1": "Organic, hormone-free ingredients",
+            "heading_1": "Organic, hormone-freeingredients",
             "heading_1_style": "body",
             "icon_2": "lab_tested",
             "heading_2": "Clinically tested",
             "heading_2_style": "body",
             "icon_3": "physician",
-            "heading_3": "Endorsed by physicians",
+            "heading_3": "Endorsed byphysicians",
             "heading_3_style": "body"
           }
         },
@@ -479,7 +481,7 @@
           "type": "column",
           "settings": {
             "video": "shopify://files/videos/Vulva Wash.mov",
-            "video_poster": "shopify://shop_images/Frame_85.jpg",
+            "video_poster": "shopify://shop_images/230615_MedMama__SHOT9_00909.jpg",
             "title": "Dr. Caroyln Moyers",
             "text": "<p>“Say goodbye to vaginal irritation. This is the lipstick you never knew you needed. I use it for so many of my patients in post partum or menopause!”</p>",
             "link_label": "",
@@ -495,7 +497,7 @@
             "video": "shopify://files/videos/Medicine Mama 1.mov",
             "video_poster": "shopify://shop_images/Frame_85_3325ca91-5575-40cf-9d29-23bc85fb5d68.jpg",
             "title": "@skylarlibertyrose",
-            "text": "<p>“The Vulva Balm restores moisture and alleviates painful sex. Since using the vulva balm, I’m much more comfortable.” </p>",
+            "text": "<p>“The Vulva Balm restores moisture and alleviates painful sex. Since using the vulva balm, I’m much more comfortable.”</p>",
             "link_label": "",
             "link": "",
             "product": "vmagic-vulvar-balm-skincare-jar",
@@ -539,7 +541,7 @@
         "background_color": "#ffffff",
         "button_label": "",
         "button_link": "",
-        "color_scheme": "background-1",
+        "color_scheme": "inverse",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "show_slider_buttons": true,
@@ -769,7 +771,7 @@
         "collapsible_row_84DfYj": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Do your products contain any potentially harmful ingredients?",
+            "heading": "Do your products contain any potentiallyharmful ingredients?",
             "row_content": "<p>Our mission is to create the highest quality natural products possible, which is why all Medicine Mama products are made from ONLY pure, certified organic ingredients. In accordance with California’s Toxic-Free Cosmetics Act, our products do not—and never will—contain any of the following: formaldehyde, paraformaldehyde, methylene glycol, quaternium-15, mercury, dibutyl/diethyl hexyl phthalates, isobutyl/isopropyl parabens, any member of the family of toxic chemicals known as PFAS, and M- and o-phenylenediamine.</p>",
             "page": ""
           }

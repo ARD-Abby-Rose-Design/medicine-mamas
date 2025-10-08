@@ -15,22 +15,37 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "BOLDLY PURE VULVA CARE",
+            "heading": "NEW!",
             "heading_size": "h1"
           }
         },
         "b68c30fa-30ad-4092-a2bf-83e0c585762a": {
           "type": "heading",
           "settings": {
-            "heading": "Be In-Touch with Your Self, Body, and Womankind",
+            "heading": "VMAGIC® Vaginal Suppository",
             "heading_size": "h2"
+          }
+        },
+        "heading_eCHEWn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Restores moisture while you sleep",
+            "heading_size": "h4"
+          }
+        },
+        "text_QjpqJf": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Restores moisture while you sleep.",
+            "text_style": "text-body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections/intimacy",
+            "button_link_1": "shopify://products/vaginal-moisturizer-hyaluronic-acid-suppository",
             "button_style_secondary_1": true
           }
         }
@@ -38,11 +53,13 @@
       "block_order": [
         "heading",
         "b68c30fa-30ad-4092-a2bf-83e0c585762a",
+        "heading_eCHEWn",
+        "text_QjpqJf",
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/medicine-mama-desktop-hero_f8197687-e76e-4bfd-bf8b-1eb8ad3ba6fc.jpg",
-        "image_2": "shopify://shop_images/medicine-mama-mobile-hero_9f3fa689-d83c-4c36-ae0e-b0cf1a4562b2.jpg",
+        "image": "shopify://shop_images/Untitled_design_7_3d4f2d31-48c3-4ab6-91df-775b9bc90ef5.png",
+        "image_2": "shopify://shop_images/Untitled_design_9.png",
         "image_overlay_opacity": 10,
         "image_height": "adapt",
         "show_desktop": true,
@@ -50,7 +67,7 @@
         "desktop_content_position": "middle-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
-        "color_scheme": "accent-1",
+        "color_scheme": "background-1",
         "image_behavior": "none",
         "show_mobile": true,
         "mobile_content_alignment": "left",
@@ -148,6 +165,13 @@
     "7e3e8f0f-78b9-4967-8189-816964b57237": {
       "type": "featured-products-slider",
       "blocks": {
+        "text_9KxtpY": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_2_d96698d0-f30d-43d6-ae07-b2dabf61dba1.jpg",
+            "product": "intimate-vaginal-moisturizer-vulvar-moisturizer-kit"
+          }
+        },
         "41138ccc-8d35-4ca8-b6b1-d1458aaf7f7b": {
           "type": "text",
           "settings": {
@@ -171,6 +195,7 @@
         }
       },
       "block_order": [
+        "text_9KxtpY",
         "41138ccc-8d35-4ca8-b6b1-d1458aaf7f7b",
         "dd925d7f-2e54-4e5e-b41a-74d1f0c37dfa",
         "baa02936-ee7c-4eb4-9e1c-2bd364787e0f"
@@ -197,7 +222,9 @@
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,
-        "title": "<b>Over 11,000 5-Star Reviews</b>",
+        "show_desktop": true,
+        "show_mobile": true,
+        "title": "Over 11,000 5-Star Reviews",
         "product": "",
         "padding_top": 36,
         "padding_bottom": 36
@@ -215,7 +242,7 @@
         "4eb1c0cc-0ce8-4e53-9181-d9b93ea2bbf0": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/Stargirl New Brand.mov"
+            "video": "shopify://files/videos/Untitled design_b88624db-2e68-4d36-8b49-31eb1dd81ac0.mp4"
           }
         },
         "video_rReP3d": {
@@ -315,6 +342,8 @@
         "image_behavior": "none",
         "show_mobile": true,
         "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
         "mobile_content_alignment": "left",
         "media_caption_position_mobile": "top-left",
         "second_media_caption_position_mobile": "top-left",

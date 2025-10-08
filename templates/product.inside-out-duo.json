@@ -291,30 +291,68 @@
         "padding_bottom": 52
       }
     },
-    "rich_text_hQewXP": {
+    "rich_text_GpxVDK": {
       "type": "rich-text",
       "blocks": {
-        "text_87YBGU": {
-          "type": "text",
+        "heading_dHXBWX": {
+          "type": "heading",
           "settings": {
-            "text": "<p>Clinical results for hyaluronic acid ¹</p>",
-            "text_style": "text-body-small"
+            "heading": "What's inside",
+            "heading_size": "hmedium"
           }
         }
       },
       "block_order": [
-        "text_87YBGU"
+        "heading_dHXBWX"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "show_desktop": true,
         "show_mobile": true,
-        "desktop_content_position": "left",
-        "content_alignment": "left",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "inverse",
         "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 52
+        "padding_top": 40,
+        "padding_bottom": 32
+      }
+    },
+    "products_accordion_BBRgep": {
+      "type": "products-accordion",
+      "blocks": {
+        "product_UWLTzU": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-vulvar-balm-skincare-jar",
+            "image": "shopify://shop_images/medicine-mama-vulva-balm-1_2c96b39d-b534-4219-bd6e-3ba6ef346255.jpg",
+            "show_review": true,
+            "reviewer_name": "<p>Amy K.</p>",
+            "review_title": "Since using the balm I have noticed significant difference in smoothness and relief of dryness of my intimate area. Its also helped in intimacy with my partner. No more burn!",
+            "review_text": "<p>Relief!</p>"
+          }
+        },
+        "product_ti3chk": {
+          "type": "product",
+          "settings": {
+            "product": "vaginal-moisturizer-hyaluronic-acid-suppository",
+            "image": "shopify://shop_images/Suppository_Alt-Images.jpg",
+            "show_review": true,
+            "reviewer_name": "<p>Dr. Sara Reardon</p>",
+            "review_title": "A breakthrough in relieving vaginal dryness and discomfort!",
+            "review_text": "<p>VMAGIC® Vaginal Suppositories are a breakthrough in relieving vaginal dryness and discomfort. Hormone-free and easy to use, they deliver deep hydration and soothing relief that women can feel from the very first dose. A must-have for every woman seeking comfort and confidence in perimenopause, menopause and beyond!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "product_UWLTzU",
+        "product_ti3chk"
+      ],
+      "name": "Products accordion",
+      "settings": {
+        "color_scheme": "inverse",
+        "background_style": "primary",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "multicolumn": {
@@ -819,8 +857,8 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "<p>CITATION</p>",
-        "heading_size": "h4",
+        "title": "",
+        "heading_size": "h1",
         "heading_alignment": "",
         "text": "",
         "image_width": "full",
@@ -850,7 +888,8 @@
     "rich_text_F7RnQW",
     "related-products",
     "1443dbb0-ea85-4289-811e-0188944eac12",
-    "rich_text_hQewXP",
+    "rich_text_GpxVDK",
+    "products_accordion_BBRgep",
     "multicolumn",
     "image_with_text_nHxxP4",
     "c3a50a1b-b9e4-4730-8667-125f047ed335",

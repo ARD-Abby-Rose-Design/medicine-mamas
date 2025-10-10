@@ -887,8 +887,8 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "",
-        "heading_size": "h1",
+        "title": "<p>Citations</p>",
+        "heading_size": "h4",
         "heading_alignment": "",
         "text": "",
         "image_width": "full",

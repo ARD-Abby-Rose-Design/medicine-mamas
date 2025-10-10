@@ -819,7 +819,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "<p>CITATION</p>",
+        "title": "<p>Citations</p>",
         "heading_size": "h4",
         "heading_alignment": "",
         "text": "",

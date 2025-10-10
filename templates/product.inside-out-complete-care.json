@@ -813,6 +813,32 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_BcC86C": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ip69bW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Citations",
+            "heading_size": "h4"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ip69bW"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
     "multicolumn_774XX7": {
       "type": "multicolumn",
       "blocks": {
@@ -928,6 +954,7 @@
     "1745283158574c6685",
     "custom_liquid_Ftj7Xc",
     "83437bf3-3644-46eb-abaf-c2b104a9887f",
+    "rich_text_BcC86C",
     "multicolumn_774XX7"
   ]
 }

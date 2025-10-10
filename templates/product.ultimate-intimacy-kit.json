@@ -352,7 +352,7 @@
           "type": "product",
           "settings": {
             "product": "vmagic-feminine-wash",
-            "show_review": false,
+            "show_review": true,
             "reviewer_name": "<p>Suzanne S.</p>",
             "review_title": "No More Odor!",
             "review_text": "<p>I’ve struggled with odor and discomfort for years but not anymore! I wish I had know the solution was so simple. Truly the best wash for balancing the delicate Ph of the vagina.</p>"

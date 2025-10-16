@@ -68,6 +68,7 @@
         },
         "default_subscriptions_HKeXwY": {
           "type": "default_subscriptions",
+          "disabled": true,
           "settings": {}
         },
         "buy_buttons": {

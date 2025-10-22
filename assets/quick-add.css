@@ -1,4 +1,5 @@
-.quick-add__open {
+.quick-add__open,
+.view-product-button {
   width: 100%;
   display: block;
   max-width: 100%;
@@ -9,4 +10,9 @@
   margin-top: 1rem;
   background: white;
   color: black;
+}
+
+.view-product-button {
+  text-align: center;
+  line-height: 1.7;
 }

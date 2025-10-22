@@ -56,13 +56,9 @@
                   <h3 class="h4">{{ product.title | link_to: product.url }}</h3>
                   {%- render 'star-rating', product: product -%}
                   {%- render 'price', product: product -%}
-                  <button
-                    class="quick-add__open button button--primary"
-                    data-url="{{ product.url }}?view=quick-add"
-                    data-product-id="{{ product.id }}"
-                  >
-                    {{ 'products.product.add_to_cart' | t }}
-                  </button>
+                  <a href="{{ product.url }}" class="button button--primary view-product-button">
+                    VIEW PRODUCT
+                  </a>
                 </div>
                 <div class="featured-products__slide-image">
                   <div class="media">
@@ -105,7 +101,7 @@
         </div>
       </div>
     </div>
-    
+
   </div>
 </section>
 

@@ -87,7 +87,7 @@
           "settings": {
             "heading": "What's Inside?",
             "icon": "none",
-            "content": "<p>Travel Size Bundle:</p><ul><li>Vulva Balm 2oz</li><li>Intimate Glide 2.5oz </li></ul><p>Full Size Bundle:</p><ul><li>Vulva Balm 2oz</li><li>Intimate Glide 4oz </li></ul>",
+            "content": "<p>Vulva Balm 2oz</p><p>Intimate Glide 4oz </p>",
             "page": ""
           }
         },
@@ -217,7 +217,7 @@
       "settings": {
         "color_scheme": "inverse",
         "type": "text",
-        "padding_top": 100,
+        "padding_top": 76,
         "padding_bottom": 52
       }
     },

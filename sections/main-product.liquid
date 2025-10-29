@@ -267,11 +267,25 @@
               {% render 'rc-widget', product: product, product_form_id: product_form_id %}
 
             {%- when 'buy_buttons' -%}
-
               <div class="quantity-and-buttons">
                 {%- render 'product-quantity-input', product: product, product_form_id: product_form_id -%}
                 {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup-avai_availability: true -%}
               </div>
+
+            {%- when 'amazon_button' -%}
+              {%- liquid
+                assign url = block.settings.url | default: nil
+
+                assign call_to_action = block.settings.call_to_action | default: "Buy on Amazon"
+              -%}
+
+              {%- if url -%}
+                <div>
+                  <a href="{{ url }}" class="button button--full-width button--primary" target="_blank">
+                    {{ call_to_action }}
+                  </a>
+                </div>
+              {%- endif -%}
 
             {%- when 'rating' -%}
               {%- render 'star-rating', product: product -%}
@@ -696,6 +710,24 @@
           "default": true,
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.label",
           "info": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.info"
+        }
+      ]
+    },
+    {
+      "type": "amazon_button",
+      "name": "Amazon button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Amazon URL"
+        },
+        {
+          "type": "text",
+          "id": "call_to_action",
+          "label": "Call to action",
+          "default": "BUY ON AMAZON"
         }
       ]
     },

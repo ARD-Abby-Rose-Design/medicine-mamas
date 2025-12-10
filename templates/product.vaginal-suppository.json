@@ -62,7 +62,6 @@
         },
         "variant_subscriptions_MxpxXm": {
           "type": "variant_subscriptions",
-          "disabled": true,
           "settings": {}
         },
         "quantity_selector": {
@@ -80,6 +79,7 @@
         },
         "amazon_button_kMcyzi": {
           "type": "amazon_button",
+          "disabled": true,
           "settings": {
             "url": "https://www.amazon.com/Medicine-Mamas-Apothecary-Vaginal-Suppository/dp/B0FNRWL3QF?maas=maas_adg_6CFB9DCF24CEED0CA8896418377A8ED5_afap_abs&ref_=aa_maas&tag=maas&th=1",
             "call_to_action": "BUY ON AMAZON"

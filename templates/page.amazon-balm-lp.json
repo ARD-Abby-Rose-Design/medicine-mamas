@@ -65,7 +65,7 @@
         "button_FyryCF"
       ],
       "settings": {
-        "image": "shopify://shop_images/mm-meno_hero.jpg",
+        "image": "shopify://shop_images/5_51db5d23-8ceb-4579-8545-2bd8c84bc80f.jpg",
         "video_autoplay": "autoplay",
         "media_type": "image",
         "height": "adapt",
@@ -140,7 +140,7 @@
         "heading_NXwNzr": {
           "type": "heading",
           "settings": {
-            "heading": "SOOTHING RELIEF HAS ARRIVED",
+            "heading": "CLINICALLY PROVEN RESULTS",
             "heading_size": "hlarge"
           }
         }

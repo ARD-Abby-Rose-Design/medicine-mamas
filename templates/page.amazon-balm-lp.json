@@ -33,7 +33,7 @@
         "heading_FiAFXw": {
           "type": "heading",
           "settings": {
-            "heading": "MENOPAUSE RELIEF STARTS HERE",
+            "heading": "SOOTHING RELIEF FROM INTIMATE DRYNESS",
             "heading_size": "hlarge"
           }
         },
@@ -50,10 +50,10 @@
         "button_FyryCF": {
           "type": "button",
           "settings": {
-            "button_label": "Find Relief & Save Up to 20%",
-            "button_link": "shopify://collections/menopause",
-            "button_arrow": false,
-            "big_button": false,
+            "button_label": "Save now on Amazon",
+            "button_link": "https://www.amazon.com/VMAGIC-Medicine-Mama-Organic-Vulva/dp/B0071Q5PL0?maas=maas_adg_43851CCCFA313011E37198AAD534F4CB_afap_abs&ref_=aa_maas&tag=maas&th=1",
+            "button_arrow": true,
+            "big_button": true,
             "button_subtitle": "30-DAY RISK FREE GUARANTEE"
           }
         }

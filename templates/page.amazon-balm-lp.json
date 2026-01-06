@@ -1,0 +1,831 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_E8ERLA": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_Wy6T9H": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>OVER 15,000 5-STAR REVIEWS</strong></p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "heading_FiAFXw": {
+          "type": "heading",
+          "settings": {
+            "heading": "MENOPAUSE RELIEF STARTS HERE",
+            "heading_size": "hlarge"
+          }
+        },
+        "text_6GVxmp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Relieve vulva dryness and irritation throughout (peri)menopause with our all natural, hormone-free must-haves.</p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "button_FyryCF": {
+          "type": "button",
+          "settings": {
+            "button_label": "Find Relief & Save Up to 20%",
+            "button_link": "shopify://collections/menopause",
+            "button_arrow": false,
+            "big_button": false,
+            "button_subtitle": "30-DAY RISK FREE GUARANTEE"
+          }
+        }
+      },
+      "block_order": [
+        "text_Wy6T9H",
+        "heading_FiAFXw",
+        "text_6GVxmp",
+        "button_FyryCF"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/mm-meno_hero.jpg",
+        "video_autoplay": "autoplay",
+        "media_type": "image",
+        "height": "adapt",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 0,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "full_width": true,
+        "below_header": true,
+        "mobile_content_alignment": "center",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "scrolling_marquee_h7KxJ4": {
+      "type": "scrolling-marquee",
+      "blocks": {
+        "text_P6LAD9": {
+          "type": "text",
+          "settings": {
+            "text": "Neat."
+          }
+        },
+        "text_Wgpzaf": {
+          "type": "text",
+          "settings": {
+            "text": "Neat."
+          }
+        },
+        "text_gA4i6f": {
+          "type": "text",
+          "settings": {
+            "text": "Neat."
+          }
+        }
+      },
+      "block_order": [
+        "text_P6LAD9",
+        "text_Wgpzaf",
+        "text_gA4i6f"
+      ],
+      "settings": {
+        "color_scheme": "inverse",
+        "type": "text",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "rich_text_ezx9pM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NXwNzr": {
+          "type": "heading",
+          "settings": {
+            "heading": "SOOTHING RELIEF HAS ARRIVED",
+            "heading_size": "hlarge"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NXwNzr"
+      ],
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 64,
+        "padding_bottom": 0
+      }
+    },
+    "collage_with_text_NeRYCB": {
+      "type": "collage-with-text",
+      "blocks": {
+        "heading_DDnQx3": {
+          "type": "heading",
+          "settings": {
+            "heading": "VMAGIC® Vulva Balm + Lips Stick",
+            "heading_size": "h2"
+          }
+        },
+        "text_tztrQe": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Helps alleviate dryness</strong> and <strong>pain with sex</strong> in the vulva, especiallyduring (peri)menopause, by restoring moisture and elasticity.</p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "results_A6XBN6": {
+          "type": "results",
+          "settings": {
+            "result_number1": "100%",
+            "result_text1": "reported zero irritation*",
+            "result_number2": "92%",
+            "result_text2": "noticed less drynessafter consistent2-week use**",
+            "result_number3": "79%",
+            "result_text3": "reported immediatesoothing relief from intimate skin dryness*",
+            "show_desktop": true,
+            "show_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_DDnQx3",
+        "text_tztrQe",
+        "results_A6XBN6"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/mm-collage2-1-image.jpg",
+        "video": "shopify://files/videos/Vulva Balm - PDP UGC.mp4",
+        "media_caption": "<p><strong>VMAGIC® Vulva Balm</strong></p>",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "overlay_caption_position_mobile": "top-left",
+        "collage_image": "shopify://shop_images/mm-collage2-image.png",
+        "collage_video": "shopify://files/videos/mm-collage2-video.mp4",
+        "collage_media_caption": "<p><strong>VMAGIC® Lips Stick<br/></strong>(for on-the-go)</p>",
+        "collage_media_caption_color": "#121212",
+        "collage_media_caption_bg": "none",
+        "collage_media_caption_bg_color": "#ffffff",
+        "collage_media_caption_position": "top-left",
+        "collage_media_caption_position_mobile": "top-left",
+        "show_desktop": true,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "results_HLPkzY": {
+      "type": "results",
+      "blocks": {
+        "result_bUFfzX": {
+          "type": "result",
+          "settings": {
+            "result_number": "100%",
+            "result_text": "reported zero irritation*"
+          }
+        },
+        "result_FdALfa": {
+          "type": "result",
+          "settings": {
+            "result_number": "92%",
+            "result_text": "noticed less drynessafter consistent2-week use**"
+          }
+        },
+        "result_QEM7xa": {
+          "type": "result",
+          "settings": {
+            "result_number": "79%",
+            "result_text": "reported immediatesoothing relief from intimate skin dryness*"
+          }
+        }
+      },
+      "block_order": [
+        "result_bUFfzX",
+        "result_FdALfa",
+        "result_QEM7xa"
+      ],
+      "settings": {
+        "show_desktop": false,
+        "show_mobile": true
+      }
+    },
+    "collage_with_text_dJe3iH": {
+      "type": "collage-with-text",
+      "blocks": {
+        "heading_8cLzjK": {
+          "type": "heading",
+          "settings": {
+            "heading": "VMAGIC® Vulva Wash",
+            "heading_size": "h2"
+          }
+        },
+        "text_BXAAzQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>An all natural, fragrance-free cleanser that <strong>helps support pH balance while neutralizing odor</strong>. Hydration at its finest, without ever stripping the skin.</p>",
+            "text_size": "text-body-large",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "review_AJMG7M": {
+          "type": "review",
+          "settings": {
+            "review_product": "VMAGIC® VULVA WASH",
+            "review_name": "Sandy",
+            "review_title": "Life-Changing Relief for Menopause Symptoms!",
+            "review_text": "\"The wash is incredible; it leaves me feeling fresh, clean, and confident without any harsh chemicals or irritation. I no longer have that lingering anxiety about discomfort during sex or worrying about an off smell.\" -Camelia G.",
+            "show_desktop": true,
+            "show_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_8cLzjK",
+        "text_BXAAzQ",
+        "review_AJMG7M"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/mm-collage-image.jpg",
+        "video": "shopify://files/videos/mm-collage-video.mp4",
+        "media_caption": "<p><strong>VMAGIC® Vulva Wash</strong></p>",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "overlay_caption_position_mobile": "top-left",
+        "collage_video": "shopify://files/videos/mm-collage-video.mp4",
+        "collage_media_caption": "",
+        "collage_media_caption_color": "#ffffff",
+        "collage_media_caption_bg": "none",
+        "collage_media_caption_bg_color": "#ffffff",
+        "collage_media_caption_position": "top-left",
+        "collage_media_caption_position_mobile": "top-left",
+        "show_desktop": true,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_review_y8Y3FK": {
+      "type": "featured-review",
+      "settings": {
+        "review_product": "VMAGIC® VULVA WASH",
+        "review_name": "Camelia G.",
+        "review_title": "Life-Changing Relief for Menopause Symptoms!",
+        "review_text": "<p>“The wash is incredible; it leaves me feeling fresh, clean, and confident without any harsh chemicals or irritation. I no longer have that lingering anxiety about discomfort during sex or worrying about an off smell.”</p>",
+        "show_desktop": false,
+        "show_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_NTgFRg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_qrnMnL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop menopause relief",
+            "heading_size": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qrnMnL"
+      ],
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "featured_product_cjmznm": {
+      "type": "featured-product",
+      "blocks": {
+        "rating_dCwj4B": {
+          "type": "rating",
+          "settings": {}
+        },
+        "title_qCmgHd": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1",
+            "heading_width": 60,
+            "show_price": true
+          }
+        },
+        "rich_text_FnFW4L": {
+          "type": "rich_text",
+          "settings": {
+            "text": "<p><strong>Includes:</strong></p><ul><li>1x VMAGIC®  Vulva Balm 2 oz</li><li>1x VMAGIC®  Lips Stick .65 oz, </li><li>1x VMAGIC®  Vulva Wash 8 oz</li></ul>",
+            "text_alignment": "left"
+          }
+        },
+        "checkmarks_9yp7qt": {
+          "type": "checkmarks",
+          "settings": {}
+        },
+        "custom_liquid_aR7g7T": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"custom-recharge\"></div>"
+          }
+        },
+        "buy_buttons_BQTnpP": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "button_style": "red",
+            "show_return_policy_note": true,
+            "return_policy_note": "<a href=\"/policies/refund-policy\" title=\"Refund Policy\">Try 30-day risk free, love it or your money back!</a>"
+          }
+        },
+        "icon_with_text_mbQKz6": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "organic",
+            "heading_1": "Organic, hormone-freeingredients",
+            "heading_1_style": "body",
+            "icon_2": "lab_tested",
+            "heading_2": "Clinically tested",
+            "heading_2_style": "body",
+            "icon_3": "physician",
+            "heading_3": "Endorsed byphysicians",
+            "heading_3_style": "body"
+          }
+        },
+        "included_products_9fP3Ra": {
+          "type": "included_products",
+          "settings": {
+            "included_products": [
+              "vmagic-vulvar-balm-skincare-jar",
+              "vmagic-feminine-lips-stick",
+              "vmagic-feminine-wash"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "rating_dCwj4B",
+        "title_qCmgHd",
+        "rich_text_FnFW4L",
+        "checkmarks_9yp7qt",
+        "custom_liquid_aR7g7T",
+        "buy_buttons_BQTnpP",
+        "icon_with_text_mbQKz6",
+        "included_products_9fP3Ra"
+      ],
+      "settings": {
+        "product": "vmagic-menopause-must-haves",
+        "color_scheme": "inverse",
+        "secondary_background": false,
+        "enable_sticky_info": true,
+        "media_size": "medium",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_kfkAnt": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_fYef7m": {
+          "type": "column",
+          "settings": {
+            "video": "shopify://files/videos/Vulva Wash.mov",
+            "video_poster": "shopify://shop_images/230615_MedMama__SHOT9_00909.jpg",
+            "title": "Dr. Caroyln Moyers",
+            "text": "<p>“Say goodbye to vaginal irritation. This is the lipstick you never knew you needed. I use it for so many of my patients in post partum or menopause!”</p>",
+            "link_label": "",
+            "link": "",
+            "product": "vmagic-feminine-lips-stick",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": "<strong>Helped with:</strong> Menopause Relief, Dryness"
+          }
+        },
+        "column_yAUCjq": {
+          "type": "column",
+          "settings": {
+            "video": "shopify://files/videos/Medicine Mama 1.mov",
+            "video_poster": "shopify://shop_images/Frame_85_3325ca91-5575-40cf-9d29-23bc85fb5d68.jpg",
+            "title": "@skylarlibertyrose",
+            "text": "<p>“The Vulva Balm restores moisture and alleviates painful sex. Since using the vulva balm, I’m much more comfortable.”</p>",
+            "link_label": "",
+            "link": "",
+            "product": "vmagic-vulvar-balm-skincare-jar",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": "<strong>Helped with:</strong> Pain with Sex, Dryness"
+          }
+        },
+        "column_93PCwi": {
+          "type": "column",
+          "settings": {
+            "video": "shopify://files/videos/IG STORY SET 2 ( split into 2 frames) .mov",
+            "video_poster": "shopify://shop_images/Frame_85_fafcfdfd-fd7b-4bd2-a93d-6cb0639ffe90.jpg",
+            "title": "@indiabatson",
+            "text": "<p>“The Vulva Wash is a gentle, fragrance free cleanser that rejuvenates and nourishes skin, rinses residue-free and helps support the pH of your vulva.”</p>",
+            "link_label": "",
+            "link": "",
+            "product": "vmagic-feminine-wash",
+            "product_badge_color": "#fcf7f0",
+            "product_benefits": "<strong>Helped with:</strong> pH Balance, Irritation"
+          }
+        }
+      },
+      "block_order": [
+        "column_fYef7m",
+        "column_yAUCjq",
+        "column_93PCwi"
+      ],
+      "settings": {
+        "title": "<p>Loved by women everywhere</p>",
+        "heading_size": "hlarge",
+        "heading_alignment": "center",
+        "text": "",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "full_width": false,
+        "enable_desktop_slider": false,
+        "column_alignment": "left",
+        "border_style": "solid",
+        "background_style": "none",
+        "background_color": "#ffffff",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "inverse",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_slider_buttons": true,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "image_with_text_DfiKwB": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_nXnWMB": {
+          "type": "heading",
+          "settings": {
+            "heading": "MEET THE MEDICINE MAMA HERSELF",
+            "heading_size": "hlarge"
+          }
+        },
+        "text_EWmYAj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>“We want to provide women with solutions for the changes they experience in their vulvar skin throughout their lifetime. No one should ever feel embarrassed to talk about common vulvar symptoms, such as itching, stinging, or irritation, or feel they need to suffer in silence, when solutions are readily available.”</p>",
+            "text_size": "text-body",
+            "background_style": "solid",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "heading_f9MpcM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dr. Clare Bertucio",
+            "heading_size": "h2"
+          }
+        },
+        "text_Qm6Tqd": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Medicine Mama CEO + Chief Medical Officer</strong></p>",
+            "text_size": "text-body-small",
+            "background_style": "none",
+            "background_color": "#ffffff",
+            "bullets_to_checkmarks": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_nXnWMB",
+        "text_EWmYAj",
+        "heading_f9MpcM",
+        "text_Qm6Tqd"
+      ],
+      "settings": {
+        "video": "shopify://files/videos/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
+        "video_autoplay": "autoplay",
+        "media_type": "video",
+        "height": "medium",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "text_first",
+        "full_width": false,
+        "below_header": false,
+        "mobile_content_alignment": "center",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "rich_text_RBzfbc": {
+      "type": "rich-text",
+      "blocks": {
+        "text_ck8JXm": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>MENOPAUSE<br/>RELIEF,  3 WAYS</h1>",
+            "text_style": "text-body"
+          }
+        }
+      },
+      "block_order": [
+        "text_ck8JXm"
+      ],
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 76,
+        "padding_bottom": 24
+      }
+    },
+    "included_products_nhnnhb": {
+      "type": "included-products",
+      "blocks": {
+        "product_pXCTmh": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-vulvar-balm-skincare-jar",
+            "product_video": "shopify://files/videos/Vulva Balm - PDP UGC.mp4",
+            "product_benefits": "<p>Massage a small amount into vulvar skin to moisturize, apply daily as needed.</p>",
+            "product_location": "AT HOME"
+          }
+        },
+        "product_TRY3UV": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-feminine-lips-stick",
+            "product_image": "shopify://shop_images/mm-lips_stick-included-products.jpg",
+            "product_benefits": "<p>Throw in your purse or suitcase to reapply  and stay hydrated on the go.</p>",
+            "product_location": "ON THE GO"
+          }
+        },
+        "product_rtg3Bn": {
+          "type": "product",
+          "settings": {
+            "product": "vmagic-feminine-wash",
+            "product_image": "shopify://shop_images/mm-vulva_wash-included_products.jpg",
+            "product_benefits": "<p>Use a quarter size amount into hands or soft sponge and apply directly to skin. Rinse clean with warm water.</p>",
+            "product_location": "IN THE SHOWER"
+          }
+        }
+      },
+      "block_order": [
+        "product_pXCTmh",
+        "product_TRY3UV",
+        "product_rtg3Bn"
+      ],
+      "settings": {
+        "color_scheme": "inverse",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "background_color": "#ffffff"
+      }
+    },
+    "rich_text_GrmbV9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_GM4m87": {
+          "type": "heading",
+          "settings": {
+            "heading": "OVER 400,000 HAPPY CUSTOMERS",
+            "heading_size": "hlarge"
+          }
+        }
+      },
+      "block_order": [
+        "heading_GM4m87"
+      ],
+      "settings": {
+        "show_desktop": true,
+        "show_mobile": true,
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 76,
+        "padding_bottom": 0
+      }
+    },
+    "174339093112f677f8": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_b6mz3K": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "vmagic-menopause-must-haves",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_b6mz3K"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_liquid_k4xjeM": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n\n.okeReviews[data-oke-container].oke-w, div.okeReviews.oke-w {\nmax-width: none !important;\n}\n\n.oke-w-reviews-list-item {\nbackground-color: white;\nborder-radius: 10px;\nmargin-bottom: 10px;\n}\n\n.oke-w-reviewSplit-left {\nborder-right: 1px solid #D9D9D9 !important;\npadding-right: 1rem !important;\n}\n\n.oke-w-reviews-head, .oke-w-reviews-controls, .oke-w-header {\ndisplay: none !important;\nopacity: 0 !important;\n}\n\n@media screen and (max-width: 750px) {\n\n.oke-w-reviewSplit-main {\nalign-items: flex-start !important;\njustify-content: space-between !important;\ngap: 1.4rem !important;\npadding: 1.4rem !important;\n}\n\n.oke-w-reviewSplit-mid {\nmargin-top: 0px !important;\ntext-align: left !important;\n}\n\n.oke-w-reviewSplit-left {\ntext-align: left !important;\nborder-right: none !important;\n}\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collapsible_content_XkkWXy": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_rAeUFx": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are ®VMAGIC products safe?",
+            "row_content": "<p>Yes, ®VMAGIC products are safe, gentle and effective on even the most delicate skin. ®VMAGIC is lab-tested for safety and has a perfect score of zero on the irritant index.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Gc6xy7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the Medicine Mama 100% Satisfaction Guarantee?",
+            "row_content": "<p>We offer a 30-day 100% money back satisfaction guarantee on all purchases made on our website. If for any reason you don’t love our products, you are welcome to return them within 30 days of receipt for a complete refund of your purchase price (less S&H), with no questions asked.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_84DfYj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do your products contain any potentiallyharmful ingredients?",
+            "row_content": "<p>Our mission is to create the highest quality natural products possible, which is why all Medicine Mama products are made from ONLY pure, certified organic ingredients. In accordance with California’s Toxic-Free Cosmetics Act, our products do not—and never will—contain any of the following: formaldehyde, paraformaldehyde, methylene glycol, quaternium-15, mercury, dibutyl/diethyl hexyl phthalates, isobutyl/isopropyl parabens, any member of the family of toxic chemicals known as PFAS, and M- and o-phenylenediamine.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_w66HJG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How often should I use the ®VMAGIC Vulva Balm? When will I see results?",
+            "row_content": "<p>For optimal skin health, use ®VMAGIC daily, reapplying as often as needed or desired.</p><p>Immediately after use, you will feel relief from dryness, itching and inflammation. After a few days of use, the overall health, balance and skin integrity will improve. In a clinical trial 92% saw a reduction in dryness after consistent 2-week use.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_rAeUFx",
+        "collapsible_row_Gc6xy7",
+        "collapsible_row_84DfYj",
+        "collapsible_row_w66HJG"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Pausing for any questions!",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "inverse",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_E8ERLA",
+    "scrolling_marquee_h7KxJ4",
+    "rich_text_ezx9pM",
+    "collage_with_text_NeRYCB",
+    "results_HLPkzY",
+    "collage_with_text_dJe3iH",
+    "featured_review_y8Y3FK",
+    "rich_text_NTgFRg",
+    "featured_product_cjmznm",
+    "multicolumn_kfkAnt",
+    "image_with_text_DfiKwB",
+    "rich_text_RBzfbc",
+    "included_products_nhnnhb",
+    "rich_text_GrmbV9",
+    "174339093112f677f8",
+    "custom_liquid_k4xjeM",
+    "collapsible_content_XkkWXy"
+  ]
+}

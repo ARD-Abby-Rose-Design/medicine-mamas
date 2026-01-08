@@ -132,7 +132,7 @@
               <span id="price-{{ section_id }}" class="product-form__submit--price">
                 {% if on_sale %}
                   <span> {{ price | money }}</span>
-                  <span><s>{{ compare_price | money }}</s></span>
+                  <span class="small-hide"><s>{{ compare_price | money }}</s></span>
                 {% else %}
                   {{ price | money }}
                 {% endif %}

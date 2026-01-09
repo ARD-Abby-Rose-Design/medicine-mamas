@@ -63,16 +63,6 @@
             "big_button": false,
             "button_subtitle": ""
           }
-        },
-        "button_f83U6N": {
-          "type": "button",
-          "settings": {
-            "button_label": "Upfluence Creators",
-            "button_link": "https://ambassador.upfluence.co/medicine-mama-landing-page",
-            "button_arrow": true,
-            "big_button": false,
-            "button_subtitle": ""
-          }
         }
       },
       "block_order": [
@@ -80,8 +70,7 @@
         "template--17038566031589__c868727a-415d-4336-9603-2593930c15f4-text-1",
         "heading_jCLkYg",
         "template--17038566031589__c868727a-415d-4336-9603-2593930c15f4-button-1",
-        "442dd473-7bc2-4311-91f3-1b436dd307d7",
-        "button_f83U6N"
+        "442dd473-7bc2-4311-91f3-1b436dd307d7"
       ],
       "settings": {
         "image": "shopify://shop_images/medicine-mama-desktop-hero_f8197687-e76e-4bfd-bf8b-1eb8ad3ba6fc.jpg",

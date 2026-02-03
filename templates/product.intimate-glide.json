@@ -219,6 +219,15 @@
         "padding_bottom": 52
       }
     },
+    "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa": {
+      "type": "you-speak",
+      "settings": {
+        "color_scheme": "inverse",
+        "title": "See The Magic",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "17a80875-d3ad-4af8-9b12-88f5dbe0162b": {
       "type": "product-ingredients",
       "settings": {
@@ -313,13 +322,85 @@
         "padding_bottom": 52
       }
     },
-    "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa": {
-      "type": "you-speak",
+    "44e52141-129c-4172-8099-dc699805e02c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dr. Clare",
+            "heading_size": "h0"
+          }
+        },
+        "8446f5a8-d48e-4d4e-9378-c20aa3d35a57": {
+          "type": "heading",
+          "settings": {
+            "heading": "#ASKMEDMAMA",
+            "heading_size": "h3"
+          }
+        },
+        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Meet Dr. Clare Bertucio; mother, wife, physician of 20+ years, fierce women’s health advocate and now CEO. With Dr. Clare, no question is too bold or too taboo. She’s working to build a more informed, confident, and liberated female community. Join in the conversation, embrace your Vulva, and be a part of this revolutionary journey that Medicine Mama is leading. Go ahead #askmedmama.</p>",
+            "text_size": "text-body",
+            "background_style": "none",
+            "background_color": "#fcf7f0",
+            "bullets_to_checkmarks": false
+          }
+        },
+        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "https://medicinemama.com/pages/about",
+            "button_arrow": true,
+            "big_button": false,
+            "button_subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-0",
+        "8446f5a8-d48e-4d4e-9378-c20aa3d35a57",
+        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-1",
+        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-2"
+      ],
       "settings": {
+        "image": "shopify://shop_images/vulvavsvagina.jpg",
+        "video": "shopify://files/videos/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
+        "video_autoplay": "autoplay",
+        "media_type": "video",
+        "height": "small",
+        "media_caption": "",
+        "media_caption_color": "#ffffff",
+        "media_caption_bg": "none",
+        "media_caption_bg_color": "#ffffff",
+        "media_caption_position": "top-left",
+        "second_media_caption": "",
+        "second_media_caption_color": "#ffffff",
+        "second_media_caption_bg": "none",
+        "second_media_caption_bg_color": "#ffffff",
+        "second_media_caption_position": "top-left",
+        "show_desktop": true,
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "desktop_content_padding_left": 36,
+        "desktop_content_padding_right": 36,
+        "content_layout": "no-overlap",
         "color_scheme": "inverse",
-        "title": "See The Magic",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "image_behavior": "none",
+        "show_mobile": true,
+        "layout_mobile": "image_first",
+        "full_width": false,
+        "below_header": false,
+        "mobile_content_alignment": "left",
+        "media_caption_position_mobile": "top-left",
+        "second_media_caption_position_mobile": "top-left",
+        "padding_top": 36,
+        "padding_bottom": 64
       }
     },
     "c3a50a1b-b9e4-4730-8667-125f047ed335": {
@@ -397,87 +478,6 @@
         "padding_bottom": 36
       }
     },
-    "44e52141-129c-4172-8099-dc699805e02c": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Dr. Clare",
-            "heading_size": "h0"
-          }
-        },
-        "8446f5a8-d48e-4d4e-9378-c20aa3d35a57": {
-          "type": "heading",
-          "settings": {
-            "heading": "#ASKMEDMAMA",
-            "heading_size": "h3"
-          }
-        },
-        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Meet Dr. Clare Bertucio; mother, wife, physician of 20+ years, fierce women’s health advocate and now CEO. With Dr. Clare, no question is too bold or too taboo. She’s working to build a more informed, confident, and liberated female community. Join in the conversation, embrace your Vulva, and be a part of this revolutionary journey that Medicine Mama is leading. Go ahead #askmedmama.</p>",
-            "text_size": "text-body",
-            "background_style": "none",
-            "background_color": "#ffffff",
-            "bullets_to_checkmarks": false
-          }
-        },
-        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Learn More",
-            "button_link": "https://medicinemama.com/pages/about",
-            "button_arrow": true,
-            "big_button": false,
-            "button_subtitle": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-0",
-        "8446f5a8-d48e-4d4e-9378-c20aa3d35a57",
-        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-1",
-        "template--16789920940261__44e52141-129c-4172-8099-dc699805e02c-1689366416232ca8a8-2"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/vulvavsvagina.jpg",
-        "video": "shopify://files/videos/Dr. Clare - Medicine Mama PDP Short (1080 × 1080 px).mp4",
-        "video_autoplay": "autoplay",
-        "media_type": "video",
-        "height": "small",
-        "media_caption": "",
-        "media_caption_color": "#ffffff",
-        "media_caption_bg": "none",
-        "media_caption_bg_color": "#ffffff",
-        "media_caption_position": "top-left",
-        "second_media_caption": "",
-        "second_media_caption_color": "#ffffff",
-        "second_media_caption_bg": "none",
-        "second_media_caption_bg_color": "#ffffff",
-        "second_media_caption_position": "top-left",
-        "show_desktop": true,
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "desktop_content_padding_left": 36,
-        "desktop_content_padding_right": 36,
-        "content_layout": "no-overlap",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "show_mobile": true,
-        "layout_mobile": "image_first",
-        "full_width": false,
-        "below_header": false,
-        "mobile_content_alignment": "left",
-        "media_caption_position_mobile": "top-left",
-        "second_media_caption_position_mobile": "top-left",
-        "padding_top": 36,
-        "padding_bottom": 64
-      }
-    },
     "rich_text_wPHDkD": {
       "type": "rich-text",
       "blocks": {
@@ -543,13 +543,13 @@
   "order": [
     "main",
     "cac67cc4-85e1-4f5d-9af0-5bfbe86ec590",
+    "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa",
     "17a80875-d3ad-4af8-9b12-88f5dbe0162b",
     "multicolumn",
     "related-products",
     "1443dbb0-ea85-4289-811e-0188944eac12",
-    "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa",
-    "c3a50a1b-b9e4-4730-8667-125f047ed335",
     "44e52141-129c-4172-8099-dc699805e02c",
+    "c3a50a1b-b9e4-4730-8667-125f047ed335",
     "rich_text_wPHDkD",
     "17452851713b5d39eb",
     "custom_liquid_YiPfqD",

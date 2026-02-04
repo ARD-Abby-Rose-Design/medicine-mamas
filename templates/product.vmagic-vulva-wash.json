@@ -218,7 +218,7 @@
       "settings": {
         "color_scheme": "inverse",
         "type": "text",
-        "padding_top": 100,
+        "padding_top": 84,
         "padding_bottom": 52
       }
     },
@@ -228,8 +228,16 @@
         "heading": "Clinically Proven Ingredients",
         "heading_size": "h2",
         "color_scheme": "inverse",
-        "padding_top": 100,
+        "padding_top": 72,
         "padding_bottom": 100
+      }
+    },
+    "1443dbb0-ea85-4289-811e-0188944eac12": {
+      "type": "product-clinical-trial",
+      "settings": {
+        "color_scheme": "inverse",
+        "padding_top": 0,
+        "padding_bottom": 52
       }
     },
     "multicolumn": {
@@ -287,14 +295,6 @@
         "show_slider_buttons": true,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "1443dbb0-ea85-4289-811e-0188944eac12": {
-      "type": "product-clinical-trial",
-      "settings": {
-        "color_scheme": "inverse",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "related-products": {
@@ -576,8 +576,8 @@
     "d4de6eeb-420b-4351-a1fd-e24b0ad2a3aa",
     "cac67cc4-85e1-4f5d-9af0-5bfbe86ec590",
     "17a80875-d3ad-4af8-9b12-88f5dbe0162b",
-    "multicolumn",
     "1443dbb0-ea85-4289-811e-0188944eac12",
+    "multicolumn",
     "related-products",
     "c3a50a1b-b9e4-4730-8667-125f047ed335",
     "44e52141-129c-4172-8099-dc699805e02c",

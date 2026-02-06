@@ -328,7 +328,10 @@
     <!-- End Reddit Pixel -->
     {% endcomment %}
 
-
+{% if request.page_type == 'page' and page.handle == 'orders' %}
+  <meta name="robots" content="noindex, nofollow">
+{% endif %}
+    
   </head>
 
   <body class="template-{{ template.name }} gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">

@@ -418,6 +418,7 @@
         "column_d9YTHV",
         "column_xANGeQ"
       ],
+      "disabled": true,
       "settings": {
         "title": "<p>What to expect</p>",
         "heading_size": "h2",
@@ -555,7 +556,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How does VMAGIC® Vaginal Suppository work?",
-            "row_content": "<p><strong>VMAGIC® Vaginal Suppository with Hyaluronic Acid</strong> delivers targeted hydration with 5 mg of hyaluronic acid to support comfort and moisture balance in delicate vaginal tissue.</p><p>As estrogen declines during menopause, the vaginal lining naturally loses collagen and its ability to retain water. This can lead to dryness, thinning, and discomfort. Hyaluronic acid—a molecule found naturally in the body that binds up to 1,000 times its weight in water—helps replenish this lost hydration. We’ve paired it with nutrient-rich sweet almond oil, which locks in moisture and nourishes sensitive tissue.</p><p>Together, these ingredients help restore natural suppleness, soothe irritation, and promote lasting comfort.</p>",
+            "row_content": "<p>VMAGIC® Vaginal Suppository is designed to provide moisture and comfort to the vaginal area using hyaluronic acid, a naturally occurring ingredient known for its ability to hold water. Each suppository contains 5 mg of hyaluronic acid to help maintain moisture where dryness can occur.</p><p>Hyaluronic acid helps attract and retain moisture on the surface of the vaginal area, supporting a more comfortable, hydrated feel. It’s paired with naturally derived glycerides that help soften and condition sensitive skin for added comfort.</p><p>Together, these ingredients are designed to support everyday vaginal comfort and help ease dryness-related discomfort.</p>",
             "page": ""
           }
         },

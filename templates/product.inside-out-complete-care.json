@@ -448,6 +448,7 @@
         "column_d9YTHV",
         "column_xANGeQ"
       ],
+      "disabled": true,
       "settings": {
         "title": "<p>What to expect</p>",
         "heading_size": "h2",
@@ -585,7 +586,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How does VMAGIC® Vaginal Suppository work?",
-            "row_content": "<p><strong>VMAGIC® Vaginal Suppository with Hyaluronic Acid</strong> delivers targeted hydration with 5 mg of hyaluronic acid to support comfort and moisture balance in delicate vaginal tissue.</p><p>As estrogen declines during menopause, the vaginal lining naturally loses collagen and its ability to retain water. This can lead to dryness, thinning, and discomfort. Hyaluronic acid—a molecule found naturally in the body that binds up to 1,000 times its weight in water—helps replenish this lost hydration. We’ve paired it with nutrient-rich sweet almond oil, which locks in moisture and nourishes sensitive tissue.</p><p>Together, these ingredients help restore natural suppleness, soothe irritation, and promote lasting comfort.</p>",
+            "row_content": "<p><strong>VMAGIC® Vaginal Suppository</strong> is designed to provide moisture and comfort to the vaginal area using hyaluronic acid, a naturally occurring ingredient known for its ability to hold water. Each suppository contains 5 mg of hyaluronic acid to help maintain moisture where dryness can occur.</p><p>Hyaluronic acid helps attract and retain moisture on the surface of the vaginal area, supporting a more comfortable, hydrated feel. It’s paired with naturally derived glycerides that help soften and condition sensitive skin for added comfort.</p><p>Together, these ingredients are designed to support everyday vaginal comfort and help ease dryness-related discomfort.</p>",
             "page": ""
           }
         },
@@ -593,7 +594,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How often should I use the vaginal moisturizer suppository?",
-            "row_content": "<p>Use once every 3 nights or as-needed to restore moisture.</p>",
+            "row_content": "<p>Use one suppository every 3 nights, or as needed, to help maintain moisture and comfort.</p>",
             "page": ""
           }
         },
@@ -601,7 +602,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How fast can I expect to see results?",
-            "row_content": "<p>Relief begins with the very first use, as hyaluronic acid immediately starts replenishing vaginal moisture and soothing dryness. Clinical research shows meaningful improvement within the first week, with dryness reduced by up to 49% in as little as nine days¹. With consistent daily use, results continue to build—after one month, women reported 84% less vaginal dryness, 86% less itching and burning, and 57% less pain with intimacy¹. Continued use over three months helps maintain healthy hydration, resilience, and lasting comfort.</p>",
+            "row_content": "<p>Some women notice added moisture and comfort soon after the first use. With regular use, comfort and hydration may continue to improve over time. Individual experiences vary, and consistency can help support ongoing moisture and comfort.</p>",
             "page": ""
           }
         },

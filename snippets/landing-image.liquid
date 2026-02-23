@@ -1,0 +1,13 @@
+{%- liquid
+  assign image = block.settings.image | default: nil
+
+  assign image_url = image | image_url: width: 1200
+
+  assign ratio = block.settings.ratio | default: "image"
+-%}
+
+<div class="object-cover ratio--{{ ratio }}" style="--image-width: {{ image.width }}; --image-height: {{ image.height }};">
+  {%- if image -%}
+    {{ image_url | image_tag }}
+  {%- endif -%}
+</div>

@@ -331,10 +331,10 @@
 {% if request.page_type == 'page' and page.handle == 'orders' %}
   <meta name="robots" content="noindex, nofollow">
 {% endif %}
-    
+
   </head>
 
-  <body class="template-{{ template.name }} gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body class="template-{{ template.name }} {% if template.suffix %}template-{{ template.name }}-{{ template.suffix }}{% endif %} gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -407,6 +407,13 @@
     {% if request.path contains 'tools/recurring/portal/' %}
       {{ 'recharge-customer.css' | asset_url | stylesheet_tag }}
     {% endif %}
+
+    {%- if template.suffix == "landing" -%}
+      {{ "theme.css" | asset_url | stylesheet_tag }}
+      {{ "theme-type.css" | asset_url | stylesheet_tag }}
+      {{ "theme-grid.css" | asset_url | stylesheet_tag }}
+      {{ "template-landing.css" | asset_url | stylesheet_tag }}
+    {%- endif -%}
 
 
 

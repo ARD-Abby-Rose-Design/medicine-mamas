@@ -1,0 +1,133 @@
+.landing-container {
+  max-width: 1238px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-inline: var(--s0);
+}
+
+
+.announcement-bar-section,
+.section-header,
+.footer-section {
+  display: none !important;
+}
+
+
+.button-amazon {
+  -webkit-appearance: none;
+  appearance: none;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 48px;
+  min-height: 48px;
+  background-color: #F55700;
+  color: #fff;
+  font-size: 17px;
+  line-height: 0;
+  letter-spacing: 0.1em;
+  transition: background-color .2s ease;
+}
+
+.button-amazon:hover {
+  background-color: #E65100;
+}
+
+.button-amazon span:has(svg) {
+  font-size: 0;
+}
+
+.button-amazon span:first-child {
+  margin-right: 6px;
+}
+
+
+.landing-kicker {
+  display: flex;
+  gap: var(--s0);
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.landing-kicker p {
+  position: relative;
+  top: 1px;
+}
+
+@media (max-width: 960px) {
+  .landing-kicker {
+    font-size: 13px;
+  }
+}
+
+
+.landing-offer {
+  background-color: #FFFFFF;
+  padding: var(--s2);
+  max-width: 422px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.landing-offer-pricing {
+  display: flex;
+  gap: var(--s0);
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-offer-price {
+  font-size: 26px;
+}
+
+.landing-offer-savings {
+  background-color: #FFE5E0;
+  color: var(--color-1);
+  border: 1px dotted var(--color-1);
+  padding: var(--s-1);
+  padding-bottom: calc(var(--s-1) - 2px);
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: 18px;
+  position: relative;
+  top: -2px;
+}
+
+.landing-offer-description {
+  font-size: 19px;
+}
+
+.landing-offer-reviews {
+  display: flex;
+  column-gap: var(--s-1);
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-offer-incentives {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.landing-offer-incentives li {
+  list-style: none;
+}
+
+.landing-offer-incentives li::before {
+  content: " ";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M18.125%201.66669C15.8024%202.39046%2013.5444%204.2906%2011.6098%207.19366C9.92261%209.76581%208.68468%2012.6316%207.95372%2015.6576C7.33893%2014.683%206.53586%2013.8545%205.59643%2013.2257C4.65701%2012.5968%203.60213%2012.1816%202.5%2012.0068V14.0326C3.56031%2014.2544%204.54436%2014.7705%205.34942%2015.5271C6.15449%2016.2836%206.75103%2017.2527%207.07679%2018.3334H9.38992C10.0766%2012.9798%2013.6167%205.61055%2018.125%203.76423V1.66669Z%22%20fill%3D%22black%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: var(--s-3);
+  position: relative;
+  top: 3px;
+}

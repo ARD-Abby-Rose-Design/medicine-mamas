@@ -1,0 +1,53 @@
+{%- liquid
+  assign price = "$20.99"
+
+  assign compare_price = "$29.99"
+
+  assign savings = "Save 30%"
+
+  assign description = "On Your First Subscription Order<br /> + 10% off every recurring order"
+
+  assign call_to_action = "Save Now on Amazon"
+
+  assign url = section.settings.url
+
+  assign incentives = "Free Fast Shipping with Prime, 30-day money-back guarantee" | split: ", "
+
+  assign space = block.settings.space
+
+  assign space_mobile = block.settings.space_mobile
+-%}
+
+<div class="stack stack-item-{{ space }} small--stack-item-{{ space_mobile }} text--center landing-offer" {{ block.shopify_attributes }}>
+  <div class="landing-offer-pricing">
+    <s class="landing-offer-price">{{ compare_price }}</s>
+    <strong class="landing-offer-price">{{ price }}</strong>
+    <span class="landing-offer-savings"><span>{{ savings }}</span></span>
+  </div>
+
+  <div class="landing-offer-description">
+    <p>{{ description }}</p>
+  </div>
+
+  <div class="landing-offer-reviews">
+    <span>
+      {%- for n in (1..5) -%}
+        {%- render "icon-star" -%}
+      {%- endfor -%}
+    </span>
+
+    <span>4.5 &nbsp;|&nbsp; 15,000+ Reviews</span>
+  </div>
+
+  <a href="{{ url }}" class="button-amazon">
+    <span>{%- render "icon-amazon" -%}</span>
+    <span>{{ call_to_action }}</span>
+    <span>{%- render "icon-arrow-right" -%}</span>
+  </a>
+
+  <ul class="landing-offer-incentives">
+    {%- for incentive in incentives -%}
+      <li>{{ incentive }}</li>
+    {%- endfor -%}
+  </ul>
+</div>

@@ -1,0 +1,108 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "landing-header": {
+      "type": "landing-header",
+      "settings": {}
+    },
+    "landing-hero": {
+      "type": "landing-hero",
+      "blocks": {
+        "text_QHPewk": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Nourish & soothe</h1>",
+            "color": "",
+            "size": 5,
+            "size_mobile": 0,
+            "width": 610,
+            "space": 0,
+            "space_mobile": 0
+          }
+        },
+        "text_ytKPAR": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Your Most Intimate Skin.</h2>",
+            "color": "",
+            "size": 3,
+            "size_mobile": 0,
+            "width": 610,
+            "space": 1,
+            "space_mobile": 1
+          }
+        },
+        "text_BNxhTP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>VMAGIC Vulva Balm is clinically shown to provide immediate soothing comfort improve dryness and irritation in as little as 2 weeks.</p>",
+            "color": "",
+            "size": 1,
+            "size_mobile": 1,
+            "width": 550,
+            "space": 1,
+            "space_mobile": 1
+          }
+        },
+        "image_QK9nc4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/medicine-mama-landing-hero.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "text_QHPewk",
+        "text_ytKPAR",
+        "text_BNxhTP",
+        "image_QK9nc4"
+      ],
+      "settings": {
+        "section_top": "4",
+        "section_bottom": "none",
+        "section_top_mobile": "2",
+        "section_bottom_mobile": "none"
+      }
+    },
+    "featured-reviews": {
+      "type": "featured-reviews",
+      "settings": {
+        "color_scheme": "",
+        "show_line_separator": true,
+        "show_desktop": true,
+        "show_mobile": true,
+        "title": "Over 11,000 5-Star Reviews",
+        "product": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured-reviews-103953810489": {
+      "type": "featured-reviews",
+      "settings": {
+        "color_scheme": "",
+        "show_line_separator": true,
+        "show_desktop": true,
+        "show_mobile": true,
+        "title": "Over 11,000 5-Star Reviews",
+        "product": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "landing-header",
+    "landing-hero",
+    "featured-reviews",
+    "featured-reviews-103953810489"
+  ]
+}

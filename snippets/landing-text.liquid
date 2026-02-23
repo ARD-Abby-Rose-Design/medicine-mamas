@@ -1,0 +1,19 @@
+{%- liquid
+  assign text = block.settings.text
+
+  assign color = block.settings.color | default: "inherit"
+
+  assign size = block.settings.size
+
+  assign size_mobile = block.settings.size_mobile
+
+  assign width = block.settings.width | append: "px"
+
+  assign space = block.settings.space
+
+  assign space_mobile = block.settings.space_mobile
+-%}
+
+<div class="stack stack-item-{{ space }} small--stack-item-{{ space_mobile }} size-{{ size }} small--size-{{ size_mobile }} landing-text" style="max-width: {{ width }}; color: {{ color }};" {{ block.shopify_attributes }}>
+  {{ text }}
+</div>

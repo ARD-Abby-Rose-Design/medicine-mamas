@@ -1,0 +1,313 @@
+{%- liquid
+  assign image_block = section.blocks | where: "type", "image" | first
+
+  assign text_blocks = section.blocks | where: "type", "text"
+
+  assign offer_block = section.blocks | where: "type", "offer" | first
+
+  assign section_top = section.settings.section_top
+
+  assign section_bottom = section.settings.section_bottom
+
+  assign section_top_mobile = section.settings.section_top_mobile
+
+  assign section_bottom_mobile = section.settings.section_bottom_mobile
+-%}
+
+<style>
+  .landing-hero-grid {
+    display: grid;
+    row-gap: var(--s2);
+  }
+
+  .landing-hero-image {
+    max-width: 422px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: 961px) {
+    .landing-hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      align-items: center;
+      column-gap: var(--s1);
+    }
+
+    .landing-hero-image {
+      max-width: none;
+    }
+  }
+</style>
+
+<div class="landing-container top-{{ section_top }} small--top-{{ section_top_mobile }} bottom-{{ section_bottom }} small--bottom-{{ section_bottom }}">
+  <div class="landing-hero-grid">
+    <div class="stack text--center">
+      {%- render "landing-amazon-exclusive" -%}
+
+      {%- for block in text_blocks -%}
+        {%- render "landing-text" block: block -%}
+      {%- endfor -%}
+
+      {%- render "landing-offer" block: offer_block -%}
+    </div>
+    <div>
+      <div class="landing-hero-image">
+        {%- render "landing-image" block: image_block -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- schema -%}
+  {
+    "name": "Landing hero",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "select",
+        "id": "section_top",
+        "label": "Section top",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "0",
+            "value": "0"
+          },
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "3",
+            "value": "3"
+          },
+          {
+            "label": "4",
+            "value": "4"
+          },
+          {
+            "label": "5",
+            "value": "5"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "select",
+        "id": "section_bottom",
+        "label": "Section bottom",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "0",
+            "value": "0"
+          },
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "3",
+            "value": "3"
+          },
+          {
+            "label": "4",
+            "value": "4"
+          },
+          {
+            "label": "5",
+            "value": "5"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "select",
+        "id": "section_top_mobile",
+        "label": "Section top (mobile)",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "0",
+            "value": "0"
+          },
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "3",
+            "value": "3"
+          },
+          {
+            "label": "4",
+            "value": "4"
+          },
+          {
+            "label": "5",
+            "value": "5"
+          }
+        ],
+        "default": "2"
+      },
+      {
+        "type": "select",
+        "id": "section_bottom_mobile",
+        "label": "Section bottom (mobile)",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "0",
+            "value": "0"
+          },
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "3",
+            "value": "3"
+          },
+          {
+            "label": "4",
+            "value": "4"
+          },
+          {
+            "label": "5",
+            "value": "5"
+          }
+        ],
+        "default": "none"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Image",
+        "type": "image",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "name": "Text",
+        "type": "text",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "header",
+            "content": "Style"
+          },
+          {
+            "type": "color",
+            "id": "color",
+            "label": "Color"
+          },
+          {
+            "type": "range",
+            "id": "size",
+            "label": "Size",
+            "min": -1,
+            "max": 12,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "size_mobile",
+            "label": "Size (mobile)",
+            "min": -1,
+            "max": 12,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "number",
+            "id": "width",
+            "label": "Width",
+            "default": 610
+          },
+          {
+            "type": "range",
+            "id": "space",
+            "label": "Space",
+            "min": -3,
+            "max": 5,
+            "step": 1,
+            "default": 1
+          },
+          {
+            "type": "range",
+            "id": "space_mobile",
+            "label": "Space (mobile)",
+            "min": -3,
+            "max": 5,
+            "step": 1,
+            "default": 1
+          }
+        ]
+      },
+      {
+        "name": "Offer",
+        "type": "offer",
+        "settings": [
+          {
+            "type": "range",
+            "id": "space",
+            "label": "Space",
+            "min": -3,
+            "max": 5,
+            "step": 1,
+            "default": 1
+          },
+          {
+            "type": "range",
+            "id": "space_mobile",
+            "label": "Space (mobile)",
+            "min": -3,
+            "max": 5,
+            "step": 1,
+            "default": 1
+          }
+        ]
+      }
+    ]
+  }
+{%- endschema -%}

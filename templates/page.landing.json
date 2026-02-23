@@ -97,7 +97,7 @@
     "landing-button": {
       "type": "landing-button",
       "settings": {
-        "section_top": "none",
+        "section_top": "2",
         "section_bottom": "none",
         "section_top_mobile": "2",
         "section_bottom_mobile": "none"

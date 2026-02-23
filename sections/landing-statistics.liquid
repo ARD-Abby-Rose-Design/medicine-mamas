@@ -1,0 +1,324 @@
+{%- liquid
+  assign text_blocks = section.blocks | where: "type", "text"
+
+  assign section_top = section.settings.section_top
+
+  assign section_bottom = section.settings.section_bottom
+
+  assign section_top_mobile = section.settings.section_top_mobile
+
+  assign section_bottom_mobile = section.settings.section_bottom_mobile
+-%}
+
+<style>
+  .landing-statistics-grid {
+    display: grid;
+    row-gap: var(--s2);
+  }
+
+  @media (min-width: 961px) {
+    .landing-statistics-grid {
+      grid-template-columns: 1fr 1.8fr;
+      column-gap: 125px;
+    }
+  }
+
+
+  .landing-statistics-data-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--s1);
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: 961px) {
+    .landing-statistics-data-grid {
+      max-width: none;
+    }
+  }
+
+  .landing-statistics-data-grid > * {
+    flex: 1;
+  }
+
+  .landing-statistics-circle {
+    aspect-ratio: 1 / 1;
+    border: 8px solid var(--color-2);
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .landing-statistics-circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>
+
+<div class="landing-container top-{{ section_top }} small--top-{{ section_top_mobile }} bottom-{{ section_bottom }} small--bottom-{{ section_bottom_mobile }}">
+  <div class="landing-statistics-grid">
+    <div>
+      <div class="stack">
+        {%- for block in text_blocks -%}
+          {%- render "landing-text" block: block -%}
+        {%- endfor -%}
+      </div>
+    </div>
+    <div>
+      <div class="landing-statistics-data-grid">
+        <div class="stack-2 small--stack-1">
+          <div class="landing-statistics-circle">
+            <span class="size-9 small--size-5">100%</span>
+          </div>
+          <p class="size-3">
+            reported no irritation
+          </p>
+        </div>
+        <div class="stack-2 small--stack-1">
+          <div class="landing-statistics-circle">
+            <span class="size-9 small--size-5">96%</span>
+          </div>
+          <p class="size-3">
+            saw a reduction in dryness after consistent 2-week use*
+          </p>
+        </div>
+        <div clas="stack-2 small--stack-1">
+          <div class="landing-statistics-circle">
+            <span class="size-9 small--size-5">79%</span>
+          </div>
+          <p class="size-3">
+            reported immediate soothing relief from intimate skin dryness*
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- schema -%}
+  {
+    "name": "Statistics",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "select",
+        "id": "section_top",
+        "label": "Section top",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "0",
+            "value": "0"
+          },
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "3",
+            "value": "3"
+          },
+          {
+            "label": "4",
+            "value": "4"
+          },
+          {
+            "label": "5",
+            "value": "5"
+          },
+          {
+            "label": "6",
+            "value": "6"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "select",
+        "id": "section_bottom",
+        "label": "Section bottom",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "0",
+            "value": "0"
+          },
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "3",
+            "value": "3"
+          },
+          {
+            "label": "4",
+            "value": "4"
+          },
+          {
+            "label": "5",
+            "value": "5"
+          },
+          {
+            "label": "6",
+            "value": "6"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "select",
+        "id": "section_top_mobile",
+        "label": "Section top (mobile)",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "0",
+            "value": "0"
+          },
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "3",
+            "value": "3"
+          },
+          {
+            "label": "4",
+            "value": "4"
+          },
+          {
+            "label": "5",
+            "value": "5"
+          }
+        ],
+        "default": "2"
+      },
+      {
+        "type": "select",
+        "id": "section_bottom_mobile",
+        "label": "Section bottom (mobile)",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "0",
+            "value": "0"
+          },
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "3",
+            "value": "3"
+          },
+          {
+            "label": "4",
+            "value": "4"
+          },
+          {
+            "label": "5",
+            "value": "5"
+          }
+        ],
+        "default": "none"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Text",
+        "type": "text",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "header",
+            "content": "Style"
+          },
+          {
+            "type": "color",
+            "id": "color",
+            "label": "Color"
+          },
+          {
+            "type": "range",
+            "id": "size",
+            "label": "Size",
+            "min": -1,
+            "max": 12,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "size_mobile",
+            "label": "Size (mobile)",
+            "min": -1,
+            "max": 12,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "number",
+            "id": "width",
+            "label": "Width",
+            "default": 610
+          },
+          {
+            "type": "range",
+            "id": "space",
+            "label": "Space",
+            "min": -3,
+            "max": 5,
+            "step": 1,
+            "default": 1
+          },
+          {
+            "type": "range",
+            "id": "space_mobile",
+            "label": "Space (mobile)",
+            "min": -3,
+            "max": 5,
+            "step": 1,
+            "default": 1
+          }
+        ]
+      }
+    ]
+  }
+{%- endschema -%}

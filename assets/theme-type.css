@@ -19,6 +19,11 @@
   --t12: calc(var(--t11) * var(--ratio-typography));
 }
 
+.landing-text {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
 .landing-text h1,
 .landing-text h2,
 .landing-text h3,
@@ -30,6 +35,8 @@
 .landing-text ul {
   margin: 0;
   font-size: inherit;
+  overflow-wrap: norma;
+  word-break: keep-all;
 }
 
 .landing-text h1 {

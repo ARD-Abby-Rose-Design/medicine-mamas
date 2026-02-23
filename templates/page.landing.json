@@ -74,10 +74,10 @@
         "image_QK9nc4"
       ],
       "settings": {
-        "section_top": "4",
-        "section_bottom": "none",
+        "section_top": "5",
+        "section_bottom": "5",
         "section_top_mobile": "4",
-        "section_bottom_mobile": "none"
+        "section_bottom_mobile": "4"
       }
     },
     "featured-reviews": {
@@ -90,12 +90,57 @@
         "kicker": "Customer reviews",
         "title": "Over 400,000+ Happy Customers",
         "product": "",
-        "padding_top": 68,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "landing-button": {
-      "type": "landing-button"
+      "type": "landing-button",
+      "settings": {
+        "section_top": "none",
+        "section_bottom": "none",
+        "section_top_mobile": "2",
+        "section_bottom_mobile": "none"
+      }
+    },
+    "landing-statistics": {
+      "type": "landing-statistics",
+      "blocks": {
+        "text_crdK7V": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>In a<br/>clinical <br/>study</h1>",
+            "color": "",
+            "size": 11,
+            "size_mobile": 9,
+            "width": 1000,
+            "space": 1,
+            "space_mobile": 1
+          }
+        },
+        "text_HQRHKQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>based on 13 people who presented with feminine dryness at the beginning of the study.</p>",
+            "color": "",
+            "size": 2,
+            "size_mobile": 2,
+            "width": 400,
+            "space": 1,
+            "space_mobile": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_crdK7V",
+        "text_HQRHKQ"
+      ],
+      "settings": {
+        "section_top": "6",
+        "section_bottom": "5",
+        "section_top_mobile": "5",
+        "section_bottom_mobile": "4"
+      }
     },
     "featured-reviews-103953810489": {
       "type": "featured-reviews",
@@ -107,8 +152,8 @@
         "kicker": "Customer reviews",
         "title": "Over 11,000 5-Star Reviews",
         "product": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
@@ -117,6 +162,7 @@
     "landing-hero",
     "featured-reviews",
     "landing-button",
+    "landing-statistics",
     "featured-reviews-103953810489"
   ]
 }

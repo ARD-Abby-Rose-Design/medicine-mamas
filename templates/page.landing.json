@@ -16,16 +16,23 @@
     "landing-hero": {
       "type": "landing-hero",
       "blocks": {
+        "offer_T3EeJx": {
+          "type": "offer",
+          "settings": {
+            "space": 2,
+            "space_mobile": 1
+          }
+        },
         "text_QHPewk": {
           "type": "text",
           "settings": {
             "text": "<h1>Nourish & soothe</h1>",
             "color": "",
-            "size": 5,
-            "size_mobile": 0,
-            "width": 610,
-            "space": 0,
-            "space_mobile": 0
+            "size": 10,
+            "size_mobile": 10,
+            "width": 1000,
+            "space": 2,
+            "space_mobile": 1
           }
         },
         "text_ytKPAR": {
@@ -33,8 +40,8 @@
           "settings": {
             "text": "<h2>Your Most Intimate Skin.</h2>",
             "color": "",
-            "size": 3,
-            "size_mobile": 0,
+            "size": 7,
+            "size_mobile": 6,
             "width": 610,
             "space": 1,
             "space_mobile": 1
@@ -45,8 +52,8 @@
           "settings": {
             "text": "<p>VMAGIC Vulva Balm is clinically shown to provide immediate soothing comfort improve dryness and irritation in as little as 2 weeks.</p>",
             "color": "",
-            "size": 1,
-            "size_mobile": 1,
+            "size": 3,
+            "size_mobile": 2,
             "width": 550,
             "space": 1,
             "space_mobile": 1
@@ -60,6 +67,7 @@
         }
       },
       "block_order": [
+        "offer_T3EeJx",
         "text_QHPewk",
         "text_ytKPAR",
         "text_BNxhTP",
@@ -68,7 +76,7 @@
       "settings": {
         "section_top": "4",
         "section_bottom": "none",
-        "section_top_mobile": "2",
+        "section_top_mobile": "4",
         "section_bottom_mobile": "none"
       }
     },
@@ -79,11 +87,15 @@
         "show_line_separator": true,
         "show_desktop": true,
         "show_mobile": true,
-        "title": "Over 11,000 5-Star Reviews",
+        "kicker": "Customer reviews",
+        "title": "Over 400,000+ Happy Customers",
         "product": "",
-        "padding_top": 36,
+        "padding_top": 68,
         "padding_bottom": 36
       }
+    },
+    "landing-button": {
+      "type": "landing-button"
     },
     "featured-reviews-103953810489": {
       "type": "featured-reviews",
@@ -92,6 +104,7 @@
         "show_line_separator": true,
         "show_desktop": true,
         "show_mobile": true,
+        "kicker": "Customer reviews",
         "title": "Over 11,000 5-Star Reviews",
         "product": "",
         "padding_top": 36,
@@ -103,6 +116,7 @@
     "landing-header",
     "landing-hero",
     "featured-reviews",
+    "landing-button",
     "featured-reviews-103953810489"
   ]
 }

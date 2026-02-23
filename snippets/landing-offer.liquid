@@ -7,11 +7,7 @@
 
   assign description = "On Your First Subscription Order<br /> + 10% off every recurring order"
 
-  assign call_to_action = "Save Now on Amazon"
-
   assign url = section.settings.url
-
-  assign incentives = "Free Fast Shipping with Prime, 30-day money-back guarantee" | split: ", "
 
   assign space = block.settings.space
 
@@ -39,15 +35,5 @@
     <span>4.5 &nbsp;|&nbsp; 15,000+ Reviews</span>
   </div>
 
-  <a href="{{ url }}" class="button-amazon">
-    <span>{%- render "icon-amazon" -%}</span>
-    <span>{{ call_to_action }}</span>
-    <span>{%- render "icon-arrow-right" -%}</span>
-  </a>
-
-  <ul class="landing-offer-incentives">
-    {%- for incentive in incentives -%}
-      <li>{{ incentive }}</li>
-    {%- endfor -%}
-  </ul>
+  {%- render "landing-button" -%}
 </div>

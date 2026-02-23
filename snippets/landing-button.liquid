@@ -1,0 +1,17 @@
+{%- liquid
+  assign incentives = "Free Fast Shipping with Prime, 30-day money-back guarantee" | split: ", "
+
+  assign call_to_action = "Save Now on Amazon"
+-%}
+
+<a href="{{ url }}" class="button-amazon">
+  <span>{%- render "icon-amazon" -%}</span>
+  <span>{{ call_to_action }}</span>
+  <span>{%- render "icon-arrow-right" -%}</span>
+</a>
+
+<ul class="landing-offer-incentives">
+  {%- for incentive in incentives -%}
+    <li>{{ incentive }}</li>
+  {%- endfor -%}
+</ul>

@@ -6,14 +6,16 @@
   assign url = block.settings.url
 -%}
 
-<a href="{{ url }}" class="button-amazon">
-  <span>{%- render "icon-amazon" -%}</span>
-  <span>{{ call_to_action }}</span>
-  <span>{%- render "icon-arrow-right" -%}</span>
-</a>
+<div {{ block.shopify_attributes }}>
+  <a href="{{ url }}" class="button-amazon">
+    <span>{%- render "icon-amazon" -%}</span>
+    <span>{{ call_to_action }}</span>
+    <span>{%- render "icon-arrow-right" -%}</span>
+  </a>
 
-<ul class="landing-offer-incentives">
-  {%- for incentive in incentives -%}
-    <li>{{ incentive }}</li>
-  {%- endfor -%}
-</ul>
+  <ul class="landing-offer-incentives">
+    {%- for incentive in incentives -%}
+      <li>{{ incentive }}</li>
+    {%- endfor -%}
+  </ul>
+</div>

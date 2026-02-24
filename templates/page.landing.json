@@ -101,6 +101,19 @@
     },
     "landing-button": {
       "type": "landing-button",
+      "blocks": {
+        "button_nyC8Mj": {
+          "type": "button",
+          "settings": {
+            "call_to_action": "Save Now on Amazon",
+            "url": "",
+            "incentives": "Free Fast Shipping with Prime\n30-day money-back guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "button_nyC8Mj"
+      ],
       "settings": {
         "section_top": "2",
         "section_bottom": "none",
@@ -150,6 +163,14 @@
     "landing-dropdowns": {
       "type": "landing-dropdowns",
       "blocks": {
+        "button_JtaatT": {
+          "type": "button",
+          "settings": {
+            "call_to_action": "Shop Now on Amazon",
+            "url": "",
+            "incentives": "Free Fast Shipping with Prime\n30-day money-back guarantee"
+          }
+        },
         "dropdown_zft4ec": {
           "type": "dropdown",
           "settings": {
@@ -184,6 +205,7 @@
         }
       },
       "block_order": [
+        "button_JtaatT",
         "dropdown_zft4ec",
         "dropdown_Uzty6k",
         "dropdown_38zEhm",
@@ -211,6 +233,19 @@
     },
     "landing-button-19381020": {
       "type": "landing-button",
+      "blocks": {
+        "button_wntDra": {
+          "type": "button",
+          "settings": {
+            "call_to_action": "Save Now on Amazon",
+            "url": "",
+            "incentives": "Free Fast Shipping with Prime\n30-day money-back guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "button_wntDra"
+      ],
       "settings": {
         "section_top": "3",
         "section_bottom": "none",

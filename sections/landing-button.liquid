@@ -10,7 +10,11 @@
 
 <div class="landing-container top-{{ section_top }} small--top-{{ section_top_mobile }} bottom-{{ section_bottom }} small--bottom-{{ section_bottom_mobile }}">
   <div class="text--center">
-    {%- render "landing-button" -%}
+    {%- liquid
+      for block in section.blocks
+        render "landing-button" block: block
+      endfor
+    -%}
   </div>
 </div>
 
@@ -162,6 +166,32 @@
           }
         ],
         "default": "none"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Button",
+        "type": "button",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "call_to_action",
+            "label": "Call to action",
+            "default": "Save Now on Amazon"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Link"
+          },
+          {
+            "type": "textarea",
+            "id": "incentives",
+            "label": "Incentives",
+            "default": "Free Fast Shipping with Prime\n30-day money-back guarantee"
+          }
+        ]
       }
     ]
   }

@@ -49,7 +49,11 @@
         {%- render "landing-text" block: block -%}
       {%- endfor -%}
 
-      {%- render "landing-offer" block: offer_block -%}
+      {%- if offer_block -%}
+        <div class="stack-item-2">
+          {%- render "landing-offer" block: offer_block -%}
+        </div>
+      {%- endif -%}
     </div>
     <div>
       <div class="landing-hero-image">
@@ -289,22 +293,45 @@
         "type": "offer",
         "settings": [
           {
-            "type": "range",
-            "id": "space",
-            "label": "Space",
-            "min": -3,
-            "max": 5,
-            "step": 1,
-            "default": 1
+            "type": "text",
+            "id": "price",
+            "label": "Price",
+            "default": "$20.99"
           },
           {
-            "type": "range",
-            "id": "space_mobile",
-            "label": "Space (mobile)",
-            "min": -3,
-            "max": 5,
-            "step": 1,
-            "default": 1
+            "type": "text",
+            "id": "compare_price",
+            "label": "Compare-at price",
+            "default": "$29.99"
+          },
+          {
+            "type": "text",
+            "id": "savings",
+            "label": "Savings",
+            "default": "Save 30%"
+          },
+          {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description",
+            "default": "On Your First Subscription Order<br> + 10% off every recurring order"
+          },
+          {
+            "type": "text",
+            "id": "call_to_action",
+            "label": "Call to action",
+            "default": "Save Now on Amazon"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Link"
+          },
+          {
+            "type": "textarea",
+            "id": "incentives",
+            "label": "Incentives",
+            "default": "Free Fast Shipping with Prime<br>30-day money-back guarantee"
           }
         ]
       }

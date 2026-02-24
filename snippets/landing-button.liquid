@@ -1,7 +1,7 @@
 {%- liquid
-  assign incentives = "Free Fast Shipping with Prime, 30-day money-back guarantee" | split: ", "
+  assign incentives = block.settings.incentives | newline_to_br | split: "<br />"
 
-  assign call_to_action = "Save Now on Amazon"
+  assign call_to_action = block.settings.call_to_action
 
   assign url = block.settings.url
 -%}

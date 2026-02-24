@@ -1,20 +1,18 @@
 {%- liquid
-  assign price = "$20.99"
+  assign price = block.settings.price
 
-  assign compare_price = "$29.99"
+  assign compare_price = block.settings.compare_price
 
-  assign savings = "Save 30%"
+  assign savings = block.settings.savings
 
-  assign description = "On Your First Subscription Order<br /> + 10% off every recurring order"
+  assign description = block.settings.description
 
-  assign url = section.settings.url
+  assign call_to_action = block.settings.call_to_action
 
-  assign space = block.settings.space
-
-  assign space_mobile = block.settings.space_mobile
+  assign url = block.settings.url
 -%}
 
-<div class="stack stack-item-{{ space }} small--stack-item-{{ space_mobile }} text--center landing-offer" {{ block.shopify_attributes }}>
+<div class="stack text--center landing-offer" {{ block.shopify_attributes }}>
   <div class="landing-offer-pricing">
     <s class="landing-offer-price">{{ compare_price }}</s>
     <strong class="landing-offer-price">{{ price }}</strong>
@@ -35,5 +33,5 @@
     <span>4.5 &nbsp;|&nbsp; 15,000+ Reviews</span>
   </div>
 
-  {%- render "landing-button" -%}
+  {%- render "landing-button" block: block -%}
 </div>

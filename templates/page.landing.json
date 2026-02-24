@@ -19,8 +19,13 @@
         "offer_T3EeJx": {
           "type": "offer",
           "settings": {
-            "space": 2,
-            "space_mobile": 1
+            "price": "$20.99",
+            "compare_price": "$29.99",
+            "savings": "Save 30%",
+            "description": "On Your First Subscription Order<br> + 10% off every recurring order",
+            "call_to_action": "Save Now on Amazon",
+            "url": "",
+            "incentives": "Free Fast Shipping with Prime\n30-day money-back guarantee"
           }
         },
         "text_QHPewk": {
@@ -215,6 +220,23 @@
     },
     "landing-banner": {
       "type": "landing-banner",
+      "blocks": {
+        "offer_jHqjMj": {
+          "type": "offer",
+          "settings": {
+            "price": "$20.99",
+            "compare_price": "$29.99",
+            "savings": "Save 30%",
+            "description": "On Your First Subscription Order<br> + 10% off every recurring order",
+            "call_to_action": "Save Now on Amazon",
+            "url": "",
+            "incentives": "Free Fast Shipping with Prime\n30-day money-back guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "offer_jHqjMj"
+      ],
       "settings": {
         "image": "shopify://shop_images/medicine-mama-landing-banner.jpg",
         "heading": "Feel like you again & Save 30%",

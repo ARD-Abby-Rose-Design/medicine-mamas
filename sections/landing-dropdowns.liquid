@@ -1,5 +1,13 @@
 {%- liquid
-  assign text_blocks = section.blocks | where: "type", "text"
+  assign heading = section.settings.heading
+
+  assign image = section.settings.image | default: nil
+
+  assign image_url = image | image_url: width: 400
+
+  assign button_block = section.blocks | where: "type", "button" | first
+
+  assign dropdown_blocks = section.blocks | where: "type", "dropdown"
 
   assign section_top = section.settings.section_top
 
@@ -11,74 +19,97 @@
 -%}
 
 <style>
-  .landing-statistics-data-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: var(--s1);
-    max-width: 600px;
-    margin-right: auto;
-    margin-left: auto;
+  .landing-dropdowns-grid {
+    align-items: start !important;
   }
 
-  @media (min-width: 961px) {
-    .landing-statistics-data-grid {
-      max-width: none;
+  @media (max-width: 960px) {
+    .landing-dropdowns-grid {
+      row-gap: var(--s3) !important;
     }
   }
 
-  .landing-statistics-data-grid > * {
-    flex: 1;
+
+  .landing-dropdowns-heading {
+    text-transform: none;
+    font-family: "Forma";
+    font-weight: 400;
+    line-height: 120%;
   }
 
-  .landing-statistics-circle {
-    aspect-ratio: 1 / 1;
-    border: 8px solid var(--color-2);
-    border-radius: 50%;
-    position: relative;
+  .landing-dropdown:not(:last-child) {
+    border-bottom: 1px dotted #C7C7C7;
   }
 
-  .landing-statistics-circle span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .landing-dropdown-heading {
+    font-family: "Forma";
+    font-weight: 700;
+    font-size: var(--t4);
+  }
+
+  .landing-dropdown-content {
+    display: flex;
+    gap: var(--s1);
+    align-items: center;
   }
 </style>
 
 <div class="landing-container top-{{ section_top }} small--top-{{ section_top_mobile }} bottom-{{ section_bottom }} small--bottom-{{ section_bottom_mobile }}">
-  <div class="landing-grid">
+  <div class="landing-grid landing-dropdowns-grid">
     <div>
-      <div class="stack">
-        {%- for block in text_blocks -%}
-          {%- render "landing-text" block: block -%}
-        {%- endfor -%}
+      <div class="stack-2">
+        {%- if image -%}
+          <div class="object-cover ratio--image" style="--image-width: {{ image.width }}; --image-height: {{ image.height }};">
+            {{ image_url | image_tag }}
+          </div>
+        {%- endif -%}
+
+        <div class="center landing-visibility--desktop">
+          {%- render "landing-button" block: button_block -%}
+        </div>
       </div>
     </div>
     <div>
-      <div class="landing-statistics-data-grid">
-        <div class="stack-2 small--stack-1">
-          <div class="landing-statistics-circle">
-            <span class="size-9 small--size-5">100%</span>
-          </div>
-          <p class="size-3">
-            reported no irritation
-          </p>
+      <div class="stack-2">
+        <div class="landing-text size-7 small--size-6" style="max-width: 400px;">
+          <h1 class="landing-dropdowns-heading">
+            {{ heading }}
+          </h1>
         </div>
-        <div class="stack-2 small--stack-1">
-          <div class="landing-statistics-circle">
-            <span class="size-9 small--size-5">96%</span>
-          </div>
-          <p class="size-3">
-            saw a reduction in dryness after consistent 2-week use*
-          </p>
+
+        <div class="landing-dropdowns">
+          {%- for block in dropdown_blocks -%}
+            {%- liquid
+              assign heading = block.settings.title
+
+              assign description = block.settings.description
+
+              assign icon = block.settings.icon
+            -%}
+
+            <div class="landing-dropdown block-1 stack-1">
+              <div class="landing-text size-4 small--size-3">
+                <h2>
+                  <strong>{{ heading }}</strong>
+                </h2>
+              </div>
+
+              <div class="landing-dropdown-content">
+                <div>
+                  {{ icon }}
+                </div>
+                <div class="landing-text">
+                  <p>
+                    {{ description }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          {%- endfor -%}
         </div>
-        <div clas="stack-2 small--stack-1">
-          <div class="landing-statistics-circle">
-            <span class="size-9 small--size-5">79%</span>
-          </div>
-          <p class="size-3">
-            reported immediate soothing relief from intimate skin dryness*
-          </p>
+
+        <div class="center landing-visibility--mobile">
+          {%- render "landing-button" block: button_block -%}
         </div>
       </div>
     </div>
@@ -87,9 +118,19 @@
 
 {%- schema -%}
   {
-    "name": "Statistics",
+    "name": "Dropdowns",
     "tag": "section",
     "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
       {
         "type": "select",
         "id": "section_top",
@@ -245,46 +286,40 @@
     ],
     "blocks": [
       {
-        "name": "Text",
-        "type": "text",
+        "name": "Dropdown",
+        "type": "dropdown",
         "settings": [
           {
-            "type": "richtext",
-            "id": "text",
-            "label": "Text"
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
           },
           {
-            "type": "header",
-            "content": "Style"
+            "type": "textarea",
+            "id": "description",
+            "label": "Description"
           },
           {
-            "type": "color",
-            "id": "color",
-            "label": "Color"
+            "type": "html",
+            "id": "icon",
+            "label": "Icon (SVG)"
+          }
+        ]
+      },
+      {
+        "name": "Button",
+        "type": "button",
+        "settings": [
+          {
+            "type": "text",
+            "id": "call_to_action",
+            "label": "Call to action",
+            "default": "Shop Now on Amazon"
           },
           {
-            "type": "range",
-            "id": "size",
-            "label": "Size",
-            "min": -1,
-            "max": 12,
-            "step": 1,
-            "default": 0
-          },
-          {
-            "type": "range",
-            "id": "size_mobile",
-            "label": "Size (mobile)",
-            "min": -1,
-            "max": 12,
-            "step": 1,
-            "default": 0
-          },
-          {
-            "type": "number",
-            "id": "width",
-            "label": "Width",
-            "default": 610
+            "type": "url",
+            "id": "url",
+            "label": "Link"
           },
           {
             "type": "range",

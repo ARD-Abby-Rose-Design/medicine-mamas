@@ -137,8 +137,59 @@
       ],
       "settings": {
         "section_top": "6",
-        "section_bottom": "5",
+        "section_bottom": "none",
         "section_top_mobile": "5",
+        "section_bottom_mobile": "4"
+      }
+    },
+    "landing-dropdowns": {
+      "type": "landing-dropdowns",
+      "blocks": {
+        "dropdown_zft4ec": {
+          "type": "dropdown",
+          "settings": {
+            "title": "100% USDA Organic",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus interdum elit, ac vehicula nulla sagittis in. Cras in dolor diam. Sed lorem tortor, euismod.",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 50 50\" fill=\"none\">\n  <path d=\"M48.9583 44.5582C43.7499 45.6436 40.4999 40.4353 40.4999 40.4353V40.4353C38.8628 43.0379 36.03 44.6464 32.9562 44.7186C30.0409 44.6646 27.3883 43.0214 26.0416 40.4353V40.4353C24.0768 42.991 21.0903 44.5566 17.8708 44.7186C14.8191 44.5739 12.0194 42.9829 10.3333 40.4353V40.4353C10.3333 40.4353 6.16658 45.7311 1.052 44.6436\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M43.7498 19.7603C33.9698 19.7603 26.0415 27.6885 26.0415 37.4686C30.738 37.4686 35.2422 35.6029 38.5632 32.2819C41.8841 28.961 43.7498 24.4568 43.7498 19.7603Z\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n  <path d=\"M30.7019 25.4999C33.181 18.4067 31.3786 10.5204 26.0644 5.20825C20.7309 10.5422 18.9387 18.4672 21.4582 25.577\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.33325 19.7603C18.1133 19.7603 26.0416 27.6885 26.0416 37.4686C16.2615 37.4686 8.33325 29.5403 8.33325 19.7603L8.33325 19.7603Z\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n  <path d=\"M26.0436 40.6249V36.427\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n</svg>"
+          }
+        },
+        "dropdown_Uzty6k": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Hormone Free & Safe",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus interdum elit, ac vehicula nulla sagittis in. Cras in dolor diam. Sed lorem tortor, euismod.",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"51\" height=\"48\" viewbox=\"0 0 51 48\" fill=\"none\">\n  <path d=\"M16.5852 0.149658C18.3048 0.14991 19.7042 1.53963 19.7043 3.24243C19.7043 4.71035 18.6738 5.92955 17.2961 6.24927V8.42993L25.3411 13.0627L27.0657 11.9026C26.9346 11.5601 26.8645 11.191 26.8645 10.8079C26.8646 9.10044 28.2618 7.71509 29.9836 7.71509C31.7032 7.7151 33.1027 9.09818 33.1028 10.8079C33.1028 12.5156 31.6988 13.9006 29.9836 13.9006C29.1683 13.9006 28.4278 13.5838 27.8704 13.0725L26.009 14.3215V22.5286L33.5715 18.2122C33.7907 18.0861 34.0623 18.0861 34.2815 18.2122L42.9944 23.1877H42.9954C43.2144 23.3143 43.3507 23.5483 43.3508 23.802V33.4172L45.177 34.5696C45.7226 34.0533 46.4572 33.723 47.2668 33.7073L47.2717 33.7034H47.3303C49.0499 33.7034 50.4503 35.0864 50.4504 36.7961C50.4504 38.5037 49.0523 39.8889 47.3303 39.8889C45.6107 39.8887 44.2112 38.4991 44.2112 36.7961C44.2112 36.4279 44.28 36.0768 44.3987 35.7522L42.6047 34.6233L34.636 39.177V41.3567C36.0116 41.6762 37.0442 42.8957 37.0442 44.3577C37.044 46.065 35.6469 47.4504 33.925 47.4504C32.2055 47.4504 30.8061 46.0673 30.8059 44.3577C30.8059 42.896 31.8358 41.6765 33.2131 41.3567V39.176L25.2649 34.634L23.4573 35.7532C23.5758 36.0775 23.6448 36.428 23.6448 36.7922C23.6447 38.4997 22.2475 39.885 20.5256 39.885C18.8061 39.8849 17.4066 38.5019 17.4065 36.7922C17.4065 35.0846 18.8105 33.6996 20.5256 33.6995C21.3616 33.6995 22.1178 34.0341 22.677 34.5676L24.5032 33.4368V25.0735L16.9407 29.4241L16.9397 29.4231C16.827 29.4962 16.6992 29.5227 16.5852 29.5227C16.4587 29.5227 16.3396 29.485 16.2317 29.425L16.2297 29.4241L7.51685 24.4104V24.4094C7.29573 24.2883 7.16138 24.0536 7.16138 23.802V14.2678L5.3811 13.0754C4.82591 13.5841 4.08646 13.9025 3.26978 13.9026C1.55027 13.9026 0.149889 12.5204 0.149658 10.8108C0.149658 9.10326 1.54783 7.71802 3.26978 7.71802C4.98944 7.71826 6.38892 9.10785 6.38892 10.8108C6.38886 11.1945 6.31247 11.5618 6.18286 11.9036L7.87231 13.0374L15.8733 8.42993V6.24927C14.4978 5.9273 13.4651 4.70409 13.4651 3.24243C13.4653 1.53504 14.8634 0.149658 16.5852 0.149658ZM33.927 42.6819C32.9866 42.6819 32.2297 43.4339 32.2297 44.3625C32.2299 45.291 32.9868 46.0422 33.927 46.0422C34.8667 46.042 35.6231 45.2847 35.6233 44.3625C35.6233 43.434 34.8672 42.6821 33.927 42.6819ZM47.3274 35.1155C46.3871 35.1156 45.6311 35.8666 45.6311 36.7952C45.6311 37.7234 46.3934 38.4747 47.3274 38.4749C48.2678 38.4749 49.0237 37.7238 49.0237 36.7952C49.0237 35.8665 48.2678 35.1155 47.3274 35.1155ZM20.5315 35.1145C19.5913 35.1147 18.8352 35.8666 18.8352 36.7952C18.8355 37.7231 19.5977 38.4746 20.5315 38.4749C21.4717 38.4749 22.2285 37.7236 22.2288 36.7952C22.2288 35.8665 21.4719 35.1145 20.5315 35.1145ZM25.925 24.218V33.3918L33.926 37.9563L41.928 33.3909V24.219L33.926 19.6526L25.925 24.218ZM8.59009 14.2698V23.4045L16.5911 28.0081L24.593 23.4045V14.2698L16.5911 9.66626L8.59009 14.2698ZM29.9924 9.14282C29.0521 9.14282 28.2961 9.89482 28.2961 10.8235C28.2963 11.752 29.0522 12.5032 29.9924 12.5032C30.9326 12.5031 31.6885 11.752 31.6887 10.8235C31.6887 9.89519 30.9265 9.14286 29.9924 9.14282ZM3.28052 9.13892C2.34021 9.13892 1.58334 9.89001 1.58325 10.8186C1.58325 11.7469 2.3464 12.4983 3.28052 12.4983C4.22072 12.4981 4.97681 11.7472 4.97681 10.8186C4.97672 9.89012 4.22067 9.1391 3.28052 9.13892ZM16.5959 1.57642C15.656 1.57642 14.8988 2.3337 14.8987 3.2561C14.8987 4.18477 15.6556 4.93579 16.5959 4.93579C17.5361 4.93556 18.2922 4.18463 18.2922 3.2561C18.2921 2.32765 17.5361 1.57664 16.5959 1.57642Z\" fill=\"black\" stroke=\"black\" stroke-width=\"0.3\"></path>\n</svg>"
+          }
+        },
+        "dropdown_38zEhm": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Clinically Tested",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus interdum elit, ac vehicula nulla sagittis in. Cras in dolor diam. Sed lorem tortor, euismod.",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 50 50\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22.9166 30.2084C24.0672 30.2084 24.9999 29.2757 24.9999 28.1251C24.9999 26.9745 24.0672 26.0417 22.9166 26.0417C21.766 26.0417 20.8333 26.9745 20.8333 28.1251C20.8333 29.2757 21.766 30.2084 22.9166 30.2084Z\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M27.0833 22.9167C28.2339 22.9167 29.1667 21.9839 29.1667 20.8333C29.1667 19.6827 28.2339 18.75 27.0833 18.75C25.9327 18.75 25 19.6827 25 20.8333C25 21.9839 25.9327 22.9167 27.0833 22.9167Z\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24.9998 41.6667C26.1504 41.6667 27.0832 40.7339 27.0832 39.5833C27.0832 38.4327 26.1504 37.5 24.9998 37.5C23.8492 37.5 22.9165 38.4327 22.9165 39.5833C22.9165 40.7339 23.8492 41.6667 24.9998 41.6667Z\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M33.9291 1.04175H16.0707C15.7333 1.04483 15.4183 1.21113 15.2255 1.48799C15.0327 1.76484 14.9858 2.11796 15.0999 2.4355C16.1367 5.46897 16.666 8.65267 16.6666 11.8584V40.2667C16.5936 44.6469 19.834 48.3777 24.1812 48.9188C26.5225 49.15 28.8524 48.3807 30.5958 46.8008C32.3391 45.221 33.3334 42.9778 33.3332 40.6251V11.8584C33.3338 8.65267 33.8631 5.46897 34.8999 2.4355C35.014 2.11796 34.9671 1.76484 34.7743 1.48799C34.5815 1.21113 34.2665 1.04483 33.9291 1.04175Z\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n  <path d=\"M16.6665 13.5417H33.3332\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n</svg>"
+          }
+        },
+        "dropdown_4Vmxqw": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Doctor Formulated & Trusted",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus interdum elit, ac vehicula nulla sagittis in. Cras in dolor diam. Sed lorem tortor, euismod.",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 50 50\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M40.625 23.9585C44.0768 23.9585 46.875 21.1603 46.875 17.7085C46.875 14.2567 44.0768 11.4585 40.625 11.4585C37.1732 11.4585 34.375 14.2567 34.375 17.7085C34.375 21.1603 37.1732 23.9585 40.625 23.9585Z\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n  <path d=\"M9.375 3.125C5.92322 3.125 3.125 5.92322 3.125 9.375V17.7083V17.7083C3.125 23.4613 7.7887 28.125 13.5417 28.125C19.2946 28.125 23.9583 23.4613 23.9583 17.7083V9.375C23.9583 5.92322 21.1601 3.125 17.7083 3.125\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n  <path d=\"M13.5417 28.1252V44.7918C13.5417 47.093 15.4072 48.9585 17.7084 48.9585C20.0096 48.9585 21.8751 47.093 21.8751 44.7918V32.7752C21.8751 29.8987 24.2069 27.5668 27.0834 27.5668C29.9599 27.5668 32.2917 29.8987 32.2917 32.7752V40.6252C32.2917 42.9263 34.1572 44.7918 36.4584 44.7918C38.7596 44.7918 40.6251 42.9263 40.6251 40.6252V23.9585\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n  <path d=\"M9.375 1.04175V6.25008\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n  <path d=\"M17.7083 1.04175V6.25008\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n</svg>"
+          }
+        }
+      },
+      "block_order": [
+        "dropdown_zft4ec",
+        "dropdown_Uzty6k",
+        "dropdown_38zEhm",
+        "dropdown_4Vmxqw"
+      ],
+      "settings": {
+        "heading": "Clinically Supported Relief from Dryness",
+        "image": "shopify://shop_images/medicine-mamas-landing-dropdowns.jpg",
+        "section_top": "5",
+        "section_bottom": "5",
+        "section_top_mobile": "3",
         "section_bottom_mobile": "4"
       }
     },
@@ -157,7 +208,8 @@
       }
     },
     "landing-footer": {
-      "type": "landing-footer"
+      "type": "landing-footer",
+      "settings": {}
     }
   },
   "order": [
@@ -166,6 +218,7 @@
     "featured-reviews",
     "landing-button",
     "landing-statistics",
+    "landing-dropdowns",
     "featured-reviews-103953810489",
     "landing-footer"
   ]

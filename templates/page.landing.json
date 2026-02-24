@@ -208,9 +208,20 @@
       "type": "landing-button",
       "settings": {
         "section_top": "3",
-        "section_bottom": "5",
+        "section_bottom": "none",
         "section_top_mobile": "2",
         "section_bottom_mobile": "none"
+      }
+    },
+    "landing-banner": {
+      "type": "landing-banner",
+      "settings": {
+        "image": "shopify://shop_images/medicine-mama-landing-banner.jpg",
+        "heading": "Feel like you again & Save 30%",
+        "section_top": "5",
+        "section_bottom": "4",
+        "section_top_mobile": "4",
+        "section_bottom_mobile": "3"
       }
     },
     "featured-reviews-103953810489": {
@@ -241,6 +252,7 @@
     "landing-dropdowns",
     "landing-comparison",
     "landing-button-19381020",
+    "landing-banner",
     "featured-reviews-103953810489",
     "landing-footer"
   ]

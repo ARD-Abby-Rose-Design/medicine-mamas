@@ -37,7 +37,7 @@
 
 .featured-review h3 {
   margin: 0;
-  
+
 }
 
 .featured-reviews__header {
@@ -91,10 +91,6 @@
   }
   .featured-review.card {
     text-align: left;
-  }
-  .featured-reviews__header {
-    text-align: left;
-    margin-left: 2rem;
   }
 }
 

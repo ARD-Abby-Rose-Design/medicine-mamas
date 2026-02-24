@@ -13,7 +13,7 @@
 -%}
 
 <style>
-  .landing-comparison-table {
+  .landing-compare-table {
     max-width: 800px;
     margin-right: auto;
     margin-left: auto;
@@ -23,19 +23,19 @@
     grid-template-rows: 1fr;
   }
 
-  .landing-comparison-table > * {
+  .landing-compare-table > * {
     grid-area: 1 / 1;
     width: 100%;
     height: 100%;
   }
 
-  .landing-comparison-grid {
+  .landing-compare-grid {
     display: grid;
     grid-template-columns: 1.2fr 1fr 1fr 1px;
     column-gap: var(--s2);
   }
 
-  .landing-comparison-brands {
+  .landing-compare-brands {
     grid-column: 2 / span 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -43,57 +43,57 @@
   }
 
   @media (max-width: 960px) {
-    .landing-comparison-grid {
+    .landing-compare-grid {
       column-gap: 5px;
     }
 
-    .landing-comparison-brands {
+    .landing-compare-brands {
       column-gap: 5px;
     }
   }
 
-  .landing-comparison-brand-column {
+  .landing-compare-brand-column {
     border-radius: 15px;
   }
 
-  .landing-comparison-brand {
+  .landing-compare-brand {
     height: 160px;
     display: grid;
     place-items: center;
     padding: var(--s1);
   }
 
-  .landing-comparison-icon-other {
+  .landing-compare-icon-other {
     max-width: 86px;
     margin-right: auto;
     margin-left: auto;
   }
 
   @media (max-width: 960px) {
-    .landing-comparison-icon-other {
+    .landing-compare-icon-other {
       max-width: 65px;
     }
   }
 
-  .landing-comparison-attribute-row {
+  .landing-compare-attribute-row {
     border-top: 1px solid #CECDCB;
   }
 
-  .landing-comparison-attribute-row > * {
+  .landing-compare-attribute-row > * {
     padding-block: var(--s2);
     padding-bottom: calc(var(--s2) - 3px);
   }
 
-  .landing-comparison-attributes {
+  .landing-compare-attributes {
     padding-top: 160px;
   }
 
-  .landing-comparison-attribute-value {
+  .landing-compare-attribute-value {
     display: grid;
     place-items: center;
   }
 
-  .landing-comparison-icon-true {
+  .landing-compare-icon-true {
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -117,14 +117,14 @@
   </div>
 
   <div class="stack-item-4">
-    <div class="landing-comparison-table">
-      <div class="landing-comparison-grid">
-        <div class="landing-comparison-brands">
-          <div class="landing-comparison-brand-column" style="background-color: #FFFFFF;">
-            <div class="landing-comparison-brand">
+    <div class="landing-compare-table">
+      <div class="landing-compare-grid">
+        <div class="landing-compare-brands">
+          <div class="landing-compare-brand-column" style="background-color: #FFFFFF;">
+            <div class="landing-compare-brand">
               <div class="stack center">
                 <div class="object-cover" style="max-width: 118px; margin-right: auto; margin-left: auto;">
-                  {{ "landing-comparison.png" | asset_url | img_tag }}
+                  {{ "landing-compare.png" | asset_url | img_tag }}
                 </div>
 
                 {%- render "icon-logo-small" -%}
@@ -132,11 +132,11 @@
             </div>
           </div>
 
-          <div class="landing-comparison-brand-column" style="background-color: #E8E7E7;">
-            <div class="landing-comparison-brand">
+          <div class="landing-compare-brand-column" style="background-color: #E8E7E7;">
+            <div class="landing-compare-brand">
               <div class="stack center">
-                <div class="landing-comparison-icon-other">
-                  {%- render "icon-landing-comparison-other" -%}
+                <div class="landing-compare-icon-other">
+                  {%- render "icon-landing-compare-other" -%}
                 </div>
 
                 <div class="landing-text size-3 small--size-2">
@@ -148,15 +148,15 @@
         </div>
       </div>
 
-      <div class="landing-comparison-attributes">
+      <div class="landing-compare-attributes">
         {%- for n in (1..4) -%}
-          <div class="landing-comparison-grid landing-comparison-attribute-row">
+          <div class="landing-compare-grid landing-compare-attribute-row">
             <div class="landing-text size-3 small--size-2 inline-1">
               <p>Lorem ipsum dolor sit.</p>
             </div>
 
-            <div class="landing-comparison-attribute-value">
-              <div class="landing-comparison-icon-true">
+            <div class="landing-compare-attribute-value">
+              <div class="landing-compare-icon-true">
                 {%- render "icon-landing-checkmark" -%}
               </div>
             </div>
@@ -186,7 +186,7 @@
 
 {%- schema -%}
   {
-    "name": "Comparison",
+    "name": "Compare",
     "tag": "section",
     "settings": [
       {

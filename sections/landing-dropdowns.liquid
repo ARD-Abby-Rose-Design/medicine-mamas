@@ -25,7 +25,7 @@
 
   @media (max-width: 960px) {
     .landing-dropdowns-grid {
-      row-gap: var(--s3) !important;
+      row-gap: var(--s2) !important;
     }
   }
 
@@ -63,7 +63,7 @@
       </div>
     </div>
     <div>
-      <div class="stack-2">
+      <div class="stack-2 small--stack-none">
         <div class="landing-text" style="max-width: 400px;">
           <h1 class="landing-heading">
             {{ heading }}
@@ -101,7 +101,7 @@
           {%- endfor -%}
         </div>
 
-        <div class="center landing-visibility--mobile">
+        <div class="center small--stack-item-2 landing-visibility--mobile">
           {%- render "landing-button" block: button_block -%}
         </div>
       </div>

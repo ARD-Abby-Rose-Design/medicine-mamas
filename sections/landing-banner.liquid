@@ -17,13 +17,13 @@
 -%}
 
 <style>
-  .landing-banner-grid {
+  .landing-banner-container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
 
-  .landing-banner-grid > * {
+  .landing-banner-container > * {
     grid-area: 1 / 1;
     width: 100%;
     height: 100%;
@@ -34,25 +34,21 @@
     height: 800px;
   }
 
-  .landing-banner-content-grid {
+  .landing-banner-content-container {
     display: grid;
     place-items: center end;
   }
-
-  .landing-banner-content {
-    text-align: center;
-  }
 </style>
 
-<div class="top-{{ section_top }} small--top-{{ section_top_mobile }} bottom-{{ section_bottom }} small--bottom-{{ section_bottom_mobile }} landing-banner-grid">
+<div class="top-{{ section_top }} small--top-{{ section_top_mobile }} bottom-{{ section_bottom }} small--bottom-{{ section_bottom_mobile }} landing-banner-container">
   {%- if image -%}
     <div class="object-cover ratio--image landing-banner-image" style="--image-width: {{ image.width}}; --image-height: {{ image.height }};">
       {{ image_url | image_tag }}
     </div>
   {%- endif -%}
 
-  <div class="landing-container landing-banner-content-grid">
-    <div class="stack-1 landing-banner-content">
+  <div class="landing-container landing-banner-content-container">
+    <div class="stack-1 text--center landing-banner-content">
       {%- render "landing-amazon-exclusive" -%}
 
       <div class="landing-text" style="max-width: 275px; margin-right: auto; margin-left: auto;">

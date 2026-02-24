@@ -63,6 +63,18 @@
     padding: var(--s1);
   }
 
+  .landing-compare-icon-logo {
+    max-width: 100px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (max-width: 960px) {
+    .landing-compare-icon-logo {
+      max-width: 56px;
+    }
+  }
+
   .landing-compare-icon-other {
     max-width: 86px;
     margin-right: auto;
@@ -122,12 +134,18 @@
         <div class="landing-compare-brands">
           <div class="landing-compare-brand-column" style="background-color: #FFFFFF;">
             <div class="landing-compare-brand">
-              <div class="stack center">
+              <div class="stack-1 small--stack--1 center">
                 <div class="object-cover" style="max-width: 118px; margin-right: auto; margin-left: auto;">
                   {{ "landing-compare.png" | asset_url | img_tag }}
                 </div>
 
-                {%- render "icon-logo-small" -%}
+                <div class="landing-visibility--desktop">
+                  {%- render "icon-logo-small" -%}
+                </div>
+
+                <div class="landing-visibility--mobile">
+                  {%- render "icon-logo-stacked" -%}
+                </div>
               </div>
             </div>
           </div>

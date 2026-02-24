@@ -1,0 +1,70 @@
+<style>
+  .landing-footer-heading {
+    margin: 0;
+  }
+
+  .landing-footer-copyright {
+    font-size: 12px;
+  }
+
+  @media (min-width: 961px) {
+    .landing-footer-copyright {
+      display: flex;
+      gap: var(--s-1);
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 960px) {
+    .landing-footer-copyright {
+      display: grid;
+    }
+
+    .landing-footer-copyright svg {
+      grid-row: 1;
+      justify-self: center;
+    }
+
+    .landing-footer-copyright p {
+      margin-bottom: 0;
+    }
+  }
+</style>
+
+<footer class="landing-container block-4 stack-4 small--stack-1 center">
+  <h1 class="landing-footer-heading">
+    Bodly Pure<br />
+    Vulva Care
+  </h1>
+
+  <div class="landing-footer-copyright">
+    <p class="rte">
+      &copy; {{ 'now' | date: '%Y' }} {{ shop.name | link_to: routes.root_url -}}. All Rights Reserved.
+    </p>
+
+    {%- render 'icon-favicon' -%}
+
+    <ul class="policies list-unstyled">
+      {%- for policy in shop.policies -%}
+        {%- if policy != blank -%}
+          <li>
+            <small class="copyright__content"
+              ><a href="{{ policy.url }}">{{ policy.title }}</a></small
+            >
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </div>
+</footer>
+
+{%- schema -%}
+  {
+    "name": "Footer",
+    "tag": "section",
+    "settings": [
+
+    ]
+  }
+{%- endschema -%}

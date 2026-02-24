@@ -141,6 +141,10 @@
   .small--stack-5 > * + * {
     margin-top: var(--s5);
   }
+
+  .small--stack-none > * + * {
+    margin-top: 0;
+  }
 }
 
 

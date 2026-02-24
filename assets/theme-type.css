@@ -35,7 +35,6 @@
 .landing-text ul {
   margin: 0;
   font-size: inherit;
-  font-weight: normal;
   overflow-wrap: norma;
   word-break: keep-all;
 }
@@ -208,5 +207,44 @@ p {
 
   .small--text--right > * {
     margin-left: auto;
+  }
+}
+
+
+.landing-kicker {
+  display: flex;
+  gap: var(--s0);
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.landing-kicker p {
+  position: relative;
+  top: 1px;
+}
+
+@media (max-width: 960px) {
+  .landing-kicker {
+    font-size: 13px;
+  }
+}
+
+
+.landing-heading,
+.featured-reviews__header {
+  text-transform: none;
+  font-family: "Forma";
+  font-weight: 400;
+  line-height: 120%;
+  font-size: var(--t7) !important;
+}
+
+@media (max-width: 960px) {
+  .landing-heading,
+  .featured-reviews__header {
+    font-size: var(--t6) !important;
   }
 }

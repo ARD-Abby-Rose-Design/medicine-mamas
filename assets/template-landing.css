@@ -65,26 +65,6 @@
 }
 
 
-.landing-kicker {
-  display: flex;
-  gap: var(--s0);
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
-}
-
-.landing-kicker p {
-  position: relative;
-  top: 1px;
-}
-
-@media (max-width: 960px) {
-  .landing-kicker {
-    font-size: 13px;
-  }
-}
-
-
 .landing-offer {
   background-color: #FFFFFF;
   padding: var(--s2);

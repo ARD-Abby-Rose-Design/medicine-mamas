@@ -1,0 +1,367 @@
+{%- liquid
+  assign kicker = section.settings.kicker
+
+  assign heading = section.settings.heading
+
+  assign section_top = section.settings.section_top
+
+  assign section_bottom = section.settings.section_bottom
+
+  assign section_top_mobile = section.settings.section_top_mobile
+
+  assign section_bottom_mobile = section.settings.section_bottom_mobile
+-%}
+
+<style>
+  .landing-comparison-table {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .landing-comparison-table > * {
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .landing-comparison-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1px;
+    column-gap: var(--s2);
+  }
+
+  .landing-comparison-brands {
+    grid-column: 2 / span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--s2);
+  }
+
+  @media (max-width: 960px) {
+    .landing-comparison-grid {
+      column-gap: 5px;
+    }
+
+    .landing-comparison-brands {
+      column-gap: 5px;
+    }
+  }
+
+  .landing-comparison-brand-column {
+    border-radius: 15px;
+  }
+
+  .landing-comparison-brand {
+    height: 160px;
+    display: grid;
+    place-items: center;
+    padding: var(--s1);
+  }
+
+  .landing-comparison-icon-other {
+    max-width: 86px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (max-width: 960px) {
+    .landing-comparison-icon-other {
+      max-width: 65px;
+    }
+  }
+
+  .landing-comparison-attribute-row {
+    border-top: 1px solid #CECDCB;
+  }
+
+  .landing-comparison-attribute-row > * {
+    padding-block: var(--s2);
+    padding-bottom: calc(var(--s2) - 3px);
+  }
+
+  .landing-comparison-attributes {
+    padding-top: 160px;
+  }
+
+  .landing-comparison-attribute-value {
+    display: grid;
+    place-items: center;
+  }
+
+  .landing-comparison-icon-true {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #000000;
+    color: #FFFFFF;
+    display: grid;
+    place-items: center;
+  }
+</style>
+
+<div class="landing-container top-{{ section_top }} small--top-{{ section_top_mobile }} bottom-{{ section_bottom }} small--bottom-{{ section_bottom_mobile }}">
+  <div class="stack-1 center">
+    <div class="landing-text landing-kicker">
+      <p>{{ kicker }}</p>
+    </div>
+    <div class="landing-text">
+      <h1 class="landing-heading">
+        {{ heading }}
+      </h1>
+    </div>
+  </div>
+
+  <div class="stack-item-4">
+    <div class="landing-comparison-table">
+      <div class="landing-comparison-grid">
+        <div class="landing-comparison-brands">
+          <div class="landing-comparison-brand-column" style="background-color: #FFFFFF;">
+            <div class="landing-comparison-brand">
+              <div class="stack center">
+                <div class="object-cover" style="max-width: 118px; margin-right: auto; margin-left: auto;">
+                  {{ "landing-comparison.png" | asset_url | img_tag }}
+                </div>
+
+                {%- render "icon-logo-small" -%}
+              </div>
+            </div>
+          </div>
+
+          <div class="landing-comparison-brand-column" style="background-color: #E8E7E7;">
+            <div class="landing-comparison-brand">
+              <div class="stack center">
+                <div class="landing-comparison-icon-other">
+                  {%- render "icon-landing-comparison-other" -%}
+                </div>
+
+                <div class="landing-text size-3 small--size-2">
+                  <p>Other leading balms</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="landing-comparison-attributes">
+        {%- for n in (1..4) -%}
+          <div class="landing-comparison-grid landing-comparison-attribute-row">
+            <div class="landing-text size-3 small--size-2 inline-1">
+              <p>Lorem ipsum dolor sit.</p>
+            </div>
+
+            <div class="landing-comparison-attribute-value">
+              <div class="landing-comparison-icon-true">
+                {%- render "icon-landing-checkmark" -%}
+              </div>
+            </div>
+
+            <div class="center">
+              {%- render "icon-landing-false" -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    {%- for block in section.blocks -%}
+      {%- liquid
+        assign image = block.settings.image
+
+        assign image_url = image | image_url: width: 300
+
+        assign attribute = block.settings.attribute
+
+        assign value = block.settings.value
+      -%}
+
+    {%- endfor -%}
+  </div>
+</div>
+
+{%- schema -%}
+  {
+    "name": "Comparison",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "kicker",
+        "label": "Kicker",
+        "default": "Us vs them"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Trusted by Doctors. Loved by Women."
+      },
+      {
+        "type": "select",
+        "id": "section_top",
+        "label": "Section top",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "0",
+            "value": "0"
+          },
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "3",
+            "value": "3"
+          },
+          {
+            "label": "4",
+            "value": "4"
+          },
+          {
+            "label": "5",
+            "value": "5"
+          },
+          {
+            "label": "6",
+            "value": "6"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "select",
+        "id": "section_bottom",
+        "label": "Section bottom",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "0",
+            "value": "0"
+          },
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "3",
+            "value": "3"
+          },
+          {
+            "label": "4",
+            "value": "4"
+          },
+          {
+            "label": "5",
+            "value": "5"
+          },
+          {
+            "label": "6",
+            "value": "6"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "select",
+        "id": "section_top_mobile",
+        "label": "Section top (mobile)",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "0",
+            "value": "0"
+          },
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "3",
+            "value": "3"
+          },
+          {
+            "label": "4",
+            "value": "4"
+          },
+          {
+            "label": "5",
+            "value": "5"
+          }
+        ],
+        "default": "2"
+      },
+      {
+        "type": "select",
+        "id": "section_bottom_mobile",
+        "label": "Section bottom (mobile)",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "0",
+            "value": "0"
+          },
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "3",
+            "value": "3"
+          },
+          {
+            "label": "4",
+            "value": "4"
+          },
+          {
+            "label": "5",
+            "value": "5"
+          }
+        ],
+        "default": "none"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Attribute",
+        "type": "attribute",
+        "settings": [
+
+        ]
+      }
+    ]
+  }
+{%- endschema -%}

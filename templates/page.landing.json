@@ -193,6 +193,17 @@
         "section_bottom_mobile": "4"
       }
     },
+    "landing-comparison": {
+      "type": "landing-comparison",
+      "settings": {
+        "kicker": "Us vs them",
+        "heading": "Trusted by Doctors. Loved by Women.",
+        "section_top": "none",
+        "section_bottom": "5",
+        "section_top_mobile": "none",
+        "section_bottom_mobile": "4"
+      }
+    },
     "featured-reviews-103953810489": {
       "type": "featured-reviews",
       "settings": {
@@ -219,6 +230,7 @@
     "landing-button",
     "landing-statistics",
     "landing-dropdowns",
+    "landing-comparison",
     "featured-reviews-103953810489",
     "landing-footer"
   ]

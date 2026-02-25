@@ -274,10 +274,11 @@
       ],
       "settings": {
         "image": "shopify://shop_images/medicine-mama-landing-banner.jpg",
+        "image_mobile": "shopify://shop_images/medicine-mama-landing-banner-mobile.jpg",
         "heading": "Feel like you again & Save 30%",
         "section_top": "5",
         "section_bottom": "4",
-        "section_top_mobile": "4",
+        "section_top_mobile": "5",
         "section_bottom_mobile": "3"
       }
     },

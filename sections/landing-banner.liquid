@@ -3,6 +3,10 @@
 
   assign image_url = image | image_url: width: 1600
 
+  assign image_mobile = section.settings.image_mobile
+
+  assign image_mobile_url = image_mobile | image_url: width: 800
+
   assign heading = section.settings.heading
 
   assign offer_block = section.blocks | where: "type", "offer" | first
@@ -38,30 +42,60 @@
     display: grid;
     place-items: center end;
   }
+
+  @media (max-width: 960px) {
+    .landing-banner-image {
+      height: 500px;
+    }
+    .landing-banner-content-container {
+      place-items: end center;
+      padding-bottom: var(--s2);
+    }
+  }
 </style>
 
-<div class="top-{{ section_top }} small--top-{{ section_top_mobile }} bottom-{{ section_bottom }} small--bottom-{{ section_bottom_mobile }} landing-banner-container">
-  {%- if image -%}
-    <div class="object-cover ratio--image landing-banner-image" style="--image-width: {{ image.width}}; --image-height: {{ image.height }};">
-      {{ image_url | image_tag }}
+<div class="top-{{ section_top }} small--top-{{ section_top_mobile }} bottom-{{ section_bottom }} small--bottom-{{ section_bottom_mobile }}">
+  <div class="stack-2 text--center landing-visibility--mobile">
+    {%- render "landing-amazon-exclusive" -%}
+
+    <div class="landing-text" style="max-width: 275px; margin-right: auto; margin-left: auto;">
+      <h1 class="landing-heading">
+        {{ heading }}
+      </h1>
     </div>
-  {%- endif -%}
+  </div>
 
-  <div class="landing-container landing-banner-content-container">
-    <div class="stack-1 text--center landing-banner-content">
-      {%- render "landing-amazon-exclusive" -%}
-
-      <div class="landing-text" style="max-width: 275px; margin-right: auto; margin-left: auto;">
-        <h1 class="landing-heading">
-          {{ heading }}
-        </h1>
+  <div class="small--stack-item-2 landing-banner-container">
+    {%- if image -%}
+      <div class="object-cover ratio--image landing-visibility--desktop landing-banner-image" style="--image-width: {{ image.width}}; --image-height: {{ image.height }};">
+        {{ image_url | image_tag }}
       </div>
+    {%- endif -%}
 
-      {%- if offer_block -%}
-        <div class="stack-item-2">
-          {%- render "landing-offer" block: offer_block -%}
+    {%- if image_mobile -%}
+      <div class="object-cover ratio--image landing-visibility--mobile landing-banner-image" style="--image-width: {{ image_mobile.width}}; --image-height: {{ image_mobile.height }};">
+        {{ image_mobile_url | image_tag }}
+      </div>
+    {%- endif -%}
+
+    <div class="landing-container landing-banner-content-container">
+      <div class="stack-1 text--center landing-banner-content">
+        <div class="stack-1 landing-visibility--desktop">
+          {%- render "landing-amazon-exclusive" -%}
+
+          <div class="landing-text" style="max-width: 275px; margin-right: auto; margin-left: auto;">
+            <h1 class="landing-heading">
+              {{ heading }}
+            </h1>
+          </div>
         </div>
-      {%- endif -%}
+
+        {%- if offer_block -%}
+          <div class="stack-item-2">
+            {%- render "landing-offer" block: offer_block -%}
+          </div>
+        {%- endif -%}
+      </div>
     </div>
   </div>
 </div>
@@ -75,6 +109,11 @@
         "type": "image_picker",
         "id": "image",
         "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Image (mobile)"
       },
       {
         "type": "text",

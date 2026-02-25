@@ -1,6 +1,8 @@
 {%- liquid
   assign text_blocks = section.blocks | where: "type", "text"
 
+  assign circle_blocks = section.blocks | where: "type", "percent-circle"
+
   assign section_top = section.settings.section_top
 
   assign section_bottom = section.settings.section_bottom
@@ -14,7 +16,7 @@
   .landing-chart-data-grid {
     display: flex;
     justify-content: space-between;
-    gap: var(--s1);
+    gap: var(--s2);
     max-width: 600px;
     margin-right: auto;
     margin-left: auto;
@@ -23,6 +25,7 @@
   @media (min-width: 961px) {
     .landing-chart-data-grid {
       max-width: none;
+      gap: var(--s3);
     }
   }
 
@@ -31,17 +34,38 @@
   }
 
   .landing-chart-circle {
+    --percent: 79%;
+    --progress: #B41214;
+    --remaining: #FFFFFF;
+    --thickness: 8px;
+
     aspect-ratio: 1 / 1;
-    border: 8px solid var(--color-2);
     border-radius: 50%;
+    display: grid;
+    place-items: center;
     position: relative;
   }
 
-  .landing-chart-circle span {
+  .landing-chart-circle::before {
+    content: " ";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+
+    background: conic-gradient(
+      from -180deg,
+      var(--progress) var(--percent),
+      var(--remaining) 0
+    );
+
+    mask: radial-gradient(
+      farthest-side,
+      transparent calc(100% - var(--thickness)),
+      #000 0
+    );
   }
 </style>
 
@@ -56,30 +80,22 @@
     </div>
     <div>
       <div class="landing-chart-data-grid">
-        <div class="stack-2 small--stack-1">
-          <div class="landing-chart-circle">
-            <span class="size-9 small--size-5">100%</span>
+        {%- for block in circle_blocks -%}
+          {%- liquid
+            assign percent = block.settings.percent | append: "%"
+
+            assign description = block.settings.description
+          -%}
+
+          <div class="stack-2 small--stack-1">
+            <div class="landing-chart-circle" style="--percent: {{ percent }};">
+              <span class="size-9 small--size-5">{{ percent }}</span>
+            </div>
+            <p class="size-3">
+              {{ description }}
+            </p>
           </div>
-          <p class="size-3">
-            reported no irritation
-          </p>
-        </div>
-        <div class="stack-2 small--stack-1">
-          <div class="landing-chart-circle">
-            <span class="size-9 small--size-5">96%</span>
-          </div>
-          <p class="size-3">
-            saw a reduction in dryness after consistent 2-week use*
-          </p>
-        </div>
-        <div clas="stack-2 small--stack-1">
-          <div class="landing-chart-circle">
-            <span class="size-9 small--size-5">79%</span>
-          </div>
-          <p class="size-3">
-            reported immediate soothing relief from intimate skin dryness*
-          </p>
-        </div>
+        {%- endfor -%}
       </div>
     </div>
   </div>
@@ -303,6 +319,28 @@
             "max": 5,
             "step": 1,
             "default": 1
+          }
+        ]
+      },
+      {
+        "name": "Percent circle",
+        "type": "percent-circle",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "range",
+            "id": "percent",
+            "label": "Percent",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 79,
+            "unit": "%"
+          },
+          {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description"
           }
         ]
       }

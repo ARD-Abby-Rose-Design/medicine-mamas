@@ -124,6 +124,27 @@
     "landing-chart": {
       "type": "landing-chart",
       "blocks": {
+        "percent_circle_tfximD": {
+          "type": "percent-circle",
+          "settings": {
+            "percent": 100,
+            "description": "reported no irritation"
+          }
+        },
+        "percent_circle_r6dj4R": {
+          "type": "percent-circle",
+          "settings": {
+            "percent": 96,
+            "description": "saw a reduction in dryness after consistent 2-week use*"
+          }
+        },
+        "percent_circle_ngDVwh": {
+          "type": "percent-circle",
+          "settings": {
+            "percent": 79,
+            "description": "reported immediate soothing relief from intimate skin dryness*"
+          }
+        },
         "text_crdK7V": {
           "type": "text",
           "settings": {
@@ -150,6 +171,9 @@
         }
       },
       "block_order": [
+        "percent_circle_tfximD",
+        "percent_circle_r6dj4R",
+        "percent_circle_ngDVwh",
         "text_crdK7V",
         "text_HQRHKQ"
       ],

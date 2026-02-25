@@ -3,10 +3,10 @@
   position: relative;
 }
 .featured-review {
-  border-radius: 2rem;
+  border-radius: 10px;
   padding: 2rem;
   background: white;
-
+  border: 1px solid rgba(199, 199, 199, 0.35);
 }
 
 .featured-review__header {
@@ -55,8 +55,9 @@
   -webkit-text-fill-color: black !important;
 }
 
-.featured-review__review p:first-child {
-  margin-top: 0;
+.featured-review__review p {
+  margin-bottom: 0;
+  margin-top: 0.75em;
 }
 
 .featured-review__link {

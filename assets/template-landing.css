@@ -6,13 +6,6 @@
 }
 
 
-.announcement-bar-section,
-.section-header,
-.footer-section {
-  display: none !important;
-}
-
-
 .button-amazon {
   -webkit-appearance: none;
   appearance: none;

@@ -365,6 +365,33 @@
         "section_bottom_mobile": "5"
       }
     },
+    "landing-bar": {
+      "type": "landing-bar",
+      "blocks": {
+        "offer_HGEjix": {
+          "type": "offer",
+          "settings": {
+            "price": "$20.99",
+            "compare_price": "$29.99",
+            "savings": "Save 30%",
+            "description": "On Your First Subscription Order<br> + 10% off every recurring order"
+          }
+        },
+        "button_wMcHE8": {
+          "type": "button",
+          "settings": {
+            "call_to_action": "Shop Now on Amazon",
+            "url": "",
+            "incentives": "Free Fast Shipping with Prime\n30-day money-back guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "offer_HGEjix",
+        "button_wMcHE8"
+      ],
+      "settings": {}
+    },
     "landing-footer": {
       "type": "landing-footer",
       "settings": {}
@@ -383,6 +410,7 @@
     "landing-banner",
     "landing-reviews",
     "landing-button-19309581",
+    "landing-bar",
     "landing-footer"
   ]
 }

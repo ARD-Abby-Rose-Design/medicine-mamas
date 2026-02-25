@@ -95,6 +95,10 @@
   font-size: 19px;
 }
 
+.landing-offer-description p {
+  margin-bottom: 0;
+}
+
 .landing-offer-reviews {
   display: flex;
   column-gap: var(--s-1);

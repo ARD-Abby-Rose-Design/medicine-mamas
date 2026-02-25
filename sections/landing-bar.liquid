@@ -1,0 +1,189 @@
+{%- liquid
+  assign offer_block = section.blocks | where: "type", "offer" | first
+
+  assign price = offer_block.settings.price
+
+  assign compare_price = offer_block.settings.compare_price
+
+  assign savings = offer_block.settings.savings
+
+  assign description = offer_block.settings.description
+
+
+  assign button_block = section.blocks | where: "type", "button" | first
+
+  assign call_to_action = button_block.settings.call_to_action
+
+  assign url = button_block.settings.url
+
+  assign incentives = button_block.settings.incentives | newline_to_br | split: "<br />"
+-%}
+
+<style>
+  .landing-bar-section {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 100ms ease, visibility 100ms ease;
+  }
+
+  .landing-bar-section.active--true {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .landing-bar-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: var(--s2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--s0);
+  }
+
+  @media (min-width: 961px) {
+    .landing-bar-content {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+</style>
+
+<div class="box-2 small--box">
+  <div class="landing-bar-content">
+    <div class="stack text--center" style="max-width: 422px;" {{ offer_block.shopify_attributes }}>
+      <div class="landing-offer-pricing">
+        <s class="landing-offer-price">{{ compare_price }}</s>
+        <strong class="landing-offer-price">{{ price }}</strong>
+        <span class="landing-offer-savings"><span>{{ savings }}</span></span>
+      </div>
+
+      <div class="landing-offer-description">
+        <p>{{ description }}</p>
+      </div>
+    </div>
+
+    <div class="stack text--center">
+      <div class="landing-offer-reviews">
+        <span class="landing-offer-stars">
+          {%- for n in (1..5) -%}
+            {%- render "icon-star" -%}
+          {%- endfor -%}
+        </span>
+
+        <span>4.5 &nbsp;|&nbsp; 15,000+ Reviews</span>
+      </div>
+
+      {%- render "landing-button" block: button_block -%}
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const bar = document.querySelector(".landing-bar-section");
+    if (!bar) return;
+
+    const threshold_from_top_percent = 0.3;
+    const threshold_from_bottom_percent = 0.1;
+
+    function update_bar_state() {
+      const scroll_y = window.scrollY;
+      const viewport_height = window.innerHeight;
+      const document_height = document.documentElement.scrollHeight;
+
+      const scrollable_height = document_height - viewport_height;
+
+      if (scrollable_height <= 0) return;
+
+      const past_top =
+        scroll_y > scrollable_height * threshold_from_top_percent;
+
+      const near_bottom =
+        scroll_y > scrollable_height * (1 - threshold_from_bottom_percent);
+
+      if (past_top && !near_bottom) {
+        bar.classList.add("active--true");
+      } else {
+        bar.classList.remove("active--true");
+      }
+    }
+
+    window.addEventListener("scroll", update_bar_state, { passive: true });
+    window.addEventListener("resize", update_bar_state);
+
+    update_bar_state();
+  })();
+</script>
+
+{%- schema -%}
+  {
+    "name": "Floating bar",
+    "tag": "section",
+    "class": "landing-bar-section",
+    "settings": [
+
+    ],
+    "blocks": [
+      {
+        "name": "Offer",
+        "type": "offer",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "price",
+            "label": "Price",
+            "default": "$20.99"
+          },
+          {
+            "type": "text",
+            "id": "compare_price",
+            "label": "Compare-at price",
+            "default": "$29.99"
+          },
+          {
+            "type": "text",
+            "id": "savings",
+            "label": "Savings",
+            "default": "Save 30%"
+          },
+          {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description",
+            "default": "On Your First Subscription Order<br> + 10% off every recurring order"
+          }
+        ]
+      },
+      {
+        "name": "Button",
+        "type": "button",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "call_to_action",
+            "label": "Call to action",
+            "default": "Shop Now on Amazon"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Link"
+          },
+          {
+            "type": "textarea",
+            "id": "incentives",
+            "label": "Incentives",
+            "default": "Free Fast Shipping with Prime\n30-day money-back guarantee"
+          }
+        ]
+      }
+    ]
+  }
+{%- endschema -%}

@@ -252,9 +252,50 @@
     },
     "landing-compare": {
       "type": "landing-compare",
+      "blocks": {
+        "attribute_K7iFKY": {
+          "type": "attribute",
+          "settings": {
+            "title": "Lorem ipsum dolor sit.",
+            "brand_value": "Yes",
+            "offbrand_value": "No"
+          }
+        },
+        "attribute_pfrPp4": {
+          "type": "attribute",
+          "settings": {
+            "title": "Lorem ipsum dolor sit.",
+            "brand_value": "Yes",
+            "offbrand_value": "No"
+          }
+        },
+        "attribute_i6NDYM": {
+          "type": "attribute",
+          "settings": {
+            "title": "Lorem ipsum dolor sit.",
+            "brand_value": "Yes",
+            "offbrand_value": "No"
+          }
+        },
+        "attribute_VNizzg": {
+          "type": "attribute",
+          "settings": {
+            "title": "Lorem ipsum dolor sit.",
+            "brand_value": "Yes",
+            "offbrand_value": "No"
+          }
+        }
+      },
+      "block_order": [
+        "attribute_K7iFKY",
+        "attribute_pfrPp4",
+        "attribute_i6NDYM",
+        "attribute_VNizzg"
+      ],
       "settings": {
         "kicker": "Us vs them",
         "heading": "Trusted by Doctors. Loved by Women.",
+        "offbrand_heading": "Other leading balms",
         "section_top": "5",
         "section_bottom": "none",
         "section_top_mobile": "5",

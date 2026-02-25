@@ -3,6 +3,8 @@
 
   assign heading = section.settings.heading
 
+  assign offbrand_heading = section.settings.offbrand_heading
+
   assign section_top = section.settings.section_top
 
   assign section_bottom = section.settings.section_bottom
@@ -89,6 +91,7 @@
 
   .landing-compare-attribute-row {
     border-top: 1px solid #CECDCB;
+    align-items: center;
   }
 
   .landing-compare-attribute-row > * {
@@ -158,7 +161,7 @@
                 </div>
 
                 <div class="landing-text size-3 small--size-2">
-                  <p>Other leading balms</p>
+                  <p>{{ offbrand_heading }}</p>
                 </div>
               </div>
             </div>
@@ -167,38 +170,55 @@
       </div>
 
       <div class="landing-compare-attributes">
-        {%- for n in (1..4) -%}
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign heading = block.settings.title
+
+            assign brand_value = block.settings.brand_value
+
+            assign offbrand_value = block.settings.offbrand_value
+          -%}
+
           <div class="landing-compare-grid landing-compare-attribute-row">
             <div class="landing-text size-3 small--size-2 inline-1">
-              <p>Lorem ipsum dolor sit.</p>
+              <p>{{ heading }}</p>
             </div>
 
             <div class="landing-compare-attribute-value">
-              <div class="landing-compare-icon-true">
-                {%- render "icon-landing-checkmark" -%}
-              </div>
+              {%- case brand_value -%}
+                {%- when "Yes" -%}
+                  <div class="landing-compare-icon-true">
+                    {%- render "icon-landing-checkmark" -%}
+                  </div>
+
+                {%- when "No" -%}
+                  {%- render "icon-landing-false" -%}
+
+                {%- else -%}
+                  {{ brand_value }}
+
+              {%- endcase -%}
             </div>
 
             <div class="center">
-              {%- render "icon-landing-false" -%}
+              {%- case offbrand_value -%}
+                {%- when "Yes" -%}
+                  <div class="landing-compare-icon-true">
+                    {%- render "icon-landing-checkmark" -%}
+                  </div>
+
+                {%- when "No" -%}
+                  {%- render "icon-landing-false" -%}
+
+                {%- else -%}
+                  {{ offbrand_value }}
+
+              {%- endcase -%}
             </div>
           </div>
         {%- endfor -%}
       </div>
     </div>
-
-    {%- for block in section.blocks -%}
-      {%- liquid
-        assign image = block.settings.image
-
-        assign image_url = image | image_url: width: 300
-
-        assign attribute = block.settings.attribute
-
-        assign value = block.settings.value
-      -%}
-
-    {%- endfor -%}
   </div>
 </div>
 
@@ -218,6 +238,12 @@
         "id": "heading",
         "label": "Heading",
         "default": "Trusted by Doctors. Loved by Women."
+      },
+      {
+        "type": "text",
+        "id": "offbrand_heading",
+        "label": "Offbrand heading",
+        "default": "Other leading balms"
       },
       {
         "type": "select",
@@ -370,6 +396,68 @@
           }
         ],
         "default": "none"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Attribute",
+        "type": "attribute",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Lorem ipsum dolor sit."
+          },
+          {
+            "type": "select",
+            "id": "brand_value",
+            "label": "Value for Medicine Mama",
+            "options": [
+              {
+                "value": "Yes",
+                "label": "Yes"
+              },
+              {
+                "value": "No",
+                "label": "No"
+              },
+              {
+                "value": "Sometimes",
+                "label": "Sometimes"
+              },
+              {
+                "value": "Rarely",
+                "label": "Rarely"
+              },
+            ],
+            "default": "Yes"
+          },
+          {
+            "type": "select",
+            "id": "offbrand_value",
+            "label": "Value for offbrand",
+            "options": [
+              {
+                "value": "Yes",
+                "label": "Yes"
+              },
+              {
+                "value": "No",
+                "label": "No"
+              },
+              {
+                "value": "Sometimes",
+                "label": "Sometimes"
+              },
+              {
+                "value": "Rarely",
+                "label": "Rarely"
+              },
+            ],
+            "default": "No"
+          }
+        ]
       }
     ]
   }

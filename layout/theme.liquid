@@ -338,6 +338,13 @@
       >
     {%- endif -%}
 
+    {%- if template.suffix == "landing" -%}
+      {{ "theme.css" | asset_url | stylesheet_tag }}
+      {{ "theme-type.css" | asset_url | stylesheet_tag }}
+      {{ "theme-grid.css" | asset_url | stylesheet_tag }}
+      {{ "template-landing.css" | asset_url | stylesheet_tag }}
+    {%- endif -%}
+
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
       if (Shopify.designMode) {
@@ -437,14 +444,6 @@
     {% if request.path contains 'tools/recurring/portal/' %}
       {{ 'recharge-customer.css' | asset_url | stylesheet_tag }}
     {% endif %}
-
-    {%- if template.suffix == "landing" -%}
-      {{ "theme.css" | asset_url | stylesheet_tag }}
-      {{ "theme-type.css" | asset_url | stylesheet_tag }}
-      {{ "theme-grid.css" | asset_url | stylesheet_tag }}
-      {{ "template-landing.css" | asset_url | stylesheet_tag }}
-    {%- endif -%}
-
 
 
 <script type="text/javascript">

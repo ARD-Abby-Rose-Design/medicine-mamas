@@ -88,8 +88,9 @@
   background-color: #FFE5E0;
   color: var(--color-1);
   border: 1px dotted var(--color-1);
-  padding: var(--s-1);
-  padding-bottom: calc(var(--s-1) - 3px);
+  padding-inline: 10px;
+  padding-top: 10px;
+  padding-bottom: 6px;
   text-transform: uppercase;
   line-height: 1;
   font-size: 18px;
@@ -111,6 +112,7 @@
 .landing-offer-incentives {
   margin-bottom: 0;
   padding-left: 0;
+  font-size: 13px;
 }
 
 .landing-offer-incentives li {
@@ -128,6 +130,24 @@
   margin-right: var(--s-3);
   position: relative;
   top: 3px;
+}
+
+@media (max-width: 960px) {
+  .landing-offer-price {
+    font-size: 22px;
+  }
+
+  .landing-offer-savings {
+    font-size: 15px;
+  }
+
+  .landing-offer-description {
+    font-size: 16px;
+  }
+
+  .landing-offer-reviews {
+    font-size: 13px;
+  }
 }
 
 

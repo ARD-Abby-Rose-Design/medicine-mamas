@@ -10,7 +10,10 @@
 {
   "sections": {
     "landing-announcement": {
-      "type": "landing-announcement"
+      "type": "landing-announcement",
+      "settings": {
+        "text": "Free shipping on orders $75+"
+      }
     },
     "landing-header": {
       "type": "landing-header",
@@ -309,18 +312,57 @@
         "section_bottom_mobile": "3"
       }
     },
-    "featured-reviews-103953810489": {
-      "type": "featured-reviews",
+    "landing-reviews": {
+      "type": "landing-reviews",
+      "blocks": {
+        "review_DbtF4D": {
+          "type": "review",
+          "settings": {
+            "title": "Robyn F.",
+            "heading": "Great Product!!",
+            "description": "Love Love LOVE. This product works. Even if you use it multiple times a day after using the restroom- it works. No odor. No mess. No irritation. AND it works. Just a small amount applied as directed keeps away dryness and really makes you feel normal again down there. No more Sahara desert down there. A pure natural ingredient way to restore natural moisture and balance down there."
+          }
+        },
+        "review_cem4Xw": {
+          "type": "review",
+          "settings": {
+            "title": "Robyn F.",
+            "heading": "Can't live without it!",
+            "description": "This product really delivers, it’s a lifesaver for any woman that’s going through menopause or been through menopause. Really helps with dryness and comfort. Very moisturizing just a light scent. Easy to apply. Great skin care product."
+          }
+        }
+      },
+      "block_order": [
+        "review_DbtF4D",
+        "review_cem4Xw"
+      ],
       "settings": {
-        "color_scheme": "",
-        "show_line_separator": true,
-        "show_desktop": true,
-        "show_mobile": true,
-        "kicker": "Customer reviews",
-        "title": "Over 11,000 5-Star Reviews",
-        "product": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "section_top": "4",
+        "section_bottom": "none",
+        "section_top_mobile": "3",
+        "section_bottom_mobile": "none"
+      }
+    },
+    "landing-button-19309581": {
+      "type": "landing-button",
+      "blocks": {
+        "button_GUxw6n": {
+          "type": "button",
+          "settings": {
+            "call_to_action": "Save Now on Amazon",
+            "url": "",
+            "incentives": "Free Fast Shipping with Prime\n30-day money-back guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "button_GUxw6n"
+      ],
+      "settings": {
+        "section_top": "4",
+        "section_bottom": "5",
+        "section_top_mobile": "3",
+        "section_bottom_mobile": "5"
       }
     },
     "landing-footer": {
@@ -339,7 +381,8 @@
     "landing-compare",
     "landing-button-19381020",
     "landing-banner",
-    "featured-reviews-103953810489",
+    "landing-reviews",
+    "landing-button-19309581",
     "landing-footer"
   ]
 }

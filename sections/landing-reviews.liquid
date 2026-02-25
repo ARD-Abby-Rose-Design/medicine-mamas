@@ -1,0 +1,280 @@
+{%- liquid
+  assign section_top = section.settings.section_top
+
+  assign section_bottom = section.settings.section_bottom
+
+  assign section_top_mobile = section.settings.section_top_mobile
+
+  assign section_bottom_mobile = section.settings.section_bottom_mobile
+-%}
+
+<style>
+  .landing-reviews-container {
+    max-width: 820px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-inline: var(--s0);
+  }
+
+  .landing-reviews-name {
+    display: flex;
+    align-items: center;
+    gap: var(--s0);
+  }
+
+  .landing-reviews-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    display: grid;
+    place-items: center;
+  }
+
+  .landing-reviews-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s0);
+  }
+
+  .landing-reviews-stars {
+    font-size: 0;
+    position: relative;
+    top: -1px;
+    color: #FF9A01;
+  }
+
+  .landing-reviews-heading {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .landing-reviews-verified {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #FF9A01;
+    letter-spacing: 0.52px;
+  }
+</style>
+
+<div class="landing-reviews-container top-{{ section_top }} small--top-{{ section_top_mobile }} bottom-{{ section_bottom }} small--bottom-{{ section_bottom_mobile }}">
+  <div class="stack-3">
+    {%- for block in section.blocks -%}
+      {%- liquid
+        assign customer_name = block.settings.title
+
+        assign letter = customer_name | split: "" | first
+
+        assign heading = block.settings.heading
+
+        assign description = block.settings.description
+      -%}
+
+      <div class="stack-1">
+        <div class="landing-reviews-name">
+          <span class="landing-reviews-avatar">
+            <span>{{ letter }}</span>
+          </span>
+          <span>{{ customer_name }}</span>
+        </div>
+
+        <div class="landing-reviews-header">
+          <span class="landing-reviews-stars">
+            {%- for n in (1..5) -%}
+              {%- render "icon-star" -%}
+            {%- endfor -%}
+          </span>
+
+          <span class="landing-reviews-heading">
+            {{ heading }}
+          </span>
+
+          <span class="landing-reviews-verified">
+            Verified buyer
+          </span>
+        </div>
+
+        <div class="landing-text">
+          <p>{{ description }}</p>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{%- schema -%}
+  {
+    "name": "Reviews",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "select",
+        "id": "section_top",
+        "label": "Section top",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "0",
+            "value": "0"
+          },
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "3",
+            "value": "3"
+          },
+          {
+            "label": "4",
+            "value": "4"
+          },
+          {
+            "label": "5",
+            "value": "5"
+          }
+        ],
+        "default": "4"
+      },
+      {
+        "type": "select",
+        "id": "section_bottom",
+        "label": "Section bottom",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "0",
+            "value": "0"
+          },
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "3",
+            "value": "3"
+          },
+          {
+            "label": "4",
+            "value": "4"
+          },
+          {
+            "label": "5",
+            "value": "5"
+          }
+        ],
+        "default": "5"
+      },
+      {
+        "type": "select",
+        "id": "section_top_mobile",
+        "label": "Section top (mobile)",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "0",
+            "value": "0"
+          },
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "3",
+            "value": "3"
+          },
+          {
+            "label": "4",
+            "value": "4"
+          },
+          {
+            "label": "5",
+            "value": "5"
+          }
+        ],
+        "default": "3"
+      },
+      {
+        "type": "select",
+        "id": "section_bottom_mobile",
+        "label": "Section bottom (mobile)",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "0",
+            "value": "0"
+          },
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "3",
+            "value": "3"
+          },
+          {
+            "label": "4",
+            "value": "4"
+          },
+          {
+            "label": "5",
+            "value": "5"
+          }
+        ],
+        "default": "4"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Review",
+        "type": "review",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Customer name"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+          {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description"
+          }
+        ]
+      }
+    ]
+  }
+{%- endschema -%}

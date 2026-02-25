@@ -11,7 +11,7 @@
 -%}
 
 <style>
-  .landing-statistics-data-grid {
+  .landing-chart-data-grid {
     display: flex;
     justify-content: space-between;
     gap: var(--s1);
@@ -21,23 +21,23 @@
   }
 
   @media (min-width: 961px) {
-    .landing-statistics-data-grid {
+    .landing-chart-data-grid {
       max-width: none;
     }
   }
 
-  .landing-statistics-data-grid > * {
+  .landing-chart-data-grid > * {
     flex: 1;
   }
 
-  .landing-statistics-circle {
+  .landing-chart-circle {
     aspect-ratio: 1 / 1;
     border: 8px solid var(--color-2);
     border-radius: 50%;
     position: relative;
   }
 
-  .landing-statistics-circle span {
+  .landing-chart-circle span {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -55,9 +55,9 @@
       </div>
     </div>
     <div>
-      <div class="landing-statistics-data-grid">
+      <div class="landing-chart-data-grid">
         <div class="stack-2 small--stack-1">
-          <div class="landing-statistics-circle">
+          <div class="landing-chart-circle">
             <span class="size-9 small--size-5">100%</span>
           </div>
           <p class="size-3">
@@ -65,7 +65,7 @@
           </p>
         </div>
         <div class="stack-2 small--stack-1">
-          <div class="landing-statistics-circle">
+          <div class="landing-chart-circle">
             <span class="size-9 small--size-5">96%</span>
           </div>
           <p class="size-3">
@@ -73,7 +73,7 @@
           </p>
         </div>
         <div clas="stack-2 small--stack-1">
-          <div class="landing-statistics-circle">
+          <div class="landing-chart-circle">
             <span class="size-9 small--size-5">79%</span>
           </div>
           <p class="size-3">
@@ -87,7 +87,7 @@
 
 {%- schema -%}
   {
-    "name": "Statistics",
+    "name": "Chart",
     "tag": "section",
     "settings": [
       {

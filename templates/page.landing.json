@@ -121,8 +121,8 @@
         "section_bottom_mobile": "none"
       }
     },
-    "landing-statistics": {
-      "type": "landing-statistics",
+    "landing-chart": {
+      "type": "landing-chart",
       "blocks": {
         "text_crdK7V": {
           "type": "text",
@@ -306,7 +306,7 @@
     "landing-hero",
     "featured-reviews",
     "landing-button",
-    "landing-statistics",
+    "landing-chart",
     "landing-dropdowns",
     "landing-compare",
     "landing-button-19381020",

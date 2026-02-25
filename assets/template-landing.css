@@ -109,6 +109,12 @@
   justify-content: center;
 }
 
+.landing-offer-stars {
+  font-size: 0;
+  position: relative;
+  top: -2px;
+}
+
 .landing-offer-incentives {
   margin-bottom: 0;
   padding-left: 0;

@@ -427,10 +427,6 @@
       };
     </script>
 
-    {%- if settings.predictive_search_enabled -%}
-      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
-
     {{ 'quick-add.css' | asset_url | stylesheet_tag }}
 
     <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>

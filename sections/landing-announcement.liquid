@@ -1,0 +1,46 @@
+{%- liquid
+  assign text = section.settings.text
+-%}
+
+<style>
+  .landing-announcement-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 960px) {
+    .landing-announcement-grid {
+      justify-content: center;
+    }
+  }
+
+  .landing-announcement-text {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+</style>
+
+<div class="block" style="background-color: var(--color-1); color: #FFFFFF;">
+  <div class="landing-container landing-announcement-grid">
+    <span class="landing-announcement-text landing-visibility--desktop">{{ text }}</span>
+    <span class="landing-announcement-text">{{ text }}</span>
+    <span class="landing-announcement-text landing-visibility--desktop">{{ text }}</span>
+  </div>
+</div>
+
+{%- schema -%}
+  {
+    "name": "Announcement bar",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Text",
+        "default": "Free shipping on orders $75+"
+      }
+    ]
+  }
+{%- endschema -%}

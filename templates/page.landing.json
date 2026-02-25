@@ -9,6 +9,9 @@
  */
 {
   "sections": {
+    "landing-announcement": {
+      "type": "landing-announcement"
+    },
     "landing-header": {
       "type": "landing-header",
       "settings": {}
@@ -326,6 +329,7 @@
     }
   },
   "order": [
+    "landing-announcement",
     "landing-header",
     "landing-hero",
     "featured-reviews",

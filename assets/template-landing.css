@@ -18,7 +18,7 @@
   align-items: center;
   gap: 8px;
   padding: 14px 48px;
-  min-height: 48px;
+  min-height: 49px;
   background-color: #F55700;
   color: #fff;
   font-size: 17px;
@@ -60,6 +60,8 @@
 
 .landing-offer {
   background-color: #FFFFFF;
+  border-radius: 10px;
+  border: 1px solid rgba(199, 199, 199, 0.35);
   padding: var(--s2);
   max-width: 422px;
   margin-right: auto;
@@ -136,6 +138,10 @@
 }
 
 @media (max-width: 960px) {
+  .landing-offer-pricing {
+    gap: var(--s-1);
+  }
+
   .landing-offer-price {
     font-size: 22px;
   }

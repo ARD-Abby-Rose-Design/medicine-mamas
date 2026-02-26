@@ -256,7 +256,7 @@
         "attribute_K7iFKY": {
           "type": "attribute",
           "settings": {
-            "title": "Lorem ipsum dolor sit.",
+            "title": "100% USDA Organic",
             "brand_value": "Yes",
             "offbrand_value": "No"
           }
@@ -264,17 +264,25 @@
         "attribute_pfrPp4": {
           "type": "attribute",
           "settings": {
-            "title": "Lorem ipsum dolor sit.",
+            "title": "Hormone Free",
             "brand_value": "Yes",
-            "offbrand_value": "No"
+            "offbrand_value": "Sometimes"
           }
         },
         "attribute_i6NDYM": {
           "type": "attribute",
           "settings": {
-            "title": "Lorem ipsum dolor sit.",
+            "title": "Doctor Formulated",
             "brand_value": "Yes",
             "offbrand_value": "No"
+          }
+        },
+        "attribute_Tf9A3r": {
+          "type": "attribute",
+          "settings": {
+            "title": "Clinically Tested",
+            "brand_value": "Yes",
+            "offbrand_value": "Rarely"
           }
         },
         "attribute_VNizzg": {
@@ -290,6 +298,7 @@
         "attribute_K7iFKY",
         "attribute_pfrPp4",
         "attribute_i6NDYM",
+        "attribute_Tf9A3r",
         "attribute_VNizzg"
       ],
       "settings": {

@@ -51,11 +51,11 @@
           "settings": {
             "text": "<h2>Your Most Intimate Skin.</h2>",
             "color": "",
-            "size": 7,
+            "size": 9,
             "size_mobile": 6,
             "width": 610,
-            "space": 1,
-            "space_mobile": 1
+            "space": 0,
+            "space_mobile": -1
           }
         },
         "text_BNxhTP": {

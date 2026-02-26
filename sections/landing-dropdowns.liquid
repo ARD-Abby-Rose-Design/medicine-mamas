@@ -49,17 +49,15 @@
 
 <div class="landing-container top-{{ section_top }} small--top-{{ section_top_mobile }} bottom-{{ section_bottom }} small--bottom-{{ section_bottom_mobile }}">
   <div class="landing-grid landing-dropdowns-grid">
-    <div>
-      <div class="stack-2">
-        {%- if image -%}
-          <div class="object-cover ratio--image" style="--image-width: {{ image.width }}; --image-height: {{ image.height }};">
-            {{ image_url | image_tag }}
-          </div>
-        {%- endif -%}
-
-        <div class="center landing-visibility--desktop">
-          {%- render "landing-button" block: button_block -%}
+    <div class="stack-2 stack-split bottom-1">
+      {%- if image -%}
+        <div class="object-cover ratio--image" style="--image-width: {{ image.width }}; --image-height: {{ image.height }};">
+          {{ image_url | image_tag }}
         </div>
+      {%- endif -%}
+
+      <div class="center landing-visibility--desktop">
+        {%- render "landing-button" block: button_block -%}
       </div>
     </div>
     <div>

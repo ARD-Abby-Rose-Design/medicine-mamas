@@ -154,11 +154,11 @@
         "text_crdK7V": {
           "type": "text",
           "settings": {
-            "text": "<h1>In a<br/>clinical <br/>study</h1>",
+            "text": "<h1>In a<br/>clinical <br/>trial</h1>",
             "color": "",
             "size": 11,
             "size_mobile": 9,
-            "width": 1000,
+            "width": 10000,
             "space": 1,
             "space_mobile": 1
           }

@@ -356,6 +356,14 @@
     "landing-reviews": {
       "type": "landing-reviews",
       "blocks": {
+        "review_NKiXyF": {
+          "type": "review",
+          "settings": {
+            "title": "Patricia L.",
+            "heading": "So thankful for this!",
+            "description": "My doctor recommended this product to me for vaginal dryness. It works well and I have been a loyal user for several years and have recommended it to other ladies I know."
+          }
+        },
         "review_DbtF4D": {
           "type": "review",
           "settings": {
@@ -371,20 +379,12 @@
             "heading": "Can't live without it!",
             "description": "This product really delivers, it’s a lifesaver for any woman that’s going through menopause or been through menopause. Really helps with dryness and comfort. Very moisturizing just a light scent. Easy to apply. Great skin care product."
           }
-        },
-        "review_NKiXyF": {
-          "type": "review",
-          "settings": {
-            "title": "Patricia L.",
-            "heading": "So thankful for this!",
-            "description": "My doctor recommended this product to me for vaginal dryness. It works well and I have been a loyal user for several years and have recommended it to other ladies I know."
-          }
         }
       },
       "block_order": [
+        "review_NKiXyF",
         "review_DbtF4D",
-        "review_cem4Xw",
-        "review_NKiXyF"
+        "review_cem4Xw"
       ],
       "settings": {
         "section_top": "4",

@@ -49,6 +49,7 @@
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "packs"
           }
@@ -67,6 +68,7 @@
         },
         "default_subscriptions_nKy8PW": {
           "type": "default_subscriptions",
+          "disabled": true,
           "settings": {}
         },
         "buy_buttons": {

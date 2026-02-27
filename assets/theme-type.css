@@ -39,10 +39,6 @@
   word-break: keep-all;
 }
 
-.landing-text h1 {
-  letter-spacing: 0;
-}
-
 p {
   line-height: 130%;
   letter-spacing: 0.6px;
@@ -241,6 +237,7 @@ p {
   font-weight: 400;
   line-height: 120%;
   font-size: var(--t7) !important;
+  letter-spacing: normal;
 }
 
 @media (max-width: 960px) {
